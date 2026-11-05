@@ -148,15 +148,21 @@ def audit_manifest(manifest_path: Path, source_root: Path) -> dict[str, Any]:
         results.append(result)
 
     failed = any(item["status"] == "FAIL" for item in results)
-    rights_approved = rights_status == "APPROVED"
+    rights = manifest.get("rights", {})
+    rights_documented = (
+        rights.get("status") == "APPROVED"
+        and bool(rights.get("evidence_reference"))
+        and bool(rights.get("owner_approval_reference"))
+    )
     return {
         "report_version": "1.0.0",
         "source_id": manifest.get("source_id"),
         "rights_status": rights_status,
-        "rights_gate": "PASS" if rights_approved else "BLOCKED",
-        "content_intake_authorized": rights_approved,
+        "rights_gate": "DOCUMENTED_REQUIRES_OWNER_REVIEW" if rights_documented else "BLOCKED",
+        "rights_evidence_fields_present": rights_documented,
+        "content_intake_authorized": False,
         "structural_audit": "FAIL" if failed else "PASS",
-        "overall_status": "FAIL" if failed else ("PASS_WITH_RIGHTS_BLOCKED" if not rights_approved else "PASS"),
+        "overall_status": "FAIL" if failed else ("STRUCTURE_PASS_RIGHTS_BLOCKED" if not rights_documented else "STRUCTURE_PASS_REQUIRES_OWNER_REVIEW"),
         "file_results": results,
         "limitations": [
             "Does not verify translation accuracy, completeness, canon, or linguistic correctness.",
