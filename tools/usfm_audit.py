@@ -192,7 +192,7 @@ def main() -> int:
         args.output.write_text(rendered, encoding="utf-8")
     else:
         print(rendered, end="")
-    return 1 if report["overall_status"] == "FAIL" else 0
+    return 1 if report["overall_status"] in {"FAIL", "PARTIAL_UNSUPPORTED_FORMAT"} else 0
 
 
 if __name__ == "__main__":
