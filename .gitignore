@@ -1,0 +1,22 @@
+# Local source packages and generated audit output
+/source-private/
+/content/incoming/
+/content/approved-source/
+/reports/local/
+/*.local.json
+*.usfm
+*.usx
+*.sfm
+*.mp3
+*.wav
+*.m4a
+*.pdf
+*.docx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
