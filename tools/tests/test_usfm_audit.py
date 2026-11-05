@@ -202,5 +202,46 @@ class UsfmAuditTests(unittest.TestCase):
                 _load_expected_inventory(inventory_path)
 
 
+    def test_expected_inventory_requires_approved_provenance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            inventory_path = Path(directory) / "inventory.json"
+            inventory_path.write_text(json.dumps({
+                "schema_version": "1.0.0",
+                "inventory_id": "synthetic-reference",
+                "reference": "synthetic fixture specification",
+                "review_status": "DRAFT",
+                "books": [{"book_id": "GEN", "chapters": [1]}],
+            }), encoding="utf-8")
+            from tools.usfm_audit import _load_expected_inventory
+            with self.assertRaisesRegex(ValueError, "APPROVED review_status"):
+                _load_expected_inventory(inventory_path)
+
+    def test_expected_inventory_detects_missing_and_unexpected_books(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source"
+            source.mkdir()
+            digest = write_usfm(source / "fixture.usfm", "GEN")
+            manifest = {
+                "schema_version": "1.0.0",
+                "source_id": "synthetic-test-only",
+                "rights": {"status": "UNVERIFIED"},
+                "files": [{"path": "fixture.usfm", "sha256": digest, "format": "USFM"}],
+            }
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            inventory_path = root / "inventory.json"
+            inventory_path.write_text(json.dumps({
+                "schema_version": "1.0.0",
+                "inventory_id": "synthetic-reference",
+                "reference": "synthetic fixture specification",
+                "review_status": "APPROVED",
+                "books": [{"book_id": "EXO", "chapters": [1]}],
+            }), encoding="utf-8")
+            report = audit_manifest(manifest_path, source, inventory_path)
+            codes = {issue["code"] for issue in report["package_issues"]}
+            self.assertEqual(codes, {"INVENTORY_MISSING_BOOK", "INVENTORY_UNEXPECTED_BOOK"})
+
+
 if __name__ == "__main__":
     unittest.main()
