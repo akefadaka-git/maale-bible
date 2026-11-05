@@ -13,8 +13,9 @@ This repository currently contains project documentation and source-audit toolin
 - Candidate source register: content/source-register/README.md
 - Source manifest schema: content/manifests/source-manifest.schema.json
 - Source verification procedure: docs/source-verification/README.md
-- Local USFM structural audit: tools/usfm_audit.py
-- Synthetic-only tests: tools/tests/test_usfm_audit.py
+- Local USFM structural audit (per-book chapter and verse accounting): tools/usfm_audit.py
+- Synthetic-only regression tests: tools/tests/test_usfm_audit.py
+- Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
 
 ## Run synthetic tests
 
