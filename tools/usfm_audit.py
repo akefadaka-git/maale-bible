@@ -135,6 +135,8 @@ def _load_expected_inventory(path: Path) -> dict[str, list[int]]:
     inventory = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(inventory, dict) or inventory.get("schema_version") != "1.0.0":
         raise ValueError("Expected inventory schema_version must be 1.0.0")
+    if inventory.get("review_status") != "APPROVED" or not isinstance(inventory.get("reference"), str) or not inventory["reference"].strip():
+        raise ValueError("Expected inventory must have APPROVED review_status and a non-empty reference")
     books = inventory.get("books")
     if not isinstance(books, list) or not books:
         raise ValueError("Expected inventory books must be a non-empty array")
