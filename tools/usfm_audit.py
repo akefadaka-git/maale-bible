@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Any
 
 BOOK_ID_RE = re.compile(r"^[A-Z0-9]{3}$")
-CHAPTER_RE = re.compile(r"^\\c\\s+(\\d+)(?:\\s|$)")
-VERSE_RE = re.compile(r"^\\v\\s+(\\d+)(?:\\s|$)")
-ID_RE = re.compile(r"^\\id\\s+([A-Z0-9]{3})(?:\\s|$)")
+CHAPTER_RE = re.compile(r"^\\c\s+(\d+)(?:\s|$)")
+VERSE_RE = re.compile(r"^\\v\s+(\d+)(?:\s|$)")
+ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
 ETHIOPIC_RANGE = range(0x1200, 0x1380)
 
 
