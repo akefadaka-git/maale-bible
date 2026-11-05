@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Any
 
 BOOK_ID_RE = re.compile(r"^[A-Z0-9]{3}$")
-CHAPTER_RE = re.compile(r"^\\\\c\\s+(\\d+)(?:\\s|$)")
-VERSE_RE = re.compile(r"^\\\\v\\s+(\\d+)(?:\\s|$)")
-ID_RE = re.compile(r"^\\\\id\\s+([A-Z0-9]{3})(?:\\s|$)")
+CHAPTER_RE = re.compile(r"^\\c\s+(\d+)(?:\s|$)")
+VERSE_RE = re.compile(r"^\\v\s+(\d+)(?:\s|$)")
+ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
 ETHIOPIC_RANGE = range(0x1200, 0x1380)
 
 
@@ -67,8 +67,8 @@ def inspect_usfm(path: Path) -> dict[str, Any]:
 
     for line_number, line in enumerate(text.splitlines(), start=1):
         line_count += 1
-        if "\\ufffd" in line:
-            replacement_chars += line.count("\\ufffd")
+        if "\ufffd" in line:
+            replacement_chars += line.count("\ufffd")
         ethiopic_chars += sum(1 for char in line if ord(char) in ETHIOPIC_RANGE)
 
         match = ID_RE.match(line)
@@ -183,7 +183,7 @@ def audit_manifest(
     expected_inventory_path: Path | None = None,
 ) -> dict[str, Any]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != "1.0.0":
+    if not isinstance(manifest, dict) or manifest.get("schema_version") != "1.0.0":
         raise ValueError("Unsupported manifest schema_version")
 
     rights_status = manifest.get("rights", {}).get("status")
@@ -203,7 +203,7 @@ def audit_manifest(
             continue
         raw_path = item["path"]
         relative = Path(raw_path)
-        if relative.is_absolute() or ".." in relative.parts or "\\\\" in raw_path or ":" in raw_path:
+        if relative.is_absolute() or ".." in relative.parts or "\\" in raw_path or ":" in raw_path:
             results.append({"path": raw_path, "status": "FAIL", "issues": [_issue("MANIFEST_UNSAFE_PATH", "Unsafe manifest path", raw_path)], "errors": ["Unsafe manifest path"]})
             continue
         normalized = relative.as_posix()
@@ -306,7 +306,7 @@ def main() -> int:
         print(f"AUDIT ERROR: {exc}", file=sys.stderr)
         return 2
 
-    rendered = json.dumps(report, ensure_ascii=False, indent=2) + "\\n"
+    rendered = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     if args.output:
         args.output.write_text(rendered, encoding="utf-8")
     else:
