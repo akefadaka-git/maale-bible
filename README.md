@@ -1,2 +1,35 @@
-# maale-bible
-Maale Bible (ጌኤዦ ማፃኣፖ) — an offline-first, multilingual-ready Android Bible application with scripture study, search, audio and reading plans.
+# Maale Bible — ጌኤዦ ማፃኣፖ
+
+An initiative to establish an authoritative, rights-cleared Maale Bible source and build an offline-first reading experience.
+
+## Current phase: A2 — source and rights verification
+
+This repository currently contains project documentation and source-audit tooling only. Scripture content is intentionally excluded until the exact edition, rights holder, licensing authority, and written product permissions have been verified and approved.
+
+### A2 contents
+
+- Product scope and A2 acceptance gates: docs/product/A2_SCOPE.md
+- Rights and permissions gate: docs/licensing/RIGHTS_GATE.md
+- Candidate source register: content/source-register/README.md
+- Source manifest schema: content/manifests/source-manifest.schema.json
+- Source verification procedure: docs/source-verification/README.md
+- Local USFM structural audit: tools/usfm_audit.py
+- Synthetic-only tests: tools/tests/test_usfm_audit.py
+
+## Run synthetic tests
+
+Requires Python 3.10+:
+
+    python -m unittest discover -s tools/tests -v
+
+## Audit an authorized local source package
+
+Only after written permission is verified and Owner approval is recorded:
+
+    python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
+
+The audit reports structural metadata and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
+
+## Content restrictions
+
+Do not commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the rights gate is closed and a separate content-baseline approval is granted. Android and backend implementation are not part of the current A2 authorization.
