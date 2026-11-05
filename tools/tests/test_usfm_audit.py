@@ -176,6 +176,8 @@ class UsfmAuditTests(unittest.TestCase):
             inventory_path.write_text(json.dumps({
                 "schema_version": "1.0.0",
                 "inventory_id": "synthetic-reference",
+                "reference": "synthetic fixture specification",
+                "review_status": "APPROVED",
                 "books": [{"book_id": "GEN", "chapters": [1, 2]}],
             }), encoding="utf-8")
             report = audit_manifest(manifest_path, source, inventory_path)
