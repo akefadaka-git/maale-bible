@@ -33,3 +33,21 @@ A separate Digital Bible Library record and separately distributed audio or New 
 - REJECTED: source is not selected.
 
 No candidate may be marked APPROVED_FOR_INTAKE based only on this README or a web listing.
+
+## Current leading candidate — not rights-cleared
+
+- Vernacular title: ጌኤዦ ማፃኣፖ
+- English title: Maale Bible (Ethiopic script)
+- Language: Maale / Male (`mdy`)
+- eBible identifier: `MDYTWF` / `mdyeth`
+- Copyright year: 2008
+- Copyright notice: The Word for the World International and The Bible Society of Ethiopia
+- Scope: full Bible; Digital Bible Society catalogue classifies its `MDYBSE` record as full Protestant canon.
+- eBible-listed license: CC BY-SA 4.0 — authority and package applicability require confirmation.
+- USFM package listed by eBible: `mdyeth_usfm.zip`; not acquired or inspected.
+
+**Current status: RIGHTS_BLOCKED / RECORD_EQUIVALENCE_UNRESOLVED.**
+
+The Digital Bible Society's 2008 full-Bible `MDYBSE` record is marked `RESERVED`, while eBible's `MDYTWF` / `mdyeth` page states CC BY-SA 4.0. Written confirmation from The Word for the World International and Bible Society of Ethiopia is required to reconcile the exact edition, digital package, licensing authority, and DBL status.
+
+See [edition reconciliation](../../docs/licensing/EDITION_RECONCILIATION_2026-11-05.md) and [rights-holder inquiry](../../docs/licensing/RIGHTS_HOLDER_INQUIRY.md).
