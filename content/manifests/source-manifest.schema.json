@@ -14,44 +14,122 @@
     "files"
   ],
   "properties": {
-    "schema_version": { "const": "1.0.0" },
-    "source_id": { "type": "string", "minLength": 1 },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
     "edition": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "language_id", "revision", "coverage"],
+      "required": [
+        "title",
+        "language_id",
+        "revision",
+        "coverage"
+      ],
       "properties": {
-        "title": { "type": "string", "minLength": 1 },
-        "language_id": { "type": "string", "minLength": 2 },
-        "revision": { "type": "string", "minLength": 1 },
-        "coverage": { "type": "string", "minLength": 1 },
-        "publisher": { "type": ["string", "null"] },
-        "copyright_holder": { "type": ["string", "null"] }
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language_id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "copyright_holder": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "rights": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "evidence_reference"],
+      "required": [
+        "status",
+        "evidence_reference"
+      ],
       "properties": {
         "status": {
-          "enum": ["UNVERIFIED", "BLOCKED", "APPROVED"]
+          "enum": [
+            "UNVERIFIED",
+            "BLOCKED",
+            "APPROVED"
+          ]
         },
-        "evidence_reference": { "type": ["string", "null"] },
-        "license_name": { "type": ["string", "null"] },
-        "license_version": { "type": ["string", "null"] },
-        "owner_approval_reference": { "type": ["string", "null"] }
+        "evidence_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner_approval_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "intake": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["acquired_at", "acquired_from", "package_sha256"],
+      "required": [
+        "acquired_at",
+        "acquired_from",
+        "package_sha256"
+      ],
       "properties": {
-        "acquired_at": { "type": ["string", "null"], "format": "date-time" },
-        "acquired_from": { "type": ["string", "null"], "format": "uri" },
+        "acquired_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "acquired_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
         "package_sha256": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "pattern": "^[a-fA-F0-9]{64}$"
         }
       }
@@ -61,12 +139,39 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["path", "sha256", "format"],
+        "required": [
+          "path",
+          "sha256",
+          "format"
+        ],
         "properties": {
-          "path": { "type": "string", "minLength": 1 },
-          "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
-          "format": { "enum": ["USFM", "USX", "OTHER"] },
-          "book_id": { "type": ["string", "null"] }
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "format": {
+            "enum": [
+              "USFM",
+              "USX",
+              "OTHER"
+            ]
+          },
+          "book_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z0-9]{3}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional expected USFM book ID for a single-book source file."
+          }
         }
       }
     }
