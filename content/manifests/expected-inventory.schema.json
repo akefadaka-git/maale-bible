@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maale-bible.example/schemas/expected-inventory.schema.json",
+  "title": "Maale Bible Expected Book and Chapter Inventory",
+  "description": "A separately reviewed structural reference. It contains identifiers and chapter numbers only, no scripture text, and does not establish canon or grant rights.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "books"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "inventory_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Citation or provenance for the independently reviewed inventory."
+    },
+    "review_status": {
+      "enum": [
+        "DRAFT",
+        "REVIEWED",
+        "APPROVED"
+      ]
+    },
+    "books": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "book_id",
+          "chapters"
+        ],
+        "properties": {
+          "book_id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]{3}$"
+          },
+          "chapters": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
