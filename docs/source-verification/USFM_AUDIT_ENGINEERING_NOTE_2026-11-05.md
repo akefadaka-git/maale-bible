@@ -18,7 +18,7 @@ The audit now:
 - Tracks verse-marker counts using a `BOOK:CHAPTER` key.
 - Detects duplicate chapter numbers within the same book while allowing the same chapter number in different books.
 
-The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. This changes the report's structural detail; consumers must use the new per-book fields rather than assume a global chapter sequence.
+The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. Because this is a report-shape change, the report version is advanced to `1.1.0`. This changes the report's structural detail; consumers must use the new per-book fields rather than assume a global chapter sequence.
 
 ## Regression fixtures added
 
