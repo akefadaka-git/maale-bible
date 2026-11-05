@@ -166,7 +166,7 @@ def audit_manifest(manifest_path: Path, source_root: Path) -> dict[str, Any]:
         and bool(rights.get("owner_approval_reference"))
     )
     return {
-        "report_version": "1.0.0",
+        "report_version": "1.1.0",
         "source_id": manifest.get("source_id"),
         "rights_status": rights_status,
         "rights_gate": "DOCUMENTED_REQUIRES_OWNER_REVIEW" if rights_documented else "BLOCKED",
