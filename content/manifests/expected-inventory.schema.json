@@ -8,7 +8,9 @@
   "required": [
     "schema_version",
     "inventory_id",
-    "books"
+    "books",
+    "reference",
+    "review_status"
   ],
   "properties": {
     "schema_version": {
@@ -19,18 +21,11 @@
       "minLength": 1
     },
     "reference": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "description": "Citation or provenance for the independently reviewed inventory."
+      "type": "string",
+      "minLength": 1
     },
     "review_status": {
-      "enum": [
-        "DRAFT",
-        "REVIEWED",
-        "APPROVED"
-      ]
+      "const": "APPROVED"
     },
     "books": {
       "type": "array",
