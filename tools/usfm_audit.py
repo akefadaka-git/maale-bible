@@ -135,6 +135,8 @@ def _load_expected_inventory(path: Path) -> dict[str, list[int]]:
     inventory = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(inventory, dict) or inventory.get("schema_version") != "1.0.0":
         raise ValueError("Expected inventory schema_version must be 1.0.0")
+    if not isinstance(inventory.get("inventory_id"), str) or not inventory["inventory_id"].strip():
+        raise ValueError("Expected inventory inventory_id must be a non-empty string")
     if inventory.get("review_status") != "APPROVED" or not isinstance(inventory.get("reference"), str) or not inventory["reference"].strip():
         raise ValueError("Expected inventory must have APPROVED review_status and a non-empty reference")
     books = inventory.get("books")
@@ -230,14 +232,14 @@ def audit_manifest(
             result = inspect_usfm(target)
             result["path"] = normalized
             for book_id in result["book_ids"]:
-                if book_id in first_book_path:
+                if book_id in first_book_path and first_book_path[book_id] != normalized:
                     package_issues.append(_issue(
                         "PACKAGE_DUPLICATE_BOOK_ID",
                         f"Book ID {book_id} appears in more than one manifest source entry",
                         normalized,
                     ))
                 else:
-                    first_book_path[book_id] = normalized
+                    first_book_path.setdefault(book_id, normalized)
                 package_chapters.setdefault(book_id, []).extend(result["chapters_by_book"].get(book_id, []))
             declared_book_id = item.get("book_id")
             if declared_book_id is not None and result["book_ids"] != [declared_book_id]:
