@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maale-bible.example/schemas/source-manifest.schema.json",
+  "title": "Maale Bible Authorized Source Manifest",
+  "description": "Metadata and SHA-256 inventory for a locally held source package. This schema does not grant rights or authorize repository publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_id",
+    "edition",
+    "rights",
+    "intake",
+    "files"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "source_id": { "type": "string", "minLength": 1 },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "language_id", "revision", "coverage"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "language_id": { "type": "string", "minLength": 2 },
+        "revision": { "type": "string", "minLength": 1 },
+        "coverage": { "type": "string", "minLength": 1 },
+        "publisher": { "type": ["string", "null"] },
+        "copyright_holder": { "type": ["string", "null"] }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence_reference"],
+      "properties": {
+        "status": {
+          "enum": ["UNVERIFIED", "BLOCKED", "APPROVED"]
+        },
+        "evidence_reference": { "type": ["string", "null"] },
+        "license_name": { "type": ["string", "null"] },
+        "license_version": { "type": ["string", "null"] },
+        "owner_approval_reference": { "type": ["string", "null"] }
+      }
+    },
+    "intake": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["acquired_at", "acquired_from", "package_sha256"],
+      "properties": {
+        "acquired_at": { "type": ["string", "null"], "format": "date-time" },
+        "acquired_from": { "type": ["string", "null"], "format": "uri" },
+        "package_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "format"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+          "format": { "enum": ["USFM", "USX", "OTHER"] },
+          "book_id": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}
