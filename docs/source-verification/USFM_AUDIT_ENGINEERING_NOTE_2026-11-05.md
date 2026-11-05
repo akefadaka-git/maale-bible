@@ -43,10 +43,38 @@ All fixtures use placeholder text, not scripture content.
 
 Do not describe these regression tests as passing until they have actually been executed in an authorized environment. No test or workflow run was initiated as part of this change.
 
-## Remaining A2 engineering work
+## A2 package-inventory increment — implemented on review branch
 
-- Add optional expected book/chapter inventory validation from an Owner-approved reference, without embedding scripture text.
-- Add manifest-wide duplicate book-ID detection and package-level inventory checks.
-- Add report schema and stable machine-readable error codes.
-- Execute synthetic tests in an available local environment after Owner approval; avoid CI spending.
-- Keep all source-content intake blocked pending written rights reconciliation and separate Owner approval.
+The next engineering increment adds:
+- Package-wide duplicate book-ID detection across manifest entries.
+- Optional manifest `book_id` consistency checks for single-book USFM files.
+- Optional expected book/chapter comparison using a separate JSON inventory.
+- An inventory provenance gate: comparison requires `review_status: APPROVED` and a non-empty `reference`.
+- Stable issue codes alongside human-readable messages.
+- A versioned audit-report JSON Schema (`1.2.0`) and expected-inventory schema (`1.0.0`).
+
+The inventory contains book identifiers and chapter numbers only. It is not a canon assertion; its authority depends on the independently reviewed reference. No Maale inventory has been authored or populated in this increment.
+
+### Optional inventory invocation
+
+```sh
+python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --expected-inventory EXPECTED-INVENTORY.json --output audit-report.json
+```
+
+Without `--expected-inventory`, the audit performs package-level duplicate book-ID checks but does not assert an expected book/chapter set.
+
+### Verification status for this increment
+
+- Source changes committed to review branch: IMPLEMENTED.
+- Synthetic regression fixtures: ADDED; execution NOT RUN.
+- JSON Schema documents: ADDED; schema-validator execution NOT RUN.
+- GitHub Actions / CI: NOT RUN.
+- Real Maale source validation: NOT RUN; source acquisition remains blocked.
+- Rights gate: BLOCKED / UNRESOLVED.
+- Content intake authorization: FALSE.
+
+### Remaining A2 work
+
+- Execute synthetic tests locally in an available authorized environment; avoid CI spending.
+- Review the inventory and report schemas against the emitted report shape.
+- Keep source-content intake blocked pending written rights reconciliation and separate Owner approval.
