@@ -32,12 +32,13 @@ def sha256_file(path: Path) -> str:
 
 def inspect_usfm(path: Path) -> dict[str, Any]:
     book_ids: list[str] = []
-    chapters: list[int] = []
+    chapters_by_book: dict[str, list[int]] = {}
     verse_counts: dict[str, int] = {}
     ethiopic_chars = 0
     replacement_chars = 0
     line_count = 0
     errors: list[str] = []
+    current_book: str | None = None
     current_chapter: int | None = None
 
     try:
@@ -57,32 +58,41 @@ def inspect_usfm(path: Path) -> dict[str, Any]:
             if book_id in book_ids:
                 errors.append(f"Line {line_number}: duplicate book ID marker")
             book_ids.append(book_id)
+            current_book = book_id
+            current_chapter = None
+            chapters_by_book.setdefault(book_id, [])
             continue
 
         match = CHAPTER_RE.match(line)
         if match:
-            current_chapter = int(match.group(1))
-            if current_chapter < 1:
+            chapter_number = int(match.group(1))
+            if current_book is None:
+                errors.append(f"Line {line_number}: chapter appears before a book ID marker")
+                current_chapter = None
+                continue
+            current_chapter = chapter_number
+            if chapter_number < 1:
                 errors.append(f"Line {line_number}: chapter number must be positive")
-            if current_chapter in chapters:
-                errors.append(f"Line {line_number}: duplicate chapter number")
-            chapters.append(current_chapter)
+            book_chapters = chapters_by_book.setdefault(current_book, [])
+            if chapter_number in book_chapters:
+                errors.append(f"Line {line_number}: duplicate chapter number in book {current_book}")
+            book_chapters.append(chapter_number)
             continue
 
         match = VERSE_RE.match(line)
         if match:
-            if current_chapter is None:
-                errors.append(f"Line {line_number}: verse appears before a chapter marker")
+            if current_book is None or current_chapter is None:
+                errors.append(f"Line {line_number}: verse appears before a valid book and chapter marker")
             else:
                 verse_number = int(match.group(1))
                 if verse_number < 1:
                     errors.append(f"Line {line_number}: verse number must be positive")
-                key = str(current_chapter)
+                key = f"{current_book}:{current_chapter}"
                 verse_counts[key] = verse_counts.get(key, 0) + 1
 
     if not book_ids:
         errors.append("Missing \\id marker")
-    if not chapters:
+    if not any(chapters_by_book.values()):
         errors.append("Missing \\c markers")
     if replacement_chars:
         errors.append(f"Found {replacement_chars} Unicode replacement character(s)")
@@ -92,8 +102,8 @@ def inspect_usfm(path: Path) -> dict[str, Any]:
         "status": "FAIL" if errors else "PASS",
         "sha256": sha256_file(path),
         "book_ids": book_ids,
-        "chapter_numbers": chapters,
-        "verse_marker_counts_by_chapter": verse_counts,
+        "chapters_by_book": chapters_by_book,
+        "verse_marker_counts_by_book_and_chapter": verse_counts,
         "line_count": line_count,
         "ethiopic_codepoint_count": ethiopic_chars,
         "unicode_replacement_character_count": replacement_chars,
