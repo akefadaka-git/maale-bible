@@ -115,7 +115,7 @@ def audit_manifest(manifest_path: Path, source_root: Path) -> dict[str, Any]:
     seen_paths: set[str] = set()
     for item in files:
         relative = Path(item["path"])
-        if relative.is_absolute() or ".." in relative.parts:
+        if relative.is_absolute() or ".." in relative.parts or "\\" in item["path"] or ":" in item["path"]:
             results.append({"path": item["path"], "status": "FAIL", "errors": ["Unsafe manifest path"]})
             continue
         normalized = relative.as_posix()
@@ -148,6 +148,7 @@ def audit_manifest(manifest_path: Path, source_root: Path) -> dict[str, Any]:
         results.append(result)
 
     failed = any(item["status"] == "FAIL" for item in results)
+    partially_checked = any(item["status"] == "NOT_CHECKED" for item in results)
     rights = manifest.get("rights", {})
     rights_documented = (
         rights.get("status") == "APPROVED"
@@ -161,8 +162,8 @@ def audit_manifest(manifest_path: Path, source_root: Path) -> dict[str, Any]:
         "rights_gate": "DOCUMENTED_REQUIRES_OWNER_REVIEW" if rights_documented else "BLOCKED",
         "rights_evidence_fields_present": rights_documented,
         "content_intake_authorized": False,
-        "structural_audit": "FAIL" if failed else "PASS",
-        "overall_status": "FAIL" if failed else ("STRUCTURE_PASS_RIGHTS_BLOCKED" if not rights_documented else "STRUCTURE_PASS_REQUIRES_OWNER_REVIEW"),
+        "structural_audit": "FAIL" if failed else ("PARTIAL" if partially_checked else "PASS"),
+        "overall_status": "FAIL" if failed else ("PARTIAL_UNSUPPORTED_FORMAT" if partially_checked else ("STRUCTURE_PASS_RIGHTS_BLOCKED" if not rights_documented else "STRUCTURE_PASS_REQUIRES_OWNER_REVIEW")),
         "file_results": results,
         "limitations": [
             "Does not verify translation accuracy, completeness, canon, or linguistic correctness.",
