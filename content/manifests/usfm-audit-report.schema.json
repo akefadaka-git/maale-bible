@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maale-bible.example/schemas/usfm-audit-report.schema.json",
+  "title": "Maale Bible USFM Audit Report",
+  "description": "Versioned machine-readable structural audit report. The report must not contain scripture text and does not establish rights or authorize content intake.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_version",
+    "source_id",
+    "rights_status",
+    "rights_gate",
+    "rights_evidence_fields_present",
+    "content_intake_authorized",
+    "structural_audit",
+    "overall_status",
+    "expected_inventory_checked",
+    "package_book_ids",
+    "package_chapters_by_book",
+    "package_issues",
+    "file_results",
+    "limitations"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "1.2.0"
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rights_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rights_gate": {
+      "enum": [
+        "BLOCKED",
+        "DOCUMENTED_REQUIRES_OWNER_REVIEW"
+      ]
+    },
+    "rights_evidence_fields_present": {
+      "type": "boolean"
+    },
+    "content_intake_authorized": {
+      "const": false
+    },
+    "structural_audit": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL"
+      ]
+    },
+    "overall_status": {
+      "enum": [
+        "FAIL",
+        "PARTIAL_UNSUPPORTED_FORMAT",
+        "STRUCTURE_PASS_RIGHTS_BLOCKED",
+        "STRUCTURE_PASS_REQUIRES_OWNER_REVIEW"
+      ]
+    },
+    "expected_inventory_checked": {
+      "type": "boolean"
+    },
+    "package_book_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "package_chapters_by_book": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "package_issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      }
+    },
+    "file_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "status"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_CHECKED"
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "manifest_sha256_match": {
+            "type": "boolean"
+          },
+          "book_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z0-9]{3}$"
+            }
+          },
+          "chapters_by_book": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "verse_marker_counts_by_book_and_chapter": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "line_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ethiopic_codepoint_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unicode_replacement_character_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/issue"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9_]+$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
