@@ -80,6 +80,7 @@ class UsfmAuditTests(unittest.TestCase):
             manifest_path = root / "manifest.json"
             manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
             report = audit_manifest(manifest_path, source)
+            self.assertEqual(report["report_version"], "1.1.0")
             self.assertEqual(report["structural_audit"], "PASS")
             self.assertEqual(report["rights_gate"], "BLOCKED")
             self.assertFalse(report["content_intake_authorized"])
