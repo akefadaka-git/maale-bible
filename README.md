@@ -14,6 +14,8 @@ This repository currently contains project documentation and source-audit toolin
 - Source manifest schema: content/manifests/source-manifest.schema.json
 - Source verification procedure: docs/source-verification/README.md
 - Local USFM structural audit (per-book chapter and verse accounting): tools/usfm_audit.py
+- Expected book/chapter inventory schema (approved provenance required): content/manifests/expected-inventory.schema.json
+- Machine-readable USFM audit report schema (report version 1.2.0): content/manifests/usfm-audit-report.schema.json
 - Synthetic-only regression tests: tools/tests/test_usfm_audit.py
 - Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
 
@@ -29,7 +31,7 @@ Only after written permission is verified and Owner approval is recorded:
 
     python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
 
-The audit reports structural metadata and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
+The audit reports structural metadata and file hashes; it does not print scripture text. Optional package inventory comparison is enabled with `--expected-inventory EXPECTED-INVENTORY.json`; the reference must be marked `APPROVED` and include provenance. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
 
 ## Content restrictions
 
