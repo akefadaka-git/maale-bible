@@ -111,7 +111,7 @@ class UsfmAuditTests(unittest.TestCase):
                 "files": [{"path": "gen.usfm", "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "format": "USFM", "book_id": "GEN"}],
             }), encoding="utf-8")
             inventory_path = root / "inventory.json"
-            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "owner-approved-reference-fixture", "books": [{"book_id": "GEN", "chapters": [1, 2]}]}), encoding="utf-8")
+            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "reviewed-reference-fixture", "owner_approval_reference": "owner-approval-fixture", "books": [{"book_id": "GEN", "chapters": [1, 2]}]}), encoding="utf-8")
             report = audit_manifest(manifest_path, source, inventory_path)
             self.assertEqual(report["package_inventory"]["status"], "PASS")
             self.assertEqual(report["rights_gate"], "BLOCKED")
@@ -130,7 +130,7 @@ class UsfmAuditTests(unittest.TestCase):
                 "files": [{"path": "gen.usfm", "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "format": "USFM"}],
             }), encoding="utf-8")
             inventory_path = root / "inventory.json"
-            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "fixture-reference", "books": [{"book_id": "GEN", "chapters": [1, 2]}]}), encoding="utf-8")
+            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "fixture-reference", "owner_approval_reference": "owner-approval-fixture", "books": [{"book_id": "GEN", "chapters": [1, 2]}]}), encoding="utf-8")
             report = audit_manifest(manifest_path, source, inventory_path)
             self.assertEqual(report["structural_audit"], "FAIL")
             self.assertIn("INVENTORY_CHAPTER_MISSING", [item["code"] for item in report["issues"]])
@@ -148,11 +148,11 @@ class UsfmAuditTests(unittest.TestCase):
                 "files": [{"path": "gen.usfm", "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "format": "USFM"}],
             }), encoding="utf-8")
             inventory_path = root / "inventory.json"
-            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "", "books": [{"book_id": "GEN", "chapters": [1]}]}), encoding="utf-8")
+            inventory_path.write_text(json.dumps({"schema_version": "1.0.0", "source_reference": "fixture-reference", "owner_approval_reference": "", "books": [{"book_id": "GEN", "chapters": [1]}]}), encoding="utf-8")
             report = audit_manifest(manifest_path, source, inventory_path)
             self.assertEqual(report["package_inventory"]["status"], "INVALID")
             self.assertEqual(report["structural_audit"], "FAIL")
-            self.assertIn("INVENTORY_SOURCE_REFERENCE_MISSING", [item["code"] for item in report["issues"]])
+            self.assertIn("INVENTORY_OWNER_APPROVAL_REFERENCE_MISSING", [item["code"] for item in report["issues"]])
 
 
 if __name__ == "__main__":
