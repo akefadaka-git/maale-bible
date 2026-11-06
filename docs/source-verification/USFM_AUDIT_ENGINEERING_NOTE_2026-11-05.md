@@ -11,7 +11,7 @@ The synthetic audit tooling now includes:
 
 - Package-level duplicate book-ID detection across distinct USFM files. Repeated chapter numbers remain valid across books, and a multi-book file is not misclassified as a cross-file duplicate.
 - Manifest-declared `book_id` consistency checking against the USFM file.
-- Optional expected book/chapter inventory validation through `--expected-inventory`. The inventory schema requires a source reference and lists book IDs and positive chapter numbers only. The tool does not invent or embed a canon inventory; the reference must be independently reviewed and Owner-approved before use.
+- Optional expected book/chapter inventory validation through `--expected-inventory`. The inventory schema requires a source reference and an explicit Owner approval reference, and lists book IDs and positive chapter numbers only. The tool does not invent or embed a canon inventory; the reference must be independently reviewed and Owner-approved before use.
 - Stable machine-readable issue codes with optional path and line context. Existing human-readable error messages remain available.
 - Versioned JSON schemas for expected inventory and audit report output. Report version is `1.2.0`.
 
@@ -19,7 +19,7 @@ The synthetic audit tooling now includes:
 
 A structural pass never grants rights or authorizes content intake. The report always sets `content_intake_authorized` to false. Missing or invalid rights evidence keeps `rights_gate` at `BLOCKED`; complete evidence fields only move it to `DOCUMENTED_REQUIRES_OWNER_REVIEW`.
 
-The optional inventory is an independently supplied structural comparison, not a canon, translation-completeness, or theological determination. An inventory mismatch or invalid inventory fails the structural audit.
+The optional inventory is an independently supplied structural comparison, not a canon, translation-completeness, or theological determination. An inventory mismatch or invalid inventory fails the structural audit. An inventory without a recorded Owner approval reference is invalid.
 
 ## Synthetic regression coverage added
 
