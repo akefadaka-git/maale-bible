@@ -179,5 +179,34 @@ class UsfmAuditTests(unittest.TestCase):
             self.assertEqual(report["overall_status"], "PARTIAL_UNSUPPORTED_FORMAT")
 
 
+    def test_expected_inventory_duplicate_book_id_fails_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source"
+            source.mkdir()
+            path = source / "gen.usfm"
+            path.write_text("\\id GEN Synthetic fixture\\n\\c 1\\n\\v 1 PLACEHOLDER\\n", encoding="utf-8")
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps({
+                "schema_version": "1.0.0", "source_id": "fixture", "rights": {"status": "UNVERIFIED"},
+                "files": [{"path": "gen.usfm", "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "format": "USFM"}],
+            }), encoding="utf-8")
+            inventory_path = root / "inventory.json"
+            inventory_path.write_text(json.dumps({
+                "schema_version": "1.0.0",
+                "source_reference": "synthetic-reference",
+                "owner_approval_reference": "synthetic-approval",
+                "books": [
+                    {"book_id": "GEN", "chapters": [1]},
+                    {"book_id": "GEN", "chapters": [2]},
+                ],
+            }), encoding="utf-8")
+            report = audit_manifest(manifest_path, source, inventory_path)
+            self.assertEqual(report["package_inventory"]["status"], "INVALID")
+            self.assertEqual(report["structural_audit"], "FAIL")
+            self.assertIn("INVENTORY_BOOK_ID_DUPLICATE", [item["code"] for item in report["issues"]])
+            self.assertFalse(report["content_intake_authorized"])
+
+
 if __name__ == "__main__":
     unittest.main()
