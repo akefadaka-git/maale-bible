@@ -19,7 +19,7 @@ The synthetic audit tooling now includes:
 
 A structural pass never grants rights or authorizes content intake. The report always sets `content_intake_authorized` to false. Missing or invalid rights evidence keeps `rights_gate` at `BLOCKED`; complete evidence fields only move it to `DOCUMENTED_REQUIRES_OWNER_REVIEW`.
 
-The optional inventory is an independently supplied structural comparison, not a canon, translation-completeness, or theological determination. An inventory mismatch or invalid inventory fails the structural audit. An inventory without a recorded Owner approval reference is invalid.
+The optional inventory is an independently supplied structural comparison, not a canon, translation-completeness, or theological determination. An inventory mismatch or invalid inventory fails the structural audit. An inventory without a recorded Owner approval reference is invalid. If any manifest file uses an unsupported format, expected inventory comparison is marked NOT_VERIFIABLE rather than producing false missing-book findings.
 
 ## Synthetic regression coverage added
 
