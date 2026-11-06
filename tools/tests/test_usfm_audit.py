@@ -155,5 +155,29 @@ class UsfmAuditTests(unittest.TestCase):
             self.assertIn("INVENTORY_OWNER_APPROVAL_REFERENCE_MISSING", [item["code"] for item in report["issues"]])
 
 
+    def test_inventory_is_not_compared_when_package_contains_unsupported_format(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source"
+            source.mkdir()
+            path = source / "fixture.usx"
+            path.write_text("<usx version='3.0'></usx>", encoding="utf-8")
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps({
+                "schema_version": "1.0.0", "source_id": "fixture", "rights": {"status": "UNVERIFIED"},
+                "files": [{"path": "fixture.usx", "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "format": "USX"}],
+            }), encoding="utf-8")
+            inventory_path = root / "inventory.json"
+            inventory_path.write_text(json.dumps({
+                "schema_version": "1.0.0", "source_reference": "reviewed-reference-fixture",
+                "owner_approval_reference": "owner-approval-fixture",
+                "books": [{"book_id": "GEN", "chapters": [1]}],
+            }), encoding="utf-8")
+            report = audit_manifest(manifest_path, source, inventory_path)
+            self.assertEqual(report["structural_audit"], "PARTIAL")
+            self.assertEqual(report["package_inventory"]["status"], "NOT_VERIFIABLE")
+            self.assertEqual(report["overall_status"], "PARTIAL_UNSUPPORTED_FORMAT")
+
+
 if __name__ == "__main__":
     unittest.main()
