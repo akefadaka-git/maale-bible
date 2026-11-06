@@ -134,6 +134,8 @@ def _validate_inventory(inventory: Any) -> tuple[dict[str, list[int]] | None, li
         issues.append(issue("INVENTORY_SCHEMA_VERSION_UNSUPPORTED", "Expected inventory schema_version must be 1.0.0"))
     if not isinstance(inventory.get("source_reference"), str) or not inventory["source_reference"].strip():
         issues.append(issue("INVENTORY_SOURCE_REFERENCE_MISSING", "Expected inventory requires a non-empty source_reference"))
+    if not isinstance(inventory.get("owner_approval_reference"), str) or not inventory["owner_approval_reference"].strip():
+        issues.append(issue("INVENTORY_OWNER_APPROVAL_REFERENCE_MISSING", "Expected inventory requires an Owner approval reference"))
     books = inventory.get("books")
     if not isinstance(books, list) or not books:
         issues.append(issue("INVENTORY_BOOKS_INVALID", "Expected inventory books must be a non-empty array"))
@@ -262,7 +264,7 @@ def audit_manifest(manifest_path: Path, source_root: Path, expected_inventory_pa
 
     failed_files = any(item["status"] == "FAIL" for item in results)
     partially_checked = any(item["status"] == "NOT_CHECKED" for item in results)
-    failed = failed_files or any(entry["code"].startswith("PACKAGE_") or entry["code"].startswith("INVENTORY_") for entry in issues)
+    failed = failed_files or bool(issues)
     rights = manifest.get("rights", {}) if isinstance(manifest.get("rights"), dict) else {}
     rights_documented = (
         rights.get("status") == "APPROVED"
