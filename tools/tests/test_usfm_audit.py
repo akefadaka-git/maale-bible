@@ -185,7 +185,7 @@ class UsfmAuditTests(unittest.TestCase):
             source = root / "source"
             source.mkdir()
             path = source / "gen.usfm"
-            path.write_text("\\id GEN Synthetic fixture\\n\\c 1\\n\\v 1 PLACEHOLDER\\n", encoding="utf-8")
+            path.write_text("\\id GEN Synthetic fixture\n\\c 1\n\\v 1 PLACEHOLDER\n", encoding="utf-8")
             manifest_path = root / "manifest.json"
             manifest_path.write_text(json.dumps({
                 "schema_version": "1.0.0", "source_id": "fixture", "rights": {"status": "UNVERIFIED"},
