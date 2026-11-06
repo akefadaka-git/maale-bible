@@ -211,7 +211,8 @@ def audit_manifest(manifest_path: Path, source_root: Path, expected_inventory_pa
             result = inspect_usfm(target)
             for book_id in result.get("book_ids", []):
                 if book_id in package_book_paths:
-                    result.setdefault("issues", []).append(issue("PACKAGE_BOOK_ID_DUPLICATE_ACROSS_FILES", f"Book ID {book_id} occurs in more than one USFM file", normalized))
+                    if package_book_paths[book_id] != normalized:
+                        result.setdefault("issues", []).append(issue("PACKAGE_BOOK_ID_DUPLICATE_ACROSS_FILES", f"Book ID {book_id} occurs in more than one USFM file", normalized))
                 else:
                     package_book_paths[book_id] = normalized
                 package_book_ids.add(book_id)
