@@ -30,7 +30,7 @@
       "type": "object",
       "required": ["status", "reference", "book_count", "book_ids", "chapter_counts_by_book"],
       "properties": {
-        "status": { "enum": ["NOT_PROVIDED", "INVALID", "PASS", "FAIL"] },
+        "status": { "enum": ["NOT_PROVIDED", "INVALID", "NOT_VERIFIABLE", "PASS", "FAIL"] },
         "reference": { "type": ["string", "null"] },
         "book_count": { "type": "integer", "minimum": 0 },
         "book_ids": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z0-9]{3}$" } },
