@@ -1,52 +1,54 @@
-# USFM Audit Engineering Note — 2026-11-05
+# USFM Audit Engineering Note — 2026-11-06
 
-Status: IMPLEMENTED IN REPOSITORY — EXECUTION EVIDENCE PENDING  
+Status: IMPLEMENTED ON REVIEW BRANCH — EXECUTION EVIDENCE PENDING  
 Phase: A2 only  
-Scope: Synthetic structural tooling; no scripture source package was acquired or inspected.
+Branch: `feat/a2-manifest-inventory-audit`  
+Base: `a955203a249257e7dbf7d83f5077b43e434498e3`
 
-## Finding
+## Implemented increment
 
-Code inspection found that the initial audit implementation tracked chapter numbers and verse counts globally within a file. In a combined USFM file containing multiple books, chapter 1 in a second book could therefore be reported as a duplicate of chapter 1 in the first book, and verse counts could be conflated across books.
+The synthetic audit tooling now includes:
 
-## Change committed
+- Package-level duplicate book-ID detection across distinct USFM files. Repeated chapter numbers remain valid across books, and a multi-book file is not misclassified as a cross-file duplicate.
+- Manifest-declared `book_id` consistency checking against the USFM file.
+- Optional expected book/chapter inventory validation through `--expected-inventory`. The inventory schema requires a source reference and lists book IDs and positive chapter numbers only. The tool does not invent or embed a canon inventory; the reference must be independently reviewed and Owner-approved before use.
+- Stable machine-readable issue codes with optional path and line context. Existing human-readable error messages remain available.
+- Versioned JSON schemas for expected inventory and audit report output. Report version is `1.2.0`.
 
-The audit now:
-- Resets the current chapter when a new `\\id` book marker is encountered.
-- Requires a book ID before accepting a chapter marker.
-- Requires both a valid book and chapter before accepting a verse marker.
-- Tracks chapter numbers independently for each book.
-- Tracks verse-marker counts using a `BOOK:CHAPTER` key.
-- Detects duplicate chapter numbers within the same book while allowing the same chapter number in different books.
+## Report and rights behavior
 
-The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. Because this is a report-shape change, the report version is advanced to `1.1.0`. This changes the report's structural detail; consumers must use the new per-book fields rather than assume a global chapter sequence.
+A structural pass never grants rights or authorizes content intake. The report always sets `content_intake_authorized` to false. Missing or invalid rights evidence keeps `rights_gate` at `BLOCKED`; complete evidence fields only move it to `DOCUMENTED_REQUIRES_OWNER_REVIEW`.
 
-## Regression fixtures added
+The optional inventory is an independently supplied structural comparison, not a canon, translation-completeness, or theological determination. An inventory mismatch or invalid inventory fails the structural audit.
 
-Synthetic-only tests cover:
-1. A single-book file and Ethiopic codepoint counting.
-2. Verse markers before a chapter.
-3. Repeated chapter 1 across two different books (valid).
-4. Duplicate chapter number within one book (invalid).
-5. Chapter marker before a book ID (invalid).
-6. Manifest hash handling and the rights gate remaining blocked.
+## Synthetic regression coverage added
 
-All fixtures use placeholder text, not scripture content.
+The tests now cover:
+
+1. Existing per-book chapter and verse behavior.
+2. Stable USFM error codes for malformed marker order and duplicate chapters.
+3. Same chapter number across distinct books in one multi-book file.
+4. Duplicate book ID across separate package files.
+5. Manifest hash and rights-gate behavior.
+6. A matching expected inventory.
+7. An expected inventory chapter mismatch.
+8. An invalid inventory reference.
+
+All fixtures use placeholder text. No scripture source package was acquired or inspected.
 
 ## Verification status
 
-- Source files re-fetched from GitHub after commits: VERIFIED.
+- Branch created from the verified main SHA: VERIFIED.
+- Implementation files committed to the review branch: VERIFIED by GitHub commit responses.
+- Source re-fetch and full diff review: PENDING.
 - Python unit-test execution: NOT RUN.
 - CI/workflow execution: NOT RUN.
 - Real Maale source validation: NOT RUN; source acquisition remains blocked.
 - Rights gate: BLOCKED / UNRESOLVED.
 - Content intake authorization: FALSE.
 
-Do not describe these regression tests as passing until they have actually been executed in an authorized environment. No test or workflow run was initiated as part of this change.
+Do not describe tests as passing until they are executed. No CI workflow was initiated.
 
-## Remaining A2 engineering work
+## Remaining gate
 
-- Add optional expected book/chapter inventory validation from an Owner-approved reference, without embedding scripture text.
-- Add manifest-wide duplicate book-ID detection and package-level inventory checks.
-- Add report schema and stable machine-readable error codes.
-- Execute synthetic tests in an available local environment after Owner approval; avoid CI spending.
-- Keep all source-content intake blocked pending written rights reconciliation and separate Owner approval.
+Review the branch and execute the synthetic test suite locally without acquiring scripture content. Keep the rights gate blocked pending written rights reconciliation and separate Owner approval.
