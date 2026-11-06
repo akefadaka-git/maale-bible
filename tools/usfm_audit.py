@@ -244,6 +244,8 @@ def audit_manifest(manifest_path: Path, source_root: Path, expected_inventory_pa
         inventory_reference = inventory.get("source_reference") if isinstance(inventory, dict) else None
         if expected is None:
             inventory_status = "INVALID"
+        elif any(item["status"] == "NOT_CHECKED" for item in results):
+            inventory_status = "NOT_VERIFIABLE"
         else:
             inventory_status = "PASS"
             actual_books = set(package_chapters)
