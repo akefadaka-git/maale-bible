@@ -12,8 +12,10 @@ This repository currently contains project documentation and source-audit toolin
 - Rights and permissions gate: docs/licensing/RIGHTS_GATE.md
 - Candidate source register: content/source-register/README.md
 - Source manifest schema: content/manifests/source-manifest.schema.json
+- Optional expected book/chapter inventory schema: content/manifests/expected-inventory.schema.json
+- Versioned USFM audit report schema (v1.2.0): content/manifests/usfm-audit-report.schema.json
 - Source verification procedure: docs/source-verification/README.md
-- Local USFM structural audit (per-book chapter and verse accounting): tools/usfm_audit.py
+- Local USFM structural audit: tools/usfm_audit.py
 - Synthetic-only regression tests: tools/tests/test_usfm_audit.py
 - Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
 
@@ -29,7 +31,13 @@ Only after written permission is verified and Owner approval is recorded:
 
     python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
 
-The audit reports structural metadata and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
+If an independently reviewed and Owner-approved expected inventory is available, it may be supplied explicitly:
+
+    python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --expected-inventory EXPECTED_INVENTORY.json --output audit-report.json
+
+The expected inventory contains book IDs and chapter numbers only. It is optional and must not be treated as a canon assertion unless its reference has been independently established and approved.
+
+The audit reports structural metadata, stable issue codes, and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness. Structural success never authorizes content intake.
 
 ## Content restrictions
 
