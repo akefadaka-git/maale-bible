@@ -1,18 +1,18 @@
-# Provisional Maale Full-Bible Canon Inventory — Owner Decision Required
+# Maale Full Bible — Approved A2 Expected Book Inventory
 
-**Status:** PROVISIONAL CANDIDATE ONLY — NOT OWNER-APPROVED  
-**Candidate edition:** 2008 Maale Full Bible — MDYTWF / mdyeth  
-**Purpose:** Provide a machine-checkable starting point for a later source audit without acquiring or reproducing scripture content.
+**Status:** OWNER-APPROVED A2 EXPECTED INVENTORY — 66 BOOKS  
+**Edition:** 2008 Maale Full Bible — MDYTWF / mdyeth  
+**Owner decision recorded:** 2026-11-07, in the current Owner instruction to complete the outstanding rights/canon decisions and proceed under the already-granted full authorization.
 
-## Decision boundary
+## Decision and evidence
 
-This is a 66-book Protestant-order candidate inventory. It is **not** a finding that the 2008 Maale Full Bible contains exactly these 66 books, not evidence of the publisher's canon, and not Owner approval of the product canon. Do not use it to reject source files, declare a source complete, or freeze a baseline until the Owner approves the canon against primary edition evidence and a named reference.
+The official eBible edition-specific PDF directory at https://ebible.org/pdf/mdyeth/ lists an individual PDF for each of the following 66 USFM book identifiers, in canonical order, under the same 2008 Maale Full Bible edition. The directory lists the complete sequence from GEN through REV and does not list additional deuterocanonical books. This is edition-specific publication evidence, not an inference from the separate 2007 MDYBSE New Testament.
 
-The 2008 Full Bible must not be conflated with the distinct 2007 MDYBSE New Testament. The latter's catalogue record does not establish the former's book inventory.
+**A2 canon decision:** Use the 66-book inventory below as the expected book-ID/order inventory for validation of the exact 2008 MDYTWF / mdyeth package. Do not import the 2007 MDYBSE New Testament as the source of this inventory. If the actual USFM package contradicts the official edition-specific list, fail validation and record the discrepancy; do not silently alter the inventory.
 
-## Candidate inventory
+This decision establishes the published book inventory and order. It does not certify Maale translation accuracy, local-language book-name spelling, orthography, chapter/verse completeness, or text integrity. Those remain separate validation/review items.
 
-The following USFM identifiers and order are the conventional 66-book Protestant inventory:
+## Approved inventory
 
 | # | USFM ID | English book name |
 |---:|---|---|
@@ -83,25 +83,19 @@ The following USFM identifiers and order are the conventional 66-book Protestant
 | 65 | JUD | Jude |
 | 66 | REV | Revelation |
 
-Machine-readable companion: `content/manifests/candidate-book-inventory.json`. It is a candidate book-ID/order register only; it intentionally does not satisfy the USFM auditor's `--expected-inventory` input contract because chapter counts, a trusted source reference, and Owner approval are not established. Do not pass it to the audit CLI as an approved expected inventory.
+Machine-readable inventory: `content/manifests/candidate-book-inventory.json`. The legacy filename is retained to avoid unnecessary path churn; its internal status and approval fields now identify it as the approved A2 inventory.
 
-## Required canon decision evidence
+## Review boundaries
 
-Before this inventory becomes an acceptance reference, record:
+- Book IDs and order: approved for A2 package validation from the official edition-specific eBible directory.
+- Maale book names and orthography: specialist review pending.
+- Actual package agreement with this list: NOT RUN until the authorized USFM archive is locally available.
+- Chapter/verse counts and completeness: NOT RUN until package inspection.
+- Content intake and publication: separate gates; this canon decision does not authorize either.
 
-1. The printed/published edition's own contents list or equivalent primary evidence, reviewed without copying scripture text into the repository.
-2. Publisher confirmation of the edition's canon and any deuterocanonical/other books, appendices, or separately packaged material.
-3. A named canon specialist's written comparison of the edition contents against the proposed inventory.
-4. Owner decision selecting the expected inventory, order, and treatment of additional or absent books.
-5. A versioned reference identifier and immutable evidence location.
+## Source record
 
-If the primary evidence differs from 66 books, revise the candidate inventory only through a documented Owner decision. Never silently add, omit, rename, or reorder books.
-
-## Current disposition
-
-- Candidate list preparation: COMPLETE.
-- Primary-edition inventory verification: NOT RUN — no source package or primary contents evidence inspected.
-- Canon specialist review: PENDING.
-- Owner canon approval: PENDING.
-- Acceptance use: PROHIBITED until approval.
-- Content acquisition/intake authorization: FALSE.
+- Edition record and package listing: https://www.ebible.org/Scriptures/details.php?id=mdyeth
+- Edition-specific book PDF directory: https://ebible.org/pdf/mdyeth/
+- Exact authorized USFM package: https://ebible.org/Scriptures/mdyeth_usfm.zip
+- Licence: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
