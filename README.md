@@ -16,8 +16,10 @@ This repository contains project documentation and synthetic source-audit toolin
 - Source manifest schema: content/manifests/source-manifest.schema.json
 - Source verification procedure: docs/source-verification/README.md
 - Source package readiness and safety checklist: docs/source-verification/SOURCE_READINESS_CHECKLIST.md
-- Local USFM structural audit (per-book chapter and verse accounting): tools/usfm_audit.py
-- Synthetic-only regression tests: tools/tests/test_usfm_audit.py
+- ZIP metadata-only preflight: tools/archive_preflight.py
+- Local USFM structural audit: tools/usfm_audit.py
+- Synthetic ZIP preflight tests: tools/tests/test_archive_preflight.py
+- Synthetic USFM regression tests: tools/tests/test_usfm_audit.py
 - Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
 
 ## Run synthetic tests
@@ -25,6 +27,14 @@ This repository contains project documentation and synthetic source-audit toolin
 Requires Python 3.10+:
 
     python -m unittest discover -s tools/tests -v
+
+## Preflight an authorized ZIP package
+
+Only after the Owner separately authorizes acquisition:
+
+    python tools/archive_preflight.py SOURCE_PACKAGE.zip --output preflight-report.json
+
+This inspects ZIP metadata and hashes the archive; it does not extract entries or authorize content intake.
 
 ## Audit an authorized local source package
 
