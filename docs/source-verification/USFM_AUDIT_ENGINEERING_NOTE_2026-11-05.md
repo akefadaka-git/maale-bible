@@ -1,6 +1,8 @@
 # USFM Audit Engineering Note — 2026-11-05
 
-Status: IMPLEMENTED IN REPOSITORY — EXECUTION EVIDENCE PENDING  
+> **STATUS UPDATE (2026-11-07):** This note records the engineering state at its original date. The synthetic suite was subsequently executed against PR #1 corrective head `7008e827c43dd5f3a611f99882d67b4e5635ade4`: 12/12 tests passed, exit code 0. Exact source Git blob hashes and execution details are recorded in PR #1. The substantive rights/edition reconciliation is now PASS — DOCUMENTARY; package acquisition remains NOT AUTHORIZED. See [current source verification procedure](README.md) and [rights/edition reconciliation](RIGHTS_EDITION_RECONCILIATION_2026-11-07.md).
+
+Status at note creation: IMPLEMENTED IN REPOSITORY — EXECUTION EVIDENCE PENDING  
 Phase: A2 only  
 Scope: Synthetic structural tooling; no scripture source package was acquired or inspected.
 
@@ -18,9 +20,9 @@ The audit now:
 - Tracks verse-marker counts using a `BOOK:CHAPTER` key.
 - Detects duplicate chapter numbers within the same book while allowing the same chapter number in different books.
 
-The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. Because this is a report-shape change, the report version is advanced to `1.1.0`. This changes the report's structural detail; consumers must use the new per-book fields rather than assume a global chapter sequence.
+The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. Because this is a report-shape change, the report version is advanced to `1.1.0`.
 
-## Regression fixtures added
+## Regression fixtures
 
 Synthetic-only tests cover:
 1. A single-book file and Ethiopic codepoint counting.
@@ -29,24 +31,28 @@ Synthetic-only tests cover:
 4. Duplicate chapter number within one book (invalid).
 5. Chapter marker before a book ID (invalid).
 6. Manifest hash handling and the rights gate remaining blocked.
+7. Duplicate book IDs across package files.
+8. Expected inventory mismatch and duplicate expected inventory IDs.
+9. Unsupported package formats fail closed for inventory comparison.
 
 All fixtures use placeholder text, not scripture content.
 
-## Verification status
+## Verification status — updated
 
-- Source files re-fetched from GitHub after commits: VERIFIED.
-- Python unit-test execution: NOT RUN.
+- Corrective source re-fetched from GitHub: VERIFIED.
+- Exact Git blob identity for audit source and test source: VERIFIED; details in PR #1.
+- Python synthetic unit suite on pinned corrective head: PASS — 12/12, exit code 0.
 - CI/workflow execution: NOT RUN.
-- Real Maale source validation: NOT RUN; source acquisition remains blocked.
-- Rights gate: BLOCKED / UNRESOLVED.
+- Real Maale source validation: NOT RUN; source acquisition remains unauthorized.
+- Rights/edition reconciliation: PASS — DOCUMENTARY, based on Owner-supplied written rights-holder response.
+- Original email/signatory authentication review: PENDING.
+- Licence compliance controls: SPECIFIED; application implementation NOT STARTED.
 - Content intake authorization: FALSE.
-
-Do not describe these regression tests as passing until they have actually been executed in an authorized environment. No test or workflow run was initiated as part of this change.
 
 ## Remaining A2 engineering work
 
-- Add optional expected book/chapter inventory validation from an Owner-approved reference, without embedding scripture text.
-- Add manifest-wide duplicate book-ID detection and package-level inventory checks.
-- Add report schema and stable machine-readable error codes.
-- Execute synthetic tests in an available local environment after Owner approval; avoid CI spending.
-- Keep all source-content intake blocked pending written rights reconciliation and separate Owner approval.
+- Add or verify schema meta-validation and conditional approval-evidence requirements.
+- Add archive-safety tests using synthetic ZIP fixtures before any real package is authorized.
+- Add/verify expected inventory validation against an Owner-approved reference, without embedding scripture text.
+- Execute synthetic archive-safety tests in an isolated environment; avoid CI spending unless separately authorized.
+- Keep source-content intake blocked pending separate Owner authorization.
