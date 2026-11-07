@@ -1,6 +1,6 @@
 # Source Package Readiness Checklist
 
-Status: PROCEDURE SPECIFIED — NO PACKAGE ACQUIRED OR INSPECTED  
+Status: PROCEDURE SPECIFIED; SYNTHETIC ZIP PREFLIGHT IMPLEMENTED AND TESTED — NO REAL PACKAGE ACQUIRED OR INSPECTED  
 Selected edition: 2008 Maale Full Bible (MDYTWF / mdyeth)  
 Candidate package: mdyeth_usfm.zip
 
@@ -37,18 +37,15 @@ Do not prepopulate actual hashes, timestamps, file counts or sizes from estimate
 
 ## 3. Safe archive inspection and extraction
 
-After acquisition is separately authorized, perform archive metadata inspection in an isolated environment. Do not execute files from the package.
+The A2 utility `tools/archive_preflight.py` inspects ZIP central-directory metadata and hashes the archive. It does not extract entries or read/print scripture content. It fails closed on unsafe paths, normalized path collisions, symlinks/special files, nested archives, encrypted entries and configured resource limits.
 
-Reject or quarantine archives containing:
-- Absolute, drive-qualified, UNC, or parent-traversal paths.
-- Symlinks, hard links, device nodes or unsupported file types.
-- Duplicate paths after normalization, case folding or Unicode normalization.
-- Nested archives not explicitly included in the approved package scope.
-- Excessive entry count, per-file size, total expanded size or compression ratio.
-- Executable files or unexpected formats outside the declared source package scope.
-- Encrypted entries that prevent complete inspection, unless explicitly authorized.
+Run only after the exact archive has been separately authorized and acquired:
 
-Extraction must occur into a new empty directory with path containment checks and no overwrite behavior. Preserve the original archive unchanged. Record tool versions, rejected entries and complete output. Never extract into a repository checkout.
+    python tools/archive_preflight.py SOURCE_PACKAGE.zip --output preflight-report.json
+
+Default limits: 2,000 entries; 50 MiB per file; 250 MiB total uncompressed size; compression ratio 100:1. Any limit adjustment requires documented justification and review. The preflight report is not extraction authorization.
+
+After a PASS, extraction still requires a separately reviewed, isolated extraction process with path containment checks, a new empty directory and no overwrite behavior. Preserve the original archive unchanged. Never extract into a repository checkout or execute package contents.
 
 ## 4. File inventory and integrity
 
@@ -68,9 +65,11 @@ Recompute the archive hash and file hashes independently. The manifest must cove
 | Layer | Required evidence | Status |
 |---|---|---|
 | Package provenance | Source URL, UTC retrieval time, authorization and archive hash | NOT RUN |
-| Archive safety | No traversal, links, collisions, bombs or unexpected files | NOT RUN |
+| ZIP metadata preflight | Synthetic tests for path, collision, type and resource controls | PASS — 14/14 synthetic tests |
+| Real archive preflight | Report for the authorized source archive | NOT RUN / NOT AUTHORIZED |
+| Safe extraction | Isolated extraction record and complete inventory | NOT RUN |
 | File integrity | Complete file list, sizes and SHA-256 values | NOT RUN |
-| USFM structural audit | Audit report from pinned tooling | NOT RUN |
+| USFM structural audit | Audit report from pinned tooling | NOT RUN on real source |
 | Canon/book inventory | Compare with Owner-approved expected inventory | NOT RUN |
 | Chapter/verse inventory | Compare against trusted reference where available | NOT RUN |
 | Character/encoding | Unicode and Ethiopic-script diagnostics | NOT RUN |
@@ -78,21 +77,20 @@ Recompute the archive hash and file hashes independently. The manifest must cove
 | Reproducibility | Independent rerun with matching results | NOT RUN |
 | Immutable baseline | Owner-approved manifest and frozen hashes | BLOCKED |
 
-## 6. Synthetic readiness tests before any real package
+## 6. Synthetic readiness test evidence
 
-Before any authorized source package is processed, test the intake and audit pipeline using synthetic archives only. Include:
-- Valid minimal ZIP with placeholder files.
-- Path traversal and absolute-path entries.
-- Duplicate normalized paths and case collisions.
-- Symlink and unsupported file-type entries.
-- Excessive file count/size/compression-ratio rejection.
-- Hash mismatch and missing/extra file detection.
-- Invalid UTF-8 and replacement-character detection.
-- Duplicate book IDs and invalid chapter/verse ordering.
-- Rights status not approved and missing Owner approval reference.
-- Approved manifest missing licence evidence or Owner approval reference.
+The committed ZIP preflight utility has 14 synthetic tests covering:
+- Valid placeholder ZIP with no extraction.
+- Parent traversal, absolute, drive-qualified and backslash paths.
+- Case-folding and Unicode-normalization path collisions.
+- Symlink rejection.
+- Nested archive rejection.
+- Per-file, total expanded-size, compression-ratio and entry-count limits.
+- Corrupt archive handling.
 
-Synthetic tests must contain no Maale scripture excerpts or real source content. Record exact source SHA, command, complete output and exit code. Do not trigger CI unless separately authorized.
+All fixtures contain placeholder text only. Exact source blob identities and execution results are recorded in the A2 verification report / pull request. The tests do not establish safety for a real package, and CI was not run.
+
+The separate USFM structural suite previously passed 12/12 against the pinned PR #1 corrective head. No real Maale source was used.
 
 ## 7. Current decision
 
@@ -100,8 +98,8 @@ Synthetic tests must contain no Maale scripture excerpts or real source content.
 - Original email/signatory authentication: PENDING.
 - Package acquisition authorization: NOT GRANTED.
 - Package acquisition/inspection/hash: NOT RUN.
-- Synthetic USFM audit suite on pinned PR #1 corrective head: PASS, 12/12, exit 0 (historical evidence; exact SHA is recorded in PR #1).
-- Archive-safety test suite: NOT IMPLEMENTED / NOT RUN.
+- ZIP preflight implementation: PASS — synthetic-only tests 14/14.
+- USFM structural suite: PASS — 12/12 on pinned corrective head.
 - Real-source validation: NOT AUTHORIZED.
 - content_intake_authorized: FALSE.
 - A2 final acceptance: PENDING.
