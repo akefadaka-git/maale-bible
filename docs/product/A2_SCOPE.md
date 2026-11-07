@@ -1,6 +1,6 @@
 # A2 Scope and Acceptance
 
-Status: IN PROGRESS — RIGHTS/CANON DECISIONS COMPLETE; REAL-SOURCE VALIDATION PENDING  
+Status: CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION (2026-11-07)  
 Owner approval: A2 source-verification implementation and exact 2008 Full Bible acquisition/inspection authorization reaffirmed 2026-11-07  
 Repository baseline at start: 8b17b5830a19b63814c025db63b75e4b76855a74
 
@@ -19,6 +19,12 @@ Establish an auditable, rights-compliant and immutable source baseline for the 2
 - Unicode, Ethiopic-script and encoding diagnostics.
 - Named language/script specialist review and independent reproducibility.
 - Immutable A2 source baseline and evidence-backed closure.
+
+## Owner acceptance and risk disposition
+
+On 2026-11-07 the Owner stated: “Accept all and approved to proceed.” This accepts the real-source candidate immutable baseline and authorizes progression to A3. The named Maale-language/Ethiopic-script specialist review is explicitly deferred and accepted as a residual risk; it is not marked passed and no specialist sign-off is claimed. A2-07 machine diagnostics passed. Independent second-pass verification reproduced archive CRC, all 66 USFM hashes, 1,189 chapters and 30,506 verse-marker lines.
+
+A2 closure does not by itself authorize raw scripture publication or distribution. `content_intake_authorized=false` remains in force until a separate content-ingestion decision is recorded. Audio and third-party assets remain separately gated.
 
 ## Explicitly out of scope
 
@@ -41,10 +47,10 @@ Establish an auditable, rights-compliant and immutable source baseline for the 2
 
 ## Acceptance rule
 
-A2 closes only when all eight gates have passing evidence, the immutable baseline is reproducible, and the Owner accepts the baseline. Synthetic tests do not substitute for real-source validation.
+A2 closes when machine-verifiable gates have passing real-source evidence, the immutable baseline is independently reproducible, and the Owner accepts the baseline and any explicitly identified residual risks. The Owner has accepted the specialist-review gap as a deferred risk on 2026-11-07. Synthetic tests do not substitute for real-source validation.
 
 ## Current evidence
 
 See [A2 Completion and Blocker Register](../source-verification/A2_COMPLETION_AND_BLOCKER_REGISTER.md), [Approved 66-book Inventory](../source-verification/CANDIDATE_CANON_INVENTORY.md), and [Language/Script Review Protocol](../source-verification/LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md).
 
-A1 remains CLOSED — FINAL. A3 remains out of scope until A2 is accepted.
+A1 remains CLOSED — FINAL. A2 is CLOSED — OWNER-ACCEPTED WITH EXPLICIT EXCEPTION. A3 is authorized to proceed under the separately recorded A3 scope and implementation gates.
