@@ -113,3 +113,34 @@ A fresh execution-container check was performed after the implementation timelin
 Therefore the wrapper cannot download Gradle 9.6.0 in this environment, and Android dependency resolution, JUnit execution and APK assembly remain **BLOCKED / NOT RUN**. No GitHub Actions workflow was dispatched. No dependency pins were changed without artifact-resolution evidence.
 
 **Disposition:** A3 remains **PARTIAL**. The next technical gate is a real Gradle/Android build in a network-enabled compatible environment; this execution attempt does not satisfy that gate.
+
+
+## 8. Dependency compatibility review and targeted correction
+
+**Review date:** 2026-11-07  
+**Source commit before this report update:** `d1561d6572b2828275c87af279c565efe8c77b7b`
+
+A fresh review of the exact Gradle files and current official release documentation found two AndroidX version declarations that were not valid stable-release pins:
+
+- `androidx.activity:activity-compose:1.14.0` — official Activity release notes list 1.13.0 as stable and 1.14.0-alpha03 as the alpha track. The dependency was corrected to stable **1.13.0**.
+- `androidx.lifecycle:lifecycle-runtime-ktx:2.12.0` — official Lifecycle release notes list 2.11.0 as stable and 2.12.0-alpha05 as the alpha track. The app source does not use this artifact directly, so the unused explicit dependency was removed rather than introducing an unnecessary alpha or additional library.
+
+The other declared baseline versions have matching official release documentation:
+- AGP 9.5.0 is documented as the current stable example/release; it requires Gradle 9.6.0, JDK 17 and supports API 37.
+- Gradle 9.6.0 is an official stable Gradle release.
+- Kotlin Gradle plugin 2.4.10 is published on the Gradle Plugin Portal.
+- Compose BOM 2026.09.00 is documented by Android Developers.
+
+References:
+- https://developer.android.com/build/releases/about-agp
+- https://developer.android.com/build/releases/agp-9-5-0-release-notes
+- https://gradle.org/releases/
+- https://plugins.gradle.org/plugin/org.jetbrains.kotlin.android/2.4.10
+- https://developer.android.com/develop/ui/compose/bom
+- https://developer.android.com/jetpack/androidx/releases/activity
+- https://developer.android.com/jetpack/androidx/releases/lifecycle
+
+**Changed file:** `app/build.gradle.kts` only.  
+**Dependency correction commit:** `d1561d6572b2828275c87af279c565efe8c77b7b`.
+
+This is a documentation-backed compatibility correction, not a successful dependency resolution. No Gradle invocation could be run in the current execution environment. Artifact resolution, JUnit, Android build and APK generation remain **NOT RUN / BLOCKED** pending a real Android build host.
