@@ -15,7 +15,6 @@ The documentary rights discrepancy is reconciled. However, **source-package acqu
 ## 2. Preconditions for a future authorized intake
 
 Before any package is acquired, the evidence register must contain:
-
 - Original rights-holder email retained with sender, date, headers and attachments where available.
 - Reviewer record of the signatory, organizational role and the scope of the written confirmation; unresolved authentication limits must be stated.
 - Exact edition identity: 2008 Full Bible, MDYTWF / mdyeth, Maale / Male (mdy), and full-Bible scope.
@@ -27,7 +26,6 @@ Before any package is acquired, the evidence register must contain:
 ## 3. Intake provenance and chain of custody
 
 For a separately authorized package, record before processing:
-
 - Exact source URL, retrieval timestamp (UTC), retrieval method and operator.
 - Original filename, media type, byte size and HTTP/source metadata available.
 - SHA-256 of the untouched archive, computed before extraction.
@@ -39,22 +37,33 @@ For a separately authorized package, record before processing:
 
 Never rewrite or normalize the original archive. Perform validation on a separate working copy and preserve the original bytes.
 
-## 4. Safe archive handling requirements
+## 4. ZIP metadata preflight
 
-Before extraction, inspect archive metadata only after acquisition has been authorized. Extraction tooling must fail closed on:
+After separate Owner authorization to acquire the exact package, run the metadata-only preflight:
 
-- Absolute paths, parent-directory traversal, drive-letter or UNC paths.
-- Symlinks, hard links, device files, or unsupported entry types.
-- Duplicate normalized paths, case-folding collisions, and Unicode-normalization collisions.
-- Nested archives unless explicitly approved.
-- Excessive file count, individual file size, total expanded size, or compression ratio.
-- Unexpected file extensions, executable content, or files outside the declared package inventory.
+    python tools/archive_preflight.py SOURCE_PACKAGE.zip --output preflight-report.json
 
-Extract only into a new isolated directory with no overwrite behavior. Do not execute package contents. Record rejected entries and extraction-tool version. These are readiness requirements; no archive has been acquired or tested.
+The utility reads the ZIP central directory and hashes the archive. It does not extract entries or emit member contents. It fails closed on:
+- Absolute, drive-qualified, UNC, backslash, and parent-traversal paths.
+- Duplicate paths after Unicode NFC normalization and case folding.
+- Symlinks and special filesystem entries.
+- Encrypted entries and nested archives.
+- Configured entry-count, per-file size, total uncompressed size, and compression-ratio limits.
+- Invalid ZIP archives.
 
-## 5. Structural validation
+Default limits are 2,000 entries, 50 MiB per file, 250 MiB total uncompressed size and 100:1 compression ratio. Record the exact command and report. Any limit change must be reviewed and documented.
 
-The existing synthetic audit utility checks UTF-8 readability, USFM book/chapter/verse markers, duplicate book IDs and chapter numbers within each file, positive chapter and verse numbers, verses after chapter markers, replacement characters, Ethiopic-range code points, and manifest SHA-256 equality.
+A PASS is only a metadata preflight result. It does not validate member content, completeness, USFM structure, rights, or authorize extraction. Do not execute files from the archive.
+
+## 5. Safe extraction and file inventory
+
+After a passing preflight and separate approval of the extraction step, extract only into a new empty isolated directory with path containment checks and no overwrite behavior. Do not extract into a repository checkout. Preserve the original archive unchanged.
+
+For every extracted file record normalized relative path, byte size, detected and declared format, SHA-256, USFM book ID where applicable, encoding result, and expected/unexpected/duplicate status. Recompute hashes independently. The manifest must cover every file in the approved package scope; no missing, extra, or silently ignored files.
+
+## 6. Structural and specialist validation
+
+The existing synthetic USFM audit utility checks UTF-8 readability, USFM book/chapter/verse markers, duplicate book IDs and chapter numbers within each file, positive chapter and verse numbers, verses after chapter markers, replacement characters, Ethiopic-range code points, and manifest SHA-256 equality.
 
 The utility remains intentionally incomplete. It does not establish expected canon, complete book order, chapter/verse completeness, cross-file consistency, verse sequence continuity, full USFM grammar, footnote/table/poetry correctness, Unicode normalization policy, orthographic correctness, translation accuracy, or legal permission.
 
@@ -67,23 +76,27 @@ Validation must be layered:
 6. Maale-language specialist review.
 7. Independent reproducibility and Owner baseline acceptance.
 
-## 6. Reproducible synthetic verification
+## 7. Reproducible synthetic verification
 
 Use Python 3.10+ and the standard library:
 
     python -m unittest discover -s tools/tests -v
 
-The corrective PR #1 head was previously reconstructed from exact GitHub source blobs and its complete synthetic suite passed 12/12 with exit code 0. That evidence applies to the pinned corrective head recorded in PR #1; it does not validate a real source package or the current documentation changes. No CI run is required for this documentation-only A2 work.
+Evidence:
+- ZIP preflight suite: 14/14 synthetic tests passed, exit code 0, against exact GitHub source blobs recorded in the A2 branch.
+- USFM audit suite: 12/12 synthetic tests passed, exit code 0, against pinned PR #1 corrective head 7008e827c43dd5f3a611f99882d67b4e5635ade4.
+- No CI/workflow was run.
+- No real Maale source package was acquired or inspected.
 
-## 7. Acceptance gates
+## 8. Acceptance gates
 
 A2 source readiness requires:
 - rights/edition reconciliation: PASS — DOCUMENTARY;
 - rights evidence retention and authentication review: PENDING;
 - explicit Owner authorization to acquire the exact package: PENDING;
 - approved expected book/canon reference: PENDING;
-- safe archive-handling procedure: SPECIFIED; execution NOT RUN;
-- complete synthetic tooling verification: PASS on pinned PR #1 head;
+- ZIP metadata preflight utility and synthetic suite: PASS;
+- real archive preflight and safe extraction: NOT RUN / NOT AUTHORIZED;
 - actual package validation: NOT RUN / NOT AUTHORIZED;
 - Maale-language and Ethiopic-script specialist acceptance: NOT RUN;
 - immutable source baseline: BLOCKED.
