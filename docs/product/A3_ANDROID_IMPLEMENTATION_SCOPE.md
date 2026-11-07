@@ -16,6 +16,7 @@ Build the Android application foundation and incrementally deliver a usable offl
 - Local-first storage; Room/SQLite is intended for a later persistent-data slice.
 - Local search must work without network connectivity.
 - Android minimum API 26; compile SDK 37; target SDK 36; JVM 17.
+- Gradle Wrapper 9.6.0 is committed, with POSIX and Windows launchers and the wrapper JAR.
 
 ## Implementation sequence
 1. Android project, application shell, design tokens and accessible navigation.
@@ -40,7 +41,7 @@ Build the Android application foundation and incrementally deliver a usable offl
 An Android app foundation, metadata-only 66-book catalogue, accessible Compose navigation, and empty states distinguishing catalogue metadata from unavailable scripture content. It must not fabricate verses or substitute another edition.
 
 ## Acceptance gates
-- A3-01 Android project configuration and pinned dependencies; Gradle wrapper scripts/JAR must be present before this gate can pass.
+- A3-01 Android project configuration and pinned dependencies; wrapper scripts/JAR must be present.
 - A3-02 Application shell supports system light/dark mode.
 - A3-03 66-book catalogue matches accepted A2 inventory exactly.
 - A3-04 Navigation supports Home, Books, Search and Reader placeholder.
@@ -48,7 +49,12 @@ An Android app foundation, metadata-only 66-book catalogue, accessible Compose n
 - A3-06 No raw scripture text or database committed.
 - A3-07 Build/test evidence recorded before the slice is considered verified.
 
-**Initial-slice evidence:** Kotlin/JVM domain/catalogue compilation and smoke assertions pass. The full Android build and JUnit suite have not run. Gradle wrapper properties are pinned, but wrapper scripts/JAR are missing; A3-01 and A3-02 remain unverified.
+## Current evidence and limitations
+- Wrapper JAR, POSIX launcher, Windows launcher and Gradle 9.6.0 distribution pin are present on the A3 branch: **VERIFIED (repository inspection)**.
+- Material 3 system light/dark theme selection is present in source: **VERIFIED (source inspection)**; Android runtime rendering is **NOT RUN**.
+- The A3-01 configuration is committed, but plugin/dependency resolution and full Android project configuration are **NOT VERIFIED** because no Gradle build has run.
+- The JUnit suite and full Android Gradle build remain **NOT RUN**.
+- The earlier statement that wrapper scripts/JAR were missing is obsolete and is corrected by this revision.
 
 ## Deferred
 Real-source ingestion, production reader content, Room scripture schema, full-text index, audio, sync, backend, account/authentication, analytics, release signing and deployment remain gated.
