@@ -67,7 +67,7 @@ jobs:
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: maale-bible-a3-debug-7524e6ab
+          name: maale-bible-a3-debug-ef1bf242
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 7
