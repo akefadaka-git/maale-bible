@@ -3,7 +3,7 @@
 **Assessment date:** 2026-11-07  
 **Phase:** A2 — source verification and readiness controls  
 **Owner authorization:** REAFFIRMED — exact 2008 MDYTWF / mdyeth package acquisition and A2 inspection  
-**Overall status:** REAL SOURCE ACQUIRED AND MACHINE-VALIDATED; SPECIALIST REVIEW AND OWNER BASELINE ACCEPTANCE PENDING
+**Overall status:** CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION (2026-11-07)
 
 ## 1. Completed A2 deliverables
 
@@ -22,8 +22,8 @@
 | Signed source-file integrity | GPG signature valid; 66/66 USFM hashes match signed list | PASS — CRYPTOGRAPHIC |
 | Real USFM/book/chapter validation | 66 unique approved book IDs; 1,189 chapters; chapter sequences contiguous | PASS — REAL SOURCE |
 | Real encoding/script diagnostics | UTF-8 valid; zero replacement characters; NFC and Ethiopic diagnostics recorded | PASS — MACHINE |
-| Language/script specialist review | Named specialist review and signed disposition | PENDING |
-| Immutable baseline | Candidate metadata-only manifest and per-file hashes generated; independent second-pass reproducibility completed | CANDIDATE — OWNER ACCEPTANCE PENDING |
+| Language/script specialist review | Named specialist review and signed disposition | DEFERRED — OWNER RISK-ACCEPTED |
+| Immutable baseline | Metadata-only manifest, per-file hashes and independent second-pass reproducibility | PASS — OWNER ACCEPTED 2026-11-07 |
 
 ## 2. A2 gate register
 
@@ -35,8 +35,8 @@
 | A2-04 Licence reconciliation | CC BY-SA 4.0, package applicability and compliance obligations | PASS — DOCUMENTARY | Preserve attribution, change notices, ShareAlike and no-endorsement controls |
 | A2-05 Source acquisition | Exact archive, provenance and SHA-256 | PASS — REAL SOURCE | Archive SHA-256 recorded below |
 | A2-06 Structural validation | ZIP, signed hashes, USFM files, book IDs, chapters and verse markers | PASS — REAL SOURCE | No outstanding machine structural blocker |
-| A2-07 Character validation | Encoding, Unicode/Ethiopic diagnostics and specialist sign-off | PARTIAL — MACHINE PASS / SPECIALIST PENDING | Complete named Maale-language/Ethiopic-script review |
-| A2-08 Immutable baseline | Manifest, per-file hashes, reproducibility and Owner acceptance | PARTIAL — CANDIDATE GENERATED | Complete specialist review, independent review of evidence and Owner acceptance |
+| A2-07 Character validation | Strict UTF-8, Unicode/Ethiopic diagnostics; specialist sign-off tracked separately | PASS — MACHINE; SPECIALIST DEFERRED / OWNER RISK-ACCEPTED | Specialist review remains a post-A2 risk; no specialist sign-off is claimed |
+| A2-08 Immutable baseline | Manifest, per-file hashes, independent reproducibility and Owner acceptance | PASS — OWNER ACCEPTED | Baseline accepted with specialist-review exception recorded |
 
 ## 3. Real source identity and evidence
 
@@ -85,7 +85,7 @@ Metadata-only candidate evidence artifacts were generated outside the public rep
 - `maale-usfm-file-hashes.json` — per-USFM-file hashes only.
 - `maale-a2-real-source-validation-report.md` — human-readable validation report.
 
-A second clean extraction and independent process re-computed the archive hash and core counts with matching results. These artifacts contain no scripture text. The final immutable baseline remains pending specialist review and Owner acceptance.
+A separate second-pass ZIP read verified CRC integrity and re-computed all 66 USFM hashes; all matched the first-pass manifest and signed hash list. It reproduced 1,189 chapters and 30,506 verse-marker lines. The Owner accepted the metadata-only immutable baseline on 2026-11-07. The named specialist review remains deferred as an explicitly accepted risk; no specialist sign-off is claimed. The metadata-only artifacts contain no scripture text.
 
 ## 6. Restrictions and governance
 
@@ -99,6 +99,6 @@ A second clean extraction and independent process re-computed the archive hash a
 
 ## 7. Closure decision
 
-**A2 formal closure: NOT YET ACCEPTED.**
+**A2 formal closure: CLOSED — OWNER-ACCEPTED WITH EXPLICIT EXCEPTION (2026-11-07).**
 
-Rights, edition and approved book inventory decisions are recorded. The exact source package has been acquired and passed machine-level archive, signature, hash, structure and encoding checks. Remaining gates are named specialist review, final immutable-baseline review and Owner acceptance. Do not mark A2 closed until those gates are satisfied.
+The Owner's instruction “Accept all and approved to proceed” accepts the candidate immutable source baseline and explicitly accepts the outstanding named Maale-language/Ethiopic-script specialist review as a deferred risk. All machine-verifiable A2 gates and independent reproducibility passed. No specialist review or sign-off is represented as completed. The specialist review remains a tracked post-A2 risk and may be completed later without reopening A1. Production content intake remains separately controlled and is not authorized by this closure record.
