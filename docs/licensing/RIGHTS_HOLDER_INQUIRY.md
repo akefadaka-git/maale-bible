@@ -3,6 +3,8 @@
 **To:** The Word for the World International; Bible Society of Ethiopia  
 **Subject:** Written confirmation of edition identity and digital publishing rights — Maale Full Bible (MDYTWF / mdyeth)
 
+> **STATUS UPDATE (2026-11-07):** The Owner confirmed that the inquiry was sent. The Owner has now supplied a written response attributed to The Word for the World International and signed by Dr. Tesfaye Yohannes. That response is the current documentary evidence and is summarized in [Rights and Edition Reconciliation](../source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md). This file is retained as the original inquiry record; the questions below should not be treated as still unanswered. Independent authentication of original email headers and signatory authority remains a separate evidence task.
+
 Dear Rights and Publishing Team,
 
 I am developing Maale Bible (ጌኤዦ ማፃኣፖ), an offline-first digital Bible application intended to make the Maale-language Scriptures accessible to Maale readers.

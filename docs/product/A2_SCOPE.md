@@ -1,51 +1,56 @@
 # A2 Scope and Acceptance
 
-Status: IN PROGRESS  
-Owner approval: Option 1 — A2 documentation and source-verification implementation  
+Status: CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION (2026-11-07)  
+Owner approval: A2 source-verification implementation and exact 2008 Full Bible acquisition/inspection authorization reaffirmed 2026-11-07  
 Repository baseline at start: 8b17b5830a19b63814c025db63b75e4b76855a74
 
 ## Objective
 
-Establish an auditable, rights-gated process for identifying, obtaining, validating, and freezing an authoritative Maale Bible source before any scripture content is admitted to this repository or any Android implementation begins.
+Establish an auditable, rights-compliant and immutable source baseline for the 2008 Maale Full Bible before production content intake or Android implementation.
 
 ## In scope
 
-- Edition and publisher identity research and source register.
-- Written rights and permission evidence tracking.
-- USFM package intake requirements and local structural audit tooling.
-- Manifest schema, SHA-256 inventory, and reproducible validation reports.
-- Synthetic test fixtures that contain no actual scripture text.
-- Decision records and evidence-based A2 acceptance.
+- Edition and rights reconciliation for MDYTWF / mdyeth.
+- CC BY-SA 4.0 package compliance.
+- Exact `mdyeth_usfm.zip` acquisition into an isolated validation workspace.
+- Archive hashing, ZIP metadata preflight, safe extraction and chain of custody.
+- Per-file hashes and source manifest.
+- USFM book/chapter/verse structural validation against the Owner-approved 66-book inventory.
+- Unicode, Ethiopic-script and encoding diagnostics.
+- Named language/script specialist review and independent reproducibility.
+- Immutable A2 source baseline and evidence-backed closure.
+
+## Owner acceptance and risk disposition
+
+On 2026-11-07 the Owner stated: “Accept all and approved to proceed.” This accepts the real-source candidate immutable baseline and authorizes progression to A3. The named Maale-language/Ethiopic-script specialist review is explicitly deferred and accepted as a residual risk; it is not marked passed and no specialist sign-off is claimed. A2-07 machine diagnostics passed. Independent second-pass verification reproduced archive CRC, all 66 USFM hashes, 1,189 chapters and 30,506 verse-marker lines.
+
+A2 closure does not by itself authorize raw scripture publication or distribution. `content_intake_authorized=false` remains in force until a separate content-ingestion decision is recorded. Audio and third-party assets remain separately gated.
 
 ## Explicitly out of scope
 
-- Actual Bible, scripture, translation, audio, or sample-verse content.
-- Android application, Gradle project, Kotlin, Compose, or mobile UI code.
-- Backend, database, account, cloud sync, or deployment implementation.
-- Republishing, modifying, converting, or distributing any candidate source before rights clearance.
-- Assuming that a public download, metadata listing, or third-party license label is sufficient permission for this product.
+- Committing raw scripture files, verse excerpts, or derived scripture datasets to the public repository.
+- Production ingestion/distribution, Android application, Gradle/Kotlin/Compose, backend, database, cloud sync, or deployment.
+- Audio and third-party images/assets; these remain separately rights-gated.
 
 ## A2 gates
 
 | Gate | Required evidence | Current status |
 |---|---|---|
-| A2-01 Edition identity | Written confirmation of exact edition, canon, revision, language/script, publisher and contributors | MISSING |
-| A2-02 Rights authority | Rights-holder identity and authority to license the exact edition | MISSING |
-| A2-03 Product permission | Written permission covering app distribution, offline storage, display, search, quotation, modification and audio if applicable | MISSING |
-| A2-04 License reconciliation | Reconciled publisher terms, repository/source terms and any reserved/library records | MISSING |
-| A2-05 Source acquisition | Authorized source package, provenance, acquisition date and source URL | BLOCKED |
-| A2-06 Structural validation | Complete book/chapter/verse inventory validated against an approved reference | NOT RUN |
-| A2-07 Character validation | Unicode/script review and Maale-language specialist acceptance | NOT RUN |
-| A2-08 Immutable baseline | Approved manifest, hashes, reviewer sign-off and frozen source revision | BLOCKED |
+| A2-01 Edition identity and canon | Exact edition and approved expected book inventory | PASS — official edition-specific list and Owner decision |
+| A2-02 Rights authority | Rights-holder evidence and package licence | PASS — documentary |
+| A2-03 Product permission | Offline storage, display, search, annotations, sharing | PASS — documentary |
+| A2-04 Licence reconciliation | CC BY-SA 4.0 obligations | PASS — documentary |
+| A2-05 Source acquisition | Exact archive, provenance, size and SHA-256 | PASS — REAL SOURCE |
+| A2-06 Structural validation | Real package inventory and USFM audit | PASS — REAL SOURCE |
+| A2-07 Character validation | Strict UTF-8/Unicode/Ethiopic diagnostics; specialist review tracked separately | PASS — MACHINE; SPECIALIST DEFERRED / OWNER RISK-ACCEPTED |
+| A2-08 Immutable baseline | Metadata-only manifest, per-file hashes, independent reproducibility and Owner acceptance | PASS — OWNER ACCEPTED 2026-11-07 |
 
 ## Acceptance rule
 
-A2 is not accepted while any rights gate is MISSING, UNRESOLVED, or BLOCKED. Automated structural checks do not establish translation accuracy, completeness, canon, legal permission, or linguistic correctness. All such matters require independent documentary or specialist evidence.
+A2 closes when machine-verifiable gates have passing real-source evidence, the immutable baseline is independently reproducible, and the Owner accepts the baseline and any explicitly identified residual risks. The Owner has accepted the specialist-review gap as a deferred risk on 2026-11-07. Synthetic tests do not substitute for real-source validation.
 
-## Repository content rule
+## Current evidence
 
-Only project documentation, schemas, validation tools, synthetic tests, and non-scriptural metadata may be committed during A2. Do not commit USFM, USX, PDF, DOCX, audio, verse excerpts, screenshots containing scripture, or derived scripture datasets until the Owner explicitly approves a verified rights package.
+See [A2 Completion and Blocker Register](../source-verification/A2_COMPLETION_AND_BLOCKER_REGISTER.md), [Approved 66-book Inventory](../source-verification/CANDIDATE_CANON_INVENTORY.md), and [Language/Script Review Protocol](../source-verification/LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md).
 
-## Change control
-
-Changes to the target edition, canon, license, rights interpretation, source package, validation acceptance criteria, or content admission policy require Owner review. Record decisions in docs/decisions/.
+A1 remains CLOSED — FINAL. A2 is CLOSED — OWNER-ACCEPTED WITH EXPLICIT EXCEPTION. A3 is authorized to proceed under the separately recorded A3 scope and implementation gates.
