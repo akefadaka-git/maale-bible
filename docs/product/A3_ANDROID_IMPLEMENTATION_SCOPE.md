@@ -37,16 +37,18 @@ Build the Android application foundation and incrementally deliver a usable offl
 - No production release, deployment or store publication without separate Owner approval.
 
 ## Initial implementation slice
-A buildable Android app foundation, metadata-only 66-book catalogue, accessible Compose navigation, and empty states distinguishing catalogue metadata from unavailable scripture content. It must not fabricate verses or substitute another edition.
+An Android app foundation, metadata-only 66-book catalogue, accessible Compose navigation, and empty states distinguishing catalogue metadata from unavailable scripture content. It must not fabricate verses or substitute another edition.
 
 ## Acceptance gates
-- A3-01 Reproducible Android project configuration and pinned dependencies.
+- A3-01 Android project configuration and pinned dependencies; Gradle wrapper scripts/JAR must be present before this gate can pass.
 - A3-02 Application shell supports system light/dark mode.
 - A3-03 66-book catalogue matches accepted A2 inventory exactly.
 - A3-04 Navigation supports Home, Books, Search and Reader placeholder.
 - A3-05 Unit tests cover catalogue count, uniqueness and canonical order.
 - A3-06 No raw scripture text or database committed.
 - A3-07 Build/test evidence recorded before the slice is considered verified.
+
+**Initial-slice evidence:** Kotlin/JVM domain/catalogue compilation and smoke assertions pass. The full Android build and JUnit suite have not run. Gradle wrapper properties are pinned, but wrapper scripts/JAR are missing; A3-01 and A3-02 remain unverified.
 
 ## Deferred
 Real-source ingestion, production reader content, Room scripture schema, full-text index, audio, sync, backend, account/authentication, analytics, release signing and deployment remain gated.
