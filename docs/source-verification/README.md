@@ -26,7 +26,7 @@ Before any package is acquired, the evidence register must contain:
 - Approved expected book inventory and canon reference, with provenance and Owner approval.
 - Named reviewers for Maale language and Ethiopic-script review.
 
-The 66-book candidate inventory is a preparation artifact only. It is not the expected inventory for audit until approved.
+The 66-book candidate inventory is a preparation artifact only. Its JSON companion is a book-ID/order register, not the USFM auditor's expected-inventory input: chapter counts, a trusted source reference and Owner approval are deliberately absent. It is not the expected inventory for audit until approved.
 
 ## 3. Intake provenance and chain of custody
 
