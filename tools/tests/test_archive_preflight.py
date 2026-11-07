@@ -41,9 +41,27 @@ class ArchivePreflightTests(unittest.TestCase):
             report = preflight_zip(path)
             self.assertIn("UNSAFE_PATH", {item["code"] for item in report["errors"]})
 
+    def test_windows_drive_path_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_zip(directory, [("C:/outside.txt", "x", None)])
+            report = preflight_zip(path)
+            self.assertIn("UNSAFE_PATH", {item["code"] for item in report["errors"]})
+
+    def test_backslash_path_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_zip(directory, [("folder\\escape.txt", "x", None)])
+            report = preflight_zip(path)
+            self.assertIn("UNSAFE_PATH", {item["code"] for item in report["errors"]})
+
     def test_casefold_collision_fails(self):
         with tempfile.TemporaryDirectory() as directory:
             path = self.make_zip(directory, [("Books/GEN.usfm", "a", None), ("books/gen.USFM", "b", None)])
+            report = preflight_zip(path)
+            self.assertIn("DUPLICATE_NORMALIZED_PATH", {item["code"] for item in report["errors"]})
+
+    def test_unicode_normalization_collision_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_zip(directory, [("caf\u00e9.txt", "a", None), ("cafe\u0301.txt", "b", None)])
             report = preflight_zip(path)
             self.assertIn("DUPLICATE_NORMALIZED_PATH", {item["code"] for item in report["errors"]})
 
@@ -65,6 +83,20 @@ class ArchivePreflightTests(unittest.TestCase):
             path = self.make_zip(directory, [("large.usfm", "0123456789", None)])
             report = preflight_zip(path, max_file_size=5)
             self.assertIn("FILE_SIZE_LIMIT_EXCEEDED", {item["code"] for item in report["errors"]})
+
+    def test_total_size_limit_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_zip(directory, [("one.usfm", "1234", None), ("two.usfm", "5678", None)])
+            report = preflight_zip(path, max_total_size=6)
+            self.assertIn("TOTAL_SIZE_LIMIT_EXCEEDED", {item["code"] for item in report["errors"]})
+
+    def test_compression_ratio_limit_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "compressed.zip"
+            with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+                archive.writestr("repetitive.usfm", "A" * 10000)
+            report = preflight_zip(path, max_compression_ratio=2.0)
+            self.assertIn("COMPRESSION_RATIO_LIMIT_EXCEEDED", {item["code"] for item in report["errors"]})
 
     def test_entry_count_limit_fails(self):
         with tempfile.TemporaryDirectory() as directory:
