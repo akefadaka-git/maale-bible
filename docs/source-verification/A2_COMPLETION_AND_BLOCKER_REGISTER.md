@@ -14,7 +14,7 @@
 | ZIP metadata preflight | `tools/archive_preflight.py`; 14/14 synthetic tests | PASS — SYNTHETIC |
 | USFM structural audit tooling | PR #1 pinned corrective head; 12/12 synthetic tests | PASS — SYNTHETIC |
 | Source manifest rights-evidence enforcement | `content/manifests/source-manifest.schema.json`; positive/negative synthetic validation | PASS — SYNTHETIC |
-| Provisional candidate book inventory | `CANDIDATE_CANON_INVENTORY.md` and JSON companion | PASS — PREPARATION ONLY |
+| Provisional candidate book inventory | `CANDIDATE_CANON_INVENTORY.md` and JSON companion; JSON parsed with 66 unique IDs and contiguous 1–66 order | PASS — PREPARATION ONLY; not an approved audit input |
 | Language/script specialist protocol | `LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md` | PASS — PROCEDURE ONLY |
 | Intake and content-safety boundaries | Scope, checklist, audit tooling, manifest and licence controls | PASS — SPECIFIED |
 
