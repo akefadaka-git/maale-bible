@@ -83,7 +83,7 @@ The following USFM identifiers and order are the conventional 66-book Protestant
 | 65 | JUD | Jude |
 | 66 | REV | Revelation |
 
-Machine-readable companion: `content/manifests/candidate-book-inventory.json`.
+Machine-readable companion: `content/manifests/candidate-book-inventory.json`. It is a candidate book-ID/order register only; it intentionally does not satisfy the USFM auditor's `--expected-inventory` input contract because chapter counts, a trusted source reference, and Owner approval are not established. Do not pass it to the audit CLI as an approved expected inventory.
 
 ## Required canon decision evidence
 
