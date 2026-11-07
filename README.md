@@ -14,6 +14,7 @@ This repository contains project documentation, source-audit tooling and the And
 - Rights and permissions decision: docs/licensing/RIGHTS_GATE.md
 - CC BY-SA 4.0 implementation and release controls: docs/licensing/LICENCE_COMPLIANCE_CONTROLS.md
 - Detailed rights/edition evidence: docs/source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md
+- Owner-accepted real-source validation report: [docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md](docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md)
 - Candidate source register: content/source-register/README.md
 - Source manifest schema: content/manifests/source-manifest.schema.json
 - Source verification procedure: docs/source-verification/README.md
