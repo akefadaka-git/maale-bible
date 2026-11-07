@@ -1,6 +1,6 @@
 # USFM Audit Engineering Note — 2026-11-05
 
-> **STATUS UPDATE (2026-11-07):** This note records the engineering state at its original date. The synthetic suite was subsequently executed against PR #1 corrective head `7008e827c43dd5f3a611f99882d67b4e5635ade4`: 12/12 tests passed, exit code 0. Exact source Git blob hashes and execution details are recorded in PR #1. The substantive rights/edition reconciliation is now PASS — DOCUMENTARY; package acquisition remains NOT AUTHORIZED. See [current source verification procedure](README.md) and [rights/edition reconciliation](RIGHTS_EDITION_RECONCILIATION_2026-11-07.md).
+> **STATUS UPDATE (2026-11-07):** The existing USFM audit suite was executed against PR #1 corrective head `7008e827c43dd5f3a611f99882d67b4e5635ade4`: 12/12 tests passed, exit code 0. Exact source Git blob hashes and execution details are recorded in PR #1. The new ZIP metadata preflight utility was executed against exact committed GitHub blobs: 14/14 synthetic tests passed, exit code 0. Its source blob is `e0498027c7384cac3a4b0096bdd4b869580ed9fa`; test blob is `8242c29cfc95dbcfcad5864c2bb6e63917203983`. The substantive rights/edition reconciliation is PASS — DOCUMENTARY; package acquisition remains NOT AUTHORIZED.
 
 Status at note creation: IMPLEMENTED IN REPOSITORY — EXECUTION EVIDENCE PENDING  
 Phase: A2 only  
@@ -10,38 +10,31 @@ Scope: Synthetic structural tooling; no scripture source package was acquired or
 
 Code inspection found that the initial audit implementation tracked chapter numbers and verse counts globally within a file. In a combined USFM file containing multiple books, chapter 1 in a second book could therefore be reported as a duplicate of chapter 1 in the first book, and verse counts could be conflated across books.
 
-## Change committed
+## USFM audit change
 
-The audit now:
-- Resets the current chapter when a new `\\id` book marker is encountered.
-- Requires a book ID before accepting a chapter marker.
-- Requires both a valid book and chapter before accepting a verse marker.
-- Tracks chapter numbers independently for each book.
-- Tracks verse-marker counts using a `BOOK:CHAPTER` key.
-- Detects duplicate chapter numbers within the same book while allowing the same chapter number in different books.
+The audit now resets the current chapter on each new book marker, requires a book ID before a chapter marker, requires book and chapter before verse markers, tracks chapter numbers independently per book, tracks verse counts per BOOK:CHAPTER, and detects duplicate chapter numbers within the same book.
 
-The report now exposes `chapters_by_book` and `verse_marker_counts_by_book_and_chapter`. Because this is a report-shape change, the report version is advanced to `1.1.0`.
+## Synthetic verification
 
-## Regression fixtures
+USFM synthetic suite:
+- Exact pinned corrective head: `7008e827c43dd5f3a611f99882d67b4e5635ade4`.
+- Command: `/opt/pyvenv/bin/python -S -m unittest discover -s tools/tests -v`.
+- Result: 12 tests, all passed, exit code 0.
+- Fixtures contain placeholder text only.
 
-Synthetic-only tests cover:
-1. A single-book file and Ethiopic codepoint counting.
-2. Verse markers before a chapter.
-3. Repeated chapter 1 across two different books (valid).
-4. Duplicate chapter number within one book (invalid).
-5. Chapter marker before a book ID (invalid).
-6. Manifest hash handling and the rights gate remaining blocked.
-7. Duplicate book IDs across package files.
-8. Expected inventory mismatch and duplicate expected inventory IDs.
-9. Unsupported package formats fail closed for inventory comparison.
+ZIP metadata preflight synthetic suite:
+- Exact module Git blob: `e0498027c7384cac3a4b0096bdd4b869580ed9fa`.
+- Exact test Git blob: `8242c29cfc95dbcfcad5864c2bb6e63917203983`.
+- Command: `/opt/pyvenv/bin/python -S -m unittest discover -s tools/tests -v` in an isolated reconstructed workspace containing the exact module and test bytes.
+- Result: 14 tests, all passed, exit code 0.
+- Cases cover path traversal, absolute/drive/backslash paths, case-fold and Unicode normalization collisions, symlinks, nested archives, file/total size and compression-ratio limits, entry count, corrupt archives, and a valid placeholder ZIP.
+- The utility reads ZIP central-directory metadata and hashes the archive; it never extracts entries or prints their contents.
 
-All fixtures use placeholder text, not scripture content.
+## Current verification status
 
-## Verification status — updated
-
-- Corrective source re-fetched from GitHub: VERIFIED.
-- Exact Git blob identity for audit source and test source: VERIFIED; details in PR #1.
-- Python synthetic unit suite on pinned corrective head: PASS — 12/12, exit code 0.
+- USFM synthetic suite on pinned PR #1 head: PASS — 12/12, exit code 0.
+- ZIP preflight synthetic suite on exact committed source blobs: PASS — 14/14, exit code 0.
+- Schema Draft 2020-12 meta-validation and conditional approval-reference behavior: PASS in isolated validation.
 - CI/workflow execution: NOT RUN.
 - Real Maale source validation: NOT RUN; source acquisition remains unauthorized.
 - Rights/edition reconciliation: PASS — DOCUMENTARY, based on Owner-supplied written rights-holder response.
@@ -51,8 +44,7 @@ All fixtures use placeholder text, not scripture content.
 
 ## Remaining A2 engineering work
 
-- Add or verify schema meta-validation and conditional approval-evidence requirements.
-- Add archive-safety tests using synthetic ZIP fixtures before any real package is authorized.
-- Add/verify expected inventory validation against an Owner-approved reference, without embedding scripture text.
-- Execute synthetic archive-safety tests in an isolated environment; avoid CI spending unless separately authorized.
+- Execute archive preflight only after separate Owner authorization for the exact package.
+- Add/verify expected book inventory validation against an Owner-approved reference, without embedding scripture text.
+- Complete independent Maale-language and Ethiopic-script review.
 - Keep source-content intake blocked pending separate Owner authorization.
