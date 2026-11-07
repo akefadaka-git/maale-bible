@@ -4,15 +4,18 @@ An initiative to establish an authoritative, rights-cleared Maale Bible source a
 
 ## Current phase: A2 — source and rights verification
 
-This repository currently contains project documentation and source-audit tooling only. Scripture content is intentionally excluded until the exact edition, rights holder, licensing authority, and written product permissions have been verified and approved.
+This repository contains project documentation and synthetic source-audit tooling only. The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
 
 ### A2 contents
 
 - Product scope and A2 acceptance gates: docs/product/A2_SCOPE.md
-- Rights and permissions gate: docs/licensing/RIGHTS_GATE.md
+- Rights and permissions decision: docs/licensing/RIGHTS_GATE.md
+- CC BY-SA 4.0 implementation and release controls: docs/licensing/LICENCE_COMPLIANCE_CONTROLS.md
+- Detailed rights/edition evidence: docs/source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md
 - Candidate source register: content/source-register/README.md
 - Source manifest schema: content/manifests/source-manifest.schema.json
 - Source verification procedure: docs/source-verification/README.md
+- Source package readiness and safety checklist: docs/source-verification/SOURCE_READINESS_CHECKLIST.md
 - Local USFM structural audit (per-book chapter and verse accounting): tools/usfm_audit.py
 - Synthetic-only regression tests: tools/tests/test_usfm_audit.py
 - Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
@@ -25,7 +28,7 @@ Requires Python 3.10+:
 
 ## Audit an authorized local source package
 
-Only after written permission is verified and Owner approval is recorded:
+Only after the Owner separately authorizes acquisition and intake, and the approved rights evidence and source manifest are available:
 
     python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
 
@@ -33,4 +36,4 @@ The audit reports structural metadata and file hashes; it does not print scriptu
 
 ## Content restrictions
 
-Do not commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the rights gate is closed and a separate content-baseline approval is granted. Android and backend implementation are not part of the current A2 authorization.
+Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the Owner separately authorizes the exact source-package acquisition and intake. Keep content_intake_authorized=false. Android and backend implementation are not part of the current A2 authorization.
