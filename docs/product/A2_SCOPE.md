@@ -1,6 +1,6 @@
 # A2 Scope and Acceptance
 
-Status: IN PROGRESS  
+Status: IN PROGRESS — IMPLEMENTATION WORK PACKAGE COMPLETE; FORMAL ACCEPTANCE BLOCKED  
 Owner approval: Option 1 — A2 documentation and source-verification implementation  
 Repository baseline at start: 8b17b5830a19b63814c025db63b75e4b76855a74
 
@@ -18,6 +18,7 @@ Establish an auditable, rights-gated process for identifying, obtaining, validat
 - Synthetic test fixtures that contain no actual scripture text.
 - Decision records and evidence-based A2 acceptance.
 - Licence compliance controls and source-package safety/provenance readiness.
+- Provisional canon inventory and language/script specialist review protocol.
 
 ## Explicitly out of scope
 
@@ -31,18 +32,20 @@ Establish an auditable, rights-gated process for identifying, obtaining, validat
 
 | Gate | Required evidence | Current status |
 |---|---|---|
-| A2-01 Edition identity | Written confirmation of exact edition, canon, revision, language/script, publisher and contributors | PASS — DOCUMENTARY; canon specialist confirmation pending |
-| A2-02 Rights authority | Rights-holder identity and authority to license the exact edition | PASS — DOCUMENTARY; original email/signatory authentication review pending |
-| A2-03 Product permission | Written permission covering app distribution, offline storage, display, search, sharing and adaptation subject to licence | PASS — DOCUMENTARY; audio excluded and separately gated |
-| A2-04 Licence reconciliation | Reconciled publisher terms, repository/source terms and any reserved/library records | PASS — DOCUMENTARY |
+| A2-01 Edition identity and canon | Exact edition, primary contents evidence, approved canon and inventory | PARTIAL — 66-book candidate inventory prepared; primary-edition verification, specialist review and Owner approval pending |
+| A2-02 Rights authority | Rights-holder identity and authority to license the exact edition | PARTIAL — written response supplied; original email/header and signatory authentication review pending |
+| A2-03 Product permission | Written permission covering app distribution, offline storage, display, search, sharing and adaptation subject to licence | PASS — DOCUMENTARY; audio and third-party assets excluded and separately gated |
+| A2-04 Licence reconciliation | Reconciled publisher terms, repository/source terms and any reserved/library records | PASS — DOCUMENTARY; compliance controls specified |
 | A2-05 Source acquisition | Owner-authorized source package, provenance, acquisition date and source URL | BLOCKED — separate Owner authorization not granted |
-| A2-06 Structural validation | Complete book/chapter/verse inventory validated against an approved reference | NOT RUN — no source package or approved inventory |
-| A2-07 Character validation | Unicode/script review and Maale-language specialist acceptance | NOT RUN |
-| A2-08 Immutable baseline | Approved manifest, hashes, reviewer sign-off and frozen source revision | BLOCKED |
+| A2-06 Structural validation | Complete real-source book/chapter/verse inventory validated against an approved reference | NOT RUN — no authorized source package or approved inventory |
+| A2-07 Character validation | Real-source Unicode/script review and Maale-language specialist acceptance | NOT RUN — no authorized source package or named specialists |
+| A2-08 Immutable baseline | Approved manifest, actual hashes, reviewer sign-off and frozen source revision | BLOCKED — dependent on A2-01 and A2-05 through A2-07 |
 
 ## Acceptance rule
 
-A2 is not accepted while any required evidence is MISSING, UNRESOLVED, or BLOCKED. Documentary rights reconciliation does not authorize source acquisition. Automated structural checks do not establish translation accuracy, completeness, canon, legal permission, or linguistic correctness. All such matters require independent documentary or specialist evidence.
+A2 is not formally accepted while any required evidence is MISSING, UNRESOLVED, NOT RUN, or BLOCKED. Documentary rights reconciliation does not authorize source acquisition. Automated structural checks do not establish translation accuracy, completeness, canon, legal permission, or linguistic correctness. All such matters require independent documentary or specialist evidence.
+
+The 66-book candidate inventory is explicitly provisional and must not be used as the expected source inventory until primary-edition evidence, specialist review, and Owner approval are recorded.
 
 ## Repository content rule
 
@@ -51,3 +54,7 @@ Only project documentation, schemas, validation tools, synthetic tests, and non-
 ## Change control
 
 Changes to the target edition, canon, licence, rights interpretation, source package, validation acceptance criteria, or content admission policy require Owner review. Record decisions in docs/decisions/. A1 remains CLOSED — FINAL and is not reopened for routine A2 execution.
+
+## Current completion record
+
+See [A2 Completion and Blocker Register](../source-verification/A2_COMPLETION_AND_BLOCKER_REGISTER.md), [Provisional Canon Inventory](../source-verification/CANDIDATE_CANON_INVENTORY.md), and [Language/Script Review Protocol](../source-verification/LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md). The implementation work package is complete for the currently authorized scope; formal A2 acceptance remains blocked by the gates above.
