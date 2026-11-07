@@ -40,10 +40,10 @@ A2 closure does not by itself authorize raw scripture publication or distributio
 | A2-02 Rights authority | Rights-holder evidence and package licence | PASS — documentary |
 | A2-03 Product permission | Offline storage, display, search, annotations, sharing | PASS — documentary |
 | A2-04 Licence reconciliation | CC BY-SA 4.0 obligations | PASS — documentary |
-| A2-05 Source acquisition | Exact archive, provenance, size and SHA-256 | AUTHORIZED — retrieval attempted, technical blocker |
-| A2-06 Structural validation | Real package inventory and USFM audit | NOT RUN — archive unavailable |
-| A2-07 Character validation | Real-source Unicode/encoding checks and specialist review | NOT RUN — archive unavailable |
-| A2-08 Immutable baseline | Complete manifest, hashes, validation and Owner acceptance | BLOCKED — dependent on A2-05 through A2-07 |
+| A2-05 Source acquisition | Exact archive, provenance, size and SHA-256 | PASS — REAL SOURCE |
+| A2-06 Structural validation | Real package inventory and USFM audit | PASS — REAL SOURCE |
+| A2-07 Character validation | Strict UTF-8/Unicode/Ethiopic diagnostics; specialist review tracked separately | PASS — MACHINE; SPECIALIST DEFERRED / OWNER RISK-ACCEPTED |
+| A2-08 Immutable baseline | Metadata-only manifest, per-file hashes, independent reproducibility and Owner acceptance | PASS — OWNER ACCEPTED 2026-11-07 |
 
 ## Acceptance rule
 
