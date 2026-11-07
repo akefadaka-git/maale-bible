@@ -9,6 +9,9 @@ See:
 - [Rights Gate](../licensing/RIGHTS_GATE.md)
 - [Licence Compliance Controls](../licensing/LICENCE_COMPLIANCE_CONTROLS.md)
 - [Source Readiness Checklist](SOURCE_READINESS_CHECKLIST.md)
+- [A2 Completion and Blocker Register](A2_COMPLETION_AND_BLOCKER_REGISTER.md)
+- [Provisional Canon Inventory](CANDIDATE_CANON_INVENTORY.md)
+- [Language and Script Review Protocol](LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md)
 
 The documentary rights discrepancy is reconciled. However, **source-package acquisition and content intake are not authorized**. Keep content_intake_authorized=false. Do not download, acquire, unpack, hash, inspect, or ingest mdyeth_usfm.zip until the Owner separately authorizes that exact operation.
 
@@ -22,6 +25,8 @@ Before any package is acquired, the evidence register must contain:
 - Owner's separate, explicit authorization identifying the package, acquisition purpose, permitted environment and whether inspection/intake is authorized.
 - Approved expected book inventory and canon reference, with provenance and Owner approval.
 - Named reviewers for Maale language and Ethiopic-script review.
+
+The 66-book candidate inventory is a preparation artifact only. It is not the expected inventory for audit until approved.
 
 ## 3. Intake provenance and chain of custody
 
@@ -70,9 +75,9 @@ The utility remains intentionally incomplete. It does not establish expected can
 Validation must be layered:
 1. Archive integrity and safe extraction.
 2. Per-file and package structural checks.
-3. Expected book inventory and canon comparison against an approved reference.
+3. Expected book inventory and canon comparison against an Owner-approved reference.
 4. Expected chapter/verse inventory comparison where a trusted reference exists.
-5. Unicode, Ethiopic-script and encoding review.
+5. Unicode, Ethiopic-script and encoding review under the [Language and Script Review Protocol](LANGUAGE_SCRIPT_REVIEW_PROTOCOL.md).
 6. Maale-language specialist review.
 7. Independent reproducibility and Owner baseline acceptance.
 
@@ -85,6 +90,7 @@ Use Python 3.10+ and the standard library:
 Evidence:
 - ZIP preflight suite: 14/14 synthetic tests passed, exit code 0, against exact GitHub source blobs recorded in the A2 branch.
 - USFM audit suite: 12/12 synthetic tests passed, exit code 0, against pinned PR #1 corrective head 7008e827c43dd5f3a611f99882d67b4e5635ade4.
+- Candidate inventory JSON: valid JSON; 66 unique USFM IDs; contiguous order 1–66; approval flags false.
 - No CI/workflow was run.
 - No real Maale source package was acquired or inspected.
 
@@ -92,13 +98,14 @@ Evidence:
 
 A2 source readiness requires:
 - rights/edition reconciliation: PASS — DOCUMENTARY;
-- rights evidence retention and authentication review: PENDING;
-- explicit Owner authorization to acquire the exact package: PENDING;
-- approved expected book/canon reference: PENDING;
-- ZIP metadata preflight utility and synthetic suite: PASS;
-- real archive preflight and safe extraction: NOT RUN / NOT AUTHORIZED;
-- actual package validation: NOT RUN / NOT AUTHORIZED;
+- product permissions: PASS — DOCUMENTARY, with audio and third-party assets separately gated;
+- original email/signatory authentication: PARTIAL — pending independent review or Owner acceptance of limitations;
+- canon and expected inventory: PARTIAL — candidate prepared, primary-edition verification and Owner approval pending;
+- explicit Owner authorization to acquire the exact package: BLOCKED;
+- ZIP metadata preflight utility and synthetic suite: PASS — synthetic only;
+- real archive preflight, extraction and package inventory: NOT RUN / NOT AUTHORIZED;
+- actual USFM structural validation: NOT RUN;
 - Maale-language and Ethiopic-script specialist acceptance: NOT RUN;
 - immutable source baseline: BLOCKED.
 
-A green structural audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
+A green structural audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness. See the [A2 Completion and Blocker Register](A2_COMPLETION_AND_BLOCKER_REGISTER.md) for the formal closure disposition.
