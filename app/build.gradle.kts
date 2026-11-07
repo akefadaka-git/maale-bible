@@ -5,7 +5,7 @@ plugins {
 }
 android {
     namespace = "org.maale.bible"
-    compileSdk = 37
+    compileSdk = 36
     defaultConfig {
         applicationId = "org.maale.bible"
         minSdk = 26
