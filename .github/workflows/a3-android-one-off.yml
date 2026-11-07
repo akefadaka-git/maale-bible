@@ -24,14 +24,14 @@ jobs:
       - name: Checkout approved A3 commit
         uses: actions/checkout@v4
         with:
-          ref: 7524e6ab4419defa6b111100e0fd2d7d4d14963a
+          ref: ef1bf242d7f240222b38624f0cd0088eacae6bbc
           persist-credentials: false
 
       - name: Enforce immutable source SHA
         shell: bash
         run: |
           set -euo pipefail
-          expected="7524e6ab4419defa6b111100e0fd2d7d4d14963a"
+          expected="ef1bf242d7f240222b38624f0cd0088eacae6bbc"
           actual="$(git rev-parse HEAD)"
           test "$actual" = "$expected"
           echo "Verified source SHA: $actual"
@@ -53,7 +53,7 @@ jobs:
           set -euo pipefail
           sdkmanager --list > /tmp/android-sdk-packages.txt
           grep -E 'platforms;android-[0-9]+' /tmp/android-sdk-packages.txt | head -30
-          sdkmanager "platforms;android-37" "build-tools;37.0.0"
+          sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Verify Gradle wrapper
         run: |
