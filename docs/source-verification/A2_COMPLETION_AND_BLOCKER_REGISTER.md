@@ -95,7 +95,7 @@ A separate second-pass ZIP read verified CRC integrity and re-computed all 66 US
 - A1 remains **CLOSED — FINAL**.
 - No CI/workflow was run.
 - No PR was merged.
-- No A3 implementation or deployment was performed.
+- A3 implementation is authorized and tracked separately in PR #3; no production release or deployment is authorized.
 
 ## 7. Closure decision
 
