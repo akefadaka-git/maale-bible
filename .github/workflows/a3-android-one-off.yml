@@ -47,8 +47,13 @@ jobs:
         with:
           packages: platform-tools
 
-      - name: Install Android API 37 platform and build tools
-        run: sdkmanager "platforms;android-37" "build-tools;37.0.0"
+      - name: Inspect available Android SDK platforms and install required packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdkmanager --list > /tmp/android-sdk-packages.txt
+          grep -E 'platforms;android-[0-9]+' /tmp/android-sdk-packages.txt | head -30
+          sdkmanager "platforms;android-37" "build-tools;37.0.0"
 
       - name: Verify Gradle wrapper
         run: |
