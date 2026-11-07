@@ -13,6 +13,7 @@ Establish an auditable, rights-gated process for identifying, obtaining, validat
 - Edition and publisher identity research and source register.
 - Written rights and permission evidence tracking.
 - USFM package intake requirements and local structural audit tooling.
+- ZIP metadata preflight and safe package-handling requirements.
 - Manifest schema, SHA-256 inventory, and reproducible validation reports.
 - Synthetic test fixtures that contain no actual scripture text.
 - Decision records and evidence-based A2 acceptance.
@@ -33,7 +34,7 @@ Establish an auditable, rights-gated process for identifying, obtaining, validat
 | A2-01 Edition identity | Written confirmation of exact edition, canon, revision, language/script, publisher and contributors | PASS — DOCUMENTARY; canon specialist confirmation pending |
 | A2-02 Rights authority | Rights-holder identity and authority to license the exact edition | PASS — DOCUMENTARY; original email/signatory authentication review pending |
 | A2-03 Product permission | Written permission covering app distribution, offline storage, display, search, sharing and adaptation subject to licence | PASS — DOCUMENTARY; audio excluded and separately gated |
-| A2-04 License reconciliation | Reconciled publisher terms, repository/source terms and any reserved/library records | PASS — DOCUMENTARY |
+| A2-04 Licence reconciliation | Reconciled publisher terms, repository/source terms and any reserved/library records | PASS — DOCUMENTARY |
 | A2-05 Source acquisition | Owner-authorized source package, provenance, acquisition date and source URL | BLOCKED — separate Owner authorization not granted |
 | A2-06 Structural validation | Complete book/chapter/verse inventory validated against an approved reference | NOT RUN — no source package or approved inventory |
 | A2-07 Character validation | Unicode/script review and Maale-language specialist acceptance | NOT RUN |
