@@ -68,11 +68,8 @@ The isolated execution container previously reported:
 Consequently, the Gradle distribution could not be downloaded, dependencies could not be resolved and no APK build could be run. The wrapper's presence and pin are verified, but Gradle execution, plugin/dependency resolution and Android project configuration remain unverified. This is not a build pass.
 
 ### Dependency-version compatibility review
-The checked-in root build pins Android Gradle Plugin (AGP) 9.5.0 and the wrapper pins Gradle 9.6.0. Android's AGP 9.5.0 release-notes page lists Gradle 9.6.0 as its minimum/default Gradle version and API 37 as its maximum supported API level: https://developer.android.com/build/releases/agp-9-5-0-release-notes
 
-However, the Android Gradle Plugin API reference last updated 2026-10-26 lists 9.4.1 as the current release and 9.5.0-rc02 as a preview: https://developer.android.com/reference/tools/gradle-api
-
-These official pages are not fully aligned about the release channel. Therefore the AGP 9.5.0 coordinate and all Android plugin/dependency artifacts still require actual repository resolution. **Do not treat the declared AGP version as verified stable or the build as reproducible until a real Gradle configuration/build resolves it.** No version was changed without resolution evidence.
+The initial documentation comparison was inconclusive; the subsequent current-official-documentation review in **Section 8** resolves the AGP/Gradle compatibility question: AGP 9.5.0 is the documented stable release and requires Gradle 9.6.0, JDK 17 and supports API 37. Section 8 also records the Activity/Lifecycle AndroidX pin corrections. Actual Gradle plugin/dependency resolution remains **NOT RUN**, so source documentation does not constitute a successful build or artifact-resolution result.
 
 ## 4. PR and release status
 
