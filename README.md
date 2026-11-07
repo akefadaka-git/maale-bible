@@ -2,9 +2,11 @@
 
 An initiative to establish an authoritative, rights-cleared Maale Bible source and build an offline-first reading experience.
 
-## Current phase: A2 — source and rights verification
+## Current phase: A3 — offline-first Android implementation
 
-This repository contains project documentation and synthetic source-audit tooling only. The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
+A2 was closed by Owner acceptance on 2026-11-07 with the named Maale-language/Ethiopic-script specialist review explicitly deferred as an accepted residual risk. The exact 2008 MDYTWF / mdyeth source baseline passed archive, signature, file-hash, structural, encoding and independent second-pass checks. The source archive and all scripture text remain outside this public repository. Production content intake remains separately unauthorized.
+
+This repository contains project documentation, source-audit tooling and the Android application foundation. It does not contain scripture text or source archives. The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
 
 ### A2 contents
 
@@ -47,3 +49,12 @@ The audit reports structural metadata and file hashes; it does not print scriptu
 ## Content restrictions
 
 Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the Owner separately authorizes the exact source-package acquisition and intake. Keep content_intake_authorized=false. Android and backend implementation are not part of the current A2 authorization.
+
+
+## A3 Android foundation
+
+- Implementation scope: docs/product/A3_ANDROID_IMPLEMENTATION_SCOPE.md
+- Android app module: app/
+- Current slice: metadata-only canonical 66-book catalogue, Compose shell, Home/Books/Search/Reader placeholder screens and catalogue unit tests.
+- Scripture content is intentionally not bundled. Production ingestion remains separately gated.
+- A3 pull request: https://github.com/akefadaka-git/maale-bible/pull/3
