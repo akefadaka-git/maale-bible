@@ -1,6 +1,6 @@
 # Maale Language and Script Review Protocol
 
-**Status:** PROCEDURE READY; SPECIALIST EXECUTION NOT RUN  
+**Status:** PROCEDURE READY; SPECIALIST EXECUTION DEFERRED — OWNER RISK-ACCEPTED 2026-11-07  
 **Target candidate:** 2008 Maale Full Bible — MDYTWF / mdyeth  
 **Language identifier:** mdy (candidate metadata; verify against edition evidence)
 
@@ -8,7 +8,7 @@
 
 This protocol defines review evidence for encoding, Unicode, Ethiopic-script handling, and Maale linguistic quality. It does not assume that every file uses Ethiopic script, that Unicode code-point presence proves correct orthography, or that automated checks can establish translation accuracy.
 
-No scripture source package has been acquired or inspected. This protocol uses no scripture text or excerpts.
+The exact source package has been acquired and machine-checked. This protocol uses no scripture text or excerpts in public records.
 
 ## 2. Reviewer roles
 
@@ -71,9 +71,9 @@ A review is acceptable only when:
 | Protocol and acceptance criteria | COMPLETE |
 | Named Maale specialist | MISSING |
 | Named Ethiopic-script reviewer | MISSING |
-| Real-source encoding diagnostics | NOT RUN — NOT AUTHORIZED |
+| Real-source encoding diagnostics | PASS — machine diagnostics on 66/66 files |
 | Linguistic review | NOT RUN |
 | Independent reproducibility | NOT RUN |
-| Owner acceptance | PENDING |
+| Owner acceptance | ACCEPTED — residual specialist-review risk explicitly deferred (2026-11-07) |
 
-Keep `content_intake_authorized=false`. This protocol does not authorize source acquisition, extraction, inspection, content intake, or A3 implementation.
+The Owner has accepted specialist review as a deferred residual risk; no specialist sign-off is claimed. Keep `content_intake_authorized=false`. This protocol does not authorize public source publication or third-party asset intake.
