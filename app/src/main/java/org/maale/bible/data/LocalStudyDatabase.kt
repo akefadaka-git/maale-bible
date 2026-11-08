@@ -245,15 +245,22 @@ class LocalStudyDatabase private constructor(
                 )""")
                 db.execute("""CREATE TABLE passage_mapping(
                     mapping_id TEXT PRIMARY KEY NOT NULL,
-                    edition_passage_id TEXT NOT NULL,
                     mapping_status TEXT NOT NULL CHECK(mapping_status IN
                         ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')),
                     provenance TEXT NOT NULL,
                     review_status TEXT NOT NULL CHECK(review_status IN
                         ('UNREVIEWED','REVIEWED','APPROVED','REJECTED')),
                     mapping_version TEXT NOT NULL,
-                    notes TEXT NOT NULL DEFAULT '',
-                    UNIQUE(mapping_id,mapping_status),
+                    notes TEXT NOT NULL DEFAULT ''
+                )""")
+                db.execute("""CREATE TABLE passage_mapping_source(
+                    mapping_id TEXT NOT NULL,
+                    edition_passage_id TEXT NOT NULL,
+                    source_order INTEGER NOT NULL CHECK(source_order > 0),
+                    PRIMARY KEY(mapping_id,source_order),
+                    UNIQUE(mapping_id,edition_passage_id),
+                    FOREIGN KEY(mapping_id) REFERENCES passage_mapping(mapping_id)
+                        ON UPDATE RESTRICT ON DELETE CASCADE,
                     FOREIGN KEY(edition_passage_id) REFERENCES edition_passage(edition_passage_id)
                         ON UPDATE RESTRICT ON DELETE CASCADE
                 )""")
@@ -275,7 +282,7 @@ class LocalStudyDatabase private constructor(
                 )""")
                 db.execute("CREATE INDEX index_canonical_passage_book_chapter ON canonical_passage(canon_id,book_id,chapter_number,verse_number)")
                 db.execute("CREATE INDEX index_edition_passage_edition ON edition_passage(edition_id,source_book_id,source_chapter)")
-                db.execute("CREATE INDEX index_mapping_edition_passage ON passage_mapping(edition_passage_id)")
+                db.execute("CREATE INDEX index_mapping_source_edition_passage ON passage_mapping_source(edition_passage_id)")
                 db.execute("CREATE INDEX index_mapping_target_canonical ON passage_mapping_target(canon_id,book_id,chapter_number,verse_number)")
                 db.execute("CREATE TRIGGER canonical_book_no_update BEFORE UPDATE ON canonical_book BEGIN SELECT RAISE(ABORT,'canonical book registry is immutable'); END")
                 db.execute("CREATE TRIGGER canonical_book_no_delete BEFORE DELETE ON canonical_book BEGIN SELECT RAISE(ABORT,'canonical book registry is immutable'); END")
