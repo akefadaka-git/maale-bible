@@ -24,14 +24,14 @@ jobs:
       - name: Checkout approved A3 commit
         uses: actions/checkout@v4
         with:
-          ref: ef1bf242d7f240222b38624f0cd0088eacae6bbc
+          ref: 63419cd1db4f90c32c60807011281abc1e423f58
           persist-credentials: false
 
       - name: Enforce immutable source SHA
         shell: bash
         run: |
           set -euo pipefail
-          expected="ef1bf242d7f240222b38624f0cd0088eacae6bbc"
+          expected="63419cd1db4f90c32c60807011281abc1e423f58"
           actual="$(git rev-parse HEAD)"
           test "$actual" = "$expected"
           echo "Verified source SHA: $actual"
@@ -58,7 +58,7 @@ jobs:
       - name: Verify Gradle wrapper
         run: |
           test -f gradle/wrapper/gradle-wrapper.jar
-          grep -F 'gradle-9.6.0-bin.zip' gradle/wrapper/gradle-wrapper.properties
+          grep -F 'gradle-9.5.0-bin.zip' gradle/wrapper/gradle-wrapper.properties
           chmod +x gradlew
 
       - name: Run unit tests and assemble debug APK
@@ -67,7 +67,7 @@ jobs:
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: maale-bible-a3-debug-ef1bf242
+          name: maale-bible-a3-debug-63419cd1
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 7
