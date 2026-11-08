@@ -1,6 +1,5 @@
 package org.maale.bible
 
-import androidx.compose.ui.test.assertExists
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -23,8 +22,8 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Genesis").assertIsDisplayed()
         composeRule.onNodeWithText("Back to books").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
-        composeRule.onAllNodesWithText("Search").last().performClick()
+        composeRule.onAllNodesWithText("Search")[0].performClick()
         composeRule.onNodeWithText("Offline search becomes available when the separately approved local scripture dataset is integrated.")
-            .assertExists()
+            .assertIsDisplayed()
     }
 }
