@@ -1,12 +1,13 @@
 # Maale Bible — A3 Android Foundation Progress Report
 
-**Date:** 2026-11-07  
+**Original report date:** 2026-11-07
+**Latest verification update:** 2026-11-08  
 **Branch:** `feat/a3-android-offline-foundation`  
 **Current reviewed branch head before this report revision:** `db9d5196790f52c931d5e98cdc3a7ff1ac3811d2`  
 **A3 implementation/reconciliation commit:** `d55e966aed98b18d65c9c5e2265c61be6973c787`  
 **A2 base commit incorporated:** `b012a4c0e47ca8d22f4b72b2e08b3d58585a3071`  
 **PR:** [#3 — A3 Android foundation](https://github.com/akefadaka-git/maale-bible/pull/3)  
-**Disposition:** A3 foundation source is committed; Android build and JUnit gates remain unverified; PR remains draft/unmerged.
+**Latest disposition (2026-11-08):** A3 foundation is implemented but remains PARTIAL. Two remote GitHub Actions builds were executed against source SHA `ef1bf242d7f240222b38624f0cd0088eacae6bbc`; both failed during Kotlin Android plugin application because AGP 9's new DSL is enabled while the legacy `org.jetbrains.kotlin.android` plugin is applied. JUnit and APK assembly did not run. PR remains draft/unmerged.
 
 ## 1. Changes and commit evidence
 
@@ -141,3 +142,77 @@ References:
 **Dependency correction commit:** `d1561d6572b2828275c87af279c565efe8c77b7b`.
 
 This is a documentation-backed compatibility correction, not a successful dependency resolution. No Gradle invocation could be run in the current execution environment. Artifact resolution, JUnit, Android build and APK generation remain **NOT RUN / BLOCKED** pending a real Android build host.
+
+
+## 9. Remote GitHub Actions verification — 2026-11-08 update
+
+**Verification date:** 2026-11-08 (workflow runs executed 2026-11-07 UTC)  
+**Exact application source SHA tested:** `ef1bf242d7f240222b38624f0cd0088eacae6bbc`  
+**Feature branch at time of test:** `feat/a3-android-offline-foundation`
+
+### Run evidence
+
+Two final runs were executed by the repository's one-off, SHA-pinned workflow:
+
+| Run | Workflow commit | Result | Job |
+|---|---|---|---|
+| [#5](https://github.com/akefadaka-git/maale-bible/actions/runs/42389109110) | `848f93407d3c8a32c508f8a4df7d344a942c7e4d` | FAILURE | `128452722436` |
+| [#6](https://github.com/akefadaka-git/maale-bible/actions/runs/42389128766) | `a3c454e4dff1c387b187ca9ebcb6a20cac97d093` | FAILURE | `128453043581` |
+
+Both jobs successfully:
+- checked out the exact approved application source SHA;
+- asserted the immutable SHA;
+- installed JDK 17;
+- configured Android SDK tooling;
+- installed Android platform 36 and build-tools 36.0.0;
+- verified the Gradle wrapper and Gradle 9.6.0 distribution pin.
+
+Both failed at the `Run unit tests and assemble debug APK` step before JUnit execution or APK assembly. The artifact-upload step was skipped. The artifact API returned no artifacts for either run.
+
+### Confirmed failure cause
+
+The Gradle logs for both runs identify the same configuration error at `app/build.gradle.kts` line 1:
+
+```
+Failed to apply plugin 'org.jetbrains.kotlin.android'.
+The 'org.jetbrains.kotlin.android' plugin is not compatible with
+AGP's 9.0 new DSL (android.newDsl=true is enabled by default).
+```
+
+Current project configuration at the tested SHA:
+- AGP: 9.5.0
+- Kotlin Android plugin: 2.4.10
+- Compose compiler plugin: 2.4.10
+- `gradle.properties`: `android.builtInKotlin=false`
+- `gradle.properties`: no `android.newDsl=false` override
+- App module applies `org.jetbrains.kotlin.android`.
+
+This is a real AGP/Kotlin plugin configuration incompatibility. It is not an SDK installation, checkout, wrapper, or source-SHA mismatch. The earlier API 37 to API 36 correction allowed the workflow to proceed to Gradle configuration, exposing this next blocker.
+
+### Recommended remediation and verification
+
+The Kotlin Gradle Plugin compatibility table currently lists Kotlin 2.4.0–2.4.10 as fully supported through AGP 9.1.0, not AGP 9.5.0. The current Android documentation's AGP 9.5 example and Kotlin's narrower KGP compatibility matrix therefore need to be reconciled before pinning a new version combination.
+
+A low-impact temporary compatibility path identified by the build diagnostic is to set `android.newDsl=false` while retaining the existing Kotlin Android plugin; the longer-term AGP 9 path is migration to AGP built-in Kotlin, removing the legacy Kotlin Android plugin and validating Compose compiler configuration. The project should not claim build readiness until one chosen configuration passes the full Gradle/JUnit/APK gates.
+
+References:
+- Kotlin Gradle configuration and compatibility matrix: https://kotlinlang.org/docs/gradle-configure-project.html
+- Android AGP 9 migration/release notes: https://developer.android.com/build/releases/agp-9-0-0-release-notes
+- Kotlin/JetBrains AGP 9 migration guidance: https://blog.jetbrains.com/kotlin/2026/01/update-your-projects-for-agp9/
+
+### Updated gate status
+
+| Gate | Result |
+|---|---|
+| Exact source checkout and SHA assertion | PASS |
+| JDK 17 setup | PASS |
+| Android SDK platform/build-tools 36 setup | PASS |
+| Gradle wrapper verification | PASS |
+| Gradle project configuration | FAIL — AGP/Kotlin Android plugin DSL incompatibility |
+| JUnit unit tests | NOT RUN |
+| `assembleDebug` / APK generation | NOT RUN |
+| APK artifact upload / digest | NOT AVAILABLE |
+| PR #3 | OPEN, DRAFT, UNMERGED; mergeable reported true at latest check |
+| Deployment / release | NOT AUTHORIZED; not performed |
+
+**A3 disposition remains PARTIAL / BLOCKED at the Android build gate.** No claim of a successful Android build, passing JUnit suite, or generated APK is made. No scripture content was imported, and `content_intake_authorized=false` remains unchanged.
