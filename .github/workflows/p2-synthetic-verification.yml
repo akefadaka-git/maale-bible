@@ -1,5 +1,8 @@
 name: P2 synthetic verification
 on:
+  pull_request:
+    branches: [feat/a4-offline-study-suite]
+    paths: ['app/**','verification/p2/**','.github/workflows/p2-synthetic-verification.yml']
   push:
     branches: [feat/a4-offline-study-suite]
     paths: ['app/**','verification/p2/**','.github/workflows/p2-synthetic-verification.yml']
