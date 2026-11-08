@@ -4,7 +4,7 @@
 **Repository:** `akefadaka-git/maale-bible`  
 **Branch:** `feat/a4-offline-study-suite`  
 **Baseline before this record:** `ec54ba251df41be440602b60ded667e0a0933122`  
-**Status:** Documentation deliverables prepared; Owner review and P2 remain outstanding.
+**Status:** P0/P1 specification baseline accepted by Owner on 2026-11-08; P2 architecture design has commenced.
 
 ## 1. Work completed in this record
 
@@ -44,11 +44,11 @@
 | Screen inventory | PASS — prepared | 42 screen/route records and user journeys |
 | Implementation breakdown | PASS — prepared | P0–P12 keys, dependencies and exit evidence |
 | Rights/content restrictions | PASS — preserved | Explicit content gate and resource-specific rights dependencies |
-| Owner acceptance of specification | PENDING | Owner review required; no acceptance inferred |
+| Owner acceptance of specification | PASS — APPROVED | Owner approval recorded in conversation on 2026-11-08 |
 | P2 architecture decisions | NOT STARTED | Data model, Room schema, resource lifecycle, search, backup/security and navigation ADRs |
 | A4 implementation | NOT STARTED by this documentation record | No feature implementation closure claimed |
 
-**P0/P1 status:** PREPARED — OWNER REVIEW PENDING. The documentation work is complete as a draft baseline, but the phase is not declared VERIFIED-CLOSED until Owner review and any requested corrections are recorded.
+**P0/P1 status:** OWNER-APPROVED BASELINE. P0/P1 specification acceptance is recorded. This closes the planning approval gate; it does not claim A4 feature implementation or production readiness.
 
 ## 5. Immediate next phase
 
