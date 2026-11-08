@@ -8,9 +8,7 @@ data class BackupRestorePreview(
     val additions: Set<String>,
     val conflicts: Set<String>,
     val unchanged: Set<String>,
-) {
-    val requiresReplaceConfirmation: Boolean get() = false
-}
+)
 
 /**
  * Computes a non-destructive restore result without writing to the database.
