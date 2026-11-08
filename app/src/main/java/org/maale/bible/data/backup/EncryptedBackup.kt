@@ -51,7 +51,16 @@ object EncryptedBackup {
             require(total <= MAX_TOTAL_PLAINTEXT) { "Backup exceeds total size limit" }
         }
 
-        val manifest = JSONObject().put("formatVersion", FORMAT_VERSION)
+        val manifest = JSONObject()
+            .put("formatVersion", FORMAT_VERSION)
+            .put("schemaVersion", 1)
+            .put("appVersion", "0.1.0")
+            .put("createdAtEpochMillis", System.currentTimeMillis())
+        val categoryCounts = JSONObject()
+        entries.keys.map { it.substringBefore('/') }.distinct().sorted().forEach { category ->
+            categoryCounts.put(category, entries.keys.count { it.substringBefore('/') == category })
+        }
+        manifest.put("categoryCounts", categoryCounts)
         val fileList = JSONArray()
         entries.toSortedMap().forEach { (name, bytes) ->
             fileList.put(JSONObject()
@@ -164,6 +173,9 @@ object EncryptedBackup {
         }
         val metadata = requireNotNull(manifest) { "Backup manifest missing" }
         require(metadata.getInt("formatVersion") == FORMAT_VERSION) { "Unsupported manifest version" }
+        require(metadata.getInt("schemaVersion") == 1) { "Unsupported backup schema version" }
+        require(metadata.getString("appVersion").isNotBlank()) { "Backup app version missing" }
+        require(metadata.getLong("createdAtEpochMillis") > 0L) { "Backup creation timestamp invalid" }
         val declared = metadata.getJSONArray("entries")
         require(declared.length() == files.size) { "Manifest entry count mismatch" }
         val verified = linkedMapOf<String, ByteArray>()
