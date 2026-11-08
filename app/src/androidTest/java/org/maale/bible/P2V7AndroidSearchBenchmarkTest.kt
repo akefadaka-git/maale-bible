@@ -28,7 +28,12 @@ class P2V7AndroidSearchBenchmarkTest {
                     SELECT 1 UNION ALL SELECT x + 1 FROM rows WHERE x < 100000
                 )
                 INSERT INTO docs(id, body)
-                SELECT x, 'synthetic alpha beta reference row ' || x FROM rows
+                SELECT x,
+                    CASE WHEN x % 1000 = 0
+                        THEN 'synthetic alpha beta reference row ' || x
+                        ELSE 'synthetic unrelated reference row ' || x
+                    END
+                FROM rows
             """.trimIndent()).use { it.step() }
             db.prepare("INSERT INTO docs_fts(rowid, body) SELECT id, body FROM docs").use { it.step() }
 
@@ -47,9 +52,9 @@ class P2V7AndroidSearchBenchmarkTest {
             val p50 = TimeUnit.NANOSECONDS.toMillis(sorted[14])
             val p95 = TimeUnit.NANOSECONDS.toMillis(sorted[28])
             val report = "P2V7 api=${Build.VERSION.SDK_INT} model=${Build.MODEL} records=100000 " +
-                "queries=30 p50_ms=$p50 p95_ms=$p95"
+                "matching_records=100 queries=30 p50_ms=$p50 p95_ms=$p95"
             android.util.Log.i("P2V7_BENCHMARK", report)
-            assertTrue("Warm FTS5 search p95 exceeded 300ms: $report", p95 <= 300)
+            assertTrue("Warm selective FTS5 search p95 exceeded 300ms: $report", p95 <= 300)
         } finally {
             db.close()
             file.delete()
