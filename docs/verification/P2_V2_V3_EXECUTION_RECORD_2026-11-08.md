@@ -149,3 +149,8 @@ PR #19 remains OPEN, DRAFT and UNMERGED. No merge, signing, release, deployment,
 ### Architecture caveat retained
 
 This remains a direct bundled-SQLite implementation rather than Room. The accepted architecture decision preferred Room. The implementation may be used to validate SQLite-level invariants, but it is not approved as the final Room-based persistence architecture. No silent ADR amendment is made here.
+
+
+## Superseding execution update — 2026-11-08
+
+This file's earlier queued-run and Room-deviation statements are historical. The persistence architecture qualification was subsequently resolved under Owner direction: ADR-A4-004 now selects direct AndroidX SQLite with the bundled driver for this release; ADR-A4-005 and the P2 decision register were updated accordingly. P2-V4/V5/V6/V7 instrumentation and host checks were added after the earlier sections. Their exact-head execution remains incomplete because the latest consolidated Actions attempts were cancelled or unavailable. See the authoritative current disposition in [P2 Closure Readiness Record](P2_CLOSURE_READINESS_RECORD_2026-11-08.md). P2 remains PARTIAL — NOT VERIFIED-CLOSED.
