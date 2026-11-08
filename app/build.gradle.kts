@@ -16,6 +16,8 @@ dependencies {
  implementation("androidx.compose.material3:material3")
  implementation("androidx.compose.ui:ui")
  implementation("androidx.compose.ui:ui-tooling-preview")
+ implementation("androidx.sqlite:sqlite:2.6.2")
+ implementation("androidx.sqlite:sqlite-bundled:2.6.2")
  debugImplementation("androidx.compose.ui:ui-tooling")
  testImplementation("junit:junit:4.13.2")
  androidTestImplementation(platform("androidx.compose:compose-bom:2025.12.00"))
@@ -24,7 +26,5 @@ dependencies {
  androidTestImplementation("androidx.test:core:1.7.0")
  androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
  androidTestImplementation("androidx.compose.ui:ui-test-junit4")
- androidTestImplementation("androidx.sqlite:sqlite:2.6.2")
- androidTestImplementation("androidx.sqlite:sqlite-bundled:2.6.2")
  debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
