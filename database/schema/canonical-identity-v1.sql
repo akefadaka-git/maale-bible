@@ -64,13 +64,20 @@ CREATE TABLE edition_passage (
 
 CREATE TABLE passage_mapping (
   mapping_id TEXT PRIMARY KEY NOT NULL,
-  edition_passage_id TEXT NOT NULL,
   mapping_status TEXT NOT NULL CHECK(mapping_status IN ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')),
   provenance TEXT NOT NULL,
   review_status TEXT NOT NULL CHECK(review_status IN ('UNREVIEWED','REVIEWED','APPROVED','REJECTED')),
   mapping_version TEXT NOT NULL,
-  notes TEXT NOT NULL DEFAULT '',
-  UNIQUE(mapping_id, mapping_status),
+  notes TEXT NOT NULL DEFAULT ''
+);
+
+CREATE TABLE passage_mapping_source (
+  mapping_id TEXT NOT NULL,
+  edition_passage_id TEXT NOT NULL,
+  source_order INTEGER NOT NULL CHECK(source_order > 0),
+  PRIMARY KEY(mapping_id, source_order),
+  UNIQUE(mapping_id, edition_passage_id),
+  FOREIGN KEY(mapping_id) REFERENCES passage_mapping(mapping_id) ON UPDATE RESTRICT ON DELETE CASCADE,
   FOREIGN KEY(edition_passage_id) REFERENCES edition_passage(edition_passage_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 
