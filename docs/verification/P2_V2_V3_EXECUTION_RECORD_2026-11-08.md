@@ -119,3 +119,33 @@ No architecture approval is inferred from this implementation or PR.
 - P2-V2: IMPLEMENTED; CI QUEUED on exact head `ea9632f9038ecb67e9809de5292f614d2786f9e7`; NOT YET VERIFIED.
 - PR #19: OPEN, DRAFT, UNMERGED.
 - No merge, release, signing, deployment or scripture-content intake.
+
+
+## P2-V2 CI failure diagnosis and remediation — 2026-11-08
+
+The first exact-SHA CI attempt, run #10 (`42472179944`, head `ea9632f9038ecb67e9809de5292f614d2786f9e7`), exposed two distinct problems:
+
+1. **Confirmed source compilation defect:** `SQLiteConnection` in AndroidX SQLite 2.6.2 has no `execSQL()` API. The production persistence source and the v1 migration test fixture called it repeatedly. All such calls were replaced with a small helper using the supported `prepare(sql).use { it.step() }` API.
+   - Production fix commit: `72fe58ce0c2bdccaa77beb8581709329d6a5b170`
+   - Instrumentation fixture fix commit: `1c890b6b50b279d0651e3708832d56cd0b622822`
+2. **Confirmed CI distribution-download timeout:** multiple emulator jobs failed while fetching Gradle 9.5.0 because the wrapper's `networkTimeout` was 10,000 ms. Increased it to 120,000 ms.
+   - Wrapper timeout commit: `50e1ba5c2748a0d4adbb8bacea6fed26b8f67711`
+   - Workflow path filters were extended to include wrapper changes; trigger commit: `e94a307527bf4c7ce21945c68742b43e51191a99`
+
+### Remediation verification run
+
+- Workflow run #15: https://github.com/akefadaka-git/maale-bible/actions/runs/42473816923
+- Run ID: `42473816923`
+- Exact head SHA: `e94a307527bf4c7ce21945c68742b43e51191a99`
+- Host contracts job `128710565808`: PASS.
+- Android API 36 job `128710565942`: IN PROGRESS at report update.
+- Android API 33 job `128710565989`: IN PROGRESS at report update.
+- Android API 26/28/30/35 jobs `128710566147`, `128710566082`, `128710566003`, `128710565986`: QUEUED at report update.
+
+**P2-V2 status remains NOT VERIFIED.** The previous compilation failure was source-level and has been corrected, but the corrected source has not yet completed the exact-SHA Android matrix. No test pass is inferred from queued or in-progress jobs.
+
+PR #19 remains OPEN, DRAFT and UNMERGED. No merge, signing, release, deployment, or content intake has occurred.
+
+### Architecture caveat retained
+
+This remains a direct bundled-SQLite implementation rather than Room. The accepted architecture decision preferred Room. The implementation may be used to validate SQLite-level invariants, but it is not approved as the final Room-based persistence architecture. No silent ADR amendment is made here.
