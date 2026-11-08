@@ -1,14 +1,24 @@
 # Maale Bible — ጌኤዦ ማፃኣፖ
 
-An initiative to establish an authoritative, rights-cleared Maale Bible source and build an offline-first reading experience.
+An initiative to establish an authoritative, rights-cleared Maale Bible source and build a comprehensive offline-first Bible reading and study application.
 
-## Current phase: A3 — offline-first Android implementation
+## Current work: A4 — comprehensive offline Bible and study application
+
+The Owner has directed that this release become a full-featured offline Bible application combining advanced reading, study, reference, atlas, personal journaling, reading plans, verse-card export, sharing, help and accessibility capabilities. Server-dependent capabilities (accounts, cloud sync, online forums, group discussions, news subscriptions and remote administration) are deferred to a later release.
+
+- **A4 product scope and architecture:** [docs/product/A4_OFFLINE_BIBLE_PRODUCT_SCOPE.md](docs/product/A4_OFFLINE_BIBLE_PRODUCT_SCOPE.md)
+- **A4 implementation branch:** `feat/a4-offline-study-suite`
+- **A3 foundation PR:** https://github.com/akefadaka-git/maale-bible/pull/3 (open, draft, unmerged)
+
+A4 is not complete merely when screens are present. Features must work, persist correctly, pass verification and remain usable offline. No A4 completion or release-readiness claim is made at this stage.
+
+## Accepted A2 source baseline and content controls
 
 A2 was closed by Owner acceptance on 2026-11-07 with the named Maale-language/Ethiopic-script specialist review explicitly deferred as an accepted residual risk. The exact 2008 MDYTWF / mdyeth source baseline passed archive, signature, file-hash, structural, encoding and independent second-pass checks. The source archive and all scripture text remain outside this public repository. Production content intake remains separately unauthorized.
 
-This repository contains project documentation, source-audit tooling and the Android application foundation. It does not contain scripture text or source archives. The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
+The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
 
-### A2 contents
+### A2 records and tooling
 
 - Product scope and A2 acceptance gates: docs/product/A2_SCOPE.md
 - Rights and permissions decision: docs/licensing/RIGHTS_GATE.md
@@ -25,37 +35,27 @@ This repository contains project documentation, source-audit tooling and the And
 - Synthetic USFM regression tests: tools/tests/test_usfm_audit.py
 - Audit engineering findings and verification status: docs/source-verification/USFM_AUDIT_ENGINEERING_NOTE_2026-11-05.md
 
+## A3 Android foundation
+
+- Implementation scope: docs/product/A3_ANDROID_IMPLEMENTATION_SCOPE.md
+- Android app module: app/
+- A3 baseline: metadata-only canonical 66-book catalogue, Compose shell, Home/Books/Search/Reader placeholder screens and catalogue unit tests.
+- Verified debug build source SHA: `fcb1d04d7a227bfda320cd18a06b12fbd37e4b6d`
+- Successful SHA-pinned GitHub Actions run: https://github.com/akefadaka-git/maale-bible/actions/runs/42454704758
+- Scripture content is intentionally not bundled. Production ingestion remains separately gated.
+
 ## Run synthetic tests
 
 Requires Python 3.10+:
 
     python -m unittest discover -s tools/tests -v
 
-## Preflight an authorized ZIP package
-
-Only after the Owner separately authorizes acquisition:
-
-    python tools/archive_preflight.py SOURCE_PACKAGE.zip --output preflight-report.json
-
-This inspects ZIP metadata and hashes the archive; it does not extract entries or authorize content intake.
-
-## Audit an authorized local source package
-
-Only after the Owner separately authorizes acquisition and intake, and the approved rights evidence and source manifest are available:
-
-    python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
-
-The audit reports structural metadata and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
-
 ## Content restrictions
 
-Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the Owner separately authorizes the exact source-package acquisition and intake. Keep content_intake_authorized=false. Android and backend implementation are not part of the current A2 authorization.
+Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, maps, commentaries, dictionaries or other source-content assets until the Owner separately authorizes the exact source-package acquisition and intake. Keep `content_intake_authorized=false`.
 
+All additional Bible editions, reference works, maps, images, audio, fonts and derived datasets require their own source, licence, attribution, integrity and quality review. A4 scope authorization does not waive these gates.
 
-## A3 Android foundation
+## Release governance
 
-- Implementation scope: docs/product/A3_ANDROID_IMPLEMENTATION_SCOPE.md
-- Android app module: app/
-- Current slice: metadata-only canonical 66-book catalogue, Compose shell, Home/Books/Search/Reader placeholder screens and catalogue unit tests.
-- Scripture content is intentionally not bundled. Production ingestion remains separately gated.
-- A3 pull request: https://github.com/akefadaka-git/maale-bible/pull/3
+A4 implementation and verification are separate from A5 release signing/deployment preparation and A6 publication. No merge, signing, deployment or publication is authorized by this scope update.
