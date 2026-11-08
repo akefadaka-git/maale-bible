@@ -216,3 +216,61 @@ References:
 | Deployment / release | NOT AUTHORIZED; not performed |
 
 **A3 disposition remains PARTIAL / BLOCKED at the Android build gate.** No claim of a successful Android build, passing JUnit suite, or generated APK is made. No scripture content was imported, and `content_intake_authorized=false` remains unchanged.
+
+
+## 10. AGP/Kotlin compatibility remediation — 2026-11-08
+
+The remote failure in Section 9 was addressed with a deliberately narrow build-toolchain correction. The application code, feature scope, SDK levels, Compose dependencies, catalogue, and rights/content boundaries were not changed.
+
+### Corrected build-toolchain pins
+
+| Component | Corrected value |
+|---|---|
+| Android Gradle Plugin | 9.1.0 |
+| Kotlin Gradle Plugin | 2.4.10 |
+| Kotlin Compose compiler plugin | 2.4.10 |
+| Gradle wrapper | 9.5.0 |
+| JDK | 17 |
+| compileSdk / targetSdk / minSdk | 36 / 36 / 26 |
+| `android.builtInKotlin` | false |
+| `android.newDsl` | false |
+
+The temporary legacy compatibility bridge is documented by Android: when retaining `org.jetbrains.kotlin.android`, set both `android.builtInKotlin=false` and `android.newDsl=false`. The selected AGP 9.1.0, Kotlin Gradle Plugin 2.4.10 and Gradle 9.5.0 are within the published compatibility ranges. This avoids an unneeded source-level migration to built-in Kotlin during this A3 foundation stage.
+
+Official references:
+- https://developer.android.com/build/migrate-to-built-in-kotlin
+- https://kotlinlang.org/docs/gradle-configure-project.html
+- https://developer.android.com/build/releases/about-agp
+- https://developer.android.com/build/releases/agp-9-1-0-release-notes
+
+### Source commits
+
+- AGP/Kotlin version alignment: `eda66fb3a0fe599dc4fc61c9a4ce1b1b2d85d566`
+- Legacy DSL compatibility property: `44a9852629eb1d7a836872cda0a2fd398e90b930`
+- Gradle wrapper 9.5.0: `63419cd1db4f90c32c60807011281abc1e423f58`
+- Exact corrected A3 source SHA submitted to CI: `63419cd1db4f90c32c60807011281abc1e423f58`
+
+### Remote verification run
+
+- Workflow run #7: https://github.com/akefadaka-git/maale-bible/actions/runs/42452931831
+- Run ID: `42452931831`
+- Job ID: `128645815858`
+- Workflow commit on main: `49745ad330e9834af761d1d21537b3092823eba3`
+- Application source checkout is pinned to and asserts `63419cd1db4f90c32c60807011281abc1e423f58`.
+- At report update time: run is **IN PROGRESS**. Checkout, immutable SHA assertion, and JDK 17 setup have passed; Android SDK setup is in progress. Gradle tests/build and artifact status are pending.
+
+### Gate status at submission
+
+| Gate | Status |
+|---|---|
+| Exact source checkout / SHA assertion | PASS |
+| JDK 17 setup | PASS |
+| Android SDK setup | IN PROGRESS |
+| API 36 / build-tools 36.0.0 | PENDING |
+| Gradle 9.5.0 wrapper verification | PENDING |
+| Gradle configuration / dependency resolution | PENDING |
+| JUnit unit tests | PENDING |
+| Debug APK assembly | PENDING |
+| APK artifact upload / digest | PENDING |
+
+A successful run is required before A3 can be marked build-verified. PR #3 remains open, draft and unmerged. No deployment, release, or scripture-content intake is authorized by this change.
