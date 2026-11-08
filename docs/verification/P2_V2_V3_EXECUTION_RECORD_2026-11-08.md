@@ -79,3 +79,43 @@ Six instrumentation tests were added:
 - P3: **NOT STARTED** and remains gated on P2 verification and applicable stage approval.
 - `content_intake_authorized=false`: unchanged.
 - Merge, release signing, deployment and publication: not performed.
+
+
+## CI dependency correction and exact verification run
+
+A source-set dependency defect was identified by inspection: `LocalStudyDatabase.kt` is production source but the AndroidX SQLite and bundled-driver artifacts were declared only under `androidTestImplementation`. They were moved to `implementation` so production Kotlin compilation can resolve the imported APIs.
+
+- Fix commit: `277d59286fb381713efff85d76a30e2966099c79`
+- Pull-request CI trigger commit: `ea9632f9038ecb67e9809de5292f614d2786f9e7`
+- Draft PR #19: https://github.com/akefadaka-git/maale-bible/pull/19
+- PR base: `feat/a3-android-offline-foundation`
+- PR head: `feat/a4-offline-study-suite`
+- Workflow run #10: https://github.com/akefadaka-git/maale-bible/actions/runs/42472179944
+- Run ID: `42472179944`
+- Exact workflow head SHA: `ea9632f9038ecb67e9809de5292f614d2786f9e7`
+
+The workflow was queued when this record was updated. Jobs queued:
+- host-contracts: `128705315204`
+- Android API 26: `128705315482`
+- Android API 28: `128705315413`
+- Android API 30: `128705315450`
+- Android API 33: `128705315506`
+- Android API 35: `128705315465`
+- Android API 36: `128705315431`
+
+**CI disposition:** QUEUED — no build or instrumentation result is claimed yet. The job matrix currently runs the FTS5 instrumented suite, which includes the P2-V2 tests in `app/src/androidTest`. P2-V2 can be verified only after the exact run finishes successfully and the test report confirms all six P2-V2 test methods executed with zero failures on at least the required matrix.
+
+## Architecture decision reconciliation
+
+The new persistence slice uses the bundled SQLite driver directly. The accepted architecture ADR preferred Room backed by the bundled SQLite driver. This implementation is therefore a verification prototype, not yet an approved final persistence architecture. Before production adoption, either:
+1. port the schema and migrations to Room and run the same invariants through Room DAOs, or
+2. obtain explicit Owner approval for a narrowly amended ADR retaining direct AndroidX SQLite.
+
+No architecture approval is inferred from this implementation or PR.
+
+## Current status after CI trigger
+
+- P2-V3: PASS on the original six-API run #42461819934; retry run #42462238507 was additional confidence only.
+- P2-V2: IMPLEMENTED; CI QUEUED on exact head `ea9632f9038ecb67e9809de5292f614d2786f9e7`; NOT YET VERIFIED.
+- PR #19: OPEN, DRAFT, UNMERGED.
+- No merge, release, signing, deployment or scripture-content intake.
