@@ -10,6 +10,10 @@ import org.junit.runner.RunWith
 import org.maale.bible.data.LocalStudyDatabase
 import java.io.File
 
+private fun androidx.sqlite.SQLiteConnection.execute(sql: String) {
+    prepare(sql).use { it.step() }
+}
+
 @RunWith(AndroidJUnit4::class)
 class P2V2LocalStudyPersistenceTest {
     private fun tempDb(name: String): File {
@@ -37,14 +41,14 @@ class P2V2LocalStudyPersistenceTest {
     @Test fun v1ToV2MigrationPreservesExistingPassagesAndMappings() {
         val file = tempDb("p2-v2-migration.db")
         val legacy = BundledSQLiteDriver().open(file.absolutePath)
-        legacy.execSQL("PRAGMA foreign_keys = ON")
-        legacy.execSQL("CREATE TABLE canonical_passages(id TEXT PRIMARY KEY NOT NULL, book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter > 0), verse_start INTEGER NOT NULL CHECK(verse_start > 0), verse_end INTEGER NOT NULL CHECK(verse_end >= verse_start))")
-        legacy.execSQL("CREATE TABLE editions(id TEXT PRIMARY KEY NOT NULL, language_tag TEXT NOT NULL, title TEXT NOT NULL)")
-        legacy.execSQL("CREATE TABLE edition_passage_map(id INTEGER PRIMARY KEY AUTOINCREMENT, edition_id TEXT NOT NULL REFERENCES editions(id) ON DELETE CASCADE, edition_ref TEXT NOT NULL, canonical_id TEXT REFERENCES canonical_passages(id) ON DELETE CASCADE, mapping_status TEXT NOT NULL CHECK(mapping_status IN ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')), UNIQUE(edition_id, edition_ref))")
-        legacy.execSQL("INSERT INTO canonical_passages VALUES('PS.1.1','PS',1,1,1)")
-        legacy.execSQL("INSERT INTO editions VALUES('syn','en','Synthetic')")
-        legacy.execSQL("INSERT INTO edition_passage_map(edition_id,edition_ref,canonical_id,mapping_status) VALUES('syn','PS 1:1','PS.1.1','EXACT')")
-        legacy.execSQL("PRAGMA user_version = 1")
+        legacy.execute("PRAGMA foreign_keys = ON")
+        legacy.execute("CREATE TABLE canonical_passages(id TEXT PRIMARY KEY NOT NULL, book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter > 0), verse_start INTEGER NOT NULL CHECK(verse_start > 0), verse_end INTEGER NOT NULL CHECK(verse_end >= verse_start))")
+        legacy.execute("CREATE TABLE editions(id TEXT PRIMARY KEY NOT NULL, language_tag TEXT NOT NULL, title TEXT NOT NULL)")
+        legacy.execute("CREATE TABLE edition_passage_map(id INTEGER PRIMARY KEY AUTOINCREMENT, edition_id TEXT NOT NULL REFERENCES editions(id) ON DELETE CASCADE, edition_ref TEXT NOT NULL, canonical_id TEXT REFERENCES canonical_passages(id) ON DELETE CASCADE, mapping_status TEXT NOT NULL CHECK(mapping_status IN ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')), UNIQUE(edition_id, edition_ref))")
+        legacy.execute("INSERT INTO canonical_passages VALUES('PS.1.1','PS',1,1,1)")
+        legacy.execute("INSERT INTO editions VALUES('syn','en','Synthetic')")
+        legacy.execute("INSERT INTO edition_passage_map(edition_id,edition_ref,canonical_id,mapping_status) VALUES('syn','PS 1:1','PS.1.1','EXACT')")
+        legacy.execute("PRAGMA user_version = 1")
         legacy.close()
 
         LocalStudyDatabase.openFile(file).use { db ->
