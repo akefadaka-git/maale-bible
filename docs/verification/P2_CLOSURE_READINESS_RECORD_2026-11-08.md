@@ -106,3 +106,11 @@ After the initial readiness record, the backup workflow gained a deterministic r
 - Relevant commits: `84aec04bdeb868795623239a205f4f715ada3af5`, `30907ae8f3f07eca3e8a74205ebb29ce60efcdca`, `e6b06c9e4482092b77b3569e4c5e455af01cb290`, `23b40c1da406c4be8fd3202d54e855ae762a75d9`.
 
 **Current implementation baseline before this report amendment:** `23b40c1da406c4be8fd3202d54e855ae762a75d9`. The prior consolidated run #42482674929 was cancelled before any host or Android gate completed. No exact-HEAD verification pass is claimed. The planner computes a staged result in memory; database transaction integration and crash-safe rollback remain outstanding. P2-V5 therefore remains a prototype, not a complete restore implementation.
+
+
+### Final exact-head trigger attempt
+
+- Trigger commit / final workflow configuration HEAD: `9ee7dd516320c1ae1935bf094c04c4c59b4cc9da`.
+- The GitHub connector returned no workflow run for this commit and no combined status entries. No host or Android job results are available for this exact HEAD.
+- The prior run #42482674929 was cancelled before execution. The exact-head consolidated verification is therefore **NOT RUN / UNAVAILABLE**, not PASS.
+- The implementation baseline immediately before the final workflow-trigger commit is `23b40c1da406c4be8fd3202d54e855ae762a75d9`; the workflow and documentation commits after it do not alter application code. This relationship does not substitute for a completed exact-HEAD run.
