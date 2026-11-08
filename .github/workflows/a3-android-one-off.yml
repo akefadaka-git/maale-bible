@@ -24,14 +24,14 @@ jobs:
       - name: Checkout approved A3 commit
         uses: actions/checkout@v4
         with:
-          ref: 63419cd1db4f90c32c60807011281abc1e423f58
+          ref: fcb1d04d7a227bfda320cd18a06b12fbd37e4b6d
           persist-credentials: false
 
       - name: Enforce immutable source SHA
         shell: bash
         run: |
           set -euo pipefail
-          expected="63419cd1db4f90c32c60807011281abc1e423f58"
+          expected="fcb1d04d7a227bfda320cd18a06b12fbd37e4b6d"
           actual="$(git rev-parse HEAD)"
           test "$actual" = "$expected"
           echo "Verified source SHA: $actual"
@@ -67,7 +67,7 @@ jobs:
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: maale-bible-a3-debug-63419cd1
+          name: maale-bible-a3-debug-fcb1d04d
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 7
