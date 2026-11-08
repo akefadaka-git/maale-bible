@@ -3,7 +3,8 @@
 **Repository:** `akefadaka-git/maale-bible`  
 **Branch:** `feat/a4-offline-study-suite`  
 **PR:** [#19 — P2 offline persistence and synthetic invariants](https://github.com/akefadaka-git/maale-bible/pull/19)  
-**Exact current PR head:** `f582fa3ce3c0ee0e4777b4f7269b890ae6fbb567`  
+**Implementation baseline:** `f582fa3ce3c0ee0e4777b4f7269b890ae6fbb567`  
+**Current PR head before this report amendment:** `6a8932599f55c22caf3954403212c0f111481d53` (two commits after the implementation baseline: this record plus a one-line test comment; no functional code change).  
 **Disposition:** **PARTIAL — NOT VERIFIED-CLOSED**  
 **Content gate:** `content_intake_authorized=false`
 
@@ -67,11 +68,13 @@ Important implementation commits:
   - API 35: emulator ADB daemon failures; a later retry remained queued.
   - API 36: emulator shell unresponsive / split-APK installation failure.
   - These are infrastructure failures; they are not persistence assertion failures, but they do not count as passing tests.
-- Latest feature implementation workflow: [#42481662218](https://github.com/akefadaka-git/maale-bible/actions/runs/42481662218) — queued at last check.
-- Latest exact-PR-head workflow: [#42482139112](https://github.com/akefadaka-git/maale-bible/actions/runs/42482139112) — queued at last check.
+- Feature implementation workflow #42481662218: all jobs remained queued at the last retrieval, then were superseded/cancelled by the newer-run policy.
+- Workflow #42482139112 (head `ef4f1d62f7c7cffb9517e22743bd66758c87e061`): all jobs ended **cancelled**.
+- Workflow #42482316194 (head `f582fa3ce3c0ee0e4777b4f7269b890ae6fbb567`): all jobs ended **cancelled** after later branch updates.
+- The latest current PR head has no completed exact-head run result available through the GitHub status/run queries at this assessment.
 - Workflow/CI changes add Gradle dependency caching, emulator animation disablement, a longer timeout and latest-run concurrency policy. They use free GitHub-hosted runners only.
 
-The latest exact-head run has not yet yielded job results. A queued run is not verification evidence.
+A queued or cancelled run is not verification evidence. Do not claim the consolidated exact-HEAD matrix passed.
 
 ## 6. Closure blockers
 
