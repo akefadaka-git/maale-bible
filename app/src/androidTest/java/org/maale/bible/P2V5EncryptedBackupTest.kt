@@ -8,6 +8,7 @@ import org.maale.bible.data.backup.EncryptedBackup
 import java.nio.charset.StandardCharsets
 
 @RunWith(AndroidJUnit4::class)
+// Synthetic-only security regression suite for the versioned portable backup envelope.
 class P2V5EncryptedBackupTest {
     private val password = "synthetic-test-passphrase-2026".toCharArray()
 
