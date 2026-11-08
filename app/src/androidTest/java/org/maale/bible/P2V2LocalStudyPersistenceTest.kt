@@ -128,6 +128,34 @@ class P2V2LocalStudyPersistenceTest {
         file.delete()
     }
 
+    @Test fun frozenRegistryRejectsAdditionalRegistryAndBookRows() {
+        val file = tempDb("p3-canon-frozen-insert.db")
+        LocalStudyDatabase.openFile(file).close()
+        val db = BundledSQLiteDriver().open(file.absolutePath)
+        try {
+            db.execute("PRAGMA foreign_keys = ON")
+            try {
+                db.execute("INSERT INTO canon_registry(canon_id,version,status,book_count,created_by) VALUES('other:canon:66-v1',1,'FROZEN',66,'test')")
+                fail("a second canonical registry must be rejected")
+            } catch (_: Exception) { }
+            try {
+                db.execute("INSERT INTO canonical_book(canon_id,book_id,canonical_order,canonical_name,testament) VALUES('maale-bible:canon:66-v1','TOB',67,'Tobit','OT')")
+                fail("a frozen registry must reject additional books")
+            } catch (_: Exception) { }
+            try {
+                db.execute("UPDATE canonical_book SET canonical_name='Changed' WHERE book_id='GEN'")
+                fail("a frozen registry must reject book mutation")
+            } catch (_: Exception) { }
+            try {
+                db.execute("DELETE FROM canonical_book WHERE book_id='GEN'")
+                fail("a frozen registry must reject book deletion")
+            } catch (_: Exception) { }
+        } finally {
+            db.close()
+            file.delete()
+        }
+    }
+
     @Test fun canonicalKeyRejectsUnknownBooksAndInvalidCoordinates() {
         val file = tempDb("p3-canon-key-validation.db")
         LocalStudyDatabase.openFile(file).use { db ->
