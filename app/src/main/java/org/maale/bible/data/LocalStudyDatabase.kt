@@ -309,6 +309,49 @@ class LocalStudyDatabase private constructor(
                 // The registry is immutable as a set, not merely immutable per existing row.
                 db.execute("CREATE TRIGGER canon_registry_no_insert BEFORE INSERT ON canon_registry BEGIN SELECT RAISE(ABORT,'canon registry is frozen'); END")
                 db.execute("CREATE TRIGGER canonical_book_no_insert BEFORE INSERT ON canonical_book BEGIN SELECT RAISE(ABORT,'canonical book registry is frozen'); END")
+                db.execute("""CREATE TRIGGER passage_mapping_validate_cardinality
+                    BEFORE UPDATE OF review_status ON passage_mapping
+                    WHEN NEW.review_status IN ('REVIEWED','APPROVED')
+                    BEGIN
+                      SELECT CASE
+                        WHEN NEW.mapping_status='EXACT' AND
+                          ((SELECT count(*) FROM passage_mapping_source WHERE mapping_id=NEW.mapping_id) != 1 OR
+                           (SELECT count(*) FROM passage_mapping_target WHERE mapping_id=NEW.mapping_id) != 1)
+                          THEN RAISE(ABORT,'EXACT mapping requires one source and one target')
+                        WHEN NEW.mapping_status='SPLIT' AND
+                          ((SELECT count(*) FROM passage_mapping_source WHERE mapping_id=NEW.mapping_id) != 1 OR
+                           (SELECT count(*) FROM passage_mapping_target WHERE mapping_id=NEW.mapping_id) < 2)
+                          THEN RAISE(ABORT,'SPLIT mapping requires one source and multiple targets')
+                        WHEN NEW.mapping_status='MERGED' AND
+                          ((SELECT count(*) FROM passage_mapping_source WHERE mapping_id=NEW.mapping_id) < 2 OR
+                           (SELECT count(*) FROM passage_mapping_target WHERE mapping_id=NEW.mapping_id) != 1)
+                          THEN RAISE(ABORT,'MERGED mapping requires multiple sources and one target')
+                        WHEN NEW.mapping_status='PARTIAL' AND
+                          ((SELECT count(*) FROM passage_mapping_source WHERE mapping_id=NEW.mapping_id) < 1 OR
+                           (SELECT count(*) FROM passage_mapping_target WHERE mapping_id=NEW.mapping_id) < 1)
+                          THEN RAISE(ABORT,'PARTIAL mapping requires at least one source and target')
+                        WHEN NEW.mapping_status='UNMAPPED' AND
+                          ((SELECT count(*) FROM passage_mapping_source WHERE mapping_id=NEW.mapping_id) < 1 OR
+                           (SELECT count(*) FROM passage_mapping_target WHERE mapping_id=NEW.mapping_id) != 0)
+                          THEN RAISE(ABORT,'UNMAPPED mapping requires source provenance and no target')
+                      END;
+                    END""")
+                db.execute("""CREATE TRIGGER passage_mapping_source_lock_insert
+                    BEFORE INSERT ON passage_mapping_source
+                    WHEN (SELECT review_status FROM passage_mapping WHERE mapping_id=NEW.mapping_id) != 'UNREVIEWED'
+                    BEGIN SELECT RAISE(ABORT,'reviewed mapping sources are immutable'); END""")
+                db.execute("""CREATE TRIGGER passage_mapping_target_lock_insert
+                    BEFORE INSERT ON passage_mapping_target
+                    WHEN (SELECT review_status FROM passage_mapping WHERE mapping_id=NEW.mapping_id) != 'UNREVIEWED'
+                    BEGIN SELECT RAISE(ABORT,'reviewed mapping targets are immutable'); END""")
+                db.execute("""CREATE TRIGGER passage_mapping_source_lock_delete
+                    BEFORE DELETE ON passage_mapping_source
+                    WHEN (SELECT review_status FROM passage_mapping WHERE mapping_id=OLD.mapping_id) != 'UNREVIEWED'
+                    BEGIN SELECT RAISE(ABORT,'reviewed mapping sources are immutable'); END""")
+                db.execute("""CREATE TRIGGER passage_mapping_target_lock_delete
+                    BEFORE DELETE ON passage_mapping_target
+                    WHEN (SELECT review_status FROM passage_mapping WHERE mapping_id=OLD.mapping_id) != 'UNREVIEWED'
+                    BEGIN SELECT RAISE(ABORT,'reviewed mapping targets are immutable'); END""")
                 db.execute("PRAGMA user_version = 3")
                 db.execute("COMMIT")
             } catch (t: Throwable) {
