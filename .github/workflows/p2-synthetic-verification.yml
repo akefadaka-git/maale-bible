@@ -1,0 +1,36 @@
+name: P2 synthetic verification
+on:
+  push:
+    branches: [feat/a4-offline-study-suite]
+    paths: ['app/**','verification/p2/**','.github/workflows/p2-synthetic-verification.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  host-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python verification/p2/p2_verify.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p2-host-evidence
+          path: verification/p2/host-verification-results.json
+  android-fts5:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [26,28,30,33,35,36]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - uses: android-actions/setup-android@v3
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          arch: x86_64
+          script: ./gradlew --no-daemon :app:connectedDebugAndroidTest
