@@ -1,13 +1,13 @@
 # Maale Bible (ጌኤዦ ማፃኣፖ) — Authoritative Implementation Plan
 
-**Plan version:** 2.0  
+**Plan version:** 2.1  
 **Date:** 2026-11-08  
 **Status:** CURRENT GOVERNING PLAN — replaces earlier planning documents as the active roadmap  
 **Repository:** akefadaka-git/maale-bible  
 **Implementation branch:** feat/a4-offline-study-suite  
 **Current A3 verified source:** fcb1d04d7a227bfda320cd18a06b12fbd37e4b6d  
 **Current product direction:** comprehensive, advanced, offline-first Android Bible and study workspace  
-**Content authorization:** content_intake_authorized=false  
+**Content authorization:** content_intake_authorized=true — Owner authorization recorded 2026-11-08; per-source rights gates remain mandatory  
 **Governance:** Owner-governed, stage-gated; no merge, content intake, signing, deployment or publication without the required separate approval.
 
 > This document is the single authoritative implementation roadmap. Earlier plans and specifications are retained under docs/archive/superseded-plans/ for historical reference. Where an archived plan conflicts with this document, this plan governs future work; historical approvals and evidence remain valid unless explicitly superseded.
@@ -58,13 +58,14 @@ The offline release may define clean integration interfaces and durable local mo
 
 ### 2.3 Content and rights boundary — binding
 
-- content_intake_authorized=false remains in force.
-- Do not download, acquire, unpack, inspect, hash, ingest, transform, store or commit scripture text, audio, scans or protected reference assets until separate explicit Owner authorization for the exact package and action.
-- The intended primary edition remains the 2008 Maale Full Bible MDYTWF / mdyeth. Do not substitute the 2007 MDYBSE Maale New Testament.
-- A2 source verification and rights evidence do not authorize content intake.
-- Amharic and English editions require separate source and rights approval.
-- Commentaries, dictionaries, concordances, maps, atlas data, images, audio, fonts and derived indexes each require their own provenance, licence, attribution, integrity and quality review.
-- Until authorized, use synthetic fixtures and metadata-only catalogues. Never fabricate scripture, commentary, maps, historical facts, morphology or citations.
+- content_intake_authorized=true by explicit Owner authorization dated 2026-11-08; see docs/governance/OWNER_CONTENT_INTAKE_AUTHORIZATION_2026-11-08.md.
+- Intake work may cover Maale, Amharic (am), English (en), and other necessary Bible/study resources within the approved offline product scope.
+- This is not a blanket licence: every edition/resource must independently pass provenance, rights/permission, attribution, integrity, structure, quality and language-review gates before integration or distribution.
+- The primary Maale edition remains the 2008 Full Bible MDYTWF / mdyeth. Do not substitute the distinct 2007 MDYBSE Maale New Testament.
+- Existing A2 verification remains valid for the exact archive and evidence already examined; recheck archive identity and hashes before new processing.
+- Commentaries, dictionaries, concordances, maps, atlas data, images, audio, fonts and derived indexes require source-specific rights and quality review.
+- Public-repository commits of raw scripture or protected assets are permitted only where the exact licence allows public redistribution and the repository's distribution model has been approved; otherwise use controlled content packaging outside the public source tree.
+- Never fabricate scripture, commentary, maps, historical facts, morphology or citations.
 - Maale language/Ethiopic-script specialist review remains a deferred residual risk; do not claim linguistic sign-off.
 
 ## 3. Competitive benchmark translated into product priorities
@@ -184,7 +185,7 @@ Release readiness requires measurable evidence:
 
 - Work on feat/a4-offline-study-suite; preserve A2/A3 history and unrelated work.
 - Do not modify main or merge PRs without separate explicit approval.
-- No content intake without separate exact-source authorization.
+- Content intake is authorized under the Owner's 2026-11-08 decision; source-specific rights and quality gates remain mandatory.
 - No release signing, store submission, deployment or publication without separate explicit approval.
 - Do not ask for payment, top-ups or deposits to enable CI. Use available remote/manual verification routes and report unavailable checks honestly.
 - Keep public-repository contents free of scripture text, private keys, signing credentials and restricted third-party assets.
@@ -216,7 +217,7 @@ Planning estimate: the previous 12–16 week estimate is retained only as a hist
 - P3 implementation: not yet started under this plan.
 - A3: SHA-pinned remote debug build, unit-test and APK assembly evidence exists at workflow run https://github.com/akefadaka-git/maale-bible/actions/runs/42454704758; this was a debug APK, not a signed release.
 - PR #3 remains open, draft and unmerged per the last verified project record; refresh live state before making a new status claim.
-- No scripture or protected content has been authorized for intake.
+- Owner content-intake authorization is recorded; no source may be integrated until its own rights, provenance and quality gates pass.
 
 **Immediate next action:** execute P2-V1 through P2-V8 using synthetic data and exact-HEAD evidence, then publish the P2 closure report. After P2 verification and the applicable stage approval, begin P3 in small, testable vertical slices.
 
