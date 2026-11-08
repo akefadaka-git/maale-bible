@@ -20,6 +20,9 @@ The Owner has authorized multilingual content-intake work. Initial public-source
 ## Evidence and source URLs
 
 ### Maale
+- Current official eBible edition record: https://www.ebible.org/Scriptures/details.php?id=mdyeth
+- Current official record states CC BY-SA 4.0 and explicitly permits sharing, redistribution, and reasonable revisions/adaptations subject to attribution, modification notice and ShareAlike.
+- An older third-party mirror displays CC BY-ND 4.0: https://divinerevelations.info/documents/bible/All_HTML/Maale_Bible_Ethiopic_script/copyright.htm. The mirror is not the current authoritative eBible record; retain the discrepancy as a provenance note and use the current official record plus Owner-supplied rights-holder clarification.
 - Existing Owner-accepted technical A2 report: `docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md`.
 - Rights-holder clarification recorded in `docs/source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md`.
 - Older public catalogue page: https://divinerevelations.info/documents/bible/All_HTML/Maale_Bible_Ethiopic_script/copyright.htm
@@ -53,7 +56,7 @@ The Owner has authorized multilingual content-intake work. Initial public-source
 
 ## Current blockers and decisions
 
-- **Maale licence conflict:** RIGHTS_REVIEW. Do not assume CC BY-SA permission for modifications until the CC BY-ND discrepancy is resolved.
+- **Maale rights:** Current official eBible record and Owner-supplied rights-holder clarification both state CC BY-SA 4.0. The older third-party mirror's CC BY-ND notice is conflicting historical metadata, not the current official edition record. Preserve it in the evidence file; use the official current record for the package, and obtain direct rights-holder clarification if a material dispute is raised.
 - **Amharic completeness:** current candidate is NT-only; discover a full Bible edition and obtain its rights evidence. The eBible NT's commercial-use condition must be resolved for the app's distribution model.
 - **English:** WEB is the strongest initial complete open candidate; confirm exact package and trademark conditions. OEB is a supplementary partial translation, not a full edition.
 - **Other resources:** discover only from identifiable publishers/providers; evaluate each dataset independently. Do not bundle proprietary commentaries, maps, audio, fonts or images without explicit rights.
@@ -70,4 +73,4 @@ The Owner has authorized multilingual content-intake work. Initial public-source
 - INTEGRATED — approved resource installed in the app and end-to-end tested.
 - REJECTED — candidate not selected.
 
-**Report conclusion:** Owner authorization is active. The WEB is a promising complete English candidate; the current Amharic eBible candidate is only a New Testament and has use restrictions; the Maale public catalogue contains a licence notice conflict that must be reconciled. Continue source discovery and rights verification before content integration.
+**Report conclusion:** Owner authorization is active. The WEB is a promising complete English candidate; the current Amharic eBible candidate is only a New Testament and has use restrictions; the current official Maale catalogue aligns with the Owner's CC BY-SA 4.0 clarification; an older third-party mirror has a conflicting notice that is retained as historical evidence. Continue source discovery and rights verification before content integration.
