@@ -78,7 +78,7 @@ object EncryptedBackup {
 
         val salt = ByteArray(SALT_BYTES).also(SecureRandom()::nextBytes)
         val nonce = ByteArray(NONCE_BYTES).also(SecureRandom()::nextBytes)
-        val header = ByteBuffer.allocate(4 + 1 + 4 + SALT_BYTES + NONCE_BYTES)
+        val header = ByteBuffer.allocate(4 + 1 + 1 + 4 + SALT_BYTES + NONCE_BYTES)
             .put(magic).put(FORMAT_VERSION.toByte()).put(KDF_ID_PBKDF2_HMAC_SHA256.toByte()).putInt(KDF_ITERATIONS)
             .put(salt).put(nonce).array()
         val keyBytes = deriveKey(password, salt, KDF_ITERATIONS)
