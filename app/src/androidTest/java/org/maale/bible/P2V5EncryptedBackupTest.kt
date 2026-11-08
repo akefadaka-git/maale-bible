@@ -40,16 +40,30 @@ class P2V5EncryptedBackupTest {
         } catch (_: SecurityException) { }
     }
 
-    @Test fun unsupportedHeaderAndUnsafePathsAreRejected() {
+    @Test fun unsupportedVersionAndKdfAndUnsafePathsAreRejected() {
         val encrypted = EncryptedBackup.create(mapOf("notes/a.json" to byteArrayOf(1)), password)
-        val unsupported = encrypted.copyOf().also { it[4] = 99 }
+        val unsupportedVersion = encrypted.copyOf().also { it[4] = 99 }
         try {
-            EncryptedBackup.restore(unsupported, password)
+            EncryptedBackup.restore(unsupportedVersion, password)
             fail("unsupported format must be rejected")
+        } catch (_: IllegalArgumentException) { }
+        val unsupportedKdf = encrypted.copyOf().also { it[5] = 99 }
+        try {
+            EncryptedBackup.restore(unsupportedKdf, password)
+            fail("unsupported KDF must be rejected")
         } catch (_: IllegalArgumentException) { }
         try {
             EncryptedBackup.create(mapOf("../escape" to byteArrayOf(1)), password)
             fail("path traversal must be rejected")
         } catch (_: IllegalArgumentException) { }
+    }
+
+    @Test fun truncatedCiphertextFailsAuthentication() {
+        val encrypted = EncryptedBackup.create(mapOf("notes/a.json" to byteArrayOf(1, 2, 3)), password)
+        val truncated = encrypted.copyOfRange(0, encrypted.size - 1)
+        try {
+            EncryptedBackup.restore(truncated, password)
+            fail("truncated ciphertext must not restore")
+        } catch (_: SecurityException) { }
     }
 }
