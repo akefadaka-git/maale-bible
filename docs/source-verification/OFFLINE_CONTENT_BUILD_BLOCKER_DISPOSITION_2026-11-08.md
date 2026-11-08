@@ -26,7 +26,7 @@ The archive must be re-hashed and staged files revalidated immediately before an
 |---|---|---|---|
 | CB-01 | Exact source identity and integrity | VERIFIED WITH CAVEATS | Reconfirm archive SHA-256 and all staged file hashes before build. Preserve source manifest and archive provenance. |
 | CB-02 | Rights and attribution | PARTIAL | Owner authorized intake. Record CC BY-SA 4.0 and required attribution. Original email headers/signatory authority remain unauthenticated; images have separate restrictions. Do not claim independent legal authentication. |
-| CB-03 | Canonical passage identity | OPEN — OWNER ARCHITECTURE DECISION | ADR-A4-001 remains Proposed. Select/approve canonical book identifiers and versification reference. Until then, use edition-native source references for import only; do not claim cross-edition equivalence or silently map split/merged verses. |
+| CB-03 | Canonical passage identity | ACCEPTED — IMPLEMENTATION PENDING | ADR-A4-001 accepted: canon ID `maale-bible:canon:66-v1`, uppercase USFM three-letter book IDs validated against a frozen 66-book registry, and explicit edition-specific versification mappings. Implement registry, schema, source mappings and tests; do not claim cross-edition equivalence or silently map split/merged verses. |
 | CB-04 | USFM parser qualification | NOT RUN | Implement marker-aware parsing; distinguish verse text from headings, footnotes, cross-references and formatting markers. Reconcile book/chapter/verse/span counts against the approved manifest. |
 | CB-05 | Deterministic SQLite content database | NOT RUN | Build outside the public repository. Fix schema/parser versions, row ordering, encoding, pragmas and metadata policy; exclude nondeterministic timestamps. Rebuild twice and compare artifact hashes. |
 | CB-06 | FTS5 index and tokenizer | PARTIAL / NOT QUALIFIED | ADR-A4-003 remains Proposed. Qualify bundled SQLite FTS5 against the Android runtime matrix. Maale and Amharic tokenization require representative expected-token corpora and specialist review. |
@@ -48,6 +48,6 @@ The archive must be re-hashed and staged files revalidated immediately before an
 
 ## Current release disposition
 
-**NOT READY FOR CONTENT-INTEGRATION CLOSURE.** The source archive is ready for controlled processing after re-hash, but canonical passage identity, parser qualification, database generation, tokenizer qualification, Android integration and exact-HEAD verification remain open. No database or index build is represented as complete by this record.
+**NOT READY FOR CONTENT-INTEGRATION CLOSURE.** The source archive is ready for controlled processing after re-hash, but canonical identity implementation/registry fixture, parser qualification, database generation, tokenizer qualification, Android integration and exact-HEAD verification remain open. No database or index build is represented as complete by this record.
 
 No merge, release signing, deployment or publication is authorized by this blocker record.
