@@ -26,6 +26,7 @@ import javax.crypto.spec.SecretKeySpec
 object EncryptedBackup {
     private val magic = byteArrayOf(0x4d, 0x42, 0x4b, 0x50) // MBKP
     private const val FORMAT_VERSION = 1
+    private const val KDF_ID_PBKDF2_HMAC_SHA256 = 1
     private const val KDF_ITERATIONS = 310_000
     private const val MIN_KDF_ITERATIONS = 100_000
     private const val MAX_KDF_ITERATIONS = 1_000_000
@@ -39,7 +40,7 @@ object EncryptedBackup {
     private const val MANIFEST = "manifest.json"
 
     fun create(entries: Map<String, ByteArray>, password: CharArray): ByteArray {
-        require(password.size >= 12) { "Backup password must contain at least 12 characters" }
+        require(password.size in 12..1024) { "Backup password length must be between 12 and 1024 characters" }
         require(entries.size <= MAX_ENTRIES) { "Too many backup entries" }
         require(MANIFEST !in entries) { "Reserved manifest path" }
         var total = 0L
@@ -78,7 +79,7 @@ object EncryptedBackup {
         val salt = ByteArray(SALT_BYTES).also(SecureRandom()::nextBytes)
         val nonce = ByteArray(NONCE_BYTES).also(SecureRandom()::nextBytes)
         val header = ByteBuffer.allocate(4 + 1 + 4 + SALT_BYTES + NONCE_BYTES)
-            .put(magic).put(FORMAT_VERSION.toByte()).putInt(KDF_ITERATIONS)
+            .put(magic).put(FORMAT_VERSION.toByte()).put(KDF_ID_PBKDF2_HMAC_SHA256.toByte()).putInt(KDF_ITERATIONS)
             .put(salt).put(nonce).array()
         val keyBytes = deriveKey(password, salt, KDF_ITERATIONS)
         return try {
@@ -99,13 +100,15 @@ object EncryptedBackup {
         require(container.size in (4 + 1 + 4 + SALT_BYTES + NONCE_BYTES + 16)..MAX_CONTAINER_BYTES) {
             "Invalid backup container size"
         }
-        val headerSize = 4 + 1 + 4 + SALT_BYTES + NONCE_BYTES
+        val headerSize = 4 + 1 + 1 + 4 + SALT_BYTES + NONCE_BYTES
         val header = container.copyOfRange(0, headerSize)
         val input = ByteBuffer.wrap(header)
         val foundMagic = ByteArray(4).also(input::get)
         require(foundMagic.contentEquals(magic)) { "Not a Maale Bible backup" }
         val version = input.get().toInt() and 0xff
         require(version == FORMAT_VERSION) { "Unsupported backup format version: $version" }
+        val kdfId = input.get().toInt() and 0xff
+        require(kdfId == KDF_ID_PBKDF2_HMAC_SHA256) { "Unsupported backup KDF: $kdfId" }
         val iterations = input.int
         require(iterations in MIN_KDF_ITERATIONS..MAX_KDF_ITERATIONS) { "Unsafe KDF parameters" }
         val salt = ByteArray(SALT_BYTES).also(input::get)
@@ -164,10 +167,12 @@ object EncryptedBackup {
         val declared = metadata.getJSONArray("entries")
         require(declared.length() == files.size) { "Manifest entry count mismatch" }
         val verified = linkedMapOf<String, ByteArray>()
+        val declaredPaths = mutableSetOf<String>()
         for (i in 0 until declared.length()) {
             val item = declared.getJSONObject(i)
             val path = item.getString("path")
             validatePath(path)
+            require(declaredPaths.add(path)) { "Duplicate manifest path: $path" }
             val data = requireNotNull(files[path]) { "Manifest entry missing: $path" }
             require(item.getLong("size") == data.size.toLong()) { "Entry size mismatch: $path" }
             require(MessageDigest.isEqual(
@@ -176,6 +181,7 @@ object EncryptedBackup {
             )) { "Entry integrity check failed: $path" }
             verified[path] = data
         }
+        require(declaredPaths == files.keys) { "Manifest does not describe every archive entry" }
         return verified
     }
 
