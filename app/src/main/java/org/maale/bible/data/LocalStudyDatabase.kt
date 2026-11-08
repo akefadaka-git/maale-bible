@@ -5,6 +5,10 @@ import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import java.io.File
 
+private fun SQLiteConnection.execute(sql: String) {
+    prepare(sql).use { it.step() }
+}
+
 /**
  * Offline study persistence boundary.
  *
@@ -78,7 +82,7 @@ class LocalStudyDatabase private constructor(
         internal fun openFile(file: File): LocalStudyDatabase {
             file.parentFile?.mkdirs()
             val connection = BundledSQLiteDriver().open(file.absolutePath)
-            connection.execSQL("PRAGMA foreign_keys = ON")
+            connection.execute("PRAGMA foreign_keys = ON")
             val version = connection.prepare("PRAGMA user_version").use { it.step(); it.getLong(0) }
             when (version) {
                 0L -> {
@@ -96,21 +100,21 @@ class LocalStudyDatabase private constructor(
         }
 
         private fun createV1(db: SQLiteConnection) {
-            db.execSQL("BEGIN IMMEDIATE")
+            db.execute("BEGIN IMMEDIATE")
             try {
-                db.execSQL("""CREATE TABLE canonical_passages(
+                db.execute("""CREATE TABLE canonical_passages(
                     id TEXT PRIMARY KEY NOT NULL,
                     book_id TEXT NOT NULL,
                     chapter INTEGER NOT NULL CHECK(chapter > 0),
                     verse_start INTEGER NOT NULL CHECK(verse_start > 0),
                     verse_end INTEGER NOT NULL CHECK(verse_end >= verse_start)
                 )""")
-                db.execSQL("""CREATE TABLE editions(
+                db.execute("""CREATE TABLE editions(
                     id TEXT PRIMARY KEY NOT NULL,
                     language_tag TEXT NOT NULL,
                     title TEXT NOT NULL
                 )""")
-                db.execSQL("""CREATE TABLE edition_passage_map(
+                db.execute("""CREATE TABLE edition_passage_map(
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     edition_id TEXT NOT NULL REFERENCES editions(id) ON DELETE CASCADE,
                     edition_ref TEXT NOT NULL,
@@ -118,29 +122,29 @@ class LocalStudyDatabase private constructor(
                     mapping_status TEXT NOT NULL CHECK(mapping_status IN ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')),
                     UNIQUE(edition_id, edition_ref)
                 )""")
-                db.execSQL("CREATE INDEX index_mapping_canonical ON edition_passage_map(canonical_id)")
-                db.execSQL("PRAGMA user_version = 1")
-                db.execSQL("COMMIT")
+                db.execute("CREATE INDEX index_mapping_canonical ON edition_passage_map(canonical_id)")
+                db.execute("PRAGMA user_version = 1")
+                db.execute("COMMIT")
             } catch (t: Throwable) {
-                db.execSQL("ROLLBACK")
+                db.execute("ROLLBACK")
                 throw t
             }
         }
 
         private fun migrateV1ToV2(db: SQLiteConnection) {
-            db.execSQL("BEGIN IMMEDIATE")
+            db.execute("BEGIN IMMEDIATE")
             try {
-                db.execSQL("""CREATE TABLE study_notes(
+                db.execute("""CREATE TABLE study_notes(
                     id TEXT PRIMARY KEY NOT NULL,
                     canonical_id TEXT NOT NULL REFERENCES canonical_passages(id) ON DELETE CASCADE,
                     body TEXT NOT NULL CHECK(length(body) > 0),
                     created_at INTEGER NOT NULL CHECK(created_at >= 0)
                 )""")
-                db.execSQL("CREATE INDEX index_notes_canonical ON study_notes(canonical_id)")
-                db.execSQL("PRAGMA user_version = 2")
-                db.execSQL("COMMIT")
+                db.execute("CREATE INDEX index_notes_canonical ON study_notes(canonical_id)")
+                db.execute("PRAGMA user_version = 2")
+                db.execute("COMMIT")
             } catch (t: Throwable) {
-                db.execSQL("ROLLBACK")
+                db.execute("ROLLBACK")
                 throw t
             }
         }
