@@ -94,3 +94,15 @@ A queued or cancelled run is not verification evidence. Do not claim the consoli
 - PR #19 remains open, draft and unmerged.
 - Merge, signing, deployment and publication remain separate approvals.
 - No paid CI, top-up, deposit or subscription is required.
+
+
+## Final implementation addendum — restore planning and consolidated-run disposition
+
+After the initial readiness record, the backup workflow gained a deterministic restore planner:
+- `app/src/main/java/org/maale/bible/data/backup/BackupRestorePlanner.kt` classifies additions, conflicts and unchanged entries.
+- Default merge preserves conflicting local records and adds only new entries.
+- Replace requires an explicit confirmation flag.
+- `app/src/androidTest/java/org/maale/bible/P2V5BackupRestorePlannerTest.kt` covers preview classification, non-destructive merge and explicit replace confirmation.
+- Relevant commits: `84aec04bdeb868795623239a205f4f715ada3af5`, `30907ae8f3f07eca3e8a74205ebb29ce60efcdca`, `e6b06c9e4482092b77b3569e4c5e455af01cb290`, `23b40c1da406c4be8fd3202d54e855ae762a75d9`.
+
+**Current implementation baseline before this report amendment:** `23b40c1da406c4be8fd3202d54e855ae762a75d9`. The prior consolidated run #42482674929 was cancelled before any host or Android gate completed. No exact-HEAD verification pass is claimed. The planner computes a staged result in memory; database transaction integration and crash-safe rollback remain outstanding. P2-V5 therefore remains a prototype, not a complete restore implementation.
