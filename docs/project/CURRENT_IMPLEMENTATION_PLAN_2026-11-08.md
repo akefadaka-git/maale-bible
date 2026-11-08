@@ -3,7 +3,7 @@
 **Plan version:** 2.0  
 **Date:** 2026-11-08  
 **Status:** CURRENT GOVERNING PLAN — replaces earlier planning documents as the active roadmap  
-**Repository:** ake fadaka-git/maale-bible  
+**Repository:** akefadaka-git/maale-bible  
 **Implementation branch:** feat/a4-offline-study-suite  
 **Current A3 verified source:** fcb1d04d7a227bfda320cd18a06b12fbd37e4b6d  
 **Current product direction:** comprehensive, advanced, offline-first Android Bible and study workspace  
