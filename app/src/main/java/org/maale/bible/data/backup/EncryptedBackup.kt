@@ -80,17 +80,18 @@ object EncryptedBackup {
         val header = ByteBuffer.allocate(4 + 1 + 4 + SALT_BYTES + NONCE_BYTES)
             .put(magic).put(FORMAT_VERSION.toByte()).putInt(KDF_ITERATIONS)
             .put(salt).put(nonce).array()
-        val key = deriveKey(password, salt, KDF_ITERATIONS)
+        val keyBytes = deriveKey(password, salt, KDF_ITERATIONS)
         return try {
             val cipher = Cipher.getInstance("AES/GCM/NoPadding")
-            cipher.init(Cipher.ENCRYPT_MODE, key, GCMParameterSpec(TAG_BITS, nonce))
+            cipher.init(Cipher.ENCRYPT_MODE, SecretKeySpec(keyBytes, "AES"), GCMParameterSpec(TAG_BITS, nonce))
+            keyBytes.fill(0)
             cipher.updateAAD(header)
             val encrypted = cipher.doFinal(zipBytes)
             (header + encrypted).also {
                 require(it.size <= MAX_CONTAINER_BYTES) { "Encrypted backup exceeds container limit" }
             }
         } finally {
-            key.encoded?.fill(0)
+            keyBytes.fill(0)
         }
     }
 
@@ -109,16 +110,17 @@ object EncryptedBackup {
         require(iterations in MIN_KDF_ITERATIONS..MAX_KDF_ITERATIONS) { "Unsafe KDF parameters" }
         val salt = ByteArray(SALT_BYTES).also(input::get)
         val nonce = ByteArray(NONCE_BYTES).also(input::get)
-        val key = deriveKey(password, salt, iterations)
+        val keyBytes = deriveKey(password, salt, iterations)
         val plaintext = try {
             val cipher = Cipher.getInstance("AES/GCM/NoPadding")
-            cipher.init(Cipher.DECRYPT_MODE, key, GCMParameterSpec(TAG_BITS, nonce))
+            cipher.init(Cipher.DECRYPT_MODE, SecretKeySpec(keyBytes, "AES"), GCMParameterSpec(TAG_BITS, nonce))
+            keyBytes.fill(0)
             cipher.updateAAD(header)
             cipher.doFinal(container.copyOfRange(headerSize, container.size))
         } catch (_: AEADBadTagException) {
             throw SecurityException("Backup authentication failed: wrong password or modified archive")
         } finally {
-            key.encoded?.fill(0)
+            keyBytes.fill(0)
         }
         require(plaintext.size <= MAX_TOTAL_PLAINTEXT) { "Backup plaintext exceeds size limit" }
         return readAndVerifyZip(plaintext)
@@ -188,11 +190,10 @@ object EncryptedBackup {
         require(!normalized.contains(':') && normalized.none { it.code < 0x20 }) { "Unsafe backup path: $path" }
     }
 
-    private fun deriveKey(password: CharArray, salt: ByteArray, iterations: Int): SecretKeySpec {
+    private fun deriveKey(password: CharArray, salt: ByteArray, iterations: Int): ByteArray {
         val spec = PBEKeySpec(password, salt, iterations, 256)
         return try {
-            SecretKeySpec(SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
-                .generateSecret(spec).encoded, "AES")
+            SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(spec).encoded
         } finally {
             spec.clearPassword()
         }
