@@ -9,7 +9,7 @@ def validate_zip(data):
         names=set()
         total=0
         for item in archive.infolist():
-            name=item.filename.replace("\\\\","/")
+            name=item.filename.replace(chr(92), "/")
             parts=name.split("/")
             if name.startswith("/") or any(p in ("", ".", "..") for p in parts):
                 raise ValueError("unsafe-path")
@@ -30,7 +30,7 @@ def unicode_contracts():
         "ሰላም — synthetic Ethiopic fixture 123",
         "ቤተ ክርስቲያን፣ ፡።፤፥",
         "Maale / Amharic / English የተቀላቀለ",
-        "e\\u0301 and é",
+        "e\u0301 and é",
         "ሀለሐመሠረሰሸቀበተ",
     ]
     checks=[]
@@ -41,9 +41,8 @@ def unicode_contracts():
         assert unicodedata.normalize("NFC",key)==key, "search key is not NFC"
         assert key.encode("utf-8").decode("utf-8")==key
         checks.append({"source_preserved":True,"nfc_idempotent":True,"codepoints":len(source)})
-    decomposed="e\\u0301"
+    decomposed="e\u0301"
     assert unicodedata.normalize("NFC",decomposed)=="é"
-    # Punctuation and Ethiopic word-space marks are preserved in display text.
     assert "፡" in fixtures[1] and "።" in fixtures[1]
     return {"synthetic_fixtures":len(fixtures),"checks":checks,
             "normalization":"NFC idempotence only; no Maale linguistic correctness claim",
@@ -54,7 +53,7 @@ def main():
     assert len(screens)==42 and len({x["route"] for x in screens})==42
     assert [x["screenId"] for x in screens]==[f"SCR-{i:03d}" for i in range(1,43)]
     req=(ROOT/"docs/archive/superseded-plans/A4_REQUIREMENTS_AND_ACCEPTANCE_MATRIX.md").read_text()
-    ids=sorted(set(re.findall(r"\\|\\s*((?:NFR|LIB|READ|ANNO|SEARCH|REF|STUDY|PLAN|MAP|EXPORT|SET|A11Y|DEFER)-\\d+)\\s*\\|",req)))
+    ids=sorted(set(re.findall(r"\|\s*((?:NFR|LIB|READ|ANNO|SEARCH|REF|STUDY|PLAN|MAP|EXPORT|SET|A11Y|DEFER)-\d+)\s*\|",req)))
     assert ids, "requirement IDs not parsed"
     assert all(x["testId"] and len(x["states"])==6 for x in screens)
     with (ROOT/"docs/verification/P2_V1_REQUIREMENT_TEST_TRACEABILITY_REGISTER.csv").open(encoding="utf-8",newline="") as fh:
@@ -129,7 +128,7 @@ def main():
         "content_boundary":{"status":"PASS — repository path/extension scan; no protected payload paths found","intake_flag":"false","scope":"static path/extension audit; does not authorize or inspect external source content"},
     }
     out=ROOT/"verification/p2/host-verification-results.json"
-    out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\\n",encoding="utf-8")
+    out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps(result,indent=2,ensure_ascii=False))
 
 if __name__=="__main__": main()
