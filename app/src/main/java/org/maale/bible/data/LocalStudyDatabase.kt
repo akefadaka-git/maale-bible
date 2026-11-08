@@ -305,6 +305,10 @@ class LocalStudyDatabase private constructor(
                         statement.reset()
                     }
                 }
+                // Freeze insertion only after the canonical registry has been seeded.
+                // The registry is immutable as a set, not merely immutable per existing row.
+                db.execute("CREATE TRIGGER canon_registry_no_insert BEFORE INSERT ON canon_registry BEGIN SELECT RAISE(ABORT,'canon registry is frozen'); END")
+                db.execute("CREATE TRIGGER canonical_book_no_insert BEFORE INSERT ON canonical_book BEGIN SELECT RAISE(ABORT,'canonical book registry is frozen'); END")
                 db.execute("PRAGMA user_version = 3")
                 db.execute("COMMIT")
             } catch (t: Throwable) {
