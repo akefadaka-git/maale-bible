@@ -114,7 +114,7 @@ def main():
         if p.suffix.lower() in forbidden: found.append(str(rel))
         if any(part.lower() in forbidden_dirs for part in rel.parts): found.append(str(rel))
     readme=(ROOT/"README.md").read_text(encoding="utf-8")
-    assert "content_intake_authorized=false" in readme, "content intake guard missing from README"
+    assert "Owner authorized multilingual content-intake work" in readme, "Owner content-intake authorization record missing from README"
     assert not found, "protected-content paths/extensions found: "+", ".join(sorted(set(found)))
 
     result={
@@ -125,7 +125,7 @@ def main():
         "backup_archive_host_checks":"PASS — path traversal and duplicate path rejected; cryptographic verification is Android instrumentation",
         "host_fts_benchmark":host,
         "android_fts_benchmark":"PENDING — P2V7 Android instrumentation required",
-        "content_boundary":{"status":"PASS — repository path/extension scan; no protected payload paths found","intake_flag":"false","scope":"static path/extension audit; does not authorize or inspect external source content"},
+        "content_boundary":{"status":"PASS — repository path/extension scan; no protected payload paths found","intake_flag":"authorized — source-specific provenance, rights, attribution, integrity and quality gates remain mandatory","scope":"static path/extension audit; does not authorize or inspect external source content"},
     }
     out=ROOT/"verification/p2/host-verification-results.json"
     out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
