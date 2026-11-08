@@ -156,6 +156,33 @@ class P2V2LocalStudyPersistenceTest {
         }
     }
 
+    @Test fun reviewedExactMappingRequiresOneSourceAndOneTarget() {
+        val file = tempDb("p3-mapping-cardinality.db")
+        LocalStudyDatabase.openFile(file).close()
+        val db = BundledSQLiteDriver().open(file.absolutePath)
+        try {
+            db.execute("PRAGMA foreign_keys = ON")
+            db.execute("INSERT INTO edition(edition_id,language_tag,title,versification_profile) VALUES('syn','en','Synthetic','test-v1')")
+            db.execute("INSERT INTO edition_passage(edition_passage_id,edition_id,source_book_id,source_chapter,source_verse,source_file,source_file_sha256,source_marker,parser_version) VALUES('src-1','syn','GEN','1','1','GEN.usfm','0000000000000000000000000000000000000000000000000000000000000000','','test-parser')")
+            db.execute("INSERT INTO passage_mapping(mapping_id,mapping_status,provenance,review_status,mapping_version) VALUES('map-1','EXACT','synthetic-test','UNREVIEWED','v1')")
+            db.execute("INSERT INTO passage_mapping_source(mapping_id,edition_passage_id,source_order) VALUES('map-1','src-1',1)")
+            try {
+                db.execute("UPDATE passage_mapping SET review_status='REVIEWED' WHERE mapping_id='map-1'")
+                fail("EXACT mapping without a target must not be reviewable")
+            } catch (_: Exception) { }
+            db.execute("INSERT INTO canonical_passage(canon_id,book_id,chapter_number,verse_number,segment,canonical_key) VALUES('maale-bible:canon:66-v1','GEN',1,1,'','maale-bible:canon:66-v1/GEN/1/1')")
+            db.execute("INSERT INTO passage_mapping_target(mapping_id,canon_id,book_id,chapter_number,verse_number,segment,target_order) VALUES('map-1','maale-bible:canon:66-v1','GEN',1,1,'',1)")
+            db.execute("UPDATE passage_mapping SET review_status='REVIEWED' WHERE mapping_id='map-1'")
+            try {
+                db.execute("DELETE FROM passage_mapping_target WHERE mapping_id='map-1'")
+                fail("reviewed mapping targets must be immutable")
+            } catch (_: Exception) { }
+        } finally {
+            db.close()
+            file.delete()
+        }
+    }
+
     @Test fun canonicalKeyRejectsUnknownBooksAndInvalidCoordinates() {
         val file = tempDb("p3-canon-key-validation.db")
         LocalStudyDatabase.openFile(file).use { db ->
