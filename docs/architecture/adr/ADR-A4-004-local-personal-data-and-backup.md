@@ -1,9 +1,12 @@
 # ADR-A4-004 — Local Personal Data and Backup/Restore
 
-- **Status:** Proposed for P2 acceptance
-- **Context:** This release has no accounts or cloud sync; user-created records must remain local and be recoverable through user-controlled backup.
-- **Decision:** Store personal records in Room/app-private storage. Provide an explicitly user-initiated, versioned backup with manifest and per-entry integrity; validate restore in staging before merge/replace.
-- **Consequences:** Backup excludes licensed scripture payloads by default and stores stable references. Missing references are reported. Merge is the default; replace requires explicit confirmation.
-- **Rejected:** Automatic cloud backup; silent overwrite; bundling licensed corpus content in personal backups.
-- **Security recommendation:** Encrypt backup archives using Android Keystore-backed key management, subject to recovery/usability validation. Whole-database encryption/app lock remains an open decision.
-- **Verification:** Round-trip, corruption, incompatible version, interrupted restore, conflict and missing-reference tests.
+- **Status:** Accepted for the current offline release under Owner direction on 2026-11-08.
+- **Context:** This release has no accounts or cloud sync; user-created records must remain local and recoverable through user-controlled backup.
+- **Persistence decision:** Use **AndroidX SQLite with the bundled SQLite driver directly** for the current release. The earlier Room preference is superseded by this explicit decision. Keep SQL access behind repository/data-source boundaries; use prepared statements, explicit schema versions, transactional migrations, foreign keys and deterministic constraints. Do not mix Room and direct SQLite in the same database.
+- **Rationale:** The current schema is intentionally small and requires explicit FTS5 behavior through the bundled driver. Direct SQL keeps FTS5, schema constraints and migration behavior explicit and testable without introducing a second persistence abstraction during the verification baseline. This choice does not imply that direct SQLite is universally preferable to Room.
+- **Backup decision:** Maale Bible Backup v1 is a versioned ZIP payload with canonical JSON manifest, NDJSON record groups, attachment files and per-entry SHA-256. Encrypt the complete archive using AES-256-GCM. Derive a portable key from a user-supplied passphrase using PBKDF2-HMAC-SHA256 with per-backup random salt and versioned iteration parameters. A device-bound Keystore key alone must not be required to restore a backup on another device.
+- **Restore:** Stage and validate before preview; non-destructive merge is default. Replace requires a separate explicit confirmation. Reject duplicate paths, absolute paths, traversal, symlinks, excessive counts/sizes and manifest/hash mismatches.
+- **Content boundary:** Backup accepts only user-owned records and attachments. Licensed scripture text, source archives and reference payloads are excluded and must never be passed to the backup API by default.
+- **Rejected:** Automatic cloud backup; silent overwrite; device-only backup encryption; bundling licensed corpus content in personal backups.
+- **Local-data security:** Personal records remain app-private. Whole-database encryption remains out of scope for v1; logs and exports must not disclose private content.
+- **Verification:** Instrumented round-trip, wrong-password, tamper, format-version, corruption, truncation, path-validation, schema-compatibility, conflict and rollback tests; independent security review remains required before production acceptance.
