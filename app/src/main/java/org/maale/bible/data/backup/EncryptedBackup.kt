@@ -97,7 +97,7 @@ object EncryptedBackup {
     }
 
     fun restore(container: ByteArray, password: CharArray): Map<String, ByteArray> {
-        require(container.size in (4 + 1 + 4 + SALT_BYTES + NONCE_BYTES + 16)..MAX_CONTAINER_BYTES) {
+        require(container.size in (4 + 1 + 1 + 4 + SALT_BYTES + NONCE_BYTES + 16)..MAX_CONTAINER_BYTES) {
             "Invalid backup container size"
         }
         val headerSize = 4 + 1 + 1 + 4 + SALT_BYTES + NONCE_BYTES
