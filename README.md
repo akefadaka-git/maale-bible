@@ -14,9 +14,9 @@ A4 is not complete merely when screens are present. Features must work, persist 
 
 ## Accepted A2 source baseline and content controls
 
-A2 was closed by Owner acceptance on 2026-11-07 with the named Maale-language/Ethiopic-script specialist review explicitly deferred as an accepted residual risk. The exact 2008 MDYTWF / mdyeth source baseline passed archive, signature, file-hash, structural, encoding and independent second-pass checks. The source archive and all scripture text remain outside this public repository. Production content intake remains separately unauthorized.
+A2 was closed by Owner acceptance on 2026-11-07 with the named Maale-language/Ethiopic-script specialist review explicitly deferred as an accepted residual risk. The exact 2008 MDYTWF / mdyeth source baseline passed archive, signature, file-hash, structural, encoding and independent second-pass checks. The source archive and all scripture text remain outside this public repository. The Owner authorized multilingual content-intake work on 2026-11-08 for Maale, Amharic, English and other necessary resources, subject to source-specific rights and quality gates.
 
-The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-package acquisition and content intake remain separately unauthorized.
+The Owner supplied written rights-holder clarification stating that the 2008 Maale Full Bible (MDYTWF / mdyeth) is licensed under CC BY-SA 4.0 and is distinct from the 2007 MDYBSE New Testament. The substantive edition/licence reconciliation is recorded as PASS — DOCUMENTARY. Source-specific processing is governed by the Owner authorization record and the per-resource rights gate.
 
 ### A2 records and tooling
 
@@ -52,7 +52,7 @@ Requires Python 3.10+:
 
 ## Content restrictions
 
-Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, maps, commentaries, dictionaries or other source-content assets until the Owner separately authorizes the exact source-package acquisition and intake. Keep `content_intake_authorized=false`.
+The Owner has authorized content-intake work for Maale, Amharic, English and other necessary Bible/study sources. Every source must independently pass provenance, rights/permission, attribution, integrity and quality review. Do not commit raw scripture or protected assets to this public repository unless the exact licence permits public redistribution and the repository distribution model is approved. Current governance record: `docs/governance/OWNER_CONTENT_INTAKE_AUTHORIZATION_2026-11-08.md`.
 
 All additional Bible editions, reference works, maps, images, audio, fonts and derived datasets require their own source, licence, attribution, integrity and quality review. A4 scope authorization does not waive these gates.
 
