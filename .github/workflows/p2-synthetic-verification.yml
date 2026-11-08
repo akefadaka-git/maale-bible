@@ -1,5 +1,6 @@
 name: P2 synthetic verification
 # Final consolidated verification candidate: exact branch HEAD is the test subject.
+# Do not push further changes until this matrix completes.
 on:
   pull_request:
     paths: ['app/**','verification/p2/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
