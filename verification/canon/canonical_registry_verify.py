@@ -52,6 +52,12 @@ def main():
         "CREATE TRIGGER canon_registry_no_delete",
         "CREATE TRIGGER canon_registry_no_insert",
         "CREATE TRIGGER canonical_book_no_insert",
+        "CREATE TRIGGER passage_mapping_validate_cardinality",
+        "EXACT mapping requires one source and one target",
+        "SPLIT mapping requires one source and multiple targets",
+        "MERGED mapping requires multiple sources and one target",
+        "PARTIAL mapping requires at least one source and target",
+        "UNMAPPED mapping requires source provenance and no target",
         "PRAGMA user_version = 3",
     ]
     missing = [item for item in required_sql_contracts if item not in database]
