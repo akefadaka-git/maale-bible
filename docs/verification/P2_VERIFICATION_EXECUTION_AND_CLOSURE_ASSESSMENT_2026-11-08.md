@@ -79,3 +79,8 @@ The validator checks exact ID-set equality, uniqueness, active/deferred counts, 
 - No claims of production readiness are made.
 
 **Immediate next action:** retrieve final results for API 30, 33, 35 and 36 from the two emulator runs, then close the P2-V3 evidence gap before advancing to the real persistence tests for P2-V2.
+
+
+## Superseding execution update — 2026-11-08
+
+This assessment predates the completed persistence implementation and the subsequent backup, Unicode, navigation, performance and content-boundary test additions. Its statements that the persistence implementation does not exist and that the Room/direct-SQLite qualification remains unresolved are historical and superseded. The current architecture decision is recorded in ADR-A4-004 and the current gate-by-gate disposition, exact code baseline, CI cancellation evidence and remaining blockers are recorded in [P2 Closure Readiness Record](P2_CLOSURE_READINESS_RECORD_2026-11-08.md). P2 remains PARTIAL — NOT VERIFIED-CLOSED.
