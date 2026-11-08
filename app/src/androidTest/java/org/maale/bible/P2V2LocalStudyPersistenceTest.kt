@@ -27,7 +27,7 @@ class P2V2LocalStudyPersistenceTest {
     @Test fun freshDatabaseCreatesCurrentSchemaAndPersistsSyntheticRecords() {
         val file = tempDb("p2-v2-fresh.db")
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(2L, db.userVersion())
+            assertEquals(3L, db.userVersion())
             db.insertCanonical("GEN.1.1", "GEN", 1, 1, 1)
             db.insertEdition("synthetic-en", "en", "Synthetic English")
             db.mapEditionPassage("synthetic-en", "GEN 1:1", "GEN.1.1", "EXACT")
@@ -52,7 +52,7 @@ class P2V2LocalStudyPersistenceTest {
         legacy.close()
 
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(2L, db.userVersion())
+            assertEquals(3L, db.userVersion())
             assertEquals(1L, db.mappingCount())
             db.addNote("migrated-note", "PS.1.1", "Added after migration", 200L)
             assertEquals(1L, db.noteCount())
@@ -103,6 +103,46 @@ class P2V2LocalStudyPersistenceTest {
             db.deleteCanonical("MAT.1.1")
             assertEquals(0L, db.mappingCount())
             assertEquals(0L, db.noteCount())
+        }
+        file.delete()
+    }
+
+    @Test fun frozenCanonicalRegistrySeedsExactlySixtySixOrderedBooks() {
+        val file = tempDb("p3-canon-registry.db")
+        LocalStudyDatabase.openFile(file).use { db ->
+            assertEquals(3L, db.userVersion())
+            assertEquals(1L, db.canonRegistryCount())
+            assertEquals(66L, db.canonicalBookCount())
+            assertTrue(db.canonicalBookExists("gen"))
+            assertTrue(db.canonicalBookExists("REV"))
+            assertFalse(db.canonicalBookExists("TOB"))
+            assertEquals(
+                "maale-bible:canon:66-v1/GEN/1/1",
+                db.canonicalKey("gen", 1, 1)
+            )
+            assertEquals(
+                "maale-bible:canon:66-v1/GEN/1/1/a",
+                db.canonicalKey("GEN", 1, 1, "a")
+            )
+        }
+        file.delete()
+    }
+
+    @Test fun canonicalKeyRejectsUnknownBooksAndInvalidCoordinates() {
+        val file = tempDb("p3-canon-key-validation.db")
+        LocalStudyDatabase.openFile(file).use { db ->
+            try {
+                db.canonicalKey("TOB", 1, 1)
+                fail("book outside frozen 66-book registry must be rejected")
+            } catch (_: IllegalArgumentException) { }
+            try {
+                db.canonicalKey("GEN", 0, 1)
+                fail("chapter zero must be rejected")
+            } catch (_: IllegalArgumentException) { }
+            try {
+                db.canonicalKey("GEN", 1, 1, "bad/segment")
+                fail("segment containing slash must be rejected")
+            } catch (_: IllegalArgumentException) { }
         }
         file.delete()
     }
