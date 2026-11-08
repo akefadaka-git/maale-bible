@@ -35,16 +35,26 @@ Detailed record: [Rights and Edition Reconciliation](../../docs/source-verificat
 
 Do not infer that rights, canon scope, or licensing for this record apply to the 2008 Full Bible, or vice versa.
 
+## Owner authorization update — 2026-11-08
+
+The Owner has now explicitly authorized content intake work for Maale, Amharic (am), English (en), and other necessary Bible/study sources. See [Owner Content-Intake Authorization](../../docs/governance/OWNER_CONTENT_INTAKE_AUTHORIZATION_2026-11-08.md). This supersedes the prior blanket no-intake state. Authorization does not waive source-specific rights, provenance, attribution, integrity, quality or language-review checks.
+
+- **2008 Maale Full Bible MDYTWF / mdyeth:** Owner intake authorization applies; previously verified A2 archive evidence remains scoped to the exact archive already examined. Reconfirm identity/hash before processing. Attribution and CC BY-SA 4.0 controls remain mandatory.
+- **Amharic (am):** candidate discovery and rights review authorized; no edition is yet approved for integration until exact edition, publisher, licence and package evidence are recorded.
+- **English (en):** candidate discovery and rights review authorized; no edition is yet approved for integration until exact edition, publisher, licence and package evidence are recorded.
+- **Other study resources:** discovery and rights review authorized; each commentary, dictionary, map, atlas, cross-reference dataset, image, audio package, font or other asset requires its own evidence.
+
 ## Status vocabulary
 
 - LEAD: discovered but not verified.
 - UNDER_REVIEW: evidence collection in progress.
 - RIGHTS_BLOCKED: permission missing or conflicting.
 - RIGHTS_RECONCILED: exact edition and licence are documented; intake still requires separate Owner authorization.
-- APPROVED_FOR_INTAKE: explicit Owner approval for the exact source package and intake exists.
+- OWNER_INTAKE_AUTHORIZED: Owner has authorized intake work for the resource category; source-specific review is still required.
+- APPROVED_FOR_INTAKE: exact source package has passed the source-specific rights, provenance, integrity and quality gates and is cleared for integration.
 - REJECTED: source is not selected.
 
-**Current candidate status: RIGHTS_RECONCILED — DOCUMENTARY. NOT APPROVED_FOR_INTAKE.**
+**Current candidate status: RIGHTS_RECONCILED — DOCUMENTARY; Owner intake authorization now granted. Reconfirm exact package identity and complete source-specific quality gates before integration.**
 
 ## Required evidence before intake
 
@@ -52,7 +62,7 @@ Do not infer that rights, canon scope, or licensing for this record apply to the
 - Exact edition, language, revision and full-Bible scope recorded.
 - CC BY-SA 4.0 licence text/version and URL recorded.
 - Package-level licence applicability recorded.
-- Owner's separate authorization to acquire and inspect the exact package.
+- Owner content-intake authorization is recorded in the 2026-11-08 governance decision; verify that the exact package falls within its scope.
 - Approved expected book inventory/canon reference.
 - Provenance, archive hash, safe extraction report, per-file hashes and structural audit.
 - Independent Maale-language and Ethiopic-script specialist review.
