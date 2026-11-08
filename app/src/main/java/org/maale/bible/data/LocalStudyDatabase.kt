@@ -25,13 +25,13 @@ class LocalStudyDatabase private constructor(
         ).use {
             it.bindText(1, id); it.bindText(2, bookId); it.bindLong(3, chapter.toLong())
             it.bindLong(4, verseStart.toLong()); it.bindLong(5, verseEnd.toLong())
-            check(it.step())
+            it.step()
         }
     }
 
     fun insertEdition(id: String, languageTag: String, title: String) {
         connection.prepare("INSERT INTO editions(id, language_tag, title) VALUES(?,?,?)").use {
-            it.bindText(1, id); it.bindText(2, languageTag); it.bindText(3, title); check(it.step())
+            it.bindText(1, id); it.bindText(2, languageTag); it.bindText(3, title); it.step()
         }
     }
 
@@ -41,7 +41,7 @@ class LocalStudyDatabase private constructor(
             "INSERT INTO edition_passage_map(edition_id, edition_ref, canonical_id, mapping_status) VALUES(?,?,?,?)"
         ).use {
             it.bindText(1, editionId); it.bindText(2, editionRef); it.bindText(3, canonicalId)
-            it.bindText(4, status); check(it.step())
+            it.bindText(4, status); it.step()
         }
     }
 
@@ -49,7 +49,7 @@ class LocalStudyDatabase private constructor(
         require(id.isNotBlank() && body.isNotBlank() && createdAt >= 0)
         connection.prepare("INSERT INTO study_notes(id, canonical_id, body, created_at) VALUES(?,?,?,?)").use {
             it.bindText(1, id); it.bindText(2, canonicalId); it.bindText(3, body)
-            it.bindLong(4, createdAt); check(it.step())
+            it.bindLong(4, createdAt); it.step()
         }
     }
 
@@ -59,12 +59,12 @@ class LocalStudyDatabase private constructor(
 
     fun deleteCanonical(id: String) {
         connection.prepare("DELETE FROM canonical_passages WHERE id=?").use {
-            it.bindText(1, id); check(it.step())
+            it.bindText(1, id); it.step()
         }
     }
 
     private fun scalarLong(sql: String): Long =
-        connection.prepare(sql).use { check(it.step()); it.getLong(0) }
+        connection.prepare(sql).use { it.step(); it.getLong(0) }
 
     companion object {
         const val SCHEMA_VERSION = 2
@@ -79,7 +79,7 @@ class LocalStudyDatabase private constructor(
             file.parentFile?.mkdirs()
             val connection = BundledSQLiteDriver().open(file.absolutePath)
             connection.execSQL("PRAGMA foreign_keys = ON")
-            val version = connection.prepare("PRAGMA user_version").use { check(it.step()); it.getLong(0) }
+            val version = connection.prepare("PRAGMA user_version").use { it.step(); it.getLong(0) }
             when (version) {
                 0L -> {
                     createV1(connection)
