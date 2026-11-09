@@ -1,4 +1,5 @@
 package org.maale.bible.ui
+
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -6,7 +7,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+
 private enum class AppDestination(val label: String) { HOME("Home"), BOOKS("Books"), SEARCH("Search") }
+
 @Composable
 fun MaaleBibleApp() {
     var destination by remember { mutableStateOf(AppDestination.HOME) }
@@ -28,7 +31,7 @@ fun MaaleBibleApp() {
         } else when (destination) {
             AppDestination.HOME -> HomeScreen({ destination = AppDestination.BOOKS }, Modifier.padding(padding))
             AppDestination.BOOKS -> BooksScreen({ selectedBookId = it }, Modifier.padding(padding))
-            AppDestination.SEARCH -> SearchPlaceholderScreen(Modifier.padding(padding))
+            AppDestination.SEARCH -> SearchPlaceholderScreen({ selectedBookId = it }, Modifier.padding(padding))
         }
     }
 }
