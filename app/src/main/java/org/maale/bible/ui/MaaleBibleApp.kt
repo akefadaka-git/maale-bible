@@ -8,7 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 
-private enum class AppDestination(val label: String) { HOME("Home"), BOOKS("Books"), SEARCH("Search") }
+private enum class AppDestination(val label: String) {
+    HOME("Home"), BOOKS("Books"), SEARCH("Search"), LISTEN("Listen")
+}
 
 @Composable
 fun MaaleBibleApp() {
@@ -32,6 +34,7 @@ fun MaaleBibleApp() {
             AppDestination.HOME -> HomeScreen({ destination = AppDestination.BOOKS }, Modifier.padding(padding))
             AppDestination.BOOKS -> BooksScreen({ selectedBookId = it }, Modifier.padding(padding))
             AppDestination.SEARCH -> SearchPlaceholderScreen({ selectedBookId = it }, Modifier.padding(padding))
+            AppDestination.LISTEN -> AudioPlaceholderScreen(Modifier.padding(padding))
         }
     }
 }
