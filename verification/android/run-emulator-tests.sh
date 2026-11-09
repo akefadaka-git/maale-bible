@@ -4,7 +4,8 @@
 set -eu
 
 expected_api="${ANDROID_EXPECTED_API:?ANDROID_EXPECTED_API must be set}"
-log_file="app/build/ci-emulator-api-${expected_api}.log"
+log_prefix="app/build/ci-emulator-api-${expected_api}"
+log_file="${log_prefix}-attempt-1.log"
 mkdir -p "$(dirname "${log_file}")"
 
 diagnostics() {
@@ -79,6 +80,7 @@ if grep -Eiq 'No compatible devices connected|No connected devices|Failed to ins
    { grep -Eiq 'device offline|device unauthorized' "${log_file}" &&
      ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }; then
   echo "::warning::Detected an ADB/device infrastructure failure on API ${expected_api}; performing one bounded recovery and rerun."
+  log_file="${log_prefix}-attempt-2.log"
   adb kill-server 2>&1 || true
   sleep 2
   adb start-server 2>&1 || true
