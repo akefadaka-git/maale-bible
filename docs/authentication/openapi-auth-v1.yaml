@@ -1,0 +1,337 @@
+openapi: 3.1.0
+info:
+  title: Maale Bible Authentication API
+  version: 1.0.0
+  summary: Versioned contract for optional account registration and login.
+  description: |
+    Contract only. It does not imply that a backend, SMS provider, database,
+    hostname, or live authentication service exists.
+
+    Guest reading remains available without an account or network connection.
+    Login accepts either a username or an international mobile number plus
+    password. Registration OTP verifies mobile-number ownership only; OTP is
+    not part of ordinary login.
+servers:
+  - url: /
+    description: Relative API base; deployment hostname is not selected.
+tags:
+  - name: Registration
+  - name: Sessions
+paths:
+  /v1/auth/registration-challenges:
+    post:
+      tags: [Registration]
+      operationId: createRegistrationChallenge
+      summary: Start account registration and request a mobile verification code.
+      description: |
+        Creates a pending registration challenge and requests OTP delivery.
+        The server must not reveal whether a username or mobile number is
+        already registered. Responses must remain generic for duplicate
+        identifiers. The server stores only a password hash for the pending
+        registration, never plaintext password or OTP.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationStartRequest'
+      responses:
+        '202':
+          description: Request accepted; response does not confirm account existence.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegistrationChallenge'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+  /v1/auth/registration-challenges/{challengeId}/verify:
+    post:
+      tags: [Registration]
+      operationId: verifyRegistrationChallenge
+      summary: Verify the registration OTP and activate the account.
+      description: |
+        A successful verification consumes the challenge exactly once and
+        atomically creates/activates the account, enforcing unique normalized
+        username and E.164 mobile number at the database boundary. Successful
+        registration issues the first authenticated session. OTP is not
+        returned by any endpoint and is never logged.
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/ChallengeId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationVerifyRequest'
+      responses:
+        '201':
+          description: Account activated and session issued.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedSession'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '410':
+          description: Challenge expired, consumed, or no longer valid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+  /v1/auth/sessions:
+    post:
+      tags: [Sessions]
+      operationId: createSession
+      summary: Log in with either username or mobile number and password.
+      description: |
+        The identifier is parsed as an E.164 mobile number when it begins
+        with '+', otherwise as a normalized username. The server returns the
+        same generic invalid-credentials response for unknown identifiers and
+        incorrect passwords. OTP is not requested for ordinary login.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Credentials accepted; authenticated session issued.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedSession'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          description: Invalid identifier or password.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+  /v1/auth/sessions/refresh:
+    post:
+      tags: [Sessions]
+      operationId: refreshSession
+      summary: Rotate the refresh credential and issue a new access credential.
+      description: |
+        Refresh credentials are single-use and rotated on every successful
+        refresh. Reuse of an already-rotated credential revokes the associated
+        token family/session. The Android client must protect the refresh
+        credential with Android Keystore-backed encrypted storage.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+      responses:
+        '200':
+          description: Credential rotated; new session credentials returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+        '401':
+          description: Refresh credential invalid, expired, revoked, or reused.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+  /v1/auth/sessions/current:
+    delete:
+      tags: [Sessions]
+      operationId: revokeCurrentSession
+      summary: Revoke the current authenticated session.
+      security:
+        - accessToken: []
+      responses:
+        '204':
+          description: Current session revoked; response has no body.
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  securitySchemes:
+    accessToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT-or-opaque
+  parameters:
+    ChallengeId:
+      name: challengeId
+      in: path
+      required: true
+      schema:
+        type: string
+        minLength: 16
+        maxLength: 128
+      description: Opaque, non-guessable registration challenge identifier.
+  schemas:
+    RegistrationStartRequest:
+      type: object
+      additionalProperties: false
+      required: [username, mobile_number, password]
+      properties:
+        username:
+          type: string
+          minLength: 3
+          maxLength: 30
+          pattern: '^[A-Za-z][A-Za-z0-9._-]{2,29}$'
+          description: Normalized by Unicode NFKC and locale-independent case folding.
+        mobile_number:
+          type: string
+          pattern: '^\\+[1-9][0-9]{7,14}$'
+          description: International E.164 number; client must not infer country code.
+        password:
+          type: string
+          minLength: 1
+          maxLength: 1024
+          format: password
+          description: Transmitted only over TLS; backend applies its published password policy and stores an adaptive hash.
+    RegistrationChallenge:
+      type: object
+      additionalProperties: false
+      required: [challenge_id, status, masked_destination, expires_at, resend_after]
+      properties:
+        challenge_id:
+          type: string
+          minLength: 16
+          maxLength: 128
+        status:
+          type: string
+          const: pending
+        masked_destination:
+          type: string
+          description: Masked destination suitable for user confirmation; never the full number.
+        expires_at:
+          type: string
+          format: date-time
+        resend_after:
+          type: string
+          format: date-time
+    RegistrationVerifyRequest:
+      type: object
+      additionalProperties: false
+      required: [code]
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 32
+          description: Single-use OTP. Exact code length and expiry are server policy, not client assumptions.
+    LoginRequest:
+      type: object
+      additionalProperties: false
+      required: [identifier, password]
+      properties:
+        identifier:
+          type: string
+          minLength: 3
+          maxLength: 30
+          description: Either a normalized username or an E.164 mobile number beginning with '+'.
+        password:
+          type: string
+          minLength: 1
+          maxLength: 1024
+          format: password
+    RefreshRequest:
+      type: object
+      additionalProperties: false
+      required: [refresh_token]
+      properties:
+        refresh_token:
+          type: string
+          minLength: 32
+          maxLength: 4096
+          writeOnly: true
+    Account:
+      type: object
+      additionalProperties: false
+      required: [id, username, mobile_verified]
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+          description: Immutable server-generated opaque account identifier; never a login input.
+        username:
+          type: string
+        mobile_verified:
+          type: boolean
+          const: true
+    TokenPair:
+      type: object
+      additionalProperties: false
+      required: [token_type, access_token, expires_in, refresh_token]
+      properties:
+        token_type:
+          type: string
+          const: Bearer
+        access_token:
+          type: string
+          minLength: 1
+        expires_in:
+          type: integer
+          minimum: 1
+          description: Access-token lifetime in seconds.
+        refresh_token:
+          type: string
+          minLength: 32
+          maxLength: 4096
+          writeOnly: true
+    AuthenticatedSession:
+      allOf:
+        - $ref: '#/components/schemas/TokenPair'
+        - type: object
+          required: [account]
+          properties:
+            account:
+              $ref: '#/components/schemas/Account'
+    Error:
+      type: object
+      additionalProperties: false
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+          description: Generic, non-enumerating user-facing error message.
+        request_id:
+          type: string
+          description: Opaque correlation identifier; must not contain personal data.
+    BadRequest:
+      description: Request shape or identifier format is invalid.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Missing, invalid, expired, or revoked access credential.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    RateLimited:
+      description: Request rate limit exceeded. Include Retry-After where applicable.
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Seconds until retry is permitted.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
