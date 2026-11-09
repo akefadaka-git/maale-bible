@@ -3,10 +3,10 @@ name: P2 synthetic verification
 # Do not push further changes until this matrix completes.
 on:
   pull_request:
-    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','content/manifests/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
   push:
     branches: [feat/a4-offline-study-suite]
-    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','content/manifests/**','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','.github/workflows/p2-synthetic-verification.yml']
   workflow_dispatch:
 permissions:
   contents: read
