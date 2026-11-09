@@ -288,7 +288,7 @@ object StrictUsfmParser {
                     if (prior != null && (
                             startKey.first < prior.first ||
                             (startKey.first == prior.first &&
-                                (prior.second.isEmpty() || startKey.second <= prior.second))
+                                startKey.second <= prior.second)
                         )
                     ) {
                         throw StrictUsfmParseException("Verse markers are duplicated, overlapping or out of order")
