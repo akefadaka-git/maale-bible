@@ -61,8 +61,8 @@ fi
 echo "Emulator ready: API ${expected_api}; boot_completed=1."
 adb shell getprop ro.build.version.sdk
 adb shell pm path android >/dev/null
-if ./gradlew --no-daemon :app:connectedDebugAndroidTest; then
-  echo "Instrumentation tests passed on API ${expected_api}."
+if ./gradlew --no-daemon :app:testDebugUnitTest :app:connectedDebugAndroidTest; then
+  echo "Unit and instrumentation tests passed on API ${expected_api}."
 else
   test_rc=$?
   echo "::error::Instrumentation tests failed on API ${expected_api}; collecting diagnostics."
