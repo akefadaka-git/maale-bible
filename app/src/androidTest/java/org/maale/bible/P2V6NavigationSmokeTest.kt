@@ -4,26 +4,31 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.performClick
 import org.junit.Rule
 import org.junit.Test
-import org.maale.bible.MainActivity
 
 class P2V6NavigationSmokeTest {
     @get:Rule
     val composeRule = createAndroidComposeRule<MainActivity>()
 
-    @Test fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
+    @Test
+    fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
-        composeRule.onNodeWithText("Browse 66 books").performClick()
+
+        // Match the current HomeScreen CTA rather than the retired "Browse 66 books" label.
+        composeRule.onNodeWithText("Explore the Bible").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
+
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
         composeRule.onNodeWithText("Genesis").assertIsDisplayed()
-        composeRule.onNodeWithText("Back to books").performClick()
+
+        // ReaderPlaceholderScreen currently exposes its back action as the arrow icon.
+        composeRule.onNodeWithText("←").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
-        composeRule.onAllNodesWithText("Search")[0].performClick()
-        composeRule.onNodeWithText("Offline search becomes available when the separately approved local scripture dataset is integrated.")
-            .assertIsDisplayed()
+
+        // The current Search destination presents the catalogue-search capability state.
+        composeRule.onNodeWithText("Search").performClick()
+        composeRule.onNodeWithText("Search with purpose.").assertIsDisplayed()
     }
 }
