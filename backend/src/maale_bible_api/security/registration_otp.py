@@ -42,4 +42,13 @@ def verify_registration_otp(
         candidate = digest_registration_otp(secret, challenge_id, destination_e164, code)
     except (ValueError, UnicodeEncodeError, AttributeError):
         return False
-    return hmac.compare_digest(candidate, expected_digest)
+    if (
+        not isinstance(expected_digest, str)
+        or len(expected_digest) != 64
+        or any(character not in "0123456789abcdef" for character in expected_digest)
+    ):
+        return False
+    try:
+        return hmac.compare_digest(candidate, expected_digest)
+    except (TypeError, UnicodeEncodeError):
+        return False
