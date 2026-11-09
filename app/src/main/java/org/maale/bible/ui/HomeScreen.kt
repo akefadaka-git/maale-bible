@@ -27,12 +27,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.background
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.maale.bible.ui.theme.MaaleBibleColors
@@ -164,7 +161,6 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
                 .padding(top = 2.dp, end = 2.dp)
                 .size(116.dp)
                 .border(1.dp, MaaleBibleColors.RoyalGold.copy(alpha = 0.42f), CircleShape)
-                .semantics { contentDescription = "Decorative Living Word orbital motif" }
         )
         Box(
             modifier = Modifier
