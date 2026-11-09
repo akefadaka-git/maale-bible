@@ -36,10 +36,16 @@ def make_challenge(session):
 
 
 def stored_challenge(session, challenge_id):
-    session.expire_all()
-    return session.scalar(
-        select(RegistrationChallenge).where(RegistrationChallenge.id == challenge_id)
-    )
+    with session.begin():
+        record = session.scalar(
+            select(RegistrationChallenge).where(RegistrationChallenge.id == challenge_id)
+        )
+        if record is None:
+            return None
+        return {
+            "consumed_at": record.consumed_at,
+            "attempts_remaining": record.attempts_remaining,
+        }
 
 
 def test_valid_code_consumes_challenge_exactly_once(db_session):
@@ -53,8 +59,8 @@ def test_valid_code_consumes_challenge_exactly_once(db_session):
         now=NOW + timedelta(seconds=1),
     )
     record = stored_challenge(db_session, created.challenge_id)
-    assert record.consumed_at.replace(tzinfo=timezone.utc) == NOW + timedelta(seconds=1)
-    assert record.attempts_remaining == 5
+    assert record["consumed_at"].replace(tzinfo=timezone.utc) == NOW + timedelta(seconds=1)
+    assert record["attempts_remaining"] == 5
 
     assert not verify_and_consume_registration_challenge(
         db_session,
@@ -76,8 +82,8 @@ def test_invalid_code_decrements_attempts_atomically(db_session):
         now=NOW + timedelta(seconds=1),
     )
     record = stored_challenge(db_session, created.challenge_id)
-    assert record.attempts_remaining == 4
-    assert record.consumed_at is None
+    assert record["attempts_remaining"] == 4
+    assert record["consumed_at"] is None
 
 
 def test_fifth_invalid_attempt_exhausts_challenge(db_session):
@@ -93,8 +99,8 @@ def test_fifth_invalid_attempt_exhausts_challenge(db_session):
         )
 
     record = stored_challenge(db_session, created.challenge_id)
-    assert record.attempts_remaining == 0
-    assert record.consumed_at is None
+    assert record["attempts_remaining"] == 0
+    assert record["consumed_at"] is None
     assert not verify_and_consume_registration_challenge(
         db_session,
         challenge_id=created.challenge_id,
@@ -115,8 +121,8 @@ def test_expired_challenge_is_not_consumed_or_decremented(db_session):
         now=NOW + timedelta(minutes=5),
     )
     record = stored_challenge(db_session, created.challenge_id)
-    assert record.attempts_remaining == 5
-    assert record.consumed_at is None
+    assert record["attempts_remaining"] == 5
+    assert record["consumed_at"] is None
 
 
 def test_unknown_challenge_and_malformed_code_fail_closed(db_session):
@@ -129,7 +135,7 @@ def test_unknown_challenge_and_malformed_code_fail_closed(db_session):
         otp_hmac_key=OTP_KEY,
         now=NOW + timedelta(seconds=1),
     )
-    assert stored_challenge(db_session, created.challenge_id).attempts_remaining == 4
+    assert stored_challenge(db_session, created.challenge_id)["attempts_remaining"] == 4
 
 
 def test_weak_key_and_naive_timestamp_are_rejected(db_session):
