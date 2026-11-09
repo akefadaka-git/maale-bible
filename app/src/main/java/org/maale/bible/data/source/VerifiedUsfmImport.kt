@@ -285,7 +285,12 @@ object StrictUsfmParser {
                     val startKey = parsed.first to parsed.second
                     val endKey = (parsed.third ?: parsed.first) to (parsed.fourth ?: parsed.second)
                     val prior = previousVerseEnd
-                    if (prior != null && compareVerse(startKey, prior) <= 0) {
+                    if (prior != null && (
+                            startKey.first < prior.first ||
+                            (startKey.first == prior.first &&
+                                (prior.second.isEmpty() || startKey.second <= prior.second))
+                        )
+                    ) {
                         throw StrictUsfmParseException("Verse markers are duplicated, overlapping or out of order")
                     }
                     if (compareVerse(endKey, startKey) < 0) {
