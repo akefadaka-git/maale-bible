@@ -32,9 +32,10 @@ wait_for_ready() {
       actual_api="$(timeout 8s adb shell getprop ro.build.version.sdk 2>/dev/null | tr -d '\r' || true)"
       if [ "${boot_completed}" = "1" ] && [ "${actual_api}" = "${expected_api}" ]; then
         if [ -z "${boot_animation}" ] || [ "${boot_animation}" = "stopped" ]; then
-          echo "Emulator ready: API ${expected_api}; boot_completed=1."
-          timeout 15s adb shell pm path android >/dev/null
-          return 0
+          if timeout 15s adb shell pm path android >/dev/null 2>&1; then
+            echo "Emulator ready: API ${expected_api}; boot_completed=1; package manager responsive."
+            return 0
+          fi
         fi
       fi
     fi
