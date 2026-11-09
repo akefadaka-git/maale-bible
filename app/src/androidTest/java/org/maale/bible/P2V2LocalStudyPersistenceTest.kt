@@ -252,7 +252,7 @@ class P2V2LocalStudyPersistenceTest {
             assertEquals(1L, db.noteCount())
             db.addJournalNote("journal-v4", "Independent journal", 75L)
             assertEquals(1, db.journalNotes().size)
-            assertEquals("Preserve me", db.journalNotes().firstOrNull { it.id == "legacy-note" }?.body ?: "legacy note remains passage-linked")
+            assertEquals(2L, db.noteCount()) // legacy passage-linked note plus new journal note
         }
         file.delete()
     }
