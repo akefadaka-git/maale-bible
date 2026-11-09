@@ -378,13 +378,17 @@ object StrictUsfmParser {
                 if (payloadStart < source.length && source[payloadStart].isWhitespace()) payloadStart++
                 var nextMarker = payloadStart
                 while (nextMarker < source.length) {
-                    if (source[nextMarker] == '\\' && nextMarker + 1 < source.length) {
+                    if (source[nextMarker] == '\\') {
+                        if (nextMarker + 1 >= source.length) {
+                            throw StrictUsfmParseException("Trailing backslash in USFM payload")
+                        }
                         val ch = source[nextMarker + 1]
                         if (ch.isLetter() || ch == '+' || ch == '*') break
                         if (ch in listOf('\\', '|', '~', '/', '\'', '"')) {
                             nextMarker += 2
                             continue
                         }
+                        throw StrictUsfmParseException("Malformed marker escape at offset $nextMarker")
                     }
                     nextMarker++
                 }
