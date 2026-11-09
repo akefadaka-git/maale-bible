@@ -79,16 +79,26 @@ class LocalStudyDatabase private constructor(
         }
     }
 
-    fun updateJournalNote(id: String, body: String, updatedAt: Long) {
+    fun updateJournalNote(id: String, body: String, updatedAt: Long): Boolean {
         require(id.isNotBlank() && body.isNotBlank() && updatedAt >= 0)
-        connection.prepare(
-            "UPDATE study_notes SET body=?, updated_at=? WHERE id=? AND canonical_id IS NULL"
+        val exists = connection.prepare(
+            "SELECT count(*) FROM study_notes WHERE id=? AND canonical_id IS NULL"
         ).use {
-            it.bindText(1, body)
-            it.bindLong(2, updatedAt)
-            it.bindText(3, id)
+            it.bindText(1, id)
             it.step()
+            it.getLong(0) > 0L
         }
+        if (exists) {
+            connection.prepare(
+                "UPDATE study_notes SET body=?, updated_at=? WHERE id=? AND canonical_id IS NULL"
+            ).use {
+                it.bindText(1, body)
+                it.bindLong(2, updatedAt)
+                it.bindText(3, id)
+                it.step()
+            }
+        }
+        return exists
     }
 
     fun deleteJournalNote(id: String): Boolean {
