@@ -52,7 +52,7 @@ class P2V2LocalStudyPersistenceTest {
         legacy.close()
 
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(3L, db.userVersion())
+            assertEquals(4L, db.userVersion())
             assertEquals(1L, db.mappingCount())
             db.addNote("migrated-note", "PS.1.1", "Added after migration", 200L)
             assertEquals(1L, db.noteCount())
@@ -110,7 +110,7 @@ class P2V2LocalStudyPersistenceTest {
     @Test fun frozenCanonicalRegistrySeedsExactlySixtySixOrderedBooks() {
         val file = tempDb("p3-canon-registry.db")
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(3L, db.userVersion())
+            assertEquals(4L, db.userVersion())
             assertEquals(1L, db.canonRegistryCount())
             assertEquals(66L, db.canonicalBookCount())
             assertTrue(db.canonicalBookExists("gen"))
