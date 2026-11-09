@@ -69,8 +69,9 @@ run_instrumentation() {
 if run_instrumentation; then
   echo "Instrumentation tests passed on API ${expected_api}."
   exit 0
+else
+  test_rc=$?
 fi
-test_rc=$?
 
 # Retry only infrastructure/device-discovery failures. Never retry or hide a real
 # assertion, compilation, or application test failure.
@@ -84,8 +85,9 @@ if grep -Eiq 'No compatible devices connected|No connected devices|device offlin
   if run_instrumentation; then
     echo "Instrumentation tests passed after one infrastructure recovery on API ${expected_api}."
     exit 0
+  else
+    test_rc=$?
   fi
-  test_rc=$?
 fi
 
 echo "::error::Instrumentation tests failed on API ${expected_api}; no further retries will hide this result."
