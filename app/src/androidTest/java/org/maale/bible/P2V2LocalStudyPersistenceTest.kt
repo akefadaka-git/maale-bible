@@ -27,7 +27,7 @@ class P2V2LocalStudyPersistenceTest {
     @Test fun freshDatabaseCreatesCurrentSchemaAndPersistsSyntheticRecords() {
         val file = tempDb("p2-v2-fresh.db")
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(3L, db.userVersion())
+            assertEquals(4L, db.userVersion())
             db.insertCanonical("GEN.1.1", "GEN", 1, 1, 1)
             db.insertEdition("synthetic-en", "en", "Synthetic English")
             db.mapEditionPassage("synthetic-en", "GEN 1:1", "GEN.1.1", "EXACT")
@@ -52,7 +52,7 @@ class P2V2LocalStudyPersistenceTest {
         legacy.close()
 
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(3L, db.userVersion())
+            assertEquals(4L, db.userVersion())
             assertEquals(1L, db.mappingCount())
             db.addNote("migrated-note", "PS.1.1", "Added after migration", 200L)
             assertEquals(1L, db.noteCount())
@@ -110,7 +110,7 @@ class P2V2LocalStudyPersistenceTest {
     @Test fun frozenCanonicalRegistrySeedsExactlySixtySixOrderedBooks() {
         val file = tempDb("p3-canon-registry.db")
         LocalStudyDatabase.openFile(file).use { db ->
-            assertEquals(3L, db.userVersion())
+            assertEquals(4L, db.userVersion())
             assertEquals(1L, db.canonRegistryCount())
             assertEquals(66L, db.canonicalBookCount())
             assertTrue(db.canonicalBookExists("gen"))
@@ -212,4 +212,53 @@ class P2V2LocalStudyPersistenceTest {
         }
         file.delete()
     }
+
+    @Test fun journalNotesPersistUpdateAndDeleteWithoutPassageReferences() {
+        val file = tempDb("p4-journal-crud.db")
+        LocalStudyDatabase.openFile(file).use { db ->
+            assertEquals(4L, db.userVersion())
+            db.addJournalNote("journal-1", "My private reflection", 100L)
+            assertEquals(1, db.journalNotes().size)
+            assertNull(db.journalNotes().first().canonicalId)
+            assertEquals("My private reflection", db.journalNotes().first().body)
+        }
+        LocalStudyDatabase.openFile(file).use { db ->
+            assertEquals("My private reflection", db.journalNotes().single().body)
+            assertTrue(db.updateJournalNote("journal-1", "Updated reflection", 250L))
+            assertFalse(db.updateJournalNote("missing", "No note", 300L))
+            val updated = db.journalNotes().single()
+            assertEquals("Updated reflection", updated.body)
+            assertEquals(100L, updated.createdAt)
+            assertEquals(250L, updated.updatedAt)
+            assertTrue(db.deleteJournalNote("journal-1"))
+            assertFalse(db.deleteJournalNote("journal-1"))
+            assertTrue(db.journalNotes().isEmpty())
+        }
+        file.delete()
+    }
+
+    @Test fun v3MigrationPreservesPassageNotesAndAddsJournalSupport() {
+        val file = tempDb("p4-v3-migration.db")
+        val legacy = BundledSQLiteDriver().open(file.absolutePath)
+        legacy.execute("PRAGMA foreign_keys = ON")
+        legacy.execute("CREATE TABLE canonical_passages(id TEXT PRIMARY KEY NOT NULL, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse_start INTEGER NOT NULL, verse_end INTEGER NOT NULL)")
+        legacy.execute("CREATE TABLE study_notes(id TEXT PRIMARY KEY NOT NULL, canonical_id TEXT NOT NULL REFERENCES canonical_passages(id) ON DELETE CASCADE, body TEXT NOT NULL, created_at INTEGER NOT NULL)")
+        legacy.execute("INSERT INTO canonical_passages VALUES('GEN.1.1','GEN',1,1,1)")
+        legacy.execute("INSERT INTO study_notes VALUES('legacy-note','GEN.1.1','Preserve me',50)")
+        legacy.execute("PRAGMA user_version = 3")
+        legacy.close()
+
+        LocalStudyDatabase.openFile(file).use { db ->
+            assertEquals(4L, db.userVersion())
+            assertEquals(1L, db.noteCount())
+            db.addJournalNote("journal-v4", "Independent journal", 75L)
+            assertEquals(1, db.journalNotes().size)
+            assertEquals(2L, db.noteCount()) // legacy passage-linked note plus new journal note
+            assertFalse(db.updateJournalNote("legacy-note", "must not change", 90L))
+            assertFalse(db.deleteJournalNote("legacy-note"))
+            assertEquals(2L, db.noteCount())
+        }
+        file.delete()
+    }
+
 }

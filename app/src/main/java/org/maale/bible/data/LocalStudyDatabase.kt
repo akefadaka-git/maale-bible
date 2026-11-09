@@ -9,6 +9,14 @@ private fun SQLiteConnection.execute(sql: String) {
     prepare(sql).use { it.step() }
 }
 
+data class StudyNote(
+    val id: String,
+    val canonicalId: String?,
+    val body: String,
+    val createdAt: Long,
+    val updatedAt: Long,
+)
+
 /**
  * Offline study persistence boundary.
  *
@@ -51,10 +59,83 @@ class LocalStudyDatabase private constructor(
 
     fun addNote(id: String, canonicalId: String, body: String, createdAt: Long) {
         require(id.isNotBlank() && body.isNotBlank() && createdAt >= 0)
-        connection.prepare("INSERT INTO study_notes(id, canonical_id, body, created_at) VALUES(?,?,?,?)").use {
+        connection.prepare("INSERT INTO study_notes(id, canonical_id, body, created_at, updated_at) VALUES(?,?,?,?,?)").use {
             it.bindText(1, id); it.bindText(2, canonicalId); it.bindText(3, body)
-            it.bindLong(4, createdAt); it.step()
+            it.bindLong(4, createdAt); it.bindLong(5, createdAt); it.step()
         }
+    }
+
+    /** Creates a private journal note not attached to a scripture passage. */
+    fun addJournalNote(id: String, body: String, createdAt: Long) {
+        require(id.isNotBlank() && body.isNotBlank() && createdAt >= 0)
+        connection.prepare(
+            "INSERT INTO study_notes(id, canonical_id, body, created_at, updated_at) VALUES(?,NULL,?,?,?)"
+        ).use {
+            it.bindText(1, id)
+            it.bindText(2, body)
+            it.bindLong(3, createdAt)
+            it.bindLong(4, createdAt)
+            it.step()
+        }
+    }
+
+    fun updateJournalNote(id: String, body: String, updatedAt: Long): Boolean {
+        require(id.isNotBlank() && body.isNotBlank() && updatedAt >= 0)
+        val exists = connection.prepare(
+            "SELECT count(*) FROM study_notes WHERE id=? AND canonical_id IS NULL"
+        ).use {
+            it.bindText(1, id)
+            it.step()
+            it.getLong(0) > 0L
+        }
+        if (exists) {
+            connection.prepare(
+                "UPDATE study_notes SET body=?, updated_at=? WHERE id=? AND canonical_id IS NULL"
+            ).use {
+                it.bindText(1, body)
+                it.bindLong(2, updatedAt)
+                it.bindText(3, id)
+                it.step()
+            }
+        }
+        return exists
+    }
+
+    fun deleteJournalNote(id: String): Boolean {
+        require(id.isNotBlank())
+        val exists = connection.prepare(
+            "SELECT count(*) FROM study_notes WHERE id=? AND canonical_id IS NULL"
+        ).use {
+            it.bindText(1, id)
+            it.step()
+            it.getLong(0) > 0L
+        }
+        if (exists) {
+            connection.prepare("DELETE FROM study_notes WHERE id=? AND canonical_id IS NULL").use {
+                it.bindText(1, id)
+                it.step()
+            }
+        }
+        return exists
+    }
+
+    fun journalNotes(): List<StudyNote> {
+        val notes = mutableListOf<StudyNote>()
+        connection.prepare(
+            "SELECT id, body, created_at, updated_at FROM study_notes " +
+                "WHERE canonical_id IS NULL ORDER BY updated_at DESC, created_at DESC, id ASC"
+        ).use { statement ->
+            while (statement.step()) {
+                notes += StudyNote(
+                    id = statement.getText(0),
+                    canonicalId = null,
+                    body = statement.getText(1),
+                    createdAt = statement.getLong(2),
+                    updatedAt = statement.getLong(3),
+                )
+            }
+        }
+        return notes
     }
 
     fun noteCount(): Long = scalarLong("SELECT count(*) FROM study_notes")
@@ -95,7 +176,7 @@ class LocalStudyDatabase private constructor(
         connection.prepare(sql).use { it.step(); it.getLong(0) }
 
     companion object {
-        const val SCHEMA_VERSION = 3
+        const val SCHEMA_VERSION = 4
 
         fun open(context: Context, name: String = "maale-study.db"): LocalStudyDatabase {
             val file = context.getDatabasePath(name)
@@ -113,12 +194,18 @@ class LocalStudyDatabase private constructor(
                     createV1(connection)
                     migrateV1ToV2(connection)
                     migrateV2ToV3(connection)
+                    migrateV3ToV4(connection)
                 }
                 1L -> {
                     migrateV1ToV2(connection)
                     migrateV2ToV3(connection)
+                    migrateV3ToV4(connection)
                 }
-                2L -> migrateV2ToV3(connection)
+                2L -> {
+                    migrateV2ToV3(connection)
+                    migrateV3ToV4(connection)
+                }
+                3L -> migrateV3ToV4(connection)
                 SCHEMA_VERSION.toLong() -> Unit
                 else -> {
                     connection.close()
@@ -171,6 +258,34 @@ class LocalStudyDatabase private constructor(
                 )""")
                 db.execute("CREATE INDEX index_notes_canonical ON study_notes(canonical_id)")
                 db.execute("PRAGMA user_version = 2")
+                db.execute("COMMIT")
+            } catch (t: Throwable) {
+                db.execute("ROLLBACK")
+                throw t
+            }
+        }
+
+        /**
+         * v4 makes canonical_id nullable for independent journal notes and adds updated_at.
+         * Existing passage-linked notes retain identifiers, references, bodies and timestamps.
+         */
+        private fun migrateV3ToV4(db: SQLiteConnection) {
+            db.execute("BEGIN IMMEDIATE")
+            try {
+                db.execute("ALTER TABLE study_notes RENAME TO study_notes_v3")
+                db.execute("""CREATE TABLE study_notes(
+                    id TEXT PRIMARY KEY NOT NULL,
+                    canonical_id TEXT REFERENCES canonical_passages(id) ON DELETE CASCADE,
+                    body TEXT NOT NULL CHECK(length(body) > 0),
+                    created_at INTEGER NOT NULL CHECK(created_at >= 0),
+                    updated_at INTEGER NOT NULL CHECK(updated_at >= 0)
+                )""")
+                db.execute("""INSERT INTO study_notes(id,canonical_id,body,created_at,updated_at)
+                    SELECT id,canonical_id,body,created_at,created_at FROM study_notes_v3""")
+                db.execute("DROP TABLE study_notes_v3")
+                db.execute("CREATE INDEX index_notes_canonical ON study_notes(canonical_id)")
+                db.execute("CREATE INDEX index_notes_updated ON study_notes(updated_at DESC, created_at DESC)")
+                db.execute("PRAGMA user_version = 4")
                 db.execute("COMMIT")
             } catch (t: Throwable) {
                 db.execute("ROLLBACK")
