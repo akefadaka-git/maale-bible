@@ -15,19 +15,21 @@ class P2V6NavigationSmokeTest {
     @Test
     fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
-
-        // Match the current HomeScreen CTA rather than the retired "Browse 66 books" label.
         composeRule.onNodeWithText("Explore the Bible").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
 
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
-        composeRule.onNodeWithText("Genesis").assertIsDisplayed()
 
-        // ReaderPlaceholderScreen currently exposes its back action as the arrow icon.
+        // The reader intentionally displays "Genesis" in both its top bar and identity block.
+        // Assert the unique canonical identity instead of an ambiguous generic text selector.
+        composeRule.onNodeWithText("CANONICAL BOOK ID  •  GEN").assertIsDisplayed()
+        composeRule.onNodeWithText(
+            "The verified Maale scripture text is not available in this build yet."
+        ).assertIsDisplayed()
+
         composeRule.onNodeWithText("←").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
 
-        // The current Search destination presents the catalogue-search capability state.
         composeRule.onNodeWithText("Search").performClick()
         composeRule.onNodeWithText("Search with purpose.").assertIsDisplayed()
     }
