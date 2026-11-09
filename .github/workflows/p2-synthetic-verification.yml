@@ -72,14 +72,14 @@ jobs:
             while [ "${attempt}" -le 3 ]; do
               echo "Emulator readiness attempt ${attempt}/3 (API ${expected_api})"
               timeout 30s adb wait-for-device || true
-              poll=1
-              # 36 x 5-second polls = at most 180 seconds per attempt.
-              while [ "${poll}" -le 36 ]; do
-                state="$(timeout 8s adb get-state 2>/dev/null || true)"
+              deadline=$(( $(date +%s) + 180 ))
+              # A wall-clock deadline bounds each readiness attempt; individual ADB probes are bounded too.
+              while [ "$(date +%s)" -lt "${deadline}" ]; do
+                state="$(timeout 5s adb get-state 2>/dev/null || true)"
                 if [ "${state}" = "device" ]; then
-                  boot_completed="$(timeout 10s adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r' || true)"
-                  boot_animation="$(timeout 10s adb shell getprop init.svc.bootanim 2>/dev/null | tr -d '\r' || true)"
-                  actual_api="$(timeout 10s adb shell getprop ro.build.version.sdk 2>/dev/null | tr -d '\r' || true)"
+                  boot_completed="$(timeout 8s adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r' || true)"
+                  boot_animation="$(timeout 8s adb shell getprop init.svc.bootanim 2>/dev/null | tr -d '\r' || true)"
+                  actual_api="$(timeout 8s adb shell getprop ro.build.version.sdk 2>/dev/null | tr -d '\r' || true)"
                   if [ "${boot_completed}" = "1" ] && [ "${actual_api}" = "${expected_api}" ]; then
                     if [ -z "${boot_animation}" ] || [ "${boot_animation}" = "stopped" ]; then
                       ready=1
@@ -88,7 +88,6 @@ jobs:
                   fi
                 fi
                 sleep 5
-                poll=$((poll + 1))
               done
               if [ "${ready}" -eq 1 ]; then
                 break
