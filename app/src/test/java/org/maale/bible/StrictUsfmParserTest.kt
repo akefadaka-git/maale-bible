@@ -27,6 +27,8 @@ class StrictUsfmParserTest {
         assertEquals(2, parsed.chapters)
         assertEquals(5, parsed.verseMarkers)
         assertTrue(parsed.records.any { it.marker == "s1" && it.payload == "Heading retained\n" })
+        val inlineWord = parsed.records.first { it.marker == "w" }
+        assertEquals("1", inlineWord.verse?.sourceVerse)
         val refs = parsed.records.mapNotNull { it.verse }
         assertEquals(listOf("1", "1a", "1b", "2-3", "1"), refs.map { it.sourceVerse })
         assertEquals(1, refs[1].startVerse)
