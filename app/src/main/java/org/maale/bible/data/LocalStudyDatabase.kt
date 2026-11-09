@@ -59,7 +59,7 @@ class LocalStudyDatabase private constructor(
 
     fun addNote(id: String, canonicalId: String, body: String, createdAt: Long) {
         require(id.isNotBlank() && body.isNotBlank() && createdAt >= 0)
-        connection.prepare("INSERT INTO study_notes(id, canonical_id, body, created_at) VALUES(?,?,?,?)").use {
+        connection.prepare("INSERT INTO study_notes(id, canonical_id, body, created_at, updated_at) VALUES(?,?,?,?,?)").use {
             it.bindText(1, id); it.bindText(2, canonicalId); it.bindText(3, body)
             it.bindLong(4, createdAt); it.step()
         }
