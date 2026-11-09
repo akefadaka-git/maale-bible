@@ -1,6 +1,13 @@
 name: Authentication contract verification
 
 on:
+  push:
+    branches: [feat/auth-a3-registration-api-contract]
+    paths:
+      - 'app/src/main/java/org/maale/bible/domain/auth/**'
+      - 'app/src/test/java/org/maale/bible/auth/**'
+      - 'docs/authentication/**'
+      - '.github/workflows/auth-contract-verification.yml'
   pull_request:
     paths:
       - 'app/src/main/java/org/maale/bible/domain/auth/**'
