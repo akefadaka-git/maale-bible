@@ -140,7 +140,9 @@ object VerifiedUsfmArchive {
         if (path.isBlank() || path.startsWith("/") || path.startsWith("\\") ||
             path.contains('\\') || path.contains('\u0000') || path.contains(':')
         ) return false
-        val parts = path.split('/')
+        val normalized = if (path.endsWith("/")) path.dropLast(1) else path
+        if (normalized.isBlank()) return false
+        val parts = normalized.split('/')
         return parts.none { it.isBlank() || it == "." || it == ".." }
     }
 
@@ -222,13 +224,14 @@ object StrictUsfmParser {
             when (token.marker) {
                 "id" -> {
                     if (index != 0 || bookId != null) throw StrictUsfmParseException("Duplicate or misplaced \\id marker")
-                    val id = token.payload.trim().substringBefore(Regex("\\s"))
+                    val id = token.payload.trim().split(Regex("\\s+"), limit = 2).firstOrNull().orEmpty()
                     if (!id.matches(Regex("[A-Z0-9]{3}"))) throw StrictUsfmParseException("Malformed \\id book identifier")
                     if (id != expectedBookId) throw StrictUsfmParseException("Source book ID $id does not match expected $expectedBookId")
                     bookId = id
+                    records += UsfmRecord(token.marker, token.payload, null, null)
                 }
                 "c" -> {
-                    val raw = token.payload.trim().substringBefore(Regex("\\s"))
+                    val raw = token.payload.trim().split(Regex("\\s+"), limit = 2).firstOrNull().orEmpty()
                     val next = raw.toIntOrNull()
                         ?: throw StrictUsfmParseException("Malformed chapter number")
                     if (next != previousChapter + 1) {
@@ -240,11 +243,12 @@ object StrictUsfmParser {
                     chapter = next
                     previousChapter = next
                     previousVerseEnd = null
+                    records += UsfmRecord(token.marker, token.payload, next, null)
                 }
                 "v" -> {
                     val currentChapter = chapter
                         ?: throw StrictUsfmParseException("Verse marker encountered before first chapter")
-                    val raw = token.payload.trim().substringBefore(Regex("\\s"))
+                    val raw = token.payload.trim().split(Regex("\\s+"), limit = 2).firstOrNull().orEmpty()
                     val parsed = parseVerse(raw)
                     val startKey = parsed.first to parsed.second
                     val endKey = (parsed.third ?: parsed.first) to (parsed.fourth ?: parsed.second)
