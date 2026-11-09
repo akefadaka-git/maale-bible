@@ -2,6 +2,7 @@ package org.maale.bible.auth
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.maale.bible.domain.auth.LoginIdentifier
 import org.maale.bible.domain.auth.RegistrationIdentity
@@ -11,14 +12,14 @@ class LoginIdentifierTest {
     fun usernameIsTrimmedCaseFoldedAndUnicodeNormalized() {
         val identifier = LoginIdentifier.parse("  Ａkefa_01  ")
         assertEquals("akefa_01", identifier.canonicalValue)
-        assert(identifier is LoginIdentifier.Username)
+        assertTrue(identifier is LoginIdentifier.Username)
     }
 
     @Test
     fun mobileNumberAcceptsInternationalFormattingWithoutInferringCountry() {
         val identifier = LoginIdentifier.parse("+251 91-234-5678")
         assertEquals("+251912345678", identifier.canonicalValue)
-        assert(identifier is LoginIdentifier.MobileNumber)
+        assertTrue(identifier is LoginIdentifier.MobileNumber)
     }
 
     @Test
