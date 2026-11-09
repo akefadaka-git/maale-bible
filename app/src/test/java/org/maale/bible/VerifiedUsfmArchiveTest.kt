@@ -13,6 +13,18 @@ import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
 class VerifiedUsfmArchiveTest {
+
+    @Test fun approvedManifestIsMetadataOnlyAndHasExactCanonOrder() {
+        val manifest = org.maale.bible.data.source.Maale2008SourceManifest
+        assertEquals("MDYTWF / mdyeth", manifest.EDITION_ID)
+        assertEquals("CC BY-SA 4.0", manifest.LICENSE)
+        assertEquals(1_809_863L, manifest.expectation.archiveByteCount)
+        assertEquals(66, manifest.expectation.files.size)
+        assertEquals("GEN", manifest.expectation.files.first().bookId)
+        assertEquals("REV", manifest.expectation.files.last().bookId)
+        assertEquals((1..66).toList(), manifest.expectation.files.map { it.canonicalOrder })
+    }
+
     @Test fun verifiesArchiveAndAllSixtySixSyntheticFilesBeforeReturning() {
         val entries = syntheticFiles()
         val archive = zip(entries)
