@@ -33,7 +33,7 @@ wait_for_ready() {
       if [ "${boot_completed}" = "1" ] && [ "${actual_api}" = "${expected_api}" ]; then
         if [ -z "${boot_animation}" ] || [ "${boot_animation}" = "stopped" ]; then
           echo "Emulator ready: API ${expected_api}; boot_completed=1."
-          adb shell pm path android >/dev/null
+          timeout 15s adb shell pm path android >/dev/null
           return 0
         fi
       fi
