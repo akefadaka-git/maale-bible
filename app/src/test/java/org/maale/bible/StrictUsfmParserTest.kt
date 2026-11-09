@@ -9,18 +9,18 @@ import org.maale.bible.data.source.StrictUsfmParser
 
 class StrictUsfmParserTest {
     @Test fun preservesBookChapterVerseSegmentsRangesAndHeadings() {
-        val source = """\\id GEN Genesis
-\\h Genesis
-\\c 1
-\\s1 Heading retained
-\\p
-\\v 1 First verse \\w word\\w*
-\\v 1a Segment A
-\\v 1b Segment B
-\\v 2-3 Range
-\\c 2
-\\p
-\\v 1 Next chapter
+        val source = """\id GEN Genesis
+\h Genesis
+\c 1
+\s1 Heading retained
+\p
+\v 1 First verse \w word\w*
+\v 1a Segment A
+\v 1b Segment B
+\v 2-3 Range
+\c 2
+\p
+\v 1 Next chapter
 """
         val parsed = StrictUsfmParser.parse(source, "GEN")
         assertEquals("GEN", parsed.bookId)
