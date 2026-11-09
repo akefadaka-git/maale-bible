@@ -1,0 +1,526 @@
+{
+  "manifest_version": "1.0.0",
+  "manifest_type": "MAALE_2008_SOURCE_CANON_RECONCILIATION",
+  "status": "SOURCE_METADATA_RECONCILED",
+  "source": {
+    "edition_id": "MDYTWF / mdyeth",
+    "title": "2008 Maale Full Bible",
+    "language_code": "mdy",
+    "script": "Ethiopic",
+    "archive_filename": "mdyeth_usfm.zip",
+    "archive_url": "https://ebible.org/Scriptures/mdyeth_usfm.zip",
+    "archive_bytes": 1809863,
+    "archive_sha256": "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11",
+    "source_content_revision_date": "2025-05-13",
+    "copyright_holders": [
+      "The Word for the World International",
+      "The Bible Society of Ethiopia"
+    ],
+    "license": "CC BY-SA 4.0"
+  },
+  "canonical_identity": {
+    "canon_id": "maale-bible:canon:66-v1",
+    "registry_version": 1,
+    "book_count": 66,
+    "order_authority": "content/canon/66-v1/registry.json",
+    "source_order_semantics": "Archive member order and filename prefixes are not canonical. Source book IDs are joined to the frozen registry and emitted in registry order.",
+    "passage_key_format": "maale-bible:canon:66-v1/<BOOK>/<CHAPTER>/<VERSE>[/<SEGMENT>]",
+    "chapter_verse_semantics": "Preserve source-native USFM chapter/verse coordinates as edition references. This does not assert cross-edition versification equivalence or specialist semantic alignment."
+  },
+  "structural_validation": {
+    "usfm_file_count": 66,
+    "unique_book_ids": 66,
+    "missing_book_ids": [],
+    "unexpected_book_ids": [],
+    "duplicate_book_ids": [],
+    "filename_book_id_mismatches": [],
+    "chapter_count": 1189,
+    "chapter_sequences_contiguous_from_one": true,
+    "chapters_without_verse_markers": 0,
+    "verse_marker_lines": 30506,
+    "represented_verse_spans_including_ranges": 31102,
+    "verse_range_marker_instances": 238,
+    "verse_order_or_overlap_anomalies": 0,
+    "utf8_valid_files": 66,
+    "unicode_replacement_characters": 0,
+    "non_nfc_files": 0,
+    "unexpected_control_characters": 0,
+    "archive_member_order_is_canonical": false,
+    "source_order_note": "Canonical order is derived from the approved 66-book registry, not ZIP enumeration or filename prefixes."
+  },
+  "source_files": [
+    {
+      "canonical_order": 1,
+      "book_id": "GEN",
+      "path": "02-GENmdyeth.usfm",
+      "bytes": 347847,
+      "sha256": "cc9b7703d660bd39dfda8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392"
+    },
+    {
+      "canonical_order": 2,
+      "book_id": "EXO",
+      "path": "03-EXOmdyeth.usfm",
+      "bytes": 287970,
+      "sha256": "d395ce46dd48494916f455276ddad2832fcb378c7cc6af2044c35cb1f6eec475"
+    },
+    {
+      "canonical_order": 3,
+      "book_id": "LEV",
+      "path": "04-LEVmdyeth.usfm",
+      "bytes": 197221,
+      "sha256": "4736e4a52bb52dfceb6513a121598646c84d13b10bc3bcd1dc64651521612251"
+    },
+    {
+      "canonical_order": 4,
+      "book_id": "NUM",
+      "path": "05-NUMmdyeth.usfm",
+      "bytes": 260903,
+      "sha256": "dfdee1c6017888c5c81098cce66e22f69ab8d6c28ea4fa59fb13a95cf03e12d2"
+    },
+    {
+      "canonical_order": 5,
+      "book_id": "DEU",
+      "path": "06-DEUmdyeth.usfm",
+      "bytes": 260204,
+      "sha256": "3e9c2afc1de1582fbede42964704e4edee9bfa3b2e0b10cb51aad688378501c8"
+    },
+    {
+      "canonical_order": 6,
+      "book_id": "JOS",
+      "path": "07-JOSmdyeth.usfm",
+      "bytes": 160147,
+      "sha256": "ef9f95a9baa685e218c8dad32f023a8400a53e2c931b838e71110996f960f539"
+    },
+    {
+      "canonical_order": 7,
+      "book_id": "JDG",
+      "path": "08-JDGmdyeth.usfm",
+      "bytes": 160090,
+      "sha256": "5b3fd5a7d1f57b98afaacf3f85dc9132573ed78c1a557815343d9236b3e64f39"
+    },
+    {
+      "canonical_order": 8,
+      "book_id": "RUT",
+      "path": "09-RUTmdyeth.usfm",
+      "bytes": 23607,
+      "sha256": "e79ebb48ce7ebdd8cc294f822f81791e4ff5a4edd6e50bbbd08003a194f1fd01"
+    },
+    {
+      "canonical_order": 9,
+      "book_id": "1SA",
+      "path": "10-1SAmdyeth.usfm",
+      "bytes": 220652,
+      "sha256": "753356d5a0c7dc0754f21dbe3ef5aacde8caddc0de605c6096189409dd58b92c"
+    },
+    {
+      "canonical_order": 10,
+      "book_id": "2SA",
+      "path": "11-2SAmdyeth.usfm",
+      "bytes": 179463,
+      "sha256": "ad3f36ea17348030eb5544d2390d3f72d62f83e8737affba8efb07fd3e8f4c59"
+    },
+    {
+      "canonical_order": 11,
+      "book_id": "1KI",
+      "path": "12-1KImdyeth.usfm",
+      "bytes": 223811,
+      "sha256": "0c749f3fc6c9cc46c60f8fc1646c38f0fa3aa57621028efeb367c73d7d2407c3"
+    },
+    {
+      "canonical_order": 12,
+      "book_id": "2KI",
+      "path": "13-2KImdyeth.usfm",
+      "bytes": 217433,
+      "sha256": "8b0a58da0cf8465a893af0cb49f95e57bd6deac87c651793f5b3a8d4c27ed76c"
+    },
+    {
+      "canonical_order": 13,
+      "book_id": "1CH",
+      "path": "14-1CHmdyeth.usfm",
+      "bytes": 204378,
+      "sha256": "f1f4f010f87b51ca4c1cde87dec0c00cf043a91a2f4a52e3df32b222fcd7e074"
+    },
+    {
+      "canonical_order": 14,
+      "book_id": "2CH",
+      "path": "15-2CHmdyeth.usfm",
+      "bytes": 244443,
+      "sha256": "0fe0af6f964e97fcac280017e5851dc8ab22e1a8a10b4e593054c45b7fe58c3f"
+    },
+    {
+      "canonical_order": 15,
+      "book_id": "EZR",
+      "path": "16-EZRmdyeth.usfm",
+      "bytes": 70205,
+      "sha256": "3acac6b4795bf91684b595c78338485d92fefbc325ab4aaf664c824fc655d7bc"
+    },
+    {
+      "canonical_order": 16,
+      "book_id": "NEH",
+      "path": "17-NEHmdyeth.usfm",
+      "bytes": 104470,
+      "sha256": "19891a9886f0527a944da0aa30e1a92db4f8f3118ef72ba65294269926d22ace"
+    },
+    {
+      "canonical_order": 17,
+      "book_id": "EST",
+      "path": "18-ESTmdyeth.usfm",
+      "bytes": 55673,
+      "sha256": "8c7e2e10a84c80c7361eca246eb5769cfe368449103130bb109c61297e477b90"
+    },
+    {
+      "canonical_order": 18,
+      "book_id": "JOB",
+      "path": "19-JOBmdyeth.usfm",
+      "bytes": 177123,
+      "sha256": "bbf22fdee42ef324bd08091dd2cd1010cdf22a88440aa2bb85b597bc6b4d5f91"
+    },
+    {
+      "canonical_order": 19,
+      "book_id": "PSA",
+      "path": "20-PSAmdyeth.usfm",
+      "bytes": 444677,
+      "sha256": "12cedb54022e7339513ee0aecd3536e779d39982c7ab314398604f1106d0a0bc"
+    },
+    {
+      "canonical_order": 20,
+      "book_id": "PRO",
+      "path": "21-PROmdyeth.usfm",
+      "bytes": 145312,
+      "sha256": "edff444c94fdd2e90a39a22b3c8b0fe5ffdd3d8d346fde24664c1fe143751787"
+    },
+    {
+      "canonical_order": 21,
+      "book_id": "ECC",
+      "path": "22-ECCmdyeth.usfm",
+      "bytes": 49215,
+      "sha256": "7ae25f832628039112145202bb75bbd09a9334641f6a132bf8791cedfdb72c8a"
+    },
+    {
+      "canonical_order": 22,
+      "book_id": "SNG",
+      "path": "23-SNGmdyeth.usfm",
+      "bytes": 30005,
+      "sha256": "1673407a116f7814b0d65d448c644f3822d3432149143db3cdfefeda6cf1d3e9"
+    },
+    {
+      "canonical_order": 23,
+      "book_id": "ISA",
+      "path": "24-ISAmdyeth.usfm",
+      "bytes": 342247,
+      "sha256": "d536f5e38442487f3fb24d05b5d4574e65c32668bd6a0d9f7a829bd91213586b"
+    },
+    {
+      "canonical_order": 24,
+      "book_id": "JER",
+      "path": "25-JERmdyeth.usfm",
+      "bytes": 399179,
+      "sha256": "15eb68746f3051119fe277ad6df0eb92906b51e33376b9d3936c6b2ac78f84f4"
+    },
+    {
+      "canonical_order": 25,
+      "book_id": "LAM",
+      "path": "26-LAMmdyeth.usfm",
+      "bytes": 35137,
+      "sha256": "5f31f816c79c4dcbfb84afc8dd080516310077c1401e203eca162135adddd419"
+    },
+    {
+      "canonical_order": 26,
+      "book_id": "EZK",
+      "path": "27-EZKmdyeth.usfm",
+      "bytes": 350192,
+      "sha256": "77a49e9327ef31e67788b5c8ac5485b6f3a3606c6aac0cf90721b25f11b72f6c"
+    },
+    {
+      "canonical_order": 27,
+      "book_id": "DAN",
+      "path": "28-DANmdyeth.usfm",
+      "bytes": 108477,
+      "sha256": "050b88157266e57c2975e45db4dfc5ca56360840aab9bbf44caf81292c735072"
+    },
+    {
+      "canonical_order": 28,
+      "book_id": "HOS",
+      "path": "29-HOSmdyeth.usfm",
+      "bytes": 59588,
+      "sha256": "3f58eae651b38eb18a6e2175e8ccdf28df2f8fa229dd72173dfe79e2000116fc"
+    },
+    {
+      "canonical_order": 29,
+      "book_id": "JOL",
+      "path": "30-JOLmdyeth.usfm",
+      "bytes": 22282,
+      "sha256": "5fa951810a5cf9e5e44c44cd72bea837fbf8c0e94c75153a70b0c44ffe9fb425"
+    },
+    {
+      "canonical_order": 30,
+      "book_id": "AMO",
+      "path": "31-AMOmdyeth.usfm",
+      "bytes": 45474,
+      "sha256": "5b15eeec99046c3161ffa2cc535145bf2a4bb986e8b278acd5e1d34a6e70c837"
+    },
+    {
+      "canonical_order": 31,
+      "book_id": "OBA",
+      "path": "32-OBAmdyeth.usfm",
+      "bytes": 7793,
+      "sha256": "f33aca6387cc0ae5a168bd3df6b518d396e46170b2f66f06cbeae11869b55b98"
+    },
+    {
+      "canonical_order": 32,
+      "book_id": "JON",
+      "path": "33-JONmdyeth.usfm",
+      "bytes": 13979,
+      "sha256": "cfbcf901d81a16991af4fffdb5cb750e184ec7040b3169d1f0b193d56f8bf023"
+    },
+    {
+      "canonical_order": 33,
+      "book_id": "MIC",
+      "path": "34-MICmdyeth.usfm",
+      "bytes": 32531,
+      "sha256": "41a8dc02d51e0278080b6619bd88fd863e91e4ec4c33542437d2214def615900"
+    },
+    {
+      "canonical_order": 34,
+      "book_id": "NAM",
+      "path": "35-NAMmdyeth.usfm",
+      "bytes": 14238,
+      "sha256": "038ff5039b8d7658ebd9dba23e8477694f50d9f46900f2585c2ed79dc33b9760"
+    },
+    {
+      "canonical_order": 35,
+      "book_id": "HAB",
+      "path": "36-HABmdyeth.usfm",
+      "bytes": 15963,
+      "sha256": "47ba742ef44df4668df9a3f90e84ecbe0e4342bd94aea87e6cb3bb72ae57202a"
+    },
+    {
+      "canonical_order": 36,
+      "book_id": "ZEP",
+      "path": "37-ZEPmdyeth.usfm",
+      "bytes": 18264,
+      "sha256": "ba88d85ec98ab30ad7c9f461ea96600fa7d79d2b613d83cf4f27572d36148737"
+    },
+    {
+      "canonical_order": 37,
+      "book_id": "HAG",
+      "path": "38-HAGmdyeth.usfm",
+      "bytes": 11785,
+      "sha256": "de9bfcb5a1771367ec66450d8c1116c9d2c2cfbfceb7950cc6d32ca69a26002c"
+    },
+    {
+      "canonical_order": 38,
+      "book_id": "ZEC",
+      "path": "39-ZECmdyeth.usfm",
+      "bytes": 62405,
+      "sha256": "72aa811169fd38ca44bde16813affb09dbf3a34825647b6352a7a5d989c8c35b"
+    },
+    {
+      "canonical_order": 39,
+      "book_id": "MAL",
+      "path": "40-MALmdyeth.usfm",
+      "bytes": 19182,
+      "sha256": "621b6166cd05e9ef59db1067e73f2a0471b976f43b6413f42ce1bdb08f8d25b1"
+    },
+    {
+      "canonical_order": 40,
+      "book_id": "MAT",
+      "path": "46-MATmdyeth.usfm",
+      "bytes": 238843,
+      "sha256": "d0b9fdeb1d0fe5d13f0a7bd30227c770a7263019d4ca0c8f77896ad5f7b7605c"
+    },
+    {
+      "canonical_order": 41,
+      "book_id": "MRK",
+      "path": "47-MRKmdyeth.usfm",
+      "bytes": 155376,
+      "sha256": "7c884af699bd845b365799b01fa8e05712369da571b65cef7b6bada6f46661a6"
+    },
+    {
+      "canonical_order": 42,
+      "book_id": "LUK",
+      "path": "48-LUKmdyeth.usfm",
+      "bytes": 258885,
+      "sha256": "479d7acb2c756b31a5e5c9f45d83eea3eeef436751c540ef0c79079860b3f1a8"
+    },
+    {
+      "canonical_order": 43,
+      "book_id": "JHN",
+      "path": "49-JHNmdyeth.usfm",
+      "bytes": 185424,
+      "sha256": "68594ef988603b8ad048e183655c30e109edb08c2a588dd27545d48cdef3a07a"
+    },
+    {
+      "canonical_order": 44,
+      "book_id": "ACT",
+      "path": "74-ACTmdyeth.usfm",
+      "bytes": 243950,
+      "sha256": "ea4bb1c08756c49e4c9aa42459ff5fb9a7a0a855f1f8db8a06c6eceeecda46b9"
+    },
+    {
+      "canonical_order": 45,
+      "book_id": "ROM",
+      "path": "51-ROMmdyeth.usfm",
+      "bytes": 104607,
+      "sha256": "3e18c25d221c07693884bb5efebc2d4e2d97220c5e19e34f94518467f7038e95"
+    },
+    {
+      "canonical_order": 46,
+      "book_id": "1CO",
+      "path": "52-1COmdyeth.usfm",
+      "bytes": 101405,
+      "sha256": "52f4fcc1b368d1aeac3f677e1730aefbcf682f4fb3fb8ddc46f6e575defa30e6"
+    },
+    {
+      "canonical_order": 47,
+      "book_id": "2CO",
+      "path": "53-2COmdyeth.usfm",
+      "bytes": 64340,
+      "sha256": "a208e8766a2b0e3fcc05aff9a22b7351440e9529758c75f466623bf4238e713f"
+    },
+    {
+      "canonical_order": 48,
+      "book_id": "GAL",
+      "path": "54-GALmdyeth.usfm",
+      "bytes": 36299,
+      "sha256": "8ed0b931d67c9c79b7bbe94306db707092f09203f7f51e90eea3cfad35ed5658"
+    },
+    {
+      "canonical_order": 49,
+      "book_id": "EPH",
+      "path": "55-EPHmdyeth.usfm",
+      "bytes": 33743,
+      "sha256": "950b26d5f35c94c34e518a12531b8b7689c970353aed92e27e6eddb534eb14be"
+    },
+    {
+      "canonical_order": 50,
+      "book_id": "PHP",
+      "path": "56-PHPmdyeth.usfm",
+      "bytes": 27303,
+      "sha256": "fec6defc979cb840dc4fd101cbcc5f6cfb81869470fa1dffa878bf6773151e73"
+    },
+    {
+      "canonical_order": 51,
+      "book_id": "COL",
+      "path": "57-COLmdyeth.usfm",
+      "bytes": 25164,
+      "sha256": "a8413a32286767aa3aba25fbd8f8a9670bae00086c16f77bb831f596b3ab2754"
+    },
+    {
+      "canonical_order": 52,
+      "book_id": "1TH",
+      "path": "58-1THmdyeth.usfm",
+      "bytes": 21964,
+      "sha256": "663c0f3da45615c2fe33d689c487a11478e815fdf08491a87950007049eb7c3e"
+    },
+    {
+      "canonical_order": 53,
+      "book_id": "2TH",
+      "path": "59-2THmdyeth.usfm",
+      "bytes": 12443,
+      "sha256": "219e40e5c249ab307621e5f30af1628fefc02d6925deaf3dd904e4e7dde07d80"
+    },
+    {
+      "canonical_order": 54,
+      "book_id": "1TI",
+      "path": "60-1TImdyeth.usfm",
+      "bytes": 27208,
+      "sha256": "46c23c343c61906e7f48a0fdac491eccfc97822f42a538a0c6c39823ac6e6e2a"
+    },
+    {
+      "canonical_order": 55,
+      "book_id": "2TI",
+      "path": "61-2TImdyeth.usfm",
+      "bytes": 20256,
+      "sha256": "2fbcf6091cd16eca20de96415d39a95ed5bf40e540a1f18fdcd4b9619c328f78"
+    },
+    {
+      "canonical_order": 56,
+      "book_id": "TIT",
+      "path": "62-TITmdyeth.usfm",
+      "bytes": 13249,
+      "sha256": "29e6ec5aa0ff847395b728963e2096d8e85ec61f0c4de175f45187b31624aa36"
+    },
+    {
+      "canonical_order": 57,
+      "book_id": "PHM",
+      "path": "63-PHMmdyeth.usfm",
+      "bytes": 6251,
+      "sha256": "1040af795a3c1952e9d57c54eb2dcb4a0724a5d224a479ef5cc6258e9410a363"
+    },
+    {
+      "canonical_order": 58,
+      "book_id": "HEB",
+      "path": "64-HEBmdyeth.usfm",
+      "bytes": 77559,
+      "sha256": "68411c70d0f48157fb66954072c0df60ed681b23313ce1e6d94efae6aea86012"
+    },
+    {
+      "canonical_order": 59,
+      "book_id": "JAS",
+      "path": "65-JASmdyeth.usfm",
+      "bytes": 26183,
+      "sha256": "6b341d636765322af4f5b34bb005f2d60d2368ef3f114ccb84a79fa2464f4be1"
+    },
+    {
+      "canonical_order": 60,
+      "book_id": "1PE",
+      "path": "90-1PEmdyeth.usfm",
+      "bytes": 29603,
+      "sha256": "02d4d025a2676c41daf71c2e17df4ac220ad71f8f02a5c533543543068bc5251"
+    },
+    {
+      "canonical_order": 61,
+      "book_id": "2PE",
+      "path": "67-2PEmdyeth.usfm",
+      "bytes": 17982,
+      "sha256": "c71bae4fe198f387796dc65f5ae43b3941d8df98483499d837641c1821baa355"
+    },
+    {
+      "canonical_order": 62,
+      "book_id": "1JN",
+      "path": "68-1JNmdyeth.usfm",
+      "bytes": 23466,
+      "sha256": "f0f1cba07afe5139258e031a2048b3ce04b55bd4c7dffd3ec98d5b58f146bdbf"
+    },
+    {
+      "canonical_order": 63,
+      "book_id": "2JN",
+      "path": "69-2JNmdyeth.usfm",
+      "bytes": 3683,
+      "sha256": "ec16a0869a96dc6aa7a00e1cc0dd74007184d9230a976042feb339643398ab4f"
+    },
+    {
+      "canonical_order": 64,
+      "book_id": "3JN",
+      "path": "94-3JNmdyeth.usfm",
+      "bytes": 4391,
+      "sha256": "687568fcfc7a32a06945b038848bf8cc39353c121f8ea6b3b127c29816ac8bc6"
+    },
+    {
+      "canonical_order": 65,
+      "book_id": "JUD",
+      "path": "71-JUDmdyeth.usfm",
+      "bytes": 8126,
+      "sha256": "bb13cf1ded754618ff8b292cd13d9ddb6e1bf07a3aae03a893225cef89a61d3e"
+    },
+    {
+      "canonical_order": 66,
+      "book_id": "REV",
+      "path": "72-REVmdyeth.usfm",
+      "bytes": 119864,
+      "sha256": "0e37226cb1d8ec94806d2a5b9326c7fcede02907fa9fd8e750ddbe1a41a4be77"
+    }
+  ],
+  "evidence": {
+    "source_validation_report_path": "docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md",
+    "rights_reconciliation_path": "docs/source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md",
+    "source_hash_manifest_origin": "Owner-provided isolated A2 source evidence; metadata-only copy of per-file hash records."
+  },
+  "governance": {
+    "rights_permission": "PASS — documentary Owner-supplied rights-holder confirmation; CC BY-SA 4.0 package coverage and offline app uses expressly confirmed.",
+    "specialist_review": "DEFERRED — Owner-accepted residual risk; no linguistic/orthographic sign-off claimed.",
+    "raw_scripture_committed": false,
+    "production_content_import": "Separate A4 implementation and content-compliance controls; no scripture text is included in this manifest."
+  }
+}
