@@ -3,6 +3,9 @@ package org.maale.bible.data.source
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
+import java.nio.ByteBuffer
+import java.nio.charset.CodingErrorAction
+import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 import java.util.zip.ZipInputStream
 
@@ -34,6 +37,16 @@ data class VerifiedUsfmFile(
 data class VerifiedSourceArchive(
     val archiveSha256: String,
     val files: List<VerifiedUsfmFile>
+)
+
+data class ParsedVerifiedUsfmFile(
+    val source: VerifiedUsfmFile,
+    val parsed: ParsedUsfmBook
+)
+
+data class ParsedVerifiedSourceArchive(
+    val archiveSha256: String,
+    val files: List<ParsedVerifiedUsfmFile>
 )
 
 class SourceArchiveVerificationException(message: String) : IllegalArgumentException(message)
@@ -114,6 +127,23 @@ object VerifiedUsfmArchive {
         require(missing.isEmpty()) { "Missing expected USFM files: ${missing.sorted().joinToString()}" }
         require(verified.size == expected.files.size) { "Not all expected USFM files were verified" }
         return VerifiedSourceArchive(archiveHash, verified.sortedBy { it.canonicalOrder })
+    }
+
+    fun verifyAndParse(input: InputStream, expected: SourceArchiveExpectation): ParsedVerifiedSourceArchive {
+        val verified = verify(input, expected)
+        val parsed = verified.files.map { file ->
+            val decoder = StandardCharsets.UTF_8.newDecoder()
+                .onMalformedInput(CodingErrorAction.REPORT)
+                .onUnmappableCharacter(CodingErrorAction.REPORT)
+            val sourceText = try {
+                decoder.decode(ByteBuffer.wrap(file.bytes)).toString()
+            } catch (error: Exception) {
+                throw SourceArchiveVerificationException("Invalid UTF-8 in ${file.path}")
+            }
+            ParsedVerifiedUsfmFile(file, StrictUsfmParser.parse(sourceText, file.bookId))
+        }
+        require(parsed.size == 66) { "All 66 source books must parse successfully" }
+        return ParsedVerifiedSourceArchive(verified.archiveSha256, parsed)
     }
 
     private fun validateExpectation(expected: SourceArchiveExpectation) {
@@ -217,6 +247,7 @@ object StrictUsfmParser {
         var chapter: Int? = null
         var previousChapter = 0
         var previousVerseEnd: Pair<Int, String>? = null
+        var currentVerse: SourceVerseReference? = null
         var verseCount = 0
         val records = ArrayList<UsfmRecord>(tokens.size)
 
@@ -243,6 +274,7 @@ object StrictUsfmParser {
                     chapter = next
                     previousChapter = next
                     previousVerseEnd = null
+                    currentVerse = null
                     records += UsfmRecord(token.marker, token.payload, next, null)
                 }
                 "v" -> {
@@ -266,9 +298,10 @@ object StrictUsfmParser {
                         parsed.first, parsed.second.ifEmpty { null },
                         parsed.third, parsed.fourth?.ifEmpty { null }
                     )
+                    currentVerse = ref
                     records += UsfmRecord(token.marker, token.payload, currentChapter, ref)
                 }
-                else -> records += UsfmRecord(token.marker, token.payload, chapter, null)
+                else -> records += UsfmRecord(token.marker, token.payload, chapter, currentVerse)
             }
         }
 
