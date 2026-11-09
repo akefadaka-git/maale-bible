@@ -224,7 +224,8 @@ class P2V2LocalStudyPersistenceTest {
         }
         LocalStudyDatabase.openFile(file).use { db ->
             assertEquals("My private reflection", db.journalNotes().single().body)
-            db.updateJournalNote("journal-1", "Updated reflection", 250L)
+            assertTrue(db.updateJournalNote("journal-1", "Updated reflection", 250L))
+            assertFalse(db.updateJournalNote("missing", "No note", 300L))
             val updated = db.journalNotes().single()
             assertEquals("Updated reflection", updated.body)
             assertEquals(100L, updated.createdAt)
@@ -253,6 +254,9 @@ class P2V2LocalStudyPersistenceTest {
             db.addJournalNote("journal-v4", "Independent journal", 75L)
             assertEquals(1, db.journalNotes().size)
             assertEquals(2L, db.noteCount()) // legacy passage-linked note plus new journal note
+            assertFalse(db.updateJournalNote("legacy-note", "must not change", 90L))
+            assertFalse(db.deleteJournalNote("legacy-note"))
+            assertEquals(2L, db.noteCount())
         }
         file.delete()
     }
