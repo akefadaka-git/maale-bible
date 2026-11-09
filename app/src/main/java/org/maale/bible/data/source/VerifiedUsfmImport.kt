@@ -323,7 +323,15 @@ object StrictUsfmParser {
         var cursor = 0
         while (cursor < source.length) {
             val slash = source.indexOf('\\', cursor)
-            if (slash < 0) break
+            if (slash < 0) {
+                if (tokens.isEmpty() && source.substring(cursor).isNotBlank()) {
+                    throw StrictUsfmParseException("Unexpected text before the first \\id marker")
+                }
+                if (tokens.isNotEmpty() && cursor < source.length) {
+                    tokens += Token("#text", source.substring(cursor))
+                }
+                break
+            }
             if (slash > cursor) {
                 val interveningText = source.substring(cursor, slash)
                 if (tokens.isEmpty()) {
