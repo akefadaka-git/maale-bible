@@ -75,11 +75,11 @@ def create_registration_challenge(
 
     if not isinstance(password, str) or not password:
         raise ValueError("Password must not be empty.")
-    # hash_password applies the UTF-8 byte-length bound and Argon2id hashing.
-    password_hash = hash_password(password)
-
     if not isinstance(otp_hmac_key, bytes) or len(otp_hmac_key) < 32:
         raise ValueError("Registration OTP HMAC key must contain at least 32 random bytes.")
+
+    # hash_password applies the UTF-8 byte-length bound and Argon2id hashing.
+    password_hash = hash_password(password)
 
     issued_at = now or datetime.now(timezone.utc)
     if issued_at.tzinfo is None or issued_at.utcoffset() is None:
