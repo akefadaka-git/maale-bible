@@ -3,10 +3,10 @@ name: P2 synthetic verification
 # Do not push further changes until this matrix completes.
 on:
   pull_request:
-    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','content/manifests/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
   push:
     branches: [feat/a4-offline-study-suite]
-    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/canon/**','content/canon/**','content/manifests/**','.github/workflows/p2-synthetic-verification.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,6 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python verification/canon/canonical_registry_verify.py
+      - run: python verification/canon/maale_source_canon_reconcile.py
       - run: python verification/p2/p2_verify.py
       - uses: actions/upload-artifact@v4
         with:
