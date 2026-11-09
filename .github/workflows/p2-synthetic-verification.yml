@@ -57,6 +57,6 @@ jobs:
           name: android-api-${{ matrix.api }}-evidence
           if-no-files-found: warn
           path: |
-            app/build/ci-emulator-api-${{ matrix.api }}.log
+            app/build/ci-emulator-api-${{ matrix.api }}-attempt-*.log
             app/build/reports/androidTests/connected/debug/**
             app/build/outputs/androidTest-results/connected/debug/**
