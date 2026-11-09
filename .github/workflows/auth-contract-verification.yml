@@ -1,0 +1,42 @@
+name: Authentication contract verification
+
+on:
+  pull_request:
+    paths:
+      - 'app/src/main/java/org/maale/bible/domain/auth/**'
+      - 'app/src/test/java/org/maale/bible/auth/**'
+      - 'docs/authentication/**'
+      - '.github/workflows/auth-contract-verification.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: auth-contract-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  openapi-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate OpenAPI contract
+        run: npx --yes @redocly/cli@1.34.5 lint --extends=minimal docs/authentication/openapi-auth-v1.yaml
+
+  android-auth-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Run Android host unit tests
+        run: ./gradlew --no-daemon testDebugUnitTest
