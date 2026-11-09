@@ -324,6 +324,9 @@ object StrictUsfmParser {
         while (cursor < source.length) {
             val slash = source.indexOf('\\', cursor)
             if (slash < 0) break
+            if (tokens.isEmpty() && source.substring(0, slash).isNotBlank()) {
+                throw StrictUsfmParseException("Unexpected text before the first \\id marker")
+            }
             if (slash + 1 >= source.length) throw StrictUsfmParseException("Trailing backslash")
             val next = source[slash + 1]
             if (!next.isLetter() && next != '+' && next != '*') {
