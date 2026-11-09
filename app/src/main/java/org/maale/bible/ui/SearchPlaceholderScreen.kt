@@ -180,7 +180,7 @@ fun SearchPlaceholderScreen(
 @Composable
 private fun SearchCapabilityCard() {
     Card(
-        modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth().align(Alignment.CenterHorizontally),
+        modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(
