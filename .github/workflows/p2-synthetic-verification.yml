@@ -46,7 +46,17 @@ jobs:
         with:
           api-level: ${{ matrix.api }}
           arch: x86_64
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot
           disable-animations: true
           # This action splits script input on newlines; invoke the tracked script as ONE command.
           script: ANDROID_EXPECTED_API=${{ matrix.api }} sh verification/android/run-emulator-tests.sh
+      - name: Upload emulator logs and instrumentation reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-api-${{ matrix.api }}-evidence
+          if-no-files-found: warn
+          path: |
+            app/build/ci-emulator-api-${{ matrix.api }}.log
+            app/build/reports/androidTests/connected/debug/**
+            app/build/outputs/androidTest-results/connected/debug/**
