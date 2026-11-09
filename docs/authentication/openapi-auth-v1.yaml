@@ -16,7 +16,9 @@ servers:
     description: Relative API base; deployment hostname is not selected.
 tags:
   - name: Registration
+    description: Pending account registration and mobile ownership verification.
   - name: Sessions
+    description: Password login, credential refresh and session revocation.
 paths:
   /v1/auth/registration-challenges:
     post:
@@ -312,6 +314,7 @@ components:
         request_id:
           type: string
           description: Opaque correlation identifier; must not contain personal data.
+  responses:
     BadRequest:
       description: Request shape or identifier format is invalid.
       content:
