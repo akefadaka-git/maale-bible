@@ -43,7 +43,7 @@ A CI result is evidence for one exact commit, workflow revision, runner instance
 - **FAIL — PRODUCT/TEST** when an assertion, compilation, or app behavior fails.
 - **FAIL — INFRASTRUCTURE** when the emulator cannot become/remain available or instrumentation cannot attach.
 - **RETRIED-PASS** when one documented infrastructure recovery succeeds; retain both failed attempt logs and successful attempt logs.
-- Never convert a deterministic test failure into a pass by retrying it.
+- Never convert a deterministic test failure into a pass by retrying it. The retry is limited to device-discovery failures, and both attempt logs are retained.
 - Never mark the matrix closed while any required API job is queued, in progress, skipped without approval, or failed.
 
 ## Limit of the guarantee
