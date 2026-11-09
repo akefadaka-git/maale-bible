@@ -14,7 +14,7 @@ class StrictUsfmParserTest {
 \c 1
 \s1 Heading retained
 \p
-\v 1 First verse \w word\w*
+\v 1 First verse \w word\w* tail text
 \v 1a Segment A
 \v 1b Segment B
 \v 2-3 Range
