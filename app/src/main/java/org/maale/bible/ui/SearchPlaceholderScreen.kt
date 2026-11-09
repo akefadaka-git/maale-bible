@@ -140,7 +140,7 @@ fun SearchPlaceholderScreen(
         } else {
             Text(
                 text = "${matchingBooks.size} book match${if (matchingBooks.size == 1) "" else "es"}",
-                modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth().align(Alignment.CenterHorizontally),
+                modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
                 style = MaterialTheme.typography.titleSmall
             )
             LazyColumn(
