@@ -49,3 +49,17 @@ A CI result is evidence for one exact commit, workflow revision, runner instance
 ## Limit of the guarantee
 
 No hosted emulator matrix can honestly be guaranteed to have zero transient infrastructure failures. This policy makes them diagnosable and recoverable without hiding product defects. A stable green exact-HEAD matrix, repeated clean runs, and eventual physical-device acceptance provide stronger confidence than a single green run.
+
+## Follow-up runner incident: 2026-11-09
+
+Workflow run: https://github.com/akefadaka-git/maale-bible/actions/runs/42676797068
+Tested HEAD: `d8ea1980b7c11cc8c2504b195005912bb090ae72`
+
+The unique Genesis selector correction and prior recovery changes are present in this HEAD. In the latest run, API 26 and API 28 passed, while API 36 failed before the tracked instrumentation script created its log. The emulator action booted the image, then its own setup command failed with an ADB broken-pipe error while changing the screen-off timeout. This is a runner/emulator-action setup failure, not a test assertion or app compilation failure.
+
+Reliability adjustment applied after this incident:
+- Pin hosted jobs to `ubuntu-24.04` instead of the moving `ubuntu-latest` image, which had resolved to Ubuntu 26.04 in the failed run.
+- Limit the emulator matrix to two concurrent jobs to reduce host CPU, memory, and ADB contention across six emulator instances.
+- Increase the emulator job timeout to 75 minutes so the bounded boot/readiness and instrumentation process has room to complete.
+
+This is a risk reduction, not a guarantee that GitHub-hosted emulator infrastructure will never fail. A subsequent exact-HEAD matrix must verify the change.
