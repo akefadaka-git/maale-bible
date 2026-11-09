@@ -192,8 +192,7 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "A moment to
-pause. Read. Reflect.",
+                text = "A moment to\npause. Read. Reflect.",
                 style = MaterialTheme.typography.headlineMedium,
                 color = Color(0xFFF5F1E8),
                 fontWeight = FontWeight.SemiBold
