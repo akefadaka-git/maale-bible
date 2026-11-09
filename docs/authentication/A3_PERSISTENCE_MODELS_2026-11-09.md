@@ -6,9 +6,9 @@
 
 ## Models
 
-- Account: opaque UUID primary key, normalized username and E.164 mobile with independent database unique constraints, password-hash field, activation status and creation timestamp.
-- RegistrationChallenge: pending registration identifiers, password hash, OTP digest, expiry, remaining attempts and single-use consumption timestamp. No plaintext OTP field exists.
-- AuthSession: account foreign key, token-family UUID, unique refresh-token hash, expiry, rotation and revocation timestamps.
+- Account: opaque UUID primary key, normalized username and E.164 mobile with independent database unique constraints, password-hash field, activation status and creation timestamp. The default status is pending; activation must be explicit after successful OTP verification. Allowed statuses are constrained to pending, active or disabled.
+- RegistrationChallenge: pending registration identifiers, password hash, 64-character SHA-256 OTP digest, expiry, non-negative remaining attempts and single-use consumption timestamp. No plaintext OTP field exists.
+- AuthSession: account foreign key, token-family UUID, unique 64-character SHA-256 refresh-token hash, expiry, rotation and revocation timestamps.
 
 ## Security boundaries
 
