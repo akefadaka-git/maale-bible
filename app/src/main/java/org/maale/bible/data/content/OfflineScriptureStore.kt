@@ -10,6 +10,8 @@ import java.io.InputStream
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 import java.security.MessageDigest
+import java.text.Normalizer
+import java.util.Locale
 import java.util.Properties
 
 data class OfflineContentDescriptor(
@@ -42,7 +44,9 @@ class OfflineScriptureStore private constructor(
 
     fun search(query: String, limit: Int = 30): List<ScriptureSearchResult> {
         require(limit in 1..100)
-        val terms = query.trim().split(Regex("\\s+")).filter(String::isNotBlank)
+        require(query.length <= 256)
+        val normalizedQuery = Normalizer.normalize(query, Normalizer.Form.NFKC).lowercase(Locale.ROOT)
+        val terms = normalizedQuery.trim().split(Regex("\\s+")).filter(String::isNotBlank)
         if (terms.isEmpty()) return emptyList()
         val matchExpression = terms.joinToString(" AND ") { term ->
             "\"" + term.replace("\"", "\"\"") + "\""
@@ -110,7 +114,10 @@ class OfflineScriptureStore private constructor(
             val current = currentDirectory(context)
             val database = File(current, DATABASE_NAME)
             val descriptorFile = File(current, DESCRIPTOR_NAME)
-            if (!database.isFile || !descriptorFile.isFile) return null
+            if (!database.exists() && !descriptorFile.exists()) return null
+            require(database.isFile && descriptorFile.isFile) {
+                "Installed content package is incomplete"
+            }
             val descriptor = readDescriptor(descriptorFile)
             validateDescriptor(descriptor)
             require(database.length() == descriptor.databaseBytes) {
@@ -318,7 +325,7 @@ class OfflineScriptureStore private constructor(
                     digest.update(buffer, 0, count)
                 }
             }
-            return digest.digest().joinToString("") { "%02x".format(it) }
+            return digest.digest().joinToString("") { "%02x".format(it.toInt() and 0xff) }
         }
 
         private fun moveAtomically(source: File, destination: File) {
