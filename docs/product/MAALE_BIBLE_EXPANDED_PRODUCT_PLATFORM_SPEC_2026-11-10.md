@@ -615,18 +615,19 @@ No provider, API entitlement, payment rail, data residency, price or availabilit
 
 ## 22. Deferred decisions and evidence gates
 
-1. Exact feature quotas for each paid tier.
-2. Whether organisation subscriptions are separate from individual Elite.
-3. Which export formats are included in each tier.
-4. Group size, storage and collaboration limits.
-5. AI provider, privacy model, cost controls and allowed use cases.
-6. Initial social platforms and official API availability.
-7. Initial calendar, cloud storage and organisation integrations.
-8. Payment providers and supported currencies/regions.
-9. Moderation staffing, safeguarding and appeals policy.
-10. Premium supplementary content catalogue and distribution rights.
-11. Data retention and cloud backup policy.
-12. Whether a web/desktop companion is in the initial product scope or a later release.
+The following are deliberately not fixed by A1 because they require market, legal, technical or operating evidence. They are not blockers to the frozen product architecture, but must be resolved before the relevant commercial or production capability is activated.
+
+1. Tier prices, billing periods, currency and launch geography; requires cost, tax, legal and market validation.
+2. Payment and donation providers; requires country/merchant eligibility, settlement, fees, refund and compliance assessment.
+3. Named AI provider/model, AI quotas and paid bundles; requires privacy/security terms, source quality, measured cost and service-capacity evidence.
+4. Cloud storage quotas, provider and backup retention; requires encryption, deletion, residency, recovery and operating-cost design.
+5. Named calendar, cloud, church/CMS, LMS, SSO, meeting and publisher integrations; each requires provider/API verification and permission review.
+6. Direct social publishing and analytics; requires official API availability, platform approval and permission testing. Native share-sheet handoff remains the initial path.
+7. Premium supplementary content catalogue, audio and commentary libraries; each source requires rights clearance and attribution terms.
+8. Moderation staffing, escalation coverage, appeals operations and jurisdiction-specific child-safeguarding/legal review; public communities and youth groups remain disabled until these are ready.
+9. Detailed retention schedules for notes, group discussions, moderation records and backups; requires legal and operational review. The 30-day default prayer-request expiry is already fixed unless the author chooses otherwise.
+10. Web/desktop companion timing and production-scale capacity targets; requires usage evidence and a separately approved roadmap.
+11. Any change to the frozen tier capacity ceilings; requires load testing, abuse analysis and an Owner-approved change request.
 
 ## 23. Explicit non-authorisations
 
