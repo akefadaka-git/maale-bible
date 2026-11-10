@@ -29,35 +29,42 @@ def login_with_password(
     unknown identifier still performs password verification. No OTP is used
     during ordinary login.
     """
-    if not isinstance(password, str) or not password or not isinstance(dummy_password_hash, str):
+    if not isinstance(password, str) or not password or len(password.encode("utf-8")) > 1024:
+        return None
+    if not isinstance(dummy_password_hash, str) or not dummy_password_hash:
         return None
 
-    account = None
+    account_id = None
+    account_status = None
+    stored_hash = None
     try:
         if not isinstance(identifier, str):
             raise ValueError("Invalid identifier.")
+        is_mobile = identifier.strip().startswith("+")
         normalized = (
             normalize_registration_mobile(identifier)
-            if identifier.strip().startswith("+")
+            if is_mobile
             else normalize_registration_username(identifier)
         )
         with session.begin():
-            if identifier.strip().startswith("+"):
-                account = session.scalar(
-                    select(Account).where(Account.mobile_e164 == normalized)
+            account = session.scalar(
+                select(Account).where(
+                    Account.mobile_e164 == normalized if is_mobile
+                    else Account.username_normalized == normalized
                 )
-            else:
-                account = session.scalar(
-                    select(Account).where(Account.username_normalized == normalized)
-                )
+            )
+            if account is not None:
+                account_id = account.id
+                account_status = account.status
+                stored_hash = account.password_hash
     except ValueError:
-        account = None
+        account_id = None
 
-    candidate_hash = account.password_hash if account is not None else dummy_password_hash
-    password_valid = verify_password(candidate_hash, password)
-    if account is None or account.status != "active" or not password_valid:
+    # Unknown and disabled identities still incur a password-hash verification.
+    password_valid = verify_password(stored_hash or dummy_password_hash, password)
+    if account_id is None or account_status != "active" or not password_valid:
         return None
 
     return issue_session_for_active_account(
-        session, account_id=account.id, policy=policy, now=now
+        session, account_id=account_id, policy=policy, now=now
     )
