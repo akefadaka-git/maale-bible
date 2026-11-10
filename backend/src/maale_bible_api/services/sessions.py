@@ -136,7 +136,10 @@ def rotate_refresh_token(
             )
             return None
 
-        if record.revoked_at is not None or record.expires_at <= instant:
+        refresh_expiry = record.expires_at
+        if refresh_expiry.tzinfo is None:
+            refresh_expiry = refresh_expiry.replace(tzinfo=timezone.utc)
+        if record.revoked_at is not None or refresh_expiry <= instant:
             return None
 
         account = session.scalar(
