@@ -24,7 +24,7 @@ diagnostics() {
 }
 
 wait_for_ready() {
-  deadline=$(( $(date +%s) + 240 ))
+  deadline=$(( $(date +%s) + 360 ))
   while [ "$(date +%s)" -lt "${deadline}" ]; do
     state="$(timeout 8s adb get-state 2>/dev/null || true)"
     if [ "${state}" = "device" ]; then
@@ -74,6 +74,13 @@ run_instrumentation() {
 }
 
 is_retryable_infrastructure_failure() {
+  # Once instrumentation has started, never classify a failure as retryable:
+  # this prevents an application/test failure from being masked by incidental
+  # ADB or emulator diagnostics later in the same Gradle log.
+  if grep -Eiq 'Starting [0-9]+ tests on emulator|There were failing tests|FAILED' "${log_file}"; then
+    return 1
+  fi
+
   grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APK|Failed to commit install session|Broken pipe|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb|Could not load test results' "${log_file}" ||
     { grep -Eiq 'device offline|device unauthorized|Lost network stack|FATAL EXCEPTION IN SYSTEM PROCESS|DeadSystemException' "${log_file}" &&
       ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }
@@ -86,13 +93,12 @@ else
   test_rc=$?
 fi
 
-# Permit at most two bounded retries, and only for signatures showing that
-# Android/ADB failed before a trustworthy instrumentation result was produced.
-# Assertion failures and ordinary test failures are never retried or hidden.
+# Permit at most two bounded retries, and only for failures before instrumentation
+# starts. Assertion failures and ordinary application test failures are never retried.
 while [ "${attempt}" -lt 3 ] && is_retryable_infrastructure_failure; do
   attempt=$((attempt + 1))
   log_file="${log_prefix}-attempt-${attempt}.log"
-  echo "::warning::Detected an emulator/ADB infrastructure failure on API ${expected_api}; bounded recovery ${attempt}/2."
+  echo "::warning::Detected a pre-instrumentation emulator/ADB failure on API ${expected_api}; bounded recovery ${attempt}/2."
   recover_adb
   if run_instrumentation; then
     echo "Instrumentation tests passed after infrastructure recovery on API ${expected_api}."
