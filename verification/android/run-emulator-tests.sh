@@ -82,8 +82,9 @@ is_retryable_infrastructure_failure() {
 if run_instrumentation; then
   echo "Instrumentation tests passed on API ${expected_api}."
   exit 0
+else
+  test_rc=$?
 fi
-test_rc=$?
 
 # Permit at most two bounded retries, and only for signatures showing that
 # Android/ADB failed before a trustworthy instrumentation result was produced.
@@ -96,8 +97,9 @@ while [ "${attempt}" -lt 3 ] && is_retryable_infrastructure_failure; do
   if run_instrumentation; then
     echo "Instrumentation tests passed after infrastructure recovery on API ${expected_api}."
     exit 0
+  else
+    test_rc=$?
   fi
-  test_rc=$?
 done
 
 echo "::error::Instrumentation tests failed on API ${expected_api}; no further retries will hide this result."
