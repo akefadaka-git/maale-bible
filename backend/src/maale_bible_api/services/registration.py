@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from uuid import UUID, uuid4
 
-from sqlalchemy import or_, select
+from sqlalchemy import or_, select, text
 from sqlalchemy.orm import Session
 
 from maale_bible_api.db.models import Account, RegistrationChallenge
@@ -55,6 +55,27 @@ def normalize_registration_mobile(raw: str) -> str:
     return normalized
 
 
+def _lock_registration_identifiers(session: Session, username: str, mobile: str) -> None:
+    """Serialize competing PostgreSQL reservations for either identifier.
+
+    Transaction-scoped advisory locks are acquired in sorted order so requests
+    sharing either identifier cannot both pass the active-challenge pre-check.
+    The 64-bit hash is only a lock key: collisions cause extra serialization,
+    never an authorization bypass. Account unique constraints remain the final
+    integrity boundary for account creation.
+    """
+    if session.get_bind().dialect.name != "postgresql":
+        return
+
+    lock_keys = sorted((f"maale-bible:registration:username:{username}",
+                        f"maale-bible:registration:mobile:{mobile}"))
+    for lock_key in lock_keys:
+        session.execute(
+            text("SELECT pg_advisory_xact_lock(hashtextextended(:lock_key, 0))"),
+            {"lock_key": lock_key},
+        )
+
+
 def create_registration_challenge(
     session: Session,
     *,
@@ -96,6 +117,7 @@ def create_registration_challenge(
     # The pre-check avoids routine duplicate challenges. Database account
     # constraints remain authoritative; this pre-check is not a concurrency lock.
     with session.begin():
+        _lock_registration_identifiers(session, normalized_username, normalized_mobile)
         existing_account = session.scalar(
             select(Account.id).where(
                 or_(
