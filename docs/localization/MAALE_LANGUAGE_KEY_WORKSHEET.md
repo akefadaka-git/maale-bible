@@ -6,7 +6,7 @@
 
 - Android locale tags: Maale `mdy`, Amharic `am`, English `en`.
 - English is the reference meaning for each key; Amharic is supplied as the parallel reference translation.
-- The **Maale wording** column is intentionally blank for your wording.
+- The **Maale wording** column records Owner-supplied wording where provided; remaining entries are intentionally blank.
 - Keep the key names stable. The same key must be used in all three Android resource files.
 - For each Maale phrase, provide the natural spoken Maale wording, not a literal word-for-word translation. Include spelling/orthography notes or alternative forms when needed.
 - A Maale entry is not considered approved until you confirm it or the designated Maale language reviewers/community authority approve it.
@@ -16,12 +16,12 @@
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
-| `nav_home` | Home | መነሻ | **Please provide:** |
-| `nav_books` | Books | መጻሕፍት | **Please provide:** |
-| `nav_search` | Search | ፍለጋ | **Please provide:** |
+| `nav_home` | Home | መነሻ | ካራ |
+| `nav_books` | Books | መጻሕፍት | ማፃኣፖ |
+| `nav_search` | Search | ፍለጋ | ኮዔ |
 | `nav_bibles` | Bibles | መጽሐፍ ቅዱሶች | **Please provide:** |
-| `nav_listen` | Listen | ማዳመጥ | **Please provide:** |
-| `nav_study` | Study | ጥናት | **Please provide:** |
+| `nav_listen` | Listen | ማዳመጥ | ዋይዜ |
+| `nav_study` | Study | ጥናት | ፃናዔ |
 | `language_label` | Interface language | የመተግበሪያ ቋንቋ | **Please provide:** |
 | `language_maale` | Maale (default) | ማዓሌ (ነባሪ) | **Please provide:** |
 | `language_amharic` | Amharic | አማርኛ | **Please provide:** |
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** worksheet generated; Maale translations intentionally pending Owner/community input. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** five navigation labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_listen`, and `nav_study`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
