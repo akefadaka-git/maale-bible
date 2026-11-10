@@ -32,6 +32,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 import org.maale.bible.data.content.OfflineScriptureStore
+import org.maale.bible.data.content.OfflineContentDescriptor
 import org.maale.bible.data.content.ScriptureSearchResult
 
 @Composable
@@ -42,26 +43,48 @@ fun SearchPlaceholderScreen(
     val context = LocalContext.current.applicationContext
     var query by remember { mutableStateOf("") }
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
-    var storeState by remember { mutableStateOf("Loading offline scripture index…") }
+    var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
+    var selectedEditionId by remember { mutableStateOf<String?>(null) }
+    var storeState by remember { mutableStateOf("Loading installed Bible editions…") }
     var searchResults by remember { mutableStateOf<List<ScriptureSearchResult>>(emptyList()) }
     var searchState by remember { mutableStateOf("") }
     val currentStore by rememberUpdatedState(store)
 
     LaunchedEffect(context) {
+        val available = withContext(Dispatchers.IO) {
+            runCatching { OfflineScriptureStore.installedEditions(context) }
+        }
+        available.fold(
+            onSuccess = { installed ->
+                editions = installed
+                selectedEditionId = installed.firstOrNull()?.editionId
+                if (installed.isEmpty()) storeState = "No offline scripture edition is installed on this device."
+            },
+            onFailure = {
+                storeState = "Installed Bible editions could not be listed."
+            }
+        )
+    }
+
+    LaunchedEffect(context, selectedEditionId) {
+        val editionId = selectedEditionId ?: return@LaunchedEffect
+        storeState = "Verifying " + editionId + "…"
         val opened = withContext(Dispatchers.IO) {
-            runCatching { OfflineScriptureStore.openInstalled(context) }
+            runCatching { OfflineScriptureStore.openInstalled(context, editionId) }
         }
         opened.fold(
             onSuccess = { installed ->
+                val previous = store
                 store = installed
+                withContext(Dispatchers.IO) { previous?.close() }
                 storeState = if (installed == null) {
-                    "No offline scripture edition is installed on this device."
+                    "Selected edition is not installed."
                 } else {
                     installed.descriptor.editionId + " · " + installed.descriptor.verseCount + " indexed passages"
                 }
             },
             onFailure = {
-                storeState = "The installed scripture package could not be verified. Reinstall it before searching."
+                storeState = "The selected scripture package failed integrity verification."
             }
         )
     }
@@ -139,6 +162,21 @@ fun SearchPlaceholderScreen(
                 )
                 Text(storeState, style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
+            }
+        }
+
+        if (editions.size > 1) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                editions.forEach { edition ->
+                    TextButton(onClick = { selectedEditionId = edition.editionId }) {
+                        Text(
+                            if (selectedEditionId == edition.editionId) "✓ " + edition.editionId else edition.editionId
+                        )
+                    }
+                }
             }
         }
 
