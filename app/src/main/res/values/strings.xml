@@ -37,4 +37,23 @@
     <string name="books_title">Books of the Maale Bible</string>
     <string name="books_description">Official 66-book catalogue. Scripture content is not loaded in this build.</string>
     <string name="books_open_book">Open %1$s</string>
+
+    <string name="account_open">Account</string>
+    <string name="account_title">Your account</string>
+    <string name="account_guest_first">Reading remains free to access as a guest. An account is optional.</string>
+    <string name="account_service_unavailable_title">Account service not connected</string>
+    <string name="account_service_unavailable_body">The authentication API has no configured live endpoint in this build. Sign-in and registration are disabled; no credentials will be sent or stored.</string>
+    <string name="account_login">Log in</string>
+    <string name="account_register">Register</string>
+    <string name="account_identifier">Username or mobile number</string>
+    <string name="account_identifier_help">Use your username or an international mobile number beginning with +.</string>
+    <string name="account_password">Password</string>
+    <string name="account_username">Username</string>
+    <string name="account_mobile">Mobile number</string>
+    <string name="account_mobile_help">Enter the full international number, including country code.</string>
+    <string name="account_request_otp">Request registration code</string>
+    <string name="account_otp">One-time registration code</string>
+    <string name="account_verify_register">Verify code and register</string>
+    <string name="account_otp_policy">A one-time code is for registration verification only. Ordinary login uses username or mobile number and password.</string>
+    <string name="account_continue_guest">Continue reading as guest</string>
 </resources>
