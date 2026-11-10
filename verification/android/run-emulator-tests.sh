@@ -5,7 +5,8 @@ set -eu
 
 expected_api="${ANDROID_EXPECTED_API:?ANDROID_EXPECTED_API must be set}"
 log_prefix="app/build/ci-emulator-api-${expected_api}"
-log_file="${log_prefix}-attempt-1.log"
+attempt=1
+log_file="${log_prefix}-attempt-${attempt}.log"
 mkdir -p "$(dirname "${log_file}")"
 
 diagnostics() {
@@ -46,15 +47,19 @@ wait_for_ready() {
   return 1
 }
 
-echo "Waiting for emulator API ${expected_api}."
-timeout 45s adb wait-for-device || true
-if ! wait_for_ready; then
-  echo "::warning::Restarting the ADB server once after initial readiness failure."
+recover_adb() {
+  echo "::warning::Restarting ADB and waiting for a clean emulator state (attempt ${attempt})."
   adb kill-server 2>&1 || true
   sleep 2
   adb start-server 2>&1 || true
   timeout 45s adb wait-for-device || true
   wait_for_ready
+}
+
+echo "Waiting for emulator API ${expected_api}."
+timeout 45s adb wait-for-device || true
+if ! wait_for_ready; then
+  recover_adb
 fi
 
 run_instrumentation() {
@@ -68,32 +73,32 @@ run_instrumentation() {
   fi
 }
 
+is_retryable_infrastructure_failure() {
+  grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APK|Failed to commit install session|Broken pipe|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb|Could not load test results' "${log_file}" ||
+    { grep -Eiq 'device offline|device unauthorized|Lost network stack|FATAL EXCEPTION IN SYSTEM PROCESS|DeadSystemException' "${log_file}" &&
+      ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }
+}
+
 if run_instrumentation; then
   echo "Instrumentation tests passed on API ${expected_api}."
   exit 0
-else
-  test_rc=$?
 fi
+test_rc=$?
 
-# Retry only infrastructure/device-discovery failures. Never retry or hide a real
-# assertion, compilation, or application test failure.
-if grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APKs|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb' "${log_file}" ||
-   { grep -Eiq 'device offline|device unauthorized' "${log_file}" &&
-     ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }; then
-  echo "::warning::Detected an ADB/device infrastructure failure on API ${expected_api}; performing one bounded recovery and rerun."
-  log_file="${log_prefix}-attempt-2.log"
-  adb kill-server 2>&1 || true
-  sleep 2
-  adb start-server 2>&1 || true
-  timeout 45s adb wait-for-device || true
-  wait_for_ready
+# Permit at most two bounded retries, and only for signatures showing that
+# Android/ADB failed before a trustworthy instrumentation result was produced.
+# Assertion failures and ordinary test failures are never retried or hidden.
+while [ "${attempt}" -lt 3 ] && is_retryable_infrastructure_failure; do
+  attempt=$((attempt + 1))
+  log_file="${log_prefix}-attempt-${attempt}.log"
+  echo "::warning::Detected an emulator/ADB infrastructure failure on API ${expected_api}; bounded recovery ${attempt}/2."
+  recover_adb
   if run_instrumentation; then
-    echo "Instrumentation tests passed after one infrastructure recovery on API ${expected_api}."
+    echo "Instrumentation tests passed after infrastructure recovery on API ${expected_api}."
     exit 0
-  else
-    test_rc=$?
   fi
-fi
+  test_rc=$?
+done
 
 echo "::error::Instrumentation tests failed on API ${expected_api}; no further retries will hide this result."
 diagnostics
