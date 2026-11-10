@@ -49,7 +49,7 @@ fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
             item { Text("ENGLISH · OPEN-LICENSE SOURCES", style = MaterialTheme.typography.titleSmall) }
             items(eligible, key = { it.id }) { edition ->
                 EditionCard(edition) {
-                    context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.sourceUrl)))
+                    context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.downloadUrl ?: edition.sourceUrl)))
                 }
             }
             item { Text("AMHARIC · REVIEW BEFORE INSTALLATION", style = MaterialTheme.typography.titleSmall) }
@@ -102,7 +102,7 @@ private fun EditionCard(
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
             }
             Button(onClick = onOpenSource) {
-                Text(if (reviewOnly) "View source and licence" else "Open official source")
+                Text(if (reviewOnly) "View source and licence" else if (edition.downloadUrl != null) "Download source package" else "Open official source")
             }
         }
     }
