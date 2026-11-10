@@ -29,6 +29,19 @@ data class BibleEditionSource(
 object BibleEditionCatalog {
     val editions = listOf(
         BibleEditionSource(
+            id = "mdyeth",
+            title = "Maale Full Bible",
+            languageCode = "mdy",
+            languageName = "Maale",
+            abbreviation = "MDYTWF",
+            license = "CC BY-SA 4.0",
+            rightsSummary = "Redistribution and adaptations are permitted with attribution and ShareAlike; identify any changes.",
+            sourceUrl = "https://www.ebible.org/details.php?id=mdyeth",
+            readiness = EditionReadiness.READY_FOR_PACKAGE_INTEGRATION,
+            fullBible = true,
+            attribution = "Copyright © 2008 The Word for the World International and Bible Society of Ethiopia.",
+        ),
+        BibleEditionSource(
             id = "eng-kjv2006",
             title = "King James (Authorized) Version",
             languageCode = "en",
