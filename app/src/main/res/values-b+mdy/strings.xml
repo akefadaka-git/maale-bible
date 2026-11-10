@@ -23,4 +23,10 @@
     <string name="home_study_description">ናባቢ ዔኬ ባኮና ማሊፆ ኔኤኮ ፃኣፖ ዓርቆ ቤሲ</string>
     <string name="home_the_living_word">ናንጋ ቃኣላ</string>
     <string name="home_pause_read_reflect">ዻካ ሳኣቴ ካፒንቴ! ናባቤ! ኮሺ ሂንዳ ማሌ!</string>
+    <!-- Owner-supplied Maale home wording; preserve spelling exactly. -->
+    <string name="home_make_space">ዻካ ሳኣቴዪዳ ጌዔዦ ማፃኣፓፓ ፔቴ ዓይሢ ናባባኒ ጊዜ ዒንጌ!</string>
+    <string name="home_explore_bible">ጌዔዦ ማፃኣፖ ቡሊ ዛጌ</string>
+    <string name="home_daily_scripture">ሃና ኬሎ ቃኣላ</string>
+    <string name="home_quiet_place">ሃና ኬሎ ቃኣሎም ዚቲ ጌዔ ቤሲ</string>
+    <string name="home_content_not_loaded">ጌዔዦ ማፃኣፓ ቡሉንቲባኣሴ!</string>
 </resources>
