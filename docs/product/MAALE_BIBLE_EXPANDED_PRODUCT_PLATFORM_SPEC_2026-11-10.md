@@ -1,10 +1,10 @@
 # Maale Bible — Expanded Product & Platform Specification
 
 **Document ID:** MB-PRODUCT-A1-02  
-**Version:** 1.1 — Expanded product-platform specification  
+**Version:** 1.2 — Owner-frozen expanded product-platform specification  
 **Date:** 2026-11-10  
 **Repository:** `akefadaka-git/maale-bible`  
-**Status:** A1 proposal for Owner review; not frozen; no implementation authorization implied.
+**Status:** A1 FROZEN by Owner decision on 2026-11-10; implementation and release remain separately gated.
 
 ## 1. Executive product vision
 
@@ -498,7 +498,7 @@ Measure real product value, not vanity metrics:
 
 Do not collect sensitive spiritual behaviour for advertising. Analytics must be minimised, transparent and consent-aware.
 
-## 21. Open decisions before A1 freeze
+## 22. Deferred decisions and evidence gates
 
 1. Exact feature quotas for each paid tier.
 2. Whether organisation subscriptions are separate from individual Elite.
@@ -513,7 +513,7 @@ Do not collect sensitive spiritual behaviour for advertising. Analytics must be 
 11. Data retention and cloud backup policy.
 12. Whether a web/desktop companion is in the initial product scope or a later release.
 
-## 22. Explicit non-authorisations
+## 23. Explicit non-authorisations
 
 This specification does not authorise:
 - Scripture ingestion or redistribution beyond verified rights.
@@ -523,4 +523,119 @@ This specification does not authorise:
 - Automatic cloud sync of private notes.
 - Main-branch changes, PR merge, signing, deployment or publication.
 
-**A1 status:** Expanded specification prepared for Owner review. A2 repository reconciliation remains the next engineering gate.
+**A1 status:** FROZEN. This baseline governs A2 reconciliation and subsequent implementation planning. No merge, payment activation, signing, deployment or publication is authorised.
+
+
+## 21. Owner decisions — A1 freeze (2026-11-10)
+
+**Decision record:** MB-OD-A1-01  
+**Authority:** Owner decision by Akefa Ayele Daka  
+**Status:** FROZEN for product scope and architecture planning. Numerical capacity limits below are initial launch entitlements and must be load-tested before commercial release. They do not authorise payment activation, cloud infrastructure spend or public launch.
+
+### 21.1 Membership entitlements
+
+The product has Guest, Free registered, and five paid levels: Silver, Gold, Platinum, Diamond and Elite. Every tier inherits the lower tier's benefits. Membership is a productivity/capacity distinction, never a spiritual or Scripture-access hierarchy.
+
+| Entitlement | Guest | Free | Silver | Gold | Platinum | Diamond | Elite |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Read every legally available free edition | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Offline reading of installed free editions | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Local personal notes/bookmarks/highlights | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| User-created groups (owned/administered) | 0 | 1 | 2 | 5 | 10 | 25 | 100 |
+| Maximum members per owned group | — | 12 | 20 | 50 | 100 | 250 | 500 |
+| Groups a user may join | 0 | 5 | 10 | 25 | 50 | 100 | 250 |
+| Personal export of user-authored data | Basic | Basic | Enhanced | Enhanced | Advanced | Advanced | Advanced |
+| Export of permitted group materials | — | Owner-authorised | Owner-authorised | Owner-authorised | Facilitator tools | Admin tools | Organisation controls |
+| Advanced creator/teaching templates | — | — | — | Study templates | Full creator/teaching suite | Team templates | Organisation brand kits |
+| Organisation administration | — | — | — | — | — | Limited team tools | Full organisation workspace |
+| Developer API/webhooks | — | — | — | — | — | — | Scoped, metered access |
+
+**Group-capacity interpretation:** group creation/administration limits apply to the group owner or administrator's entitlement. Ordinary participants can join a basic group without buying a subscription, subject to the free participation limit. A group must not require every participant to pay for ordinary reading or discussion. Group capacity upgrades must not silently remove existing members if an owner downgrades; existing groups enter a clear read-only/over-capacity state until the owner reduces capacity or restores an eligible tier.
+
+**Cloud storage and AI are not bundled as unlimited entitlements.** Cloud sync/storage and AI usage are separately metered capabilities, activated only after security, privacy, provider, cost and service-capacity gates. No automatic sync of private notes is introduced by membership.
+
+### 21.2 Export entitlements and portability
+
+1. Every account tier, including Free, can export the user's own data in portable machine-readable/basic formats: JSON, CSV where tabular, TXT and Markdown where applicable. Guest users can export local user-authored material supported by the device.
+2. Basic PDF print/export of user-authored notes and study documents is available to all registered tiers. No subscription is required to retrieve a user's own data.
+3. Silver adds polished PDF layouts and reusable personal document templates.
+4. Gold adds editable DOCX output, structured research dossiers and citation/reference formatting.
+5. Platinum adds PPTX presentations, sermon/lesson packs and batch export of eligible user-authored materials.
+6. Diamond adds role-controlled export of permitted group study packs and facilitator reports.
+7. Elite adds organisation-level document/report export, approved aggregate reports and administrative archive workflows.
+8. Account data export and account deletion are not premium-gated. A user's personal data portability is not held hostage by subscription status.
+9. Scripture export is governed separately by each edition's licence, quotation limits, attribution and permitted purpose. No tier unlocks rights that the platform does not possess. Paid tiers cannot export or redistribute a complete restricted Bible edition merely because the user subscribes.
+10. Export Centre must show included objects, format, rights restrictions, visibility, destination and estimated processing/usage cost before execution. Group exports require appropriate role permission and privacy filtering.
+
+### 21.3 AI policy
+
+**AI is opt-in, source-grounded assistance, not an authority.**
+
+- AI features are off until a user explicitly enables and invokes them; manual workflows remain available.
+- No AI feature may invent, reconstruct or silently alter Scripture, verse references, quotations, citations or bibliographic sources.
+- Responses must identify the Bible edition and other source materials actually retrieved; if no reliable source is available, the system must say so.
+- UI must visibly distinguish verbatim Scripture, sourced quotation, paraphrase, user-authored commentary and AI-generated interpretation.
+- AI-generated theological interpretation is not official doctrine, pastoral direction or a substitute for human judgement.
+- Human review is mandatory before teaching distribution, public commentary, sermon publication or external social publishing.
+- Private notes, prayer requests, personal profile data and non-public group discussions are excluded from model training and provider retention by default. They must not be sent to an AI provider unless the user separately opts into the specific data flow after clear disclosure.
+- AI requests must disclose whether processing is on-device or sent to a named external provider, what content is sent, retention terms, region where known, and any usage charge.
+- No AI provider is selected in A1. Provider selection requires a later security/privacy review, data-processing terms, cost model, availability assessment and explicit Owner approval.
+- AI quotas, paid AI bundles and model selection remain disabled/unpriced until measured cost and quality evidence exists. No unlimited AI promise.
+- Provide a visible AI-off control and a way to report inaccurate or harmful output. Preserve an audit trail for published AI-assisted material where appropriate and privacy-compatible.
+
+### 21.4 Integration decisions and release order
+
+**Initial release scope (provider-neutral, no paid external dependency):**
+- Android system share sheet / native share intents.
+- Android document picker and Storage Access Framework for user-selected import/export.
+- ICS calendar-file export and local calendar handoff where supported.
+- Email/messaging handoff through installed Android applications.
+- Android audio/media controls when licensed audio playback is implemented.
+- Local files and user-initiated backup/export.
+
+**Later integrations (not committed until separately assessed):**
+- Named cloud storage providers and account-based backup/sync.
+- Google/Android calendar account connections beyond ICS handoff.
+- WhatsApp, Facebook, Instagram, Telegram and YouTube direct publishing or analytics; initially share-sheet handoff only. Direct publishing requires each platform's official API, app review/permissions and a verified supported use case.
+- Church websites/CMS, LMS, church management systems, SSO and video meetings.
+- Publisher/content feeds and Bible licensing partners.
+- Payment/donation providers and regional payment rails.
+- REST API, OAuth 2.0, webhooks and developer console for Elite organisations.
+
+No provider, API entitlement, payment rail, data residency, price or availability is represented as confirmed by this specification. Each integration requires a named-provider assessment covering supported endpoints, data flow, scopes, credentials, revocation, retention, security, fees, fallback and support ownership. No password scraping or credential sharing.
+
+### 21.5 Group safeguards and community governance
+
+- New groups are private/invite-only by default. Discoverable/public communities remain disabled until moderation operations and safety controls are staffed and tested.
+- Group visibility, membership approval, roles, content retention and export permissions are explicit and reviewable.
+- Least-privilege roles; server-side authorisation; admin actions and membership changes are audited.
+- Users can report content/members, block or mute accounts, leave groups and appeal moderation decisions. Moderators can remove content/members and escalate serious safety incidents.
+- Rate limits, spam controls, invitation abuse controls and repeat-offender controls are mandatory before group launch.
+- Youth/children groups are closed, non-discoverable and age-appropriate; require documented safeguarding policy, guardian/consent handling appropriate to applicable law, and designated accountable adult moderators. No unsolicited adult-to-minor private messaging; no public child profiles or location disclosure. If these safeguards cannot be implemented and operated, youth groups are not launched.
+- Prayer requests and pastoral disclosures are private to the selected audience, never public-indexed or used for advertising/model training. The author can set an expiry; default expiry is 30 days unless the author chooses otherwise. Group owners cannot silently broaden visibility.
+- No public direct messaging in the initial release. Group discussion is threaded and scoped to the group.
+- Provide clear community rules, reporting categories, moderation decision records, appeals and transparent retention/deletion handling.
+- Do not promise 24/7 moderation or response times until staffing and escalation coverage are funded and demonstrated.
+
+### 21.6 Data, backup and sync boundaries
+
+- Local/private remains the default for personal notes, highlights and prayer content.
+- Cloud backup/sync is a separate, explicit opt-in with a clear data inventory, encryption design, conflict-resolution policy, retention schedule and account deletion behaviour.
+- Organisation administrators cannot read private personal notes by virtue of their organisation role.
+- Downgrade/cancellation does not delete a user's own data. Users receive a reasonable read/export path; any storage overage is handled by a disclosed grace/read-only policy, not silent deletion.
+- Analytics are minimised and must not profile inferred religious belief for advertising.
+
+### 21.7 Commercial and launch boundaries
+
+- No subscription prices, currencies, payment provider, billing frequency or launch geography are approved in A1. These require cost, legal, tax, payment availability and market validation.
+- No paid external provider, cloud storage commitment, AI usage commitment, SMS spend or API plan is authorised.
+- Premium licensed commentary, study libraries, audio and other supplementary content require source-by-source rights clearance and are not presumed included.
+- Tier limits above are product entitlement ceilings for implementation planning, not a representation that the current app or backend already enforces them. They must be load-tested and reviewed against operating costs before commercial activation.
+
+### 21.8 A1 closure and items deliberately deferred
+
+**A1 decisions frozen:** product positioning, audience, navigation direction, five paid tiers, free Scripture access, initial membership entitlements, export entitlement principles, AI policy, integration release order, group safeguards, privacy defaults and commercial approval boundaries.
+
+**Deferred to later evidence-based gates:** tier prices and billing terms; payment provider and supported currencies; named cloud/AI/social/organisation providers; cloud storage quotas; AI request quotas; premium content catalogue; legal review by launch jurisdiction; operational moderation staffing; detailed retention periods beyond the group prayer-request default; web/desktop release timing; and production capacity targets.
+
+**A1 closure statement:** This document is the frozen product and platform baseline for subsequent A2 reconciliation and A3 planning. Changes require a documented Owner-approved change request identifying the reason, affected requirements, compatibility impact and revised acceptance criteria. A1 freeze does not authorise implementation beyond separately approved A3 scope, PR merge, payment activation, external publishing, signing, deployment or release.
