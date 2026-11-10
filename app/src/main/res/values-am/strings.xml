@@ -33,4 +33,8 @@
     <string name="home_begin_journey">ጉዞዎን ይጀምሩ</string>
     <string name="home_choose_book">ለመጀመር መጽሐፍ ይምረጡ። የንባብ እድገት ሲገኝ እዚህ ይታያል።</string>
     <string name="home_start">ጀምር</string>
+
+    <string name="books_title">የማዓሌ መጽሐፍ ቅዱስ መጻሕፍት</string>
+    <string name="books_description">ይፋዊው የ66 መጻሕፍት ዝርዝር። የቅዱስ መጽሐፍ ጽሑፍ በዚህ ስሪት ውስጥ አልተጫነም።</string>
+    <string name="books_open_book">%1$s ክፈት</string>
 </resources>
