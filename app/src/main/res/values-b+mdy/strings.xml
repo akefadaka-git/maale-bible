@@ -29,4 +29,9 @@
     <string name="home_daily_scripture">ሃና ኬሎ ቃኣላ</string>
     <string name="home_quiet_place">ሃና ኬሎ ቃኣሎም ዚቲ ጌዔ ቤሲ</string>
     <string name="home_content_not_loaded">ጌዔዦ ማፃኣፓ ቡሉንቲባኣሴ!</string>
+    <string name="home_begin_journey">ጎይፆ ሃንታኒ ዓርቄ!</string>
+    <string name="home_start">ዓርቄ</string>
+    <string name="books_title">ማኣሌሦ ማፃኣፔ</string>
+    <string name="books_description">66 ጌኤዦ ማፃኣፖኮ ዚርዝሬ። ሃይካ ጌኤዦ ማፃኣፓ ጫኣኒንቲባኣሴ።</string>
+    <string name="books_open_book">%1$s ቡሌ</string>
 </resources>
