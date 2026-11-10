@@ -17,10 +17,10 @@ import zipfile
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Iterable
-
-PARSER_VERSION = "0.1.0"
-SCHEMA_VERSION = "1"
-MARKER_RE = re.compile(r"\\([+]?[A-Za-z0-9-]+)(\\*)?")
+MARKER_RE = re.compile(r"\\([+]?[A-Za-z0-9-]+)(\*)?")
+ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
+CHAPTER_RE = re.compile(r"^\\c\s+(\d+)(?:\s|$)")
+VERSE_RE = re.compile(r"^\\v\s+(\d+[a-z]?)(?:-(\d+[a-z]?))?(?:\s+|$)(.*)$")
 ID_RE = re.compile(r"^\\id\\s+([A-Z0-9]{3})(?:\\s|$)")
 CHAPTER_RE = re.compile(r"^\\c\\s+(\\d+)(?:\\s|$)")
 VERSE_RE = re.compile(r"^\\v\\s+(\\d+[a-z]?)(?:-(\\d+[a-z]?))?(?:\\s+|$)(.*)$")
@@ -51,7 +51,7 @@ def sha256_bytes(data: bytes) -> str:
 def _strip_excluded(text: str) -> str:
     for marker in EXCLUDED_BLOCKS:
         text = re.sub(
-            rf"\\{marker}\\b.*?\\{marker}\\*",
+            rf"\\{marker}\b.*?\\{marker}\*",
             " ",
             text,
             flags=re.DOTALL,
