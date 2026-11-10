@@ -21,9 +21,6 @@ MARKER_RE = re.compile(r"\\([+]?[A-Za-z0-9-]+)(\*)?")
 ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
 CHAPTER_RE = re.compile(r"^\\c\s+(\d+)(?:\s|$)")
 VERSE_RE = re.compile(r"^\\v\s+(\d+[a-z]?)(?:-(\d+[a-z]?))?(?:\s+|$)(.*)$")
-ID_RE = re.compile(r"^\\id\\s+([A-Z0-9]{3})(?:\\s|$)")
-CHAPTER_RE = re.compile(r"^\\c\\s+(\\d+)(?:\\s|$)")
-VERSE_RE = re.compile(r"^\\v\\s+(\\d+[a-z]?)(?:-(\\d+[a-z]?))?(?:\\s+|$)(.*)$")
 EXCLUDED_BLOCKS = ("f", "x", "fig")
 HEADING_MARKERS = {
     "d", "h", "imt1", "ip", "iot", "io1", "io2", "is2", "mt1", "mt2",
