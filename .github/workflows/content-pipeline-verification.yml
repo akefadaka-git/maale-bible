@@ -80,10 +80,10 @@ jobs:
             --registry content/canon/66-v1/registry.json \
             --output "$RUNNER_TEMP/mdyeth-two.sqlite" \
             --report "$RUNNER_TEMP/mdyeth-report-two.json"
-          python - <<'PY'
-          import json, pathlib
-          one = json.loads(pathlib.Path("$RUNNER_TEMP/mdyeth-report-one.json").read_text())
-          two = json.loads(pathlib.Path("$RUNNER_TEMP/mdyeth-report-two.json").read_text())
+          REPORT_ONE="$RUNNER_TEMP/mdyeth-report-one.json" REPORT_TWO="$RUNNER_TEMP/mdyeth-report-two.json" python - <<'PY'
+          import json, os, pathlib
+          one = json.loads(pathlib.Path(os.environ["REPORT_ONE"]).read_text())
+          two = json.loads(pathlib.Path(os.environ["REPORT_TWO"]).read_text())
           assert one["database"]["database_sha256"] == two["database"]["database_sha256"]
           assert one["verse_record_count"] == two["verse_record_count"]
           print({
