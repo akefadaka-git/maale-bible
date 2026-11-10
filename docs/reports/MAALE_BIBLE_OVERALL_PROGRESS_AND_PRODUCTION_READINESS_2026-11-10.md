@@ -228,3 +228,39 @@ This is **WAIVED FOR SEQUENCING**, not a security certification. The AI-assisted
 | Production readiness | NOT READY / NO-GO |
 
 Next implementation stage: build the Android private content import contract, integrity verification, atomic installation and rollback, read-only verse repository, and offline FTS5 search integration. Keep the generated content outside the public repository and retain the no-publication/no-merge governance boundary.
+
+
+---
+
+## 13. Search integration and multi-edition Bible catalogue — 10 November 2026
+
+Implementation branch: `feat/a4-search-multi-edition-catalogue`  
+Draft PR: [#44](https://github.com/akefadaka-git/maale-bible/pull/44)  
+Current implementation SHA: `477b8a1105c1ef15ab1eef606e20ff4e9b56c5e9`
+
+- Search now opens an installed private SQLite/FTS5 edition, debounces text queries, runs database work on IO, and displays source-native book/chapter/verse results. Book metadata lookup remains.
+- Private store now isolates multiple edition databases by edition ID; a selector is shown when more than one edition is installed.
+- Android instrumentation includes independent install/search coverage for two editions.
+- Added a Bibles library destination with source, language, completeness, license, attribution and readiness information.
+- English source catalogue currently includes KJV, ASV, WEB Classic, WEB Updated, ASV Byzantine Text, Geneva 1599, BSB, OEB, FBV, and JPS TaNaKH 1917 (Old Testament only), plus Maale 2008.
+- OEB current release is partial; FBV requires CC BY-SA attribution/share-alike; KJV has UK print/import caveat; BBE is listed for rights review due jurisdiction-specific US public-domain statement.
+- Amharic Open Word Bible is CC0 but held for named-reviewer editorial approval because the source labels the current text as AI-assisted draft. The 2003 UBS Amharic New Testament is held for rights review; its notice requires permission for commercial use.
+- No verified mature unrestricted Amharic edition is currently install-ready in the curated list. This does not prove that no such translation exists.
+- Bibles library opens official source pages and a small number of verified direct source-package URLs. **End-to-end in-app ZIP/USFM download, conversion and installation are not yet implemented.** The private installer currently accepts validated SQLite packages.
+- Exact-head P2 Android matrix and source-pipeline workflow: pending. Host-contracts passed on run [#42759051200](https://github.com/akefadaka-git/maale-bible/actions/runs/42759051200); source synthetic contracts passed on run [#42759051332](https://github.com/akefadaka-git/maale-bible/actions/runs/42759051332), while real-source private build remained queued at report time.
+
+### Gate status
+
+| Gate | Status |
+|---|---|
+| Installed-edition FTS5 Search UI | IMPLEMENTED — CI PENDING |
+| Multi-edition private storage | IMPLEMENTED — DEVICE MATRIX PENDING |
+| Language/licence-aware edition catalogue | IMPLEMENTED — curated, not exhaustive |
+| Official-source download links | PARTIAL — browser/source handoff |
+| In-app ZIP/USFM download and package conversion | NOT IMPLEMENTED |
+| Amharic unrestricted mature edition | NOT VERIFIED |
+| Maale/Amharic linguistic tokenizer qualification | NOT RUN |
+| Reader passage rendering from selected edition | NOT IMPLEMENTED |
+| Production readiness | NOT READY / NO-GO |
+
+Next: finish exact-head Android verification; implement source-specific download/import adapters and trusted package manifests; expand the English source register from authoritative provider catalogs; continue searching for Amharic translations with explicit redistribution rights and named editorial approval; then connect installed edition selection to Reader and qualify Amharic/English tokenizers separately. No merge, signing, deployment or publication is authorized.
