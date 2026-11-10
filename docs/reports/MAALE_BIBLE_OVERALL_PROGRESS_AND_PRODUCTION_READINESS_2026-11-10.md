@@ -199,3 +199,32 @@ This is **WAIVED FOR SEQUENCING**, not a security certification. The AI-assisted
 7. Obtain separate Owner authorization before merge to `main`, signing, deployment or publication.
 
 **Current decision:** continue implementation; production remains **NO-GO**. PRs #39–#41 remain draft/unmerged and `main` remains unchanged.
+
+
+---
+
+## 12. Maale source revalidation and A4 content pipeline — 10 November 2026
+
+- [Real source revalidation](../source-verification/REAL_SOURCE_REVALIDATION_2026-11-10.md): exact archive SHA and 66/66 file hashes PASS; ZIP CRC/safe metadata PASS; 66-book identity and structural/Unicode diagnostics PASS. GPG signature is cryptographically valid; key trust remains UNDEFINED.
+- [USFM parser and private SQLite/FTS5 pipeline](../source-verification/A4_USFM_CONTENT_PIPELINE_2026-11-10.md): exact-head workflow [#42757379089](https://github.com/akefadaka-git/maale-bible/actions/runs/42757379089) passed 7/7 synthetic tests, public content-boundary scan, actual 66-book source parse and private DB generation.
+- Actual source parse: 66 books, 1,189 chapters, 30,506 verse records. Two clean builds on the same runner/runtime produced the same DB digest `ccf284a586e12c4bf11e8ada54614fdf40ee1dd93a99466cffb266c744541b22` (22,134,784 bytes).
+- The workflow intentionally deleted the archive and generated databases after verification and uploaded no content artifact. The DB is therefore verified but not yet durably staged for app import.
+- Parser is a conservative initial plain-text/index extraction pass, not a complete USFM renderer. FTS5 `unicode61` is not linguistically qualified for Maale or Amharic.
+
+### Updated sequential gate status
+
+| Gate | Status |
+|---|---|
+| Owner waiver of independent review prerequisite | WAIVED FOR SEQUENCING |
+| Authentication service slices | PASS — exact-head CI; still service-layer only |
+| Real Maale source revalidation | PASS WITH SIGNER-TRUST / LINGUISTIC CAVEATS |
+| Marker-aware parser synthetic tests | PASS — 7/7 |
+| Actual source parsing and count reconciliation | PASS |
+| Private SQLite + FTS5 build and same-runtime reproducibility | PASS |
+| Rich USFM rendering | NOT IMPLEMENTED |
+| Maale/Amharic tokenizer qualification | NOT RUN |
+| Durable private content package | NOT STAGED |
+| Android offline content import/reader/search integration | NEXT |
+| Production readiness | NOT READY / NO-GO |
+
+Next implementation stage: build the Android private content import contract, integrity verification, atomic installation and rollback, read-only verse repository, and offline FTS5 search integration. Keep the generated content outside the public repository and retain the no-publication/no-merge governance boundary.
