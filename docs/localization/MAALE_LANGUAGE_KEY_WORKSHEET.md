@@ -19,13 +19,13 @@
 | `nav_home` | Home | መነሻ | ካራ |
 | `nav_books` | Books | መጻሕፍት | ማፃኣፖ |
 | `nav_search` | Search | ፍለጋ | ኮዔ |
-| `nav_bibles` | Bibles | መጽሐፍ ቅዱሶች | **Please provide:** |
+| `nav_bibles` | Bibles | መጽሐፍ ቅዱሶች | ጌዔዦ ማፃኣፖ |
 | `nav_listen` | Listen | ማዳመጥ | ዋይዜ |
 | `nav_study` | Study | ጥናት | ፃናዔ |
-| `language_label` | Interface language | የመተግበሪያ ቋንቋ | **Please provide:** |
-| `language_maale` | Maale (default) | ማዓሌ (ነባሪ) | **Please provide:** |
-| `language_amharic` | Amharic | አማርኛ | **Please provide:** |
-| `language_english` | English | እንግሊዝኛ | **Please provide:** |
+| `language_label` | Interface language | የመተግበሪያ ቋንቋ | ሙኢቺ |
+| `language_maale` | Maale (default) | ማሌኛ | ማሌሦ |
+| `language_amharic` | Amharic | አማርኛ | ዓማሬሦ |
+| `language_english` | English | እንግሊዝኛ | ፖራንጄሦ |
 | `language_fallback_notice` | Maale is the default. Labels without a reviewed Maale translation currently use English fallback text. | የማዓሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ። | **Please provide:** |
 
 ## 2. Home and book catalogue
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following ten entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** five navigation labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_listen`, and `nav_study`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** ten Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
