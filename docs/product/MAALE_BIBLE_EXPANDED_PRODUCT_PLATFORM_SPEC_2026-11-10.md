@@ -498,33 +498,6 @@ Measure real product value, not vanity metrics:
 
 Do not collect sensitive spiritual behaviour for advertising. Analytics must be minimised, transparent and consent-aware.
 
-## 22. Deferred decisions and evidence gates
-
-1. Exact feature quotas for each paid tier.
-2. Whether organisation subscriptions are separate from individual Elite.
-3. Which export formats are included in each tier.
-4. Group size, storage and collaboration limits.
-5. AI provider, privacy model, cost controls and allowed use cases.
-6. Initial social platforms and official API availability.
-7. Initial calendar, cloud storage and organisation integrations.
-8. Payment providers and supported currencies/regions.
-9. Moderation staffing, safeguarding and appeals policy.
-10. Premium supplementary content catalogue and distribution rights.
-11. Data retention and cloud backup policy.
-12. Whether a web/desktop companion is in the initial product scope or a later release.
-
-## 23. Explicit non-authorisations
-
-This specification does not authorise:
-- Scripture ingestion or redistribution beyond verified rights.
-- Paid provider commitments or payment processing.
-- External platform account publishing.
-- Public release of AI-generated commentary.
-- Automatic cloud sync of private notes.
-- Main-branch changes, PR merge, signing, deployment or publication.
-
-**A1 status:** FROZEN. This baseline governs A2 reconciliation and subsequent implementation planning. No merge, payment activation, signing, deployment or publication is authorised.
-
 
 ## 21. Owner decisions — A1 freeze (2026-11-10)
 
@@ -639,3 +612,30 @@ No provider, API entitlement, payment rail, data residency, price or availabilit
 **Deferred to later evidence-based gates:** tier prices and billing terms; payment provider and supported currencies; named cloud/AI/social/organisation providers; cloud storage quotas; AI request quotas; premium content catalogue; legal review by launch jurisdiction; operational moderation staffing; detailed retention periods beyond the group prayer-request default; web/desktop release timing; and production capacity targets.
 
 **A1 closure statement:** This document is the frozen product and platform baseline for subsequent A2 reconciliation and A3 planning. Changes require a documented Owner-approved change request identifying the reason, affected requirements, compatibility impact and revised acceptance criteria. A1 freeze does not authorise implementation beyond separately approved A3 scope, PR merge, payment activation, external publishing, signing, deployment or release.
+
+## 22. Deferred decisions and evidence gates
+
+1. Exact feature quotas for each paid tier.
+2. Whether organisation subscriptions are separate from individual Elite.
+3. Which export formats are included in each tier.
+4. Group size, storage and collaboration limits.
+5. AI provider, privacy model, cost controls and allowed use cases.
+6. Initial social platforms and official API availability.
+7. Initial calendar, cloud storage and organisation integrations.
+8. Payment providers and supported currencies/regions.
+9. Moderation staffing, safeguarding and appeals policy.
+10. Premium supplementary content catalogue and distribution rights.
+11. Data retention and cloud backup policy.
+12. Whether a web/desktop companion is in the initial product scope or a later release.
+
+## 23. Explicit non-authorisations
+
+This specification does not authorise:
+- Scripture ingestion or redistribution beyond verified rights.
+- Paid provider commitments or payment processing.
+- External platform account publishing.
+- Public release of AI-generated commentary.
+- Automatic cloud sync of private notes.
+- Main-branch changes, PR merge, signing, deployment or publication.
+
+**A1 status:** FROZEN. This baseline governs A2 reconciliation and subsequent implementation planning. No merge, payment activation, signing, deployment or publication is authorised.
