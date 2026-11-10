@@ -49,7 +49,14 @@ fun MaaleBibleApp() {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = {\n                        androidx.compose.foundation.layout.Column {\n                            Text(stringResource(R.string.app_name))\n                            if (language == AppLanguage.MAALE) {\n                                Text(stringResource(R.string.language_fallback_notice), style = androidx.compose.material3.MaterialTheme.typography.labelSmall)\n                            }\n                        }\n                    },
+                    title = {
+                        androidx.compose.foundation.layout.Column {
+                            Text(stringResource(R.string.app_name))
+                            if (language == AppLanguage.MAALE) {
+                                Text(stringResource(R.string.language_fallback_notice), style = androidx.compose.material3.MaterialTheme.typography.labelSmall)
+                            }
+                        }
+                    },
                     actions = {
                         TextButton(onClick = { languageMenuExpanded = true }) {
                             Text(stringResource(R.string.language_label))
