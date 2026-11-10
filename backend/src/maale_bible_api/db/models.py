@@ -66,7 +66,9 @@ class AuthSession(Base):
     __tablename__ = "auth_sessions"
     __table_args__ = (
         UniqueConstraint("refresh_token_hash", name="uq_auth_sessions_refresh_token_hash"),
+        UniqueConstraint("access_token_hash", name="uq_auth_sessions_access_token_hash"),
         CheckConstraint("length(refresh_token_hash) = 64", name="ck_auth_session_refresh_hash_sha256_hex"),
+        CheckConstraint("length(access_token_hash) = 64", name="ck_auth_session_access_hash_sha256_hex"),
         Index("ix_auth_sessions_account_active", "account_id", "revoked_at", "expires_at"),
         Index("ix_auth_sessions_token_family", "token_family_id"),
     )
@@ -77,6 +79,8 @@ class AuthSession(Base):
     )
     token_family_id: Mapped[UUID] = mapped_column(Uuid(as_uuid=True), nullable=False, default=uuid4)
     refresh_token_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    access_token_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    access_expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     rotated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     revoked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
