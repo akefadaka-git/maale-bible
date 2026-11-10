@@ -1,5 +1,7 @@
 package org.maale.bible.ui
 
+// Offline FTS search is edition-scoped; all database work runs off the main thread.
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
