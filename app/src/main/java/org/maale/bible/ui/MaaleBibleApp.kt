@@ -46,12 +46,16 @@ fun MaaleBibleApp() {
         var destination by remember { mutableStateOf(AppDestination.HOME) }
         var selectedBookId by remember { mutableStateOf<String?>(null) }
         var languageMenuExpanded by remember { mutableStateOf(false) }
+        var accountOpen by remember { mutableStateOf(false) }
 
         Scaffold(
             topBar = {
                 TopAppBar(
                     title = { Text(stringResource(R.string.app_name)) },
                     actions = {
+                        TextButton(onClick = { accountOpen = !accountOpen }) {
+                            Text(stringResource(R.string.account_open))
+                        }
                         TextButton(onClick = { languageMenuExpanded = true }) {
                             Text(stringResource(R.string.language_label))
                         }
@@ -107,7 +111,9 @@ fun MaaleBibleApp() {
                 }
             }
         ) { padding ->
-            if (selectedBookId != null) {
+            if (accountOpen) {
+                AccountScreen(onContinueAsGuest = { accountOpen = false }, modifier = Modifier.padding(padding))
+            } else if (selectedBookId != null) {
                 ReaderPlaceholderScreen(
                     selectedBookId!!,
                     { selectedBookId = null },
