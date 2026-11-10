@@ -52,10 +52,14 @@ def verify_and_activate_registration(
                 .where(RegistrationChallenge.id == challenge_id)
                 .with_for_update()
             )
+            challenge_expiry = challenge.expires_at if challenge is not None else None
+            if challenge_expiry is not None and challenge_expiry.tzinfo is None:
+                # SQLite drops timezone metadata for DateTime(timezone=True).
+                challenge_expiry = challenge_expiry.replace(tzinfo=timezone.utc)
             if (
                 challenge is None
                 or challenge.consumed_at is not None
-                or challenge.expires_at <= instant
+                or challenge_expiry <= instant
                 or challenge.attempts_remaining <= 0
             ):
                 return None
