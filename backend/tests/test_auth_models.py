@@ -108,6 +108,8 @@ def test_session_refresh_hash_is_unique_and_bound_to_account(db_session):
         account_id=account.id,
         token_family_id=uuid4(),
         refresh_token_hash="c" * 64,
+        access_token_hash="e" * 64,
+        access_expires_at=datetime.now(timezone.utc) + timedelta(minutes=15),
         expires_at=datetime.now(timezone.utc) + timedelta(days=14),
     )
     db_session.add(session)
@@ -120,6 +122,8 @@ def test_session_refresh_hash_is_unique_and_bound_to_account(db_session):
         account_id=account.id,
         token_family_id=uuid4(),
         refresh_token_hash="c" * 64,
+        access_token_hash="f" * 64,
+        access_expires_at=datetime.now(timezone.utc) + timedelta(minutes=15),
         expires_at=datetime.now(timezone.utc) + timedelta(days=14),
     ))
     with pytest.raises(IntegrityError):
@@ -131,6 +135,8 @@ def test_session_rejects_unknown_account(db_session):
         account_id=uuid4(),
         token_family_id=uuid4(),
         refresh_token_hash="d" * 64,
+        access_token_hash="g" * 64,
+        access_expires_at=datetime.now(timezone.utc) + timedelta(minutes=15),
         expires_at=datetime.now(timezone.utc) + timedelta(days=14),
     ))
     with pytest.raises(IntegrityError):

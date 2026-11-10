@@ -14,6 +14,9 @@ def test_initial_auth_migration_creates_expected_tables() -> None:
         config.attributes["connection"] = connection
         command.upgrade(config, "head")
 
-    table_names = set(inspect(engine).get_table_names())
+    inspector = inspect(engine)
+    table_names = set(inspector.get_table_names())
     assert {"accounts", "registration_challenges", "auth_sessions", "registration_rate_limit_buckets", "alembic_version"} <= table_names
+    session_columns = {column["name"] for column in inspector.get_columns("auth_sessions")}
+    assert {"access_token_hash", "access_expires_at", "refresh_token_hash", "expires_at"} <= session_columns
     engine.dispose()
