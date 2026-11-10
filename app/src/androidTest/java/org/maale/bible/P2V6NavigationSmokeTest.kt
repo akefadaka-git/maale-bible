@@ -15,6 +15,26 @@ class P2V6NavigationSmokeTest {
     @get:Rule
     val composeRule = createAndroidComposeRule<MainActivity>()
 
+    @Before
+    fun resetLanguagePreference() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        context.getSharedPreferences("maale_bible_preferences", Context.MODE_PRIVATE)
+            .edit().clear().commit()
+    }
+
+    @Test
+    fun languageSelectionAppliesAmharicAndEnglishInterfaceResources() {
+        composeRule.onNodeWithText("Interface language").performClick()
+        composeRule.onNodeWithText("Amharic").performClick()
+        composeRule.onNodeWithText("የማዓሌ መጽሐፍ ቅዱስ").assertIsDisplayed()
+        composeRule.onNodeWithText("መነሻ").assertIsDisplayed()
+
+        composeRule.onNodeWithText("የመተግበሪያ ቋንቋ").performClick()
+        composeRule.onNodeWithText("እንግሊዝኛ").performClick()
+        composeRule.onNodeWithText("Maale Bible").assertIsDisplayed()
+        composeRule.onNodeWithText("Home").assertIsDisplayed()
+    }
+
     @Test
     fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
