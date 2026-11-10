@@ -194,6 +194,7 @@ fun SearchPlaceholderScreen(
                 }
             }
         }
+    }
 }
 
 @Composable
