@@ -5,7 +5,8 @@ set -eu
 
 expected_api="${ANDROID_EXPECTED_API:?ANDROID_EXPECTED_API must be set}"
 log_prefix="app/build/ci-emulator-api-${expected_api}"
-log_file="${log_prefix}-attempt-1.log"
+attempt=1
+log_file="${log_prefix}-attempt-${attempt}.log"
 mkdir -p "$(dirname "${log_file}")"
 
 diagnostics() {
@@ -23,7 +24,7 @@ diagnostics() {
 }
 
 wait_for_ready() {
-  deadline=$(( $(date +%s) + 240 ))
+  deadline=$(( $(date +%s) + 360 ))
   while [ "$(date +%s)" -lt "${deadline}" ]; do
     state="$(timeout 8s adb get-state 2>/dev/null || true)"
     if [ "${state}" = "device" ]; then
@@ -46,15 +47,19 @@ wait_for_ready() {
   return 1
 }
 
-echo "Waiting for emulator API ${expected_api}."
-timeout 45s adb wait-for-device || true
-if ! wait_for_ready; then
-  echo "::warning::Restarting the ADB server once after initial readiness failure."
+recover_adb() {
+  echo "::warning::Restarting ADB and waiting for a clean emulator state (attempt ${attempt})."
   adb kill-server 2>&1 || true
   sleep 2
   adb start-server 2>&1 || true
   timeout 45s adb wait-for-device || true
   wait_for_ready
+}
+
+echo "Waiting for emulator API ${expected_api}."
+timeout 45s adb wait-for-device || true
+if ! wait_for_ready; then
+  recover_adb
 fi
 
 run_instrumentation() {
@@ -68,6 +73,19 @@ run_instrumentation() {
   fi
 }
 
+is_retryable_infrastructure_failure() {
+  # Once instrumentation has started, never classify a failure as retryable:
+  # this prevents an application/test failure from being masked by incidental
+  # ADB or emulator diagnostics later in the same Gradle log.
+  if grep -Eq 'Starting [0-9]+ tests on emulator|There were failing tests|(^|[[:space:]])FAILED([[:space:]]|$)' "${log_file}"; then
+    return 1
+  fi
+
+  grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APK|Failed to commit install session|Broken pipe|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb|Could not load test results' "${log_file}" ||
+    { grep -Eiq 'device offline|device unauthorized|Lost network stack|FATAL EXCEPTION IN SYSTEM PROCESS|DeadSystemException' "${log_file}" &&
+      ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }
+}
+
 if run_instrumentation; then
   echo "Instrumentation tests passed on API ${expected_api}."
   exit 0
@@ -75,25 +93,20 @@ else
   test_rc=$?
 fi
 
-# Retry only infrastructure/device-discovery failures. Never retry or hide a real
-# assertion, compilation, or application test failure.
-if grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APKs|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb' "${log_file}" ||
-   { grep -Eiq 'device offline|device unauthorized' "${log_file}" &&
-     ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }; then
-  echo "::warning::Detected an ADB/device infrastructure failure on API ${expected_api}; performing one bounded recovery and rerun."
-  log_file="${log_prefix}-attempt-2.log"
-  adb kill-server 2>&1 || true
-  sleep 2
-  adb start-server 2>&1 || true
-  timeout 45s adb wait-for-device || true
-  wait_for_ready
+# Permit at most two bounded retries, and only for failures before instrumentation
+# starts. Assertion failures and ordinary application test failures are never retried.
+while [ "${attempt}" -lt 3 ] && is_retryable_infrastructure_failure; do
+  attempt=$((attempt + 1))
+  log_file="${log_prefix}-attempt-${attempt}.log"
+  echo "::warning::Detected a pre-instrumentation emulator/ADB failure on API ${expected_api}; bounded recovery ${attempt}/2."
+  recover_adb
   if run_instrumentation; then
-    echo "Instrumentation tests passed after one infrastructure recovery on API ${expected_api}."
+    echo "Instrumentation tests passed after infrastructure recovery on API ${expected_api}."
     exit 0
   else
     test_rc=$?
   fi
-fi
+done
 
 echo "::error::Instrumentation tests failed on API ${expected_api}; no further retries will hide this result."
 diagnostics
