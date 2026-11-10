@@ -36,6 +36,15 @@ class P2V6NavigationSmokeTest {
     }
 
     @Test
+    fun accountEntryDoesNotBlockGuestReadingOrClaimAuthentication() {
+        composeRule.onNodeWithText("Account").performClick()
+        composeRule.onNodeWithText("Your account").assertIsDisplayed()
+        composeRule.onNodeWithText("Account service not connected").assertIsDisplayed()
+        composeRule.onNodeWithText("Continue reading as guest").performClick()
+        composeRule.onNodeWithText("Explore the Bible").assertIsDisplayed()
+    }
+
+    @Test
     fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
         composeRule.onNodeWithText("Explore the Bible").performClick()
