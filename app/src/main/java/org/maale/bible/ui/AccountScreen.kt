@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -29,6 +30,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import org.maale.bible.R
 
+@OptIn(ExperimentalMaterial3Api::class)
 /** UI-only account entry. It never claims authentication without a live server-issued session. */
 @Composable
 fun AccountScreen(onContinueAsGuest: () -> Unit, modifier: Modifier = Modifier) {
