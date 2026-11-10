@@ -29,7 +29,7 @@ HEADING_MARKERS = {
 PARAGRAPH_MARKERS = {"p", "m", "q1", "q2", "b", "ili"}
 KNOWN_MARKERS = (
     HEADING_MARKERS | PARAGRAPH_MARKERS | {"id", "c", "v", "f", "x", "fig",
-    "fr", "fq", "ft", "xo", "xt"}
+    "fr", "fq", "ft", "xo", "xt", "add"}
 )
 
 @dataclass(frozen=True)
@@ -65,6 +65,8 @@ def _plain_text(text: str) -> str:
 
 def parse_usfm(text: str, expected_book_id: str) -> list[VerseRecord]:
     """Conservative verse parser; unsupported markers fail closed."""
+    # Remove complete note, cross-reference and figure blocks across line boundaries.
+    text = _strip_excluded(text)
     current_book: str | None = None
     current_chapter: int | None = None
     current_ref: str | None = None
