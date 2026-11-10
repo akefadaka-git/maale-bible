@@ -14,8 +14,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalConfiguration
 import android.content.res.Configuration
 import android.os.LocaleList
 import androidx.compose.runtime.CompositionLocalProvider
@@ -51,7 +49,7 @@ fun MaaleBibleApp() {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text(stringResource(R.string.app_name)) },
+                    title = {\n                        androidx.compose.foundation.layout.Column {\n                            Text(stringResource(R.string.app_name))\n                            if (language == AppLanguage.MAALE) {\n                                Text(stringResource(R.string.language_fallback_notice), style = androidx.compose.material3.MaterialTheme.typography.labelSmall)\n                            }\n                        }\n                    },
                     actions = {
                         TextButton(onClick = { languageMenuExpanded = true }) {
                             Text(stringResource(R.string.language_label))
