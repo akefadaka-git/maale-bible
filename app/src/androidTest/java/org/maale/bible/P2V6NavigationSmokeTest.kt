@@ -4,6 +4,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
@@ -24,13 +25,13 @@ class P2V6NavigationSmokeTest {
 
     @Test
     fun languageSelectionAppliesAmharicAndEnglishInterfaceResources() {
-        composeRule.onNodeWithText("Interface language").performClick()
-        composeRule.onNodeWithText("Amharic").performClick()
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_amharic").performClick()
         composeRule.onNodeWithText("የማዓሌ መጽሐፍ ቅዱስ").assertIsDisplayed()
         composeRule.onNodeWithText("መነሻ").assertIsDisplayed()
 
-        composeRule.onNodeWithText("የመተግበሪያ ቋንቋ").performClick()
-        composeRule.onNodeWithText("እንግሊዝኛ").performClick()
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
         composeRule.onNodeWithText("Maale Bible").assertIsDisplayed()
         composeRule.onNodeWithText("Home").assertIsDisplayed()
     }
