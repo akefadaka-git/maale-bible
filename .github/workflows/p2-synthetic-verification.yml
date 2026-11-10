@@ -60,6 +60,13 @@ jobs:
             exit 1
           fi
 
+          # Accept licences before installing legacy API packages (notably API 28).
+          # yes may receive SIGPIPE after sdkmanager finishes; ignore only that
+          # producer status, then restore strict pipeline handling for all installs.
+          set +o pipefail
+          yes | "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --licenses >/dev/null
+          set -o pipefail
+
           platform="platforms;android-${ANDROID_API}"
           image="system-images;android-${ANDROID_API};default;x86_64"
           installed=false
@@ -87,6 +94,17 @@ jobs:
           "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --list_installed | grep -F "${platform}"
           "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --list_installed | grep -F "${image}"
           echo "Verified SDK platform and AOSP emulator image for API ${ANDROID_API}."
+
+      - name: Enable KVM access for Android emulator
+        shell: bash
+        run: |
+          if [[ -e /dev/kvm ]]; then
+            sudo chmod 666 /dev/kvm
+            test -r /dev/kvm && test -w /dev/kvm
+            echo "KVM is readable and writable by the hosted runner user."
+          else
+            echo "::warning::/dev/kvm is unavailable; emulator will use software acceleration."
+          fi
 
       - uses: reactivecircus/android-emulator-runner@v2
         with:
