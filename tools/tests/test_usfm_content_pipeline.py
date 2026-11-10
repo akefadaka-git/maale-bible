@@ -71,6 +71,13 @@ class UsfmContentPipelineTests(unittest.TestCase):
                 "source": {
                     "edition_id": "synthetic-edition",
                     "archive_sha256": hashlib.sha256(archive_path.read_bytes()).hexdigest(),
+                    "archive_bytes": archive_path.stat().st_size,
+                },
+                "structural_validation": {
+                    "chapter_count": 2,
+                    "verse_marker_lines": 2,
+                    "represented_verse_spans_including_ranges": 2,
+                    "verse_range_marker_instances": 0,
                 },
                 "source_files": [
                     {
