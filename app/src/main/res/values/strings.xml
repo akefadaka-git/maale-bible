@@ -33,4 +33,8 @@
     <string name="home_begin_journey">Begin your journey</string>
     <string name="home_choose_book">Choose a book to start. Reading progress will appear here as it becomes available.</string>
     <string name="home_start">Start</string>
+
+    <string name="books_title">Books of the Maale Bible</string>
+    <string name="books_description">Official 66-book catalogue. Scripture content is not loaded in this build.</string>
+    <string name="books_open_book">Open %1$s</string>
 </resources>
