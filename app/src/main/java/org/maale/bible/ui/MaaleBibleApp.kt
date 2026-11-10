@@ -13,6 +13,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import android.content.res.Configuration
@@ -56,7 +57,7 @@ fun MaaleBibleApp() {
                         TextButton(onClick = { accountOpen = !accountOpen }) {
                             Text(stringResource(R.string.account_open))
                         }
-                        TextButton(onClick = { languageMenuExpanded = true }) {
+                        TextButton(onClick = { languageMenuExpanded = true }, modifier = Modifier.testTag("language_selector")) {
                             Text(stringResource(R.string.language_label))
                         }
                         DropdownMenu(
@@ -72,6 +73,7 @@ fun MaaleBibleApp() {
                             }
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.language_maale)) },
+                                modifier = Modifier.testTag("language_maale"),
                                 onClick = {
                                     language = AppLanguage.MAALE
                                     AppLanguage.save(context, language)
@@ -80,6 +82,7 @@ fun MaaleBibleApp() {
                             )
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.language_amharic)) },
+                                modifier = Modifier.testTag("language_amharic"),
                                 onClick = {
                                     language = AppLanguage.AMHARIC
                                     AppLanguage.save(context, language)
@@ -88,6 +91,7 @@ fun MaaleBibleApp() {
                             )
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.language_english)) },
+                                modifier = Modifier.testTag("language_english"),
                                 onClick = {
                                     language = AppLanguage.ENGLISH
                                     AppLanguage.save(context, language)
