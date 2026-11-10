@@ -47,6 +47,10 @@ def sha256_bytes(data: bytes) -> str:
 
 def _strip_excluded(text: str) -> str:
     for marker in EXCLUDED_BLOCKS:
+        opening = len(re.findall(rf"\\{marker}(?![A-Za-z0-9*])", text))
+        closing = len(re.findall(rf"\\{marker}\*", text))
+        if opening != closing:
+            raise ValueError("unbalanced excluded USFM block")
         text = re.sub(
             rf"\\{marker}\b.*?\\{marker}\*",
             " ",
@@ -121,15 +125,17 @@ def parse_usfm(text: str, expected_book_id: str) -> list[VerseRecord]:
             key = (current_chapter, verse_ref)
             if key in seen_refs:
                 raise ValueError(f"duplicate verse reference at line {line_number}")
-            start_num = int(re.match(r"\d+", start_ref).group())
+            start_match = re.fullmatch(r"(\d+)([a-z]?)", start_ref)
             end_token = end_ref or start_ref
-            end_num = int(re.match(r"\d+", end_token).group())
-            if end_num < start_num:
+            end_match = re.fullmatch(r"(\d+)([a-z]?)", end_token)
+            start_key = (int(start_match.group(1)), start_match.group(2))
+            end_key = (int(end_match.group(1)), end_match.group(2))
+            if end_key < start_key:
                 raise ValueError(f"descending verse range at line {line_number}")
             previous = last_verse_by_chapter.get(current_chapter)
-            if previous and start_num <= previous[0]:
+            if previous and start_key <= previous[0]:
                 raise ValueError(f"non-increasing verse sequence at line {line_number}")
-            last_verse_by_chapter[current_chapter] = (end_num, verse_ref)
+            last_verse_by_chapter[current_chapter] = (end_key, verse_ref)
             seen_refs.add(key)
             current_ref = verse_ref
             cleaned = _plain_text(body)
