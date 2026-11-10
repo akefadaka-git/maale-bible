@@ -34,7 +34,7 @@
 |---|---|---|---|
 | `home_make_it_yours` | Make it yours | የእርስዎ ያድርጉት | ኔሮ ማሄ |
 | `home_reading_journey` | Your reading journey | የንባብ ጉዞዎ | ኔ ናባባ ጎይፆ |
-| `home_explore` | Explore | ያስሱ | ዛጌ |
+| `home_explore` | Explore | ያስሱ | ቡሊ ዛጌ |
 | `home_world_of_scripture` | A world of Scripture | የቅዱስ መጽሐፍ ዓለም | ጌዔዦ ማፃኣፖኮ ዓጮ |
 | `home_catalogue` | 66-book catalogue | 66 መጻሕፍት ዝርዝር | 66 ማፃኣፖ |
 | `home_browse_catalogue` | Browse the canonical book list. | የተወሰነውን የመጻሕፍት ዝርዝር ይመልከቱ። | **Please provide:** |
