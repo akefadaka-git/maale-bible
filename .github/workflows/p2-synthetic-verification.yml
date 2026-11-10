@@ -29,8 +29,9 @@ jobs:
           name: p2-host-evidence
           path: verification/p2/host-verification-results.json
   android-fts5:
+    needs: [host-contracts, debug-apk]
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 120
     strategy:
       fail-fast: false
       max-parallel: 1
@@ -43,34 +44,50 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
-      - name: Prefetch and validate Android emulator system image
+      - name: Preinstall and verify Android SDK platform and emulator image
         shell: bash
         env:
           ANDROID_API: ${{ matrix.api }}
         run: |
           set -euo pipefail
-          package="system-images;android-${ANDROID_API};default;x86_64"
-          sdkmanager_bin="${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager"
-          if [ ! -x "${sdkmanager_bin}" ]; then
-            echo "::error::Android sdkmanager not found at ${sdkmanager_bin}"
+          SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="${SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager"
+          if [[ ! -x "${SDKMANAGER}" ]]; then
+            SDKMANAGER="$(find "${SDK_ROOT}/cmdline-tools" -type f -name sdkmanager -print -quit)"
+          fi
+          if [[ -z "${SDKMANAGER}" || ! -x "${SDKMANAGER}" ]]; then
+            echo "::error::Android sdkmanager not found under ${SDK_ROOT}"
             exit 1
           fi
+
+          platform="platforms;android-${ANDROID_API}"
+          image="system-images;android-${ANDROID_API};default;x86_64"
           installed=false
           for attempt in 1 2 3; do
-            echo "Installing ${package} (attempt ${attempt}/3)"
-            if yes | "${sdkmanager_bin}" --install "${package}"; then
+            echo "Installing ${platform} and ${image} (attempt ${attempt}/3)."
+            if "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --install "${platform}" "${image}"; then
               installed=true
               break
             fi
-            echo "::warning::SDK image installation failed; clearing transient SDK download cache before retry."
-            rm -rf "${ANDROID_HOME}/.temp" "${HOME}/.android/cache"
-            sleep $((attempt * 10))
+            if [[ "${attempt}" -lt 3 ]]; then
+              echo "::warning::SDK archive/install failed; removing only partial API ${ANDROID_API} packages and transient download caches."
+              rm -rf "${SDK_ROOT}/platforms/android-${ANDROID_API}"
+              rm -rf "${SDK_ROOT}/system-images/android-${ANDROID_API}/default/x86_64"
+              rm -rf "${SDK_ROOT}/.temp" "${SDK_ROOT}/temp" "${HOME}/.android/cache"
+              sleep $((attempt * 15))
+            fi
           done
-          if [ "${installed}" != true ]; then
-            echo "::error::Could not install a valid Android API ${ANDROID_API} emulator image after three attempts."
+          if [[ "${installed}" != true ]]; then
+            echo "::error::Android API ${ANDROID_API} SDK packages could not be installed after three attempts."
             exit 1
           fi
-          "${sdkmanager_bin}" --list_installed | grep -F "system-images;android-${ANDROID_API};default;x86_64"
+
+          test -s "${SDK_ROOT}/platforms/android-${ANDROID_API}/source.properties"
+          test -s "${SDK_ROOT}/system-images/android-${ANDROID_API}/default/x86_64/source.properties"
+          "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --list_installed | grep -F "${platform}"
+          "${SDKMANAGER}" --sdk_root="${SDK_ROOT}" --list_installed | grep -F "${image}"
+          echo "Verified SDK platform and AOSP emulator image for API ${ANDROID_API}."
+
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.api }}
