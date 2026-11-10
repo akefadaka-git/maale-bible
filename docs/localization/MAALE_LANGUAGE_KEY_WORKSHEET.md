@@ -42,11 +42,11 @@
 | `home_study_description` | A home for notes and discoveries. | ለማስታወሻዎችና ለግኝቶች የተዘጋጀ ቦታ። | ናባቢ ዔኬ ባኮና ማሊፆ ኔኤኮ ፃኣፖ ዓርቆ ቤሲ |
 | `home_the_living_word` | The Living Word | ሕያው ቃል | ናንጋ ቃኣላ |
 | `home_pause_read_reflect` | A moment to pause. Read. Reflect. | ለአፍታ ይቆዩ። ያንብቡ። ያስቡ። | ዻካ ሳኣቴ ካፒንቴ! ናባቤ! ኮሺ ሂንዳ ማሌ! |
-| `home_make_space` | Make space for Scripture, one chapter at a time. | በአንድ ምዕራፍ አንድ ምዕራፍ ለቅዱስ መጽሐፍ ጊዜ ይስጡ። | **Please provide:** |
-| `home_explore_bible` | Explore the Bible | መጽሐፍ ቅዱሱን ያስሱ | **Please provide:** |
-| `home_daily_scripture` | Daily Scripture | የዕለቱ ቅዱስ ቃል | **Please provide:** |
-| `home_quiet_place` | A quiet place for today's Word. | ለዛሬው ቃል ጸጥ ያለ ቦታ። | **Please provide:** |
-| `home_content_not_loaded` | Scripture content not yet loaded | የቅዱስ መጽሐፍ ይዘት ገና አልተጫነም | **Please provide:** |
+| `home_make_space` | Make space for Scripture, one chapter at a time. | በአንድ ምዕራፍ አንድ ምዕራፍ ለቅዱስ መጽሐፍ ጊዜ ይስጡ። | ዻካ ሳኣቴዪዳ ጌዔዦ ማፃኣፓፓ ፔቴ ዓይሢ ናባባኒ ጊዜ ዒንጌ! |
+| `home_explore_bible` | Explore the Bible | መጽሐፍ ቅዱሱን ያስሱ | ጌዔዦ ማፃኣፖ ቡሊ ዛጌ |
+| `home_daily_scripture` | Daily Scripture | የዕለቱ ቅዱስ ቃል | ሃና ኬሎ ቃኣላ |
+| `home_quiet_place` | A quiet place for today's Word. | ለዛሬው ቃል ጸጥ ያለ ቦታ። | ሃና ኬሎ ቃኣሎም ዚቲ ጌዔ ቤሲ |
+| `home_content_not_loaded` | Scripture content not yet loaded | የቅዱስ መጽሐፍ ይዘት ገና አልተጫነም | ጌዔዦ ማፃኣፓ ቡሉንቲባኣሴ! |
 | `home_begin_journey` | Begin your journey | ጉዞዎን ይጀምሩ | **Please provide:** |
 | `home_start` | Start | ጀምር | **Please provide:** |
 | `books_title` | Books of the Maale Bible | የማዓሌ መጽሐፍ ቅዱስ መጻሕፍት | **Please provide:** |
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following twenty entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following twenty-five entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** twenty Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** twenty-five Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
