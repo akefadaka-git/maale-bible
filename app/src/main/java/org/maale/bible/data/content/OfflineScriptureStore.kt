@@ -99,7 +99,6 @@ class OfflineScriptureStore private constructor(
     }
 
     companion object {
-        private const val EDITION_ID = "MDYTWF / mdyeth"
         private const val DATABASE_NAME = "content.sqlite"
         private const val DESCRIPTOR_NAME = "manifest.properties"
         private const val MAX_DATABASE_BYTES = 100L * 1024L * 1024L
@@ -108,11 +107,30 @@ class OfflineScriptureStore private constructor(
         private const val BASELINE_TOKENIZER_STATUS = "ENGINEERING_BASELINE_NOT_LINGUISTICALLY_QUALIFIED"
 
         private fun contentRoot(context: Context) = File(context.filesDir, "offline-content")
-        private fun currentDirectory(context: Context) = File(contentRoot(context), "current")
+        private fun editionRoot(context: Context, editionId: String): File {
+            val key = MessageDigest.getInstance("SHA-256")
+                .digest(editionId.toByteArray(Charsets.UTF_8))
+                .joinToString("") { "%02x".format(it.toInt() and 0xff) }
+            return File(contentRoot(context), key)
+        }
 
-        fun openInstalled(context: Context): OfflineScriptureStore? {
-            val current = currentDirectory(context)
-            val backup = File(contentRoot(context), "previous")
+        fun installedEditions(context: Context): List<OfflineContentDescriptor> {
+            val root = contentRoot(context)
+            if (!root.isDirectory) return emptyList()
+            return root.listFiles().orEmpty().filter { it.isDirectory }.mapNotNull { directory ->
+                runCatching {
+                    val manifest = File(directory, "current/$DESCRIPTOR_NAME")
+                    require(manifest.isFile)
+                    readDescriptor(manifest).also(::validateDescriptor)
+                }.getOrNull()
+            }.sortedBy { it.editionId }
+        }
+
+        fun openInstalled(context: Context, editionId: String? = null): OfflineScriptureStore? {
+            val selectedId = editionId ?: installedEditions(context).firstOrNull()?.editionId ?: return null
+            val root = editionRoot(context, selectedId)
+            val current = File(root, "current")
+            val backup = File(root, "previous")
             if (!current.exists() && backup.exists()) moveAtomically(backup, current)
             val database = File(current, DATABASE_NAME)
             val descriptorFile = File(current, DESCRIPTOR_NAME)
@@ -148,12 +166,12 @@ class OfflineScriptureStore private constructor(
             descriptor: OfflineContentDescriptor,
         ): OfflineContentDescriptor {
             validateDescriptor(descriptor)
-            val root = contentRoot(context)
-            check(root.mkdirs() || root.isDirectory) { "Cannot create private content directory" }
+            val root = editionRoot(context, descriptor.editionId)
+            check(root.mkdirs() || root.isDirectory) { "Cannot create private edition directory" }
             val stage = File(root, "staging-" + System.nanoTime().toString())
             val stageDatabase = File(stage, DATABASE_NAME)
             val stageDescriptor = File(stage, DESCRIPTOR_NAME)
-            val current = currentDirectory(context)
+            val current = File(root, "current")
             val backup = File(root, "previous")
             check(!stage.exists() && stage.mkdir()) { "Cannot create private staging directory" }
 
@@ -263,13 +281,13 @@ class OfflineScriptureStore private constructor(
             }
 
         private fun validateDescriptor(descriptor: OfflineContentDescriptor) {
-            require(descriptor.editionId == EDITION_ID)
+            require(descriptor.editionId.isNotBlank() && descriptor.editionId.length <= 128)
             require(descriptor.sourceArchiveSha256.matches(Regex("[a-f0-9]{64}")))
             require(descriptor.databaseSha256.matches(Regex("[a-f0-9]{64}")))
             require(descriptor.databaseBytes in 1..MAX_DATABASE_BYTES)
             require(descriptor.schemaVersion == EXPECTED_SCHEMA_VERSION)
             require(descriptor.parserVersion.isNotBlank())
-            require(descriptor.bookCount == 66)
+            require(descriptor.bookCount in 1..66)
             require(descriptor.chapterCount > 0 && descriptor.verseCount > 0)
             require(descriptor.ftsCount == descriptor.verseCount)
             require(descriptor.ftsTokenizer == EXPECTED_TOKENIZER)
