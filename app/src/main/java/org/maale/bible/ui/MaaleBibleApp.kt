@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.LocalContext
 import android.content.res.Configuration
 import android.os.LocaleList
@@ -42,8 +43,17 @@ fun MaaleBibleApp() {
             setLocales(LocaleList.forLanguageTags(language.tag))
         }
     }
+    val localizedContext = remember(context, localizedConfiguration) {
+        context.createConfigurationContext(localizedConfiguration)
+    }
 
-    CompositionLocalProvider(LocalConfiguration provides localizedConfiguration) {
+    // Compose stringResource reads LocalResources, not only LocalConfiguration.
+    // Provide both so changing the in-app language updates every resource-backed label immediately.
+    CompositionLocalProvider(
+        LocalConfiguration provides localizedConfiguration,
+        LocalContext provides localizedContext,
+        LocalResources provides localizedContext.resources
+    ) {
         var destination by remember { mutableStateOf(AppDestination.HOME) }
         var selectedBookId by remember { mutableStateOf<String?>(null) }
         var languageMenuExpanded by remember { mutableStateOf(false) }
