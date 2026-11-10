@@ -34,6 +34,11 @@ class UsfmContentPipelineTests(unittest.TestCase):
         self.assertNotIn("SYNTHETIC_CROSS_REFERENCE", joined)
         self.assertNotIn("SYNTHETIC_HEADING_NOT_VERSE", joined)
 
+    def test_parser_fails_closed_on_unbalanced_note_blocks(self):
+        source = "\\id GEN Synthetic\n\\c 1\n\\v 1 SYNTHETIC \\f +\n\\ft UNBALANCED\n"
+        with self.assertRaisesRegex(ValueError, "unbalanced excluded USFM block"):
+            parse_usfm(source, "GEN")
+
     def test_parser_rejects_unsupported_markers(self):
         source = "\\id GEN Synthetic\n\\c 1\n\\v 1 SYNTHETIC\n\\zunknown VALUE\n"
         with self.assertRaisesRegex(ValueError, "unsupported USFM marker"):
@@ -86,9 +91,15 @@ class UsfmContentPipelineTests(unittest.TestCase):
             manifest_path = root / "manifest.json"
             registry_path = root / "registry.json"
             output_path = root / "private-content.sqlite"
+            second_output_path = root / "private-content-second.sqlite"
             manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
             registry_path.write_text(json.dumps(registry), encoding="utf-8")
             report = build_from_archive(archive_path, manifest_path, registry_path, output_path)
+            second_report = build_from_archive(
+                archive_path, manifest_path, registry_path, second_output_path
+            )
+            self.assertEqual(report["database"]["database_sha256"],
+                             second_report["database"]["database_sha256"])
             self.assertEqual(report["status"], "PASS")
             self.assertEqual(report["book_count"], 2)
             self.assertEqual(report["verse_record_count"], 2)
