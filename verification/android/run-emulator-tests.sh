@@ -77,7 +77,7 @@ is_retryable_infrastructure_failure() {
   # Once instrumentation has started, never classify a failure as retryable:
   # this prevents an application/test failure from being masked by incidental
   # ADB or emulator diagnostics later in the same Gradle log.
-  if grep -Eiq 'Starting [0-9]+ tests on emulator|There were failing tests|FAILED' "${log_file}"; then
+  if grep -Eq 'Starting [0-9]+ tests on emulator|There were failing tests|(^|[[:space:]])FAILED([[:space:]]|$)' "${log_file}"; then
     return 1
   fi
 
