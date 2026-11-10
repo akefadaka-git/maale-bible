@@ -149,6 +149,9 @@ def test_simultaneous_registration_rate_limit_allows_only_quota(postgres_session
 
 
 def test_simultaneous_refresh_reuse_revokes_token_family(postgres_sessions):
+    import hashlib
+
+    from sqlalchemy import select
     from maale_bible_api.db.models import Account, AuthSession
     from maale_bible_api.security.passwords import hash_password
     from maale_bible_api.services.sessions import (
@@ -172,6 +175,14 @@ def test_simultaneous_refresh_reuse_revokes_token_family(postgres_sessions):
             session, account_id=account.id, policy=policy, now=NOW
         )
         assert issued is not None
+        family_id = session.scalar(
+            select(AuthSession.token_family_id).where(
+                AuthSession.refresh_token_hash == hashlib.sha256(
+                    issued.refresh_token.encode("ascii")
+                ).hexdigest()
+            )
+        )
+        assert family_id is not None
 
     barrier = Barrier(2)
 
@@ -195,14 +206,8 @@ def test_simultaneous_refresh_reuse_revokes_token_family(postgres_sessions):
         assert account_id_for_access_token(
             session, access_token=rotated.access_token, now=NOW + timedelta(seconds=2)
         ) is None
-        family_rows = session.query(AuthSession).filter_by(
-            token_family_id=(
-                session.query(AuthSession.token_family_id)
-                .filter_by(refresh_token_hash=__import__("hashlib").sha256(
-                    issued.refresh_token.encode("ascii")
-                ).hexdigest())
-                .scalar()
-            )
+        family_rows = session.scalars(
+            select(AuthSession).where(AuthSession.token_family_id == family_id)
         ).all()
         assert family_rows
         assert all(row.revoked_at is not None for row in family_rows)
