@@ -8,7 +8,7 @@
     <string name="nav_listen">ማዳመጥ</string>
     <string name="nav_study">ጥናት</string>
     <string name="language_label">የመተግበሪያ ቋንቋ</string>
-    <string name="language_maale">ማዓሌ (ነባሪ)</string>
+    <string name="language_maale">ማሌኛ</string>
     <string name="language_amharic">አማርኛ</string>
     <string name="language_english">እንግሊዝኛ</string>
     <string name="language_fallback_notice">የማዓሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
