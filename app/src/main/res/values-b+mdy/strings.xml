@@ -15,7 +15,7 @@
     <!-- Owner-supplied Maale home and catalogue wording; preserve spelling exactly. -->
     <string name="home_make_it_yours">ኔሮ ማሄ</string>
     <string name="home_reading_journey">ኔ ናባባ ጎይፆ</string>
-    <string name="home_explore">ዛጌ</string>
+    <string name="home_explore">ቡሊ ዛጌ</string>
     <string name="home_world_of_scripture">ጌዔዦ ማፃኣፖኮ ዓጮ</string>
     <string name="home_catalogue">66 ማፃኣፖ</string>
 </resources>
