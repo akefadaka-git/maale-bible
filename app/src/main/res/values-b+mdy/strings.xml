@@ -18,4 +18,9 @@
     <string name="home_explore">ቡሊ ዛጌ</string>
     <string name="home_world_of_scripture">ጌዔዦ ማፃኣፖኮ ዓጮ</string>
     <string name="home_catalogue">66 ማፃኣፖ</string>
+    <string name="home_browse_catalogue">ማፃኣፖ ዚርዝሮ ዛጌ</string>
+    <string name="home_study_space">ናባቦ ቤሲ</string>
+    <string name="home_study_description">ናባቢ ዔኬ ባኮና ማሊፆ ኔኤኮ ፃኣፖ ዓርቆ ቤሲ</string>
+    <string name="home_the_living_word">ናንጋ ቃኣላ</string>
+    <string name="home_pause_read_reflect">ዻካ ሳኣቴ ካፒንቴ! ናባቤ! ኮሺ ሂንዳ ማሌ!</string>
 </resources>
