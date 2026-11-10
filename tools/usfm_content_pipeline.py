@@ -16,7 +16,9 @@ import sys
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
-from typing import Iterable
+PARSER_VERSION = "0.1.0"
+SCHEMA_VERSION = "1"
+
 MARKER_RE = re.compile(r"\\([+]?[A-Za-z0-9-]+)(\*)?")
 ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
 CHAPTER_RE = re.compile(r"^\\c\s+(\d+)(?:\s|$)")
