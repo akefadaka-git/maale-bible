@@ -75,12 +75,12 @@ def test_subjects_are_stored_only_as_keyed_digests(db):
 
 
 @pytest.mark.parametrize(
-    "policy",
-    [RateLimitPolicy(0, 60, 60), RateLimitPolicy(1, 0, 60), RateLimitPolicy(1, 60, 0)],
+    "values",
+    [(0, 60, 60), (1, 0, 60), (1, 60, 0)],
 )
-def test_policy_rejects_nonpositive_values(policy):
-    # Construction itself is expected to fail; parametrization is not reached.
-    assert policy.max_requests > 0
+def test_policy_rejects_nonpositive_values(values):
+    with pytest.raises(ValueError):
+        RateLimitPolicy(*values)
 
 
 def test_naive_timestamp_and_weak_key_fail_closed(db):
