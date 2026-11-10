@@ -105,15 +105,21 @@ def consume_registration_rate_limit(
         },
     ).returning(table.c.request_count, table.c.blocked_until)
 
+    exceeded = False
+    retry_after = policy.window_seconds
     with session.begin():
         row = session.execute(statement).one()
         blocked_until = row.blocked_until
-        if row.request_count > policy.max_requests or (
+        exceeded = row.request_count > policy.max_requests or (
             blocked_until is not None and blocked_until > instant
-        ):
+        )
+        if exceeded:
             retry_after = (
                 math.ceil((blocked_until - instant).total_seconds())
                 if blocked_until is not None
                 else policy.window_seconds
             )
-            raise RateLimitExceeded(retry_after)
+    # Commit the block state before raising; raising inside session.begin()
+    # would roll back the very quota update that must reject the next request.
+    if exceeded:
+        raise RateLimitExceeded(retry_after)
