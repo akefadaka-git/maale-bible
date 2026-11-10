@@ -290,6 +290,11 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
     actual_archive_sha = sha256_bytes(archive_bytes)
     if actual_archive_sha != expected_archive_sha:
         raise ValueError("source archive SHA-256 mismatch")
+    if len(archive_bytes) != source.get("archive_bytes"):
+        raise ValueError("source archive byte-size mismatch")
+    repository_root = Path.cwd().resolve()
+    if output_path.resolve().is_relative_to(repository_root):
+        raise ValueError("private database output must be outside the repository")
     source_files = manifest["source_files"]
     expected = {item["path"]: item for item in source_files}
     if len(expected) != len(source_files) or not expected:
@@ -322,6 +327,24 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
                 ))
     if observed_books != set(book_ids):
         raise ValueError("not all canonical books were parsed")
+    chapter_count = len({(row[1], row[2]) for row in rows})
+    represented_spans = 0
+    verse_range_count = 0
+    for row in rows:
+        match = re.fullmatch(r"(\d+)[a-z]?(?:-(\d+)[a-z]?)?", row[3])
+        start = int(match.group(1))
+        end = int(match.group(2) or match.group(1))
+        represented_spans += end - start + 1
+        verse_range_count += int(match.group(2) is not None)
+    structural = manifest.get("structural_validation", {})
+    if chapter_count != structural.get("chapter_count"):
+        raise ValueError("chapter count does not match validated source baseline")
+    if len(rows) != structural.get("verse_marker_lines"):
+        raise ValueError("verse-marker count does not match validated source baseline")
+    if represented_spans != structural.get("represented_verse_spans_including_ranges"):
+        raise ValueError("represented verse-span count does not match validated source baseline")
+    if verse_range_count != structural.get("verse_range_marker_instances"):
+        raise ValueError("verse-range count does not match validated source baseline")
     db_report = _create_database(output_path, source["edition_id"],
                                  expected_archive_sha, books, rows)
     return {
@@ -332,8 +355,10 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
         "zip_member_count": len(members),
         "usfm_file_count": len(source_files),
         "book_count": len(observed_books),
-        "chapter_count": len({(r[1], r[2]) for r in rows}),
+        "chapter_count": chapter_count,
         "verse_record_count": len(rows),
+        "represented_verse_spans": represented_spans,
+        "verse_range_count": verse_range_count,
         "database": db_report,
         "scripture_text_emitted": False,
         "tokenizer_qualification": "NOT_LINGUISTICALLY_QUALIFIED",
