@@ -44,6 +44,35 @@ class OfflineScriptureStoreInstrumentedTest {
     }
 
     @Test
+    fun installsAndKeepsMultipleEditionsIsolated() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        clearInstalled(context)
+        val (firstFile, firstDescriptor) = createSyntheticDatabase(context, "Maale test edition")
+        OfflineScriptureStore.install(context, FileInputStream(firstFile), firstDescriptor)
+        val (secondFile, secondDescriptor) = createSyntheticDatabase(context, "English test edition")
+        OfflineScriptureStore.install(context, FileInputStream(secondFile), secondDescriptor)
+
+        val installed = OfflineScriptureStore.installedEditions(context).map { it.editionId }.toSet()
+        assertTrue(installed.contains("Maale test edition"))
+        assertTrue(installed.contains("English test edition"))
+
+        val maale = requireNotNull(OfflineScriptureStore.openInstalled(context, "Maale test edition"))
+        val english = requireNotNull(OfflineScriptureStore.openInstalled(context, "English test edition"))
+        try {
+            assertEquals("Maale test edition", maale.descriptor.editionId)
+            assertEquals("English test edition", english.descriptor.editionId)
+            assertEquals(1, maale.search("SYNTHETIC_ALPHA").size)
+            assertEquals(1, english.search("SYNTHETIC_ALPHA").size)
+        } finally {
+            maale.close()
+            english.close()
+            firstFile.delete()
+            secondFile.delete()
+            clearInstalled(context)
+        }
+    }
+
+    @Test
     fun failedHashValidationPreservesPreviouslyInstalledDatabase() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         clearInstalled(context)
@@ -93,7 +122,7 @@ class OfflineScriptureStoreInstrumentedTest {
         }
     }
 
-    private fun createSyntheticDatabase(context: Context): Pair<File, OfflineContentDescriptor> {
+    private fun createSyntheticDatabase(context: Context, editionId: String = "MDYTWF / mdyeth"): Pair<File, OfflineContentDescriptor> {
         val file = context.getDatabasePath("offline-content-source-fixture.db")
         file.parentFile?.mkdirs()
         file.delete()
@@ -120,7 +149,7 @@ class OfflineScriptureStoreInstrumentedTest {
             val metadata = mapOf(
                 "schema_version" to "1",
                 "parser_version" to "0.1.0",
-                "edition_id" to "MDYTWF / mdyeth",
+                "edition_id" to editionId,
                 "source_archive_sha256" to sourceSha,
                 "fts_tokenizer" to "unicode61 remove_diacritics 0",
                 "tokenizer_qualification" to "ENGINEERING_BASELINE_NOT_LINGUISTICALLY_QUALIFIED",
@@ -146,7 +175,7 @@ class OfflineScriptureStoreInstrumentedTest {
                 edition_id,book_id,chapter,verse_ref,source_path,source_sha256,
                 parser_version,display_text,search_text
             ) VALUES (?,?,?,?,?,?,?,?,?)""").use { statement ->
-                statement.bindText(1, "MDYTWF / mdyeth")
+                statement.bindText(1, editionId)
                 statement.bindText(2, "GEN")
                 statement.bindLong(3, 1)
                 statement.bindText(4, "1")
@@ -164,7 +193,7 @@ class OfflineScriptureStoreInstrumentedTest {
         }
         val sha = sha256(file)
         return file to OfflineContentDescriptor(
-            editionId = "MDYTWF / mdyeth",
+            editionId = editionId,
             sourceArchiveSha256 = sourceSha,
             databaseSha256 = sha,
             databaseBytes = file.length(),
