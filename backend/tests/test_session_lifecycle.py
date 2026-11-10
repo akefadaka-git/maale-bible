@@ -136,6 +136,7 @@ def test_registration_otp_activation_and_first_session_are_atomic(db):
     assert activated.session.account_id == activated.account_id
     account = db.get(Account, activated.account_id)
     assert account is not None and account.status == "active"
+    db.commit()  # end the read transaction before the next service-owned transaction
     assert account_id_for_access_token(
         db, access_token=activated.session.access_token, now=NOW + timedelta(seconds=2)
     ) == activated.account_id
