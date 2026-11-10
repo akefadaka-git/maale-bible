@@ -23,6 +23,7 @@ jobs:
         with: {python-version: '3.12'}
       - run: python verification/canon/canonical_registry_verify.py
       - run: python verification/canon/maale_source_canon_reconcile.py
+      - run: python verification/android/test_run_emulator_tests.py
       - run: python verification/p2/p2_verify.py
       - uses: actions/upload-artifact@v4
         with:
