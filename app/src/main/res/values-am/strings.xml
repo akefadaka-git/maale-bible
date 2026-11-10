@@ -37,4 +37,23 @@
     <string name="books_title">የማዓሌ መጽሐፍ ቅዱስ መጻሕፍት</string>
     <string name="books_description">ይፋዊው የ66 መጻሕፍት ዝርዝር። የቅዱስ መጽሐፍ ጽሑፍ በዚህ ስሪት ውስጥ አልተጫነም።</string>
     <string name="books_open_book">%1$s ክፈት</string>
+
+    <string name="account_open">መለያ</string>
+    <string name="account_title">የእርስዎ መለያ</string>
+    <string name="account_guest_first">እንደ እንግዳ ሆነው ማንበብ ይችላሉ። መለያ መፍጠር ግዴታ አይደለም።</string>
+    <string name="account_service_unavailable_title">የመለያ አገልግሎት አልተገናኘም</string>
+    <string name="account_service_unavailable_body">በዚህ ስሪት ውስጥ የማረጋገጫ API የተዋቀረ የቀጥታ አድራሻ የለውም። መግባትና መመዝገብ ተሰናክለዋል፤ የመግቢያ መረጃ አይላክም ወይም አይቀመጥም።</string>
+    <string name="account_login">ግባ</string>
+    <string name="account_register">ተመዝገብ</string>
+    <string name="account_identifier">የተጠቃሚ ስም ወይም ስልክ ቁጥር</string>
+    <string name="account_identifier_help">የተጠቃሚ ስምዎን ወይም በ+ የሚጀምር ዓለም አቀፍ ስልክ ቁጥር ያስገቡ።</string>
+    <string name="account_password">የይለፍ ቃል</string>
+    <string name="account_username">የተጠቃሚ ስም</string>
+    <string name="account_mobile">የሞባይል ቁጥር</string>
+    <string name="account_mobile_help">የአገር መለያ ቁጥሩን ጨምሮ ሙሉውን ዓለም አቀፍ ቁጥር ያስገቡ።</string>
+    <string name="account_request_otp">የምዝገባ ኮድ ጠይቅ</string>
+    <string name="account_otp">የአንድ ጊዜ የምዝገባ ኮድ</string>
+    <string name="account_verify_register">ኮዱን አረጋግጥና ተመዝገብ</string>
+    <string name="account_otp_policy">የአንድ ጊዜ ኮድ ለምዝገባ ማረጋገጫ ብቻ ነው። መደበኛ መግቢያ በተጠቃሚ ስም ወይም በስልክ ቁጥርና በይለፍ ቃል ይፈጸማል።</string>
+    <string name="account_continue_guest">እንደ እንግዳ ሆነው ማንበብ ይቀጥሉ</string>
 </resources>
