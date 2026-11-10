@@ -27,8 +27,8 @@ import org.maale.bible.data.catalog.EditionReadiness
 @Composable
 fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val eligible = BibleEditionCatalog.eligibleForPackage()
-    val pending = BibleEditionCatalog.awaitingReview()
+    val eligible = BibleEditionCatalog.eligibleForPackage().groupBy { it.languageName }
+    val pending = BibleEditionCatalog.awaitingReview().groupBy { it.languageName }
 
     Column(
         modifier = modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 18.dp),
@@ -46,16 +46,24 @@ fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
             modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            item { Text("ENGLISH · OPEN-LICENSE SOURCES", style = MaterialTheme.typography.titleSmall) }
-            items(eligible, key = { it.id }) { edition ->
-                EditionCard(edition) {
-                    context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.downloadUrl ?: edition.sourceUrl)))
+            eligible.forEach { (language, editions) ->
+                item(key = "eligible-$language") {
+                    Text("$language · OPEN-LICENSE SOURCES", style = MaterialTheme.typography.titleSmall)
+                }
+                items(editions, key = { it.id }) { edition ->
+                    EditionCard(edition) {
+                        context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.downloadUrl ?: edition.sourceUrl)))
+                    }
                 }
             }
-            item { Text("AMHARIC · REVIEW BEFORE INSTALLATION", style = MaterialTheme.typography.titleSmall) }
-            items(pending, key = { it.id }) { edition ->
-                EditionCard(edition, reviewOnly = true) {
-                    context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.sourceUrl)))
+            pending.forEach { (language, editions) ->
+                item(key = "pending-$language") {
+                    Text("$language · REVIEW BEFORE INSTALLATION", style = MaterialTheme.typography.titleSmall)
+                }
+                items(editions, key = { it.id }) { edition ->
+                    EditionCard(edition, reviewOnly = true) {
+                        context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(edition.sourceUrl)))
+                    }
                 }
             }
         }
