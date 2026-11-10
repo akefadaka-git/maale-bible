@@ -12,4 +12,25 @@
     <string name="language_amharic">አማርኛ</string>
     <string name="language_english">እንግሊዝኛ</string>
     <string name="language_fallback_notice">የማዓሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
+
+    <string name="home_make_it_yours">የእርስዎ ያድርጉት</string>
+    <string name="home_reading_journey">የንባብ ጉዞዎ</string>
+    <string name="home_explore">ያስሱ</string>
+    <string name="home_world_of_scripture">የቅዱስ መጽሐፍ ዓለም</string>
+    <string name="home_catalogue">66 መጻሕፍት ዝርዝር</string>
+    <string name="home_browse_catalogue">የተወሰነውን የመጻሕፍት ዝርዝር ይመልከቱ።</string>
+    <string name="home_study_space">የጥናት ቦታ</string>
+    <string name="home_study_description">ለማስታወሻዎችና ለግኝቶች የተዘጋጀ ቦታ።</string>
+    <string name="home_living_word_experience">የሕያው ቃል ተሞክሮ</string>
+    <string name="home_the_living_word">ሕያው ቃል</string>
+    <string name="home_pause_read_reflect">ለአፍታ ይቆዩ። ያንብቡ። ያስቡ።</string>
+    <string name="home_make_space">በአንድ ምዕራፍ አንድ ምዕራፍ ለቅዱስ መጽሐፍ ጊዜ ይስጡ።</string>
+    <string name="home_explore_bible">መጽሐፍ ቅዱሱን ያስሱ</string>
+    <string name="home_daily_scripture">የዕለቱ ቅዱስ ቃል</string>
+    <string name="home_quiet_place">ለዛሬው ቃል ጸጥ ያለ ቦታ።</string>
+    <string name="home_passage_pending">የተረጋገጠው የማዓሌ መጽሐፍ ቅዱስ ክፍል የተፈቀደው ጽሑፍ ሲገባ እዚህ ይታያል።</string>
+    <string name="home_content_not_loaded">የቅዱስ መጽሐፍ ይዘት ገና አልተጫነም</string>
+    <string name="home_begin_journey">ጉዞዎን ይጀምሩ</string>
+    <string name="home_choose_book">ለመጀመር መጽሐፍ ይምረጡ። የንባብ እድገት ሲገኝ እዚህ ይታያል።</string>
+    <string name="home_start">ጀምር</string>
 </resources>
