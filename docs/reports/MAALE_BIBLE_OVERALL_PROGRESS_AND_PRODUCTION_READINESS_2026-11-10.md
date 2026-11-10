@@ -155,3 +155,47 @@ Therefore, implementation progress is substantial, but integrated-product and pr
 ## 10. Governance and change record
 
 This report is a repository progress record only. It does not authorize PR merges, changes to `main`, public registration, live SMS, signing, deployment, publication or production activation. Unrelated work must be preserved. Reopen closed gates only for material contradictory evidence or an authoritative change.
+
+
+---
+
+## 11. Owner decision and sequential progress update — 10 November 2026
+
+### Independent-review gate
+
+The Owner waived the need for an independent external security reviewer as a prerequisite to continuing implementation. See [Owner decision record](../governance/OWNER_DECISION_INDEPENDENT_SECURITY_REVIEW_WAIVER_2026-11-10.md).
+
+This is **WAIVED FOR SEQUENCING**, not a security certification. The AI-assisted internal assessment remains accurately classified as internal; it is not represented as an independent review or penetration test. No external-review blocker will stop the next engineering stage unless the Owner changes this decision or material new evidence requires escalation.
+
+### Next sequential authentication stage — exact-head evidence
+
+- **PR #40 — registration abuse controls:** [PR #40](https://github.com/akefadaka-git/maale-bible/pull/40), tested code SHA `0f74f2469092e50ea82b0c2c3b9418987a10fe8e`.
+  - Backend run [#42755062928](https://github.com/akefadaka-git/maale-bible/actions/runs/42755062928): **PASS — 37 tests, 1 warning**.
+  - Authentication contract run [#42755062794](https://github.com/akefadaka-git/maale-bible/actions/runs/42755062794): OpenAPI contract and Android authentication unit tests **PASS**.
+- **PR #41 — account activation and session lifecycle:** [PR #41](https://github.com/akefadaka-git/maale-bible/pull/41), tested code SHA `620781c2c60cb19f5737c1be95e82b12ce03630a`.
+  - Backend run [#42755780898](https://github.com/akefadaka-git/maale-bible/actions/runs/42755780898): **PASS — 48 tests, 1 warning**, including PostgreSQL-backed backend test job.
+  - Authentication contract run [#42755780900](https://github.com/akefadaka-git/maale-bible/actions/runs/42755780900): OpenAPI contract **PASS**; Android authentication unit tests **PASS**.
+  - Implemented service scope: atomic OTP verification/account activation/first session; username-or-mobile password login; hashed opaque access/refresh tokens; access validation; refresh rotation and replay-triggered token-family revocation; logout revocation.
+  - No public auth route, SMS delivery, production secrets or production activation is enabled.
+
+### Updated gate status
+
+| Gate | Updated status | Qualification |
+|---|---|---|
+| Independent external security review | **WAIVED BY OWNER FOR SEQUENCING** | Not a security pass or certification |
+| Registration abuse-control service slice | **PASS — exact-head CI** | Runtime/API wiring and deployment configuration remain separate |
+| Account activation/session lifecycle service slice | **PASS — exact-head CI** | Service-layer and CI evidence; not production endpoint/device integration |
+| Licensed Maale corpus and full-text search | **NEXT** | Source archive was previously structurally verified; re-hash/revalidation and parser/index work remain required |
+| Production readiness | **NOT READY / NO-GO** | Integration, content, Android release QA, operational security and release gates remain open |
+
+### Updated next sequence
+
+1. Complete the authentication service-stage reconciliation and document any remaining runtime wiring boundaries; preserve the current registration-only OTP policy.
+2. Proceed to controlled processing of the verified 2008 MDYTWF / mdyeth Maale Full Bible source: reacquire/reconfirm the archive hash, validate staged file hashes, qualify marker-aware USFM parsing using synthetic tests, then process the licensed source in private staging.
+3. Build and validate the deterministic offline content database and FTS5 index outside the public repository; retain source and edition provenance and qualify Maale/Ethiopic and Amharic tokenization separately.
+4. Integrate the private content package through the Android offline resource contract, then test reader, search, attribution, migration, rollback, offline operation and repository content-boundary controls.
+5. Continue other language editions and study resources only through source-specific rights and quality gates.
+6. Complete audio and passage-linked study features, integrated Android regression/accessibility/device checks, and production operations.
+7. Obtain separate Owner authorization before merge to `main`, signing, deployment or publication.
+
+**Current decision:** continue implementation; production remains **NO-GO**. PRs #39–#41 remain draft/unmerged and `main` remains unchanged.
