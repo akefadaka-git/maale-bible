@@ -32,11 +32,11 @@
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
-| `home_make_it_yours` | Make it yours | የእርስዎ ያድርጉት | **Please provide:** |
-| `home_reading_journey` | Your reading journey | የንባብ ጉዞዎ | **Please provide:** |
-| `home_explore` | Explore | ያስሱ | **Please provide:** |
-| `home_world_of_scripture` | A world of Scripture | የቅዱስ መጽሐፍ ዓለም | **Please provide:** |
-| `home_catalogue` | 66-book catalogue | 66 መጻሕፍት ዝርዝር | **Please provide:** |
+| `home_make_it_yours` | Make it yours | የእርስዎ ያድርጉት | ኔሮ ማሄ |
+| `home_reading_journey` | Your reading journey | የንባብ ጉዞዎ | ኔ ናባባ ጎይፆ |
+| `home_explore` | Explore | ያስሱ | ዛጌ |
+| `home_world_of_scripture` | A world of Scripture | የቅዱስ መጽሐፍ ዓለም | ጌዔዦ ማፃኣፖኮ ዓጮ |
+| `home_catalogue` | 66-book catalogue | 66 መጻሕፍት ዝርዝር | 66 ማፃኣፖ |
 | `home_browse_catalogue` | Browse the canonical book list. | የተወሰነውን የመጻሕፍት ዝርዝር ይመልከቱ። | **Please provide:** |
 | `home_study_space` | Study space | የጥናት ቦታ | **Please provide:** |
 | `home_study_description` | A home for notes and discoveries. | ለማስታወሻዎችና ለግኝቶች የተዘጋጀ ቦታ። | **Please provide:** |
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following ten entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following fifteen entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** ten Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** fifteen Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
