@@ -12,4 +12,25 @@
     <string name="language_amharic">Amharic</string>
     <string name="language_english">English</string>
     <string name="language_fallback_notice">Maale is the default. Labels without a reviewed Maale translation currently use English fallback text.</string>
+
+    <string name="home_make_it_yours">MAKE IT YOURS</string>
+    <string name="home_reading_journey">Your reading journey</string>
+    <string name="home_explore">EXPLORE</string>
+    <string name="home_world_of_scripture">A world of Scripture</string>
+    <string name="home_catalogue">66-book catalogue</string>
+    <string name="home_browse_catalogue">Browse the canonical book list.</string>
+    <string name="home_study_space">Study space</string>
+    <string name="home_study_description">A home for notes and discoveries.</string>
+    <string name="home_living_word_experience">LIVING WORD EXPERIENCE</string>
+    <string name="home_the_living_word">THE LIVING WORD</string>
+    <string name="home_pause_read_reflect">A moment to pause. Read. Reflect.</string>
+    <string name="home_make_space">Make space for Scripture, one chapter at a time.</string>
+    <string name="home_explore_bible">Explore the Bible</string>
+    <string name="home_daily_scripture">DAILY SCRIPTURE</string>
+    <string name="home_quiet_place">A quiet place for today&apos;s Word.</string>
+    <string name="home_passage_pending">Your verified Maale Bible passage will appear here when the approved scripture text is integrated.</string>
+    <string name="home_content_not_loaded">SCRIPTURE CONTENT NOT YET LOADED</string>
+    <string name="home_begin_journey">Begin your journey</string>
+    <string name="home_choose_book">Choose a book to start. Reading progress will appear here as it becomes available.</string>
+    <string name="home_start">Start</string>
 </resources>
