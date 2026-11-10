@@ -283,7 +283,7 @@ class P2V2LocalStudyPersistenceTest {
             assertEquals(1L, db.noteCount())
             db.addJournalNote("new-v4-journal", "New private journal entry", 200L)
             assertEquals(2L, db.noteCount())
-            assertEquals("Preserve v2 note", db.journalNotes().firstOrNull()?.body ?: "passage note remains passage-linked")
+            assertEquals("New private journal entry", db.journalNotes().single().body)
         }
         file.delete()
     }
