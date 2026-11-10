@@ -95,7 +95,7 @@ fun HomeScreen(onOpenBooks: () -> Unit, modifier: Modifier = Modifier) {
                 }
             }
             Text(
-                text = "MAALE BIBLE  •  LIVING WORD EXPERIENCE",
+                text = stringResource(R.string.home_living_word_experience),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier
@@ -194,7 +194,7 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "A moment to\npause. Read. Reflect.",
+                text = stringResource(R.string.home_pause_read_reflect),
                 style = MaterialTheme.typography.headlineMedium,
                 color = Color(0xFFF5F1E8),
                 fontWeight = FontWeight.SemiBold
