@@ -34,4 +34,7 @@
     <string name="books_title">ማኣሌሦ ማፃኣፔ</string>
     <string name="books_description">66 ጌኤዦ ማፃኣፖኮ ዚርዝሬ። ሃይካ ጌኤዦ ማፃኣፓ ጫኣኒንቲባኣሴ።</string>
     <string name="books_open_book">%1$s ቡሌ</string>
+    <string name="search_eyebrow">ጌዔዦ ማፃኣፖ ዴንቂሢ።</string>
+    <string name="search_title">ማሊሢና ኮዔ!</string>
+    <string name="search_description">ጫኒንቴ ጌኤዦ ማፃኣፖ ጋራ ዒንቴርኔቴ ባያ ኮዔ፥ ሃንጎ ማፃኣፖ ሱንፆና ዱማሳ ሱንፆና ኮዒ ዴንቄ።</string>
 </resources>
