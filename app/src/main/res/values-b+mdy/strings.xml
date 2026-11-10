@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ጌኤዦ ማፃኣፖ</string>
-    <string name="language_maale">Maale (default)</string>
+    <string name="language_label">ሙኢቺ</string>
+    <string name="language_maale">ማሌሦ</string>
+    <string name="language_amharic">ዓማሬሦ</string>
+    <string name="language_english">ፖራንጄሦ</string>
+    <string name="nav_bibles">ጌዔዦ ማፃኣፖ</string>
     <!-- Owner-supplied Maale navigation wording; preserve spelling exactly. -->
     <string name="nav_home">ካራ</string>
     <string name="nav_books">ማፃኣፖ</string>
