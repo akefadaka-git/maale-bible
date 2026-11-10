@@ -29,7 +29,9 @@ DUMMY_HASH = hash_password("synthetic dummy password used for timing equalizatio
 def db():
     engine = create_engine("sqlite+pysqlite:///:memory:")
     Base.metadata.create_all(engine)
-    with Session(engine) as session:
+    from sqlalchemy.orm import sessionmaker
+    factory = sessionmaker(engine, expire_on_commit=False)
+    with factory() as session:
         yield session
     engine.dispose()
 
