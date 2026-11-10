@@ -19,9 +19,10 @@ fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
         Text(stringResource(R.string.books_description), style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 6.dp, bottom = 12.dp))
         LazyColumn {
             items(CanonicalBookCatalog.books, key = { it.usfmId }) { book ->
+                val openBookDescription = stringResource(R.string.books_open_book, book.englishName)
                 Column(
                     Modifier.fillMaxWidth().clickable { onSelectBook(book.usfmId) }
-                        .semantics { contentDescription = stringResource(R.string.books_open_book, book.englishName) }
+                        .semantics { contentDescription = openBookDescription }
                         .padding(vertical = 14.dp, horizontal = 8.dp)
                 ) {
                     Text(book.order.toString() + ". " + book.englishName, style = MaterialTheme.typography.titleMedium)
