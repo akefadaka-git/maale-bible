@@ -30,7 +30,7 @@ jobs:
           path: verification/p2/host-verification-results.json
   android-fts5:
     runs-on: ubuntu-24.04
-    timeout-minutes: 75
+    timeout-minutes: 90
     strategy:
       fail-fast: false
       max-parallel: 1
@@ -47,9 +47,11 @@ jobs:
         with:
           api-level: ${{ matrix.api }}
           arch: x86_64
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data
+          # Give recent API images enough guest RAM/CPU to avoid system_server
+          # instability under the Ubuntu hosted-runner emulator workload.
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data -memory 4096 -cores 2
           disable-animations: true
-          emulator-boot-timeout: 600
+          emulator-boot-timeout: 900
           # This action splits script input on newlines; invoke the tracked script as ONE command.
           script: ANDROID_EXPECTED_API=${{ matrix.api }} sh verification/android/run-emulator-tests.sh
       - name: Upload emulator logs and instrumentation reports
