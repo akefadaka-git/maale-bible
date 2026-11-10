@@ -77,7 +77,7 @@ fi
 
 # Retry only infrastructure/device-discovery failures. Never retry or hide a real
 # assertion, compilation, or application test failure.
-if grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Unable to connect to adb' "${log_file}" ||
+if grep -Eiq 'No compatible devices connected|No connected devices|Failed to install.*device|Failed to install split APKs|API level=1|Unknown API Level|ShellCommandUnresponsiveException|Unable to connect to adb' "${log_file}" ||
    { grep -Eiq 'device offline|device unauthorized' "${log_file}" &&
      ! grep -Eq 'Starting [0-9]+ tests on emulator' "${log_file}"; }; then
   echo "::warning::Detected an ADB/device infrastructure failure on API ${expected_api}; performing one bounded recovery and rerun."
