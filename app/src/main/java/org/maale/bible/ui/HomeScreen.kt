@@ -252,7 +252,7 @@ private fun DailyScriptureCard() {
                 )
             }
             Text(
-                text = "stringResource(R.string.home_quiet_place)",
+                text = stringResource(R.string.home_quiet_place),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.SemiBold
