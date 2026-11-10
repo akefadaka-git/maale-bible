@@ -37,11 +37,11 @@
 | `home_explore` | Explore | ያስሱ | ቡሊ ዛጌ |
 | `home_world_of_scripture` | A world of Scripture | የቅዱስ መጽሐፍ ዓለም | ጌዔዦ ማፃኣፖኮ ዓጮ |
 | `home_catalogue` | 66-book catalogue | 66 መጻሕፍት ዝርዝር | 66 ማፃኣፖ |
-| `home_browse_catalogue` | Browse the canonical book list. | የተወሰነውን የመጻሕፍት ዝርዝር ይመልከቱ። | **Please provide:** |
-| `home_study_space` | Study space | የጥናት ቦታ | **Please provide:** |
-| `home_study_description` | A home for notes and discoveries. | ለማስታወሻዎችና ለግኝቶች የተዘጋጀ ቦታ። | **Please provide:** |
-| `home_the_living_word` | The Living Word | ሕያው ቃል | **Please provide:** |
-| `home_pause_read_reflect` | A moment to pause. Read. Reflect. | ለአፍታ ይቆዩ። ያንብቡ። ያስቡ። | **Please provide:** |
+| `home_browse_catalogue` | Browse the canonical book list. | የተወሰነውን የመጻሕፍት ዝርዝር ይመልከቱ። | ማፃኣፖ ዚርዝሮ ዛጌ |
+| `home_study_space` | Study space | የጥናት ቦታ | ናባቦ ቤሲ |
+| `home_study_description` | A home for notes and discoveries. | ለማስታወሻዎችና ለግኝቶች የተዘጋጀ ቦታ። | ናባቢ ዔኬ ባኮና ማሊፆ ኔኤኮ ፃኣፖ ዓርቆ ቤሲ |
+| `home_the_living_word` | The Living Word | ሕያው ቃል | ናንጋ ቃኣላ |
+| `home_pause_read_reflect` | A moment to pause. Read. Reflect. | ለአፍታ ይቆዩ። ያንብቡ። ያስቡ። | ዻካ ሳኣቴ ካፒንቴ! ናባቤ! ኮሺ ሂንዳ ማሌ! |
 | `home_make_space` | Make space for Scripture, one chapter at a time. | በአንድ ምዕራፍ አንድ ምዕራፍ ለቅዱስ መጽሐፍ ጊዜ ይስጡ። | **Please provide:** |
 | `home_explore_bible` | Explore the Bible | መጽሐፍ ቅዱሱን ያስሱ | **Please provide:** |
 | `home_daily_scripture` | Daily Scripture | የዕለቱ ቅዱስ ቃል | **Please provide:** |
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following fifteen entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following twenty entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** fifteen Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** twenty Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, and `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, and `home_catalogue`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
