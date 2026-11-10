@@ -1,6 +1,5 @@
 name: P2 synthetic verification
-# Final consolidated verification candidate: exact branch HEAD is the test subject.
-# Do not push further changes until this matrix completes.
+# Stable Android CI: prefetch verified AOSP system images and use a lean emulator profile.
 on:
   pull_request:
     paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
@@ -44,16 +43,45 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Prefetch and validate Android emulator system image
+        shell: bash
+        env:
+          ANDROID_API: ${{ matrix.api }}
+        run: |
+          set -euo pipefail
+          package="system-images;android-${ANDROID_API};default;x86_64"
+          sdkmanager_bin="${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "${sdkmanager_bin}" ]; then
+            echo "::error::Android sdkmanager not found at ${sdkmanager_bin}"
+            exit 1
+          fi
+          installed=false
+          for attempt in 1 2 3; do
+            echo "Installing ${package} (attempt ${attempt}/3)"
+            if yes | "${sdkmanager_bin}" --install "${package}"; then
+              installed=true
+              break
+            fi
+            echo "::warning::SDK image installation failed; clearing transient SDK download cache before retry."
+            rm -rf "${ANDROID_HOME}/.temp" "${HOME}/.android/cache"
+            sleep $((attempt * 10))
+          done
+          if [ "${installed}" != true ]; then
+            echo "::error::Could not install a valid Android API ${ANDROID_API} emulator image after three attempts."
+            exit 1
+          fi
+          "${sdkmanager_bin}" --list_installed | grep -F "system-images;android-${ANDROID_API};default;x86_64"
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.api }}
+          target: default
           arch: x86_64
-          # Give recent API images enough guest RAM/CPU to avoid system_server
-          # instability under the Ubuntu hosted-runner emulator workload.
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data -memory 4096 -cores 2
+          # AOSP images avoid unnecessary Google Play services; 2 GiB leaves
+          # sufficient host RAM for the emulator process on standard runners.
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data -memory 2048 -cores 2
           disable-animations: true
           emulator-boot-timeout: 900
-          # This action splits script input on newlines; invoke the tracked script as ONE command.
+          # Invoke the tracked script as one command; the action splits multiline scripts.
           script: ANDROID_EXPECTED_API=${{ matrix.api }} sh verification/android/run-emulator-tests.sh
       - name: Upload emulator logs and instrumentation reports
         if: always()
