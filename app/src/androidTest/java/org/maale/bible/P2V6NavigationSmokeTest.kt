@@ -26,6 +26,8 @@ class P2V6NavigationSmokeTest {
     @Test
     fun languageSelectionAppliesAmharicAndEnglishInterfaceResources() {
         composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_maale").performClick()
+        composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
         composeRule.onNodeWithText("የማዓሌ መጽሐፍ ቅዱስ").assertIsDisplayed()
         composeRule.onNodeWithText("መነሻ").assertIsDisplayed()
@@ -38,6 +40,8 @@ class P2V6NavigationSmokeTest {
 
     @Test
     fun accountEntryDoesNotBlockGuestReadingOrClaimAuthentication() {
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
         composeRule.onNodeWithText("Account").performClick()
         composeRule.onNodeWithText("Your account").assertIsDisplayed()
         composeRule.onNodeWithText("Account service not connected").assertIsDisplayed()
@@ -47,6 +51,8 @@ class P2V6NavigationSmokeTest {
 
     @Test
     fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
         composeRule.onNodeWithText("Explore the Bible").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
