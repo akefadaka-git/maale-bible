@@ -83,3 +83,22 @@ class AuthSession(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
+
+
+class RegistrationRateLimitBucket(Base):
+    """Privacy-preserving, database-backed request quota state."""
+
+    __tablename__ = "registration_rate_limit_buckets"
+    __table_args__ = (
+        UniqueConstraint("scope", "subject_hash", name="uq_registration_rate_limit_subject"),
+        CheckConstraint("request_count >= 0", name="ck_registration_rate_limit_count_nonnegative"),
+        Index("ix_registration_rate_limit_blocked_until", "blocked_until"),
+    )
+
+    id: Mapped[UUID] = mapped_column(Uuid(as_uuid=True), primary_key=True, default=uuid4)
+    scope: Mapped[str] = mapped_column(String(64), nullable=False)
+    subject_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    window_started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    request_count: Mapped[int] = mapped_column(nullable=False, default=0)
+    blocked_until: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
