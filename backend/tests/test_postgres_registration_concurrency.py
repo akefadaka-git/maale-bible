@@ -114,3 +114,35 @@ def test_simultaneous_duplicate_registration_reservation_is_serialized(
             )
         ).all()
         assert len(active) == 1
+
+
+def test_simultaneous_registration_rate_limit_allows_only_quota(postgres_sessions):
+    from maale_bible_api.services.registration_abuse import (
+        RateLimitExceeded,
+        RateLimitPolicy,
+        consume_registration_rate_limit,
+    )
+
+    barrier = Barrier(3)
+    policy = RateLimitPolicy(max_requests=2, window_seconds=60, block_seconds=120)
+
+    def consume(_index):
+        with postgres_sessions() as session:
+            barrier.wait(timeout=10)
+            try:
+                consume_registration_rate_limit(
+                    session,
+                    scope="registration_start_ip",
+                    subject="203.0.113.9",
+                    secret=OTP_KEY,
+                    policy=policy,
+                    now=NOW,
+                )
+                return "allowed"
+            except RateLimitExceeded:
+                return "blocked"
+
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        outcomes = list(pool.map(consume, range(3)))
+
+    assert sorted(outcomes) == ["allowed", "allowed", "blocked"]

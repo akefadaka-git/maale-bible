@@ -15,5 +15,5 @@ def test_initial_auth_migration_creates_expected_tables() -> None:
         command.upgrade(config, "head")
 
     table_names = set(inspect(engine).get_table_names())
-    assert {"accounts", "registration_challenges", "auth_sessions", "alembic_version"} <= table_names
+    assert {"accounts", "registration_challenges", "auth_sessions", "registration_rate_limit_buckets", "alembic_version"} <= table_names
     engine.dispose()
