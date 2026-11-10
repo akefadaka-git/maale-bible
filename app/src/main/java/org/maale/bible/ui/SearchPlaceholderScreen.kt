@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.weight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -144,14 +145,16 @@ fun SearchPlaceholderScreen(
         if (normalizedQuery.isBlank()) {
             SearchCapabilityCard(installed = store != null)
         } else {
-            if (matchingBooks.isNotEmpty()) {
-                Text("BOOKS · " + matchingBooks.size, modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
-                    style = MaterialTheme.typography.titleSmall)
-                LazyColumn(
-                    modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth().align(Alignment.CenterHorizontally),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(matchingBooks, key = { it.usfmId }) { book ->
+            LazyColumn(
+                modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth()
+                    .align(Alignment.CenterHorizontally).weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                if (matchingBooks.isNotEmpty()) {
+                    item(key = "book-heading") {
+                        Text("BOOKS · " + matchingBooks.size, style = MaterialTheme.typography.titleSmall)
+                    }
+                    items(matchingBooks, key = { "book-" + it.usfmId }) { book ->
                         Card(onClick = { onSelectBook(book.usfmId) }, modifier = Modifier.fillMaxWidth(),
                             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                             Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -165,16 +168,12 @@ fun SearchPlaceholderScreen(
                         }
                     }
                 }
-            }
-
-            if (store != null) {
-                Text(searchState.ifBlank { "Searching installed scripture…" },
-                    modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(), style = MaterialTheme.typography.titleSmall)
-                LazyColumn(
-                    modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth().align(Alignment.CenterHorizontally),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(searchResults, key = { it.bookId + ":" + it.chapter + ":" + it.verseRef }) { result ->
+                if (store != null) {
+                    item(key = "scripture-heading") {
+                        Text(searchState.ifBlank { "Searching installed scripture…" },
+                            modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.titleSmall)
+                    }
+                    items(searchResults, key = { "verse-" + it.bookId + ":" + it.chapter + ":" + it.verseRef }) { result ->
                         val bookName = CanonicalBookCatalog.find(result.bookId)?.englishName ?: result.bookId
                         Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                             Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -185,15 +184,16 @@ fun SearchPlaceholderScreen(
                             }
                         }
                     }
-                }
-            } else {
-                Card(modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
-                    Text(storeState, modifier = Modifier.padding(18.dp), style = MaterialTheme.typography.bodyMedium)
+                } else {
+                    item(key = "content-unavailable") {
+                        Card(modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+                            Text(storeState, modifier = Modifier.padding(18.dp), style = MaterialTheme.typography.bodyMedium)
+                        }
+                    }
                 }
             }
         }
-    }
 }
 
 @Composable
