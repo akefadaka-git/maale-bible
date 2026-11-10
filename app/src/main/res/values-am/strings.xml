@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">የማዓሌ መጽሐፍ ቅዱስ</string>
+    <string name="nav_home">መነሻ</string>
+    <string name="nav_books">መጻሕፍት</string>
+    <string name="nav_search">ፍለጋ</string>
+    <string name="nav_bibles">መጽሐፍ ቅዱሶች</string>
+    <string name="nav_listen">ማዳመጥ</string>
+    <string name="nav_study">ጥናት</string>
+    <string name="language_label">የመተግበሪያ ቋንቋ</string>
+    <string name="language_maale">ማዓሌ (ነባሪ)</string>
+    <string name="language_amharic">አማርኛ</string>
+    <string name="language_english">እንግሊዝኛ</string>
+    <string name="language_fallback_notice">የማዓሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
+</resources>
