@@ -112,6 +112,8 @@ class OfflineScriptureStore private constructor(
 
         fun openInstalled(context: Context): OfflineScriptureStore? {
             val current = currentDirectory(context)
+            val backup = File(contentRoot(context), "previous")
+            if (!current.exists() && backup.exists()) moveAtomically(backup, current)
             val database = File(current, DATABASE_NAME)
             val descriptorFile = File(current, DESCRIPTOR_NAME)
             if (!database.exists() && !descriptorFile.exists()) return null
@@ -128,7 +130,7 @@ class OfflineScriptureStore private constructor(
             }
             val connection = BundledSQLiteDriver().open(database.absolutePath)
             try {
-                validateDatabase(connection, descriptor)
+                validateDatabase(connection, descriptor, deepFtsCheck = false)
                 return OfflineScriptureStore(connection, descriptor)
             } catch (failure: Throwable) {
                 connection.close()
@@ -162,7 +164,7 @@ class OfflineScriptureStore private constructor(
                 writeDescriptor(stageDescriptor, descriptor)
                 val validation = BundledSQLiteDriver().open(stageDatabase.absolutePath)
                 try {
-                    validateDatabase(validation, descriptor)
+                    validateDatabase(validation, descriptor, deepFtsCheck = true)
                 } finally {
                     validation.close()
                 }
@@ -213,6 +215,7 @@ class OfflineScriptureStore private constructor(
         private fun validateDatabase(
             connection: SQLiteConnection,
             descriptor: OfflineContentDescriptor,
+            deepFtsCheck: Boolean,
         ) {
             val version = scalarLong(connection, "PRAGMA user_version").toString()
             require(version == EXPECTED_SCHEMA_VERSION && version == descriptor.schemaVersion) {
@@ -230,9 +233,11 @@ class OfflineScriptureStore private constructor(
             require(scalarLong(connection, "SELECT count(DISTINCT book_id || ':' || chapter) FROM verses") == descriptor.chapterCount.toLong())
             require(scalarLong(connection, "SELECT count(*) FROM verses") == descriptor.verseCount.toLong())
             require(scalarLong(connection, "SELECT count(*) FROM verse_fts") == descriptor.ftsCount.toLong())
-            connection.prepare(
-                "INSERT INTO verse_fts(verse_fts, rank) VALUES('integrity-check', 1)"
-            ).use { it.step() }
+            if (deepFtsCheck) {
+                connection.prepare(
+                    "INSERT INTO verse_fts(verse_fts, rank) VALUES('integrity-check', 1)"
+                ).use { it.step() }
+            }
             require(scalarText(connection, "PRAGMA quick_check") == "ok") {
                 "Offline content database integrity check failed"
             }
