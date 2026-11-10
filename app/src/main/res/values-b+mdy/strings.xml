@@ -37,4 +37,6 @@
     <string name="search_eyebrow">ጌዔዦ ማፃኣፖ ዴንቂሢ።</string>
     <string name="search_title">ማሊሢና ኮዔ!</string>
     <string name="search_description">ጫኒንቴ ጌኤዦ ማፃኣፖ ጋራ ዒንቴርኔቴ ባያ ኮዔ፥ ሃንጎ ማፃኣፖ ሱንፆና ዱማሳ ሱንፆና ኮዒ ዴንቄ።</string>
+    <string name="search_field_label">ጌኤዦ ማፃኣፖ ጋራ ኮዔ</string>
+    <string name="search_field_hint">ኮዓኒ ማሌ ቃኣሎማ ሃንጎ ሱንፆ ጌሊዜ!</string>
 </resources>
