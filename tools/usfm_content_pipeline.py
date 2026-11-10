@@ -77,7 +77,7 @@ def parse_usfm(text: str, expected_book_id: str) -> list[VerseRecord]:
     current_parts: list[str] = []
     records: list[VerseRecord] = []
     seen_refs: set[tuple[int, str]] = set()
-    last_verse_by_chapter: dict[int, tuple[int, str]] = {}
+    last_verse_by_chapter: dict[int, tuple[tuple[int, str], str]] = {}
 
     def flush() -> None:
         nonlocal current_ref, current_parts
@@ -190,7 +190,8 @@ def _safe_zip_preflight(archive: zipfile.ZipFile, expected_paths: set[str]) -> l
         names.add(name)
         if info.flag_bits & 0x1:
             raise ValueError("encrypted ZIP member")
-        if stat.S_ISLNK(mode) or (mode and not (stat.S_ISREG(mode) or stat.S_ISDIR(mode))):
+        file_type = stat.S_IFMT(mode)
+        if file_type not in (0, stat.S_IFREG, stat.S_IFDIR):
             raise ValueError("special ZIP member")
         if name.lower().endswith((".zip", ".7z", ".rar", ".tar", ".gz")):
             raise ValueError("nested archive member")
