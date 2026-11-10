@@ -46,3 +46,55 @@ jobs:
             echo "Public repository contains a prohibited scripture payload."
             exit 1
           fi
+
+  real-source-private-build:
+    needs: synthetic-content-contracts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download the exact public source archive to ephemeral runner storage
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 --retry-all-errors --max-time 120 \
+            "https://ebible.org/Scriptures/mdyeth_usfm.zip" \
+            --output "$RUNNER_TEMP/mdyeth_usfm.zip"
+      - name: Build and verify private source database twice
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'rm -f "$RUNNER_TEMP/mdyeth_usfm.zip" "$RUNNER_TEMP/mdyeth-one.sqlite" "$RUNNER_TEMP/mdyeth-two.sqlite" "$RUNNER_TEMP/mdyeth-report-one.json" "$RUNNER_TEMP/mdyeth-report-two.json"' EXIT
+          python tools/usfm_content_pipeline.py \
+            --archive "$RUNNER_TEMP/mdyeth_usfm.zip" \
+            --manifest content/manifests/maale-2008-source-manifest.json \
+            --registry content/canon/66-v1/registry.json \
+            --output "$RUNNER_TEMP/mdyeth-one.sqlite" \
+            --report "$RUNNER_TEMP/mdyeth-report-one.json"
+          python tools/usfm_content_pipeline.py \
+            --archive "$RUNNER_TEMP/mdyeth_usfm.zip" \
+            --manifest content/manifests/maale-2008-source-manifest.json \
+            --registry content/canon/66-v1/registry.json \
+            --output "$RUNNER_TEMP/mdyeth-two.sqlite" \
+            --report "$RUNNER_TEMP/mdyeth-report-two.json"
+          python - <<'PY'
+          import json, pathlib
+          one = json.loads(pathlib.Path("$RUNNER_TEMP/mdyeth-report-one.json").read_text())
+          two = json.loads(pathlib.Path("$RUNNER_TEMP/mdyeth-report-two.json").read_text())
+          assert one["database"]["database_sha256"] == two["database"]["database_sha256"]
+          assert one["verse_record_count"] == two["verse_record_count"]
+          print({
+              "status": one["status"],
+              "archive_sha256": one["archive_sha256"],
+              "book_count": one["book_count"],
+              "chapter_count": one["chapter_count"],
+              "verse_record_count": one["verse_record_count"],
+              "database_bytes": one["database"]["database_bytes"],
+              "database_sha256": one["database"]["database_sha256"],
+              "deterministic_rebuild": "PASS",
+              "scripture_text_emitted": False,
+          })
+          PY
