@@ -1,0 +1,48 @@
+name: Content pipeline verification
+
+on:
+  pull_request:
+    paths:
+      - "tools/usfm_content_pipeline.py"
+      - "tools/tests/test_usfm_content_pipeline.py"
+      - ".github/workflows/content-pipeline-verification.yml"
+      - "docs/source-verification/**"
+      - "content/manifests/**"
+      - "content/canon/**"
+  push:
+    branches: [main]
+    paths:
+      - "tools/usfm_content_pipeline.py"
+      - "tools/tests/test_usfm_content_pipeline.py"
+      - ".github/workflows/content-pipeline-verification.yml"
+      - "docs/source-verification/**"
+      - "content/manifests/**"
+      - "content/canon/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-pipeline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  synthetic-content-contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile content pipeline
+        run: python -m py_compile tools/usfm_content_pipeline.py
+      - name: Run synthetic parser, archive and FTS5 tests
+        run: python -m unittest tools.tests.test_usfm_content_pipeline -v
+      - name: Enforce public content boundary
+        shell: bash
+        run: |
+          if git ls-files | grep -E '(^|/)(mdyeth_usfm\.zip|.*\.usfm|.*\.usx|.*\.sqlite|.*\.sqlite3|.*\.db)$'; then
+            echo "Public repository contains a prohibited scripture payload."
+            exit 1
+          fi
