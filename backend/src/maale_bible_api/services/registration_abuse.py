@@ -110,6 +110,10 @@ def consume_registration_rate_limit(
     with session.begin():
         row = session.execute(statement).one()
         blocked_until = row.blocked_until
+        # SQLite drops timezone metadata for DateTime(timezone=True); restore
+        # the UTC contract before comparing with the aware request timestamp.
+        if blocked_until is not None and blocked_until.tzinfo is None:
+            blocked_until = blocked_until.replace(tzinfo=timezone.utc)
         exceeded = row.request_count > policy.max_requests or (
             blocked_until is not None and blocked_until > instant
         )
