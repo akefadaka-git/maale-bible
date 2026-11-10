@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maale Bible</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_books">Books</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_bibles">Bibles</string>
+    <string name="nav_listen">Listen</string>
+    <string name="nav_study">Study</string>
+    <string name="language_label">Interface language</string>
+    <string name="language_maale">Maale (default)</string>
+    <string name="language_amharic">Amharic</string>
+    <string name="language_english">English</string>
+    <string name="language_fallback_notice">Maale is the default. Labels without a reviewed Maale translation currently use English fallback text.</string>
+</resources>
