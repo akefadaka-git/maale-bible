@@ -96,4 +96,9 @@
     <string name="study_write_thought">ማሊፆ ኔኤኮ ፃኣፔ</string>
     <string name="study_saved_privately">ሃኖ ቤዛዪዳ ዱማዺ ጌሢንቴኔ።</string>
     <string name="study_save">ጎቢሺ ጌሤ</string>
+    <string name="study_cancel">ሃሼ</string>
+    <string name="study_delete">ባይዜ</string>
+    <string name="study_refresh">ማሂ ዓካሴ</string>
+    <string name="study_empty_notes">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
+    <string name="account_open">ኔና ዱማሶ ባኮ</string>
 </resources>
