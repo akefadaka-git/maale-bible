@@ -62,11 +62,11 @@
 | `search_description` | Search installed Bible text offline, or find a book by name and canonical code. | የተጫነውን የመጽሐፍ ቅዱስ ጽሑፍ ያለ ኢንተርኔት ይፈልጉ፣ ወይም መጽሐፍን በስምና በመለያ ኮድ ያግኙ። | ጫኒንቴ ጌኤዦ ማፃኣፖ ጋራ ዒንቴርኔቴ ባያ ኮዔ፥ ሃንጎ ማፃኣፖ ሱንፆና ዱማሳ ሱንፆና ኮዒ ዴንቄ። |
 | `search_field_label` | Search Scripture | ቅዱስ መጽሐፍን ፈልግ | ጌኤዦ ማፃኣፖ ጋራ ኮዔ |
 | `search_field_hint` | Enter a word or phrase | ቃል ወይም ሐረግ ያስገቡ | ኮዓኒ ማሌ ቃኣሎማ ሃንጎ ሱንፆ ጌሊዜ! |
-| `action_clear` | Clear | አጽዳ | **Please provide:** |
-| `search_books_heading` | Books · %1$d | መጻሕፍት · %1$d | **Please provide:** |
-| `action_open` | Open | ክፈት | **Please provide:** |
-| `search_no_results` | No scripture passages match this search. | ከዚህ ፍለጋ ጋር የሚዛመድ የቅዱስ መጽሐፍ ክፍል የለም። | **Please provide:** |
-| `search_error` | Search could not be completed. Check the installed content package. | ፍለጋው ሊጠናቀቅ አልቻለም። የተጫነውን የይዘት ጥቅል ያረጋግጡ። | **Please provide:** |
+| `action_clear` | Clear | አጽዳ | ዑጬ |
+| `search_books_heading` | Books · %1$d | መጻሕፍት · %1$d | ማፃኣፔ %1$d |
+| `action_open` | Open | ክፈት | ቡሌ |
+| `search_no_results` | No scripture passages match this search. | ከዚህ ፍለጋ ጋር የሚዛመድ የቅዱስ መጽሐፍ ክፍል የለም። | ኔ ዖኦጬ ኮይፃ ጌኤዦ ማፃኣፖይዳ ፔቴታዖ ጴዺባኣሴ። |
+| `search_error` | Search could not be completed. Check the installed content package. | ፍለጋው ሊጠናቀቅ አልቻለም። የተጫነውን የይዘት ጥቅል ያረጋግጡ። | ኮይፃ ፔቴዳዖ ዴንቄ ባኣዚ ባኣሴ። ጫኣኒንቴ ማፃኣፖ ሂንዳ ማሂ ዛጌ። |
 | `search_capabilities` | Search capabilities | የፍለጋ ችሎታዎች | **Please provide:** |
 | `search_available` | Available | ይገኛል | **Please provide:** |
 | `search_waiting_download` | Waiting for download | ለማውረድ በመጠባበቅ ላይ | **Please provide:** |
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following thirty-five entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following forty entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, and `search_error`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** thirty-five Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, and `search_field_hint`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** forty Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, and `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, and `search_error`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
