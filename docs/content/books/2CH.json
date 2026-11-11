@@ -32,11 +32,11 @@
       "use": "Post-exilic purpose, royal narrative and book outline"
     },
     {
-      "id": "usccb-2chronicles",
-      "title": "2 Chronicles",
+      "id": "usccb-historical-books-introduction",
+      "title": "Historical Introduction: The Historical Books",
       "publisher": "United States Conference of Catholic Bishops",
-      "url": "https://bible.usccb.org/bible/2chronicles/0",
-      "use": "Historical and theological introduction"
+      "url": "https://bible.usccb.org/bible/historicalintroduction/0",
+      "use": "Canonical and theological context for Chronicles, Ezra and Nehemiah"
     },
     {
       "id": "esv-chronicles",
