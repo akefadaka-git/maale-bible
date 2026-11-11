@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-1ki-bilingual-v1",
+  "book": {
+    "usfm_id": "1KI",
+    "english_name": "1 Kings",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-1kings",
+      "title": "1 Kings",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/1-kings/",
+      "use": "Book structure, royal evaluation and historical setting"
+    },
+    {
+      "id": "esv-kings",
+      "title": "Introduction to 1–2 Kings",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-kings/",
+      "use": "Themes, historical context and outline"
+    },
+    {
+      "id": "gnbdc-1kings",
+      "title": "1 Kings Introduction",
+      "publisher": "Good News Bible / Bible App",
+      "url": "https://www.bible.com/bible/416/1KI.INTRO1.GNBDC",
+      "use": "Outline and narrative divisions"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "1 Kings begins with David’s final days and Solomon’s accession, then recounts Solomon’s reign, the building and dedication of the Jerusalem temple, the division of the kingdom, and the ministries of prophets including Elijah. The narrative evaluates rulers in relation to covenant loyalty and the worship of Israel’s God.",
+        "authorship": "The book does not name its author. 1–2 Kings form a connected historical and theological account compiled from earlier records and traditions. Many scholars associate its final shaping with the exilic period, but the precise stages, sources and date remain debated.",
+        "setting": "The account moves from the united monarchy under Solomon to the divided kingdoms of Israel in the north and Judah in the south. It references Jerusalem, Samaria and neighboring states during the first centuries of the divided monarchy.",
+        "audience_and_purpose": "The book interprets the rise and decline of the kingdoms for readers facing the consequences of national defeat and exile. It asks how leadership, worship and covenant faithfulness relate to the community’s history.",
+        "structure": [
+          {
+            "range": "1:1–2:12",
+            "heading": "Succession after David",
+            "summary": "Court conflict and Solomon’s accession bring David’s reign to an end."
+          },
+          {
+            "range": "2:13–4:34",
+            "heading": "Solomon’s rule and wisdom",
+            "summary": "Solomon consolidates authority and is associated with wisdom and prosperity."
+          },
+          {
+            "range": "5:1–9:9",
+            "heading": "The temple built and dedicated",
+            "summary": "Solomon prepares, builds and dedicates the Jerusalem temple."
+          },
+          {
+            "range": "9:10–11:43",
+            "heading": "Solomon’s later reign",
+            "summary": "International power, wealth and foreign worship accompany the kingdom’s tensions."
+          },
+          {
+            "range": "12:1–16:34",
+            "heading": "The divided monarchy",
+            "summary": "The northern tribes separate; successive kings rule Israel and Judah."
+          },
+          {
+            "range": "17:1–19:21",
+            "heading": "Elijah’s prophetic ministry",
+            "summary": "Elijah confronts drought, Baal worship and despair."
+          },
+          {
+            "range": "20:1–22:53",
+            "heading": "Ahab, conflict and prophetic warning",
+            "summary": "Military conflict, Naboth’s vineyard and the final account of Ahab’s reign."
+          }
+        ],
+        "themes": [
+          "Covenant loyalty and exclusive worship",
+          "The temple and the place of worship",
+          "Wisdom, power and the limits of royal achievement",
+          "Prophetic challenge to rulers",
+          "The divided kingdom and consequences of policy",
+          "God’s sovereignty over history and nature"
+        ],
+        "key_people": [
+          "David",
+          "Solomon",
+          "Rehoboam",
+          "Jeroboam I",
+          "Ahab",
+          "Jezebel",
+          "Elijah",
+          "Elisha",
+          "Jehoshaphat"
+        ],
+        "key_passages": [
+          "1KI 1:28-40",
+          "1KI 3:3-15",
+          "1KI 8:22-61",
+          "1KI 11:1-13",
+          "1KI 12:1-24",
+          "1KI 17:1-24",
+          "1KI 18:20-40",
+          "1KI 21:1-29",
+          "1KI 22:1-40"
+        ],
+        "interpretive_care": [
+          "Do not equate political prosperity with divine approval; the narrative evaluates kings by covenant faithfulness and worship.",
+          "The accounts of Solomon and the temple should be read alongside the book’s later critique of royal excess and divided loyalty.",
+          "The prophetic narratives use theological storytelling; distinguish the text’s theological evaluation from modern historical reconstruction.",
+          "Chronologies of the divided monarchy involve synchronisms and scholarly debates; avoid presenting every date as certain."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1KI-S01",
+          "range": "1KI 3:3-15",
+          "title": "Solomon asks for wisdom",
+          "observation": [
+            "List Solomon’s request and the responsibilities connected to it."
+          ],
+          "interpretation": [
+            "Why does the passage place discernment in the context of governing a people?"
+          ],
+          "application": [
+            "Where do you need wisdom to serve others rather than increase your status?"
+          ]
+        },
+        {
+          "id": "1KI-S02",
+          "range": "1KI 8:22-61",
+          "title": "Solomon’s temple prayer",
+          "observation": [
+            "Observe the prayer’s requests, acknowledgments and concern for foreigners."
+          ],
+          "interpretation": [
+            "How does the prayer connect the temple with God’s presence without limiting God to a building?"
+          ],
+          "application": [
+            "How can a worshiping community remain open to people beyond its own group?"
+          ]
+        },
+        {
+          "id": "1KI-S03",
+          "range": "1KI 18:20-40",
+          "title": "Elijah on Mount Carmel",
+          "observation": [
+            "Note the people’s silence, Elijah’s challenge and the response to the prayer."
+          ],
+          "interpretation": [
+            "What contrast does the narrative draw between the Lord and Baal?"
+          ],
+          "application": [
+            "How do you discern the difference between public spectacle and faithful witness?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1KI-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which king builds the Jerusalem temple?",
+          "options": [
+            "Solomon",
+            "David",
+            "Rehoboam",
+            "Ahab"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Solomon builds the temple after David’s preparations.",
+          "references": [
+            "1KI 5:1-9:9"
+          ]
+        },
+        {
+          "id": "1KI-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The kingdom divides after Solomon’s reign.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The division is narrated after Solomon’s death and Rehoboam’s accession."
+          ]
+        },
+        {
+          "id": "1KI-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which prophet confronts the prophets of Baal on Mount Carmel?",
+          "options": [
+            "Elijah",
+            "Elisha",
+            "Nathan",
+            "Samuel"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Elijah challenges the prophets of Baal in 1 Kings 18.",
+          "references": [
+            "1KI 18:20-40"
+          ]
+        },
+        {
+          "id": "1KI-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "What does Solomon ask God to give him?",
+          "options": [
+            "A discerning heart",
+            "A larger army",
+            "Longer life only",
+            "More territory"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Solomon asks for an understanding heart to govern the people.",
+          "references": [
+            "1KI 3:3-15"
+          ]
+        },
+        {
+          "id": "1KI-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book portrays every king of the northern kingdom as faithful to the Lord.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "false",
+          "references": [
+            "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship."
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "summary": "1 ነገሥት መጽሐፍ የዳዊትን የመጨረሻ ዘመንና የሰሎሞንን ንግሥና ይጀምራል፤ ከዚያም የሰሎሞንን ግዛት፣ የኢየሩሳሌምን ቤተ መቅደስ ግንባታና ምረቃ፣ የመንግሥቱን መከፋፈልና ኤልያስን ጨምሮ የነቢያትን አገልግሎት ይተርካል። ገዢዎችን ከቃል ኪዳን ታማኝነትና ከእስራኤል አምላክ አምልኮ አንጻር ይመዝናል።",
+        "authorship": "መጽሐፉ ጸሐፊውን አይጠቅስም። 1ኛና 2ኛ ነገሥት ከቀደሙ መዝገቦችና ትውፊቶች የተሰበሰበ ተያያዥ ታሪካዊና ሥነ መለኮታዊ ትረካ ናቸው። ብዙ ምሁራን የመጨረሻ አቀራረባቸውን ከምርኮ ዘመን ጋር ያያይዛሉ፤ ትክክለኛው የምንጭ፣ የአርትዖትና የቀን ጉዳይ ግን ይወያያል።",
+        "setting": "ታሪኩ ከሰሎሞን የተዋሃደ መንግሥት ወደ ሰሜኑ እስራኤልና ደቡቡ ይሁዳ መከፋፈል ይንቀሳቀሳል። በመጀመሪያዎቹ የተከፋፈለ መንግሥት ዘመናት ኢየሩሳሌምን፣ ሰማርያንና አጎራባች መንግሥታትን ይጠቅሳል።",
+        "audience_and_purpose": "መጽሐፉ የመንግሥታትን መነሳትና መውደቅ ለምርኮና ለብሔራዊ ውድቀት ውጤት ለተጋለጡ አንባቢዎች ይተረጉማል። አመራር፣ አምልኮና የቃል ኪዳን ታማኝነት ከማኅበረሰቡ ታሪክ ጋር እንዴት እንደሚያያዙ ይጠይቃል።",
+        "structure": [
+          {
+            "range": "1:1–2:12",
+            "heading": "ከዳዊት በኋላ የንጉሥነት ተተኪ",
+            "summary": "የቤተ መንግሥት ግጭትና የሰሎሞን መንገሥ የዳዊትን ዘመን ይዘጋሉ።"
+          },
+          {
+            "range": "2:13–4:34",
+            "heading": "የሰሎሞን ግዛትና ጥበብ",
+            "summary": "ሰሎሞን ሥልጣኑን ያጠናክራል፤ ከጥበብና ብልጽግና ጋር ይያያዛል።"
+          },
+          {
+            "range": "5:1–9:9",
+            "heading": "ቤተ መቅደሱ ተገነባና ተመረቀ",
+            "summary": "ሰሎሞን የኢየሩሳሌምን ቤተ መቅደስ ያዘጋጃል፣ ይገነባል፣ ይመርቃል።"
+          },
+          {
+            "range": "9:10–11:43",
+            "heading": "የሰሎሞን የኋለኛ ዘመን",
+            "summary": "የዓለም አቀፍ ኃይል፣ ሀብትና የውጭ አምልኮ የመንግሥቱን ውጥረት ያሳያሉ።"
+          },
+          {
+            "range": "12:1–16:34",
+            "heading": "የተከፋፈለው መንግሥት",
+            "summary": "የሰሜኑ ነገዶች ይለያያሉ፤ በእስራኤልና በይሁዳ ተከታታይ ነገሥታት ይገዛሉ።"
+          },
+          {
+            "range": "17:1–19:21",
+            "heading": "የኤልያስ ትንቢታዊ አገልግሎት",
+            "summary": "ኤልያስ ድርቅን፣ የበኣል አምልኮንና ተስፋ መቁረጥን ይጋፈጣል።"
+          },
+          {
+            "range": "20:1–22:53",
+            "heading": "አክዓብ፣ ግጭትና ትንቢታዊ ማስጠንቀቂያ",
+            "summary": "የጦርነት ግጭት፣ የናቡቴ ወይን ቦታና የአክዓብ መጨረሻ ይቀርባሉ።"
+          }
+        ],
+        "themes": [
+          "የቃል ኪዳን ታማኝነትና ብቸኛ አምልኮ",
+          "ቤተ መቅደሱና የአምልኮ ቦታ",
+          "ጥበብ፣ ሥልጣንና የንጉሣዊ ስኬት ወሰን",
+          "ነቢያዊ ተግሣጽ ለገዢዎች",
+          "የተከፋፈለው መንግሥትና የውሳኔዎች ውጤት",
+          "በታሪክና በተፈጥሮ ላይ የእግዚአብሔር ሉዓላዊነት"
+        ],
+        "key_people": [
+          "ዳዊት",
+          "ሰሎሞን",
+          "ሮብዓም",
+          "ኢዮርብዓም 1ኛ",
+          "አክዓብ",
+          "ኤልዛቤል",
+          "ኤልያስ",
+          "ኤልሳዕ",
+          "ኢዮሳፍጥ"
+        ],
+        "key_passages": [
+          "1KI 1:28-40",
+          "1KI 3:3-15",
+          "1KI 8:22-61",
+          "1KI 11:1-13",
+          "1KI 12:1-24",
+          "1KI 17:1-24",
+          "1KI 18:20-40",
+          "1KI 21:1-29",
+          "1KI 22:1-40"
+        ],
+        "interpretive_care": [
+          "የፖለቲካ ብልጽግናን ከእግዚአብሔር ይሁንታ ጋር አታመሳስሉ፤ ትረካው ነገሥታትን በቃል ኪዳን ታማኝነትና በአምልኮ ይመዝናል።",
+          "የሰሎሞንንና የቤተ መቅደሱን ታሪክ ከኋለኛው የንጉሣዊ ብዛትና የተከፋፈለ ታማኝነት ትችት ጋር አንብቡ።",
+          "የነቢያት ትረካዎች ሥነ መለኮታዊ ትርጉም አላቸው፤ የጽሑፉን ግምገማ ከዘመናዊ ታሪካዊ ግንባታ ይለዩ።",
+          "የተከፋፈለው መንግሥት የዘመን ስሌት ውስብስብ ነው፤ ሁሉንም ቀኖች ፍጹም እርግጠኛ አድርጋችሁ አታቅርቡ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1KI-S01",
+          "range": "1KI 3:3-15",
+          "title": "ሰሎሞን ጥበብን ጠየቀ",
+          "observation": [
+            "የሰሎሞንን ጥያቄና ከእሱ ጋር የተያያዙ ኃላፊነቶችን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ምንባቡ ማስተዋልን ለሕዝብ አስተዳደር ኃላፊነት ጋር ለምን ያያይዛል?"
+          ],
+          "application": [
+            "ሁኔታችሁን ከፍ ለማድረግ ሳይሆን ሌሎችን ለማገልገል ጥበብ የሚያስፈልጋችሁ የት ነው?"
+          ]
+        },
+        {
+          "id": "1KI-S02",
+          "range": "1KI 8:22-61",
+          "title": "የሰሎሞን የቤተ መቅደስ ጸሎት",
+          "observation": [
+            "የጸሎቱን ጥያቄዎች፣ እውቅናዎችና ለእንግዶች ያለውን ትኩረት ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ጸሎቱ እግዚአብሔርን በሕንፃ ሳይገድብ ቤተ መቅደሱን ከእርሱ መገኘት ጋር እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "የአምልኮ ማኅበረሰብ ከራሱ ቡድን ውጭ ላሉ ሰዎች ክፍት መሆን እንዴት ይችላል?"
+          ]
+        },
+        {
+          "id": "1KI-S03",
+          "range": "1KI 18:20-40",
+          "title": "ኤልያስ በቀርሜሎስ ተራራ",
+          "observation": [
+            "የሕዝቡን ዝምታ፣ የኤልያስን ጥያቄና ለጸሎቱ የተሰጠውን ምላሽ ልብ በሉ።"
+          ],
+          "interpretation": [
+            "ትረካው በእግዚአብሔርና በበኣል መካከል ምን ልዩነት ያሳያል?"
+          ],
+          "application": [
+            "በሕዝብ ፊት የሚታይ ትዕይንትን ከታማኝ ምስክርነት እንዴት ትለያላችሁ?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1KI-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የኢየሩሳሌምን ቤተ መቅደስ የገነባው የትኛው ንጉሥ ነው?",
+          "options": [
+            "ሰሎሞን",
+            "ዳዊት",
+            "ሮብዓም",
+            "አክዓብ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1KI 5:1-9:9"
+          ]
+        },
+        {
+          "id": "1KI-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "1KI 12:1-24",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The division is narrated after Solomon’s death and Rehoboam’s accession."
+          ]
+        },
+        {
+          "id": "1KI-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በቀርሜሎስ ተራራ የበኣልን ነቢያት የተጋፈጠው ማን ነው?",
+          "options": [
+            "ኤልያስ",
+            "ኤልሳዕ",
+            "ናታን",
+            "ሳሙኤል"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1KI 18:20-40"
+          ]
+        },
+        {
+          "id": "1KI-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ሰሎሞን እግዚአብሔር ምን እንዲሰጠው ጠየቀ?",
+          "options": [
+            "የማስተዋል ልብ",
+            "ትልቅ ሠራዊት",
+            "ረጅም ዕድሜ ብቻ",
+            "ተጨማሪ ግዛት"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1KI 3:3-15"
+          ]
+        },
+        {
+          "id": "1KI-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "1KI 15:25-16:34",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "false",
+          "references": [
+            "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship."
+          ]
+        }
+      ]
+    }
+  }
+}
