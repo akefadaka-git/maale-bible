@@ -14,9 +14,9 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.maale.bible.R
 import org.maale.bible.data.catalog.CanonicalBookCatalog
@@ -40,14 +40,22 @@ private val bookCategories = listOf(
 @Composable
 fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, modifier: Modifier = Modifier) {
     var query by rememberSaveable { mutableStateOf("") }
+    var selectedTestament by rememberSaveable { mutableStateOf("ot") }
     var selectedCategory by rememberSaveable { mutableStateOf("all") }
-    val matchingBooks = CanonicalBookCatalog.books.filter { book ->
+    val testamentBooks = CanonicalBookCatalog.books.filter { book ->
+        if (selectedTestament == "ot") book.order in 1..39 else book.order in 40..66
+    }
+    val visibleCategories = bookCategories.filter { category ->
+        if (selectedTestament == "ot") category.range.first <= 39 else category.range.last >= 40
+    }
+    val matchingBooks = testamentBooks.filter { book ->
         val term = query.trim()
         val matchesQuery = term.isBlank() || book.englishName.contains(term, true) || book.usfmId.contains(term, true)
-        val matchesCategory = selectedCategory == "all" || bookCategories.firstOrNull { it.id == selectedCategory }?.range?.contains(book.order) == true
+        val matchesCategory = selectedCategory == "all" || visibleCategories.firstOrNull { it.id == selectedCategory }?.range?.contains(book.order) == true
         matchesQuery && matchesCategory
     }
     val groupedBooks = matchingBooks.groupBy { book -> bookCategories.first { book.order in it.range } }
+    val testamentCount = if (selectedTestament == "ot") 39 else 27
 
     Column(
         modifier = modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(horizontal = 16.dp, vertical = 12.dp),
@@ -62,15 +70,31 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
                 Text(stringResource(R.string.explorer_eyebrow), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
             }
         }
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            TestamentCard(
+                title = stringResource(R.string.explorer_old_testament),
+                count = "39",
+                selected = selectedTestament == "ot",
+                modifier = Modifier.weight(1f),
+                onClick = { selectedTestament = "ot"; selectedCategory = "all" }
+            )
+            TestamentCard(
+                title = stringResource(R.string.explorer_new_testament),
+                count = "27",
+                selected = selectedTestament == "nt",
+                modifier = Modifier.weight(1f),
+                onClick = { selectedTestament = "nt"; selectedCategory = "all" }
+            )
+        }
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(22.dp),
+            shape = RoundedCornerShape(20.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
         ) {
-            Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                Text("66", style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.onPrimaryContainer)
+            Row(Modifier.fillMaxWidth().padding(14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Text(testamentCount.toString(), style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.onPrimaryContainer)
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                    Text(stringResource(R.string.explorer_catalogue_count), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onPrimaryContainer)
+                    Text(if (selectedTestament == "ot") stringResource(R.string.explorer_old_testament_desc) else stringResource(R.string.explorer_new_testament_desc), style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.onPrimaryContainer)
                     Text(stringResource(R.string.explorer_catalogue_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onPrimaryContainer)
                 }
             }
@@ -87,7 +111,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
         )
         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             FilterChip(selected = selectedCategory == "all", onClick = { selectedCategory = "all" }, label = { Text(stringResource(R.string.explorer_all_categories)) })
-            bookCategories.forEach { category ->
+            visibleCategories.forEach { category ->
                 FilterChip(
                     selected = selectedCategory == category.id,
                     onClick = { selectedCategory = if (selectedCategory == category.id) "all" else category.id },
@@ -104,7 +128,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             if (matchingBooks.isEmpty()) item {
                 Text(stringResource(R.string.explorer_no_results), Modifier.fillMaxWidth().padding(24.dp), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
-            bookCategories.filter { groupedBooks.containsKey(it) }.forEach { category ->
+            visibleCategories.filter { groupedBooks.containsKey(it) }.forEach { category ->
                 item(key = "category-" + category.id) { CategoryHeading(category, groupedBooks[category].orEmpty().size) }
                 items(groupedBooks[category].orEmpty(), key = { it.usfmId }) { book ->
                     BookExplorerCard(book, category) { onSelectBook(book.usfmId) }
@@ -113,6 +137,22 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             item {
                 Text(stringResource(R.string.explorer_footer_notice), Modifier.fillMaxWidth().padding(vertical = 12.dp), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
+        }
+    }
+}
+
+@Composable
+private fun TestamentCard(title: String, count: String, selected: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Card(
+        modifier = modifier.clickable(onClick = onClick),
+        shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (selected) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surfaceVariant
+        )
+    ) {
+        Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Text(count, style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.primary)
+            Text(title, style = MaterialTheme.typography.titleSmall)
         }
     }
 }
