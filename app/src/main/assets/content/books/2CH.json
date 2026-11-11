@@ -183,9 +183,9 @@
             "Rehoboam"
           ],
           "correct_option_id": "A",
-          "explanation": "2CH 2:1-5:14",
+          "explanation": "Solomon is the central figure in chapters 1–9.",
           "references": [
-            "በመጀመሪያው ክፍል ቤተ መቅደሱን የገነባና የመረቀው ማን ነው?"
+            "2CH 2:1-5:14"
           ]
         },
         {
@@ -212,9 +212,9 @@
             "Ahaz"
           ],
           "correct_option_id": "A",
-          "explanation": "2CH 29:1-30:27",
+          "explanation": "Hezekiah restores temple worship and organizes the Passover.",
           "references": [
-            "በ2 ዜና መዋዕል 29–32 ትልቅ የቤተ መቅደስ ማሻሻያ የመራው ንጉሥ ማን ነው?"
+            "2CH 29:1-30:27"
           ]
         },
         {
@@ -229,9 +229,9 @@
             "Xerxes"
           ],
           "correct_option_id": "A",
-          "explanation": "2CH 36:22-23",
+          "explanation": "Cyrus authorizes the return and rebuilding of the temple.",
           "references": [
-            "መጽሐፉ በየትኛው የፋርስ ንጉሥ አዋጅ ይዘጋል?"
+            "2CH 36:22-23"
           ]
         },
         {
@@ -376,17 +376,18 @@
           "id": "2CH-Q01",
           "type": "multiple_choice",
           "difficulty": "easy",
-          "prompt": "ሰሎሞን",
+          "prompt": "በ2 ዜና መዋዕል 1–9 ዋና ሰው የሆነው ማን ነው?",
           "options": [
+            "ሰሎሞን",
             "ሕዝቅያስ",
             "ኢዮስያስ",
-            "ሮብዓም",
-            "ሰሎሞን በምዕራፍ 1–9 ዋና ሰው ነው።"
+            "ሮብዓም"
           ],
           "correct_option_id": "A",
           "references": [
-            "በመጀመሪያው ክፍል ቤተ መቅደሱን የገነባና የመረቀው ማን ነው?"
-          ]
+            "2CH 2:1-5:14"
+          ],
+          "explanation": "ሰሎሞን በምዕራፍ 1–9 ዋና ሰው ነው።"
         },
         {
           "id": "2CH-Q02",
@@ -403,33 +404,35 @@
           "id": "2CH-Q03",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "ሕዝቅያስ",
+          "prompt": "በ2 ዜና መዋዕል 29–32 ትልቅ የቤተ መቅደስ ማሻሻያ የመራው ንጉሥ ማን ነው?",
           "options": [
+            "ሕዝቅያስ",
             "አክዓብ",
             "ምናሴ",
-            "አካዝ",
-            "ሕዝቅያስ አምልኮን ያድሳልና ፋሲካን ያደራጃል።"
+            "አካዝ"
           ],
           "correct_option_id": "A",
           "references": [
-            "በ2 ዜና መዋዕል 29–32 ትልቅ የቤተ መቅደስ ማሻሻያ የመራው ንጉሥ ማን ነው?"
-          ]
+            "2CH 29:1-30:27"
+          ],
+          "explanation": "ሕዝቅያስ አምልኮን ያድሳልና ፋሲካን ያደራጃል።"
         },
         {
           "id": "2CH-Q04",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "ቂሮስ",
+          "prompt": "መጽሐፉ በየትኛው የፋርስ ንጉሥ አዋጅ ይዘጋል?",
           "options": [
+            "ቂሮስ",
             "ዳርዮስ",
             "አርጤክስስ",
-            "ዜርክሲስ",
-            "ቂሮስ መመለስንና ቤተ መቅደሱን መገንባት ይፈቅዳል።"
+            "ዜርክሲስ"
           ],
           "correct_option_id": "A",
           "references": [
-            "መጽሐፉ በየትኛው የፋርስ ንጉሥ አዋጅ ይዘጋል?"
-          ]
+            "2CH 36:22-23"
+          ],
+          "explanation": "ቂሮስ መመለስንና ቤተ መቅደሱን መገንባት ይፈቅዳል።"
         },
         {
           "id": "2CH-Q05",
