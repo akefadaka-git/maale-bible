@@ -197,9 +197,9 @@
           "prompt": "The kingdom divides after Solomon’s reign.",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "The division is narrated after Solomon’s death and Rehoboam’s accession.",
           "references": [
-            "The division is narrated after Solomon’s death and Rehoboam’s accession."
+            "1KI 12:1-24"
           ]
         },
         {
@@ -243,9 +243,9 @@
           "prompt": "The book portrays every king of the northern kingdom as faithful to the Lord.",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship.",
           "references": [
-            "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship."
+            "1KI 15:25-16:34"
           ]
         }
       ]
@@ -399,9 +399,9 @@
           "prompt": "1KI 12:1-24",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "ከሰሎሞን ሞትና ከሮብዓም መንገሥ በኋላ መከፋፈሉ ይተረካል።",
           "references": [
-            "The division is narrated after Solomon’s death and Rehoboam’s accession."
+            "1KI 12:1-24"
           ]
         },
         {
@@ -443,9 +443,9 @@
           "prompt": "1KI 15:25-16:34",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "መጽሐፉ የሰሜኑን ነገሥታት በቃል ኪዳን አለመታመንና በተቃራኒ አምልኮ በተደጋጋሚ ይተቻል።",
           "references": [
-            "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship."
+            "1KI 15:25-16:34"
           ]
         }
       ]
