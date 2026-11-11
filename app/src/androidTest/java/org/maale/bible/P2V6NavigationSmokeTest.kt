@@ -61,14 +61,19 @@ class P2V6NavigationSmokeTest {
 
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
 
-        // The reader intentionally displays "Genesis" in both its top bar and identity block.
-        // Assert the unique canonical identity instead of an ambiguous generic text selector.
+        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
+        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
+        composeRule.onNodeWithText("Inductive study").assertIsDisplayed()
+        composeRule.onNodeWithText("Quiz").assertIsDisplayed()
+
+        composeRule.onNodeWithText("Open this book in the Bible reader").performScrollTo().performClick()
         composeRule.onNodeWithText("Canonical book ID • GEN").assertIsDisplayed()
         composeRule.onNodeWithText(
             "Verified Maale scripture text is not available in this build yet."
         ).assertIsDisplayed()
 
         composeRule.onNodeWithText("←").performClick()
+        composeRule.onNodeWithText("‹  All books").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
 
         composeRule.onNodeWithText("Search").performClick()
