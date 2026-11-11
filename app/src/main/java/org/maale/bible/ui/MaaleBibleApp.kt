@@ -57,6 +57,7 @@ fun MaaleBibleApp() {
     ) {
         var destination by remember { mutableStateOf(AppDestination.HOME) }
         var selectedBookId by remember { mutableStateOf<String?>(null) }
+        var readingBookId by remember { mutableStateOf<String?>(null) }
         var languageMenuExpanded by remember { mutableStateOf(false) }
         var accountOpen by remember { mutableStateOf(false) }
 
@@ -128,11 +129,18 @@ fun MaaleBibleApp() {
         ) { padding ->
             if (accountOpen) {
                 AccountScreen(onContinueAsGuest = { accountOpen = false }, modifier = Modifier.padding(padding))
-            } else if (selectedBookId != null) {
+            } else if (readingBookId != null) {
                 ReaderPlaceholderScreen(
-                    selectedBookId!!,
-                    { selectedBookId = null },
+                    readingBookId!!,
+                    { readingBookId = null },
                     Modifier.padding(padding)
+                )
+            } else if (selectedBookId != null) {
+                BookLearningScreen(
+                    bookId = selectedBookId!!,
+                    onBack = { selectedBookId = null },
+                    onOpenReader = { readingBookId = it },
+                    modifier = Modifier.padding(padding)
                 )
             } else when (destination) {
                 AppDestination.HOME -> HomeScreen(
