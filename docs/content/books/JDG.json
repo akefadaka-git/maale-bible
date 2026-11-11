@@ -1,0 +1,422 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-JDG-v1",
+  "book": {
+    "usfm_id": "JDG",
+    "english_name": "Judges",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "usccb-judges",
+      "title": "The Book of Judges",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/judges/0",
+      "use": "Period, cycle and book structure"
+    },
+    {
+      "id": "abs-judges",
+      "title": "Bible Study Guide: Judges",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-judges/",
+      "use": "Narrative structure and judges"
+    },
+    {
+      "id": "sots-judges",
+      "title": "Judges",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/wiki/judges",
+      "use": "Literary and historical context"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "Judges describes Israel between the death of Joshua and the rise of the monarchy. Its stories portray recurring departures from covenant loyalty, oppression, cries for help and deliverance through leaders called judges. The closing narratives expose deep social and religious disorder.",
+        "authorship": "The book does not name its author. It is commonly read in relation to Deuteronomy and the larger historical books from Joshua through Kings. The process by which older stories were collected and shaped is debated.",
+        "setting": "The stories are placed in the tribal period before Israel’s monarchy, across different regions and generations. The narrative is selective and theological rather than a continuous modern chronology.",
+        "audience_and_purpose": "Judges warns about idolatry, injustice, fractured community and leadership failure. It invites readers to examine the consequences of abandoning covenant responsibilities.",
+        "structure": [
+          {
+            "range": "1:1–3:6",
+            "heading": "Introduction and recurring pattern",
+            "summary": "Israel’s incomplete settlement and the pattern of unfaithfulness are introduced."
+          },
+          {
+            "range": "3:7–5:31",
+            "heading": "Early deliverers",
+            "summary": "Othniel, Ehud, Shamgar and Deborah with Barak appear."
+          },
+          {
+            "range": "6:1–10:5",
+            "heading": "Gideon and later leaders",
+            "summary": "Gideon’s call and failures are followed by Abimelech, Tola and Jair."
+          },
+          {
+            "range": "10:6–16:31",
+            "heading": "Jephthah and Samson",
+            "summary": "Further cycles include Jephthah and Samson’s troubled leadership."
+          },
+          {
+            "range": "17:1–21:25",
+            "heading": "Social and religious disorder",
+            "summary": "The final narratives show violence, idolatry and tribal conflict."
+          }
+        ],
+        "themes": [
+          "The cycle of unfaithfulness and deliverance",
+          "The danger of idolatry and injustice",
+          "Leadership: courage mixed with weakness",
+          "The vulnerability of women and the powerless",
+          "Tribal division and social disorder"
+        ],
+        "key_people": [
+          "Deborah",
+          "Barak",
+          "Gideon",
+          "Jephthah",
+          "Samson",
+          "Delilah",
+          "The people of Israel"
+        ],
+        "key_passages": [
+          "JDG 2:6-19",
+          "JDG 4:1-24",
+          "JDG 6:11-24",
+          "JDG 7:1-22",
+          "JDG 16:4-31"
+        ],
+        "interpretive_care": [
+          "The judges are primarily regional or tribal deliverers/leaders, not simply modern courtroom magistrates.",
+          "The book includes disturbing violence and abuse; describe these events honestly rather than treating every action as exemplary.",
+          "The refrain about everyone doing what was right in their own eyes is a narrative critique, not an endorsement of moral relativism."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JDG-S01",
+          "range": "JDG 2:6-19",
+          "title": "The repeating cycle",
+          "observation": [
+            "Map the sequence of forgetting, oppression, crying out and deliverance."
+          ],
+          "interpretation": [
+            "What does the cycle reveal about memory and covenant loyalty?"
+          ],
+          "application": [
+            "What practice can help a community remember its commitments?"
+          ]
+        },
+        {
+          "id": "JDG-S02",
+          "range": "JDG 4:1-24",
+          "title": "Deborah, Barak and shared leadership",
+          "observation": [
+            "Identify Deborah’s role, Barak’s response and Jael’s action."
+          ],
+          "interpretation": [
+            "How does the story portray courage and leadership across different people?"
+          ],
+          "application": [
+            "How can responsibility be shared without diminishing others?"
+          ]
+        },
+        {
+          "id": "JDG-S03",
+          "range": "JDG 6:11-24",
+          "title": "Gideon’s call and God’s patience",
+          "observation": [
+            "Notice Gideon’s questions, the messenger’s words and the sign."
+          ],
+          "interpretation": [
+            "How does the passage hold human fear together with divine calling?"
+          ],
+          "application": [
+            "What step of faithful service can you take while still feeling inadequate?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JDG-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is the prophet and judge who leads Israel with Barak?",
+          "options": [
+            "Deborah",
+            "Ruth",
+            "Delilah",
+            "Hannah"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Deborah; compare the cited passage for the narrative detail.",
+          "references": [
+            "JDG 4:4-10"
+          ]
+        },
+        {
+          "id": "JDG-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "In Judges, the leaders called judges were only courtroom magistrates.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "The statement does not agree with the cited passage.",
+          "references": [
+            "JDG 3:7-11"
+          ]
+        },
+        {
+          "id": "JDG-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which judge is associated with a fleece sign?",
+          "options": [
+            "Gideon",
+            "Samson",
+            "Ehud",
+            "Jephthah"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Gideon; compare the cited passage for the narrative detail.",
+          "references": [
+            "JDG 6:36-40"
+          ]
+        },
+        {
+          "id": "JDG-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is known for extraordinary strength in Judges?",
+          "options": [
+            "Samson",
+            "Gideon",
+            "Barak",
+            "Othniel"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Samson; compare the cited passage for the narrative detail.",
+          "references": [
+            "JDG 13:1-5"
+          ]
+        },
+        {
+          "id": "JDG-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The final chapters of Judges describe serious disorder within Israel itself.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "JDG 17:1-21:25"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "መሳፍንት — የውድቀት ዙሮች፣ አመራርና የቃል ኪዳን መፍረስ",
+        "summary": "መሳፍንት መጽሐፍ ከኢያሱ ሞት እስከ ንጉሥነት መጀመር ያለውን ዘመን ይተርካል። ሕዝቡ ከቃል ኪዳን ሲርቅ፣ ጭቆና ሲደርስበት፣ እርዳታ ሲጠይቅና በመሪዎች ነፃ ሲወጣ የሚደጋገሙ ዙሮችን ያሳያል። የመጨረሻዎቹ ታሪኮች የማኅበራዊና የሃይማኖታዊ መበላሸትን ያጋልጣሉ።",
+        "authorship": "መጽሐፉ ጸሐፊውን በስም አይጠቅስም። ከዘዳግምና ከኢያሱ እስከ ነገሥታት ካሉት የታሪክ መጻሕፍት ጋር በተያያዘ ይነበባል። የቀድሞ ታሪኮች እንዴት ተሰብስበው እንደተቀረጹ ጉዳይ በምሁራን ይወያያል።",
+        "setting": "ታሪኮቹ ከንጉሥነት በፊት ባለው የነገዶች ዘመን በተለያዩ ክልሎችና ትውልዶች ውስጥ ይከናወናሉ። ትረካው የተመረጡ ክስተቶችን ከሥነ መለኮታዊ አመለካከት ያቀርባል።",
+        "audience_and_purpose": "መሳፍንት ስለ ጣዖት አምልኮ፣ ፍትሕ መጥፋት፣ የማኅበረሰብ መከፋፈልና የአመራር ውድቀት ያስጠነቅቃል። የቃል ኪዳን ኃላፊነትን መተው የሚያመጣውን ውጤት እንድንመረምር ይጋብዛል።",
+        "structure": [
+          {
+            "range": "1:1–3:6",
+            "heading": "መግቢያና የሚደጋገም ዙር",
+            "summary": "ያልተጠናቀቀው ሰፈራና የታማኝነት መተው ይገለጣሉ።"
+          },
+          {
+            "range": "3:7–5:31",
+            "heading": "የመጀመሪያ አዳኞች",
+            "summary": "ጎቶንያል፣ ናዖድ፣ ሳምጋር፣ ዴቦራና ባርቅ ይታያሉ።"
+          },
+          {
+            "range": "6:1–10:5",
+            "heading": "ጌዴዎንና ሌሎች መሪዎች",
+            "summary": "የጌዴዎን ጥሪና ድክመቶች ከአቢሜሌክ፣ ቶላና ያዕር ታሪኮች ጋር ይቀርባሉ።"
+          },
+          {
+            "range": "10:6–16:31",
+            "heading": "ዮፍታሔና ሶምሶን",
+            "summary": "የዮፍታሔና የሶምሶን አስቸጋሪ አመራር ይተርካል።"
+          },
+          {
+            "range": "17:1–21:25",
+            "heading": "ማኅበራዊና ሃይማኖታዊ መበላሸት",
+            "summary": "የመጨረሻዎቹ ታሪኮች ጥቃትን፣ ጣዖት አምልኮንና የነገዶችን ግጭት ያሳያሉ።"
+          }
+        ],
+        "themes": [
+          "የታማኝነት መተውና የመዳን ዙር",
+          "የጣዖት አምልኮና የፍትሕ መጥፋት አደጋ",
+          "ድፍረትንና ድክመትን የያዘ አመራር",
+          "የሴቶችና የተጋላጭ ሰዎች ሁኔታ",
+          "የነገዶች መከፋፈልና ማኅበራዊ መበላሸት"
+        ],
+        "key_people": [
+          "ዴቦራ",
+          "ባርቅ",
+          "ጌዴዎን",
+          "ዮፍታሔ",
+          "ሶምሶን",
+          "ደሊላ",
+          "የእስራኤል ሕዝብ"
+        ],
+        "key_passages": [
+          "መሳ 2:6-19",
+          "መሳ 4:1-24",
+          "መሳ 6:11-24",
+          "መሳ 7:1-22",
+          "መሳ 16:4-31"
+        ],
+        "interpretive_care": [
+          "መሳፍንቱ በዋናነት የክልል ወይም የነገድ አዳኞችና መሪዎች ናቸው፤ በዘመናዊ የፍርድ ቤት ዳኞች ብቻ አትገድቧቸው።",
+          "መጽሐፉ አስደንጋጭ ጥቃትና ግፍ ይዟል፤ እነዚህን ክስተቶች በታማኝነት ያቅርቡ፣ ሁሉንም ድርጊት እንደ ምሳሌ አታቅርቡ።",
+          "ሁሉም በዓይኑ ትክክል የሆነውን ያደርግ ነበር የሚለው አባባል የትረካው ትችት ነው።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JDG-S01",
+          "range": "JDG 2:6-19",
+          "title": "የሚደጋገመው ዙር",
+          "observation": [
+            "የመርሳትን፣ የጭቆናን፣ የጩኸትንና የመዳንን ቅደም ተከተል አሳዩ።"
+          ],
+          "interpretation": [
+            "ይህ ዙር ስለ ማስታወስና የቃል ኪዳን ታማኝነት ምን ያሳያል?"
+          ],
+          "application": [
+            "ማኅበረሰብ ቃል የገባውን እንዲያስታውስ ምን ልምድ ይረዳዋል?"
+          ]
+        },
+        {
+          "id": "JDG-S02",
+          "range": "JDG 4:1-24",
+          "title": "ዴቦራ፣ ባርቅና የጋራ አመራር",
+          "observation": [
+            "የዴቦራን ሚና፣ የባርቅን ምላሽና የያኤልን ድርጊት ለዩ።"
+          ],
+          "interpretation": [
+            "ታሪኩ ድፍረትንና አመራርን በተለያዩ ሰዎች እንዴት ያሳያል?"
+          ],
+          "application": [
+            "የሌሎችን ክብር ሳይቀንሱ ኃላፊነትን እንዴት ማካፈል ይቻላል?"
+          ]
+        },
+        {
+          "id": "JDG-S03",
+          "range": "JDG 6:11-24",
+          "title": "የጌዴዎን ጥሪና የእግዚአብሔር ትዕግሥት",
+          "observation": [
+            "የጌዴዎንን ጥያቄዎች፣ የመልእክተኛውን ቃልና ምልክቱን ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ምንባቡ የሰውን ፍርሃትና መለኮታዊ ጥሪ እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "በቂ እንዳልሆናችሁ ቢሰማችሁም በታማኝነት ልትወስዱት የምትችሉት እርምጃ ምንድን ነው?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JDG-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከባርቅ ጋር እስራኤልን የመራችው ነቢይትና መሳፍንት ማን ናት?",
+          "options": [
+            "ዴቦራ",
+            "ሩት",
+            "ደሊላ",
+            "ሐና"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ዴቦራ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JDG 4:4-10"
+          ]
+        },
+        {
+          "id": "JDG-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "በመሳፍንት መጽሐፍ መሳፍንት የተባሉት መሪዎች የፍርድ ቤት ዳኞች ብቻ ነበሩ።",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር አይስማማም።",
+          "references": [
+            "JDG 3:7-11"
+          ]
+        },
+        {
+          "id": "JDG-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከፀጉር ምልክት ጋር የተያያዘው መሳፍንት ማን ነው?",
+          "options": [
+            "ጌዴዎን",
+            "ሶምሶን",
+            "ናዖድ",
+            "ዮፍታሔ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ጌዴዎን ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JDG 6:36-40"
+          ]
+        },
+        {
+          "id": "JDG-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በመሳፍንት መጽሐፍ በታላቅ ኃይሉ የሚታወቀው ማን ነው?",
+          "options": [
+            "ሶምሶን",
+            "ጌዴዎን",
+            "ባርቅ",
+            "ጎቶንያል"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ሶምሶን ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JDG 13:1-5"
+          ]
+        },
+        {
+          "id": "JDG-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የመሳፍንት መጽሐፍ የመጨረሻ ምዕራፎች በእስራኤል ውስጥ ከባድ መበላሸትን ይገልጻሉ።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "JDG 17:1-21:25"
+          ]
+        }
+      ]
+    }
+  }
+}
