@@ -54,6 +54,7 @@ fun SearchPlaceholderScreen(
     val resultCountFormat = stringResource(R.string.search_result_count)
     val searchErrorText = stringResource(R.string.search_error)
     val searchingText = stringResource(R.string.search_searching)
+    val searchAccessibilityDescription = stringResource(R.string.search_accessibility)
     var query by remember { mutableStateOf("") }
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
     var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
@@ -156,7 +157,7 @@ fun SearchPlaceholderScreen(
                 value = query,
                 onValueChange = { query = it },
                 modifier = Modifier.fillMaxWidth().semantics {
-                    contentDescription = stringResource(R.string.search_accessibility)
+                    contentDescription = searchAccessibilityDescription
                 },
                 singleLine = true,
                 label = { Text(stringResource(R.string.search_field_label)) },
