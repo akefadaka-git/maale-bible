@@ -769,14 +769,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -793,26 +801,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -826,14 +850,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -850,26 +882,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -883,14 +931,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -907,26 +963,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -940,14 +1012,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -964,26 +1044,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
