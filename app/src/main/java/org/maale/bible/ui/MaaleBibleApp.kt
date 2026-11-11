@@ -28,6 +28,7 @@ private enum class AppDestination(val label: Int) {
     BOOKS(R.string.nav_books),
     SEARCH(R.string.nav_search),
     BIBLES(R.string.nav_bibles),
+    ATLAS(R.string.nav_atlas),
     LISTEN(R.string.nav_listen),
     STUDY(R.string.nav_study)
 }
@@ -147,6 +148,7 @@ fun MaaleBibleApp() {
                     Modifier.padding(padding)
                 )
                 AppDestination.BIBLES -> BibleDownloadsScreen(Modifier.padding(padding))
+                AppDestination.ATLAS -> BibleAtlasScreen(Modifier.padding(padding))
                 AppDestination.LISTEN -> AudioPlaceholderScreen(Modifier.padding(padding))
                 AppDestination.STUDY -> SmartStudyWorkspaceScreen(Modifier.padding(padding))
             }
