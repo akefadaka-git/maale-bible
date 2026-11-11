@@ -92,7 +92,7 @@ fun SearchPlaceholderScreen(
                 store = installed
                 withContext(Dispatchers.IO) { previous?.close() }
                 storeState = if (installed == null) {
-                    stringResource(R.string.search_selected_not_installed)
+                    selectedNotInstalledText
                 } else {
                     String.format(indexedPassagesFormat, installed.descriptor.editionId, installed.descriptor.verseCount)
                 }
@@ -128,11 +128,11 @@ fun SearchPlaceholderScreen(
         result.fold(
             onSuccess = { rows ->
                 searchResults = rows
-                searchState = if (rows.isEmpty()) stringResource(R.string.search_no_results)
+                searchState = if (rows.isEmpty()) noResultsText
                 else String.format(resultCountFormat, rows.size)
             },
             onFailure = {
-                searchState = stringResource(R.string.search_error)
+                searchState = searchErrorText
             }
         )
     }
