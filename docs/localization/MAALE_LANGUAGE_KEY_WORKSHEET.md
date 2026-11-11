@@ -155,6 +155,23 @@
 | `account_password` | Password | የይለፍ ቃል | ዓኣቺንቴ ቃኣላ |
 | `account_continue_guest` | Continue reading as guest | እንደ እንግዳ ሆነው ማንበብ ይቀጥሉ | ሾኦቺ ማዒ ፃቃሚንቴ |
 
+
+## 9. Additional UI resources discovered during locale reconciliation
+
+These nine existing English/Amharic resources were not represented in the original translation worksheet. They are included here so the Maale intake register covers the complete current UI resource-key union. Until Maale wording is supplied, Android falls back to the English base resource.
+
+| Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
+|---|---|---|---|
+| `home_living_word_experience` | LIVING WORD EXPERIENCE | የሕያው ቃል ተሞክሮ | **Please provide:** |
+| `home_passage_pending` | Your verified Maale Bible passage will appear here when the approved scripture text is integrated. | የተረጋገጠው የማዓሌ መጽሐፍ ቅዱስ ክፍል የተፈቀደው ጽሑፍ ሲገባ እዚህ ይታያል። | **Please provide:** |
+| `home_choose_book` | Choose a book to start. Reading progress will appear here as it becomes available. | ለመጀመር መጽሐፍ ይምረጡ። የንባብ እድገት ሲገኝ እዚህ ይታያል። | **Please provide:** |
+| `account_service_unavailable_body` | The authentication API has no configured live endpoint in this build. Sign-in and registration are disabled; no credentials will be sent or stored. | በዚህ ስሪት ውስጥ የማረጋገጫ API የተዋቀረ የቀጥታ አድራሻ የለውም። መግባትና መመዝገብ ተሰናክለዋል፤ የመግቢያ መረጃ አይላክም ወይም አይቀመጥም። | **Please provide:** |
+| `account_identifier_help` | Use your username or an international mobile number beginning with +. | የተጠቃሚ ስምዎን ወይም በ+ የሚጀምር ዓለም አቀፍ ስልክ ቁጥር ያስገቡ። | **Please provide:** |
+| `account_mobile_help` | Enter the full international number, including country code. | የአገር መለያ ቁጥሩን ጨምሮ ሙሉውን ዓለም አቀፍ ቁጥር ያስገቡ። | **Please provide:** |
+| `account_request_otp` | Request registration code | የምዝገባ ኮድ ጠይቅ | **Please provide:** |
+| `account_verify_register` | Verify code and register | ኮዱን አረጋግጥና ተመዝገብ | **Please provide:** |
+| `account_otp_policy` | A one-time code is for registration verification only. Ordinary login uses username or mobile number and password. | የአንድ ጊዜ ኮድ ለምዝገባ ማረጋገጫ ብቻ ነው። መደበኛ መግቢያ በተጠቃሚ ስም ወይም በስልክ ቁጥርና በይለፍ ቃል ይፈጸማል። | **Please provide:** |
+
 ---
 
 ## How to send Maale wording
@@ -172,4 +189,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 103 Maale UI labels have been supplied by the Owner and recorded in the Maale resource worksheet. 0 entries remain pending in this worksheet. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** 103 Maale UI labels have been supplied by the Owner and recorded. 9 additional UI resource keys were discovered during locale reconciliation and remain pending Maale wording (112 worksheet keys total). This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
