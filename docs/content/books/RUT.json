@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-RUT-v1",
+  "book": {
+    "usfm_id": "RUT",
+    "english_name": "Ruth",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-ruth",
+      "title": "Bible Study Guide: Ruth",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-ruth/",
+      "use": "Setting, structure and themes"
+    },
+    {
+      "id": "esv-ruth",
+      "title": "Introduction to Ruth",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-ruth/",
+      "use": "Authorship, date and key themes"
+    },
+    {
+      "id": "baker-ruth",
+      "title": "Chapter 12: Ruth",
+      "publisher": "Baker Academic",
+      "url": "https://bakeracademic.com/pages/jacobson-chan-introducing-the-old-testament-esources-1",
+      "use": "Literary and historical overview"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "Ruth is a short narrative set during the period of the judges. Through Naomi, Ruth and Boaz, it tells of bereavement, migration, loyalty, gleaning, family responsibility and restored hope. Its closing genealogy connects Ruth’s family with David.",
+        "authorship": "The book does not name its author. The setting is the time of the judges, while the genealogy reaching David suggests that the story is told with knowledge of the monarchy. Proposed dates of composition differ; post-exilic dating is common in scholarship but should not be stated as certain.",
+        "setting": "The story moves between Moab and Bethlehem in Judah during a famine and its aftermath. Harvest practices, family land responsibilities and kinship customs shape the narrative.",
+        "audience_and_purpose": "Ruth explores steadfast love, care for vulnerable family members, welcome across ethnic boundaries and the ways ordinary acts of faithfulness can contribute to a larger story of hope.",
+        "structure": [
+          {
+            "range": "1:1–22",
+            "heading": "Loss and return",
+            "summary": "Naomi returns to Bethlehem with Ruth after the deaths of their husbands."
+          },
+          {
+            "range": "2:1–23",
+            "heading": "Ruth gleans in Boaz’s field",
+            "summary": "Boaz protects Ruth and provides for her through the harvest."
+          },
+          {
+            "range": "3:1–18",
+            "heading": "A request for family protection",
+            "summary": "Ruth approaches Boaz at the threshing floor and he promises to act lawfully."
+          },
+          {
+            "range": "4:1–22",
+            "heading": "Redemption, marriage and lineage",
+            "summary": "The nearer relative declines; Boaz marries Ruth and the story closes with David’s ancestry."
+          }
+        ],
+        "themes": [
+          "Loyal love and steadfast commitment",
+          "God’s providence through ordinary actions",
+          "Dignity and provision for widows and the poor",
+          "Kinship responsibility and redemption",
+          "Belonging across ethnic boundaries",
+          "Hope after grief and loss"
+        ],
+        "key_people": [
+          "Ruth",
+          "Naomi",
+          "Boaz",
+          "Orpah",
+          "Elimelech",
+          "Obed"
+        ],
+        "key_passages": [
+          "RUT 1:1-22",
+          "RUT 2:1-23",
+          "RUT 3:1-18",
+          "RUT 4:1-17",
+          "RUT 4:18-22"
+        ],
+        "interpretive_care": [
+          "Do not reduce the book to a romance; its concerns include famine, widowhood, poverty, kinship and communal responsibility.",
+          "The precise historical date and authorship are unknown; distinguish the story’s setting from the time of composition.",
+          "Explain the legal and social customs of gleaning and the family redeemer without assuming they map directly onto modern law."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "RUT-S01",
+          "range": "RUT 1:6-18",
+          "title": "Loyalty in grief and uncertainty",
+          "observation": [
+            "Compare Ruth’s and Orpah’s decisions and note Naomi’s words."
+          ],
+          "interpretation": [
+            "What does Ruth’s commitment mean in the context of loss?"
+          ],
+          "application": [
+            "How can you accompany someone who is grieving without forcing quick answers?"
+          ]
+        },
+        {
+          "id": "RUT-S02",
+          "range": "RUT 2:1-23",
+          "title": "Dignity, gleaning and generous protection",
+          "observation": [
+            "Identify the gleaning practice, Ruth’s work and Boaz’s instructions."
+          ],
+          "interpretation": [
+            "How does Boaz combine generosity with respect for Ruth’s dignity?"
+          ],
+          "application": [
+            "What practical protection can a workplace or community provide for vulnerable people?"
+          ]
+        },
+        {
+          "id": "RUT-S03",
+          "range": "RUT 4:1-17",
+          "title": "Public responsibility and restored hope",
+          "observation": [
+            "Trace the public agreement, the role of witnesses and the family outcome."
+          ],
+          "interpretation": [
+            "Why are transparency and community witnesses important in this resolution?"
+          ],
+          "application": [
+            "What responsibility could you fulfil to restore another person’s security?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "RUT-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Where does Naomi return with Ruth?",
+          "options": [
+            "Bethlehem",
+            "Jericho",
+            "Jerusalem",
+            "Moab"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Bethlehem; compare the cited passage for the narrative detail.",
+          "references": [
+            "RUT 1:19-22"
+          ]
+        },
+        {
+          "id": "RUT-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Ruth is set during the time of the judges.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "RUT 1:1"
+          ]
+        },
+        {
+          "id": "RUT-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "In whose field does Ruth glean?",
+          "options": [
+            "Boaz",
+            "Elimelech",
+            "Saul",
+            "Samuel"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Boaz; compare the cited passage for the narrative detail.",
+          "references": [
+            "RUT 2:1-3"
+          ]
+        },
+        {
+          "id": "RUT-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is the child born to Ruth and Boaz?",
+          "options": [
+            "Obed",
+            "Jesse",
+            "David",
+            "Samuel"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Obed; compare the cited passage for the narrative detail.",
+          "references": [
+            "RUT 4:13-17"
+          ]
+        },
+        {
+          "id": "RUT-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book of Ruth ends with a genealogy leading to David.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "RUT 4:18-22"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ሩት — ታማኝ ፍቅር፣ እንክብካቤና ያልተጠበቀ ቤተሰብነት",
+        "summary": "ሩት መጽሐፍ በመሳፍንት ዘመን የተቀመጠ አጭር ትረካ ነው። በኑኃሚን፣ በሩትና በቦዔዝ ታሪክ ሐዘንን፣ ስደትን፣ ታማኝነትን፣ እሸት መልቀምን፣ የቤተሰብ ኃላፊነትንና የተመለሰ ተስፋን ይተርካል። የመጨረሻው የዘር ሐረግ የሩትን ቤተሰብ ከዳዊት ጋር ያገናኛል።",
+        "authorship": "መጽሐፉ ጸሐፊውን አይጠቅስም። ታሪኩ በመሳፍንት ዘመን ይከናወናል፤ እስከ ዳዊት የሚደርሰው የዘር ሐረግ ግን ታሪኩ ንጉሥነትን ከሚያውቅ አመለካከት መተረኩን ያመለክታል። የተጻፈበት ጊዜ ላይ የተለያዩ አስተያየቶች አሉ፤ ከምርኮ በኋላ መጻፉ ብዙ ጊዜ ቢጠቀስም እንደ እርግጠኛ አታቅርቡት።",
+        "setting": "ታሪኩ በረሃብና ከረሃቡ በኋላ በሞዓብና በይሁዳ ቤተልሔም መካከል ይንቀሳቀሳል። የአጨዳ ልምዶች፣ የቤተሰብ ርስት ኃላፊነቶችና የዝምድና ልማዶች ትረካውን ይቀርጻሉ።",
+        "audience_and_purpose": "ሩት ታማኝ ፍቅርን፣ ለተጋላጭ የቤተሰብ አባላት እንክብካቤን፣ ከዘር ድንበር በላይ መቀበልንና በዕለታዊ ታማኝ ድርጊቶች ተስፋ እንዴት እንደሚያድግ ያሳያል።",
+        "structure": [
+          {
+            "range": "1:1–22",
+            "heading": "ኪሳራና መመለስ",
+            "summary": "ኑኃሚን ባሏና ልጆቿ ከሞቱ በኋላ ከሩት ጋር ወደ ቤተልሔም ትመለሳለች።"
+          },
+          {
+            "range": "2:1–23",
+            "heading": "ሩት በቦዔዝ እርሻ መልቀም",
+            "summary": "ቦዔዝ ሩትን ይጠብቃል፤ በመከር ወቅትም ይረዳታል።"
+          },
+          {
+            "range": "3:1–18",
+            "heading": "የቤተሰብ ጥበቃ ጥያቄ",
+            "summary": "ሩት በአውድማው ቦዔዝን ታነጋግራለች፤ እርሱም በሕጋዊ መንገድ እንደሚሠራ ቃል ይገባል።"
+          },
+          {
+            "range": "4:1–22",
+            "heading": "ቤዛነት፣ ጋብቻና የዘር ሐረግ",
+            "summary": "ቅርብ ዘመዱ ሲተው ቦዔዝ ሩትን ያገባል፤ ታሪኩም በዳዊት የዘር ሐረግ ይደመደማል።"
+          }
+        ],
+        "themes": [
+          "ታማኝ ፍቅርና ጽኑ ቁርጠኝነት",
+          "በዕለታዊ ድርጊቶች የሚገለጥ እግዚአብሔር አመራር",
+          "ለመበለቶችና ለድሆች ክብርና እንክብካቤ",
+          "የዝምድና ኃላፊነትና ቤዛነት",
+          "ከዘር ድንበር በላይ መቀበል",
+          "ከሐዘን በኋላ ተስፋ"
+        ],
+        "key_people": [
+          "ሩት",
+          "ኑኃሚን",
+          "ቦዔዝ",
+          "ዖርፋ",
+          "ኤሊሜሌክ",
+          "ዖቤድ"
+        ],
+        "key_passages": [
+          "ሩት 1:1-22",
+          "ሩት 2:1-23",
+          "ሩት 3:1-18",
+          "ሩት 4:1-17",
+          "ሩት 4:18-22"
+        ],
+        "interpretive_care": [
+          "መጽሐፉን ወደ ፍቅር ታሪክ ብቻ አታጥቡት፤ ረሃብን፣ መበለትነትን፣ ድህነትንና የማኅበረሰብ ኃላፊነትንም ይመለከታል።",
+          "ታሪኩ የተቀመጠበትን ዘመን ከመጽሐፉ የተጻፈበት ጊዜ ለዩ።",
+          "የእሸት መልቀምንና የቤተሰብ ቤዛ ልማዶችን በጥንታዊ ሕግና ማኅበራዊ አውድ ያብራሩ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "RUT-S01",
+          "range": "RUT 1:6-18",
+          "title": "በሐዘንና በጥርጣሬ ውስጥ ታማኝነት",
+          "observation": [
+            "የሩትንና የዖርፋን ውሳኔ አወዳድሩ፤ የኑኃሚንን ቃል ልብ በሉ።"
+          ],
+          "interpretation": [
+            "የሩት ቁርጠኝነት በኪሳራ አውድ ውስጥ ምን ማለት ነው?"
+          ],
+          "application": [
+            "ፈጣን መልስ ሳታስገድዱ በሐዘን ውስጥ ያለን ሰው እንዴት ልትደግፉ ትችላላችሁ?"
+          ]
+        },
+        {
+          "id": "RUT-S02",
+          "range": "RUT 2:1-23",
+          "title": "ክብር፣ እሸት መልቀምና ለጋስ ጥበቃ",
+          "observation": [
+            "የእሸት መልቀምን፣ የሩትን ሥራና የቦዔዝን መመሪያ ለዩ።"
+          ],
+          "interpretation": [
+            "ቦዔዝ ለጋስነትን ከሩት ክብር ጋር እንዴት ያጣምራል?"
+          ],
+          "application": [
+            "የሥራ ቦታ ወይም ማኅበረሰብ ለተጋላጭ ሰዎች ምን ተግባራዊ ጥበቃ ሊያደርግ ይችላል?"
+          ]
+        },
+        {
+          "id": "RUT-S03",
+          "range": "RUT 4:1-17",
+          "title": "የሕዝብ ፊት ኃላፊነትና የተመለሰ ተስፋ",
+          "observation": [
+            "የሕዝብ ፊት ስምምነቱን፣ የምስክሮችን ሚናና የቤተሰቡን ውጤት ተከታተሉ።"
+          ],
+          "interpretation": [
+            "በዚህ ውሳኔ ውስጥ ግልጽነትና የማኅበረሰብ ምስክሮች ለምን አስፈላጊ ናቸው?"
+          ],
+          "application": [
+            "የሌላ ሰውን ደህንነት ለመመለስ ምን ኃላፊነት ልትወጡ ትችላላችሁ?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "RUT-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ኑኃሚን ከሩት ጋር የተመለሰችው ወዴት ነው?",
+          "options": [
+            "ቤተልሔም",
+            "ኢያሪኮ",
+            "ኢየሩሳሌም",
+            "ሞዓብ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ቤተልሔም ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "RUT 1:19-22"
+          ]
+        },
+        {
+          "id": "RUT-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ሩት መጽሐፍ በመሳፍንት ዘመን ይከናወናል።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "RUT 1:1"
+          ]
+        },
+        {
+          "id": "RUT-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ሩት በማን እርሻ ውስጥ ትለቅማለች?",
+          "options": [
+            "ቦዔዝ",
+            "ኤሊሜሌክ",
+            "ሳኦል",
+            "ሳሙኤል"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ቦዔዝ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "RUT 2:1-3"
+          ]
+        },
+        {
+          "id": "RUT-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከሩትና ከቦዔዝ የተወለደው ልጅ ማን ነው?",
+          "options": [
+            "ዖቤድ",
+            "እሴይ",
+            "ዳዊት",
+            "ሳሙኤል"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ዖቤድ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "RUT 4:13-17"
+          ]
+        },
+        {
+          "id": "RUT-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የሩት መጽሐፍ ወደ ዳዊት በሚደርስ የዘር ሐረግ ይጠናቀቃል።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "RUT 4:18-22"
+          ]
+        }
+      ]
+    }
+  }
+}
