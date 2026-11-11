@@ -90,11 +90,22 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
+        composeRule.onNodeWithText("የውስጥ ረቂቅ ነው — ለህትመት አልጸደቀም። የእንግሊዝኛ አርትዖትና የአማርኛ ቋንቋ ግምገማ ገና ያስፈልጋሉ።").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("ፈተና").performClick()
+        composeRule.onNodeWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("ሰማይንና ምድርን መፍጠርና ሥርዓት ማስያዝ").performScrollTo().performClick()
+        composeRule.onNodeWithText("መልሱን አረጋግጥ").performScrollTo().performClick()
+        composeRule.onNodeWithText("ትክክል").assertIsDisplayed()
 
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_english").performClick()
         composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
         composeRule.onNodeWithText("Introduction").assertIsDisplayed()
+        composeRule.onNodeWithText("Quiz").performClick()
+        composeRule.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("Creating and ordering the heavens and the earth").performScrollTo().performClick()
+        composeRule.onNodeWithText("Check answer").performScrollTo().performClick()
+        composeRule.onNodeWithText("Correct").assertIsDisplayed()
     }
 
 }
