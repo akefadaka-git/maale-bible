@@ -81,4 +81,9 @@
     <string name="listen_library">ዑኡዛ ቡኪንቴ ማኣሪ</string>
     <string name="listen_library_empty">ዑኡዞ ማኣራ ጉሪኬ</string>
     <string name="listen_offline">ዒንቴሪኔቴ ባኣያ ዋዪዚሢ</string>
+    <string name="listen_downloads_unavailable">ኬይሳኒ ጴዼ ባኣዚ ባኣሴ</string>
+    <string name="study_your_space">ናባቦ ቤሲ</string>
+    <string name="study_deeper">ዒናፓ ኮሺ ፃናዒሢ</string>
+    <string name="study_private_workspace">ኔኤኮ ዱማዼ ቤሲ</string>
+    <string name="study_notes">ጶቂሣኒ ፃኣፒ ዓርቂሢ</string>
 </resources>
