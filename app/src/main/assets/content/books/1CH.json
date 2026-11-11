@@ -199,9 +199,9 @@
           "prompt": "The book opens with genealogies reaching back to Adam.",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "The opening genealogies begin with Adam and trace families and tribes.",
           "references": [
-            "The opening genealogies begin with Adam and trace families and tribes."
+            "1CH 1:1-27"
           ]
         },
         {
@@ -245,9 +245,9 @@
           "prompt": "1 Chronicles gives the same narrative emphasis as 2 Samuel in every episode of David’s life.",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "Chronicles selects and reshapes material with distinctive emphases on worship, genealogy and temple preparation.",
           "references": [
-            "Chronicles selects and reshapes material with distinctive emphases on worship, genealogy and temple preparation."
+            "1CH 10:1-14; 17:1-15; 21:1-22:19"
           ]
         }
       ]
@@ -403,9 +403,9 @@
           "prompt": "1CH 1:1-27",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "የመጀመሪያዎቹ የትውልድ ዝርዝሮች ከአዳም ይጀምራሉ።",
           "references": [
-            "The opening genealogies begin with Adam and trace families and tribes."
+            "1CH 1:1-27"
           ]
         },
         {
@@ -447,9 +447,9 @@
           "prompt": "1CH 10:1-14; 17:1-15; 21:1-22:19",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "ዜና መዋዕል በአምልኮ፣ በዘር ሐረግና በቤተ መቅደስ ዝግጅት ላይ በራሱ አጽንዖት ይዘትን ይመርጣልና ያቀርባል።",
           "references": [
-            "Chronicles selects and reshapes material with distinctive emphases on worship, genealogy and temple preparation."
+            "1CH 10:1-14; 17:1-15; 21:1-22:19"
           ]
         }
       ]
