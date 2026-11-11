@@ -1096,7 +1096,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "editorial_review_pending"
@@ -1105,7 +1105,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "language_review_required"
@@ -1128,7 +1128,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "editorial_review_pending"
@@ -1137,7 +1137,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "language_review_required"
@@ -1148,7 +1148,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "editorial_review_pending"
@@ -1157,7 +1157,7 @@
             "status": "draft_unreviewed",
             "source_ids": [
               "abs-2chronicles",
-              "usccb-2chronicles",
+              "usccb-historical-books-introduction",
               "esv-chronicles"
             ],
             "review_status": "language_review_required"
