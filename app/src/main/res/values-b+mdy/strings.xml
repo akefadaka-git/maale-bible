@@ -45,4 +45,10 @@
     <string name="action_open">ቡሌ</string>
     <string name="search_no_results">ኔ ዖኦጬ ኮይፃ ጌኤዦ ማፃኣፖይዳ ፔቴታዖ ጴዺባኣሴ።</string>
     <string name="search_error">ኮይፃ ፔቴዳዖ ዴንቄ ባኣዚ ባኣሴ። ጫኣኒንቴ ማፃኣፖ ሂንዳ ማሂ ዛጌ።</string>
+    <!-- Owner-supplied Maale language and search-status wording; preserve spelling exactly. -->
+    <string name="language_fallback_notice">ማኣሎ ሙኡጫ ጊኢጊንቲ ሃሣ ዛጊንቲባኣሢ ፖራንጄሦና ዻዊንታኔ።</string>
+    <string name="search_capabilities">ኮይፆኮ ዔራቶ</string>
+    <string name="search_available">ዓኣኔ</string>
+    <string name="search_waiting_download">ኬዳኒ ካፒሢዳ ዓኣኔ።</string>
+    <string name="search_in_development">ሃጋ ኮሺንቲዳ ዓኣኔ።</string>
 </resources>
