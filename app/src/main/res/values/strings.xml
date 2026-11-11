@@ -173,4 +173,12 @@
     <string name="study_saving_device">Saving your changes securely on this device.</string>
     <string name="study_local_persistence">Your journal notes are stored locally and remain available after you reopen the app.</string>
     <string name="study_note_missing">This note no longer exists. Refresh the list and try again.</string>
+    <string name="nav_atlas">Atlas</string>
+    <string name="atlas_title">Bible Atlas</string>
+    <string name="atlas_subtitle">Explore the places, regions and journeys connected with Scripture.</string>
+    <string name="atlas_map_placeholder">ATLAS MAP</string>
+    <string name="atlas_source_pending">Verified geographic data and licensed map sources have not yet been integrated.</string>
+    <string name="atlas_locations_pending">Place names, coordinates, boundaries and routes will appear only after source verification.</string>
+    <string name="atlas_no_fabricated_data">No locations or routes are invented or displayed in this preview.</string>
+    <string name="atlas_map_legend">MAP DATA PENDING VERIFICATION</string>
 </resources>
