@@ -190,9 +190,9 @@
           "prompt": "David is promised that his house and kingdom will be established.",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "The covenant promise concerns David’s house and kingdom.",
           "references": [
-            "The covenant promise concerns David’s house and kingdom."
+            "2SA 7:11-16"
           ]
         },
         {
@@ -236,9 +236,9 @@
           "prompt": "The narrative presents David’s abuse of power as harmless because he is king.",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "The prophet confronts David and the narrative describes severe consequences.",
           "references": [
-            "The prophet confronts David and the narrative describes severe consequences."
+            "2SA 11:1-12:14"
           ]
         }
       ]
@@ -385,9 +385,9 @@
           "prompt": "2SA 7:11-16",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "ቃል ኪዳኑ ስለ ዳዊት ቤትና መንግሥት ነው።",
           "references": [
-            "The covenant promise concerns David’s house and kingdom."
+            "2SA 7:11-16"
           ]
         },
         {
@@ -429,9 +429,9 @@
           "prompt": "2SA 11:1-12:14",
           "options": [],
           "correct_answer": false,
-          "explanation": "false",
+          "explanation": "ነቢዩ ዳዊትን ይገሥጸዋል፤ ትረካውም ከባድ ውጤቶችን ያሳያል።",
           "references": [
-            "The prophet confronts David and the narrative describes severe consequences."
+            "2SA 11:1-12:14"
           ]
         }
       ]
