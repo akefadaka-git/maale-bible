@@ -119,7 +119,7 @@ fun MaaleBibleApp() {
                     AppDestination.entries.forEach { item ->
                         NavigationBarItem(
                             selected = destination == item && selectedBookId == null,
-                            onClick = { selectedBookId = null; destination = item },
+                            onClick = { selectedBookId = null; readingBookId = null; destination = item },
                             icon = {},
                             label = { Text(stringResource(item.label)) }
                         )
