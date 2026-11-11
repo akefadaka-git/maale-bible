@@ -69,4 +69,10 @@
     <string name="library_review_required">ኮሺ ዛጊሢ ኮይሳኔ</string>
     <string name="library_partial">ዛላኬ</string>
     <string name="library_open_source">ጉሪ ፒቃዴ</string>
+    <!-- Owner-supplied Maale library and listening wording; preserve spelling exactly. -->
+    <string name="library_view_source_license">ጴዻ ቤዞና ዓኣ ፒቃዶና ኮሺ ዛጌ</string>
+    <string name="library_download_package">ጫኣኒንታንዳጉዲ ኬይሴ</string>
+    <string name="listen_heading">ቃኣሎ ዒና ጌሢ ዋይዜ. ማሌ ጶቂሤ. ቃኣሎ ባንሢ ማዔ!</string>
+    <string name="listen_now_playing">ሃሢ ዋይዚንቲሢዳ ዓኣኔ</string>
+    <string name="listen_audio_not_loaded">ዑኡሲ ጫኒንቲባኣሴ</string>
 </resources>
