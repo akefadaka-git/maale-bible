@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-1ch-bilingual-v1",
+  "book": {
+    "usfm_id": "1CH",
+    "english_name": "1 Chronicles",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "usccb-1chronicles",
+      "title": "1 Chronicles",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/1chronicles/0",
+      "use": "Purpose, historical interpretation, sources and divisions"
+    },
+    {
+      "id": "abs-1chronicles",
+      "title": "1 Chronicles",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/1-chronicles/",
+      "use": "Genealogies, David narrative and structure"
+    },
+    {
+      "id": "biblesociety-1chronicles",
+      "title": "1 Chronicles Introduction",
+      "publisher": "Bible Society",
+      "url": "https://www.biblesociety.org.uk/explore-the-bible/read/eng/ESV/1Chr/intro",
+      "use": "Post-exilic setting and overview"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "1 Chronicles retells Israel’s story through extensive genealogies and a focused account of David’s reign. It traces families from Adam through Israel’s tribes, recalls Saul’s death, and emphasizes David’s establishment of Jerusalem as a center of worship, his preparations for the temple and the organization of its music and service.",
+        "authorship": "The author is anonymous and conventionally called the Chronicler. The work draws on canonical biblical books and other records, some of which are no longer extant. Its composition is commonly placed in the post-exilic period, but the author’s identity and precise date remain uncertain; identifying the author as Ezra is a traditional proposal, not a certainty.",
+        "setting": "The narrative looks back over Israel’s ancestry and monarchy from the perspective of a community living after the Babylonian exile. Its genealogies connect the returned community with earlier generations, while the David narrative centers on Jerusalem and temple worship.",
+        "audience_and_purpose": "The book addresses a community rebuilding identity and worship after exile. It emphasizes continuity with Israel’s past, the Davidic line, the Levites and the central role of worship, while presenting a theological interpretation rather than a modern exhaustive chronicle.",
+        "structure": [
+          {
+            "range": "1:1–9:34",
+            "heading": "Genealogies and the community",
+            "summary": "Lists trace humanity, Israel’s tribes, David’s line, the Levites and families associated with Jerusalem."
+          },
+          {
+            "range": "9:35–10:14",
+            "heading": "Saul’s final account",
+            "summary": "Saul’s family and death provide the transition to David."
+          },
+          {
+            "range": "11:1–12:40",
+            "heading": "David established in Jerusalem",
+            "summary": "David is recognized as king; Jerusalem and his supporters are described."
+          },
+          {
+            "range": "13:1–16:43",
+            "heading": "The ark and worship",
+            "summary": "The ark is brought toward Jerusalem and worship is organized."
+          },
+          {
+            "range": "17:1–20:8",
+            "heading": "Covenant and David’s victories",
+            "summary": "The promise to David and accounts of military success shape the royal narrative."
+          },
+          {
+            "range": "21:1–22:19",
+            "heading": "The census and temple preparation",
+            "summary": "The census episode leads to the identification of the future temple site and preparations."
+          },
+          {
+            "range": "23:1–29:30",
+            "heading": "Temple service and David’s final charge",
+            "summary": "Levites, priests, musicians and leaders are organized; David commissions Solomon and the people."
+          }
+        ],
+        "themes": [
+          "Genealogy, memory and communal identity",
+          "The Davidic covenant and royal continuity",
+          "Jerusalem and the temple as a center of worship",
+          "Levites, priests, musicians and ordered service",
+          "Leadership, generosity and preparation for future generations",
+          "Theological retelling of Israel’s past"
+        ],
+        "key_people": [
+          "Adam",
+          "Abraham",
+          "Jacob/Israel",
+          "Judah",
+          "Levi",
+          "Saul",
+          "David",
+          "Solomon",
+          "Asaph",
+          "Heman"
+        ],
+        "key_passages": [
+          "1CH 1:1-27",
+          "1CH 2:1-17",
+          "1CH 6:1-48",
+          "1CH 9:1-34",
+          "1CH 11:1-9",
+          "1CH 16:1-36",
+          "1CH 17:1-15",
+          "1CH 21:1-30",
+          "1CH 22:1-19",
+          "1CH 29:1-20"
+        ],
+        "interpretive_care": [
+          "Chronicles is a theological retelling with its own emphases, not simply a duplicate of Samuel and Kings; compare parallel accounts without assuming every difference is accidental.",
+          "The genealogies have literary and communal purposes; do not treat every list as a complete modern population register.",
+          "The Chronicler’s favorable presentation of David highlights worship and temple preparation; it does not mean the reader should assume the book records every episode found in Samuel.",
+          "Ezra’s authorship is a traditional suggestion, not a fact established by the text."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1CH-S01",
+          "range": "1CH 9:1-34",
+          "title": "Remembering the returned community",
+          "observation": [
+            "Observe which families and roles are named in the Jerusalem lists."
+          ],
+          "interpretation": [
+            "How do the genealogies connect memory, belonging and present responsibility?"
+          ],
+          "application": [
+            "How can a community honor its history while welcoming people whose stories are less visible?"
+          ]
+        },
+        {
+          "id": "1CH-S02",
+          "range": "1CH 16:1-36",
+          "title": "Worship and thanksgiving",
+          "observation": [
+            "List the actions, leaders and themes in the song of thanksgiving."
+          ],
+          "interpretation": [
+            "How does worship join remembrance of God’s acts with public responsibility?"
+          ],
+          "application": [
+            "What shared practices can help a community express gratitude beyond a single event?"
+          ]
+        },
+        {
+          "id": "1CH-S03",
+          "range": "1CH 22:1-19",
+          "title": "Preparing for the next generation",
+          "observation": [
+            "Identify what David prepares and what he entrusts to Solomon and the leaders."
+          ],
+          "interpretation": [
+            "Why does the narrative emphasize preparation and shared responsibility rather than David completing the temple himself?"
+          ],
+          "application": [
+            "What can leaders prepare now so that future generations can continue the work responsibly?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1CH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which king dominates the narrative in 1 Chronicles 10–29?",
+          "options": [
+            "David",
+            "Saul",
+            "Solomon",
+            "Hezekiah"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The second major section focuses on David’s reign and preparations.",
+          "references": [
+            "1CH 10:1-14; 11:1-3"
+          ]
+        },
+        {
+          "id": "1CH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The book opens with genealogies reaching back to Adam.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The opening genealogies begin with Adam and trace families and tribes."
+          ]
+        },
+        {
+          "id": "1CH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which city becomes central to David’s rule and worship?",
+          "options": [
+            "Jerusalem",
+            "Samaria",
+            "Jericho",
+            "Hebron only"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Jerusalem is established as the royal and worship center.",
+          "references": [
+            "1CH 11:4-9; 16:1-6"
+          ]
+        },
+        {
+          "id": "1CH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which group receives extensive organization for temple service?",
+          "options": [
+            "Levites",
+            "Philistines",
+            "Amalekites",
+            "Moabites"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Chapters 23–26 organize Levites and temple-related responsibilities.",
+          "references": [
+            "1CH 23:1-32"
+          ]
+        },
+        {
+          "id": "1CH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "1 Chronicles gives the same narrative emphasis as 2 Samuel in every episode of David’s life.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "false",
+          "references": [
+            "Chronicles selects and reshapes material with distinctive emphases on worship, genealogy and temple preparation."
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "summary": "1 ዜና መዋዕል የእስራኤልን ታሪክ በረጅም የትውልድ ዝርዝሮችና በዳዊት ንግሥና ላይ ባተኮረ ትረካ እንደገና ያቀርባል። ከአዳም ጀምሮ የእስራኤልን ነገዶች ይከታተላል፤ የሳኦልን ሞት ያስታውሳል፤ ዳዊት ኢየሩሳሌምን የአምልኮ ማዕከል ማድረጉን፣ ለቤተ መቅደሱ ያደረገውን ዝግጅትና የሙዚቃና የአገልግሎት ሥርዓት ማደራጀቱን ያጎላል።",
+        "authorship": "ጸሐፊው ስሙ ያልታወቀ ሲሆን በተለምዶ “ዜና መዋዕል ጸሐፊ” ይባላል። መጽሐፉ ከመጽሐፍ ቅዱስ ሌሎች መጻሕፍትና ከአንዳንድ ዛሬ የሌሉ መዝገቦች ይጠቀማል። አጻጻፉ ብዙ ጊዜ ከምርኮ በኋላ ዘመን ጋር ይያያዛል፤ የጸሐፊው ማንነትና ትክክለኛ ቀን ግን አይታወቁም። ጸሐፊው ዕዝራ ነው የሚለው ትውፊታዊ ግምት እንጂ እርግጠኛ አይደለም።",
+        "setting": "ትረካው ከባቢሎን ምርኮ በኋላ ከሚኖር ማኅበረሰብ አንጻር የእስራኤልን ዘርና ንግሥና ይመለከታል። የትውልድ ዝርዝሮቹ የተመለሰውን ማኅበረሰብ ከቀደሙት ትውልዶች ጋር ያገናኛሉ፤ የዳዊት ትረካ ግን በኢየሩሳሌምና በቤተ መቅደስ አምልኮ ላይ ያተኩራል።",
+        "audience_and_purpose": "መጽሐፉ ከምርኮ በኋላ ማንነቱንና አምልኮውን እንደገና የሚገነባ ማኅበረሰብን ያነጋግራል። ከእስራኤል ያለፈ ታሪክ፣ ከዳዊት ዘር፣ ከሌዋውያንና ከአምልኮ ማዕከላዊነት ጋር ያለውን ቀጣይነት ያጎላል፤ ይህ ዘመናዊ ሁሉን አቀፍ ታሪክ ሳይሆን ሥነ መለኮታዊ ትርጓሜ ነው።",
+        "structure": [
+          {
+            "range": "1:1–9:34",
+            "heading": "የትውልድ ዝርዝሮችና ማኅበረሰብ",
+            "summary": "ዝርዝሮቹ የሰው ዘርን፣ የእስራኤልን ነገዶች፣ የዳዊትን ዘር፣ ሌዋውያንንና ከኢየሩሳሌም ጋር የተያያዙ ቤተሰቦችን ይከታተላሉ።"
+          },
+          {
+            "range": "9:35–10:14",
+            "heading": "የሳኦል የመጨረሻ ታሪክ",
+            "summary": "የሳኦል ቤተሰብና ሞት ወደ ዳዊት ታሪክ ያሸጋግራሉ።"
+          },
+          {
+            "range": "11:1–12:40",
+            "heading": "ዳዊት በኢየሩሳሌም ተጠናከረ",
+            "summary": "ዳዊት ንጉሥ መሆኑ ይታወቃል፤ ኢየሩሳሌምና ደጋፊዎቹ ይገለጻሉ።"
+          },
+          {
+            "range": "13:1–16:43",
+            "heading": "ታቦቱና አምልኮ",
+            "summary": "ታቦቱ ወደ ኢየሩሳሌም ይመጣል፤ የአምልኮ ሥርዓት ይደራጃል።"
+          },
+          {
+            "range": "17:1–20:8",
+            "heading": "ቃል ኪዳንና የዳዊት ድሎች",
+            "summary": "ለዳዊት የተሰጠው ተስፋና የጦርነት ድሎች የንጉሣዊውን ትረካ ይቀርጻሉ።"
+          },
+          {
+            "range": "21:1–22:19",
+            "heading": "የሕዝብ ቆጠራና ለቤተ መቅደስ ዝግጅት",
+            "summary": "የቆጠራው ታሪክ የቤተ መቅደሱን የወደፊት ቦታና ዝግጅት ያመለክታል።"
+          },
+          {
+            "range": "23:1–29:30",
+            "heading": "የቤተ መቅደስ አገልግሎትና የዳዊት የመጨረሻ ምክር",
+            "summary": "ሌዋውያን፣ ካህናት፣ ዘማሪዎችና መሪዎች ይደራጃሉ፤ ዳዊት ሰሎሞንንና ሕዝቡን ያበረታታል።"
+          }
+        ],
+        "themes": [
+          "የዘር ሐረግ፣ ትውስታና የማኅበረሰብ ማንነት",
+          "የዳዊት ቃል ኪዳንና የንጉሣዊ ቀጣይነት",
+          "ኢየሩሳሌምና ቤተ መቅደሱ የአምልኮ ማዕከል መሆናቸው",
+          "ሌዋውያን፣ ካህናት፣ ዘማሪዎችና የተደራጀ አገልግሎት",
+          "አመራር፣ ልግስናና ለቀጣይ ትውልድ ዝግጅት",
+          "የእስራኤል ያለፈ ታሪክ ሥነ መለኮታዊ እንደገና አቀራረብ"
+        ],
+        "key_people": [
+          "አዳም",
+          "አብርሃም",
+          "ያዕቆብ/እስራኤል",
+          "ይሁዳ",
+          "ሌዊ",
+          "ሳኦል",
+          "ዳዊት",
+          "ሰሎሞን",
+          "አሳፍ",
+          "ሄማን"
+        ],
+        "key_passages": [
+          "1CH 1:1-27",
+          "1CH 2:1-17",
+          "1CH 6:1-48",
+          "1CH 9:1-34",
+          "1CH 11:1-9",
+          "1CH 16:1-36",
+          "1CH 17:1-15",
+          "1CH 21:1-30",
+          "1CH 22:1-19",
+          "1CH 29:1-20"
+        ],
+        "interpretive_care": [
+          "ዜና መዋዕል የራሱ አጽንዖቶች ያሉት ሥነ መለኮታዊ እንደገና ትረካ ነው፤ ከሳሙኤልና ነገሥት ጋር ሲነጻጸር ልዩነቶችን ሁሉ በስህተት አትቁጠሩ።",
+          "የትውልድ ዝርዝሮቹ ሥነ ጽሑፋዊና የማኅበረሰብ ዓላማ አላቸው፤ ሁሉንም እንደ ዘመናዊ ሙሉ የሕዝብ መዝገብ አትቁጠሩ።",
+          "የዳዊት አዎንታዊ አቀራረብ አምልኮንና የቤተ መቅደስ ዝግጅትን ያጎላል፤ በሳሙኤል ያሉ ሁሉንም ክስተቶች እንደገና አቀረበ ማለት አይደለም።",
+          "ዕዝራ ጸሐፊ ነው የሚለው ትውፊታዊ ሐሳብ ነው፤ በጽሑፉ አልተረጋገጠም።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1CH-S01",
+          "range": "1CH 9:1-34",
+          "title": "የተመለሰውን ማኅበረሰብ ማስታወስ",
+          "observation": [
+            "በኢየሩሳሌም ዝርዝሮች የተጠቀሱትን ቤተሰቦችና ኃላፊነቶች ተመልከቱ።"
+          ],
+          "interpretation": [
+            "የዘር ዝርዝሮቹ ትውስታን፣ አባልነትንና የአሁኑን ኃላፊነት እንዴት ያገናኛሉ?"
+          ],
+          "application": [
+            "ማኅበረሰብ ታሪኩን እያከበረ ታሪካቸው ብዙ ያልታየ ሰዎችን እንዴት ሊቀበል ይችላል?"
+          ]
+        },
+        {
+          "id": "1CH-S02",
+          "range": "1CH 16:1-36",
+          "title": "አምልኮና ምስጋና",
+          "observation": [
+            "በምስጋናው መዝሙር ያሉትን ድርጊቶች፣ መሪዎችና ጭብጦች ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "አምልኮ የእግዚአብሔርን ሥራ ማስታወስን ከሕዝባዊ ኃላፊነት ጋር እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "ማኅበረሰብ ከአንድ ዝግጅት በላይ ምስጋናን እንዲገልጽ ምን የጋራ ልምዶች ይረዳሉ?"
+          ]
+        },
+        {
+          "id": "1CH-S03",
+          "range": "1CH 22:1-19",
+          "title": "ለቀጣይ ትውልድ መዘጋጀት",
+          "observation": [
+            "ዳዊት ያዘጋጀውንና ለሰሎሞንና ለመሪዎቹ የሰጠውን ኃላፊነት ለዩ።"
+          ],
+          "interpretation": [
+            "ትረካው ዳዊት ቤተ መቅደሱን ራሱ ከመጨረስ ይልቅ ዝግጅትንና የጋራ ኃላፊነትን ለምን ያጎላል?"
+          ],
+          "application": [
+            "መሪዎች ቀጣይ ትውልዶች ሥራውን በኃላፊነት እንዲቀጥሉ አሁን ምን ሊያዘጋጁ ይችላሉ?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1CH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በ1 ዜና መዋዕል 10–29 የትኛው ንጉሥ ዋና ቦታ ይይዛል?",
+          "options": [
+            "ዳዊት",
+            "ሳኦል",
+            "ሰሎሞን",
+            "ሕዝቅያስ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1CH 10:1-14; 11:1-3"
+          ]
+        },
+        {
+          "id": "1CH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "1CH 1:1-27",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The opening genealogies begin with Adam and trace families and tribes."
+          ]
+        },
+        {
+          "id": "1CH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዳዊት ንግሥናና አምልኮ ዋና ማዕከል የሆነችው ከተማ የትኛዋ ናት?",
+          "options": [
+            "ኢየሩሳሌም",
+            "ሰማርያ",
+            "ኢያሪኮ",
+            "ኬብሮን ብቻ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1CH 11:4-9; 16:1-6"
+          ]
+        },
+        {
+          "id": "1CH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ለቤተ መቅደስ አገልግሎት በሰፊው የተደራጀው የትኛው ቡድን ነው?",
+          "options": [
+            "ሌዋውያን",
+            "ፍልስጤማውያን",
+            "አማሌቃውያን",
+            "ሞዓባውያን"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "1CH 23:1-32"
+          ]
+        },
+        {
+          "id": "1CH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "1CH 10:1-14; 17:1-15; 21:1-22:19",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "false",
+          "references": [
+            "Chronicles selects and reshapes material with distinctive emphases on worship, genealogy and temple preparation."
+          ]
+        }
+      ]
+    }
+  }
+}
