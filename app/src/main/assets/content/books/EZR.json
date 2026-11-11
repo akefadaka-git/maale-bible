@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-ezr-bilingual-v1",
+  "book": {
+    "usfm_id": "EZR",
+    "english_name": "Ezra",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-ezra",
+      "title": "Ezra",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/ezra/",
+      "use": "Return waves, temple rebuilding and book structure"
+    },
+    {
+      "id": "usccb-ezra",
+      "title": "Ezra",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/ezra/0",
+      "use": "Ezra-Nehemiah composition, restoration and sources"
+    },
+    {
+      "id": "esv-ezra",
+      "title": "Introduction to Ezra",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-ezra/",
+      "use": "Historical chronology, authorship discussion and outline"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Ezra — return, temple and Torah",
+        "summary": "Ezra recounts the return of Judean exiles under Persian rule, the rebuilding and dedication of the Jerusalem temple, and Ezra’s later mission to teach the Torah and address crises in the restored community. The book combines narrative, lists, royal decrees and first-person memoir-like sections.",
+        "authorship": "The book does not identify a single author. It includes first-person material associated with Ezra and documents in Hebrew and Aramaic. Ezra and Nehemiah were once treated as one work; their relationship to Chronicles and the stages of compilation remain debated.",
+        "setting": "The narrative spans the Persian period from Cyrus’s decree in 538 BCE through the temple’s completion around 515 BCE and Ezra’s mission in the fifth century BCE. The setting moves between Babylon, Persian administration and Jerusalem.",
+        "audience_and_purpose": "The book helps a post-exilic community understand return, worship, Torah, identity and the challenges of rebuilding. Its accounts of intermarriage and communal boundaries require careful historical and ethical interpretation, not automatic transfer into modern policy.",
+        "structure": [
+          {
+            "range": "1:1–2:70",
+            "heading": "Cyrus’s decree and the first return",
+            "summary": "Exiles return under Sheshbazzar and Zerubbabel; families and resources are listed."
+          },
+          {
+            "range": "3:1–6:22",
+            "heading": "Altar and temple rebuilt",
+            "summary": "Worship resumes, the temple foundations are laid, opposition arises and the project is completed."
+          },
+          {
+            "range": "7:1–8:36",
+            "heading": "Ezra’s mission",
+            "summary": "Ezra receives royal authorization, gathers returnees and travels to Jerusalem."
+          },
+          {
+            "range": "9:1–10:44",
+            "heading": "Community crisis and response",
+            "summary": "Ezra prays and the community debates intermarriage and covenant identity."
+          }
+        ],
+        "themes": [
+          "Return and restoration after exile",
+          "Temple worship and communal renewal",
+          "Torah, teaching and covenant identity",
+          "Persian imperial policy and local agency",
+          "Memory, lists and continuity",
+          "Ethical complexity in boundary-making"
+        ],
+        "key_people": [
+          "Cyrus",
+          "Sheshbazzar",
+          "Zerubbabel",
+          "Jeshua",
+          "Haggai",
+          "Zechariah",
+          "Ezra",
+          "Artaxerxes"
+        ],
+        "key_passages": [
+          "EZR 1:1-11",
+          "EZR 3:1-13",
+          "EZR 4:1-24",
+          "EZR 6:13-22",
+          "EZR 7:1-28",
+          "EZR 8:21-36",
+          "EZR 9:1-15",
+          "EZR 10:1-17"
+        ],
+        "interpretive_care": [
+          "The chronology includes distinct return waves and periods; do not collapse them into one event.",
+          "Ezra’s first-person sections and royal documents are important evidence, but they do not settle every question of authorship or compilation.",
+          "The intermarriage episode is historically and ethically complex; distinguish the text’s post-exilic communal concerns from modern ethnic exclusion or coercive policy.",
+          "The rebuilding of the temple occurred amid imperial rule and local opposition; avoid portraying restoration as effortless or uncontested."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EZR-S01",
+          "range": "EZR 3:1-13",
+          "title": "Worship begins again",
+          "observation": [
+            "Identify what the returned community rebuilds first and how people respond."
+          ],
+          "interpretation": [
+            "Why do joy and grief appear together when the temple foundations are laid?"
+          ],
+          "application": [
+            "How can a community honor both loss and new beginnings?"
+          ]
+        },
+        {
+          "id": "EZR-S02",
+          "range": "EZR 6:13-22",
+          "title": "The temple is completed",
+          "observation": [
+            "Trace the officials’ actions and the community’s dedication."
+          ],
+          "interpretation": [
+            "How do perseverance, documentation and public authority contribute to the project?"
+          ],
+          "application": [
+            "What forms of transparent cooperation help a long-term community project succeed?"
+          ]
+        },
+        {
+          "id": "EZR-S03",
+          "range": "EZR 7:1-28",
+          "title": "Ezra’s teaching mission",
+          "observation": [
+            "Observe Ezra’s preparation, royal authorization and stated purpose."
+          ],
+          "interpretation": [
+            "How are learning, worship and public responsibility joined in Ezra’s mission?"
+          ],
+          "application": [
+            "How can teachers and leaders prepare carefully before guiding a community?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EZR-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which Persian king’s decree begins the return narrative?",
+          "options": [
+            "Cyrus",
+            "Darius",
+            "Artaxerxes",
+            "Xerxes"
+          ],
+          "correct_option_id": "A",
+          "explanation": "EZR 1:1-4",
+          "references": [
+            "የመመለስ ትረካውን የጀመረው የትኛው የፋርስ ንጉሥ አዋጅ ነው?"
+          ]
+        },
+        {
+          "id": "EZR-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The rebuilding of the temple faced opposition before it was completed.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The narrative records opposition and a later resumption and completion of the work.",
+          "references": [
+            "EZR 4:1-24; 6:13-22"
+          ]
+        },
+        {
+          "id": "EZR-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Who is the priest and scribe associated with the later mission to Jerusalem?",
+          "options": [
+            "Ezra",
+            "Zerubbabel",
+            "Nehemiah",
+            "Haggai"
+          ],
+          "correct_option_id": "A",
+          "explanation": "EZR 7:1-10",
+          "references": [
+            "ከኋለኛው ወደ ኢየሩሳሌም ተልዕኮ ጋር የተያያዘው ካህንና ጸሐፊ ማን ነው?"
+          ]
+        },
+        {
+          "id": "EZR-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which two languages appear in the book’s documentary material?",
+          "options": [
+            "Hebrew and Aramaic",
+            "Greek and Latin",
+            "Hebrew and Greek",
+            "Persian and Latin"
+          ],
+          "correct_option_id": "A",
+          "explanation": "EZR 4:8-6:18",
+          "references": [
+            "በመጽሐፉ የሰነድ ክፍሎች ውስጥ የሚታዩት ሁለቱ ቋንቋዎች የትኞቹ ናቸው?"
+          ]
+        },
+        {
+          "id": "EZR-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Ezra and Nehemiah were always separate books in the ancient Hebrew canon.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "They were traditionally treated as one combined book in the Hebrew canon.",
+          "references": [
+            "EZR 1:1-4; NEH 1:1-3"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዕዝራ — መመለስ፣ ቤተ መቅደስና ኦሪት",
+        "summary": "ዕዝራ መጽሐፍ በፋርስ ንግሥና ሥር የይሁዳ ምርኮኞች መመለሳቸውን፣ የኢየሩሳሌም ቤተ መቅደስ እንደገና መገንባቱንና መመረቁን፣ እንዲሁም ዕዝራ ኦሪትን ለማስተማርና በታደሰው ማኅበረሰብ ያሉ ችግሮችን ለመመርመር ያደረገውን ተልዕኮ ይተርካል። ትረካው ታሪክን፣ ዝርዝሮችን፣ የንጉሥ አዋጆችንና በመጀመሪያ ሰው የተጻፉ ክፍሎችን ያቀላቅላል።",
+        "authorship": "መጽሐፉ አንድ ጸሐፊ አይጠቅስም። ከዕዝራ ጋር የተያያዙ በመጀመሪያ ሰው የተጻፉ ክፍሎችና በዕብራይስጥና በአራማይክ የተጻፉ ሰነዶች አሉት። ዕዝራና ነህምያ ቀደም ሲል አንድ መጽሐፍ እንደነበሩ ይቆጠሩ ነበር፤ ከዜና መዋዕል ጋር ያላቸው ግንኙነትና የአጻጻፍ ደረጃዎች ግን ይወያያሉ።",
+        "setting": "ትረካው ከ538 ዓ.ዓ. የቂሮስ አዋጅ ጀምሮ እስከ 515 ዓ.ዓ. አካባቢ የቤተ መቅደሱ ሥራ መጠናቀቅና በ5ኛው ክፍለ ዘመን ዓ.ዓ. የዕዝራ ተልዕኮ ድረስ ይዘልቃል። ባቢሎንን፣ የፋርስን አስተዳደርና ኢየሩሳሌምን ያካትታል።",
+        "audience_and_purpose": "መጽሐፉ ከምርኮ በኋላ ያለ ማኅበረሰብ መመለስን፣ አምልኮን፣ ኦሪትን፣ ማንነትንና የመገንባት ችግሮችን እንዲረዳ ይረዳል። ስለ ጋብቻና የማኅበረሰብ ድንበር የሚናገረው ክፍል በታሪካዊና በሥነ ምግባር ጥንቃቄ መተርጎም አለበት፤ ወደ ዘመናዊ ፖሊሲ በቀጥታ መተላለፍ የለበትም።",
+        "structure": [
+          {
+            "range": "1:1–2:70",
+            "heading": "የቂሮስ አዋጅና የመጀመሪያው መመለስ",
+            "summary": "ምርኮኞች በሼሽባጻርና በዘሩባቤል መሪነት ይመለሳሉ፤ ቤተሰቦችና ሀብቶች ይዘረዘራሉ።"
+          },
+          {
+            "range": "3:1–6:22",
+            "heading": "መሠዊያና ቤተ መቅደስ እንደገና ተገነቡ",
+            "summary": "አምልኮ ይጀምራል፣ መሠረት ይጣላል፣ ተቃውሞ ይነሳል፣ ሥራውም ይጠናቀቃል።"
+          },
+          {
+            "range": "7:1–8:36",
+            "heading": "የዕዝራ ተልዕኮ",
+            "summary": "ዕዝራ የንጉሥ ፈቃድ ይቀበላል፣ ተመላሾችን ያሰባስባልና ወደ ኢየሩሳሌም ይጓዛል።"
+          },
+          {
+            "range": "9:1–10:44",
+            "heading": "የማኅበረሰብ ችግርና ምላሽ",
+            "summary": "ዕዝራ ይጸልያል፤ ማኅበረሰቡም ስለ ጋብቻና ስለ ቃል ኪዳን ማንነት ይወያያል።"
+          }
+        ],
+        "themes": [
+          "ከምርኮ በኋላ መመለስና መታደስ",
+          "ቤተ መቅደስ አምልኮና የማኅበረሰብ መታደስ",
+          "ኦሪት፣ ትምህርትና የቃል ኪዳን ማንነት",
+          "የፋርስ ንጉሣዊ ፖሊሲና የአካባቢ ተግባር",
+          "ትውስታ፣ ዝርዝሮችና ቀጣይነት",
+          "የድንበር መወሰን ሥነ ምግባራዊ ውስብስብነት"
+        ],
+        "key_people": [
+          "ቂሮስ",
+          "ሼሽባጻር",
+          "ዘሩባቤል",
+          "ኢያሱ",
+          "ሐጌ",
+          "ዘካርያስ",
+          "ዕዝራ",
+          "አርጤክስስ"
+        ],
+        "key_passages": [
+          "EZR 1:1-11",
+          "EZR 3:1-13",
+          "EZR 4:1-24",
+          "EZR 6:13-22",
+          "EZR 7:1-28",
+          "EZR 8:21-36",
+          "EZR 9:1-15",
+          "EZR 10:1-17"
+        ],
+        "interpretive_care": [
+          "ትረካው የተለያዩ የመመለስ ማዕበሎችንና ዘመናትን ይይዛል፤ ሁሉንም እንደ አንድ ክስተት አታቅርቡ።",
+          "የዕዝራ በመጀመሪያ ሰው የተጻፉ ክፍሎችና የንጉሥ ሰነዶች ጠቃሚ ምንጮች ቢሆኑም የጸሐፊነትን ጥያቄ ሁሉ አይፈቱም።",
+          "የጋብቻ ጉዳይ በታሪካዊና በሥነ ምግባር ውስብስብነት መተርጎም አለበት፤ ወደ ዘመናዊ የዘር መገለል ወይም አስገዳጅ ፖሊሲ አትቀይሩት።",
+          "የቤተ መቅደሱ ግንባታ በንጉሣዊ አገዛዝና በአካባቢ ተቃውሞ መካከል ተካሄደ፤ ያለ ችግር ተጠናቀቀ ብላችሁ አታቅርቡ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EZR-S01",
+          "range": "EZR 3:1-13",
+          "title": "አምልኮ እንደገና ተጀመረ",
+          "observation": [
+            "የተመለሰው ማኅበረሰብ መጀመሪያ የገነባውንና ሕዝቡ የሰጠውን ምላሽ ለዩ።"
+          ],
+          "interpretation": [
+            "የቤተ መቅደሱ መሠረት ሲጣል ደስታና ሐዘን ለምን አብረው ይታያሉ?"
+          ],
+          "application": [
+            "ማኅበረሰብ ኪሳራንና አዲስ መጀመሪያን እንዴት በአንድነት ሊያከብር ይችላል?"
+          ]
+        },
+        {
+          "id": "EZR-S02",
+          "range": "EZR 6:13-22",
+          "title": "ቤተ መቅደሱ ተጠናቀቀ",
+          "observation": [
+            "የአስተዳዳሪዎቹን ድርጊትና የማኅበረሰቡን ምረቃ ተከታተሉ።"
+          ],
+          "interpretation": [
+            "ጽናት፣ ሰነድና ሕዝባዊ ሥልጣን ለሥራው መጠናቀቅ እንዴት ይረዳሉ?"
+          ],
+          "application": [
+            "የረጅም ጊዜ የማኅበረሰብ ፕሮጀክት እንዲሳካ ምን ዓይነት ግልጽ ትብብር ያስፈልጋል?"
+          ]
+        },
+        {
+          "id": "EZR-S03",
+          "range": "EZR 7:1-28",
+          "title": "የዕዝራ የማስተማር ተልዕኮ",
+          "observation": [
+            "የዕዝራን ዝግጅት፣ የንጉሥ ፈቃድና የተገለጸውን ዓላማ ተመልከቱ።"
+          ],
+          "interpretation": [
+            "በዕዝራ ተልዕኮ ውስጥ ትምህርት፣ አምልኮና ሕዝባዊ ኃላፊነት እንዴት ይገናኛሉ?"
+          ],
+          "application": [
+            "አስተማሪዎችና መሪዎች ማኅበረሰብን ከመምራታቸው በፊት በጥንቃቄ እንዴት ሊዘጋጁ ይችላሉ?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EZR-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ቂሮስ",
+          "options": [
+            "ዳርዮስ",
+            "አርጤክስስ",
+            "ዜርክሲስ",
+            "ዕዝራ በምርኮኞች እንዲመለሱ በቂሮስ አዋጅ ይጀምራል።"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "የመመለስ ትረካውን የጀመረው የትኛው የፋርስ ንጉሥ አዋጅ ነው?"
+          ]
+        },
+        {
+          "id": "EZR-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ቤተ መቅደሱ ከመጠናቀቁ በፊት ግንባታው ተቃውሞ ገጠመው።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "EZR 4:1-24; 6:13-22"
+          ]
+        },
+        {
+          "id": "EZR-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ዕዝራ",
+          "options": [
+            "ዘሩባቤል",
+            "ነህምያ",
+            "ሐጌ",
+            "ዕዝራ የኋለኛውን መመለስና የማስተማር ተልዕኮ ይመራል።"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "ከኋለኛው ወደ ኢየሩሳሌም ተልዕኮ ጋር የተያያዘው ካህንና ጸሐፊ ማን ነው?"
+          ]
+        },
+        {
+          "id": "EZR-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ዕብራይስጥና አራማይክ",
+          "options": [
+            "ግሪክና ላቲን",
+            "ዕብራይስጥና ግሪክ",
+            "ፋርስኛና ላቲን",
+            "መጽሐፉ የዕብራይስጥ ትረካና የአራማይክ ሰነዶችን ይይዛል።"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "በመጽሐፉ የሰነድ ክፍሎች ውስጥ የሚታዩት ሁለቱ ቋንቋዎች የትኞቹ ናቸው?"
+          ]
+        },
+        {
+          "id": "EZR-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዕዝራና ነህምያ በጥንታዊው የዕብራይስጥ ቀኖና ሁልጊዜ የተለያዩ መጻሕፍት ነበሩ።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "EZR 1:1-4; NEH 1:1-3"
+          ]
+        }
+      ]
+    }
+  }
+}
