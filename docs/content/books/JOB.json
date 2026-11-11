@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-job-bilingual-v1",
+  "book": {
+    "usfm_id": "JOB",
+    "english_name": "Job",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "pending",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-job",
+      "title": "Job",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/job/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "esv-job",
+      "title": "Introduction to Job",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-job/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "bibleproject-job",
+      "title": "Job",
+      "publisher": "BibleProject",
+      "url": "https://bibleproject.com/guides/book-of-job/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Job — book introduction",
+        "summary": "Job examines innocent suffering, lament and the limits of human wisdom. Its debate challenges the idea that suffering always proves personal guilt. God’s speeches expose human limits without offering a simple cause for every loss.",
+        "authorship": "The book is anonymous; its date and setting are debated.",
+        "setting": "The narrative is set in Uz, outside the usual Israelite national setting.",
+        "audience_and_purpose": "Job examines innocent suffering, lament and the limits of human wisdom. Its debate challenges the idea that suffering always proves personal guilt. God’s speeches expose human limits without offering a simple cause for every loss.",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "Introduction and orientation",
+            "summary": "The book establishes its central questions and literary voice."
+          },
+          {
+            "range": "Main section",
+            "heading": "Exploration and instruction",
+            "summary": "Dialogues, prayers or sayings develop the central themes."
+          },
+          {
+            "range": "Closing",
+            "heading": "Conclusion and response",
+            "summary": "The closing material gathers the book’s challenge and invites faithful response."
+          }
+        ],
+        "themes": [
+          "Suffering and the limits of explanation",
+          "Lament and integrity",
+          "Human finitude and divine wisdom"
+        ],
+        "key_people": [
+          "Job",
+          "Eliphaz",
+          "Bildad",
+          "Zophar",
+          "Elihu"
+        ],
+        "key_passages": [
+          "JOB 1:1-22",
+          "JOB 2:1-13",
+          "JOB 3:1-26",
+          "JOB 19:23-27",
+          "JOB 28:1-28",
+          "JOB 38:1-41",
+          "JOB 42:1-17"
+        ],
+        "interpretive_care": [
+          "Do not claim the book gives a universal explanation for individual suffering.",
+          "The friends’ speeches are part of a debate and are challenged by the conclusion."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JOB-S01",
+          "range": "JOB 1:1–2:13",
+          "title": "Integrity under pressure",
+          "observation": [
+            "List Job’s losses and responses."
+          ],
+          "interpretation": [
+            "How does the prologue challenge the friends’ assumptions?"
+          ],
+          "application": [
+            "How can you accompany a grieving person without blaming them?"
+          ]
+        },
+        {
+          "id": "JOB-S02",
+          "range": "JOB 3:1–26",
+          "title": "The language of lament",
+          "observation": [
+            "Observe Job’s questions and images."
+          ],
+          "interpretation": [
+            "Why does the book preserve lament as faithful speech?"
+          ],
+          "application": [
+            "Write an honest prayer naming pain."
+          ]
+        },
+        {
+          "id": "JOB-S03",
+          "range": "JOB 38:1–42:17",
+          "title": "The Creator and human limits",
+          "observation": [
+            "Identify God’s questions about creation."
+          ],
+          "interpretation": [
+            "How do the speeches reshape Job’s view without explaining every cause?"
+          ],
+          "application": [
+            "Name an area where humility is needed."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JOB-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What central question does Job raise?",
+          "options": [
+            "Why do righteous people suffer?",
+            "How is wealth gained?",
+            "Who rules Uz?",
+            "How is illness always cured?"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The book challenges simple claims that suffering always proves guilt.",
+          "references": [
+            "JOB 1:1-22"
+          ]
+        },
+        {
+          "id": "JOB-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Job gives a simple explanation for every instance of suffering.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The book resists universal explanations.",
+          "references": [
+            "JOB 38:1-42:17"
+          ]
+        },
+        {
+          "id": "JOB-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which three friends debate with Job?",
+          "options": [
+            "Moses, Aaron and Miriam",
+            "Eliphaz, Bildad and Zophar",
+            "David, Nathan and Gad",
+            "Peter, James and John"
+          ],
+          "correct_option_id": "B",
+          "explanation": "These are the three friends in the main dialogue.",
+          "references": [
+            "JOB 2:11"
+          ]
+        },
+        {
+          "id": "JOB-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "From where does God address Job?",
+          "options": [
+            "The temple",
+            "A burning bush",
+            "The whirlwind",
+            "A dream"
+          ],
+          "correct_option_id": "C",
+          "explanation": "The divine speeches begin from the whirlwind.",
+          "references": [
+            "JOB 38:1"
+          ]
+        },
+        {
+          "id": "JOB-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The friends’ explanations are all endorsed by the book.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The conclusion challenges their claims.",
+          "references": [
+            "JOB 42:7-9"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "ኢዮብ — መግቢያ",
+        "summary": "ኢዮብ መጽሐፍ ያለ ጥፋት ስለሚደርስ መከራ፣ ልቅሶና የሰው ጥበብ ወሰን ይመረምራል። መከራ ሁልጊዜ የግል ጥፋት ውጤት ነው የሚለውን ሐሳብ ይፈትናል።",
+        "authorship": "መጽሐፉ ደራሲውን በስም አይጠቅስም፤ የተጻፈበት ዘመንና የታሪኩ ቦታ በምሁራን መካከል ውይይት ያለባቸው ናቸው።",
+        "setting": "ታሪኩ በእስራኤል ውጭ በሚገኘው ኡጽ ምድር ይካሄዳል።",
+        "audience_and_purpose": "ኢዮብ መጽሐፍ ያለ ጥፋት ስለሚደርስ መከራ፣ ልቅሶና የሰው ጥበብ ወሰን ይመረምራል። መከራ ሁልጊዜ የግል ጥፋት ውጤት ነው የሚለውን ሐሳብ ይፈትናል።",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "መግቢያና አቀራረብ",
+            "summary": "መጽሐፉ ዋና ጥያቄዎቹንና የትረካውን ድምፅ ያቀርባል።"
+          },
+          {
+            "range": "Main section",
+            "heading": "ዋና ውይይት",
+            "summary": "ውይይቶችና ንግግሮች ዋና ጭብጦችን ያብራራሉ።"
+          },
+          {
+            "range": "Closing",
+            "heading": "መደምደሚያ",
+            "summary": "የመጨረሻው ክፍል የመጽሐፉን ጥሪ ያጠቃልላል።"
+          }
+        ],
+        "themes": [
+          "መከራና የማብራሪያ ወሰን",
+          "ልቅሶና ታማኝነት",
+          "የሰው ውስንነትና መለኮታዊ ጥበብ"
+        ],
+        "key_people": [
+          "ኢዮብ",
+          "ኤሊፋዝ",
+          "በልዳድ",
+          "ጾፋር",
+          "ኤሊሁ"
+        ],
+        "key_passages": [
+          "JOB 1:1-22",
+          "JOB 2:1-13",
+          "JOB 3:1-26",
+          "JOB 19:23-27",
+          "JOB 28:1-28",
+          "JOB 38:1-41",
+          "JOB 42:1-17"
+        ],
+        "interpretive_care": [
+          "መጽሐፉ ለግለሰብ መከራ አንድ ዓለም አቀፍ ምክንያት አይሰጥም።",
+          "የወዳጆቹ ንግግር የውይይቱ ክፍል ነው፤ መደምደሚያው አንዳንድ ንግግሮቻቸውን ይቃወማል።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JOB-S01",
+          "range": "JOB 1:1–2:13",
+          "title": "Integrity under pressure",
+          "observation": [
+            "ኢዮብ የደረሰበትን ኪሳራና ምላሹን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "መግቢያው የወዳጆቹን ግምት እንዴት ይፈትናል?"
+          ],
+          "application": [
+            "ሐዘን ያለበትን ሰው ሳንወቅስ እንዴት እንረዳለን?"
+          ]
+        },
+        {
+          "id": "JOB-S02",
+          "range": "JOB 3:1–26",
+          "title": "The language of lament",
+          "observation": [
+            "የኢዮብን ጥያቄዎችና ምስሎች ተመልከቱ።"
+          ],
+          "interpretation": [
+            "መጽሐፉ ልቅሶን ለምን ይጠብቃል?"
+          ],
+          "application": [
+            "ሕመምን በቅንነት የሚገልጽ ጸሎት ጻፉ።"
+          ]
+        },
+        {
+          "id": "JOB-S03",
+          "range": "JOB 38:1–42:17",
+          "title": "The Creator and human limits",
+          "observation": [
+            "ስለ ፍጥረት የተጠየቁትን ጥያቄዎች ለዩ።"
+          ],
+          "interpretation": [
+            "ንግግሩ ሁሉን ሳያብራራ እይታን እንዴት ይቀይራል?"
+          ],
+          "application": [
+            "ትሕትና የሚያስፈልግበትን አንድ ነገር ጥቀሱ።"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JOB-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የኢዮብ መጽሐፍ የሚያነሳው ዋና ጥያቄ ምንድን ነው?",
+          "options": [
+            "ጻድቅ ሰው ለምን ይሠቃያል?",
+            "ሀብት እንዴት ይገኛል?",
+            "ኡጽን ማን ይግዛ?",
+            "ሕመም ሁልጊዜ እንዴት ይፈወሳል?"
+          ],
+          "correct_option_id": "A",
+          "explanation": "መከራ ሁልጊዜ የግል ጥፋት ነው የሚለውን ሐሳብ ይፈትናል።",
+          "references": [
+            "JOB 1:1-22"
+          ]
+        },
+        {
+          "id": "JOB-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ኢዮብ ለሁሉም መከራ ቀላል ምክንያት ይሰጣል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "መጽሐፉ ቀላል ማብራሪያዎችን ይቃወማል።",
+          "references": [
+            "JOB 38:1-42:17"
+          ]
+        },
+        {
+          "id": "JOB-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከኢዮብ ጋር የተከራከሩት ሦስቱ ወዳጆች እነማን ናቸው?",
+          "options": [
+            "ሙሴ፣ አሮንና ማርያም",
+            "ኤሊፋዝ፣ በልዳድና ጾፋር",
+            "ዳዊት፣ ናታንና ጋድ",
+            "ጴጥሮስ፣ ያዕቆብና ዮሐንስ"
+          ],
+          "correct_option_id": "B",
+          "explanation": "እነዚህ በዋናው ውይይት የሚታዩ ወዳጆች ናቸው።",
+          "references": [
+            "JOB 2:11"
+          ]
+        },
+        {
+          "id": "JOB-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "እግዚአብሔር ከየት ለኢዮብ ተናገረ?",
+          "options": [
+            "ከቤተ መቅደስ",
+            "ከሚነድ ቁጥቋጦ",
+            "ከዐውሎ ነፋስ",
+            "ከሕልም"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ንግግሩ ከዐውሎ ነፋስ ይጀምራል።",
+          "references": [
+            "JOB 38:1"
+          ]
+        },
+        {
+          "id": "JOB-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የኢዮብ ወዳጆች ሁሉም ማብራሪያቸው በመጽሐፉ ይደገፋል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "መደምደሚያው ንግግራቸውን ይቃወማል።",
+          "references": [
+            "JOB 42:7-9"
+          ]
+        }
+      ]
+    }
+  }
+}

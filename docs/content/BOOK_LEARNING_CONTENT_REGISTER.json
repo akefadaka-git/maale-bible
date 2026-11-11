@@ -1417,14 +1417,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -1441,26 +1449,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -1474,14 +1498,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -1498,26 +1530,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -1531,14 +1579,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -1555,26 +1611,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -1588,14 +1660,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -1612,26 +1692,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
