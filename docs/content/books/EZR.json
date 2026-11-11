@@ -169,9 +169,9 @@
             "Xerxes"
           ],
           "correct_option_id": "A",
-          "explanation": "EZR 1:1-4",
+          "explanation": "Ezra opens with Cyrus’s decree allowing the exiles to return.",
           "references": [
-            "የመመለስ ትረካውን የጀመረው የትኛው የፋርስ ንጉሥ አዋጅ ነው?"
+            "EZR 1:1-4"
           ]
         },
         {
@@ -198,9 +198,9 @@
             "Haggai"
           ],
           "correct_option_id": "A",
-          "explanation": "EZR 7:1-10",
+          "explanation": "Ezra leads the later return and teaching mission.",
           "references": [
-            "ከኋለኛው ወደ ኢየሩሳሌም ተልዕኮ ጋር የተያያዘው ካህንና ጸሐፊ ማን ነው?"
+            "EZR 7:1-10"
           ]
         },
         {
@@ -215,9 +215,9 @@
             "Persian and Latin"
           ],
           "correct_option_id": "A",
-          "explanation": "EZR 4:8-6:18",
+          "explanation": "The book contains Hebrew narrative and Aramaic documents.",
           "references": [
-            "በመጽሐፉ የሰነድ ክፍሎች ውስጥ የሚታዩት ሁለቱ ቋንቋዎች የትኞቹ ናቸው?"
+            "EZR 4:8-6:18"
           ]
         },
         {
@@ -348,17 +348,18 @@
           "id": "EZR-Q01",
           "type": "multiple_choice",
           "difficulty": "easy",
-          "prompt": "ቂሮስ",
+          "prompt": "የመመለስ ትረካውን የጀመረው የትኛው የፋርስ ንጉሥ አዋጅ ነው?",
           "options": [
+            "ቂሮስ",
             "ዳርዮስ",
             "አርጤክስስ",
-            "ዜርክሲስ",
-            "ዕዝራ በምርኮኞች እንዲመለሱ በቂሮስ አዋጅ ይጀምራል።"
+            "ዜርክሲስ"
           ],
           "correct_option_id": "A",
           "references": [
-            "የመመለስ ትረካውን የጀመረው የትኛው የፋርስ ንጉሥ አዋጅ ነው?"
-          ]
+            "EZR 1:1-4"
+          ],
+          "explanation": "ዕዝራ በምርኮኞች እንዲመለሱ በቂሮስ አዋጅ ይጀምራል።"
         },
         {
           "id": "EZR-Q02",
@@ -375,33 +376,35 @@
           "id": "EZR-Q03",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "ዕዝራ",
+          "prompt": "ከኋለኛው ወደ ኢየሩሳሌም ተልዕኮ ጋር የተያያዘው ካህንና ጸሐፊ ማን ነው?",
           "options": [
+            "ዕዝራ",
             "ዘሩባቤል",
             "ነህምያ",
-            "ሐጌ",
-            "ዕዝራ የኋለኛውን መመለስና የማስተማር ተልዕኮ ይመራል።"
+            "ሐጌ"
           ],
           "correct_option_id": "A",
           "references": [
-            "ከኋለኛው ወደ ኢየሩሳሌም ተልዕኮ ጋር የተያያዘው ካህንና ጸሐፊ ማን ነው?"
-          ]
+            "EZR 7:1-10"
+          ],
+          "explanation": "ዕዝራ የኋለኛውን መመለስና የማስተማር ተልዕኮ ይመራል።"
         },
         {
           "id": "EZR-Q04",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "ዕብራይስጥና አራማይክ",
+          "prompt": "በመጽሐፉ የሰነድ ክፍሎች ውስጥ የሚታዩት ሁለቱ ቋንቋዎች የትኞቹ ናቸው?",
           "options": [
+            "ዕብራይስጥና አራማይክ",
             "ግሪክና ላቲን",
             "ዕብራይስጥና ግሪክ",
-            "ፋርስኛና ላቲን",
-            "መጽሐፉ የዕብራይስጥ ትረካና የአራማይክ ሰነዶችን ይይዛል።"
+            "ፋርስኛና ላቲን"
           ],
           "correct_option_id": "A",
           "references": [
-            "በመጽሐፉ የሰነድ ክፍሎች ውስጥ የሚታዩት ሁለቱ ቋንቋዎች የትኞቹ ናቸው?"
-          ]
+            "EZR 4:8-6:18"
+          ],
+          "explanation": "መጽሐፉ የዕብራይስጥ ትረካና የአራማይክ ሰነዶችን ይይዛል።"
         },
         {
           "id": "EZR-Q05",
