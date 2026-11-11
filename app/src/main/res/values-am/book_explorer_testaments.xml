@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explorer_old_testament">ብሉይ ኪዳን</string>
+    <string name="explorer_new_testament">አዲስ ኪዳን</string>
+    <string name="explorer_old_testament_desc">የመጀመሪያዎቹ 39 መጻሕፍት · ሕግ፣ ታሪክ፣ ግጥምና ነቢያት</string>
+    <string name="explorer_new_testament_desc">የመጨረሻዎቹ 27 መጻሕፍት · ወንጌላት፣ ሐዋርያት፣ መልእክቶችና ራእይ</string>
+</resources>
