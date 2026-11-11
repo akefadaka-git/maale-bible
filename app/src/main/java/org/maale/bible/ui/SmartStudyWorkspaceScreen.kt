@@ -107,7 +107,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                         loading = false
                         busy = false
                         errorMessage = failure.message?.takeIf { it.isNotBlank() }
-                            ?: stringResource(R.string.study_save_error)
+                            ?: saveErrorText
                     }
                 }
             }
