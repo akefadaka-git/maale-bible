@@ -325,7 +325,7 @@ private fun StudyStatusCard(loading: Boolean, busy: Boolean) {
 @Composable
 private fun StudyTab(item: StudySection, selected: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
     if (selected) Button(onClick = onClick, modifier = modifier) { Text(stringResource(item.titleRes), maxLines = 1) }
-    else OutlinedButton(onClick = onClick, modifier = modifier) { Text(item.title, maxLines = 1) }
+    else OutlinedButton(onClick = onClick, modifier = modifier) { Text(stringResource(item.titleRes), maxLines = 1) }
 }
 
 @Composable
