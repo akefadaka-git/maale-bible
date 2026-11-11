@@ -34,6 +34,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
+import org.maale.bible.R
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 /**
@@ -89,7 +91,7 @@ fun ReaderPlaceholderScreen(
                     horizontalArrangement = Arrangement.End
                 ) {
                     OutlinedButton(onClick = { focusMode = false }) {
-                        Text("Exit focus mode")
+                        Text(stringResource(R.string.reader_exit_focus))
                     }
                 }
             }
@@ -120,7 +122,7 @@ private fun ReaderTopBar(title: String, onBack: () -> Unit) {
             }
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "BIBLE READER",
+                    text = stringResource(R.string.reader_title),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary,
                     fontWeight = FontWeight.Bold
@@ -146,7 +148,7 @@ private fun ReaderTopBar(title: String, onBack: () -> Unit) {
 private fun ReaderBookIdentity(bookName: String, usfmId: String) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(
-            text = "THE SCRIPTURE COLLECTION",
+            text = stringResource(R.string.reader_collection),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.secondary,
             fontWeight = FontWeight.Bold
@@ -158,7 +160,7 @@ private fun ReaderBookIdentity(bookName: String, usfmId: String) {
             fontWeight = FontWeight.SemiBold
         )
         Text(
-            text = "CANONICAL BOOK ID  •  $usfmId",
+            text = stringResource(R.string.reader_canonical_book_id) + " • " + usfmId,
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -202,7 +204,7 @@ private fun ReaderControlPanel(
             }
             Spacer(Modifier.weight(1f))
             OutlinedButton(onClick = onToggleFocus) {
-                Text("Focus")
+                Text(stringResource(R.string.reader_focus))
             }
         }
     }
@@ -236,13 +238,13 @@ private fun ScriptureUnavailablePanel(fontSize: Float) {
                 style = MaterialTheme.typography.headlineMedium
             )
             Text(
-                text = "A quiet space for the Word",
+                text = stringResource(R.string.reader_quiet_space),
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "The verified Maale scripture text is not available in this build yet.",
+                text = stringResource(R.string.reader_content_unavailable),
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = fontSize.sp),
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -251,7 +253,7 @@ private fun ScriptureUnavailablePanel(fontSize: Float) {
                 color = MaterialTheme.colorScheme.secondaryContainer
             ) {
                 Text(
-                    text = "CONTENT NOT LOADED",
+                    text = stringResource(R.string.reader_content_not_loaded),
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -259,7 +261,7 @@ private fun ScriptureUnavailablePanel(fontSize: Float) {
                 )
             }
             Text(
-                text = "No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated.",
+                text = stringResource(R.string.reader_no_sample_notice),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -279,18 +281,18 @@ private fun ReaderNavigationUnavailable() {
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                text = "CHAPTER NAVIGATION",
+                text = stringResource(R.string.reader_chapter_navigation),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "Chapter and verse navigation is waiting for verified book structure.",
+                text = stringResource(R.string.reader_navigation_waiting),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurface
             )
             Text(
-                text = "NAVIGATION LOCKED — SOURCE NOT INTEGRATED",
+                text = stringResource(R.string.reader_navigation_locked),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold
