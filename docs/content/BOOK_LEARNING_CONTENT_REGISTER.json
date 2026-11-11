@@ -115,14 +115,24 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -139,26 +149,46 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -172,14 +202,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -196,26 +234,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -229,14 +283,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -253,26 +315,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -286,14 +364,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -310,26 +396,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
