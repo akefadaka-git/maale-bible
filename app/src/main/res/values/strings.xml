@@ -172,4 +172,5 @@
     <string name="study_loading_device">Loading notes from your device.</string>
     <string name="study_saving_device">Saving your changes securely on this device.</string>
     <string name="study_local_persistence">Your journal notes are stored locally and remain available after you reopen the app.</string>
+    <string name="study_note_missing">This note no longer exists. Refresh the list and try again.</string>
 </resources>
