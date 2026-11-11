@@ -58,6 +58,7 @@ fun SearchPlaceholderScreen(
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
     var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
     var selectedEditionId by remember { mutableStateOf<String?>(null) }
+    val verifyingEditionText = stringResource(R.string.search_verifying_edition, selectedEditionId.orEmpty())
     var storeState by remember { mutableStateOf(loadingEditionsText) }
     var searchResults by remember { mutableStateOf<List<ScriptureSearchResult>>(emptyList()) }
     var searchState by remember { mutableStateOf("") }
