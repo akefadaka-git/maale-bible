@@ -101,4 +101,12 @@
     <string name="study_refresh">ማሂ ዓካሴ</string>
     <string name="study_empty_notes">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
     <string name="account_open">ኔና ዱማሶ ባኮ</string>
+    <string name="account_login">ኔና ዱማሳ ባኮና ጌሌ</string>
+    <string name="account_register">ማዝጋቢንቴ</string>
+    <string name="account_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
+    <string name="account_username">ፃቃሚንታ ሱንፆ</string>
+    <string name="account_mobile">ሲልኬ ቁፁሬ</string>
+    <string name="account_password">ዓኣቺንቴ ቃኣላ</string>
+    <string name="account_submit">ዴንዴ</string>
+    <string name="account_otp">ፒዜ ማዒፆ ዔርዛ ኮዴ</string>
 </resources>
