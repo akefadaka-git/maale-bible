@@ -75,7 +75,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Canonical book ID • GEN").assertIsDisplayed()
         composeRule.onNodeWithText(
             "Verified Maale scripture text is not available in this build yet."
-        ).assertIsDisplayed()
+        ).performScrollTo().assertIsDisplayed()
 
         composeRule.onNodeWithText("←").performClick()
         composeRule.onNodeWithText("‹  All books").performClick()
