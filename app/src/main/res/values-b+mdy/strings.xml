@@ -63,4 +63,10 @@
     <string name="reader_chapter_navigation">ዓይሢ ኮዖያ</string>
     <string name="library_title">ጌኤዦ ማፃኣፖኮ ማፃኣፔ ማኣሪ</string>
     <string name="library_choose_editions">ሂቴሜቶ ዶኦሬ</string>
+    <!-- Owner-supplied Maale library wording; preserve spelling exactly. -->
+    <string name="library_open_license_sources">ጉሪ ፒቃዴ ዓኣያ</string>
+    <string name="library_review_before_install">ጫኣናንዳሢኮ ቤርታ ኮሺ ዛጌ</string>
+    <string name="library_review_required">ኮሺ ዛጊሢ ኮይሳኔ</string>
+    <string name="library_partial">ዛላኬ</string>
+    <string name="library_open_source">ጉሪ ፒቃዴ</string>
 </resources>
