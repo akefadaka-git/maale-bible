@@ -51,4 +51,10 @@
     <string name="search_available">ዓኣኔ</string>
     <string name="search_waiting_download">ኬዳኒ ካፒሢዳ ዓኣኔ።</string>
     <string name="search_in_development">ሃጋ ኮሺንቲዳ ዓኣኔ።</string>
+    <!-- Owner-supplied Maale reader wording; preserve spelling exactly. -->
+    <string name="reader_exit_focus">ዒኖና ማሊፆና ጌሢ ናባቢፆ ሃሼ</string>
+    <string name="reader_title">ጌኤዦ ማፃኣፖ ናባባ ዓሲ</string>
+    <string name="reader_collection">ጌኤዦ ማፃኣፖዪዳ ዓኣ ቡኪንቴ ማፃኣፔ</string>
+    <string name="reader_canonical_book_id">ማፃኣፖ ዱማሳ ባኮ</string>
+    <string name="reader_focus">ዒኖና ማሊፆና ጌሢሢ</string>
 </resources>
