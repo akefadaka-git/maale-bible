@@ -44,11 +44,21 @@ fun SearchPlaceholderScreen(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current.applicationContext
+    val loadingEditionsText = stringResource(R.string.search_loading_editions)
+    val noEditionText = stringResource(R.string.search_no_edition)
+    val listFailedText = stringResource(R.string.search_list_failed)
+    val verifyingEditionText = stringResource(R.string.search_verifying_edition, selectedEditionId.orEmpty())
+    val selectedNotInstalledText = selectedNotInstalledText
+    val indexedPassagesFormat = stringResource(R.string.search_indexed_passages)
+    val integrityFailedText = stringResource(R.string.search_integrity_failed)
+    val noResultsText = noResultsText
+    val searchErrorText = searchErrorText
+    val searchingText = searchingText
     var query by remember { mutableStateOf("") }
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
     var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
     var selectedEditionId by remember { mutableStateOf<String?>(null) }
-    var storeState by remember { mutableStateOf(stringResource(R.string.search_loading_editions)) }
+    var storeState by remember { mutableStateOf(loadingEditionsText) }
     var searchResults by remember { mutableStateOf<List<ScriptureSearchResult>>(emptyList()) }
     var searchState by remember { mutableStateOf("") }
     val currentStore by rememberUpdatedState(store)
@@ -61,17 +71,17 @@ fun SearchPlaceholderScreen(
             onSuccess = { installed ->
                 editions = installed
                 selectedEditionId = installed.firstOrNull()?.editionId
-                if (installed.isEmpty()) storeState = stringResource(R.string.search_no_edition)
+                if (installed.isEmpty()) storeState = noEditionText
             },
             onFailure = {
-                storeState = stringResource(R.string.search_list_failed)
+                storeState = listFailedText
             }
         )
     }
 
     LaunchedEffect(context, selectedEditionId) {
         val editionId = selectedEditionId ?: return@LaunchedEffect
-        storeState = stringResource(R.string.search_verifying_edition, editionId)
+        storeState = verifyingEditionText
         val opened = withContext(Dispatchers.IO) {
             runCatching { OfflineScriptureStore.openInstalled(context, editionId) }
         }
@@ -83,11 +93,11 @@ fun SearchPlaceholderScreen(
                 storeState = if (installed == null) {
                     stringResource(R.string.search_selected_not_installed)
                 } else {
-                    stringResource(R.string.search_indexed_passages, installed.descriptor.editionId, installed.descriptor.verseCount)
+                    String.format(indexedPassagesFormat, installed.descriptor.editionId, installed.descriptor.verseCount)
                 }
             },
             onFailure = {
-                storeState = stringResource(R.string.search_integrity_failed)
+                storeState = integrityFailedText
             }
         )
     }
