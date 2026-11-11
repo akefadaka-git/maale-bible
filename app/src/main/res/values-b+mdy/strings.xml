@@ -57,4 +57,10 @@
     <string name="reader_collection">ጌኤዦ ማፃኣፖዪዳ ዓኣ ቡኪንቴ ማፃኣፔ</string>
     <string name="reader_canonical_book_id">ማፃኣፖ ዱማሳ ባኮ</string>
     <string name="reader_focus">ዒኖና ማሊፆና ጌሢሢ</string>
+    <!-- Owner-supplied Maale reader and library wording; preserve spelling exactly. -->
+    <string name="reader_content_unavailable">ማኣሌ ሙኡቺና ጊኢጊንቴ ማፃኣፔ ሃኖ ማዢንቶዩዳ ባኣሴ</string>
+    <string name="reader_content_not_loaded">ጫኒንቴ ባኣዚ ባኣሢሮ ጴዹዋሴ።</string>
+    <string name="reader_chapter_navigation">ዓይሢ ኮዖያ</string>
+    <string name="library_title">ጌኤዦ ማፃኣፖኮ ማፃኣፔ ማኣሪ</string>
+    <string name="library_choose_editions">ሂቴሜቶ ዶኦሬ</string>
 </resources>
