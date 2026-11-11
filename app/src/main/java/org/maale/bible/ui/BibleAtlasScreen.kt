@@ -55,6 +55,7 @@ fun BibleAtlasScreen(modifier: Modifier = Modifier) {
                 Text(stringResource(R.string.atlas_map_placeholder),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary)
+                val contourTint = MaterialTheme.colorScheme.primary.copy(alpha = 0.16f)
                 Box(
                     modifier = Modifier.fillMaxWidth().height(250.dp)
                         .clip(RoundedCornerShape(20.dp))
@@ -65,7 +66,7 @@ fun BibleAtlasScreen(modifier: Modifier = Modifier) {
                     // Decorative contour rings only; not a geographic map.
                     Canvas(Modifier.fillMaxSize()) {
                         val stroke = androidx.compose.ui.graphics.drawscope.Stroke(width = 1.2.dp.toPx())
-                        val tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.16f)
+                        val tint = contourTint
                         val centerX = size.width * 0.53f
                         val centerY = size.height * 0.48f
                         for (index in 0..5) {
