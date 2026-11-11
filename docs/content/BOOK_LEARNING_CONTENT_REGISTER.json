@@ -46,26 +46,14 @@
         },
         "chapter_guides": {
           "en": {
-            "status": "draft_unreviewed",
-            "source_ids": [
-              "sots-genesis",
-              "usccb-genesis",
-              "yale-genesis",
-              "cambridge-pentateuch",
-              "bibleproject-genesis"
-            ],
-            "review_status": "editorial_review_pending"
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
           },
           "am": {
-            "status": "draft_unreviewed",
-            "source_ids": [
-              "sots-genesis",
-              "usccb-genesis",
-              "yale-genesis",
-              "cambridge-pentateuch",
-              "bibleproject-genesis"
-            ],
-            "review_status": "language_review_required"
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
           }
         },
         "inductive_study": {
