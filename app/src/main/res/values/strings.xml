@@ -181,4 +181,7 @@
     <string name="atlas_locations_pending">Place names, coordinates, boundaries and routes will appear only after source verification.</string>
     <string name="atlas_no_fabricated_data">No locations or routes are invented or displayed in this preview.</string>
     <string name="atlas_map_legend">MAP DATA PENDING VERIFICATION</string>
+    <string name="study_comments">Inline comments</string>
+    <string name="study_comments_description">Attach contextual comments to selected verified scripture passages. Comment creation will remain locked until canonical passage identities and the authorized scripture text are integrated.</string>
+    <string name="study_comments_locked">VERIFIED PASSAGE REFERENCES REQUIRED</string>
 </resources>
