@@ -1,6 +1,8 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -61,6 +63,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Old Testament").assertIsDisplayed()
         composeRule.onNodeWithText("New Testament").assertIsDisplayed()
 
+        composeRule.onNodeWithTag("books_list").performScrollToNode(hasContentDescription("Open Genesis"))
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
 
         composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
