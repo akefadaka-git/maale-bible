@@ -6,6 +6,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import org.junit.Before
@@ -29,7 +30,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("language_maale").performClick()
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
-        composeRule.onNodeWithText("የማዓሌ መጽሐፍ ቅዱስ").assertIsDisplayed()
+        composeRule.onNodeWithText("የማሌ መጽሐፍ ቅዱስ").assertIsDisplayed()
         composeRule.onNodeWithText("መነሻ").assertIsDisplayed()
 
         composeRule.onNodeWithTag("language_selector").performClick()
@@ -45,8 +46,9 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Account").performClick()
         composeRule.onNodeWithText("Your account").assertIsDisplayed()
         composeRule.onNodeWithText("Account service not connected").assertIsDisplayed()
-        composeRule.onNodeWithText("Continue reading as guest").performClick()
-        composeRule.onNodeWithText("Explore the Bible").assertIsDisplayed()
+        composeRule.onNodeWithText("Continue reading as guest").performScrollTo().performClick()
+        composeRule.waitForIdle()
+        composeRule.onNodeWithText("Explore the Bible").performScrollTo().assertIsDisplayed()
     }
 
     @Test
@@ -61,7 +63,7 @@ class P2V6NavigationSmokeTest {
 
         // The reader intentionally displays "Genesis" in both its top bar and identity block.
         // Assert the unique canonical identity instead of an ambiguous generic text selector.
-        composeRule.onNodeWithText("CANONICAL BOOK ID  •  GEN").assertIsDisplayed()
+        composeRule.onNodeWithText("Canonical book ID • GEN").assertIsDisplayed()
         composeRule.onNodeWithText(
             "The verified Maale scripture text is not available in this build yet."
         ).assertIsDisplayed()
