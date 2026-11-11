@@ -114,4 +114,13 @@
     <string name="account_service_unavailable_title">ዱማሳ ሱንፃ ካኣሚባኣሴ</string>
     <string name="account_identifier">ፃቃሚንታ ሱንሢ ሃንጎ ሲልኬ ቁፁሬ</string>
     <string name="account_continue_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
+    <string name="home_living_word_experience">ናንጊና ናንጋ ቃኣሎ ጎይፆ ናንጊ ዴንቆባኣዚ</string>
+    <string name="home_passage_pending">ጌኤዦ ማፃኣፖ ማኣሌ ሙኡቺና ጊኢጊንቴ ጫኣኒንቲ ጋፔስካፓ ሃኖ ቤዞይዳ ጴዻኔ።</string>
+    <string name="home_choose_book">ናባባኒ ማፃኣፔ ዶኦሬ</string>
+    <string name="account_service_unavailable_body">ኔኤኮ ናባቢሢና ዲጪሢ ዓኣቶ ሃይካ ጴዻኔ።</string>
+    <string name="account_identifier_help">ሃኔ ማዢንቶይዳ ፒዙሞ ዔርዛ API ፒዜ ቤሲ ባኣሴ። ኔኤኮ ዱማሳ ሱንፆና ጌላኒና ዓኪ ዱማሳ ሱንሢ ቡላኒ ዳንዳዑዋሴ። ዱማሳ ሱንፃ ዳክንታኒ ሃንጎ ጌሢንታኒ ዳንዳዒባኣሴ።</string>
+    <string name="account_mobile_help">ኔኤኮ ፃቃሚንቶ ዱማሳ ሱንፆ ሃንጎ + ሚሊኪቴና ዎላ ዓጮ ዱማሳ ጉቤ ሲልኮ ቁፁሮ ፃኣፒ ጌልዜ።</string>
+    <string name="account_request_otp">ማዝሃቢንቶ ኮዴ ዳኮም ዖኦጬ</string>
+    <string name="account_verify_register">ዳኪንቴ ኮዶ ጌልዚ ፒዚሲንካና ማዝጋቢንቴ</string>
+    <string name="account_otp_policy">ፔቴ ጊዜ ዳካንታ ኮዳ ማዝጋቢንታኔ ሌሊ ማኣዳኔ። ኔኤኮ ዱማሲ ጌላ ቤዞ ጌላኒ ዱማሳ ሱንፆ ሃንጎ ሲልኮ ቁፆሮና ሃሳ ዓኣሺንቴ ቃኣሎና ጌላኔ።</string>
 </resources>
