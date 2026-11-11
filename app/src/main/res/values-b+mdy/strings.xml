@@ -39,4 +39,10 @@
     <string name="search_description">ጫኒንቴ ጌኤዦ ማፃኣፖ ጋራ ዒንቴርኔቴ ባያ ኮዔ፥ ሃንጎ ማፃኣፖ ሱንፆና ዱማሳ ሱንፆና ኮዒ ዴንቄ።</string>
     <string name="search_field_label">ጌኤዦ ማፃኣፖ ጋራ ኮዔ</string>
     <string name="search_field_hint">ኮዓኒ ማሌ ቃኣሎማ ሃንጎ ሱንፆ ጌሊዜ!</string>
+    <!-- Owner-supplied Maale search wording; preserve spelling and format placeholders exactly. -->
+    <string name="action_clear">ዑጬ</string>
+    <string name="search_books_heading">ማፃኣፔ %1$d</string>
+    <string name="action_open">ቡሌ</string>
+    <string name="search_no_results">ኔ ዖኦጬ ኮይፃ ጌኤዦ ማፃኣፖይዳ ፔቴታዖ ጴዺባኣሴ።</string>
+    <string name="search_error">ኮይፃ ፔቴዳዖ ዴንቄ ባኣዚ ባኣሴ። ጫኣኒንቴ ማፃኣፖ ሂንዳ ማሂ ዛጌ።</string>
 </resources>
