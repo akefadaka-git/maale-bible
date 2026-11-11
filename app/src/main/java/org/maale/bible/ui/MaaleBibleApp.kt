@@ -140,8 +140,9 @@ fun MaaleBibleApp() {
                     Modifier.padding(padding)
                 )
                 AppDestination.BOOKS -> BooksScreen(
-                    { selectedBookId = it },
-                    Modifier.padding(padding)
+                    onSelectBook = { selectedBookId = it },
+                    onOpenAtlas = { destination = AppDestination.ATLAS },
+                    modifier = Modifier.padding(padding)
                 )
                 AppDestination.SEARCH -> SearchPlaceholderScreen(
                     { selectedBookId = it },
