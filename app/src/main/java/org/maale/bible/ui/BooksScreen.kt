@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import org.maale.bible.R
@@ -124,7 +125,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             Text(stringResource(R.string.explorer_results_count, matchingBooks.size), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.secondary)
             Text(stringResource(R.string.explorer_content_status), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        LazyColumn(Modifier.fillMaxWidth().weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        LazyColumn(Modifier.fillMaxWidth().weight(1f).testTag("books_list"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             if (matchingBooks.isEmpty()) item {
                 Text(stringResource(R.string.explorer_no_results), Modifier.fillMaxWidth().padding(24.dp), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
