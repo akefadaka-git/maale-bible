@@ -174,9 +174,84 @@ These nine existing English/Amharic resources were not represented in the origin
 
 ---
 
+## 10. Additional feature resources pending translation
+
+The following 68 keys are present in the English Android resource file but are absent from both the Amharic and Maale resource files. Android therefore uses the English base string for both locales. The Amharic column below records this fallback state, not an Amharic translation. Maale wording is intentionally blank pending Owner/community input. Format placeholders such as %1$s and %2$d must be preserved exactly in any translation.
+
+| Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
+|---|---|---|---|
+| `search_loading_editions` | Loading installed Bible editions… | English fallback (Amharic not supplied) |  |
+| `search_no_edition` | No offline scripture edition is installed on this device. | English fallback (Amharic not supplied) |  |
+| `search_list_failed` | Installed Bible editions could not be listed. | English fallback (Amharic not supplied) |  |
+| `search_verifying_edition` | Verifying %1$s… | English fallback (Amharic not supplied) |  |
+| `search_selected_not_installed` | Selected edition is not installed. | English fallback (Amharic not supplied) |  |
+| `search_indexed_passages` | %1$s · %2$d indexed passages | English fallback (Amharic not supplied) |  |
+| `search_integrity_failed` | The selected scripture package failed integrity verification. | English fallback (Amharic not supplied) |  |
+| `search_result_count` | %1$d scripture results | English fallback (Amharic not supplied) |  |
+| `search_searching` | Searching installed scripture… | English fallback (Amharic not supplied) |  |
+| `search_accessibility` | Search installed Bible text, book names or canonical codes | English fallback (Amharic not supplied) |  |
+| `search_capability_description` | Find words and phrases across installed Bible editions. | English fallback (Amharic not supplied) |  |
+| `search_book_lookup` | Book-name and USFM-code lookup | English fallback (Amharic not supplied) |  |
+| `search_offline_full_text` | Offline full-text search in installed scripture | English fallback (Amharic not supplied) |  |
+| `search_edition_filters` | Edition filters and language-aware search | English fallback (Amharic not supplied) |  |
+| `reader_quiet_space` | A quiet space for the Word | English fallback (Amharic not supplied) |  |
+| `reader_no_sample_notice` | No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated. | English fallback (Amharic not supplied) |  |
+| `reader_navigation_waiting` | Chapter and verse navigation is waiting for verified book structure. | English fallback (Amharic not supplied) |  |
+| `reader_navigation_locked` | Navigation locked — source not integrated | English fallback (Amharic not supplied) |  |
+| `library_description` | Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status. | English fallback (Amharic not supplied) |  |
+| `library_incomplete_notice` | This edition is not a complete Bible release yet. | English fallback (Amharic not supplied) |  |
+| `library_install_blocked` | Not enabled for in-app installation until editorial or rights review is complete. | English fallback (Amharic not supplied) |  |
+| `library_open_official_source` | Open official source | English fallback (Amharic not supplied) |  |
+| `listen_title` | A listening space. | English fallback (Amharic not supplied) |  |
+| `listen_description` | A calm home for spoken Scripture, with listening and offline access designed around verified audio. | English fallback (Amharic not supplied) |  |
+| `listen_track_metadata` | Track title, reader, language and duration will appear with the approved audio asset. | English fallback (Amharic not supplied) |  |
+| `listen_library_description` | Your verified recordings will live here. | English fallback (Amharic not supplied) |  |
+| `listen_browse_description` | Browse by book, chapter, language and narrator when authorized recordings and their metadata are available. | English fallback (Amharic not supplied) |  |
+| `listen_no_assets` | No audio assets in this build | English fallback (Amharic not supplied) |  |
+| `listen_keep_audio` | Keep approved audio close. | English fallback (Amharic not supplied) |  |
+| `listen_download_policy` | Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented. | English fallback (Amharic not supplied) |  |
+| `study_save_error` | Your study notes could not be saved. Please try again. | English fallback (Amharic not supplied) |  |
+| `study_saving` | Saving… | English fallback (Amharic not supplied) |  |
+| `study_save_reflection` | Save reflection | English fallback (Amharic not supplied) |  |
+| `study_update_reflection` | Update reflection | English fallback (Amharic not supplied) |  |
+| `study_cancel_edit` | Cancel edit | English fallback (Amharic not supplied) |  |
+| `study_saved_reflections` | Saved reflections | English fallback (Amharic not supplied) |  |
+| `study_loading_notes` | Loading your notes from this device… | English fallback (Amharic not supplied) |  |
+| `study_saved_reflections_count` | %1$d saved reflection(s) | English fallback (Amharic not supplied) |  |
+| `study_no_reflections` | No reflections yet | English fallback (Amharic not supplied) |  |
+| `study_start_reflection` | Start with a question, a personal insight or something you want to revisit. | English fallback (Amharic not supplied) |  |
+| `study_private_reflection` | Private reflection | English fallback (Amharic not supplied) |  |
+| `study_updated` | Updated %1$s | English fallback (Amharic not supplied) |  |
+| `study_saved_passages` | Saved passages | English fallback (Amharic not supplied) |  |
+| `study_bookmarks_description` | Bookmarks will connect to canonical book, chapter and verse identifiers after verified scripture structure is integrated. | English fallback (Amharic not supplied) |  |
+| `study_passage_references_unavailable` | Passage references not available | English fallback (Amharic not supplied) |  |
+| `study_highlights_description` | Highlight colours and annotations will be attached to verified passage ranges. No highlight can be created against an unverified reference. | English fallback (Amharic not supplied) |  |
+| `study_verified_passage_required` | Verified passage data required | English fallback (Amharic not supplied) |  |
+| `study_collections_description` | Organize bookmarks, notes and highlights into themes once durable passage-linked records are available. | English fallback (Amharic not supplied) |  |
+| `study_collection_storage_unavailable` | Collection storage not connected | English fallback (Amharic not supplied) |  |
+| `study_not_connected` | Not connected yet | English fallback (Amharic not supplied) |  |
+| `study_inactive_description` | This area is intentionally inactive until verified passage identities and durable study operations are available. | English fallback (Amharic not supplied) |  |
+| `study_local_private` | Local study • private on-device storage | English fallback (Amharic not supplied) |  |
+| `study_persistent_notes` | Persistent study notes | English fallback (Amharic not supplied) |  |
+| `study_loading_device` | Loading notes from your device. | English fallback (Amharic not supplied) |  |
+| `study_saving_device` | Saving your changes securely on this device. | English fallback (Amharic not supplied) |  |
+| `study_local_persistence` | Your journal notes are stored locally and remain available after you reopen the app. | English fallback (Amharic not supplied) |  |
+| `study_note_missing` | This note no longer exists. Refresh the list and try again. | English fallback (Amharic not supplied) |  |
+| `nav_atlas` | Atlas | English fallback (Amharic not supplied) |  |
+| `atlas_title` | Bible Atlas | English fallback (Amharic not supplied) |  |
+| `atlas_subtitle` | Explore the places, regions and journeys connected with Scripture. | English fallback (Amharic not supplied) |  |
+| `atlas_map_placeholder` | ATLAS MAP | English fallback (Amharic not supplied) |  |
+| `atlas_source_pending` | Verified geographic data and licensed map sources have not yet been integrated. | English fallback (Amharic not supplied) |  |
+| `atlas_locations_pending` | Place names, coordinates, boundaries and routes will appear only after source verification. | English fallback (Amharic not supplied) |  |
+| `atlas_no_fabricated_data` | No locations or routes are invented or displayed in this preview. | English fallback (Amharic not supplied) |  |
+| `atlas_map_legend` | MAP DATA PENDING VERIFICATION | English fallback (Amharic not supplied) |  |
+| `study_comments` | Inline comments | English fallback (Amharic not supplied) |  |
+| `study_comments_description` | Attach contextual comments to selected verified scripture passages. Comment creation will remain locked until canonical passage identities and the authorized scripture text are integrated. | English fallback (Amharic not supplied) |  |
+| `study_comments_locked` | VERIFIED PASSAGE REFERENCES REQUIRED | English fallback (Amharic not supplied) |  |
+
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following 112 entries have now been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `language_fallback_notice`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, `library_choose_editions`, `library_open_license_sources`, `library_review_before_install`, `library_review_required`, `library_partial`, `library_open_source`, `library_view_source_license`, `library_download_package`, `listen_heading`, `listen_now_playing`, `listen_audio_not_loaded`, `listen_no_recording`, `listen_play_unavailable`, `listen_library`, `listen_library_empty`, `listen_offline`, `listen_downloads_unavailable`, `study_your_space`, `study_deeper`, `study_private_workspace`, `study_notes`, `study_bookmarks`, `study_highlights`, `study_collections`, `study_reflection_notes`, `study_capture_thought`, `study_new_note`, `study_edit_note`, `study_write_thought`, `study_saved_privately`, `study_save`, `study_cancel`, `study_delete`, `study_refresh`, `study_empty_notes`, `account_open`, `account_login`, `account_register`, `account_guest`, `account_username`, `account_mobile`, `account_submit`, `account_otp`, `account_password`, `account_title`, `account_guest_first`, `account_service_unavailable_title`, `account_identifier`, `account_continue_guest`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following 112 entries have now been supplied and recorded (out of 180 non-app-title UI keys): `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `language_fallback_notice`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, `library_choose_editions`, `library_open_license_sources`, `library_review_before_install`, `library_review_required`, `library_partial`, `library_open_source`, `library_view_source_license`, `library_download_package`, `listen_heading`, `listen_now_playing`, `listen_audio_not_loaded`, `listen_no_recording`, `listen_play_unavailable`, `listen_library`, `listen_library_empty`, `listen_offline`, `listen_downloads_unavailable`, `study_your_space`, `study_deeper`, `study_private_workspace`, `study_notes`, `study_bookmarks`, `study_highlights`, `study_collections`, `study_reflection_notes`, `study_capture_thought`, `study_new_note`, `study_edit_note`, `study_write_thought`, `study_saved_privately`, `study_save`, `study_cancel`, `study_delete`, `study_refresh`, `study_empty_notes`, `account_open`, `account_login`, `account_register`, `account_guest`, `account_username`, `account_mobile`, `account_submit`, `account_otp`, `account_password`, `account_title`, `account_guest_first`, `account_service_unavailable_title`, `account_identifier`, `account_continue_guest`.
 
 Recommended reply format:
 
@@ -189,4 +264,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 112 of 112 Maale UI worksheet labels have been supplied by the Owner and recorded (100% intake completeness). This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** 112 of 180 non-app-title UI keys have Owner-supplied Maale wording recorded (62.2% intake completeness). The remaining 68 keys are explicitly listed above as English fallback in both Maale and Amharic. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
