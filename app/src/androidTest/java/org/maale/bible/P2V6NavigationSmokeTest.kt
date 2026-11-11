@@ -65,7 +65,7 @@ class P2V6NavigationSmokeTest {
         // Assert the unique canonical identity instead of an ambiguous generic text selector.
         composeRule.onNodeWithText("Canonical book ID • GEN").assertIsDisplayed()
         composeRule.onNodeWithText(
-            "The verified Maale scripture text is not available in this build yet."
+            "Verified Maale scripture text is not available in this build yet."
         ).assertIsDisplayed()
 
         composeRule.onNodeWithText("←").performClick()
