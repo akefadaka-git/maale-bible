@@ -58,6 +58,8 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
         composeRule.onNodeWithText("Explore the Bible").performClick()
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
+        composeRule.onNodeWithText("Old Testament").assertIsDisplayed()
+        composeRule.onNodeWithText("New Testament").assertIsDisplayed()
 
         composeRule.onNodeWithContentDescription("Open Genesis").performClick()
 
@@ -80,3 +82,18 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Search with purpose.").assertIsDisplayed()
     }
 }
+
+    @Test
+    fun bookLearningCentreUsesAmharicAndEnglishResources() {
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_amharic").performClick()
+        composeRule.onNodeWithText("መጻሕፍት").performClick()
+        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
+        composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
+        composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
+
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
+        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
+        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
+    }
