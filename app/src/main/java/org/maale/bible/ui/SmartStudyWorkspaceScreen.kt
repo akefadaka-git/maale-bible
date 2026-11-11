@@ -58,6 +58,8 @@ private enum class StudySection(val titleRes: Int) {
 @Composable
 fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current.applicationContext
+    val saveErrorText = stringResource(R.string.study_save_error)
+    val noteMissingText = stringResource(R.string.study_note_missing)
     val executor = remember(context) { Executors.newSingleThreadExecutor() }
     val databaseRef = remember(context) { AtomicReference<LocalStudyDatabase?>(null) }
     val active = remember(executor) { AtomicBoolean(true) }
