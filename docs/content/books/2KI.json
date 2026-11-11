@@ -198,9 +198,9 @@
           "prompt": "Samaria falls to Assyria in the account of 2 Kings.",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "The fall of Samaria marks the end of the northern kingdom.",
           "references": [
-            "The fall of Samaria marks the end of the northern kingdom."
+            "2KI 17:5-23"
           ]
         },
         {
@@ -244,9 +244,9 @@
           "prompt": "The final chapter says Jehoiachin is released from prison in Babylon.",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "The closing verses report Jehoiachin’s release and changed status.",
           "references": [
-            "The closing verses report Jehoiachin’s release and changed status."
+            "2KI 25:27-30"
           ]
         }
       ]
@@ -401,9 +401,9 @@
           "prompt": "2KI 17:5-23",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "የሰማርያ ውድቀት የሰሜኑን መንግሥት መጨረሻ ያመለክታል።",
           "references": [
-            "The fall of Samaria marks the end of the northern kingdom."
+            "2KI 17:5-23"
           ]
         },
         {
@@ -445,9 +445,9 @@
           "prompt": "2KI 25:27-30",
           "options": [],
           "correct_answer": true,
-          "explanation": "true",
+          "explanation": "የመጨረሻዎቹ ቁጥሮች ዮአኪን መፈታቱንና የኑሮ ሁኔታው መቀየሩን ይገልጻሉ።",
           "references": [
-            "The closing verses report Jehoiachin’s release and changed status."
+            "2KI 25:27-30"
           ]
         }
       ]
