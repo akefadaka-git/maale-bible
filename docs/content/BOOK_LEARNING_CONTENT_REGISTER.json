@@ -445,14 +445,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -469,26 +477,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -502,14 +526,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -526,26 +558,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -559,14 +607,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -583,26 +639,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
@@ -616,14 +688,22 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "chapter_guides": {
@@ -640,26 +720,42 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
           }
         }
       }
