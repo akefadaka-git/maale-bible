@@ -91,4 +91,9 @@
     <string name="study_collections">ቡክሶናሢ</string>
     <string name="study_reflection_notes">ማሊ ጶቂሢ ዓርቂንቴባኮ</string>
     <string name="study_capture_thought">ኔ ማሊፆ ፃኣፒ ዓርቄ</string>
+    <string name="study_new_note">ዓኪ ፃኣፒ ዓርቆያ</string>
+    <string name="study_edit_note">ፃኣፒ ዓርቆናሢ ማሂ ኮሺሢ</string>
+    <string name="study_write_thought">ማሊፆ ኔኤኮ ፃኣፔ</string>
+    <string name="study_saved_privately">ሃኖ ቤዛዪዳ ዱማዺ ጌሢንቴኔ።</string>
+    <string name="study_save">ጎቢሺ ጌሤ</string>
 </resources>
