@@ -47,13 +47,13 @@ fun SearchPlaceholderScreen(
     val loadingEditionsText = stringResource(R.string.search_loading_editions)
     val noEditionText = stringResource(R.string.search_no_edition)
     val listFailedText = stringResource(R.string.search_list_failed)
-    val verifyingEditionText = stringResource(R.string.search_verifying_edition, selectedEditionId.orEmpty())
-    val selectedNotInstalledText = selectedNotInstalledText
     val indexedPassagesFormat = stringResource(R.string.search_indexed_passages)
+    val selectedNotInstalledText = stringResource(R.string.search_selected_not_installed)
     val integrityFailedText = stringResource(R.string.search_integrity_failed)
-    val noResultsText = noResultsText
-    val searchErrorText = searchErrorText
-    val searchingText = searchingText
+    val noResultsText = stringResource(R.string.search_no_results)
+    val resultCountFormat = stringResource(R.string.search_result_count)
+    val searchErrorText = stringResource(R.string.search_error)
+    val searchingText = stringResource(R.string.search_searching)
     var query by remember { mutableStateOf("") }
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
     var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
@@ -128,7 +128,7 @@ fun SearchPlaceholderScreen(
             onSuccess = { rows ->
                 searchResults = rows
                 searchState = if (rows.isEmpty()) stringResource(R.string.search_no_results)
-                else stringResource(R.string.search_result_count, rows.size)
+                else String.format(resultCountFormat, rows.size)
             },
             onFailure = {
                 searchState = stringResource(R.string.search_error)
