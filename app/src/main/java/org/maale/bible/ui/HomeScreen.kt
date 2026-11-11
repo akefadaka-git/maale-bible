@@ -25,6 +25,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -141,6 +147,13 @@ private fun HomeHeader() {
 @Composable
 private fun LivingWordHero(onOpenBooks: () -> Unit) {
     val shape = RoundedCornerShape(28.dp)
+    val orbitTransition = rememberInfiniteTransition(label = "livingWordOrbit")
+    val orbitAlpha by orbitTransition.animateFloat(
+        initialValue = 0.22f,
+        targetValue = 0.62f,
+        animationSpec = infiniteRepeatable(tween(durationMillis = 2600), repeatMode = RepeatMode.Reverse),
+        label = "livingWordOrbitAlpha"
+    )
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -162,14 +175,14 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
                 .align(Alignment.TopEnd)
                 .padding(top = 2.dp, end = 2.dp)
                 .size(116.dp)
-                .border(1.dp, MaaleBibleColors.RoyalGold.copy(alpha = 0.42f), CircleShape)
+                .border(1.dp, MaaleBibleColors.RoyalGold.copy(alpha = orbitAlpha), CircleShape)
         )
         Box(
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(top = 17.dp, end = 17.dp)
                 .size(86.dp)
-                .border(1.dp, MaaleBibleColors.LivingCyan.copy(alpha = 0.45f), CircleShape)
+                .border(1.dp, MaaleBibleColors.LivingCyan.copy(alpha = 0.68f - orbitAlpha / 2f), CircleShape)
         )
         Box(
             modifier = Modifier
