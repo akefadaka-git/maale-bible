@@ -32,4 +32,18 @@
     <string name="learning_quiz_pending">በእንግሊዝኛና በአማርኛ የሚቀርቡ ፈተናዎች ባለብዙ ምርጫ፣ እውነት/ሐሰት፣ ክፍተት መሙላት፣ ማዛመድ፣ የምዕራፍ ግንዛቤና የመጽሐፍ አጠቃላይ ግምገማን ያካትታሉ። እያንዳንዱ መልስ ማብራሪያና የተረጋገጠ የቅዱስ መጽሐፍ ማጣቀሻ ይኖረዋል።</string>
     <string name="learning_quiz_unavailable">ፈተናው ገና አልተዘጋጀም</string>
     <string name="learning_provenance_notice">የይዘት መስፈርት፦ ቅዱስ ጽሑፍ፣ መግቢያዎች፣ የጥናት መመሪያዎችና የፈተና ጥያቄዎች የተለያዩ የይዘት ዓይነቶች ናቸው። እያንዳንዱ የራሱ ምንጭ፣ ፈቃድ ወይም ፈቃድ ማስረጃ፣ የምንጭ መጥቀስ፣ የቋንቋ ግምገማና ከእትሙ ጋር ተስማሚነት ይፈልጋል። ያልተረጋገጠ ይዘት እንደ ጸደቀ አይታይም።</string>
+
+    <string name="learning_setting_title">ታሪካዊና ባህላዊ አውድ</string>
+    <string name="learning_audience_title">የመጀመሪያ ተቀባዮችና ዓላማ</string>
+    <string name="learning_key_people_title">ዋና ዋና ሰዎች</string>
+    <string name="learning_interpretive_care_title">በትርጓሜ ጊዜ ሊጠነቀቁ የሚገቡ ነጥቦች</string>
+    <string name="learning_source_count">%1$d የጥናት ምንጮች ተመዝግበዋል · ማጣቀሻዎቹን በይዘት ጥቅሉ ይመልከቱ</string>
+    <string name="learning_draft_warning">የውስጥ ረቂቅ ነው — ለህትመት አልጸደቀም። የእንግሊዝኛ አርትዖትና የአማርኛ ቋንቋ ግምገማ ገና ያስፈልጋሉ።</string>
+    <string name="learning_quiz_score">የተመረመሩ መልሶች፦ %1$d · ትክክል፦ %2$d</string>
+    <string name="learning_true">እውነት</string>
+    <string name="learning_false">ሐሰት</string>
+    <string name="learning_check_answer">መልሱን አረጋግጥ</string>
+    <string name="learning_answer_correct">ትክክል</string>
+    <string name="learning_answer_incorrect">ትክክል አይደለም — ማብራሪያውን ይመልከቱ</string>
+    <string name="learning_answer_references">ማጣቀሻዎች፦ %1$s</string>
 </resources>
