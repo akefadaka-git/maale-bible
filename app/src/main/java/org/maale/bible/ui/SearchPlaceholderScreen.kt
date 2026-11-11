@@ -24,6 +24,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import org.maale.bible.R
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -46,7 +48,7 @@ fun SearchPlaceholderScreen(
     var store by remember { mutableStateOf<OfflineScriptureStore?>(null) }
     var editions by remember { mutableStateOf<List<OfflineContentDescriptor>>(emptyList()) }
     var selectedEditionId by remember { mutableStateOf<String?>(null) }
-    var storeState by remember { mutableStateOf("Loading installed Bible editions…") }
+    var storeState by remember { mutableStateOf(stringResource(R.string.search_loading_editions)) }
     var searchResults by remember { mutableStateOf<List<ScriptureSearchResult>>(emptyList()) }
     var searchState by remember { mutableStateOf("") }
     val currentStore by rememberUpdatedState(store)
@@ -59,17 +61,17 @@ fun SearchPlaceholderScreen(
             onSuccess = { installed ->
                 editions = installed
                 selectedEditionId = installed.firstOrNull()?.editionId
-                if (installed.isEmpty()) storeState = "No offline scripture edition is installed on this device."
+                if (installed.isEmpty()) storeState = stringResource(R.string.search_no_edition)
             },
             onFailure = {
-                storeState = "Installed Bible editions could not be listed."
+                storeState = stringResource(R.string.search_list_failed)
             }
         )
     }
 
     LaunchedEffect(context, selectedEditionId) {
         val editionId = selectedEditionId ?: return@LaunchedEffect
-        storeState = "Verifying " + editionId + "…"
+        storeState = stringResource(R.string.search_verifying_edition, editionId)
         val opened = withContext(Dispatchers.IO) {
             runCatching { OfflineScriptureStore.openInstalled(context, editionId) }
         }
@@ -79,13 +81,13 @@ fun SearchPlaceholderScreen(
                 store = installed
                 withContext(Dispatchers.IO) { previous?.close() }
                 storeState = if (installed == null) {
-                    "Selected edition is not installed."
+                    stringResource(R.string.search_selected_not_installed)
                 } else {
-                    installed.descriptor.editionId + " · " + installed.descriptor.verseCount + " indexed passages"
+                    stringResource(R.string.search_indexed_passages, installed.descriptor.editionId, installed.descriptor.verseCount)
                 }
             },
             onFailure = {
-                storeState = "The selected scripture package failed integrity verification."
+                storeState = stringResource(R.string.search_integrity_failed)
             }
         )
     }
@@ -115,11 +117,11 @@ fun SearchPlaceholderScreen(
         result.fold(
             onSuccess = { rows ->
                 searchResults = rows
-                searchState = if (rows.isEmpty()) "No scripture passages match this search."
-                else rows.size.toString() + " scripture result" + if (rows.size == 1) "" else "s"
+                searchState = if (rows.isEmpty()) stringResource(R.string.search_no_results)
+                else stringResource(R.string.search_result_count, rows.size)
             },
             onFailure = {
-                searchState = "Search could not be completed. Check the installed content package."
+                searchState = stringResource(R.string.search_error)
             }
         )
     }
@@ -133,22 +135,22 @@ fun SearchPlaceholderScreen(
             modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth().align(Alignment.CenterHorizontally),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Text("DISCOVER THE SCRIPTURES", style = MaterialTheme.typography.labelSmall,
+            Text(stringResource(R.string.search_eyebrow), style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
-            Text("Search with purpose.", style = MaterialTheme.typography.headlineMedium,
+            Text(stringResource(R.string.search_title), style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onBackground, fontWeight = FontWeight.SemiBold)
-            Text("Search installed Bible text offline, or find a book by name and canonical code.",
+            Text(stringResource(R.string.search_description),
                 style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             OutlinedTextField(
                 value = query,
                 onValueChange = { query = it },
                 modifier = Modifier.fillMaxWidth().semantics {
-                    contentDescription = "Search installed Bible text, book names or canonical codes"
+                    contentDescription = stringResource(R.string.search_accessibility)
                 },
                 singleLine = true,
-                label = { Text("Search scripture") },
-                placeholder = { Text("Enter a word or phrase") },
-                trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text("Clear") } }
+                label = { Text(stringResource(R.string.search_field_label)) },
+                placeholder = { Text(stringResource(R.string.search_field_hint)) },
+                trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text(stringResource(R.string.action_clear)) } }
             )
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -191,7 +193,7 @@ fun SearchPlaceholderScreen(
             ) {
                 if (matchingBooks.isNotEmpty()) {
                     item(key = "book-heading") {
-                        Text("BOOKS · " + matchingBooks.size, style = MaterialTheme.typography.titleSmall)
+                        Text(stringResource(R.string.search_books_heading, matchingBooks.size), style = MaterialTheme.typography.titleSmall)
                     }
                     items(matchingBooks, key = { "book-" + it.usfmId }) { book ->
                         Card(onClick = { onSelectBook(book.usfmId) }, modifier = Modifier.fillMaxWidth(),
@@ -199,17 +201,17 @@ fun SearchPlaceholderScreen(
                             Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
                                     Text(book.englishName, style = MaterialTheme.typography.titleMedium)
-                                    Text("CANONICAL ID · " + book.usfmId, style = MaterialTheme.typography.labelSmall,
+                                    Text(stringResource(R.string.reader_canonical_book_id) + " · " + book.usfmId, style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 }
-                                Text("Open →", color = MaterialTheme.colorScheme.primary)
+                                Text(stringResource(R.string.action_open) + " →", color = MaterialTheme.colorScheme.primary)
                             }
                         }
                     }
                 }
                 if (store != null) {
                     item(key = "scripture-heading") {
-                        Text(searchState.ifBlank { "Searching installed scripture…" },
+                        Text(searchState.ifBlank { stringResource(R.string.search_searching) },
                             modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.titleSmall)
                     }
                     items(searchResults, key = { "verse-" + it.bookId + ":" + it.chapter + ":" + it.verseRef }) { result ->
@@ -241,13 +243,12 @@ private fun SearchCapabilityCard(installed: Boolean) {
     Card(modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("SEARCH CAPABILITIES", style = MaterialTheme.typography.labelSmall,
+            Text(stringResource(R.string.search_capabilities), style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
-            Text("Find words and phrases across installed Bible editions.", style = MaterialTheme.typography.titleMedium)
-            CapabilityLine("Available", "Book-name and USFM-code lookup")
-            CapabilityLine(if (installed) "Available" else "Waiting for download",
-                "Offline full-text search in installed scripture")
-            CapabilityLine("In development", "Edition filters and language-aware search")
+            Text(stringResource(R.string.search_capability_description), style = MaterialTheme.typography.titleMedium)
+            CapabilityLine(stringResource(R.string.search_available), stringResource(R.string.search_book_lookup))
+            CapabilityLine(stringResource(if (installed) R.string.search_available else R.string.search_waiting_download), stringResource(R.string.search_offline_full_text))
+            CapabilityLine(stringResource(R.string.search_in_development), stringResource(R.string.search_edition_filters))
         }
     }
 }
