@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-NUM-v1",
+  "book": {
+    "usfm_id": "NUM",
+    "english_name": "Numbers",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-numbers",
+      "title": "Bible Study Guide: Numbers",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-numbers/",
+      "use": "Geographical and generational outline"
+    },
+    {
+      "id": "sots-numbers",
+      "title": "Numbers",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/wiki/numbers",
+      "use": "Composition and scholarly context"
+    },
+    {
+      "id": "usccb-numbers",
+      "title": "The Book of Numbers",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/numbers/0",
+      "use": "Book divisions and themes"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Numbers — wilderness testing and a new generation",
+        "summary": "Numbers follows Israel from the organized camp at Sinai through the wilderness journey to the plains of Moab. Census lists, laws, travel accounts, rebellions, leadership conflicts and preparations for entering the land are woven together. The book contrasts a generation marked by distrust with a new generation preparing to move forward.",
+        "authorship": "The book belongs to the Torah and is traditionally associated with Moses. Its varied narrative, legal and census materials show signs of complex literary formation; scholarly explanations of sources and dates differ. Present the traditional association and modern discussion carefully.",
+        "setting": "The narrative travels from Sinai through wilderness regions, including Kadesh, toward the plains of Moab east of the Jordan. The geographical notices organize the story but do not by themselves settle modern identifications of every location.",
+        "audience_and_purpose": "Numbers teaches how a covenant people are formed, tested and disciplined during a long journey. It explores trust, leadership, worship, communal order, failure and the hope of a new generation.",
+        "structure": [
+          {
+            "range": "1–10",
+            "heading": "Israel organized at Sinai",
+            "summary": "Censuses, camp arrangement, Levitical duties and preparations to depart."
+          },
+          {
+            "range": "11–14",
+            "heading": "Complaints and the failed entry",
+            "summary": "The people complain; the spies report; fear leads to refusal to enter the land."
+          },
+          {
+            "range": "15–19",
+            "heading": "Wilderness laws and conflicts",
+            "summary": "Instructions and episodes address rebellion, priesthood and community order."
+          },
+          {
+            "range": "20–21",
+            "heading": "The journey toward Moab",
+            "summary": "Leadership transitions and travel bring Israel closer to the Jordan."
+          },
+          {
+            "range": "22–25",
+            "heading": "Balaam and covenant unfaithfulness",
+            "summary": "Balaam’s oracles and the Peor episode shape the final wilderness crisis."
+          },
+          {
+            "range": "26–36",
+            "heading": "A new generation prepared",
+            "summary": "A second census, inheritance, leadership succession and land arrangements."
+          }
+        ],
+        "themes": [
+          "Trust and distrust in the wilderness",
+          "Leadership, accountability and shared responsibility",
+          "God’s provision and patience",
+          "Holiness and order in the community",
+          "Consequences of rebellion and the possibility of renewal",
+          "A new generation and the future of the promise"
+        ],
+        "key_people": [
+          "Moses",
+          "Aaron",
+          "Miriam",
+          "Joshua",
+          "Caleb",
+          "Balaam",
+          "Eleazar",
+          "The twelve spies"
+        ],
+        "key_passages": [
+          "NUM 6:22-27",
+          "NUM 11:4-23",
+          "NUM 13:1-33",
+          "NUM 14:1-25",
+          "NUM 20:1-13",
+          "NUM 21:4-9",
+          "NUM 22:1-35",
+          "NUM 27:12-23",
+          "NUM  Numbers 36:1-13"
+        ],
+        "interpretive_care": [
+          "Do not force all census totals into a single modern demographic reconstruction without discussing interpretive questions.",
+          "The book contains different kinds of material; distinguish narrative, law, poetry and genealogical lists.",
+          "Do not assume that all place identifications or travel routes are archaeologically certain."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "NUM-S01",
+          "range": "NUM 13:1-33; 14:1-25",
+          "title": "The spies and the choice to trust",
+          "observation": [
+            "Compare the reports of the spies and identify the different emphases.",
+            "Observe the people’s response and God’s response."
+          ],
+          "interpretation": [
+            "How do fear and memory shape the community’s decision?",
+            "What distinguishes Caleb and Joshua’s response?"
+          ],
+          "application": [
+            "How can a community assess real risks without surrendering to fear?",
+            "What faithful action is possible when the future feels uncertain?"
+          ]
+        },
+        {
+          "id": "NUM-S02",
+          "range": "NUM 20:1-13",
+          "title": "Moses, the people and the water",
+          "observation": [
+            "List the people’s complaint, Moses’ actions and the instructions given.",
+            "Notice the outcome and the explanation attached to it."
+          ],
+          "interpretation": [
+            "Why is leadership accountability important in this episode?",
+            "How does the passage portray the difference between provision and the leader’s response?"
+          ],
+          "application": [
+            "How should leaders respond under pressure?",
+            "Who can offer honest correction when authority is involved?"
+          ]
+        },
+        {
+          "id": "NUM-S03",
+          "range": "NUM 27:12-23",
+          "title": "Preparing a successor",
+          "observation": [
+            "Notice what Moses is told about his future and what he asks for the people.",
+            "Identify how Joshua is presented and commissioned."
+          ],
+          "interpretation": [
+            "What qualities matter in a leader who will serve the whole community?",
+            "How does the passage connect authority with public responsibility?"
+          ],
+          "application": [
+            "What practices make leadership transitions transparent and stable?",
+            "How can a community prepare the next generation rather than depend on one person?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "NUM-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "How many spies were sent to explore Canaan?",
+          "options": [
+            "Two",
+            "Ten",
+            "Twelve",
+            "Forty"
+          ],
+          "correct_option_id": "C",
+          "explanation": "Numbers 13 names twelve representatives, one from each tribe.",
+          "references": [
+            "NUM 13:1-16"
+          ]
+        },
+        {
+          "id": "NUM-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joshua and Caleb urge the people not to give in to fear.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Joshua and Caleb give a faithful report and urge the people to trust God.",
+          "references": [
+            "NUM 14:6-9"
+          ]
+        },
+        {
+          "id": "NUM-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is appointed to succeed Moses as leader?",
+          "options": [
+            "Caleb",
+            "Joshua",
+            "Eleazar",
+            "Balaam"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Joshua is commissioned before the community as Moses’ successor.",
+          "references": [
+            "NUM 27:18-23"
+          ]
+        },
+        {
+          "id": "NUM-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Where is Israel camped near the end of Numbers?",
+          "options": [
+            "Plains of Moab",
+            "Mount Carmel",
+            "Jerusalem",
+            "Nineveh"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The final chapters place Israel on the plains of Moab by the Jordan.",
+          "references": [
+            "NUM 22:1; 36:13"
+          ]
+        },
+        {
+          "id": "NUM-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Numbers contains both census lists and narrative accounts of the wilderness journey.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The book combines census and genealogical material with stories, laws and travel accounts.",
+          "references": [
+            "NUM 1–36"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዘኁልቁ — በምድረ በዳ ፈተናና አዲስ ትውልድ",
+        "summary": "ዘኁልቁ እስራኤልን በሲና ከተደራጀው ሰፈር ጀምሮ በምድረ በዳ እስከ ሞዓብ ሜዳ ይከተላል። የሕዝብ ቆጠራ፣ ሕጎች፣ የጉዞ ታሪኮች፣ ዓመፅ፣ የአመራር ግጭትና ወደ ምድሪቱ ለመግባት የሚደረጉ ዝግጅቶች ተቀላቅለው ቀርበዋል። መጽሐፉ በእምነት እጥረት የተለየውን ትውልድና ወደፊት ለመሄድ የሚዘጋጀውን አዲስ ትውልድ ያነጻጽራል።",
+        "authorship": "መጽሐፉ የኦሪት ክፍል ሲሆን በባህል ከሙሴ ጋር ይያያዛል። የተለያዩ ትረካዎች፣ ሕጎችና የቆጠራ ዝርዝሮች ውስብስብ የጽሑፍ አፈጣጠር ሂደት እንዳላቸው ያሳያሉ፤ ምሁራዊ ማብራሪያዎች በምንጮችና በዘመናት ላይ ይለያያሉ።",
+        "setting": "ትረካው ከሲና ተነስቶ በምድረ በዳ ክልሎች፣ ከቃዴስ ጨምሮ፣ ወደ ዮርዳኖስ ምሥራቅ ወዳለው የሞዓብ ሜዳ ይጓዛል። የቦታ መግለጫዎቹ ታሪኩን ያደራጃሉ፤ ነገር ግን የእያንዳንዱን ቦታ ዘመናዊ መለያ በራሳቸው አያረጋግጡም።",
+        "audience_and_purpose": "ዘኁልቁ የቃል ኪዳን ሕዝብ በረጅም ጉዞ እንዴት እንደሚደራጅ፣ እንደሚፈተንና እንደሚታረም ያስተምራል። እምነትን፣ አመራርን፣ አምልኮን፣ የማኅበረሰብ ሥርዓትን፣ ውድቀትንና የአዲስ ትውልድ ተስፋን ይመረምራል።",
+        "structure": [
+          {
+            "range": "1–10",
+            "heading": "በሲና የተደራጀ እስራኤል",
+            "summary": "ቆጠራ፣ የሰፈር አደረጃጀት፣ የሌዋውያን ሥራና ለመነሳት ዝግጅት።"
+          },
+          {
+            "range": "11–14",
+            "heading": "ቅሬታና ያልተሳካ መግባት",
+            "summary": "ሕዝቡ ያጉረመርማል፤ ሰላዮች ይላካሉ፤ ፍርሃት ወደ ምድሪቱ መግባትን ያስከለክላል።"
+          },
+          {
+            "range": "15–19",
+            "heading": "የምድረ በዳ ሕጎችና ግጭቶች",
+            "summary": "መመሪያዎችና ክስተቶች ዓመፅን፣ ክህነትንና የማኅበረሰብ ሥርዓትን ይመለከታሉ።"
+          },
+          {
+            "range": "20–21",
+            "heading": "ወደ ሞዓብ የሚደረግ ጉዞ",
+            "summary": "የአመራር ለውጦችና ጉዞዎች እስራኤልን ወደ ዮርዳኖስ ያቀርባሉ።"
+          },
+          {
+            "range": "22–25",
+            "heading": "በለዓምና የቃል ኪዳን አለመታመን",
+            "summary": "የበለዓም ትንቢቶችና የፌጎር ክስተት የምድረ በዳውን ችግር ያበረታሉ።"
+          },
+          {
+            "range": "26–36",
+            "heading": "የተዘጋጀ አዲስ ትውልድ",
+            "summary": "ሁለተኛ ቆጠራ፣ ውርስ፣ የአመራር ተተኪነትና የምድር አደረጃጀት።"
+          }
+        ],
+        "themes": [
+          "በምድረ በዳ እምነትና እምነት ማጣት",
+          "አመራር፣ ተጠያቂነትና የጋራ ኃላፊነት",
+          "የእግዚአብሔር አቅርቦትና ትዕግሥት",
+          "ቅድስናና የማኅበረሰብ ሥርዓት",
+          "የዓመፅ ውጤትና የመታደስ ዕድል",
+          "አዲስ ትውልድና የተስፋው ወደፊት"
+        ],
+        "key_people": [
+          "ሙሴ",
+          "አሮን",
+          "ማርያም",
+          "ኢያሱ",
+          "ካሌብ",
+          "በለዓም",
+          "አልዓዛር",
+          "አሥራ ሁለቱ ሰላዮች"
+        ],
+        "key_passages": [
+          "ዘኁ 6:22-27",
+          "ዘኁ 11:4-23",
+          "ዘኁ 13:1-33",
+          "ዘኁ 14:1-25",
+          "ዘኁ 20:1-13",
+          "ዘኁ 21:4-9",
+          "ዘኁ 22:1-35",
+          "ዘኁ 27:12-23",
+          "ዘኁ 36:1-13"
+        ],
+        "interpretive_care": [
+          "የቆጠራ ቁጥሮችን ሁሉ ያለ ማብራሪያ ወደ ዘመናዊ የሕዝብ ብዛት ግምት አትቀይሩ።",
+          "መጽሐፉ የተለያዩ የጽሑፍ ዓይነቶችን ይዟል፤ ትረካን፣ ሕግን፣ ግጥምንና የትውልድ ዝርዝርን ለዩ።",
+          "የቦታ መለያዎችና የጉዞ መንገዶች ሁሉ በአርኪዮሎጂ ተረጋግጠዋል ብላችሁ አትገምቱ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "NUM-S01",
+          "range": "NUM 13:1-33; 14:1-25",
+          "title": "ሰላዮቹና የመታመን ምርጫ",
+          "observation": [
+            "የሰላዮቹን ዘገባዎች ያነጻጽሩና የተለያዩ አጽንኦቶችን ይለዩ።",
+            "የሕዝቡንና የእግዚአብሔርን ምላሽ ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ፍርሃትና ትውስታ የማኅበረሰቡን ውሳኔ እንዴት ይቀርጻሉ?",
+            "የካሌብና የኢያሱ ምላሽ በምን ይለያል?"
+          ],
+          "application": [
+            "ማኅበረሰብ ለፍርሃት ሳይሸነፍ እውነተኛ አደጋዎችን እንዴት ሊመዝን ይችላል?",
+            "ወደፊት ግልጽ ባይሆንም በእምነት ሊወሰድ የሚችል እርምጃ ምንድን ነው?"
+          ]
+        },
+        {
+          "id": "NUM-S02",
+          "range": "NUM 20:1-13",
+          "title": "ሙሴ፣ ሕዝቡና ውሃው",
+          "observation": [
+            "የሕዝቡን ቅሬታ፣ የሙሴን ተግባርና የተሰጡትን መመሪያዎች ይዘርዝሩ።",
+            "ውጤቱንና ከእሱ ጋር የተያያዘውን ማብራሪያ ይመልከቱ።"
+          ],
+          "interpretation": [
+            "በዚህ ክስተት የአመራር ተጠያቂነት ለምን አስፈላጊ ነው?",
+            "ክፍሉ በአቅርቦትና በመሪው ምላሽ መካከል ያለውን ልዩነት እንዴት ያሳያል?"
+          ],
+          "application": [
+            "መሪዎች በጫና ጊዜ እንዴት ምላሽ ሊሰጡ ይገባል?",
+            "ሥልጣን በጉዳዩ ውስጥ ሲኖር ማን በታማኝነት ሊያርም ይችላል?"
+          ]
+        },
+        {
+          "id": "NUM-S03",
+          "range": "NUM 27:12-23",
+          "title": "ተተኪ መሪን ማዘጋጀት",
+          "observation": [
+            "ሙሴ ስለ ወደፊቱ የተነገረውንና ስለ ሕዝቡ የጠየቀውን ይመልከቱ።",
+            "ኢያሱ እንዴት እንደቀረበና እንደተሾመ ይለዩ።"
+          ],
+          "interpretation": [
+            "ለማኅበረሰቡ ሁሉ በሚያገለግል መሪ ውስጥ ምን ባሕርያት አስፈላጊ ናቸው?",
+            "ክፍሉ ሥልጣንን ከሕዝባዊ ኃላፊነት ጋር እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "የአመራር ሽግግር ግልጽና የተረጋጋ እንዲሆን ምን ልምዶች ያስፈልጋሉ?",
+            "ማኅበረሰብ በአንድ ሰው ላይ ከመመርኮዝ ይልቅ ቀጣዩን ትውልድ እንዴት ሊያዘጋጅ ይችላል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "NUM-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከነዓንን ለመመርመር ስንት ሰላዮች ተላኩ?",
+          "options": [
+            "ሁለት",
+            "አሥር",
+            "አሥራ ሁለት",
+            "አርባ"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ዘኁልቁ 13 ከእያንዳንዱ ነገድ አንድ ሰው የሆኑ አሥራ ሁለት ተወካዮችን ይጠቅሳል።",
+          "references": [
+            "NUM 13:1-16"
+          ]
+        },
+        {
+          "id": "NUM-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ኢያሱና ካሌብ ሕዝቡ ለፍርሃት እንዳይሸነፍ ያበረታታሉ።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "NUM 14:6-9"
+          ]
+        },
+        {
+          "id": "NUM-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ሙሴን በአመራር እንዲተካ የተሾመው ማን ነው?",
+          "options": [
+            "ካሌብ",
+            "ኢያሱ",
+            "አልዓዛር",
+            "በለዓም"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ኢያሱ በማኅበረሰቡ ፊት እንደ ሙሴ ተተኪ ተሾመ።",
+          "references": [
+            "NUM 27:18-23"
+          ]
+        },
+        {
+          "id": "NUM-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በዘኁልቁ መጨረሻ እስራኤል የት ሰፍራለች?",
+          "options": [
+            "የሞዓብ ሜዳ",
+            "ቀርሜሎስ ተራራ",
+            "ኢየሩሳሌም",
+            "ነነዌ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "የመጨረሻዎቹ ምዕራፎች እስራኤል በዮርዳኖስ አጠገብ በሞዓብ ሜዳ እንዳለች ያሳያሉ።",
+          "references": [
+            "NUM 22:1; 36:13"
+          ]
+        },
+        {
+          "id": "NUM-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዘኁልቁ የቆጠራ ዝርዝሮችንና የምድረ በዳ ጉዞ ትረካዎችን ይዟል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "NUM 1–36"
+          ]
+        }
+      ]
+    }
+  }
+}
