@@ -98,16 +98,3 @@ class P2V6NavigationSmokeTest {
     }
 
 }
- {
-        composeRule.onNodeWithTag("language_selector").performClick()
-        composeRule.onNodeWithTag("language_amharic").performClick()
-        composeRule.onNodeWithText("መጻሕፍት").performClick()
-        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
-        composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
-        composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
-
-        composeRule.onNodeWithTag("language_selector").performClick()
-        composeRule.onNodeWithTag("language_english").performClick()
-        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
-        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
-    }
