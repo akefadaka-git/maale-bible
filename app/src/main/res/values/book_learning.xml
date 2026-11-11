@@ -32,4 +32,18 @@
     <string name="learning_quiz_pending">English and Amharic quizzes will include multiple choice, true or false, completion, matching, chapter comprehension and book-wide review. Each answer will include an explanation and a verified scripture reference.</string>
     <string name="learning_quiz_unavailable">Quiz not yet available</string>
     <string name="learning_provenance_notice">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
+
+    <string name="learning_setting_title">Historical and cultural setting</string>
+    <string name="learning_audience_title">Original audience and purpose</string>
+    <string name="learning_key_people_title">Key people</string>
+    <string name="learning_interpretive_care_title">Interpretive cautions</string>
+    <string name="learning_source_count">%1$d research sources recorded · see the content package for references</string>
+    <string name="learning_draft_warning">INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.</string>
+    <string name="learning_quiz_score">Checked answers: %1$d · correct: %2$d</string>
+    <string name="learning_true">True</string>
+    <string name="learning_false">False</string>
+    <string name="learning_check_answer">Check answer</string>
+    <string name="learning_answer_correct">Correct</string>
+    <string name="learning_answer_incorrect">Not quite — review the explanation</string>
+    <string name="learning_answer_references">References: %1$s</string>
 </resources>
