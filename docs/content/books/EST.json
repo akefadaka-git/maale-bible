@@ -174,9 +174,9 @@
             "Hathach"
           ],
           "correct_option_id": "A",
-          "explanation": "EST 4:12-17",
+          "explanation": "Mordecai challenges Esther to act for her people.",
           "references": [
-            "አስቴር ከአይሁድ ሕዝብ ችግር አንጻር ያላትን ቦታ እንድታስብ ያበረታታት ማን ነው?"
+            "EST 4:12-17"
           ]
         },
         {
@@ -203,9 +203,9 @@
             "Tabernacles"
           ],
           "correct_option_id": "A",
-          "explanation": "EST 9:20-32",
+          "explanation": "The book links the deliverance with the annual festival of Purim.",
           "references": [
-            "አስቴር እንዲቋቋም የረዳችው የትኛው በዓል ነው?"
+            "EST 9:20-32"
           ]
         },
         {
@@ -220,9 +220,9 @@
             "Their temple dedication"
           ],
           "correct_option_id": "A",
-          "explanation": "EST 3:1-15",
+          "explanation": "Haman persuades the king to issue a decree against the Jews.",
           "references": [
-            "ሐማ በአይሁድ ሕዝብ ላይ ምን ለማድረግ አቀደ?"
+            "EST 3:1-15"
           ]
         },
         {
@@ -358,17 +358,18 @@
           "id": "EST-Q01",
           "type": "multiple_choice",
           "difficulty": "easy",
-          "prompt": "መርዶክዮስ",
+          "prompt": "አስቴር ከአይሁድ ሕዝብ ችግር አንጻር ያላትን ቦታ እንድታስብ ያበረታታት ማን ነው?",
           "options": [
+            "መርዶክዮስ",
             "ሐማ",
             "ወስጢ",
-            "ሐታክ",
-            "መርዶክዮስ አስቴርን ለሕዝቧ እንድትሠራ ያበረታታታል።"
+            "ሐታክ"
           ],
           "correct_option_id": "A",
           "references": [
-            "አስቴር ከአይሁድ ሕዝብ ችግር አንጻር ያላትን ቦታ እንድታስብ ያበረታታት ማን ነው?"
-          ]
+            "EST 4:12-17"
+          ],
+          "explanation": "መርዶክዮስ አስቴርን ለሕዝቧ እንድትሠራ ያበረታታታል።"
         },
         {
           "id": "EST-Q02",
@@ -385,33 +386,35 @@
           "id": "EST-Q03",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "ፑሪም",
+          "prompt": "አስቴር እንዲቋቋም የረዳችው የትኛው በዓል ነው?",
           "options": [
+            "ፑሪም",
             "ፋሲካ",
             "ጰንጠቆስጤ",
-            "ዳስ በዓል",
-            "መጽሐፉ መዳኑን ከዓመታዊው የፑሪም በዓል ጋር ያገናኛል።"
+            "ዳስ በዓል"
           ],
           "correct_option_id": "A",
           "references": [
-            "አስቴር እንዲቋቋም የረዳችው የትኛው በዓል ነው?"
-          ]
+            "EST 9:20-32"
+          ],
+          "explanation": "መጽሐፉ መዳኑን ከዓመታዊው የፑሪም በዓል ጋር ያገናኛል።"
         },
         {
           "id": "EST-Q04",
           "type": "multiple_choice",
           "difficulty": "medium",
-          "prompt": "በንጉሣዊ አዋጅ ማጥፋታቸውን",
+          "prompt": "ሐማ በአይሁድ ሕዝብ ላይ ምን ለማድረግ አቀደ?",
           "options": [
+            "በንጉሣዊ አዋጅ ማጥፋታቸውን",
             "ወደ ኢየሩሳሌም መመለሳቸውን",
             "ገዢ እንዲሆኑ መሾማቸውን",
-            "ቤተ መቅደሳቸውን ማምረቃቸውን",
-            "ሐማ በአይሁድ ላይ አዋጅ እንዲወጣ ንጉሡን ያሳምናል።"
+            "ቤተ መቅደሳቸውን ማምረቃቸውን"
           ],
           "correct_option_id": "A",
           "references": [
-            "ሐማ በአይሁድ ሕዝብ ላይ ምን ለማድረግ አቀደ?"
-          ]
+            "EST 3:1-15"
+          ],
+          "explanation": "ሐማ በአይሁድ ላይ አዋጅ እንዲወጣ ንጉሡን ያሳምናል።"
         },
         {
           "id": "EST-Q05",
