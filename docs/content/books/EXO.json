@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-EXO-v1",
+  "book": {
+    "usfm_id": "EXO",
+    "english_name": "Exodus",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "usccb-exodus",
+      "title": "The Book of Exodus",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/exodus/0",
+      "use": "Structure, narrative and covenant themes"
+    },
+    {
+      "id": "yale-exodus",
+      "title": "Exodus Introduction",
+      "publisher": "Yale Bible Study",
+      "url": "https://yalebiblestudy.org/courses/exodus/lessons/introduction-study-guide/",
+      "use": "Literary context and scholarly discussion"
+    },
+    {
+      "id": "sots-exodus",
+      "title": "Exodus",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/wiki/exodus",
+      "use": "Literary structure and Pentateuch context"
+    },
+    {
+      "id": "abs-exodus",
+      "title": "Bible Study Guide: Exodus",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-exodus/",
+      "use": "Study outline and historical cautions"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Exodus — liberation, covenant and divine presence",
+        "summary": "Exodus continues Genesis with the growth of Jacob’s descendants in Egypt, their oppression, deliverance through Moses, the journey to Sinai, covenant instruction and the construction of the tabernacle. The book moves from forced labour to a people called to serve God and live as a covenant community.",
+        "authorship": "Jewish and Christian traditions associate the Torah with Moses. Exodus itself does not provide a modern author byline. Scholars debate the book’s sources, composition and historical setting; present traditional attribution and scholarly models as distinct perspectives rather than settled facts.",
+        "setting": "The narrative moves between Egypt, the wilderness and Mount Sinai. Place names and events belong to the book’s literary-historical world; proposed dates and archaeological correlations remain debated.",
+        "audience_and_purpose": "Exodus explains Israel’s identity through deliverance, covenant and worship. It presents God as hearing the oppressed, confronting Pharaoh, forming a people and dwelling among them.",
+        "structure": [
+          {
+            "range": "1–2",
+            "heading": "Oppression and Moses’ early life",
+            "summary": "Israel’s growth, forced labour and Moses’ preservation and exile."
+          },
+          {
+            "range": "3–6",
+            "heading": "Call and commission",
+            "summary": "God calls Moses and reveals the divine name; Moses confronts Pharaoh."
+          },
+          {
+            "range": "7–15",
+            "heading": "Plagues, Passover and deliverance",
+            "summary": "The conflict with Pharaoh culminates in Israel’s departure and the sea crossing."
+          },
+          {
+            "range": "16–18",
+            "heading": "Wilderness journey",
+            "summary": "The people receive food, water and practical leadership."
+          },
+          {
+            "range": "19–24",
+            "heading": "Covenant at Sinai",
+            "summary": "Israel receives covenant instruction, including the Decalogue."
+          },
+          {
+            "range": "25–40",
+            "heading": "Tabernacle, rupture and renewal",
+            "summary": "Instructions, the golden calf, covenant renewal and the tabernacle’s completion."
+          }
+        ],
+        "themes": [
+          "God hears the cry of the oppressed",
+          "Liberation and the responsibilities of freedom",
+          "Covenant, law and communal identity",
+          "Worship and divine presence",
+          "Human fear, resistance and leadership",
+          "Rebellion, intercession, mercy and covenant renewal"
+        ],
+        "key_people": [
+          "Moses",
+          "Aaron and Miriam",
+          "Pharaoh",
+          "Zipporah",
+          "Jethro",
+          "The Israelites"
+        ],
+        "key_passages": [
+          "EXO 3:1-15",
+          "EXO 12:1-28",
+          "EXO 14:10-31",
+          "EXO 16:1-18",
+          "EXO 19:1-8",
+          "EXO 20:1-17",
+          "EXO 32:1-14",
+          "EXO 34:1-10",
+          "EXO 40: {1-38}"
+        ],
+        "interpretive_care": [
+          "Do not treat a single proposed date for the exodus as universally established.",
+          "Distinguish the theological meaning of the narrative from claims requiring independent historical evidence.",
+          "Read the law sections within their covenant and ancient social context."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EXO-S01",
+          "range": "EXO 3:1-15",
+          "title": "The call of Moses",
+          "observation": [
+            "Observe the setting, the repeated speech and Moses’ responses.",
+            "List what God says about seeing, hearing and knowing Israel’s suffering.",
+            "Notice the instructions and signs given to Moses."
+          ],
+          "interpretation": [
+            "Why does the call begin with God’s attention to suffering?",
+            "What does the divine name contribute to the mission?",
+            "How do Moses’ questions shape the scene?"
+          ],
+          "application": [
+            "Where must you listen before acting on another person’s suffering?",
+            "What responsibility follows when you are called to serve?"
+          ]
+        },
+        {
+          "id": "EXO-S02",
+          "range": "EXO 12:1-28",
+          "title": "Passover and remembrance",
+          "observation": [
+            "Identify the instructions about the meal, the household and the calendar.",
+            "Notice the repeated language of remembrance and telling the next generation."
+          ],
+          "interpretation": [
+            "How does a shared ritual shape a people’s memory and identity?",
+            "Why is the story to be retold to children?"
+          ],
+          "application": [
+            "What practices help your community remember deliverance and gratitude?",
+            "How can faith stories be passed on accurately and meaningfully?"
+          ]
+        },
+        {
+          "id": "EXO-S03",
+          "range": "EXO 19:1-8; 20:1-17",
+          "title": "Covenant and the commandments",
+          "observation": [
+            "List the covenant invitation and the people’s response.",
+            "Observe how the commandments address worship, relationships and social conduct."
+          ],
+          "interpretation": [
+            "How does deliverance precede the covenant obligations?",
+            "What kind of community do the commandments seek to form?"
+          ],
+          "application": [
+            "How can freedom be joined to responsibility and care for neighbours?",
+            "Which commandment challenges your community’s habits?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EXO-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What does God tell Moses at the burning bush?",
+          "options": [
+            "I have seen the suffering of my people",
+            "I have forgotten Israel",
+            "Pharaoh is innocent",
+            "The journey is already complete"
+          ],
+          "correct_option_id": "A",
+          "explanation": "God says that he has seen and heard the suffering of the Israelites and will act to deliver them.",
+          "references": [
+            "EXO 3:7-10"
+          ]
+        },
+        {
+          "id": "EXO-Q02",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who confronts Pharaoh and leads Israel out of Egypt?",
+          "options": [
+            "Joshua",
+            "Moses",
+            "David",
+            "Elijah"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Moses is called to confront Pharaoh and lead the Israelites out.",
+          "references": [
+            "EXO 3:10; 12:31-42"
+          ]
+        },
+        {
+          "id": "EXO-Q03",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The Passover instructions include telling the next generation what the observance means.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The text says children are to ask about the observance and parents are to explain it.",
+          "references": [
+            "EXO 12:24-27"
+          ]
+        },
+        {
+          "id": "EXO-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "At which mountain does Israel receive covenant instruction?",
+          "options": [
+            "Mount Carmel",
+            "Mount Sinai",
+            "Mount Zion",
+            "Mount Tabor"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The covenant and law-giving are located at Mount Sinai.",
+          "references": [
+            "EXO 19:1-8; 20:1-17"
+          ]
+        },
+        {
+          "id": "EXO-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book of Exodus ends with the glory of the LORD filling the tabernacle.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The closing chapter describes the cloud covering the tent and the glory of the LORD filling the tabernacle.",
+          "references": [
+            "EXO 40:34-38"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዘፀአት — ነፃ መውጣት፣ ቃል ኪዳንና የእግዚአብሔር መገኘት",
+        "summary": "ዘፀአት የዘፍጥረትን ታሪክ በመቀጠል በግብፅ የያዕቆብ ዘሮች መብዛትን፣ ጭቆናቸውን፣ በሙሴ አማካይነት መዳናቸውን፣ ወደ ሲና የተደረገውን ጉዞ፣ ቃል ኪዳኑንና የመገናኛ ድንኳኑን መሠራት ያቀርባል። መጽሐፉ ከባርነት ወደ እግዚአብሔርን የሚያገለግል የቃል ኪዳን ሕዝብ መሆን ያለውን ለውጥ ያሳያል።",
+        "authorship": "የአይሁድና የክርስቲያን ባህል ኦሪትን ከሙሴ ጋር ያያይዛል። ዘፀአት ግን የዘመናዊ ደራሲ መግለጫ አይሰጥም። ምሁራን የመጽሐፉን ምንጮች፣ አወቃቀርና ታሪካዊ አውድ ይወያያሉ፤ ባህላዊ አመለካከትና የምሁራን ጥናት በተለያዩ አመለካከቶች መቅረብ አለባቸው።",
+        "setting": "ትረካው በግብፅ፣ በምድረ በዳና በሲና ተራራ መካከል ይንቀሳቀሳል። የቦታ ስሞችና ክስተቶች የመጽሐፉ ታሪካዊ-ሥነ ጽሑፋዊ ዓለም ክፍል ናቸው፤ ትክክለኛ ዘመናቸውና ከአርኪዮሎጂ ጋር ያላቸው ግንኙነት ግን ይከራከራሉ።",
+        "audience_and_purpose": "ዘፀአት የእስራኤልን ማንነት በመዳን፣ በቃል ኪዳንና በአምልኮ ያብራራል። እግዚአብሔር የተጨቆኑትን ጩኸት እንደሚሰማ፣ ፈርዖንን እንደሚቃወም፣ ሕዝብን እንደሚፈጥርና በመካከላቸው እንደሚኖር ያቀርባል።",
+        "structure": [
+          {
+            "range": "1–2",
+            "heading": "ጭቆናና የሙሴ የልጅነት ታሪክ",
+            "summary": "የእስራኤል መብዛት፣ የግዳጅ ሥራና የሙሴ መዳን።"
+          },
+          {
+            "range": "3–6",
+            "heading": "ጥሪና ተልዕኮ",
+            "summary": "እግዚአብሔር ሙሴን ይጠራል፣ ስሙን ይገልጣል፤ ሙሴም ፈርዖንን ይጋፈጣል።"
+          },
+          {
+            "range": "7–15",
+            "heading": "መቅሰፍቶች፣ ፋሲካና መዳን",
+            "summary": "ከፈርዖን ጋር ያለው ግጭት በመውጣትና በባሕር መሻገር ይደመደማል።"
+          },
+          {
+            "range": "16–18",
+            "heading": "የምድረ በዳ ጉዞ",
+            "summary": "ሕዝቡ ምግብ፣ ውሃና የአመራር እገዛ ያገኛል።"
+          },
+          {
+            "range": "19–24",
+            "heading": "በሲና የቃል ኪዳን መመሥረት",
+            "summary": "ሕዝቡ የቃል ኪዳን ትምህርትን፣ አሥርቱን ትእዛዛት ጨምሮ፣ ይቀበላል።"
+          },
+          {
+            "range": "25–40",
+            "heading": "ድንኳን፣ ክህደትና እድሳት",
+            "summary": "የድንኳኑ መመሪያ፣ የወርቅ ጥጃ፣ የቃል ኪዳን እድሳትና ድንኳኑ መጠናቀቅ።"
+          }
+        ],
+        "themes": [
+          "እግዚአብሔር የተጨቆኑትን ጩኸት ይሰማል",
+          "ነፃነትና የነፃነት ኃላፊነት",
+          "ቃል ኪዳን፣ ሕግና የማኅበረሰብ ማንነት",
+          "አምልኮና መለኮታዊ መገኘት",
+          "የሰው ፍርሃት፣ ተቃውሞና አመራር",
+          "ክህደት፣ ምልጃ፣ ምሕረትና የቃል ኪዳን እድሳት"
+        ],
+        "key_people": [
+          "ሙሴ",
+          "አሮንና ማርያም",
+          "ፈርዖን",
+          "ሲፓራ",
+          "ዮቶር",
+          "እስራኤላውያን"
+        ],
+        "key_passages": [
+          "ዘፀ 3:1-15",
+          "ዘፀ 12:1-28",
+          "ዘፀ 14:10-31",
+          "ዘፀ 16:1-18",
+          "ዘፀ 19:1-8",
+          "ዘፀ 20:1-17",
+          "ዘፀ 32:1-14",
+          "ዘፀ 34:1-10",
+          "ዘፀ 40:1-38"
+        ],
+        "interpretive_care": [
+          "የዘፀአቱን አንድ የዘመን ግምት ሁሉም የተቀበሉት እውነታ አድርጎ አታቅርቡ።",
+          "የትረካውን መንፈሳዊ ትርጉም ከተለየ ታሪካዊ ማስረጃ ከሚፈልጉ አቤቱታዎች ለዩ።",
+          "የሕግ ክፍሎችን በቃል ኪዳንና በጥንታዊ ማኅበራዊ አውድ ውስጥ አንብቡ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EXO-S01",
+          "range": "EXO 3:1-15",
+          "title": "የሙሴ ጥሪ",
+          "observation": [
+            "ቦታውን፣ የተደጋገሙ ንግግሮችንና የሙሴን ምላሽ ይመልከቱ።",
+            "እግዚአብሔር የእስራኤልን መከራ ስለ ማየት፣ መስማትና ማወቅ የሚናገረውን ይዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ጥሪው የሚጀምረው እግዚአብሔር ለመከራ ትኩረት በመስጠት ለምንድን ነው?",
+            "መለኮታዊው ስም ለተልዕኮው ምን ያክላል?"
+          ],
+          "application": [
+            "የሌላ ሰውን መከራ ከመመለስዎ በፊት የት መስማት ያስፈልጋል?",
+            "ለማገልገል ሲጠሩ ምን ኃላፊነት ይኖራል?"
+          ]
+        },
+        {
+          "id": "EXO-S02",
+          "range": "EXO 12:1-28",
+          "title": "ፋሲካና ማስታወስ",
+          "observation": [
+            "ስለ ምግቡ፣ ስለ ቤተሰቡና ስለ ቀን መቁጠሪያው የተሰጡትን መመሪያዎች ይለዩ።",
+            "ስለ ማስታወስና ለቀጣዩ ትውልድ ስለ መናገር የተደጋገሙ ቃላትን ይመልከቱ።"
+          ],
+          "interpretation": [
+            "የጋራ ሥርዓት የሕዝብን ትውስታና ማንነት እንዴት ይቀርጻል?",
+            "ታሪኩ ለልጆች ለምን መነገር አለበት?"
+          ],
+          "application": [
+            "ማኅበረሰብዎ መዳንንና ምስጋናን እንዲያስታውስ ምን ልምዶች ይረዳሉ?",
+            "የእምነት ታሪኮችን በትክክልና በትርጉም እንዴት ማስተላለፍ ይቻላል?"
+          ]
+        },
+        {
+          "id": "EXO-S03",
+          "range": "EXO 19:1-8; 20:1-17",
+          "title": "ቃል ኪዳንና ትእዛዛት",
+          "observation": [
+            "የቃል ኪዳኑን ጥሪና የሕዝቡን ምላሽ ይዘርዝሩ።",
+            "ትእዛዛቱ አምልኮን፣ ግንኙነትንና ማኅበራዊ ባህሪን እንዴት እንደሚመለከቱ ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ከቃል ኪዳን ግዴታዎች በፊት መዳን ለምን ይቀድማል?",
+            "ትእዛዛቱ ምን ዓይነት ማኅበረሰብ ለመፍጠር ይፈልጋሉ?"
+          ],
+          "application": [
+            "ነፃነትን ከኃላፊነትና ከባልንጀራ እንክብካቤ ጋር እንዴት ማገናኘት ይቻላል?",
+            "የትኛው ትእዛዝ የማኅበረሰብዎን ልምድ ይፈትናል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EXO-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በሚነደው ቁጥቋጦ እግዚአብሔር ለሙሴ ምን ነገረው?",
+          "options": [
+            "የሕዝቤን መከራ አይቻለሁ",
+            "እስራኤልን ረስቻለሁ",
+            "ፈርዖን ንጹሕ ነው",
+            "ጉዞው ተጠናቋል"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "EXO 3:7-10"
+          ]
+        },
+        {
+          "id": "EXO-Q02",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ፈርዖንን የተጋፈጠውና እስራኤልን ከግብፅ ያወጣው ማን ነው?",
+          "options": [
+            "ኢያሱ",
+            "ሙሴ",
+            "ዳዊት",
+            "ኤልያስ"
+          ],
+          "correct_option_id": "B",
+          "references": [
+            "EXO 3:10; 12:31-42"
+          ]
+        },
+        {
+          "id": "EXO-Q03",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የፋሲካ መመሪያ ለቀጣዩ ትውልድ ሥርዓቱ ምን ማለት እንደሆነ መንገርን ያካትታል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "EXO 12:24-27"
+          ]
+        },
+        {
+          "id": "EXO-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "እስራኤል የቃል ኪዳን ትምህርትን በየትኛው ተራራ ተቀበለች?",
+          "options": [
+            "ቀርሜሎስ ተራራ",
+            "ሲና ተራራ",
+            "ጽዮን ተራራ",
+            "ታቦር ተራራ"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ሲና ተራራ የቃል ኪዳንና የሕግ መስጠት ቦታ ነው።",
+          "references": [
+            "EXO 19:1-8; 20:1-17"
+          ]
+        },
+        {
+          "id": "EXO-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የዘፀአት መጽሐፍ የእግዚአብሔር ክብር ድንኳኑን ሞልቶ በመግለጥ ይደመደማል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "EXO 40:34-38"
+          ]
+        }
+      ]
+    }
+  }
+}
