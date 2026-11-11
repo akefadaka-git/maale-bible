@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-JOS-v1",
+  "book": {
+    "usfm_id": "JOS",
+    "english_name": "Joshua",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-joshua",
+      "title": "Bible Study Guide: Joshua",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-joshua/",
+      "use": "Structure and literary overview"
+    },
+    {
+      "id": "sots-joshua",
+      "title": "Joshua",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/wiki/joshua",
+      "use": "Authorship, Deuteronomistic context and historical interpretation"
+    },
+    {
+      "id": "usccb-joshua",
+      "title": "The Book of Joshua",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/joshua/0",
+      "use": "Canonical outline and theological themes"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "Joshua narrates Israel’s entry into Canaan, the allocation of the land among the tribes, and covenant-renewal speeches at the end of Joshua’s life. The book connects the promise to the ancestors and the exodus with the responsibilities of life in the land.",
+        "authorship": "The book is named for Joshua and presents him as Moses’ successor, but it does not identify a single human author for the whole work. Its relationship to Deuteronomy, Judges, Samuel and Kings is important in scholarship; proposed stages of composition and historical reconstructions remain debated.",
+        "setting": "The narrative is set east and west of the Jordan during Israel’s entry into Canaan. Its accounts of settlement, warfare and land distribution are theological narratives as well as ancient historical traditions; archaeological and historical interpretations are not uniform.",
+        "audience_and_purpose": "The book calls Israel to remember divine faithfulness, live responsibly as a covenant people, and reject divided loyalty. It also explains the land traditions and the community’s tribal inheritance.",
+        "structure": [
+          {
+            "range": "1:1–5:12",
+            "heading": "Preparation and crossing",
+            "summary": "Joshua is commissioned; Israel prepares and crosses the Jordan."
+          },
+          {
+            "range": "6:1–12:24",
+            "heading": "Campaign narratives",
+            "summary": "The book recounts Jericho, Ai and campaigns across the land."
+          },
+          {
+            "range": "13:1–21:45",
+            "heading": "Land allotments",
+            "summary": "Territories and towns are assigned to the tribes."
+          },
+          {
+            "range": "22:1–24:33",
+            "heading": "Covenant and farewell",
+            "summary": "The eastern tribes return; Joshua calls Israel to covenant loyalty and dies."
+          }
+        ],
+        "themes": [
+          "Divine faithfulness to promises",
+          "Leadership and succession",
+          "Covenant loyalty and obedience",
+          "Land, inheritance and communal responsibility",
+          "Memory, worship and unity among the tribes"
+        ],
+        "key_people": [
+          "Joshua son of Nun",
+          "Rahab",
+          "Caleb",
+          "Eleazar",
+          "The twelve tribes of Israel"
+        ],
+        "key_passages": [
+          "JOS 1:1-9",
+          "JOS 2:1-21",
+          "JOS 3:1-17",
+          "JOS 6:1-27",
+          "JOS 24:1-28"
+        ],
+        "interpretive_care": [
+          "Do not present the conquest accounts as a simple modern military chronicle; explain their theological and literary features.",
+          "Historical and archaeological reconstructions of Israel’s emergence in Canaan are debated; avoid claiming that one model is universally established.",
+          "Read descriptions of warfare carefully and do not use them to justify violence against people today."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JOS-S01",
+          "range": "JOS 1:1-9",
+          "title": "Courage grounded in God’s presence",
+          "observation": [
+            "Identify the repeated commands and promises to Joshua."
+          ],
+          "interpretation": [
+            "How are courage, obedience and God’s presence connected?"
+          ],
+          "application": [
+            "Name one responsibility you can face with courage and integrity."
+          ]
+        },
+        {
+          "id": "JOS-S02",
+          "range": "JOS 2:1-21",
+          "title": "Rahab’s response and courageous trust",
+          "observation": [
+            "Trace Rahab’s decisions and the protection agreement."
+          ],
+          "interpretation": [
+            "What does Rahab understand about Israel’s God, and what risks does she take?"
+          ],
+          "application": [
+            "How can truthful courage protect people at risk?"
+          ]
+        },
+        {
+          "id": "JOS-S03",
+          "range": "JOS 24:14-28",
+          "title": "Choose whom you will serve",
+          "observation": [
+            "List Joshua’s call, the people’s response and the covenant actions."
+          ],
+          "interpretation": [
+            "Why does Joshua connect service with remembering what God has done?"
+          ],
+          "application": [
+            "What competing loyalties need to be reordered in your life?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JOS-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which leader succeeds Moses in the book of Joshua?",
+          "options": [
+            "Joshua",
+            "Aaron",
+            "Caleb",
+            "Eleazar"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Joshua; compare the cited passage for the narrative detail.",
+          "references": [
+            "JOS 1:1-2"
+          ]
+        },
+        {
+          "id": "JOS-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joshua ends with a covenant-renewal gathering at Shechem.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "JOS 24:1-28"
+          ]
+        },
+        {
+          "id": "JOS-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who helps the Israelite spies in Jericho?",
+          "options": [
+            "Rahab",
+            "Deborah",
+            "Ruth",
+            "Hannah"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Rahab; compare the cited passage for the narrative detail.",
+          "references": [
+            "JOS 2:1-21"
+          ]
+        },
+        {
+          "id": "JOS-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which river do the Israelites cross in Joshua 3?",
+          "options": [
+            "The Jordan",
+            "The Nile",
+            "The Euphrates",
+            "The Tigris"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is The Jordan; compare the cited passage for the narrative detail.",
+          "references": [
+            "JOS 3:1-17"
+          ]
+        },
+        {
+          "id": "JOS-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joshua presents land allotment among the tribes as a major part of the book.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "JOS 13:1-21:45"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ኢያሱ — ተስፋ፣ ርስትና የቃል ኪዳን ታማኝነት",
+        "summary": "ኢያሱ መጽሐፍ እስራኤል ወደ ከነዓን መግባቷን፣ ምድሪቱ ለነገዶች መከፋፈሏንና በኢያሱ የሕይወት መጨረሻ የተነገሩ የቃል ኪዳን ማሳሰቢያዎችን ይተርካል። የአባቶችን ተስፋና የኤግዚትን ታሪክ ከምድሪቱ ውስጥ ካለው የቃል ኪዳን ኃላፊነት ጋር ያገናኛል።",
+        "authorship": "መጽሐፉ በኢያሱ ስም ተጠርቶ እርሱን የሙሴ ተተኪ አድርጎ ያቀርባል፤ ሙሉ መጽሐፉን የጻፈውን አንድ ሰው ግን አይጠቅስም። ከዘዳግም፣ መሳፍንት፣ ሳሙኤልና ነገሥታት ጋር ያለው ግንኙነት በምሁራን ይወያያል፤ የጽሑፉ አፈጣጠርና ታሪካዊ ትርጓሜ ጉዳዮች አሁንም ክርክር አላቸው።",
+        "setting": "ትረካው ከዮርዳኖስ ምሥራቅና ምዕራብ በከነዓን ውስጥ የእስራኤልን መግባት ይመለከታል። የሰፈራ፣ የጦርነትና የምድር ክፍፍል ታሪኮች የጥንት ትውፊቶችንና ሥነ መለኮታዊ አቀራረብን ያካትታሉ።",
+        "audience_and_purpose": "መጽሐፉ እስራኤል የእግዚአብሔርን ታማኝነት እንድታስታውስ፣ በቃል ኪዳን ሕዝብነቷ በኃላፊነት እንድትኖርና ከተከፋፈለ ታማኝነት እንድትርቅ ይጠራል።",
+        "structure": [
+          {
+            "range": "1:1–5:12",
+            "heading": "ዝግጅትና ዮርዳኖስን መሻገር",
+            "summary": "ኢያሱ ይሾማል፤ ሕዝቡም ዮርዳኖስን ለመሻገር ይዘጋጃል።"
+          },
+          {
+            "range": "6:1–12:24",
+            "heading": "የዘመቻ ትረካዎች",
+            "summary": "መጽሐፉ ስለ ኢያሪኮ፣ ጋይና ሌሎች ዘመቻዎች ይተርካል።"
+          },
+          {
+            "range": "13:1–21:45",
+            "heading": "የምድር ክፍፍል",
+            "summary": "ለነገዶች የሚሆኑ ምድሮችና ከተሞች ይመደባሉ።"
+          },
+          {
+            "range": "22:1–24:33",
+            "heading": "ቃል ኪዳንና ስንብት",
+            "summary": "ኢያሱ ሕዝቡን ወደ ታማኝነት ይጠራል፤ ከዚያም ይሞታል።"
+          }
+        ],
+        "themes": [
+          "እግዚአብሔር ለተስፋው ታማኝ መሆኑ",
+          "አመራርና ተተኪነት",
+          "የቃል ኪዳን ታማኝነትና መታዘዝ",
+          "ርስትና የማኅበረሰብ ኃላፊነት",
+          "ማስታወስ፣ አምልኮና አንድነት"
+        ],
+        "key_people": [
+          "የነዌ ልጅ ኢያሱ",
+          "ረዓብ",
+          "ካሌብ",
+          "አልዓዛር",
+          "የእስራኤል ነገዶች"
+        ],
+        "key_passages": [
+          "ኢያሱ 1:1-9",
+          "ኢያሱ 2:1-21",
+          "ኢያሱ 3:1-17",
+          "ኢያሱ 6:1-27",
+          "ኢያሱ 24:1-28"
+        ],
+        "interpretive_care": [
+          "የወረራ ትረካዎችን እንደ ዘመናዊ የጦርነት ዘገባ ብቻ አታቅርቡ፤ ሥነ መለኮታዊና ሥነ ጽሑፋዊ ባህሪያቸውን ያብራሩ።",
+          "በከነዓን የእስራኤል መነሳት ላይ ታሪካዊና አርኪዮሎጂያዊ ትርጓሜዎች ይለያያሉ።",
+          "የጦርነት ገለጻዎችን በጥንቃቄ አንብቡ፤ ዛሬ በሰዎች ላይ ጥቃትን ለማጽደቅ አትጠቀሙባቸው።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "JOS-S01",
+          "range": "JOS 1:1-9",
+          "title": "በእግዚአብሔር መገኘት የሚመጣ ድፍረት",
+          "observation": [
+            "ለኢያሱ የተደጋገሙትን ትእዛዛትና ተስፋዎች ለዩ።"
+          ],
+          "interpretation": [
+            "ድፍረት፣ መታዘዝና የእግዚአብሔር መገኘት እንዴት ይያያዛሉ?"
+          ],
+          "application": [
+            "በድፍረትና በቅንነት ልትወጡት የምትችሉትን አንድ ኃላፊነት ጥቀሱ።"
+          ]
+        },
+        {
+          "id": "JOS-S02",
+          "range": "JOS 2:1-21",
+          "title": "የረዓብ ምላሽና የእምነት ድፍረት",
+          "observation": [
+            "የረዓብን ውሳኔዎችና የጥበቃ ስምምነቱን ተከታተሉ።"
+          ],
+          "interpretation": [
+            "ረዓብ ስለ እስራኤል አምላክ ምን ተረዳች? ምን አደጋ ተቀበለች?"
+          ],
+          "application": [
+            "እውነተኛ ድፍረት በአደጋ ውስጥ ያሉ ሰዎችን እንዴት ሊጠብቅ ይችላል?"
+          ]
+        },
+        {
+          "id": "JOS-S03",
+          "range": "JOS 24:14-28",
+          "title": "ማንን እንደምታገለግሉ ምረጡ",
+          "observation": [
+            "የኢያሱን ጥሪ፣ የሕዝቡን ምላሽና የቃል ኪዳኑን ድርጊቶች ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ኢያሱ አገልግሎትን እግዚአብሔር ከሠራው ሥራ ማስታወስ ጋር ለምን ያገናኛል?"
+          ],
+          "application": [
+            "በሕይወታችሁ ውስጥ እንደገና ማስተካከል የሚያስፈልጋቸው የተወዳዳሪ ታማኝነቶች ምንድን ናቸው?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "JOS-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በኢያሱ መጽሐፍ ሙሴን የተካው መሪ ማን ነው?",
+          "options": [
+            "ኢያሱ",
+            "አሮን",
+            "ካሌብ",
+            "አልዓዛር"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ኢያሱ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JOS 1:1-2"
+          ]
+        },
+        {
+          "id": "JOS-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ኢያሱ መጽሐፍ በሴኬም በተደረገ የቃል ኪዳን እድሳት ስብሰባ ይጠናቀቃል።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "JOS 24:1-28"
+          ]
+        },
+        {
+          "id": "JOS-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በኢያሪኮ የእስራኤልን ሰላዮች የረዳችው ማን ናት?",
+          "options": [
+            "ረዓብ",
+            "ዴቦራ",
+            "ሩት",
+            "ሐና"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ረዓብ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JOS 2:1-21"
+          ]
+        },
+        {
+          "id": "JOS-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በኢያሱ 3 እስራኤላውያን የተሻገሩት ወንዝ የትኛው ነው?",
+          "options": [
+            "ዮርዳኖስ",
+            "ናይል",
+            "ኤፍራጥስ",
+            "ጤግሮስ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ዮርዳኖስ ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "JOS 3:1-17"
+          ]
+        },
+        {
+          "id": "JOS-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ኢያሱ መጽሐፍ ለነገዶች የምድር ክፍፍልን እንደ ዋና ክፍል ያቀርባል።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "JOS 13:1-21:45"
+          ]
+        }
+      ]
+    }
+  }
+}
