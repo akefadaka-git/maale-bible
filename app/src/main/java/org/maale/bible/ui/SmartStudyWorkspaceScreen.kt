@@ -184,7 +184,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                                 database.addJournalNote(UUID.randomUUID().toString(), body, now)
                                             } else {
                                                 check(database.updateJournalNote(targetId, body, now)) {
-                                                    stringResource(R.string.study_note_missing)
+                                                    noteMissingText
                                                 }
                                             }
                                             database.journalNotes()
@@ -240,7 +240,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                             onClick = {
                                                 runDatabase({ database ->
                                                     check(database.deleteJournalNote(note.id)) {
-                                                        stringResource(R.string.study_note_missing)
+                                                        noteMissingText
                                                     }
                                                     database.journalNotes()
                                                 }) {
