@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-1SA-v1",
+  "book": {
+    "usfm_id": "1SA",
+    "english_name": "1 Samuel",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-1samuel",
+      "title": "1 Samuel",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/1-samuel/",
+      "use": "Book structure and main figures"
+    },
+    {
+      "id": "esv-samuel",
+      "title": "Introduction to 1–2 Samuel",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/",
+      "use": "Authorship, date and themes"
+    },
+    {
+      "id": "biblesociety-1samuel",
+      "title": "1 Samuel Bible Book Club",
+      "publisher": "Bible Society",
+      "url": "https://www.biblesociety.org.uk/content/bible_book_club/book_downloads/1-samuel.pdf",
+      "use": "Historical and literary context"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "1 Samuel traces Israel’s transition from the period of the judges to monarchy through the lives of Hannah, Samuel, Saul and David. It examines prophetic authority, the people’s request for a king, the responsibilities of kingship, Saul’s decline and David’s emergence.",
+        "authorship": "The book does not identify its author. Jewish tradition associates parts of Samuel with Samuel, Nathan and Gad, but the text itself does not establish this. 1 and 2 Samuel were originally one literary work; their composition and dates are subjects of scholarly discussion.",
+        "setting": "The narrative moves among Shiloh, Ramah, Gibeah, the territory of the Philistines and other parts of the central hill country during the emergence of Israel’s monarchy.",
+        "audience_and_purpose": "The book evaluates leadership under God’s sovereignty. It asks what kind of king Israel seeks, shows that rulers remain accountable, and contrasts Saul’s failures with David’s calling without portraying David as flawless.",
+        "structure": [
+          {
+            "range": "1:1–7:17",
+            "heading": "Samuel’s birth and leadership",
+            "summary": "Hannah’s prayer, Samuel’s calling, the ark narrative and Samuel’s public leadership."
+          },
+          {
+            "range": "8:1–12:25",
+            "heading": "The request for a king",
+            "summary": "Israel asks for a king; Saul is selected and publicly confirmed."
+          },
+          {
+            "range": "13:1–15:35",
+            "heading": "Saul’s disobedience",
+            "summary": "Saul’s choices lead to prophetic rebuke and rejection."
+          },
+          {
+            "range": "16:1–20:42",
+            "heading": "David’s rise",
+            "summary": "David is anointed, faces Goliath and enters Saul’s court; conflict grows."
+          },
+          {
+            "range": "21:1–31:13",
+            "heading": "David pursued and Saul’s end",
+            "summary": "David survives as a fugitive while Saul’s reign ends at Gilboa."
+          }
+        ],
+        "themes": [
+          "God’s sovereignty over human leadership",
+          "Prayer, calling and prophetic witness",
+          "The moral responsibilities of kingship",
+          "Obedience, pride and accountability",
+          "The contrast between Saul and David",
+          "God’s attention to the overlooked"
+        ],
+        "key_people": [
+          "Hannah",
+          "Samuel",
+          "Eli",
+          "Saul",
+          "Jonathan",
+          "David",
+          "Goliath"
+        ],
+        "key_passages": [
+          "1SA 1:1-28",
+          "1SA 3:1-21",
+          "1SA 8:1-22",
+          "1SA 15:10-23",
+          "1SA 16:1-13",
+          "1SA 17:1-50"
+        ],
+        "interpretive_care": [
+          "The book contains complex and sometimes differing perspectives on monarchy; do not flatten them into a simple claim that kingship is wholly approved or wholly rejected.",
+          "Samuel’s authorship is traditional, not explicitly established by the book; identify later traditions as traditions.",
+          "David’s anointing and early success do not make every later action morally exemplary; keep narrative description and ethical evaluation distinct."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1SA-S01",
+          "range": "1SA 1:9-20",
+          "title": "Hannah’s prayer and faithful persistence",
+          "observation": [
+            "Identify Hannah’s grief, prayer, vow and response after Eli speaks."
+          ],
+          "interpretation": [
+            "How does the passage portray prayer without treating God as a transaction?"
+          ],
+          "application": [
+            "How can you bring deep pain honestly into prayer and seek support?"
+          ]
+        },
+        {
+          "id": "1SA-S02",
+          "range": "1SA 8:1-22",
+          "title": "The request for a king",
+          "observation": [
+            "List the elders’ request and Samuel’s warning about royal power."
+          ],
+          "interpretation": [
+            "What motives and risks are present in the demand to be like other nations?"
+          ],
+          "application": [
+            "What safeguards should protect a community from misuse of authority?"
+          ]
+        },
+        {
+          "id": "1SA-S03",
+          "range": "1SA 15:10-23",
+          "title": "Obedience and accountability",
+          "observation": [
+            "Compare Saul’s explanation with Samuel’s response."
+          ],
+          "interpretation": [
+            "Why does the passage reject religious performance as a substitute for obedience?"
+          ],
+          "application": [
+            "Where do you need to accept correction rather than defend an excuse?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1SA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who was Samuel’s mother?",
+          "options": [
+            "Hannah",
+            "Naomi",
+            "Deborah",
+            "Michal"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Hannah; compare the cited passage for the narrative detail.",
+          "references": [
+            "1SA 1:1-20"
+          ]
+        },
+        {
+          "id": "1SA-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The people ask Samuel for a king like the other nations have.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "1SA 8:4-22"
+          ]
+        },
+        {
+          "id": "1SA-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is Israel’s first king in 1 Samuel?",
+          "options": [
+            "Saul",
+            "David",
+            "Solomon",
+            "Jonathan"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is Saul; compare the cited passage for the narrative detail.",
+          "references": [
+            "1SA 10:1-24"
+          ]
+        },
+        {
+          "id": "1SA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who defeats Goliath?",
+          "options": [
+            "David",
+            "Saul",
+            "Samuel",
+            "Jonathan"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The correct answer is David; compare the cited passage for the narrative detail.",
+          "references": [
+            "1SA 17:1-50"
+          ]
+        },
+        {
+          "id": "1SA-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book ends with Saul and his sons dying at Mount Gilboa.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The statement agrees with the cited passage.",
+          "references": [
+            "1SA 31:1-13"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "1 ሳሙኤል — ትንቢታዊ አመራር፣ ንጉሥነትና የዳዊት መነሳት",
+        "summary": "1 ሳሙኤል መጽሐፍ በሐና፣ በሳሙኤል፣ በሳኦልና በዳዊት ሕይወት የእስራኤልን ከመሳፍንት ዘመን ወደ ንጉሥነት መሸጋገር ይተርካል። ትንቢታዊ ሥልጣንን፣ የሕዝቡን ንጉሥ የመጠየቅ ፍላጎት፣ የንጉሥነት ኃላፊነትን፣ የሳኦልን ውድቀትና የዳዊትን መነሳት ይመረምራል።",
+        "authorship": "መጽሐፉ ጸሐፊውን አይጠቅስም። የአይሁድ ትውፊት አንዳንድ ክፍሎችን ከሳሙኤል፣ ከናታንና ከጋድ ጋር ያያይዛል፤ ጽሑፉ ራሱ ግን ይህን አያረጋግጥም። 1ኛና 2ኛ ሳሙኤል በመጀመሪያ አንድ የሥነ ጽሑፍ ሥራ ነበሩ፤ አፈጣጠራቸውና ዘመናቸው በምሁራን ይወያያል።",
+        "setting": "ትረካው በእስራኤል ንጉሥነት መነሳት ዘመን በሴሎ፣ በራማ፣ በጊብዓ፣ በፍልስጤማውያን ክልልና በሌሎች ቦታዎች ይንቀሳቀሳል።",
+        "audience_and_purpose": "መጽሐፉ አመራርን በእግዚአብሔር ሉዓላዊነት ሥር ይመዝናል። እስራኤል ምን ዓይነት ንጉሥ እንደምትፈልግ ይጠይቃል፤ ገዢዎችም ተጠያቂ መሆናቸውን ያሳያል።",
+        "structure": [
+          {
+            "range": "1:1–7:17",
+            "heading": "የሳሙኤል ልደትና አመራር",
+            "summary": "የሐና ጸሎት፣ የሳሙኤል ጥሪ፣ የታቦቱ ታሪክና የሳሙኤል አገልግሎት።"
+          },
+          {
+            "range": "8:1–12:25",
+            "heading": "ንጉሥ የመጠየቅ ጥያቄ",
+            "summary": "እስራኤል ንጉሥ ትጠይቃለች፤ ሳኦልም ይመረጣል።"
+          },
+          {
+            "range": "13:1–15:35",
+            "heading": "የሳኦል አለመታዘዝ",
+            "summary": "የሳኦል ውሳኔዎች ወደ ትንቢታዊ ተግሣጽና መከልከል ያመራሉ።"
+          },
+          {
+            "range": "16:1–20:42",
+            "heading": "የዳዊት መነሳት",
+            "summary": "ዳዊት ይቀባል፣ ጎልያድን ይጋፈጣል፣ ወደ ሳኦል ቤት ይገባል።"
+          },
+          {
+            "range": "21:1–31:13",
+            "heading": "ዳዊት ሲሸሽና የሳኦል መጨረሻ",
+            "summary": "ዳዊት ሲሸሽ ይተርፋል፤ የሳኦል ንግሥናም በጊልቦዓ ይጠናቀቃል።"
+          }
+        ],
+        "themes": [
+          "በሰው አመራር ላይ የእግዚአብሔር ሉዓላዊነት",
+          "ጸሎት፣ ጥሪና ትንቢታዊ ምስክርነት",
+          "የንጉሥነት ሥነ ምግባራዊ ኃላፊነት",
+          "መታዘዝ፣ ትዕቢትና ተጠያቂነት",
+          "በሳኦልና በዳዊት መካከል ያለው ልዩነት",
+          "እግዚአብሔር ለተረሱ ሰዎች ያለው ትኩረት"
+        ],
+        "key_people": [
+          "ሐና",
+          "ሳሙኤል",
+          "ኤሊ",
+          "ሳኦል",
+          "ዮናታን",
+          "ዳዊት",
+          "ጎልያድ"
+        ],
+        "key_passages": [
+          "1ሳሙ 1:1-28",
+          "1ሳሙ 3:1-21",
+          "1ሳሙ 8:1-22",
+          "1ሳሙ 15:10-23",
+          "1ሳሙ 16:1-13",
+          "1ሳሙ 17:1-50"
+        ],
+        "interpretive_care": [
+          "መጽሐፉ ስለ ንጉሥነት የተለያዩ አመለካከቶችን ይዟል፤ ንጉሥነት ሙሉ በሙሉ ተቀባይነት አለው ወይም ሙሉ በሙሉ ተከልክሏል ብለው አታቅርቡ።",
+          "የሳሙኤል ደራሲነት ትውፊታዊ ነው፤ በመጽሐፉ በግልጽ አልተረጋገጠም።",
+          "የዳዊት ቅባትና የመጀመሪያ ስኬት እያንዳንዱ ድርጊቱ ሥነ ምግባራዊ ምሳሌ ነው ማለት አይደለም።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "1SA-S01",
+          "range": "1SA 1:9-20",
+          "title": "የሐና ጸሎትና ጽኑ ታማኝነት",
+          "observation": [
+            "የሐናን ሐዘን፣ ጸሎት፣ ቃል ኪዳንና ኤሊ ከተናገረ በኋላ ያደረገችውን ለዩ።"
+          ],
+          "interpretation": [
+            "ምንባቡ ጸሎትን እንደ ልውውጥ ሳያቀርብ እንዴት ይገልጻል?"
+          ],
+          "application": [
+            "ጥልቅ ሐዘናችሁን በቅንነት ወደ ጸሎት እንዴት ልታመጡና ድጋፍ ልትፈልጉ ትችላላችሁ?"
+          ]
+        },
+        {
+          "id": "1SA-S02",
+          "range": "1SA 8:1-22",
+          "title": "ንጉሥ የመጠየቅ ጥያቄ",
+          "observation": [
+            "የሽማግሌዎቹን ጥያቄና ሳሙኤል ስለ ንጉሣዊ ሥልጣን የሰጠውን ማስጠንቀቂያ ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "እንደ ሌሎች አሕዛብ ለመሆን በቀረበው ጥያቄ ውስጥ ምን ዓላማዎችና አደጋዎች አሉ?"
+          ],
+          "application": [
+            "ማኅበረሰብን ከሥልጣን በደል ለመጠበቅ ምን መከላከያዎች ያስፈልጋሉ?"
+          ]
+        },
+        {
+          "id": "1SA-S03",
+          "range": "1SA 15:10-23",
+          "title": "መታዘዝና ተጠያቂነት",
+          "observation": [
+            "የሳኦልን ማብራሪያ ከሳሙኤል ምላሽ ጋር አወዳድሩ።"
+          ],
+          "interpretation": [
+            "ምንባቡ ሃይማኖታዊ ሥርዓትን በመታዘዝ ምትክ ለምን ይከለክላል?"
+          ],
+          "application": [
+            "ሰበብ ከማቅረብ ይልቅ ተግሣጽ መቀበል የሚያስፈልጋችሁ የት ነው?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "1SA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የሳሙኤል እናት ማን ናት?",
+          "options": [
+            "ሐና",
+            "ኑኃሚን",
+            "ዴቦራ",
+            "ሚካል"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ሐና ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "1SA 1:1-20"
+          ]
+        },
+        {
+          "id": "1SA-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ሕዝቡ እንደ ሌሎች አሕዛብ ያለ ንጉሥ ከሳሙኤል ጠየቁ።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "1SA 8:4-22"
+          ]
+        },
+        {
+          "id": "1SA-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በ1 ሳሙኤል የእስራኤል የመጀመሪያ ንጉሥ ማን ነው?",
+          "options": [
+            "ሳኦል",
+            "ዳዊት",
+            "ሰሎሞን",
+            "ዮናታን"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ሳኦል ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "1SA 10:1-24"
+          ]
+        },
+        {
+          "id": "1SA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ጎልያድን ያሸነፈው ማን ነው?",
+          "options": [
+            "ዳዊት",
+            "ሳኦል",
+            "ሳሙኤል",
+            "ዮናታን"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ትክክለኛው መልስ ዳዊት ነው፤ የታሪኩን ዝርዝር በተጠቀሰው ምንባብ ያረጋግጡ።",
+          "references": [
+            "1SA 17:1-50"
+          ]
+        },
+        {
+          "id": "1SA-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "መጽሐፉ በጊልቦዓ ተራራ ላይ ሳኦልና ልጆቹ በሞቱበት ታሪክ ይጠናቀቃል።",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ይህ አባባል ከተጠቀሰው ምንባብ ጋር ይስማማል።",
+          "references": [
+            "1SA 31:1-13"
+          ]
+        }
+      ]
+    }
+  }
+}
