@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="learning_tab_overview">Introduction</string>
+    <string name="learning_tab_inductive">Inductive study</string>
+    <string name="learning_tab_quiz">Quiz</string>
+    <string name="learning_back_to_books">All books</string>
+    <string name="learning_book_metadata">%1$s · Canonical position %2$d</string>
+    <string name="learning_centre_title">Bible book learning centre</string>
+    <string name="learning_centre_description">A dedicated place for the book introduction, historical context, outline, themes, guided study and knowledge checks.</string>
+    <string name="learning_bilingual_status">English and Amharic content tracks · source and editorial review pending</string>
+    <string name="learning_introduction_title">Book introduction · English and Amharic</string>
+    <string name="learning_introduction_pending">A book-specific introduction will be published here in both languages after source verification and editorial review. No generic text is presented as a researched introduction.</string>
+    <string name="learning_background_title">Author, date and historical setting</string>
+    <string name="learning_background_fields">Author or authorship position, composition date or range, historical setting, original audience and relevant uncertainty will be documented with sources.</string>
+    <string name="learning_structure_title">Book structure and chapter outline</string>
+    <string name="learning_structure_fields">A chapter-by-chapter outline, literary structure and major movements will be added from reviewed study sources.</string>
+    <string name="learning_themes_title">Main themes and key teachings</string>
+    <string name="learning_themes_fields">Book-specific themes, theological topics, key people and events will be linked to verified passages.</string>
+    <string name="learning_related_title">Key passages and cross-references</string>
+    <string name="learning_related_fields">References will use canonical book, chapter and verse identifiers and will resolve only against an installed, verified Bible edition.</string>
+    <string name="learning_open_reader">Open this book in the Bible reader</string>
+    <string name="learning_inductive_intro">Study each passage through Observation, Interpretation and Application. The prompts below are a reusable study method; book-specific guides remain under editorial preparation.</string>
+    <string name="learning_observation_title">1 · Observation — What does the text say?</string>
+    <string name="learning_observation_prompts">Who is involved? What happens? Where and when? What words, ideas or actions are repeated? What does the passage explicitly state?</string>
+    <string name="learning_interpretation_title">2 · Interpretation — What does the text mean?</string>
+    <string name="learning_interpretation_prompts">What is the literary and historical context? What did the passage communicate to its first audience? How do its structure and surrounding passages shape its meaning?</string>
+    <string name="learning_application_title">3 · Application — How should I respond?</string>
+    <string name="learning_application_prompts">What truth should I trust? What attitude or action should change? What should I practise, avoid, repair or pray about? How can I apply this faithfully in my context?</string>
+    <string name="learning_study_guide_pending_title">Book-specific inductive study guide</string>
+    <string name="learning_study_guide_pending">Chapter guides, discussion questions, reflection exercises and group-study material will be added after the book content and references are verified.</string>
+    <string name="learning_quiz_title">Book knowledge assessment</string>
+    <string name="learning_quiz_pending">English and Amharic quizzes will include multiple choice, true or false, completion, matching, chapter comprehension and book-wide review. Each answer will include an explanation and a verified scripture reference.</string>
+    <string name="learning_quiz_unavailable">Quiz not yet available</string>
+    <string name="learning_provenance_notice">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
+</resources>
