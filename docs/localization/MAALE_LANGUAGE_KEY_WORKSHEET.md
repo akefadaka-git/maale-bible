@@ -81,16 +81,16 @@
 | `reader_collection` | The Scripture collection | የቅዱሳት መጻሕፍት ስብስብ | ጌኤዦ ማፃኣፖዪዳ ዓኣ ቡኪንቴ ማፃኣፔ |
 | `reader_canonical_book_id` | Canonical book ID | መደበኛ የመጽሐፍ መለያ | ማፃኣፖ ዱማሳ ባኮ |
 | `reader_focus` | Focus | ትኩረት | ዒኖና ማሊፆና ጌሢሢ |
-| `reader_content_unavailable` | Verified Maale scripture text is not available in this build yet. | የተረጋገጠ የማዓሌ ቅዱስ መጽሐፍ ጽሑፍ በዚህ ስሪት ገና አይገኝም። | **Please provide:** |
-| `reader_content_not_loaded` | Content not loaded | ይዘቱ አልተጫነም | **Please provide:** |
-| `reader_chapter_navigation` | Chapter navigation | የምዕራፍ ማሰሻ | **Please provide:** |
+| `reader_content_unavailable` | Verified Maale scripture text is not available in this build yet. | የተረጋገጠ የማዓሌ ቅዱስ መጽሐፍ ጽሑፍ በዚህ ስሪት ገና አይገኝም። | ማኣሌ ሙኡቺና ጊኢጊንቴ ማፃኣፔ ሃኖ ማዢንቶዩዳ ባኣሴ |
+| `reader_content_not_loaded` | Content not loaded | ይዘቱ አልተጫነም | ጫኒንቴ ባኣዚ ባኣሢሮ ጴዹዋሴ። |
+| `reader_chapter_navigation` | Chapter navigation | የምዕራፍ ማሰሻ | ዓይሢ ኮዖያ |
 
 ## 5. Bible library and downloads
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
-| `library_title` | Bible library | የመጽሐፍ ቅዱስ ቤተ መጻሕፍት | **Please provide:** |
-| `library_choose_editions` | Choose your editions | እትሞችዎን ይምረጡ | **Please provide:** |
+| `library_title` | Bible library | የመጽሐፍ ቅዱስ ቤተ መጻሕፍት | ጌኤዦ ማፃኣፖኮ ማፃኣፔ ማኣሪ |
+| `library_choose_editions` | Choose your editions | እትሞችዎን ይምረጡ | ሂቴሜቶ ዶኦሬ |
 | `library_open_license_sources` | Open-license sources | ክፍት ፈቃድ ያላቸው ምንጮች | **Please provide:** |
 | `library_review_before_install` | Review before installation | ከመጫንዎ በፊት ይገምግሙ | **Please provide:** |
 | `library_review_required` | Review required | ግምገማ ያስፈልጋል | **Please provide:** |
@@ -154,7 +154,7 @@
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following fifty entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, and `search_error`, `language_fallback_notice`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, and `reader_focus`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following fifty-five entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, and `search_error`, `language_fallback_notice`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, and `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, and `library_choose_editions`.
 
 Recommended reply format:
 
@@ -167,4 +167,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** fifty Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, and `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `language_fallback_notice`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, and `reader_focus`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** fifty-five Maale UI labels have been supplied by the Owner and added to the Maale Android resource file: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, and `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, and `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `language_fallback_notice`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, and `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, and `library_choose_editions`. Other Maale labels remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
