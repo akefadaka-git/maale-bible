@@ -109,4 +109,9 @@
     <string name="account_password">ዓኣቺንቴ ቃኣላ</string>
     <string name="account_submit">ዴንዴ</string>
     <string name="account_otp">ፒዜ ማዒፆ ዔርዛ ኮዴ</string>
+    <string name="account_title">ኔኤና ዱማሳ ሱንሢ</string>
+    <string name="account_guest_first">ሾኦቺ ማዒ ናባባኒ ዳንዳኣኔ። ኔና ዱማሳ ሱንሢ ቡሊሢ ጊዴ ኮይሳያቱዋሴ።</string>
+    <string name="account_service_unavailable_title">ዱማሳ ሱንፃ ካኣሚባኣሴ</string>
+    <string name="account_identifier">ፃቃሚንታ ሱንሢ ሃንጎ ሲልኬ ቁፁሬ</string>
+    <string name="account_continue_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
 </resources>
