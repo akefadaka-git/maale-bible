@@ -51,7 +51,8 @@ import java.util.concurrent.atomic.AtomicReference
 
 private enum class StudySection(val titleRes: Int) {
     NOTES(R.string.study_notes), BOOKMARKS(R.string.study_bookmarks),
-    HIGHLIGHTS(R.string.study_highlights), COLLECTIONS(R.string.study_collections)
+    HIGHLIGHTS(R.string.study_highlights), COLLECTIONS(R.string.study_collections),
+    COMMENTS(R.string.study_comments)
 }
 
 /** Persistent local journal. Database operations are serialized off the Compose main thread. */
@@ -152,6 +153,9 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         StudyTab(StudySection.HIGHLIGHTS, section == StudySection.HIGHLIGHTS, Modifier.weight(1f)) { section = StudySection.HIGHLIGHTS }
                         StudyTab(StudySection.COLLECTIONS, section == StudySection.COLLECTIONS, Modifier.weight(1f)) { section = StudySection.COLLECTIONS }
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        StudyTab(StudySection.COMMENTS, section == StudySection.COMMENTS, Modifier.weight(1f)) { section = StudySection.COMMENTS }
                     }
                 }
             }
@@ -286,6 +290,11 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                     stringResource(R.string.study_collections),
                     stringResource(R.string.study_collections_description),
                     stringResource(R.string.study_collection_storage_unavailable).uppercase()
+                )
+                StudySection.COMMENTS -> LockedStudyFeature(
+                    stringResource(R.string.study_comments),
+                    stringResource(R.string.study_comments_description),
+                    stringResource(R.string.study_comments_locked).uppercase()
                 )
             }
 
