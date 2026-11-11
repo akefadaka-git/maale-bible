@@ -141,25 +141,25 @@
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
 | `account_open` | Account | መለያ | ኔና ዱማሶ ባኮ |
-| `account_title` | Your account | የእርስዎ መለያ | **Please provide:** |
-| `account_guest_first` | Reading remains free to access as a guest. An account is optional. | እንደ እንግዳ ሆነው ማንበብ ይችላሉ። መለያ መፍጠር ግዴታ አይደለም። | **Please provide:** |
-| `account_service_unavailable_title` | Account service not connected | የመለያ አገልግሎት አልተገናኘም | **Please provide:** |
+| `account_title` | Your account | የእርስዎ መለያ | ኔኤና ዱማሳ ሱንሢ |
+| `account_guest_first` | Reading remains free to access as a guest. An account is optional. | እንደ እንግዳ ሆነው ማንበብ ይችላሉ። መለያ መፍጠር ግዴታ አይደለም። | ሾኦቺ ማዒ ናባባኒ ዳንዳኣኔ። ኔና ዱማሳ ሱንሢ ቡሊሢ ጊዴ ኮይሳያቱዋሴ። |
+| `account_service_unavailable_title` | Account service not connected | የመለያ አገልግሎት አልተገናኘም | ዱማሳ ሱንፃ ካኣሚባኣሴ |
 | `account_login` | Log in | ግባ | ኔና ዱማሳ ባኮና ጌሌ |
 | `account_register` | Register | ተመዝገብ | ማዝጋቢንቴ |
-| `account_identifier` | Username or mobile number | የተጠቃሚ ስም ወይም ስልክ ቁጥር | **Please provide:** |
+| `account_identifier` | Username or mobile number | የተጠቃሚ ስም ወይም ስልክ ቁጥር | ፃቃሚንታ ሱንሢ ሃንጎ ሲልኬ ቁፁሬ |
 | `account_guest` | Continue as guest | እንደ እንግዳ ሆነው ይቀጥሉ | ሾኦቺ ማዒ ፃቃሚንቴ |
 | `account_username` | Username | የተጠቃሚ ስም | ፃቃሚንታ ሱንፆ |
 | `account_mobile` | Mobile number | የሞባይል ቁጥር | ሲልኬ ቁፁሬ |
 | `account_submit` | Continue | ቀጥል | ዴንዴ |
 | `account_otp` | Verification code | የማረጋገጫ ኮድ | ፒዜ ማዒፆ ዔርዛ ኮዴ |
 | `account_password` | Password | የይለፍ ቃል | ዓኣቺንቴ ቃኣላ |
-| `account_continue_guest` | Continue reading as guest | እንደ እንግዳ ሆነው ማንበብ ይቀጥሉ | **Please provide:** |
+| `account_continue_guest` | Continue reading as guest | እንደ እንግዳ ሆነው ማንበብ ይቀጥሉ | ሾኦቺ ማዒ ፃቃሚንቴ |
 
 ---
 
 ## How to send Maale wording
 
-Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following 98 entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `language_fallback_notice`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, `library_choose_editions`, `library_open_license_sources`, `library_review_before_install`, `library_review_required`, `library_partial`, `library_open_source`, `library_view_source_license`, `library_download_package`, `listen_heading`, `listen_now_playing`, `listen_audio_not_loaded`, `listen_no_recording`, `listen_play_unavailable`, `listen_library`, `listen_library_empty`, `listen_offline`, `listen_downloads_unavailable`, `study_your_space`, `study_deeper`, `study_private_workspace`, `study_notes`, `study_bookmarks`, `study_highlights`, `study_collections`, `study_reflection_notes`, `study_capture_thought`, `study_new_note`, `study_edit_note`, `study_write_thought`, `study_saved_privately`, `study_save`, `study_cancel`, `study_delete`, `study_refresh`, `study_empty_notes`, `account_open`, `account_login`, `account_register`, `account_guest`, `account_username`, `account_mobile`, `account_submit`, `account_otp`, `account_password`.
+Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following 103 entries have already been supplied and recorded: `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `language_fallback_notice`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, `library_choose_editions`, `library_open_license_sources`, `library_review_before_install`, `library_review_required`, `library_partial`, `library_open_source`, `library_view_source_license`, `library_download_package`, `listen_heading`, `listen_now_playing`, `listen_audio_not_loaded`, `listen_no_recording`, `listen_play_unavailable`, `listen_library`, `listen_library_empty`, `listen_offline`, `listen_downloads_unavailable`, `study_your_space`, `study_deeper`, `study_private_workspace`, `study_notes`, `study_bookmarks`, `study_highlights`, `study_collections`, `study_reflection_notes`, `study_capture_thought`, `study_new_note`, `study_edit_note`, `study_write_thought`, `study_saved_privately`, `study_save`, `study_cancel`, `study_delete`, `study_refresh`, `study_empty_notes`, `account_open`, `account_login`, `account_register`, `account_guest`, `account_username`, `account_mobile`, `account_submit`, `account_otp`, `account_password`, `account_title`, `account_guest_first`, `account_service_unavailable_title`, `account_identifier`, `account_continue_guest`.
 
 Recommended reply format:
 
@@ -172,4 +172,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 98 Maale UI labels have been supplied by the Owner and recorded in the Maale resource worksheet. 5 entries remain pending. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** 103 Maale UI labels have been supplied by the Owner and recorded in the Maale resource worksheet. 0 entries remain pending in this worksheet. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
