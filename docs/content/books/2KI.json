@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-2ki-bilingual-v1",
+  "book": {
+    "usfm_id": "2KI",
+    "english_name": "2 Kings",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-2kings",
+      "title": "2 Kings",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/2-kings/",
+      "use": "Elisha narratives, fall of Samaria and Jerusalem, book structure"
+    },
+    {
+      "id": "esv-kings",
+      "title": "Introduction to 1–2 Kings",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-kings/",
+      "use": "Themes, historical context and outline"
+    },
+    {
+      "id": "gnbdc-2kings",
+      "title": "2 Kings Introduction",
+      "publisher": "Good News Bible / Bible App",
+      "url": "https://www.bible.com/bible/416/2KI.INTRO1.GNBDC",
+      "use": "Narrative divisions and exile chronology"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "2 Kings continues the histories of Israel and Judah from the ministries of Elijah and Elisha through the fall of Samaria to Assyria and the destruction of Jerusalem by Babylon. It evaluates rulers, reforms, prophetic warnings, political alliances and worship, and closes with a brief sign of hope in the release of Jehoiachin.",
+        "authorship": "The author is not identified. 1–2 Kings form a connected work drawing on earlier records and prophetic traditions. Its final form is commonly discussed in relation to the Babylonian exile; exact authorship, sources and editorial stages remain uncertain.",
+        "setting": "The book spans the later divided monarchy, including the northern kingdom’s fall in 722/721 BCE, and Judah’s fall and exile after Jerusalem’s destruction in 587/586 BCE. Assyria, Babylon and neighboring kingdoms shape the political setting.",
+        "audience_and_purpose": "The narrative addresses a community trying to understand national defeat, exile and the apparent loss of land, monarchy and temple. It interprets these events through covenant faithfulness, prophetic warning, justice and hope.",
+        "structure": [
+          {
+            "range": "1:1–8:15",
+            "heading": "Elijah and Elisha",
+            "summary": "Elijah’s final ministry and Elisha’s prophetic work, including healing and acts of deliverance."
+          },
+          {
+            "range": "8:16–10:36",
+            "heading": "Kings and Jehu’s revolt",
+            "summary": "Judah’s rulers are followed alongside Israel’s; Jehu brings a violent change of dynasty in the north."
+          },
+          {
+            "range": "11:1–14:29",
+            "heading": "Judah and Israel continue",
+            "summary": "Athaliah, Joash and later rulers are narrated alongside the northern kingdom’s kings."
+          },
+          {
+            "range": "15:1–17:41",
+            "heading": "The fall of the northern kingdom",
+            "summary": "Political instability culminates in Samaria’s capture and the end of the northern kingdom."
+          },
+          {
+            "range": "18:1–20:21",
+            "heading": "Hezekiah and Assyria",
+            "summary": "Hezekiah’s reforms and the Assyrian threat to Jerusalem are central."
+          },
+          {
+            "range": "21:1–23:30",
+            "heading": "Manasseh, Amon and Josiah",
+            "summary": "Judah’s failures and Josiah’s reform are recounted."
+          },
+          {
+            "range": "23:31–25:30",
+            "heading": "Judah’s fall and exile",
+            "summary": "Jerusalem and the temple are destroyed; deportation follows, but Jehoiachin is later released."
+          }
+        ],
+        "themes": [
+          "Prophetic word and historical events",
+          "Covenant loyalty, justice and worship",
+          "The consequences of idolatry and political compromise",
+          "Reform and the limits of human leadership",
+          "Exile, grief and the question of hope",
+          "God’s continuing sovereignty beyond national collapse"
+        ],
+        "key_people": [
+          "Elijah",
+          "Elisha",
+          "Jehu",
+          "Athaliah",
+          "Joash",
+          "Hezekiah",
+          "Manasseh",
+          "Josiah",
+          "Jehoiachin",
+          "Nebuchadnezzar"
+        ],
+        "key_passages": [
+          "2KI 2:1-14",
+          "2KI 4:1-37",
+          "2KI 5:1-19",
+          "2KI 17:7-23",
+          "2KI 18:1-8",
+          "2KI 19:1-37",
+          "2KI 22:1-20",
+          "2KI 23:1-25",
+          "2KI 25:1-30"
+        ],
+        "interpretive_care": [
+          "Do not present the fall of Samaria or Jerusalem as a simple judgment on every individual who suffered; the text’s theological interpretation must not erase human suffering.",
+          "The book’s evaluations of kings are theological and covenantal, not neutral modern political rankings.",
+          "The reforms of Hezekiah and Josiah are significant but do not erase the broader narrative’s social and political complexity.",
+          "The final release of Jehoiachin is a restrained narrative signal; do not claim that the exile or restoration is fully resolved at the book’s end."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "2KI-S01",
+          "range": "2KI 5:1-19",
+          "title": "Naaman is healed",
+          "observation": [
+            "List the people who speak to Naaman and the actions he is asked to take."
+          ],
+          "interpretation": [
+            "How does the story challenge status, expectation and the boundaries of belonging?"
+          ],
+          "application": [
+            "What might humility and listening look like when help comes from an unexpected person?"
+          ]
+        },
+        {
+          "id": "2KI-S02",
+          "range": "2KI 17:7-23",
+          "title": "Why Samaria fell",
+          "observation": [
+            "Identify the actions and repeated warnings named in the passage."
+          ],
+          "interpretation": [
+            "How does the narrator connect worship, justice and political collapse?"
+          ],
+          "application": [
+            "What practices help a community remember warnings before a crisis becomes irreversible?"
+          ]
+        },
+        {
+          "id": "2KI-S03",
+          "range": "2KI 22:1-20",
+          "title": "The book of the law is found",
+          "observation": [
+            "Observe the discovery, the king’s response and the prophetic consultation."
+          ],
+          "interpretation": [
+            "Why does hearing the text lead to grief, inquiry and concrete reform?"
+          ],
+          "application": [
+            "How can communities respond responsibly when they discover a gap between their practice and their commitments?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2KI-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which prophet succeeds Elijah in the narrative?",
+          "options": [
+            "Elisha",
+            "Isaiah",
+            "Jeremiah",
+            "Nathan"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Elisha receives Elijah’s prophetic mantle.",
+          "references": [
+            "2KI 2:1-14"
+          ]
+        },
+        {
+          "id": "2KI-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Samaria falls to Assyria in the account of 2 Kings.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The fall of Samaria marks the end of the northern kingdom."
+          ]
+        },
+        {
+          "id": "2KI-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which king is associated with major reforms after the book of the law is found?",
+          "options": [
+            "Josiah",
+            "Ahab",
+            "Manasseh",
+            "Jehoahaz"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Josiah responds to the discovered book and leads reforms.",
+          "references": [
+            "2KI 22:1-23:25"
+          ]
+        },
+        {
+          "id": "2KI-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which empire destroys Jerusalem and the temple in 2 Kings 25?",
+          "options": [
+            "Babylon",
+            "Assyria",
+            "Egypt",
+            "Persia"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Babylon conquers Jerusalem and destroys the temple.",
+          "references": [
+            "2KI 25:1-21"
+          ]
+        },
+        {
+          "id": "2KI-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The final chapter says Jehoiachin is released from prison in Babylon.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The closing verses report Jehoiachin’s release and changed status."
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "summary": "2 ነገሥት መጽሐፍ ከኤልያስና ኤልሳዕ አገልግሎት ጀምሮ የእስራኤልንና የይሁዳን ታሪክ ይቀጥላል፤ ሰማርያ በአሦር መውደቋንና ኢየሩሳሌም በባቢሎን መጥፋቷን ይተርካል። ነገሥታትን፣ ማሻሻያዎችን፣ ትንቢታዊ ማስጠንቀቂያዎችን፣ የፖለቲካ ግንኙነቶችንና አምልኮን ይመዝናል፤ በመጨረሻም ዮአኪን ከእስር መፈታቱን በማቅረብ ትንሽ የተስፋ ምልክት ያሳያል።",
+        "authorship": "ጸሐፊው አልተጠቀሰም። 1ኛና 2ኛ ነገሥት ከቀደሙ መዝገቦችና ከነቢያዊ ትውፊቶች የተጠቀመ ተያያዥ ሥራ ናቸው። የመጨረሻ ቅርጻቸው ብዙ ጊዜ ከባቢሎን ምርኮ ጋር ይያያዛል፤ ትክክለኛው ጸሐፊ፣ ምንጮችና የአርትዖት ደረጃዎች ግን አይታወቁም።",
+        "setting": "መጽሐፉ የተከፋፈለውን መንግሥት የኋለኛ ዘመን ይሸፍናል፤ ሰሜኑ መንግሥት በ722/721 ዓ.ዓ. መውደቁንና ይሁዳ በ587/586 ዓ.ዓ. ከኢየሩሳሌም ጥፋት በኋላ ወደ ምርኮ መወሰዱን ይገልጻል። አሦር፣ ባቢሎንና አጎራባች መንግሥታት የፖለቲካ ሁኔታውን ይቀርጻሉ።",
+        "audience_and_purpose": "ትረካው ብሔራዊ ውድቀትን፣ ምርኮንና የምድር፣ የንግሥናና የቤተ መቅደስ መጥፋትን ለመረዳት የሚጥር ማኅበረሰብን ያነጋግራል። ክስተቶቹን በቃል ኪዳን ታማኝነት፣ በነቢያት ማስጠንቀቂያ፣ በፍትሕና በተስፋ አንጻር ይተረጉማል።",
+        "structure": [
+          {
+            "range": "1:1–8:15",
+            "heading": "ኤልያስና ኤልሳዕ",
+            "summary": "የኤልያስ የመጨረሻ አገልግሎትና የኤልሳዕ ትንቢታዊ ሥራ፣ ፈውስና የማዳን ድርጊቶች።"
+          },
+          {
+            "range": "8:16–10:36",
+            "heading": "ነገሥታትና የኢዩ ዓመፅ",
+            "summary": "የይሁዳ ገዢዎች ከእስራኤል ጋር ተያይዘው ይቀርባሉ፤ ኢዩ በሰሜን ኃይለኛ የንግሥና ለውጥ ያመጣል።"
+          },
+          {
+            "range": "11:1–14:29",
+            "heading": "ይሁዳና እስራኤል ይቀጥላሉ",
+            "summary": "ጎቶልያ፣ ኢዮአስና ተከታይ ገዢዎች ከሰሜኑ ነገሥታት ጋር ይተረካሉ።"
+          },
+          {
+            "range": "15:1–17:41",
+            "heading": "የሰሜኑ መንግሥት ውድቀት",
+            "summary": "የፖለቲካ አለመረጋጋት በሰማርያ መያዝና በሰሜኑ መንግሥት መጨረሻ ይደርሳል።"
+          },
+          {
+            "range": "18:1–20:21",
+            "heading": "ሕዝቅያስና አሦር",
+            "summary": "የሕዝቅያስ ማሻሻያዎችና በኢየሩሳሌም ላይ የአሦር ስጋት ዋና ቦታ ይይዛሉ።"
+          },
+          {
+            "range": "21:1–23:30",
+            "heading": "ምናሴ፣ አሞንና ኢዮስያስ",
+            "summary": "የይሁዳ ውድቀቶችና የኢዮስያስ ማሻሻያ ይተረካሉ።"
+          },
+          {
+            "range": "23:31–25:30",
+            "heading": "የይሁዳ ውድቀትና ምርኮ",
+            "summary": "ኢየሩሳሌምና ቤተ መቅደሱ ይፈርሳሉ፤ ሕዝቡ ይወሰዳል፣ በኋላ ግን ዮአኪን ይፈታል።"
+          }
+        ],
+        "themes": [
+          "ትንቢታዊ ቃልና ታሪካዊ ክስተቶች",
+          "የቃል ኪዳን ታማኝነት፣ ፍትሕና አምልኮ",
+          "የጣዖት አምልኮና የፖለቲካ ስምምነት ውጤቶች",
+          "ማሻሻያና የሰው አመራር ወሰን",
+          "ምርኮ፣ ሐዘንና የተስፋ ጥያቄ",
+          "ከብሔራዊ ውድቀት በኋላ የእግዚአብሔር ሉዓላዊነት"
+        ],
+        "key_people": [
+          "ኤልያስ",
+          "ኤልሳዕ",
+          "ኢዩ",
+          "ጎቶልያ",
+          "ኢዮአስ",
+          "ሕዝቅያስ",
+          "ምናሴ",
+          "ኢዮስያስ",
+          "ዮአኪን",
+          "ናቡከደነጾር"
+        ],
+        "key_passages": [
+          "2KI 2:1-14",
+          "2KI 4:1-37",
+          "2KI 5:1-19",
+          "2KI 17:7-23",
+          "2KI 18:1-8",
+          "2KI 19:1-37",
+          "2KI 22:1-20",
+          "2KI 23:1-25",
+          "2KI 25:1-30"
+        ],
+        "interpretive_care": [
+          "የሰማርያንና የኢየሩሳሌምን ውድቀት በግል በደል ለተሰቃዩ ሰዎች ቀላል ፍርድ አድርጋችሁ አታቅርቡ፤ የጽሑፉ ሥነ መለኮታዊ ትርጓሜ የሰውን ሥቃይ መሸፈን የለበትም።",
+          "የነገሥታት ግምገማ ሥነ መለኮታዊና ከቃል ኪዳን ጋር የተያያዘ ነው፤ ዘመናዊ የፖለቲካ ደረጃ አይደለም።",
+          "የሕዝቅያስና የኢዮስያስ ማሻሻያዎች ጠቃሚ ቢሆኑም የማኅበራዊና የፖለቲካ ውስብስብነትን አያጠፉም።",
+          "የዮአኪን መፈታት ትንሽ የተስፋ ምልክት ነው፤ ምርኮው ወይም መመለሱ ሙሉ በሙሉ ተፈጽሟል ብሎ አያሳይም።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "2KI-S01",
+          "range": "2KI 5:1-19",
+          "title": "ንዕማን ተፈወሰ",
+          "observation": [
+            "ከንዕማን ጋር የተነጋገሩትን ሰዎችና እንዲያደርግ የተጠየቀውን ድርጊት ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ታሪኩ ስለ ደረጃ፣ ግምትና የአባልነት ድንበር ያለውን አስተሳሰብ እንዴት ይፈትናል?"
+          ],
+          "application": [
+            "እርዳታ ከማንጠብቀው ሰው ሲመጣ ትሕትናና ማዳመጥ እንዴት ሊታዩ ይችላሉ?"
+          ]
+        },
+        {
+          "id": "2KI-S02",
+          "range": "2KI 17:7-23",
+          "title": "ሰማርያ ለምን ወደቀች",
+          "observation": [
+            "በምንባቡ የተጠቀሱትን ድርጊቶችና ተደጋጋሚ ማስጠንቀቂያዎች ለዩ።"
+          ],
+          "interpretation": [
+            "ተራኪው አምልኮን፣ ፍትሕንና የፖለቲካ ውድቀትን እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "ችግር የማይመለስ ከመሆኑ በፊት ማኅበረሰብ ማስጠንቀቂያዎችን እንዲያስታውስ ምን ልምዶች ይረዳሉ?"
+          ]
+        },
+        {
+          "id": "2KI-S03",
+          "range": "2KI 22:1-20",
+          "title": "የሕጉ መጽሐፍ ተገኘ",
+          "observation": [
+            "መጽሐፉ መገኘቱን፣ የንጉሡን ምላሽና የነቢያዊ ምክር ፍለጋን ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ቃሉን መስማት ለምን ወደ ሐዘን፣ ጥያቄና ተግባራዊ ማሻሻያ ይመራል?"
+          ],
+          "application": [
+            "ማኅበረሰቦች በተግባራቸውና በቃል ኪዳናቸው መካከል ክፍተት ሲያገኙ በኃላፊነት እንዴት ሊመልሱ ይችላሉ?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2KI-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በትረካው ኤልያስን በነቢይነት የተከተለው ማን ነው?",
+          "options": [
+            "ኤልሳዕ",
+            "ኢሳይያስ",
+            "ኤርምያስ",
+            "ናታን"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2KI 2:1-14"
+          ]
+        },
+        {
+          "id": "2KI-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "2KI 17:5-23",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The fall of Samaria marks the end of the northern kingdom."
+          ]
+        },
+        {
+          "id": "2KI-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የሕጉ መጽሐፍ ከተገኘ በኋላ ከትልቅ ማሻሻያ ጋር የተያያዘው ንጉሥ ማን ነው?",
+          "options": [
+            "ኢዮስያስ",
+            "አክዓብ",
+            "ምናሴ",
+            "ኢዮአካዝ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2KI 22:1-23:25"
+          ]
+        },
+        {
+          "id": "2KI-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በ2 ነገሥት 25 ኢየሩሳሌምንና ቤተ መቅደሱን ያጠፋው የትኛው ግዛት ነው?",
+          "options": [
+            "ባቢሎን",
+            "አሦር",
+            "ግብፅ",
+            "ፋርስ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2KI 25:1-21"
+          ]
+        },
+        {
+          "id": "2KI-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "2KI 25:27-30",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "true",
+          "references": [
+            "The closing verses report Jehoiachin’s release and changed status."
+          ]
+        }
+      ]
+    }
+  }
+}
