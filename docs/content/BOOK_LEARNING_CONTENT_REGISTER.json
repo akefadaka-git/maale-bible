@@ -1,0 +1,3779 @@
+{
+  "schema_version": "1.0.0",
+  "canon_profile": "protestant_66_book",
+  "base_catalogue_edition": "MDYTWF/mdyeth 2008 Maale Full Bible",
+  "content_languages": [
+    "en",
+    "am"
+  ],
+  "content_policy": "Scripture, introductions, inductive guides, quizzes and reference articles are separately governed content assets. Do not mark available until provenance, rights, attribution, integrity, language review and edition compatibility are recorded.",
+  "counts": {
+    "old_testament": 39,
+    "new_testament": 27,
+    "total": 66
+  },
+  "books": [
+    {
+      "order": 1,
+      "usfm_id": "GEN",
+      "title": "Genesis",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 2,
+      "usfm_id": "EXO",
+      "title": "Exodus",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 3,
+      "usfm_id": "LEV",
+      "title": "Leviticus",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 4,
+      "usfm_id": "NUM",
+      "title": "Numbers",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 5,
+      "usfm_id": "DEU",
+      "title": "Deuteronomy",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 6,
+      "usfm_id": "JOS",
+      "title": "Joshua",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 7,
+      "usfm_id": "JDG",
+      "title": "Judges",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 8,
+      "usfm_id": "RUT",
+      "title": "Ruth",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 9,
+      "usfm_id": "1SA",
+      "title": "1 Samuel",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 10,
+      "usfm_id": "2SA",
+      "title": "2 Samuel",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 11,
+      "usfm_id": "1KI",
+      "title": "1 Kings",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 12,
+      "usfm_id": "2KI",
+      "title": "2 Kings",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 13,
+      "usfm_id": "1CH",
+      "title": "1 Chronicles",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 14,
+      "usfm_id": "2CH",
+      "title": "2 Chronicles",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 15,
+      "usfm_id": "EZR",
+      "title": "Ezra",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 16,
+      "usfm_id": "NEH",
+      "title": "Nehemiah",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 17,
+      "usfm_id": "EST",
+      "title": "Esther",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 18,
+      "usfm_id": "JOB",
+      "title": "Job",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 19,
+      "usfm_id": "PSA",
+      "title": "Psalms",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 20,
+      "usfm_id": "PRO",
+      "title": "Proverbs",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 21,
+      "usfm_id": "ECC",
+      "title": "Ecclesiastes",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 22,
+      "usfm_id": "SNG",
+      "title": "Song of Songs",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 23,
+      "usfm_id": "ISA",
+      "title": "Isaiah",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 24,
+      "usfm_id": "JER",
+      "title": "Jeremiah",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 25,
+      "usfm_id": "LAM",
+      "title": "Lamentations",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 26,
+      "usfm_id": "EZK",
+      "title": "Ezekiel",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 27,
+      "usfm_id": "DAN",
+      "title": "Daniel",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 28,
+      "usfm_id": "HOS",
+      "title": "Hosea",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 29,
+      "usfm_id": "JOL",
+      "title": "Joel",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 30,
+      "usfm_id": "AMO",
+      "title": "Amos",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 31,
+      "usfm_id": "OBA",
+      "title": "Obadiah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 32,
+      "usfm_id": "JON",
+      "title": "Jonah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 33,
+      "usfm_id": "MIC",
+      "title": "Micah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 34,
+      "usfm_id": "NAM",
+      "title": "Nahum",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 35,
+      "usfm_id": "HAB",
+      "title": "Habakkuk",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 36,
+      "usfm_id": "ZEP",
+      "title": "Zephaniah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 37,
+      "usfm_id": "HAG",
+      "title": "Haggai",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 38,
+      "usfm_id": "ZEC",
+      "title": "Zechariah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 39,
+      "usfm_id": "MAL",
+      "title": "Malachi",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 40,
+      "usfm_id": "MAT",
+      "title": "Matthew",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 41,
+      "usfm_id": "MRK",
+      "title": "Mark",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 42,
+      "usfm_id": "LUK",
+      "title": "Luke",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 43,
+      "usfm_id": "JHN",
+      "title": "John",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 44,
+      "usfm_id": "ACT",
+      "title": "Acts",
+      "testament": "NT",
+      "category": "acts",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 45,
+      "usfm_id": "ROM",
+      "title": "Romans",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 46,
+      "usfm_id": "1CO",
+      "title": "1 Corinthians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 47,
+      "usfm_id": "2CO",
+      "title": "2 Corinthians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 48,
+      "usfm_id": "GAL",
+      "title": "Galatians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 49,
+      "usfm_id": "EPH",
+      "title": "Ephesians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 50,
+      "usfm_id": "PHP",
+      "title": "Philippians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 51,
+      "usfm_id": "COL",
+      "title": "Colossians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 52,
+      "usfm_id": "1TH",
+      "title": "1 Thessalonians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 53,
+      "usfm_id": "2TH",
+      "title": "2 Thessalonians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 54,
+      "usfm_id": "1TI",
+      "title": "1 Timothy",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 55,
+      "usfm_id": "2TI",
+      "title": "2 Timothy",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 56,
+      "usfm_id": "TIT",
+      "title": "Titus",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 57,
+      "usfm_id": "PHM",
+      "title": "Philemon",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 58,
+      "usfm_id": "HEB",
+      "title": "Hebrews",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 59,
+      "usfm_id": "JAS",
+      "title": "James",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 60,
+      "usfm_id": "1PE",
+      "title": "1 Peter",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 61,
+      "usfm_id": "2PE",
+      "title": "2 Peter",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 62,
+      "usfm_id": "1JN",
+      "title": "1 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 63,
+      "usfm_id": "2JN",
+      "title": "2 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 64,
+      "usfm_id": "3JN",
+      "title": "3 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 65,
+      "usfm_id": "JUD",
+      "title": "Jude",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    },
+    {
+      "order": 66,
+      "usfm_id": "REV",
+      "title": "Revelation",
+      "testament": "NT",
+      "category": "revelation",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        }
+      }
+    }
+  ]
+}
