@@ -36,6 +36,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import org.maale.bible.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.maale.bible.data.LocalStudyDatabase
@@ -47,8 +49,9 @@ import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicReference
 
-private enum class StudySection(val title: String) {
-    NOTES("Notes"), BOOKMARKS("Bookmarks"), HIGHLIGHTS("Highlights"), COLLECTIONS("Collections")
+private enum class StudySection(val titleRes: Int) {
+    NOTES(R.string.study_notes), BOOKMARKS(R.string.study_bookmarks),
+    HIGHLIGHTS(R.string.study_highlights), COLLECTIONS(R.string.study_collections)
 }
 
 /** Persistent local journal. Database operations are serialized off the Compose main thread. */
@@ -102,7 +105,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                         loading = false
                         busy = false
                         errorMessage = failure.message?.takeIf { it.isNotBlank() }
-                            ?: "Your study notes could not be saved. Please try again."
+                            ?: stringResource(R.string.study_save_error)
                     }
                 }
             }
@@ -122,11 +125,11 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("YOUR STUDY SPACE", style = MaterialTheme.typography.labelMedium,
+                Text(stringResource(R.string.study_your_space).uppercase(), style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
-                Text("Study deeper. Keep what matters.", style = MaterialTheme.typography.headlineSmall,
+                Text(stringResource(R.string.study_deeper) + ". Keep what matters.", style = MaterialTheme.typography.headlineSmall,
                     color = MaterialTheme.colorScheme.onBackground, fontWeight = FontWeight.SemiBold)
-                Text("A private workspace for reflections and discoveries.",
+                Text(stringResource(R.string.study_private_workspace),
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
@@ -153,20 +156,20 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
 
             when (section) {
                 StudySection.NOTES -> {
-                    SectionIntro("Reflection notes", "Capture a thought while it is fresh.")
+                    SectionIntro(stringResource(R.string.study_reflection_notes), stringResource(R.string.study_capture_thought))
                     Card(
                         modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.extraLarge,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                            Text(if (editingNoteId == null) "NEW REFLECTION" else "EDIT REFLECTION",
+                            Text(if (editingNoteId == null) stringResource(R.string.study_new_note).uppercase() else stringResource(R.string.study_edit_note).uppercase(),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
                             OutlinedTextField(
                                 value = draft, onValueChange = { draft = it }, modifier = Modifier.fillMaxWidth(),
                                 minLines = 4, enabled = !busy,
-                                placeholder = { Text("Write your thought, question or prayer…") },
-                                supportingText = { Text("Saved privately on this device • no passage reference attached") }
+                                placeholder = { Text(stringResource(R.string.study_write_thought)) },
+                                supportingText = { Text(stringResource(R.string.study_saved_privately) + " • no passage reference attached") }
                             )
                             Button(
                                 onClick = {
@@ -179,7 +182,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                                 database.addJournalNote(UUID.randomUUID().toString(), body, now)
                                             } else {
                                                 check(database.updateJournalNote(targetId, body, now)) {
-                                                    "This note no longer exists. Refresh the list and try again."
+                                                    stringResource(R.string.study_note_missing)
                                                 }
                                             }
                                             database.journalNotes()
@@ -187,20 +190,20 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                     }
                                 },
                                 enabled = draft.isNotBlank() && !busy, modifier = Modifier.fillMaxWidth()
-                            ) { Text(if (busy) "Saving…" else if (editingNoteId == null) "Save reflection" else "Update reflection") }
+                            ) { Text(if (busy) stringResource(R.string.study_saving) else if (editingNoteId == null) stringResource(R.string.study_save_reflection) else stringResource(R.string.study_update_reflection)) }
                             if (editingNoteId != null) {
                                 OutlinedButton(
                                     onClick = { draft = ""; editingNoteId = null },
                                     enabled = !busy, modifier = Modifier.fillMaxWidth()
-                                ) { Text("Cancel edit") }
+                                ) { Text(stringResource(R.string.study_cancel_edit)) }
                             }
                         }
                     }
 
-                    SectionIntro("Saved reflections", when {
-                        loading -> "Loading your notes from this device…"
-                        notes.isEmpty() -> "Your saved reflections will appear here."
-                        else -> "${notes.size} saved reflection(s)"
+                    SectionIntro(stringResource(R.string.study_saved_reflections), when {
+                        loading -> stringResource(R.string.study_loading_notes)
+                        notes.isEmpty() -> stringResource(R.string.study_empty_notes)
+                        else -> stringResource(R.string.study_saved_reflections_count, notes.size)
                     })
 
                     if (loading) {
@@ -208,8 +211,8 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                             CircularProgressIndicator()
                         }
                     } else if (notes.isEmpty()) {
-                        EmptyStudyCard("No reflections yet",
-                            "Start with a question, a personal insight or something you want to revisit.")
+                        EmptyStudyCard(stringResource(R.string.study_no_reflections),
+                            stringResource(R.string.study_start_reflection))
                     } else {
                         notes.forEach { note ->
                             Card(
@@ -217,7 +220,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                             ) {
                                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                    Text("PRIVATE REFLECTION", style = MaterialTheme.typography.labelSmall,
+                                    Text(stringResource(R.string.study_private_reflection).uppercase(), style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
                                     Text(note.body, style = MaterialTheme.typography.bodyLarge,
                                         color = MaterialTheme.colorScheme.onSurface)
@@ -229,13 +232,13 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                                         OutlinedButton(
                                             onClick = { editingNoteId = note.id; draft = note.body }, enabled = !busy
-                                        ) { Text("Edit") }
+                                        ) { Text(stringResource(R.string.study_edit_note)) }
                                         Spacer(Modifier.size(8.dp))
                                         OutlinedButton(
                                             onClick = {
                                                 runDatabase({ database ->
                                                     check(database.deleteJournalNote(note.id)) {
-                                                        "This note no longer exists. Refresh the list and try again."
+                                                        stringResource(R.string.study_note_missing)
                                                     }
                                                     database.journalNotes()
                                                 }) {
@@ -245,7 +248,7 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                                                     }
                                                 }
                                             }, enabled = !busy
-                                        ) { Text("Delete") }
+                                        ) { Text(stringResource(R.string.study_delete)) }
                                     }
                                 }
                             }
@@ -265,26 +268,26 @@ fun SmartStudyWorkspaceScreen(modifier: Modifier = Modifier) {
                     OutlinedButton(
                         onClick = { runDatabase({ it.journalNotes() }) },
                         enabled = !busy, modifier = Modifier.fillMaxWidth()
-                    ) { Text("Refresh saved notes") }
+                    ) { Text(stringResource(R.string.study_refresh)) }
                 }
                 StudySection.BOOKMARKS -> LockedStudyFeature(
-                    "Saved passages",
-                    "Bookmarks will connect to canonical book, chapter and verse identifiers after verified scripture structure is integrated.",
-                    "PASSAGE REFERENCES NOT AVAILABLE"
+                    stringResource(R.string.study_saved_passages),
+                    stringResource(R.string.study_bookmarks_description),
+                    stringResource(R.string.study_passage_references_unavailable).uppercase()
                 )
                 StudySection.HIGHLIGHTS -> LockedStudyFeature(
-                    "Scripture highlights",
-                    "Highlight colours and annotations will be attached to verified passage ranges. No highlight can be created against an unverified reference.",
-                    "VERIFIED PASSAGE DATA REQUIRED"
+                    stringResource(R.string.study_highlights),
+                    stringResource(R.string.study_highlights_description),
+                    stringResource(R.string.study_verified_passage_required).uppercase()
                 )
                 StudySection.COLLECTIONS -> LockedStudyFeature(
-                    "Study collections",
-                    "Organize bookmarks, notes and highlights into themes once durable passage-linked records are available.",
-                    "COLLECTION STORAGE NOT CONNECTED"
+                    stringResource(R.string.study_collections),
+                    stringResource(R.string.study_collections_description),
+                    stringResource(R.string.study_collection_storage_unavailable).uppercase()
                 )
             }
 
-            Text("LOCAL STUDY • PRIVATE ON-DEVICE STORAGE",
+            Text(stringResource(R.string.study_local_private).uppercase(),
                 modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 16.dp),
                 style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
@@ -301,13 +304,13 @@ private fun StudyStatusCard(loading: Boolean, busy: Boolean) {
             horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Box(Modifier.size(10.dp).background(MaterialTheme.colorScheme.secondary, CircleShape))
             Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text("PERSISTENT STUDY NOTES", style = MaterialTheme.typography.labelSmall,
+                Text(stringResource(R.string.study_persistent_notes).uppercase(), style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSecondaryContainer, fontWeight = FontWeight.Bold)
                 Text(
                     when {
-                        loading -> "Loading notes from your device."
-                        busy -> "Saving your changes securely on this device."
-                        else -> "Your journal notes are stored locally and remain available after you reopen the app."
+                        loading -> stringResource(R.string.study_loading_device)
+                        busy -> stringResource(R.string.study_saving_device)
+                        else -> stringResource(R.string.study_local_persistence)
                     },
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSecondaryContainer
@@ -319,7 +322,7 @@ private fun StudyStatusCard(loading: Boolean, busy: Boolean) {
 
 @Composable
 private fun StudyTab(item: StudySection, selected: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
-    if (selected) Button(onClick = onClick, modifier = modifier) { Text(item.title, maxLines = 1) }
+    if (selected) Button(onClick = onClick, modifier = modifier) { Text(stringResource(item.titleRes), maxLines = 1) }
     else OutlinedButton(onClick = onClick, modifier = modifier) { Text(item.title, maxLines = 1) }
 }
 
@@ -349,8 +352,8 @@ private fun EmptyStudyCard(title: String, message: String) {
 private fun LockedStudyFeature(title: String, description: String, status: String) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         SectionIntro(title, description)
-        EmptyStudyCard("Not connected yet",
-            "This area is intentionally inactive until verified passage identities and durable study operations are available.")
+        EmptyStudyCard(stringResource(R.string.study_not_connected),
+            stringResource(R.string.study_inactive_description))
         Surface(shape = MaterialTheme.shapes.medium, color = MaterialTheme.colorScheme.surfaceVariant) {
             Text(status, modifier = Modifier.padding(horizontal = 12.dp, vertical = 9.dp),
                 style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
