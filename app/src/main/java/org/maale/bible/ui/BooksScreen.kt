@@ -38,7 +38,7 @@ private val bookCategories = listOf(
 )
 
 @Composable
-fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
+fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, modifier: Modifier = Modifier) {
     var query by rememberSaveable { mutableStateOf("") }
     var selectedCategory by rememberSaveable { mutableStateOf("all") }
     val matchingBooks = CanonicalBookCatalog.books.filter { book ->
@@ -74,6 +74,9 @@ fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
                     Text(stringResource(R.string.explorer_catalogue_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onPrimaryContainer)
                 }
             }
+        }
+        TextButton(onClick = onOpenAtlas, modifier = Modifier.fillMaxWidth()) {
+            Text("🗺️  " + stringResource(R.string.explorer_open_atlas))
         }
         OutlinedTextField(
             value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth().semantics { contentDescription = "Search Bible books by name or canonical code" },
