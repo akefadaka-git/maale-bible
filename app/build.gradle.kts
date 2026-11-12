@@ -27,7 +27,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("net.zetetic:sqlcipher-android:4.19.1@aar")
     implementation("androidx.sqlite:sqlite:2.7.0")
-    implementation("org.bouncycastle:bcprov-jdk18on:1.83")
+    implementation("org.bouncycastle:bcprov-jdk18on:1.86")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
