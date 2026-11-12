@@ -162,9 +162,12 @@ internal object LegacyStudyDatabaseMigration {
     private fun isEncryptedAndHealthy(file: File, dek: ByteArray): Boolean = runCatching {
         val db = CipherSQLiteDatabase.openDatabase(file.absolutePath, dek, null, CipherSQLiteDatabase.OPEN_READONLY, null)
         try {
-            db.rawQuery("PRAGMA cipher_integrity_check", null).use { c ->
-                c.moveToFirst() && c.getString(0).equals("ok", true)
+            // SQLCipher returns zero rows when all page HMACs verify; any row is an error.
+            val cipherPagesClean = db.rawQuery("PRAGMA cipher_integrity_check", null).use { !it.moveToFirst() }
+            val sqliteStructureClean = db.rawQuery("PRAGMA integrity_check", null).use { c ->
+                c.moveToFirst() && c.getString(0).equals("ok", true) && !c.moveToNext()
             }
+            cipherPagesClean && sqliteStructureClean
         } finally { db.close() }
     }.getOrDefault(false)
 
