@@ -124,7 +124,10 @@ jobs:
           disable-animations: true
           emulator-boot-timeout: 900
           # Invoke the tracked script as one command; the action splits multiline scripts.
-          script: ANDROID_EXPECTED_API=${{ matrix.api }} sh verification/android/run-emulator-tests.sh
+          env:
+            ANDROID_EXPECTED_API: ${{ matrix.api }}
+            ANDROID_TEST_CLASS: ${{ github.event_name == 'pull_request' && 'org.maale.bible.P2V6NavigationSmokeTest#genesisLearningCentreReaderAndBackNavigationAreReachable' || '' }}
+          script: sh verification/android/run-emulator-tests.sh
       - name: Upload emulator logs and instrumentation reports
         if: always()
         uses: actions/upload-artifact@v4
