@@ -1,55 +1,67 @@
 # Scripture Rights and Permission Gate
 
-Status: BLOCKED — no product publishing permission has been verified in this repository.
+Status: SUBSTANTIVE RIGHTS / EDITION RECONCILIATION — PASS (DOCUMENTARY); IMPLEMENTATION COMPLIANCE — PENDING
 
 ## Purpose
 
-Prevent accidental ingestion or distribution of copyrighted Maale Bible material before the exact edition and all required permissions are documented.
+Record the documentary rights basis for the selected edition and prevent accidental acquisition, ingestion, adaptation, or distribution outside the confirmed licence conditions and Owner authorization boundaries.
 
-## Required written evidence
+## Selected edition and written clarification
 
-Obtain and retain verifiable written evidence from the competent rights holder(s), publisher(s), or authorized licensing representative covering:
+The Owner supplied a written response attributed to The Word for the World International and signed by Dr. Tesfaye Yohannes, East African representative. The response states:
 
-1. Exact title and edition, language, script, testament/canon, revision and publication date.
-2. Identity of copyright owner, publisher, translators, editors and any other relevant rights contributors.
-3. Authority of the person granting permission.
-4. Permission to reproduce and distribute the complete text inside an Android application.
-5. Offline storage, local caching, backups and user-device copies.
-6. Search indexing, display, navigation, bookmarks and user annotations where they interact with source text.
-7. Quotation, sharing, copying and export limits, if any.
-8. Modification, formatting, normalization, correction and derivative-work restrictions.
-9. Commercial use, donations, advertising, paid features and geographic restrictions.
-10. Attribution wording, copyright notices, license text and source links.
-11. Whether audio is included; if not, obtain separate audio rights.
-12. Territory, term, revocation, reporting, audit and termination conditions.
+- **MDYTWF / mdyeth** is the 2008 Maale Full Bible (ጌኤዦ ማፃኣፖ), jointly held by The Word for the World International and the Bible Society of Ethiopia.
+- **MDYBSE** is a distinct 2007 Maale New Testament published solely by the Bible Society of Ethiopia.
+- The DBL RESERVED status pertains to the separate MDYBSE New Testament and not the 2008 MDYTWF Full Bible.
+- Both rights holders authorized the 2008 Full Bible under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+- The licence applies to the eBible USFM package and supporting files listed for MDYTWF / mdyeth, including mdyeth_usfm.zip.
+- No separate signed permission letter or DBL agreement is required for distribution of that licensed full-Bible text, provided the licence terms are followed.
 
-## Reconciliation rules
+The detailed record is [Rights and Edition Reconciliation — 2026-11-07](../source-verification/RIGHTS_EDITION_RECONCILIATION_2026-11-07.md).
 
-- A license label on a mirror or download page is evidence to investigate, not final proof of authority.
-- A public-domain or open-license assertion must be matched to the exact edition and the party authorized to grant it.
-- Distinguish the full Bible from New Testament-only editions, alternate revisions, audio recordings and other formats.
-- Investigate reserved or separately administered library records and resolve conflicts in writing.
-- Do not assume a text license also covers audio, artwork, fonts, recordings, logos or metadata.
-- Do not assume that attribution alone satisfies share-alike, no-derivatives, non-commercial or other conditions.
-- Record the license version, URL, retrieval date, archived evidence location and reviewer conclusion.
+**Evidence qualification:** This repository records the response text supplied by the Owner. Original email headers, sender address, delivery metadata, and signatory authority have not been independently authenticated here. Retain the original email as primary evidence. This is a documentary project assessment, not an independent legal opinion.
 
-## Decision record template
+## Current rights decision
 
-| Field | Value |
+| Field | Decision |
 |---|---|
-| Edition / identifier | UNVERIFIED |
-| Rights holder | UNVERIFIED |
-| Licensing authority | UNVERIFIED |
-| License / agreement | UNVERIFIED |
-| Written permission evidence | MISSING |
-| App distribution | NOT AUTHORIZED |
-| Offline storage | NOT AUTHORIZED |
-| Search / display | NOT AUTHORIZED |
-| Modification / derivative use | NOT AUTHORIZED |
-| Audio rights | SEPARATE REVIEW REQUIRED |
-| Reviewer / date | NOT RECORDED |
-| Owner decision | PENDING |
+| Selected edition | 2008 Maale Full Bible |
+| Edition identifiers | MDYTWF / mdyeth |
+| Language | Maale / Male (mdy) |
+| Rights holders stated in response | The Word for the World International; Bible Society of Ethiopia |
+| Licence stated in response | CC BY-SA 4.0 |
+| Package coverage | eBible USFM package and supporting files for MDYTWF / mdyeth |
+| DBL MDYBSE | Separate 2007 Maale New Testament; RESERVED status does not govern the 2008 Full Bible |
+| Documentary rights reconciliation | PASS — DOCUMENTARY |
+| Email/signatory authentication | PENDING |
+| Owner approval to acquire source package | NOT GRANTED / PENDING |
+| Content intake authorization | FALSE |
+
+## Mandatory licence compliance
+
+Any future distribution of the text or adaptations must satisfy CC BY-SA 4.0. At minimum:
+
+1. Preserve the following attribution:  
+   **Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.**
+2. Link to https://creativecommons.org/licenses/by-sa/4.0/.
+3. Identify modifications, including USFM conversion, formatting changes, normalization, corrections, or other adaptations.
+4. Do not imply endorsement by either rights holder.
+5. Distribute adaptations of the scripture text under CC BY-SA 4.0.
+6. Keep third-party assets (audio, artwork, fonts, recordings, logos, metadata) on separate rights tracks unless expressly covered by their own evidence.
+7. Ensure notices remain accessible in-app and accompany exported/shared scripture text where technically applicable.
+
+The detailed control matrix and acceptance evidence are in [Licence Compliance Controls](LICENCE_COMPLIANCE_CONTROLS.md).
+
+## Scope boundaries
+
+The written confirmation does not itself authorize this project to acquire or process the package. Until separate Owner authorization is recorded:
+
+- Do not download, acquire, unpack, hash, inspect, or ingest mdyeth_usfm.zip.
+- Do not import or distribute real scripture content.
+- Keep content_intake_authorized=false.
+- Do not begin Android, backend, database, or deployment implementation.
+- Do not treat a passing synthetic audit as rights approval or source acceptance.
 
 ## Release rule
 
-Until every applicable right is verified and approved, all scripture-content ingestion and distribution remains prohibited. The validation tool in this repository is designed to inspect an independently authorized local package; it does not grant permission to obtain, use, or publish that package.
+A future content release requires all of the following: documentary rights evidence retained and authenticated to the extent practicable; Owner approval for source acquisition and intake; an approved source manifest and provenance record; licence notices and ShareAlike controls implemented and independently checked; source and transformation hashes; and specialist source validation. No one control substitutes for another.

@@ -2,7 +2,7 @@
 
 **Record date:** 2026-11-07  
 **Project:** Maale Bible (ጌኤዦ ማፃኣፖ)  
-**Status:** SUBSTANTIVE RIGHTS AND EDITION RECONCILIATION — PASS; SOURCE AUTHENTICITY CHECK — PENDING
+**Status:** RIGHTS / EDITION / PACKAGE LICENCE — PASS — DOCUMENTARY; OWNER ACQUISITION AUTHORIZATION — GRANTED; ORIGINAL EMAIL AUTHENTICATION CAVEAT RETAINED
 
 ## 1. Evidence received
 
@@ -22,7 +22,7 @@ The written response states:
 
 ## 3. Licence and package coverage
 
-The response expressly states that both copyright holders authorised the exact 2008 full-Bible edition under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** and that the licence applies to the eBible USFM package and supporting files listed for MDYTWF / mdyeth, including the package identified as mdyeth_usfm.zip.
+The response expressly states that both copyright holders authorised the exact 2008 full-Bible edition under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** and that the licence applies to the eBible USFM package and supporting files listed for MDYTWF / mdyeth, including the package identified as mdyeth_usfm.zip. The official eBible edition record independently lists MDYTWF / mdyeth as the 2008 Maale Full Bible, names both copyright holders, identifies CC BY-SA 4.0, and lists the USFM package (https://www.ebible.org/Scriptures/details.php?id=mdyeth).
 
 It further states that no separate signed permission letter or DBL agreement is required to distribute that licensed full-Bible text through an independent Android application, provided the licence terms are followed.
 
@@ -74,22 +74,16 @@ These details are transcribed from the Owner-supplied response and have not been
 | Identify licence for 2008 Full Bible | PASS — DOCUMENTARY | Response states CC BY-SA 4.0 authorised by both rights holders |
 | Confirm licence covers eBible USFM package | PASS — DOCUMENTARY | Response expressly confirms package and supporting files |
 | Establish separate DBL agreement is unnecessary | PASS — DOCUMENTARY | Response expressly states no separate agreement is required |
-| Authenticate original email and signatory authority independently | PENDING | Original headers / independent verification not available in this record |
+| Authenticate original email and signatory authority independently | CAVEAT — NOT INDEPENDENTLY VERIFIED | Original headers / independent verification not available; official eBible record corroborates edition and public licence statement |
 | Implement attribution and ShareAlike controls | PENDING | Product compliance work remains |
-| Acquire or inspect USFM package | NOT AUTHORIZED | Requires separate Owner authorization |
+| Owner authorization for exact USFM package and A2 inspection operations | PASS — AUTHORIZED | Owner reaffirmed full authorization in the 2026-11-07 instruction; exact package and permitted A2 operations recorded in A2 Completion and Blocker Register |
 | Enable content intake | FALSE — BLOCKED | Must remain false until separate Owner authorization and remaining A2 controls are satisfied |
 
 ## 8. Scope and authorization boundary
 
-This reconciliation does **not** authorize:
+The Owner has reaffirmed full authorization for the exact 2008 Full Bible package `https://ebible.org/Scriptures/mdyeth_usfm.zip` and A2 operations to acquire it into an isolated non-public workspace, hash and preflight the archive, safely extract it, inspect USFM structure and encoding, run structural and Unicode validation, create per-file manifests/reports, and prepare an immutable A2 baseline. No further authorization request is required for those operations.
 
-- Downloading, acquiring, unpacking, hashing, inspecting, or ingesting mdyeth_usfm.zip.
-- Importing or distributing real scripture content.
-- Changing content_intake_authorized from false.
-- Android/Kotlin/Compose implementation, backend implementation, deployment, or release.
-- Merging PRs or closing A2.
-
-The Owner's separate authorization for source-package acquisition and content intake remains required under the project governance baseline.
+This authorization does **not** permit committing raw scripture files, verse excerpts, or derived scripture datasets to the public repository; production content ingestion/distribution; setting `content_intake_authorized` true; audio or third-party assets; Android/Kotlin/Compose or backend implementation; deployment/release; or merging PRs / bypassing A2 evidence gates.
 
 ## 9. Conclusion
 
