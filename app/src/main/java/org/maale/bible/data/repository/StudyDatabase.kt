@@ -18,8 +18,12 @@ class StudyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null,
         db.execSQL("CREATE TABLE annotations (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter>0), verse INTEGER NOT NULL CHECK(verse>0), kind TEXT NOT NULL CHECK(kind IN ('HIGHLIGHT','NOTE')), body TEXT NOT NULL, color TEXT, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
         db.execSQL("CREATE INDEX idx_annotations_ref ON annotations(book_id,chapter,verse)")
         db.execSQL("CREATE TABLE reading_plans (id TEXT PRIMARY KEY, title TEXT NOT NULL, start_day INTEGER NOT NULL, duration_days INTEGER NOT NULL, completed_days TEXT NOT NULL, updated_at INTEGER NOT NULL)")
+        db.execSQL("CREATE INDEX idx_plans_updated ON reading_plans(updated_at)")
     }
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 2 && newVersion >= 2) {
+            db.execSQL("CREATE INDEX IF NOT EXISTS idx_plans_updated ON reading_plans(updated_at)")
+        }
         // Future upgrades must add ordered, non-destructive migrations. Never drop user data.
     }
 
@@ -93,5 +97,5 @@ class StudyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null,
             db.setTransactionSuccessful()
         } finally { db.endTransaction() }
     }
-    companion object { const val DB_NAME="maale_bible_study.db"; const val DB_VERSION=1 }
+    companion object { const val DB_NAME="maale_bible_study.db"; const val DB_VERSION=2 }
 }
