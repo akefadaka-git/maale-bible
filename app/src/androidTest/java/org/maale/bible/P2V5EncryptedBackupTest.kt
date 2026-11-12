@@ -59,6 +59,38 @@ class P2V5EncryptedBackupTest {
         } catch (_: IllegalArgumentException) { }
     }
 
+    @Test fun backupRejectsLicensedContentUnknownCategoriesAndPathCollisions() {
+        listOf(
+            "scripture/GEN.usfm",
+            "source/maale-2008.zip",
+            "content/verses.json",
+            "search-index/segments.db"
+        ).forEach { path ->
+            assertThrows(IllegalArgumentException::class.java) {
+                EncryptedBackup.create(mapOf(path to byteArrayOf(1)), password)
+            }
+        }
+        assertThrows(IllegalArgumentException::class.java) {
+            EncryptedBackup.create(
+                mapOf(
+                    "notes/Readme.json" to byteArrayOf(1),
+                    "notes/readme.json" to byteArrayOf(2)
+                ),
+                password
+            )
+        }
+        assertThrows(IllegalArgumentException::class.java) {
+            EncryptedBackup.create(mapOf("notes/cafe\\u0301.json" to byteArrayOf(1)), password)
+        }
+    }
+
+    @Test fun restoreRejectsPasswordShorterThanCreationPolicy() {
+        val encrypted = EncryptedBackup.create(mapOf("notes/a.json" to byteArrayOf(1)), password)
+        assertThrows(IllegalArgumentException::class.java) {
+            EncryptedBackup.restore(encrypted, "short".toCharArray())
+        }
+    }
+
     @Test fun truncatedCiphertextFailsAuthentication() {
         val encrypted = EncryptedBackup.create(mapOf("notes/a.json" to byteArrayOf(1, 2, 3)), password)
         val truncated = encrypted.copyOfRange(0, encrypted.size - 1)
