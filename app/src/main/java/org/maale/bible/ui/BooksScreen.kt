@@ -178,7 +178,7 @@ private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> 
     Card(
         modifier = Modifier.fillMaxWidth().clickable(role = Role.Button, onClick = onClick)
             .testTag("book_card_" + book.usfmId)
-            .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName; role = Role.Button },
+            .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName },
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
