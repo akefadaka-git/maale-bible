@@ -103,7 +103,7 @@ object StudyDataKeyStore {
     private fun isLegacySqlite(file: File): Boolean = runCatching {
         file.inputStream().use { input ->
             val header = ByteArray(16)
-            input.read(header) == 16 && String(header, Charsets.US_ASCII) == "SQLite format 3\\u0000"
+            input.read(header) == 16 && String(header, Charsets.US_ASCII) == "SQLite format 3\u0000"
         }
     }.getOrDefault(false)
 }
