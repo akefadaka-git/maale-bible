@@ -26,11 +26,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -147,13 +142,9 @@ private fun HomeHeader() {
 @Composable
 private fun LivingWordHero(onOpenBooks: () -> Unit) {
     val shape = RoundedCornerShape(28.dp)
-    val orbitTransition = rememberInfiniteTransition(label = "livingWordOrbit")
-    val orbitAlpha by orbitTransition.animateFloat(
-        initialValue = 0.22f,
-        targetValue = 0.62f,
-        animationSpec = infiniteRepeatable(tween(durationMillis = 2600), repeatMode = RepeatMode.Reverse),
-        label = "livingWordOrbitAlpha"
-    )
+    // Keep decorative artwork static: an endless animation prevents UI-test and
+    // accessibility idling resources from reaching a stable idle state.
+    val orbitAlpha = 0.42f
     Box(
         modifier = Modifier
             .fillMaxWidth()
