@@ -1,79 +1,75 @@
 # Source Verification Procedure
 
-## 1. Authorized source and edition
+## 1. Selected source and A2 disposition
 
-Target: 2008 Maale Full Bible, MDYTWF / mdyeth, language mdy, Ethiopic script. Exact USFM package: `https://ebible.org/Scriptures/mdyeth_usfm.zip`.
+Target: 2008 Maale Full Bible, `MDYTWF / mdyeth`, language `mdy`, Ethiopic script. Exact USFM package: `https://ebible.org/Scriptures/mdyeth_usfm.zip`.
 
-The Owner has reaffirmed full authorization for acquisition of this exact archive into an isolated, non-public workspace, hashing, ZIP metadata preflight, safe extraction, inspection of USFM structure/encoding, structural and Unicode validation, specialist review, and creation of the immutable A2 baseline. Do not ask again for authorization for these listed A2 operations.
+**A2 source-readiness status:** CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION. Owner acceptance was recorded on 2026-11-07; the original archive was independently rechecked on 2026-11-12.
 
-This does not authorize committing raw scripture content to the public repository, production content intake/distribution, audio or third-party assets, or A3 implementation.
+The Owner authorized acquisition of this exact archive into an isolated, non-public workspace, hashing, ZIP metadata preflight, safe extraction, inspection of USFM structure/encoding, structural and Unicode validation, specialist review, and creation of the immutable A2 baseline. No further authorization request is required for those listed A2 operations.
 
-## 2. Rights and edition evidence
+This does not authorize committing raw scripture content to the public repository, production content intake/distribution, audio or third-party assets, or production release.
 
-The Owner supplied a written rights-holder response stating that MDYTWF / mdyeth is the 2008 Full Bible jointly held by The Word for the World International and the Bible Society of Ethiopia, and that the exact eBible USFM package is covered by CC BY-SA 4.0.
+## 2. Edition and rights evidence
 
-The official eBible edition record independently lists:
-- 2008 Maale Full Bible, MDYTWF / mdyeth.
-- Copyright attribution to both rights holders.
-- CC BY-SA 4.0 licence terms.
-- The USFM format and `mdyeth_usfm.zip` package.
+The Owner supplied a written rights-holder response stating that MDYTWF / mdyeth is the 2008 Full Bible jointly held by The Word for the World International and the Bible Society of Ethiopia, and that the exact eBible USFM package is covered by CC BY-SA 4.0. The response also distinguishes the separate 2007 MDYBSE Maale New Testament.
 
-The distinct 2007 MDYBSE Maale New Testament remains a separate work and its catalogue status must not be applied to MDYTWF.
+The official eBible edition record corroborates the 2008 Full Bible, identifiers, rights holders, public licence and package. Original email headers and signatory authority have not been independently authenticated in this repository; this remains a documentary caveat.
 
-## 3. Approved canon and expected inventory
+## 3. Approved inventory and source baseline
 
-The official edition-specific PDF directory at `https://ebible.org/pdf/mdyeth/` enumerates one book-level PDF for each of 66 USFM book identifiers, in order from GEN through REV, with no additional deuterocanonical book entries. The Owner-approved A2 expected book inventory is recorded in [CANDIDATE_CANON_INVENTORY.md](CANDIDATE_CANON_INVENTORY.md) and its JSON companion.
+The Owner-approved 66-book expected inventory is recorded in [CANDIDATE_CANON_INVENTORY.md](CANDIDATE_CANON_INVENTORY.md) and `content/manifests/candidate-book-inventory.json`.
 
-Validate the actual USFM archive against this inventory. Any mismatch is a validation failure requiring investigation; do not silently modify the approved inventory. Maale book-name orthography remains subject to language specialist review.
+The accepted metadata-only baseline is:
+- `content/manifests/maale-source-baseline-manifest.json`
+- `content/manifests/maale-usfm-file-hashes.json`
+
+The baseline records the exact archive digest, signed checksum evidence, per-file hashes and structural/encoding metadata. It contains no scripture text. ZIP member order is non-semantic; application display order follows the Owner-approved inventory.
 
 ## 4. Acquisition and chain of custody
 
-Download only the exact package URL above into an isolated workspace outside the repository checkout. Record:
-- Exact source URL and UTC retrieval timestamp.
-- Original filename, content type and byte size.
-- SHA-256 of the untouched archive before processing.
-- Tool/runtime versions and exact commands.
-- Storage location and access controls.
-- Every extracted path, size, format and SHA-256.
-- Custody events and validation report identifiers.
+- Exact archive: `mdyeth_usfm.zip`.
+- Owner-provided upload; acquired/inspected 2026-11-07.
+- Archive size: 1,809,863 bytes.
+- Archive SHA-256: `4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11`.
+- Source content revision: 2025-05-13.
+- Package generation: 2026-10-30 05:20:45 UTC.
+- Preserve the original archive unchanged in restricted, non-public storage.
+- Never commit the archive or extracted scripture files to the public repository.
 
-Preserve the original archive unchanged. Never commit the archive or extracted scripture files to the public repository.
+## 5. ZIP preflight, signature and integrity
 
-## 5. ZIP preflight and safe extraction
+The archive contains 70 entries: 66 USFM files and four supporting files. ZIP CRC/integrity passed. The package's clear-signed checksum list has 68 entries; GPG reports GOOD SIGNATURE. All 68 signed checksums match, including 66/66 USFM files.
 
-Run:
-
-    python tools/archive_preflight.py mdyeth_usfm.zip --output preflight-report.json
-
-The tool reads ZIP central-directory metadata and hashes the archive; it does not extract files or emit member contents. It fails closed on traversal, absolute/drive-qualified/backslash paths, duplicate normalized paths, symlinks/special files, encryption, nested archives, resource limits and corrupt archives.
-
-Only after PASS, extract into a new empty isolated directory with path-containment checks and no overwrite. Never execute archive members or extract into a repository checkout.
+Signing-key fingerprint: `54D714D76956DA6673DC1EEA5F62009D93505F26`. GPG trust is UNDEFINED in the isolated keyring; cryptographic validity is confirmed, signer identity certification is not.
 
 ## 6. Structural and character validation
 
-1. Inventory every package member and hash it.
-2. Validate each USFM book ID against the approved 66-book inventory; fail on missing, extra, duplicate or out-of-order books.
-3. Parse USFM markers and validate chapter/verse structure, duplicate markers and numeric continuity where supported by trusted references.
-4. Record strict decoding, declared/detected encoding, replacement characters, control/format/private-use/unassigned characters, Unicode normalization observations and Ethiopic code-point diagnostics.
-5. Never normalize original source bytes in place.
-6. Complete Maale orthography and Ethiopic-script review with named specialists.
-7. Independently reproduce the technical diagnostics.
-8. Build and freeze the immutable source manifest only after all findings are resolved or explicitly dispositioned.
+- 66/66 approved book IDs; missing, extra and duplicate IDs: zero.
+- 1,189 chapters, contiguous from chapter 1 in every book.
+- 30,506 verse-marker lines; 31,102 represented verse spans including ranges.
+- Zero chapters without verse markers.
+- Strict UTF-8 valid in 66/66 files.
+- Zero replacement characters, non-NFC files and unexpected control characters.
+- Ethiopic-range code points: 2,108,248.
 
-Logs and public repository records must avoid verse excerpts and scripture text; use issue codes, counts, paths and code-point identifiers.
+The independent recheck on 2026-11-12 reproduced the archive SHA-256, ZIP CRC, signed checksums, per-file hashes, inventory and aggregate structure. These diagnostics do not establish translation accuracy, Maale orthography, linguistic quality or theological correctness.
 
-## 7. Current retrieval result
+## 7. Specialist review and residual risks
 
-The official edition record and 66-book PDF index were retrieved. The exact USFM ZIP endpoint was then attempted, but the execution environment could not resolve/reach the eBible host. Browser automation was unavailable because its connected wallet reported an insufficient balance; no payment is requested from the Owner. Therefore no archive bytes, SHA-256, extraction inventory or real-source validation result are claimed. Resume by retrieving the same exact URL; do not substitute MDYBSE or a different edition/package.
+The named Maale-language/Ethiopic-script specialist review remains **DEFERRED — OWNER-ACCEPTED RESIDUAL RISK**. No specialist review or sign-off is claimed. The Owner accepted this exception on 2026-11-07.
 
-## 8. Synthetic evidence and phase status
+The original rights-holder email headers and signatory authority remain a documentary caveat. The GPG signing-key trust state remains UNDEFINED. Product/release implementation of attribution, modification notices, ShareAlike treatment, export notices and separate asset clearance remains governed by `docs/licensing/LICENCE_COMPLIANCE_CONTROLS.md`.
 
-- ZIP metadata preflight suite: 14/14 synthetic tests PASS.
-- USFM audit suite: 12/12 synthetic tests PASS.
-- Candidate inventory JSON: 66 unique IDs, contiguous order 1–66.
-- Real archive preflight, extraction and audit: NOT RUN — technical retrieval blocker.
-- Real-source character validation and specialist review: NOT RUN.
-- Immutable baseline: NOT CREATED.
-- CI/workflow: NOT RUN.
+## 8. Binding restrictions
 
-See [A2 Completion and Blocker Register](A2_COMPLETION_AND_BLOCKER_REGISTER.md). A2 remains open until real-source validation and immutable baseline evidence pass. A1 remains CLOSED — FINAL.
+- `content_intake_authorized=false` remains in force.
+- No raw scripture, source archive, USFM/USX, excerpts or derived scripture datasets in the public repository.
+- No production ingestion or distribution without separate Owner authorization.
+- Audio and third-party assets remain separately rights-gated.
+- No unreviewed source transformations.
+- A2 closure does not authorize signing, release, deployment or publication.
+
+## 9. Final closure record
+
+See [A2 Final Source-Readiness Closure Record](A2_FINAL_CLOSURE_RECORD_2026-11-12.md) and [A2 Completion and Blocker Register](A2_COMPLETION_AND_BLOCKER_REGISTER.md).

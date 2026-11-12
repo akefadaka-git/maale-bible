@@ -38,23 +38,21 @@ The tests now cover:
 
 All fixtures use placeholder text. No scripture source package was acquired or inspected.
 
-## Verification status
+## Verification status — superseded by A2 closure
 
-- Branch created from the verified main SHA: VERIFIED.
-- Implementation files committed to the review branch: VERIFIED by GitHub commit responses.
-- Source re-fetch and full diff review: PENDING after the current corrective commit.
-- Prior pinned-head Python execution: 11 tests passed, exit code 0; the corrective regression test requires a fresh exact-head run.
-- CI/workflow execution: NOT RUN.
-- Real Maale source validation: NOT RUN; source acquisition remains blocked.
-- Rights gate: BLOCKED / UNRESOLVED.
-- Content intake authorization: FALSE.
+The historical implementation status below is superseded by the exact-head and real-source evidence recorded in the A2 closure documents.
 
-Do not describe tests as passing until they are executed. No CI workflow was initiated.
+- Corrective manifest/book-ID regression: merged through PR #49.
+- Current A2 tooling suite: 27 tests passed on run [#43199212983](https://github.com/akefadaka-git/maale-bible/actions/runs/43199212983), tested SHA `b54146c62b9a6e1fc9a530eab9eaed16535800e5`.
+- Real Maale source validation: PASS; see the 2026-11-07 report and 2026-11-12 independent re-verification.
+- Rights/edition gate: PASS — DOCUMENTARY, with email/signatory authentication caveat.
+- Content intake authorization: FALSE and remains binding.
+- Specialist language/script review: deferred and Owner-accepted; not passed.
 
 ## Schema/runtime contract
 
 The expected-inventory schema explicitly documents that duplicate `books[].book_id` values are an application-level constraint. JSON Schema `uniqueItems` compares whole array items and cannot enforce uniqueness by a selected object property in this schema. The runtime validator rejects duplicate IDs with `INVENTORY_BOOK_ID_DUPLICATE`; the synthetic suite contains a regression test proving the fail-closed behavior. Consumers must run the audit engine in addition to schema validation.
 
-## Remaining gate
+## Current disposition
 
-Re-fetch the corrective branch head and execute the complete synthetic suite against that exact SHA. Keep the rights gate blocked pending written rights reconciliation and separate Owner approval.
+A2 source-readiness is CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION. The historical implementation blockers above have been superseded by the A2 final closure record. The specialist review and application licence controls remain later release risks; content intake remains false.

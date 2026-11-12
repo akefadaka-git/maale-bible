@@ -82,4 +82,4 @@ No content-bearing build may be released until:
 5. A reviewer independent of the implementation checks attribution, licence link, modification notice, ShareAlike treatment, and asset boundaries.
 6. The Owner approves the immutable content baseline and release.
 
-Current state: controls specified; none are represented as implemented or verified in an application. A2 remains in progress.
+Current state: controls specified; none are represented as implemented or verified in an application. The A2 source-readiness baseline is closed with an explicit specialist-review exception. LIC-01 through LIC-10 remain separate product/release implementation gates and must pass before a content-bearing release.
