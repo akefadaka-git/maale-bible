@@ -68,12 +68,21 @@ class StudyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null,
     private fun planValues(p: ReadingPlan)=ContentValues().apply { put("id",p.id);put("title",p.title);put("start_day",p.startDateEpochDay);put("duration_days",p.durationDays);put("completed_days",p.completedDays.sorted().joinToString(","));put("updated_at",p.updatedAtEpochMs) }
 
     override fun exportBackup(): String {
+        // Hold one read transaction so every table comes from the same SQLite snapshot.
+        val db = readableDatabase
+        db.beginTransaction()
+        try {
         val root=JSONObject().put("format","maale-bible-study-backup").put("version",1)
         getReadingPosition()?.let { root.put("readingPosition",JSONObject().put("bookId",it.bookId).put("chapter",it.chapter).put("verse",it.verse).put("updatedAt",it.updatedAtEpochMs)) }
         root.put("bookmarks",JSONArray().also { a -> getBookmarks().forEach { a.put(JSONObject().put("id",it.id).put("bookId",it.bookId).put("chapter",it.chapter).put("verse",it.verse).put("createdAt",it.createdAtEpochMs).put("label",it.label)) } })
         root.put("annotations",JSONArray().also { a -> getAnnotations().forEach { a.put(JSONObject().put("id",it.id).put("bookId",it.bookId).put("chapter",it.chapter).put("verse",it.verse).put("kind",it.kind.name).put("body",it.body).put("color",it.color).put("createdAt",it.createdAtEpochMs).put("updatedAt",it.updatedAtEpochMs)) } })
         root.put("plans",JSONArray().also { a -> getPlans().forEach { p -> a.put(JSONObject().put("id",p.id).put("title",p.title).put("startDay",p.startDateEpochDay).put("durationDays",p.durationDays).put("completedDays",JSONArray(p.completedDays.sorted())).put("updatedAt",p.updatedAtEpochMs)) } })
-        return root.toString()
+        val snapshot = root.toString()
+        db.setTransactionSuccessful()
+        return snapshot
+        } finally {
+            db.endTransaction()
+        }
     }
 
     override fun restoreBackup(json: String) {
