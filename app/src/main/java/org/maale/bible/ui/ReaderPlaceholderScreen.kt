@@ -101,17 +101,18 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             planTitle="";refresh++
         },enabled=planTitle.isNotBlank()) { Text("Create plan") }
         plans.forEach { plan ->
-            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
-                Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days completed")
+            Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+                Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days · ${plan.completionPercent()}%", style = MaterialTheme.typography.titleSmall)
                 val today = LocalDate.now().toEpochDay()
-                plan.schedule(today).take(7).forEach { day ->
+                val schedule = plan.schedule(today)
+                schedule.take(7).forEach { day ->
                     Text("Day ${day.dayNumber} · ${LocalDate.ofEpochDay(day.dueEpochDay)} · ${day.status.name.lowercase()}", style = MaterialTheme.typography.bodySmall)
                 }
+                val dueDay = schedule.firstOrNull { it.status == PlanDayStatus.DUE || it.status == PlanDayStatus.OVERDUE }
                 TextButton(onClick={
-                    val nextDay=(1..plan.durationDays).firstOrNull { it !in plan.completedDays }
-                    if(nextDay!=null) repository.savePlan(plan.copy(completedDays=plan.completedDays+nextDay,updatedAtEpochMs=System.currentTimeMillis()))
+                    if (dueDay != null) repository.savePlan(plan.withDayCompleted(dueDay.dayNumber, System.currentTimeMillis()))
                     refresh++
-                },enabled=plan.completedDays.size<plan.durationDays) { Text("Complete day") }
+                },enabled=dueDay != null) { Text(if (dueDay == null) "No day due today" else "Complete day ${dueDay.dayNumber}") }
             }
         }
         Spacer(Modifier.weight(1f))
