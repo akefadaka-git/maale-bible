@@ -85,8 +85,8 @@ internal object LegacyStudyDatabaseMigration {
             try {
                 val expected = linkedMapOf<String, Int>()
                 TABLES.forEach { table ->
-                    check(tableExists(source, table)) { "Legacy database is missing required table: $table" }
-                    expected[table] = copyTable(source, encrypted, table)
+                    // Historical v1 stores may predate some v2 tables; create the full destination schema but copy only existing tables.
+                    expected[table] = if (tableExists(source, table)) copyTable(source, encrypted, table) else 0
                 }
                 encrypted.setTransactionSuccessful()
                 encrypted.endTransaction()
