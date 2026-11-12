@@ -1,8 +1,6 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.hasContentDescription
-import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -10,6 +8,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
@@ -35,8 +34,11 @@ class P2V6NavigationSmokeTest {
         awaitText("Explore the Bible")
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("Books of the Maale Bible")
-        composeRule.onNodeWithTag("books_list").performScrollToNode(hasContentDescription("Open Genesis"))
-        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
+        composeRule.onNodeWithTag("books_search").performTextInput("GEN")
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithText("Genesis").fetchSemanticsNodes().isNotEmpty()
+        }
+        composeRule.onNodeWithTag("book_card_GEN").performClick()
         awaitText("Bible book learning centre")
     }
 
@@ -136,7 +138,12 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
         composeRule.onNodeWithText("መጻሕፍት").performClick()
-        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
+        composeRule.onNodeWithTag("books_list").assertIsDisplayed()
+        composeRule.onNodeWithTag("books_search").performTextInput("GEN")
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithText("Genesis").fetchSemanticsNodes().isNotEmpty()
+        }
+        composeRule.onNodeWithTag("book_card_GEN").performClick()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
         composeRule.onNodeWithText("የውስጥ ረቂቅ ነው — ለህትመት አልጸደቀም። የእንግሊዝኛ አርትዖትና የአማርኛ ቋንቋ ግምገማ ገና ያስፈልጋሉ።").performScrollTo().assertIsDisplayed()
