@@ -42,7 +42,7 @@ object StudyDataKeyStore {
             "Recovery target must be empty; existing data is never overwritten"
         }
         val prefs = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        prefs.edit().clear().commit()
+        check(prefs.edit().clear().commit()) { "Could not clear previous local key wrapper before recovery" }
         keyStore().let { if (it.containsAlias(ALIAS)) it.deleteEntry(ALIAS) }
         wrap(app, dek)
     }
