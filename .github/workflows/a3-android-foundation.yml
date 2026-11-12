@@ -25,7 +25,9 @@ permissions:
   contents: read
 jobs:
   android-foundation:
-    runs-on: ubuntu-24.04
+    # Ubuntu 22.04 avoids the observed Ubuntu 24.04 emulator boot timeout
+    # on this runner/action combination; app build and test scope is unchanged.
+    runs-on: ubuntu-22.04
     timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
@@ -42,4 +44,5 @@ jobs:
           api-level: 35
           target: google_apis
           arch: x86_64
+          emulator-boot-timeout: 900
           script: ./gradlew --no-daemon --max-workers=2 --console=plain :app:connectedDebugAndroidTest
