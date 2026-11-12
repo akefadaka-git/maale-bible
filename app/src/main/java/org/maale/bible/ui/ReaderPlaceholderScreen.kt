@@ -12,6 +12,7 @@ import org.maale.bible.data.catalog.CanonicalBookCatalog
 import org.maale.bible.domain.model.*
 import org.maale.bible.domain.repository.StudyRepository
 import java.util.UUID
+import java.time.LocalDate
 
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
@@ -102,6 +103,10 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         plans.forEach { plan ->
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
                 Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days completed")
+                val today = LocalDate.now().toEpochDay()
+                plan.schedule(today).take(7).forEach { day ->
+                    Text("Day ${day.dayNumber} · ${LocalDate.ofEpochDay(day.dueEpochDay)} · ${day.status.name.lowercase()}", style = MaterialTheme.typography.bodySmall)
+                }
                 TextButton(onClick={
                     val nextDay=(1..plan.durationDays).firstOrNull { it !in plan.completedDays }
                     if(nextDay!=null) repository.savePlan(plan.copy(completedDays=plan.completedDays+nextDay,updatedAtEpochMs=System.currentTimeMillis()))
