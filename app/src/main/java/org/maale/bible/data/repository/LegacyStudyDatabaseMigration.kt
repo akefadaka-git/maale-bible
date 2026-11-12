@@ -54,7 +54,17 @@ internal object LegacyStudyDatabaseMigration {
             // Open/close legacy DB first to checkpoint any committed WAL content.
             val source = PlainSQLiteDatabase.openDatabase(live.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE)
             try {
-                runCatching { source.rawQuery("PRAGMA wal_checkpoint(FULL)", null).use { while (it.moveToNext()) Unit } }
+                val journalMode = source.rawQuery("PRAGMA journal_mode", null).use {
+                    check(it.moveToFirst()) { "Unable to determine legacy journal mode" }
+                    it.getString(0)
+                }
+                if (journalMode.equals("wal", true)) {
+                    val checkpointed = source.rawQuery("PRAGMA wal_checkpoint(TRUNCATE)", null).use { result ->
+                        check(result.moveToFirst()) { "Unable to checkpoint legacy WAL" }
+                        result.getInt(0) == 0 && result.getInt(1) == result.getInt(2)
+                    }
+                    check(checkpointed) { "Legacy WAL is busy or incomplete; refusing data-loss migration" }
+                }
                 buildEncryptedCopy(source, temp, dek)
             } finally {
                 source.close()
