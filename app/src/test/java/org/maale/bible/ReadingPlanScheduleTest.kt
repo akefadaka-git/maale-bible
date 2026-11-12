@@ -7,7 +7,7 @@ import org.maale.bible.domain.model.*
 class ReadingPlanScheduleTest {
     @Test fun scheduleUsesPersistedStartDateAndMarksDueOverdueAndCompletedDays() {
         val plan = ReadingPlan("p1", "Seven days", 20L, 7, setOf(1, 3), 100L)
-        val schedule = plan.schedule(todayEpochDay = 22L)
+        val schedule = plan.schedule(todayEpochDay = 23L)
         assertEquals(PlanDayStatus.COMPLETED, schedule[0].status)
         assertEquals(PlanDayStatus.OVERDUE, schedule[1].status)
         assertEquals(PlanDayStatus.COMPLETED, schedule[2].status)
