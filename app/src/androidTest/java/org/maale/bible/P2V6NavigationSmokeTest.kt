@@ -6,12 +6,15 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -35,8 +38,8 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("Books of the Maale Bible")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.onNodeWithContentDescription("Open Genesis").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithTag("book_card_GEN").performClick()
+        composeRule.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_card_GEN"))
+        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
         awaitText("Bible book learning centre")
     }
 
@@ -132,32 +135,28 @@ class P2V6NavigationSmokeTest {
     }
 
     @Test
-    fun bookLearningCentreUsesAmharicAndEnglishResources() {
+    fun bookLearningCentreKeepsDraftLearningContentUnavailableInBothLocales() {
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
         composeRule.onNodeWithText("መጻሕፍት").performClick()
         composeRule.onNodeWithTag("books_list").assertIsDisplayed()
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.onNodeWithContentDescription("Open Genesis").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithTag("book_card_GEN").performClick()
+        composeRule.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_card_GEN"))
+        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
-        composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
-        composeRule.onNodeWithText("የውስጥ ረቂቅ ነው — ለህትመት አልጸደቀም። የእንግሊዝኛ አርትዖትና የአማርኛ ቋንቋ ግምገማ ገና ያስፈልጋሉ።").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
         composeRule.onNodeWithText("ፈተና").performClick()
-        composeRule.onNodeWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("ሰማይንና ምድርን መፍጠርና ሥርዓት ማስያዝ").performScrollTo().performClick()
-        composeRule.onNodeWithText("መልሱን አረጋግጥ").performScrollTo().performClick()
-        composeRule.onNodeWithText("ትክክል").assertIsDisplayed()
+        composeRule.onNodeWithText("ፈተናው ገና አልተዘጋጀም").assertIsDisplayed()
+        assertTrue(composeRule.onAllNodesWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").fetchSemanticsNodes().isEmpty())
+        assertTrue(composeRule.onAllNodesWithText("መልሱን አረጋግጥ").fetchSemanticsNodes().isEmpty())
 
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_english").performClick()
         composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
-        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
         composeRule.onNodeWithText("Quiz").performClick()
-        composeRule.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("Creating and ordering the heavens and the earth").performScrollTo().performClick()
-        composeRule.onNodeWithText("Check answer").performScrollTo().performClick()
-        composeRule.onNodeWithText("Correct").assertIsDisplayed()
+        composeRule.onNodeWithText("Quiz not yet available").assertIsDisplayed()
+        assertTrue(composeRule.onAllNodesWithText("According to Genesis 1, what does the opening chapter present God doing?").fetchSemanticsNodes().isEmpty())
+        assertTrue(composeRule.onAllNodesWithText("Check answer").fetchSemanticsNodes().isEmpty())
     }
 
 }
