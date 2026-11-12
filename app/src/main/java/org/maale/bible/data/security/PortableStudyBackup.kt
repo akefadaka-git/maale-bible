@@ -38,8 +38,12 @@ object PortableStudyBackup {
         val kek = derive(secret, salt)
         try {
             val wrappedDek = aesGcm(Cipher.ENCRYPT_MODE, kek, wrapNonce, "$aad|dek", dek)
-            val encryptedPayload = aesGcm(Cipher.ENCRYPT_MODE, dek, dataNonce, "$aad|payload",
-                database.exportBackup().toByteArray(Charsets.UTF_8))
+            val payloadPlaintext = database.exportBackup().toByteArray(Charsets.UTF_8)
+            val encryptedPayload = try {
+                aesGcm(Cipher.ENCRYPT_MODE, dek, dataNonce, "$aad|payload", payloadPlaintext)
+            } finally {
+                payloadPlaintext.fill(0)
+            }
             return JSONObject().put("format", FORMAT).put("version", VERSION).put("schema", SCHEMA)
                 .put("kdf", "argon2id").put("memoryKiB", MEMORY_KIB)
                 .put("iterations", ITERATIONS).put("parallelism", PARALLELISM)
@@ -80,7 +84,12 @@ object PortableStudyBackup {
             dek = aesGcm(Cipher.DECRYPT_MODE, kek, wrapNonce, "$aad|dek", wrappedDek)
             require(dek.size == 32) { "Invalid recovered database key" }
             try {
-                plaintext = String(aesGcm(Cipher.DECRYPT_MODE, dek, dataNonce, "$aad|payload", payload), Charsets.UTF_8)
+                val decryptedPayload = aesGcm(Cipher.DECRYPT_MODE, dek, dataNonce, "$aad|payload", payload)
+                try {
+                    plaintext = String(decryptedPayload, Charsets.UTF_8)
+                } finally {
+                    decryptedPayload.fill(0)
+                }
             } catch (failure: Throwable) {
                 dek.fill(0)
                 throw failure
@@ -102,6 +111,19 @@ object PortableStudyBackup {
             finally { verify.close() }
         } catch (failure: Throwable) {
             SQLiteDatabase.deleteDatabase(dbFile)
+            listOf("-wal", "-shm", "-journal").forEach { suffix ->
+                val sidecar = java.io.File(dbFile.path + suffix)
+                if (sidecar.exists()) sidecar.delete()
+            }
+            val remnants = listOf(dbFile, java.io.File(dbFile.path + "-wal"),
+                java.io.File(dbFile.path + "-shm"), java.io.File(dbFile.path + "-journal"))
+            if (remnants.none { it.exists() }) {
+                StudyDataKeyStore.clearRecoveredAfterFailedRestore(app)
+            } else {
+                failure.addSuppressed(IllegalStateException(
+                    "Failed restore left database files; recovered key was retained to avoid orphaning encrypted data"
+                ))
+            }
             throw failure
         } finally {
             dek.fill(0)
