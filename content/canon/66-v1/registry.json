@@ -1,0 +1,407 @@
+{
+  "canon_id": "maale-bible:canon:66-v1",
+  "version": 1,
+  "status": "FROZEN",
+  "description": "Project-owned 66-book Protestant canon registry; book IDs use standard USFM identifiers. This registry defines identity/order only, not edition versification.",
+  "book_count": 66,
+  "old_testament_count": 39,
+  "new_testament_count": 27,
+  "books": [
+    {
+      "order": 1,
+      "usfm_id": "GEN",
+      "canonical_name": "Genesis",
+      "testament": "OT"
+    },
+    {
+      "order": 2,
+      "usfm_id": "EXO",
+      "canonical_name": "Exodus",
+      "testament": "OT"
+    },
+    {
+      "order": 3,
+      "usfm_id": "LEV",
+      "canonical_name": "Leviticus",
+      "testament": "OT"
+    },
+    {
+      "order": 4,
+      "usfm_id": "NUM",
+      "canonical_name": "Numbers",
+      "testament": "OT"
+    },
+    {
+      "order": 5,
+      "usfm_id": "DEU",
+      "canonical_name": "Deuteronomy",
+      "testament": "OT"
+    },
+    {
+      "order": 6,
+      "usfm_id": "JOS",
+      "canonical_name": "Joshua",
+      "testament": "OT"
+    },
+    {
+      "order": 7,
+      "usfm_id": "JDG",
+      "canonical_name": "Judges",
+      "testament": "OT"
+    },
+    {
+      "order": 8,
+      "usfm_id": "RUT",
+      "canonical_name": "Ruth",
+      "testament": "OT"
+    },
+    {
+      "order": 9,
+      "usfm_id": "1SA",
+      "canonical_name": "1 Samuel",
+      "testament": "OT"
+    },
+    {
+      "order": 10,
+      "usfm_id": "2SA",
+      "canonical_name": "2 Samuel",
+      "testament": "OT"
+    },
+    {
+      "order": 11,
+      "usfm_id": "1KI",
+      "canonical_name": "1 Kings",
+      "testament": "OT"
+    },
+    {
+      "order": 12,
+      "usfm_id": "2KI",
+      "canonical_name": "2 Kings",
+      "testament": "OT"
+    },
+    {
+      "order": 13,
+      "usfm_id": "1CH",
+      "canonical_name": "1 Chronicles",
+      "testament": "OT"
+    },
+    {
+      "order": 14,
+      "usfm_id": "2CH",
+      "canonical_name": "2 Chronicles",
+      "testament": "OT"
+    },
+    {
+      "order": 15,
+      "usfm_id": "EZR",
+      "canonical_name": "Ezra",
+      "testament": "OT"
+    },
+    {
+      "order": 16,
+      "usfm_id": "NEH",
+      "canonical_name": "Nehemiah",
+      "testament": "OT"
+    },
+    {
+      "order": 17,
+      "usfm_id": "EST",
+      "canonical_name": "Esther",
+      "testament": "OT"
+    },
+    {
+      "order": 18,
+      "usfm_id": "JOB",
+      "canonical_name": "Job",
+      "testament": "OT"
+    },
+    {
+      "order": 19,
+      "usfm_id": "PSA",
+      "canonical_name": "Psalms",
+      "testament": "OT"
+    },
+    {
+      "order": 20,
+      "usfm_id": "PRO",
+      "canonical_name": "Proverbs",
+      "testament": "OT"
+    },
+    {
+      "order": 21,
+      "usfm_id": "ECC",
+      "canonical_name": "Ecclesiastes",
+      "testament": "OT"
+    },
+    {
+      "order": 22,
+      "usfm_id": "SNG",
+      "canonical_name": "Song of Songs",
+      "testament": "OT"
+    },
+    {
+      "order": 23,
+      "usfm_id": "ISA",
+      "canonical_name": "Isaiah",
+      "testament": "OT"
+    },
+    {
+      "order": 24,
+      "usfm_id": "JER",
+      "canonical_name": "Jeremiah",
+      "testament": "OT"
+    },
+    {
+      "order": 25,
+      "usfm_id": "LAM",
+      "canonical_name": "Lamentations",
+      "testament": "OT"
+    },
+    {
+      "order": 26,
+      "usfm_id": "EZK",
+      "canonical_name": "Ezekiel",
+      "testament": "OT"
+    },
+    {
+      "order": 27,
+      "usfm_id": "DAN",
+      "canonical_name": "Daniel",
+      "testament": "OT"
+    },
+    {
+      "order": 28,
+      "usfm_id": "HOS",
+      "canonical_name": "Hosea",
+      "testament": "OT"
+    },
+    {
+      "order": 29,
+      "usfm_id": "JOL",
+      "canonical_name": "Joel",
+      "testament": "OT"
+    },
+    {
+      "order": 30,
+      "usfm_id": "AMO",
+      "canonical_name": "Amos",
+      "testament": "OT"
+    },
+    {
+      "order": 31,
+      "usfm_id": "OBA",
+      "canonical_name": "Obadiah",
+      "testament": "OT"
+    },
+    {
+      "order": 32,
+      "usfm_id": "JON",
+      "canonical_name": "Jonah",
+      "testament": "OT"
+    },
+    {
+      "order": 33,
+      "usfm_id": "MIC",
+      "canonical_name": "Micah",
+      "testament": "OT"
+    },
+    {
+      "order": 34,
+      "usfm_id": "NAM",
+      "canonical_name": "Nahum",
+      "testament": "OT"
+    },
+    {
+      "order": 35,
+      "usfm_id": "HAB",
+      "canonical_name": "Habakkuk",
+      "testament": "OT"
+    },
+    {
+      "order": 36,
+      "usfm_id": "ZEP",
+      "canonical_name": "Zephaniah",
+      "testament": "OT"
+    },
+    {
+      "order": 37,
+      "usfm_id": "HAG",
+      "canonical_name": "Haggai",
+      "testament": "OT"
+    },
+    {
+      "order": 38,
+      "usfm_id": "ZEC",
+      "canonical_name": "Zechariah",
+      "testament": "OT"
+    },
+    {
+      "order": 39,
+      "usfm_id": "MAL",
+      "canonical_name": "Malachi",
+      "testament": "OT"
+    },
+    {
+      "order": 40,
+      "usfm_id": "MAT",
+      "canonical_name": "Matthew",
+      "testament": "NT"
+    },
+    {
+      "order": 41,
+      "usfm_id": "MRK",
+      "canonical_name": "Mark",
+      "testament": "NT"
+    },
+    {
+      "order": 42,
+      "usfm_id": "LUK",
+      "canonical_name": "Luke",
+      "testament": "NT"
+    },
+    {
+      "order": 43,
+      "usfm_id": "JHN",
+      "canonical_name": "John",
+      "testament": "NT"
+    },
+    {
+      "order": 44,
+      "usfm_id": "ACT",
+      "canonical_name": "Acts",
+      "testament": "NT"
+    },
+    {
+      "order": 45,
+      "usfm_id": "ROM",
+      "canonical_name": "Romans",
+      "testament": "NT"
+    },
+    {
+      "order": 46,
+      "usfm_id": "1CO",
+      "canonical_name": "1 Corinthians",
+      "testament": "NT"
+    },
+    {
+      "order": 47,
+      "usfm_id": "2CO",
+      "canonical_name": "2 Corinthians",
+      "testament": "NT"
+    },
+    {
+      "order": 48,
+      "usfm_id": "GAL",
+      "canonical_name": "Galatians",
+      "testament": "NT"
+    },
+    {
+      "order": 49,
+      "usfm_id": "EPH",
+      "canonical_name": "Ephesians",
+      "testament": "NT"
+    },
+    {
+      "order": 50,
+      "usfm_id": "PHP",
+      "canonical_name": "Philippians",
+      "testament": "NT"
+    },
+    {
+      "order": 51,
+      "usfm_id": "COL",
+      "canonical_name": "Colossians",
+      "testament": "NT"
+    },
+    {
+      "order": 52,
+      "usfm_id": "1TH",
+      "canonical_name": "1 Thessalonians",
+      "testament": "NT"
+    },
+    {
+      "order": 53,
+      "usfm_id": "2TH",
+      "canonical_name": "2 Thessalonians",
+      "testament": "NT"
+    },
+    {
+      "order": 54,
+      "usfm_id": "1TI",
+      "canonical_name": "1 Timothy",
+      "testament": "NT"
+    },
+    {
+      "order": 55,
+      "usfm_id": "2TI",
+      "canonical_name": "2 Timothy",
+      "testament": "NT"
+    },
+    {
+      "order": 56,
+      "usfm_id": "TIT",
+      "canonical_name": "Titus",
+      "testament": "NT"
+    },
+    {
+      "order": 57,
+      "usfm_id": "PHM",
+      "canonical_name": "Philemon",
+      "testament": "NT"
+    },
+    {
+      "order": 58,
+      "usfm_id": "HEB",
+      "canonical_name": "Hebrews",
+      "testament": "NT"
+    },
+    {
+      "order": 59,
+      "usfm_id": "JAS",
+      "canonical_name": "James",
+      "testament": "NT"
+    },
+    {
+      "order": 60,
+      "usfm_id": "1PE",
+      "canonical_name": "1 Peter",
+      "testament": "NT"
+    },
+    {
+      "order": 61,
+      "usfm_id": "2PE",
+      "canonical_name": "2 Peter",
+      "testament": "NT"
+    },
+    {
+      "order": 62,
+      "usfm_id": "1JN",
+      "canonical_name": "1 John",
+      "testament": "NT"
+    },
+    {
+      "order": 63,
+      "usfm_id": "2JN",
+      "canonical_name": "2 John",
+      "testament": "NT"
+    },
+    {
+      "order": 64,
+      "usfm_id": "3JN",
+      "canonical_name": "3 John",
+      "testament": "NT"
+    },
+    {
+      "order": 65,
+      "usfm_id": "JUD",
+      "canonical_name": "Jude",
+      "testament": "NT"
+    },
+    {
+      "order": 66,
+      "usfm_id": "REV",
+      "canonical_name": "Revelation",
+      "testament": "NT"
+    }
+  ]
+}

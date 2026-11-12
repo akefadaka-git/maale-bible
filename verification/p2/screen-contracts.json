@@ -1,0 +1,590 @@
+[
+  {
+    "screenId": "SCR-001",
+    "route": "home",
+    "owner": "home",
+    "testId": "NAV-SCR-001",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-002",
+    "route": "edition-library",
+    "owner": "edition",
+    "testId": "NAV-SCR-002",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-003",
+    "route": "edition-details",
+    "owner": "edition",
+    "testId": "NAV-SCR-003",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-004",
+    "route": "book-browser",
+    "owner": "book",
+    "testId": "NAV-SCR-004",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-005",
+    "route": "chapter-selector",
+    "owner": "chapter",
+    "testId": "NAV-SCR-005",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-006",
+    "route": "bible-reader",
+    "owner": "bible",
+    "testId": "NAV-SCR-006",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-007",
+    "route": "reader-settings",
+    "owner": "reader",
+    "testId": "NAV-SCR-007",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-008",
+    "route": "verse-action-sheet",
+    "owner": "verse",
+    "testId": "NAV-SCR-008",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-009",
+    "route": "bookmarks",
+    "owner": "bookmarks",
+    "testId": "NAV-SCR-009",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-010",
+    "route": "highlights",
+    "owner": "highlights",
+    "testId": "NAV-SCR-010",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-011",
+    "route": "notes",
+    "owner": "notes",
+    "testId": "NAV-SCR-011",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-012",
+    "route": "parallel-reader",
+    "owner": "parallel",
+    "testId": "NAV-SCR-012",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-013",
+    "route": "search-home",
+    "owner": "search",
+    "testId": "NAV-SCR-013",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-014",
+    "route": "search-results",
+    "owner": "search",
+    "testId": "NAV-SCR-014",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-015",
+    "route": "concordance",
+    "owner": "concordance",
+    "testId": "NAV-SCR-015",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-016",
+    "route": "cross-references",
+    "owner": "cross",
+    "testId": "NAV-SCR-016",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-017",
+    "route": "topics",
+    "owner": "topics",
+    "testId": "NAV-SCR-017",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-018",
+    "route": "reference-work-detail",
+    "owner": "reference",
+    "testId": "NAV-SCR-018",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-019",
+    "route": "people-places",
+    "owner": "people",
+    "testId": "NAV-SCR-019",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-020",
+    "route": "atlas-map",
+    "owner": "atlas",
+    "testId": "NAV-SCR-020",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-021",
+    "route": "place-detail",
+    "owner": "place",
+    "testId": "NAV-SCR-021",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-022",
+    "route": "daily-journal",
+    "owner": "daily",
+    "testId": "NAV-SCR-022",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-023",
+    "route": "diary",
+    "owner": "diary",
+    "testId": "NAV-SCR-023",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-024",
+    "route": "sermon-library",
+    "owner": "sermon",
+    "testId": "NAV-SCR-024",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-025",
+    "route": "sermon-editor",
+    "owner": "sermon",
+    "testId": "NAV-SCR-025",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-026",
+    "route": "study-notebooks",
+    "owner": "study",
+    "testId": "NAV-SCR-026",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-027",
+    "route": "notebook-editor",
+    "owner": "notebook",
+    "testId": "NAV-SCR-027",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-028",
+    "route": "passage-collections",
+    "owner": "passage",
+    "testId": "NAV-SCR-028",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-029",
+    "route": "reading-plan-library",
+    "owner": "reading",
+    "testId": "NAV-SCR-029",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-030",
+    "route": "plan-detail-schedule",
+    "owner": "plan",
+    "testId": "NAV-SCR-030",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-031",
+    "route": "plan-progress",
+    "owner": "plan",
+    "testId": "NAV-SCR-031",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-032",
+    "route": "reminder-settings",
+    "owner": "reminder",
+    "testId": "NAV-SCR-032",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-033",
+    "route": "verse-card-composer",
+    "owner": "verse",
+    "testId": "NAV-SCR-033",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-034",
+    "route": "export-centre",
+    "owner": "export",
+    "testId": "NAV-SCR-034",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-035",
+    "route": "backup-restore",
+    "owner": "backup",
+    "testId": "NAV-SCR-035",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-036",
+    "route": "resource-manager",
+    "owner": "resource",
+    "testId": "NAV-SCR-036",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-037",
+    "route": "app-settings",
+    "owner": "app",
+    "testId": "NAV-SCR-037",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-038",
+    "route": "language-settings",
+    "owner": "language",
+    "testId": "NAV-SCR-038",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-039",
+    "route": "accessibility-settings",
+    "owner": "accessibility",
+    "testId": "NAV-SCR-039",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-040",
+    "route": "help-about",
+    "owner": "help",
+    "testId": "NAV-SCR-040",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-041",
+    "route": "privacy-data",
+    "owner": "privacy",
+    "testId": "NAV-SCR-041",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  },
+  {
+    "screenId": "SCR-042",
+    "route": "content-availability",
+    "owner": "content",
+    "testId": "NAV-SCR-042",
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "offline",
+      "available",
+      "unavailable"
+    ]
+  }
+]
