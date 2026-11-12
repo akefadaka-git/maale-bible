@@ -111,10 +111,12 @@ object EncryptedBackup {
             }
         } finally {
             keyBytes.fill(0)
+            zipBytes.fill(0)
         }
     }
 
     fun restore(container: ByteArray, password: CharArray): Map<String, ByteArray> {
+        require(password.size in 12..1024) { "Backup password length must be between 12 and 1024 characters" }
         require(container.size in (4 + 1 + 1 + 4 + SALT_BYTES + NONCE_BYTES + 16)..MAX_CONTAINER_BYTES) {
             "Invalid backup container size"
         }
