@@ -151,7 +151,7 @@ jobs:
           java-version: '17'
           cache: gradle
       - name: Assemble phone-installable APK
-        run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:assembleDebug
+        run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
       - name: Generate APK checksum
         run: sha256sum app/build/outputs/apk/debug/app-debug.apk > app/build/outputs/apk/debug/app-debug.apk.sha256
       - name: Upload APK and checksum
