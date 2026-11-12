@@ -2,15 +2,26 @@ package org.maale.bible.data.repository
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
+import net.zetetic.database.sqlcipher.SQLiteDatabase
+import net.zetetic.database.sqlcipher.SQLiteOpenHelper
 import org.json.JSONArray
 import org.json.JSONObject
 import org.maale.bible.domain.model.*
 import org.maale.bible.domain.repository.StudyRepository
 
 /** Device-local user study metadata only. No scripture content is stored by this database. */
-class StudyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION), StudyRepository {
+private fun initializeEncryptedStudyStore(context: Context): ByteArray {
+    System.loadLibrary("sqlcipher")
+    return org.maale.bible.data.security.StudyDataKeyStore.getOrCreate(context)
+}
+
+class StudyDatabase(context: Context) : SQLiteOpenHelper(
+    context.applicationContext, DB_NAME, initializeEncryptedStudyStore(context), null, DB_VERSION
+), StudyRepository {
+    init {
+        LegacyStudyDatabaseMigration.migrate(context.applicationContext,
+            org.maale.bible.data.security.StudyDataKeyStore.load(context))
+    }
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE reading_position (singleton INTEGER PRIMARY KEY CHECK(singleton=1), book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter>0), verse INTEGER NOT NULL CHECK(verse>0), updated_at INTEGER NOT NULL)")
         db.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter>0), verse INTEGER NOT NULL CHECK(verse>0), created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
