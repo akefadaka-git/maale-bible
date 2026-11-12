@@ -35,9 +35,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("Books of the Maale Bible")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithText("Genesis").fetchSemanticsNodes().isNotEmpty()
-        }
+        composeRule.onNodeWithContentDescription("Open Genesis").assertIsDisplayed()
         composeRule.onNodeWithTag("book_card_GEN").performClick()
         awaitText("Bible book learning centre")
     }
@@ -140,9 +138,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("መጻሕፍት").performClick()
         composeRule.onNodeWithTag("books_list").assertIsDisplayed()
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithText("Genesis").fetchSemanticsNodes().isNotEmpty()
-        }
+        composeRule.onNodeWithContentDescription("Open Genesis").assertIsDisplayed()
         composeRule.onNodeWithTag("book_card_GEN").performClick()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("መግቢያ").assertIsDisplayed()
