@@ -207,6 +207,27 @@ class UsfmAuditTests(unittest.TestCase):
             self.assertIn("INVENTORY_BOOK_ID_DUPLICATE", [item["code"] for item in report["issues"]])
             self.assertFalse(report["content_intake_authorized"])
 
+    def test_manifest_declared_book_id_must_match_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source"
+            source.mkdir()
+            path = source / "fixture.usfm"
+            path.write_text("\\id GEN Synthetic fixture\\n\\c 1\\n\\v 1 PLACEHOLDER\\n", encoding="utf-8")
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            manifest = {
+                "schema_version": "1.0.0",
+                "source_id": "synthetic-test-only",
+                "rights": {"status": "UNVERIFIED"},
+                "files": [{"path": "fixture.usfm", "sha256": digest, "format": "USFM", "book_id": "EXO"}],
+            }
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            report = audit_manifest(manifest_path, source)
+            codes = {issue["code"] for issue in report["file_results"][0]["issues"]}
+            self.assertIn("MANIFEST_BOOK_ID_MISMATCH", codes)
+            self.assertEqual(report["structural_audit"], "FAIL")
+
 
 if __name__ == "__main__":
     unittest.main()
