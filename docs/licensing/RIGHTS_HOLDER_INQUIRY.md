@@ -1,5 +1,7 @@
 # Rights-holder inquiry — Maale Full Bible (2008)
 
+**Correspondence status (Owner-confirmed):** The inquiry to The Word for the World International was sent by the Owner. Delivery and receipt have not been independently verified; a response is awaited. Bible Society of Ethiopia confirmation and Digital Bible Society clarification remain pending. The correspondence itself is retained outside this public repository.
+
 **To:** The Word for the World International; Bible Society of Ethiopia  
 **Subject:** Written confirmation of edition identity and digital publishing rights — Maale Full Bible (MDYTWF / mdyeth)
 

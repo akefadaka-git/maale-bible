@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maale-bible.example/schemas/expected-inventory.schema.json",
+  "title": "Maale Bible Expected Book and Chapter Inventory",
+  "description": "Optional structural reference inventory. It contains identifiers and chapter numbers only; it does not establish canon, translation completeness, rights, or permission. Duplicate books[].book_id values are rejected by the audit engine at runtime; JSON Schema uniqueItems compares complete objects and cannot enforce uniqueness by this property alone.",
+  "$comment": "The runtime validator is authoritative for uniqueness of books[].book_id. Schema-only validation is insufficient for this constraint; see the synthetic duplicate-book-ID regression test and the A2 engineering note.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_reference", "owner_approval_reference", "books"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "source_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Citation or immutable identifier for the independently reviewed inventory source."
+    },
+    "owner_approval_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to the explicit Owner approval for using this inventory in validation."
+    },
+    "books": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["book_id", "chapters"],
+        "properties": {
+          "book_id": { "type": "string", "pattern": "^[A-Z0-9]{3}$" },
+          "chapters": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}
