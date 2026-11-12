@@ -9,6 +9,7 @@ import org.junit.runner.RunWith
 import org.json.JSONObject
 import org.maale.bible.data.repository.StudyDatabase
 import org.maale.bible.data.security.PortableStudyBackup
+import org.maale.bible.data.security.StudyDataKeyStore
 import org.maale.bible.domain.model.Bookmark
 import java.io.File
 
@@ -68,6 +69,19 @@ class StudyEncryptionMigrationInstrumentedTest {
         try {
             assertEquals("portable secret", restored.getBookmarks("EXO").single().label)
         } finally { restored.close() }
+        context.deleteDatabase(StudyDatabase.DB_NAME)
+    }
+
+    @Test fun failedRecoveryCleanupRemovesOrphanedLocalKeyWrapper() {
+        context.deleteDatabase(StudyDatabase.DB_NAME)
+        val recovered = ByteArray(32).also { java.security.SecureRandom().nextBytes(it) }
+        StudyDataKeyStore.installRecovered(context, recovered)
+        assertArrayEquals(recovered, StudyDataKeyStore.load(context))
+        StudyDataKeyStore.clearRecoveredAfterFailedRestore(context)
+        val replacement = StudyDataKeyStore.getOrCreate(context)
+        assertFalse(recovered.contentEquals(replacement))
+        recovered.fill(0)
+        replacement.fill(0)
         context.deleteDatabase(StudyDatabase.DB_NAME)
     }
 
