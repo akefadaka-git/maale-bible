@@ -39,11 +39,18 @@ class StudyEncryptionMigrationInstrumentedTest {
         file.inputStream().use { assertEquals(16, it.read(header)) }
         assertNotEquals("SQLite format 3\u0000", String(header, Charsets.US_ASCII))
         assertFalse(File(context.getDatabasePath("maale_bible_study.plaintext.rollback").path).exists())
+        val protectedFiles = listOf(file, File(file.path + "-wal"), File(file.path + "-shm"), File(file.path + "-journal"))
+        protectedFiles.filter { it.exists() }.forEach { protected ->
+            val bytes = protected.readBytes()
+            assertFalse(String(bytes, Charsets.ISO_8859_1).contains("preserved"))
+        }
         try {
             val plain = PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY)
-            plain.close()
-            fail("Framework SQLite unexpectedly opened SQLCipher database")
-        } catch (_: Exception) { }
+            try {
+                plain.rawQuery("SELECT name FROM sqlite_master", null).use { it.moveToFirst() }
+                fail("Framework SQLite unexpectedly read SQLCipher database pages")
+            } finally { plain.close() }
+        } catch (_: android.database.sqlite.SQLiteException) { }
         context.deleteDatabase(StudyDatabase.DB_NAME)
     }
 
