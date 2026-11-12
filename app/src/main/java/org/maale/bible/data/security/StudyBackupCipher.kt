@@ -65,3 +65,15 @@ class StudyBackupCipher {
         private val AAD = "maale-bible-study-backup-v1".toByteArray(Charsets.UTF_8)
     }
 }
+
+/** Portable encrypted backup helpers. Store or share only the returned ciphertext. */
+fun org.maale.bible.domain.repository.StudyRepository.exportEncryptedBackup(
+    cipher: StudyBackupCipher = StudyBackupCipher()
+): String = cipher.encrypt(exportBackup())
+
+fun org.maale.bible.domain.repository.StudyRepository.restoreEncryptedBackup(
+    envelope: String,
+    cipher: StudyBackupCipher = StudyBackupCipher()
+) {
+    restoreBackup(cipher.decrypt(envelope))
+}
