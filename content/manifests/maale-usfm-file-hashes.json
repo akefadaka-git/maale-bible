@@ -1,0 +1,402 @@
+{
+  "source_archive_sha256": "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11",
+  "source_id": "MDYTWF / mdyeth",
+  "files": [
+    {
+      "path": "02-GENmdyeth.usfm",
+      "book_id": "GEN",
+      "bytes": 347847,
+      "sha256": "cc9b7703d660bd39dfda8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392"
+    },
+    {
+      "path": "03-EXOmdyeth.usfm",
+      "book_id": "EXO",
+      "bytes": 287970,
+      "sha256": "d395ce46dd48494916f455276ddad2832fcb378c7cc6af2044c35cb1f6eec475"
+    },
+    {
+      "path": "04-LEVmdyeth.usfm",
+      "book_id": "LEV",
+      "bytes": 197221,
+      "sha256": "4736e4a52bb52dfceb6513a121598646c84d13b10bc3bcd1dc64651521612251"
+    },
+    {
+      "path": "05-NUMmdyeth.usfm",
+      "book_id": "NUM",
+      "bytes": 260903,
+      "sha256": "dfdee1c6017888c5c81098cce66e22f69ab8d6c28ea4fa59fb13a95cf03e12d2"
+    },
+    {
+      "path": "06-DEUmdyeth.usfm",
+      "book_id": "DEU",
+      "bytes": 260204,
+      "sha256": "3e9c2afc1de1582fbede42964704e4edee9bfa3b2e0b10cb51aad688378501c8"
+    },
+    {
+      "path": "07-JOSmdyeth.usfm",
+      "book_id": "JOS",
+      "bytes": 160147,
+      "sha256": "ef9f95a9baa685e218c8dad32f023a8400a53e2c931b838e71110996f960f539"
+    },
+    {
+      "path": "08-JDGmdyeth.usfm",
+      "book_id": "JDG",
+      "bytes": 160090,
+      "sha256": "5b3fd5a7d1f57b98afaacf3f85dc9132573ed78c1a557815343d9236b3e64f39"
+    },
+    {
+      "path": "09-RUTmdyeth.usfm",
+      "book_id": "RUT",
+      "bytes": 23607,
+      "sha256": "e79ebb48ce7ebdd8cc294f822f81791e4ff5a4edd6e50bbbd08003a194f1fd01"
+    },
+    {
+      "path": "10-1SAmdyeth.usfm",
+      "book_id": "1SA",
+      "bytes": 220652,
+      "sha256": "753356d5a0c7dc0754f21dbe3ef5aacde8caddc0de605c6096189409dd58b92c"
+    },
+    {
+      "path": "11-2SAmdyeth.usfm",
+      "book_id": "2SA",
+      "bytes": 179463,
+      "sha256": "ad3f36ea17348030eb5544d2390d3f72d62f83e8737affba8efb07fd3e8f4c59"
+    },
+    {
+      "path": "12-1KImdyeth.usfm",
+      "book_id": "1KI",
+      "bytes": 223811,
+      "sha256": "0c749f3fc6c9cc46c60f8fc1646c38f0fa3aa57621028efeb367c73d7d2407c3"
+    },
+    {
+      "path": "13-2KImdyeth.usfm",
+      "book_id": "2KI",
+      "bytes": 217433,
+      "sha256": "8b0a58da0cf8465a893af0cb49f95e57bd6deac87c651793f5b3a8d4c27ed76c"
+    },
+    {
+      "path": "14-1CHmdyeth.usfm",
+      "book_id": "1CH",
+      "bytes": 204378,
+      "sha256": "f1f4f010f87b51ca4c1cde87dec0c00cf043a91a2f4a52e3df32b222fcd7e074"
+    },
+    {
+      "path": "15-2CHmdyeth.usfm",
+      "book_id": "2CH",
+      "bytes": 244443,
+      "sha256": "0fe0af6f964e97fcac280017e5851dc8ab22e1a8a10b4e593054c45b7fe58c3f"
+    },
+    {
+      "path": "16-EZRmdyeth.usfm",
+      "book_id": "EZR",
+      "bytes": 70205,
+      "sha256": "3acac6b4795bf91684b595c78338485d92fefbc325ab4aaf664c824fc655d7bc"
+    },
+    {
+      "path": "17-NEHmdyeth.usfm",
+      "book_id": "NEH",
+      "bytes": 104470,
+      "sha256": "19891a9886f0527a944da0aa30e1a92db4f8f3118ef72ba65294269926d22ace"
+    },
+    {
+      "path": "18-ESTmdyeth.usfm",
+      "book_id": "EST",
+      "bytes": 55673,
+      "sha256": "8c7e2e10a84c80c7361eca246eb5769cfe368449103130bb109c61297e477b90"
+    },
+    {
+      "path": "19-JOBmdyeth.usfm",
+      "book_id": "JOB",
+      "bytes": 177123,
+      "sha256": "bbf22fdee42ef324bd08091dd2cd1010cdf22a88440aa2bb85b597bc6b4d5f91"
+    },
+    {
+      "path": "20-PSAmdyeth.usfm",
+      "book_id": "PSA",
+      "bytes": 444677,
+      "sha256": "12cedb54022e7339513ee0aecd3536e779d39982c7ab314398604f1106d0a0bc"
+    },
+    {
+      "path": "21-PROmdyeth.usfm",
+      "book_id": "PRO",
+      "bytes": 145312,
+      "sha256": "edff444c94fdd2e90a39a22b3c8b0fe5ffdd3d8d346fde24664c1fe143751787"
+    },
+    {
+      "path": "22-ECCmdyeth.usfm",
+      "book_id": "ECC",
+      "bytes": 49215,
+      "sha256": "7ae25f832628039112145202bb75bbd09a9334641f6a132bf8791cedfdb72c8a"
+    },
+    {
+      "path": "23-SNGmdyeth.usfm",
+      "book_id": "SNG",
+      "bytes": 30005,
+      "sha256": "1673407a116f7814b0d65d448c644f3822d3432149143db3cdfefeda6cf1d3e9"
+    },
+    {
+      "path": "24-ISAmdyeth.usfm",
+      "book_id": "ISA",
+      "bytes": 342247,
+      "sha256": "d536f5e38442487f3fb24d05b5d4574e65c32668bd6a0d9f7a829bd91213586b"
+    },
+    {
+      "path": "25-JERmdyeth.usfm",
+      "book_id": "JER",
+      "bytes": 399179,
+      "sha256": "15eb68746f3051119fe277ad6df0eb92906b51e33376b9d3936c6b2ac78f84f4"
+    },
+    {
+      "path": "26-LAMmdyeth.usfm",
+      "book_id": "LAM",
+      "bytes": 35137,
+      "sha256": "5f31f816c79c4dcbfb84afc8dd080516310077c1401e203eca162135adddd419"
+    },
+    {
+      "path": "27-EZKmdyeth.usfm",
+      "book_id": "EZK",
+      "bytes": 350192,
+      "sha256": "77a49e9327ef31e67788b5c8ac5485b6f3a3606c6aac0cf90721b25f11b72f6c"
+    },
+    {
+      "path": "28-DANmdyeth.usfm",
+      "book_id": "DAN",
+      "bytes": 108477,
+      "sha256": "050b88157266e57c2975e45db4dfc5ca56360840aab9bbf44caf81292c735072"
+    },
+    {
+      "path": "29-HOSmdyeth.usfm",
+      "book_id": "HOS",
+      "bytes": 59588,
+      "sha256": "3f58eae651b38eb18a6e2175e8ccdf28df2f8fa229dd72173dfe79e2000116fc"
+    },
+    {
+      "path": "30-JOLmdyeth.usfm",
+      "book_id": "JOL",
+      "bytes": 22282,
+      "sha256": "5fa951810a5cf9e5e44c44cd72bea837fbf8c0e94c75153a70b0c44ffe9fb425"
+    },
+    {
+      "path": "31-AMOmdyeth.usfm",
+      "book_id": "AMO",
+      "bytes": 45474,
+      "sha256": "5b15eeec99046c3161ffa2cc535145bf2a4bb986e8b278acd5e1d34a6e70c837"
+    },
+    {
+      "path": "32-OBAmdyeth.usfm",
+      "book_id": "OBA",
+      "bytes": 7793,
+      "sha256": "f33aca6387cc0ae5a168bd3df6b518d396e46170b2f66f06cbeae11869b55b98"
+    },
+    {
+      "path": "33-JONmdyeth.usfm",
+      "book_id": "JON",
+      "bytes": 13979,
+      "sha256": "cfbcf901d81a16991af4fffdb5cb750e184ec7040b3169d1f0b193d56f8bf023"
+    },
+    {
+      "path": "34-MICmdyeth.usfm",
+      "book_id": "MIC",
+      "bytes": 32531,
+      "sha256": "41a8dc02d51e0278080b6619bd88fd863e91e4ec4c33542437d2214def615900"
+    },
+    {
+      "path": "35-NAMmdyeth.usfm",
+      "book_id": "NAM",
+      "bytes": 14238,
+      "sha256": "038ff5039b8d7658ebd9dba23e8477694f50d9f46900f2585c2ed79dc33b9760"
+    },
+    {
+      "path": "36-HABmdyeth.usfm",
+      "book_id": "HAB",
+      "bytes": 15963,
+      "sha256": "47ba742ef44df4668df9a3f90e84ecbe0e4342bd94aea87e6cb3bb72ae57202a"
+    },
+    {
+      "path": "37-ZEPmdyeth.usfm",
+      "book_id": "ZEP",
+      "bytes": 18264,
+      "sha256": "ba88d85ec98ab30ad7c9f461ea96600fa7d79d2b613d83cf4f27572d36148737"
+    },
+    {
+      "path": "38-HAGmdyeth.usfm",
+      "book_id": "HAG",
+      "bytes": 11785,
+      "sha256": "de9bfcb5a1771367ec66450d8c1116c9d2c2cfbfceb7950cc6d32ca69a26002c"
+    },
+    {
+      "path": "39-ZECmdyeth.usfm",
+      "book_id": "ZEC",
+      "bytes": 62405,
+      "sha256": "72aa811169fd38ca44bde16813affb09dbf3a34825647b6352a7a5d989c8c35b"
+    },
+    {
+      "path": "40-MALmdyeth.usfm",
+      "book_id": "MAL",
+      "bytes": 19182,
+      "sha256": "621b6166cd05e9ef59db1067e73f2a0471b976f43b6413f42ce1bdb08f8d25b1"
+    },
+    {
+      "path": "46-MATmdyeth.usfm",
+      "book_id": "MAT",
+      "bytes": 238843,
+      "sha256": "d0b9fdeb1d0fe5d13f0a7bd30227c770a7263019d4ca0c8f77896ad5f7b7605c"
+    },
+    {
+      "path": "47-MRKmdyeth.usfm",
+      "book_id": "MRK",
+      "bytes": 155376,
+      "sha256": "7c884af699bd845b365799b01fa8e05712369da571b65cef7b6bada6f46661a6"
+    },
+    {
+      "path": "48-LUKmdyeth.usfm",
+      "book_id": "LUK",
+      "bytes": 258885,
+      "sha256": "479d7acb2c756b31a5e5c9f45d83eea3eeef436751c540ef0c79079860b3f1a8"
+    },
+    {
+      "path": "49-JHNmdyeth.usfm",
+      "book_id": "JHN",
+      "bytes": 185424,
+      "sha256": "68594ef988603b8ad048e183655c30e109edb08c2a588dd27545d48cdef3a07a"
+    },
+    {
+      "path": "51-ROMmdyeth.usfm",
+      "book_id": "ROM",
+      "bytes": 104607,
+      "sha256": "3e18c25d221c07693884bb5efebc2d4e2d97220c5e19e34f94518467f7038e95"
+    },
+    {
+      "path": "52-1COmdyeth.usfm",
+      "book_id": "1CO",
+      "bytes": 101405,
+      "sha256": "52f4fcc1b368d1aeac3f677e1730aefbcf682f4fb3fb8ddc46f6e575defa30e6"
+    },
+    {
+      "path": "53-2COmdyeth.usfm",
+      "book_id": "2CO",
+      "bytes": 64340,
+      "sha256": "a208e8766a2b0e3fcc05aff9a22b7351440e9529758c75f466623bf4238e713f"
+    },
+    {
+      "path": "54-GALmdyeth.usfm",
+      "book_id": "GAL",
+      "bytes": 36299,
+      "sha256": "8ed0b931d67c9c79b7bbe94306db707092f09203f7f51e90eea3cfad35ed5658"
+    },
+    {
+      "path": "55-EPHmdyeth.usfm",
+      "book_id": "EPH",
+      "bytes": 33743,
+      "sha256": "950b26d5f35c94c34e518a12531b8b7689c970353aed92e27e6eddb534eb14be"
+    },
+    {
+      "path": "56-PHPmdyeth.usfm",
+      "book_id": "PHP",
+      "bytes": 27303,
+      "sha256": "fec6defc979cb840dc4fd101cbcc5f6cfb81869470fa1dffa878bf6773151e73"
+    },
+    {
+      "path": "57-COLmdyeth.usfm",
+      "book_id": "COL",
+      "bytes": 25164,
+      "sha256": "a8413a32286767aa3aba25fbd8f8a9670bae00086c16f77bb831f596b3ab2754"
+    },
+    {
+      "path": "58-1THmdyeth.usfm",
+      "book_id": "1TH",
+      "bytes": 21964,
+      "sha256": "663c0f3da45615c2fe33d689c487a11478e815fdf08491a87950007049eb7c3e"
+    },
+    {
+      "path": "59-2THmdyeth.usfm",
+      "book_id": "2TH",
+      "bytes": 12443,
+      "sha256": "219e40e5c249ab307621e5f30af1628fefc02d6925deaf3dd904e4e7dde07d80"
+    },
+    {
+      "path": "60-1TImdyeth.usfm",
+      "book_id": "1TI",
+      "bytes": 27208,
+      "sha256": "46c23c343c61906e7f48a0fdac491eccfc97822f42a538a0c6c39823ac6e6e2a"
+    },
+    {
+      "path": "61-2TImdyeth.usfm",
+      "book_id": "2TI",
+      "bytes": 20256,
+      "sha256": "2fbcf6091cd16eca20de96415d39a95ed5bf40e540a1f18fdcd4b9619c328f78"
+    },
+    {
+      "path": "62-TITmdyeth.usfm",
+      "book_id": "TIT",
+      "bytes": 13249,
+      "sha256": "29e6ec5aa0ff847395b728963e2096d8e85ec61f0c4de175f45187b31624aa36"
+    },
+    {
+      "path": "63-PHMmdyeth.usfm",
+      "book_id": "PHM",
+      "bytes": 6251,
+      "sha256": "1040af795a3c1952e9d57c54eb2dcb4a0724a5d224a479ef5cc6258e9410a363"
+    },
+    {
+      "path": "64-HEBmdyeth.usfm",
+      "book_id": "HEB",
+      "bytes": 77559,
+      "sha256": "68411c70d0f48157fb66954072c0df60ed681b23313ce1e6d94efae6aea86012"
+    },
+    {
+      "path": "65-JASmdyeth.usfm",
+      "book_id": "JAS",
+      "bytes": 26183,
+      "sha256": "6b341d636765322af4f5b34bb005f2d60d2368ef3f114ccb84a79fa2464f4be1"
+    },
+    {
+      "path": "67-2PEmdyeth.usfm",
+      "book_id": "2PE",
+      "bytes": 17982,
+      "sha256": "c71bae4fe198f387796dc65f5ae43b3941d8df98483499d837641c1821baa355"
+    },
+    {
+      "path": "68-1JNmdyeth.usfm",
+      "book_id": "1JN",
+      "bytes": 23466,
+      "sha256": "f0f1cba07afe5139258e031a2048b3ce04b55bd4c7dffd3ec98d5b58f146bdbf"
+    },
+    {
+      "path": "69-2JNmdyeth.usfm",
+      "book_id": "2JN",
+      "bytes": 3683,
+      "sha256": "ec16a0869a96dc6aa7a00e1cc0dd74007184d9230a976042feb339643398ab4f"
+    },
+    {
+      "path": "71-JUDmdyeth.usfm",
+      "book_id": "JUD",
+      "bytes": 8126,
+      "sha256": "bb13cf1ded754618ff8b292cd13d9ddb6e1bf07a3aae03a893225cef89a61d3e"
+    },
+    {
+      "path": "72-REVmdyeth.usfm",
+      "book_id": "REV",
+      "bytes": 119864,
+      "sha256": "0e37226cb1d8ec94806d2a5b9326c7fcede02907fa9fd8e750ddbe1a41a4be77"
+    },
+    {
+      "path": "74-ACTmdyeth.usfm",
+      "book_id": "ACT",
+      "bytes": 243950,
+      "sha256": "ea4bb1c08756c49e4c9aa42459ff5fb9a7a0a855f1f8db8a06c6eceeecda46b9"
+    },
+    {
+      "path": "90-1PEmdyeth.usfm",
+      "book_id": "1PE",
+      "bytes": 29603,
+      "sha256": "02d4d025a2676c41daf71c2e17df4ac220ad71f8f02a5c533543543068bc5251"
+    },
+    {
+      "path": "94-3JNmdyeth.usfm",
+      "book_id": "3JN",
+      "bytes": 4391,
+      "sha256": "687568fcfc7a32a06945b038848bf8cc39353c121f8ea6b3b127c29816ac8bc6"
+    }
+  ]
+}
