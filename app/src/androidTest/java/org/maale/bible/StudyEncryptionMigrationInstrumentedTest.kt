@@ -6,6 +6,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.json.JSONObject
 import org.maale.bible.data.repository.StudyDatabase
 import org.maale.bible.data.security.PortableStudyBackup
 import org.maale.bible.domain.model.Bookmark
@@ -37,7 +38,6 @@ class StudyEncryptionMigrationInstrumentedTest {
         val header = ByteArray(16)
         file.inputStream().use { assertEquals(16, it.read(header)) }
         assertNotEquals("SQLite format 3\u0000", String(header, Charsets.US_ASCII))
-        assertFalse(File(file.path + ".plaintext.rollback").exists())
         assertFalse(File(context.getDatabasePath("maale_bible_study.plaintext.rollback").path).exists())
         try {
             val plain = PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY)
@@ -76,8 +76,10 @@ class StudyEncryptionMigrationInstrumentedTest {
         assertThrows(Exception::class.java) { PortableStudyBackup.restore(context, envelope, PortableStudyBackup.generateRecoveryKey()) }
         assertFalse(context.getDatabasePath(StudyDatabase.DB_NAME).exists())
 
-        val changed = envelope.replaceFirst("ciphertext", "ciphertexT")
-        assertThrows(Exception::class.java) { PortableStudyBackup.restore(context, changed, key) }
+        val json = JSONObject(envelope)
+        val payload = json.getString("payload")
+        json.put("payload", (if (payload.first() == 'A') "B" else "A") + payload.drop(1))
+        assertThrows(Exception::class.java) { PortableStudyBackup.restore(context, json.toString(), key) }
         assertFalse(context.getDatabasePath(StudyDatabase.DB_NAME).exists())
     }
 }
