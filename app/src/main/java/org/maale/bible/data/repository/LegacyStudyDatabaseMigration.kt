@@ -181,7 +181,6 @@ internal object LegacyStudyDatabaseMigration {
 
     private fun atomicMove(from: File, to: File) {
         Files.move(from.toPath(), to.toPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING)
-        FileOutputStream(to.parentFile, true).use { runCatching { it.fd.sync() } }
     }
 
     private fun deleteSidecars(file: File) {
