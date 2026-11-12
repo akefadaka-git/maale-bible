@@ -1,6 +1,6 @@
 # Scripture Rights and Permission Gate
 
-Status: SUBSTANTIVE RIGHTS / EDITION RECONCILIATION — PASS (DOCUMENTARY); IMPLEMENTATION COMPLIANCE — PENDING
+Status: SUBSTANTIVE RIGHTS / EDITION RECONCILIATION — PASS (DOCUMENTARY); OWNER CONTENT-INTAKE AUTHORIZATION — GRANTED 2026-11-08; IMPLEMENTATION COMPLIANCE — PENDING
 
 ## Purpose
 
@@ -34,8 +34,8 @@ The detailed record is [Rights and Edition Reconciliation — 2026-11-07](../sou
 | DBL MDYBSE | Separate 2007 Maale New Testament; RESERVED status does not govern the 2008 Full Bible |
 | Documentary rights reconciliation | PASS — DOCUMENTARY |
 | Email/signatory authentication | PENDING |
-| Owner approval to acquire source package | NOT GRANTED / PENDING |
-| Content intake authorization | FALSE |
+| Owner approval to acquire source package | GRANTED under 2026-11-08 multilingual content-intake authorization |
+| Content intake authorization | TRUE — subject to per-source gates |
 
 ## Mandatory licence compliance
 
@@ -54,13 +54,13 @@ The detailed control matrix and acceptance evidence are in [Licence Compliance C
 
 ## Scope boundaries
 
-The written confirmation does not itself authorize this project to acquire or process the package. Until separate Owner authorization is recorded:
+The written confirmation does not itself authorize this project to acquire or process the package. Under the Owner's 2026-11-08 authorization, intake work is permitted for the stated Maale, Amharic, English and other necessary resource scope. The following restrictions still apply:
 
-- Do not download, acquire, unpack, hash, inspect, or ingest mdyeth_usfm.zip.
-- Do not import or distribute real scripture content.
-- Keep content_intake_authorized=false.
-- Do not begin Android, backend, database, or deployment implementation.
+- Reconfirm the exact mdyeth_usfm.zip identity and hash against the accepted A2 record before processing; do not substitute MDYBSE.
+- Preserve the CC BY-SA 4.0 attribution, modification notices and ShareAlike obligations.
+- Do not infer that this Maale licence covers Amharic/English editions or third-party audio, maps, fonts, images, logos or reference works.
 - Do not treat a passing synthetic audit as rights approval or source acceptance.
+- Do not commit raw scripture or protected assets to the public repository unless their exact licence permits public redistribution and the repository distribution model is approved.
 
 ## Release rule
 
