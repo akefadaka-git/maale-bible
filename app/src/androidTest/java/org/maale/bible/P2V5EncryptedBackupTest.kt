@@ -80,7 +80,7 @@ class P2V5EncryptedBackupTest {
             )
         }
         assertThrows(IllegalArgumentException::class.java) {
-            EncryptedBackup.create(mapOf("notes/cafe\\u0301.json" to byteArrayOf(1)), password)
+            EncryptedBackup.create(mapOf("notes/cafe\u0301.json" to byteArrayOf(1)), password)
         }
     }
 
