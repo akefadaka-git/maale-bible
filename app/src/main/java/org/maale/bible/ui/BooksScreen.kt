@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -104,7 +105,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             Text("🗺️  " + stringResource(R.string.explorer_open_atlas))
         }
         OutlinedTextField(
-            value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth().semantics { contentDescription = "Search Bible books by name or canonical code" },
+            value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth().testTag("books_search").semantics { contentDescription = "Search Bible books by name or canonical code" },
             singleLine = true, label = { Text(stringResource(R.string.explorer_search_label)) },
             placeholder = { Text(stringResource(R.string.explorer_search_hint)) },
             leadingIcon = { Text("⌕", style = MaterialTheme.typography.headlineSmall) },
@@ -175,7 +176,9 @@ private fun CategoryHeading(category: BookCategory, count: Int) {
 @Composable
 private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> Unit) {
     Card(
-        modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).semantics { contentDescription = "Open " + book.englishName },
+        modifier = Modifier.fillMaxWidth().clickable(role = Role.Button, onClick = onClick)
+            .testTag("book_card_" + book.usfmId)
+            .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName; role = Role.Button },
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
