@@ -1,0 +1,37 @@
+name: A3 Android foundation verification
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'gradle/**'
+      - 'gradlew'
+      - 'gradlew.bat'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - '.github/workflows/a3-android-foundation.yml'
+  push:
+    branches:
+      - reconcile/a3-android-foundation-on-main
+    paths:
+      - 'app/**'
+      - 'gradle/**'
+      - 'gradlew'
+      - 'gradlew.bat'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - '.github/workflows/a3-android-foundation.yml'
+permissions:
+  contents: read
+jobs:
+  android-foundation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Run Android unit tests and assemble debug APK
+        run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
