@@ -79,7 +79,12 @@ object PortableStudyBackup {
         try {
             dek = aesGcm(Cipher.DECRYPT_MODE, kek, wrapNonce, "$aad|dek", wrappedDek)
             require(dek.size == 32) { "Invalid recovered database key" }
-            plaintext = String(aesGcm(Cipher.DECRYPT_MODE, dek, dataNonce, "$aad|payload", payload), Charsets.UTF_8)
+            try {
+                plaintext = String(aesGcm(Cipher.DECRYPT_MODE, dek, dataNonce, "$aad|payload", payload), Charsets.UTF_8)
+            } catch (failure: Throwable) {
+                dek.fill(0)
+                throw failure
+            }
         } finally {
             secret.fill(0)
             kek.fill(0)
