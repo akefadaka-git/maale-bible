@@ -7,6 +7,8 @@ import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 import java.security.MessageDigest
 import java.security.SecureRandom
+import java.text.Normalizer
+import java.util.Locale
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
@@ -38,15 +40,18 @@ object EncryptedBackup {
     private const val MAX_ENTRY_BYTES = 32 * 1024 * 1024
     private const val MAX_ENTRIES = 128
     private const val MANIFEST = "manifest.json"
+    private val allowedCategories = setOf("notes", "study_notes", "preferences", "plans", "bookmarks", "highlights", "reading_progress", "reading-progress", "attachments")
 
     fun create(entries: Map<String, ByteArray>, password: CharArray): ByteArray {
         require(password.size in 12..1024) { "Backup password length must be between 12 and 1024 characters" }
         require(entries.size <= MAX_ENTRIES) { "Too many backup entries" }
         require(MANIFEST !in entries) { "Reserved manifest path" }
         var total = 0L
+        val pathKeys = HashSet<String>()
         entries.forEach { (name, bytes) ->
             validatePath(name)
-            require(bytes.size <= MAX_ENTRY_BYTES) { "Backup entry too large: $name" }
+            require(pathKeys.add(pathCollisionKey(name))) { "Case-insensitive path collision: $name" }
+            require(bytes.size <= MAX_ENTRY_BYTES) { "Backup entry too large: $name"}
             total += bytes.size
             require(total <= MAX_TOTAL_PLAINTEXT) { "Backup exceeds total size limit" }
         }
@@ -96,7 +101,11 @@ object EncryptedBackup {
             cipher.init(Cipher.ENCRYPT_MODE, SecretKeySpec(keyBytes, "AES"), GCMParameterSpec(TAG_BITS, nonce))
             keyBytes.fill(0)
             cipher.updateAAD(header)
-            val encrypted = cipher.doFinal(zipBytes)
+            val encrypted = try {
+                cipher.doFinal(zipBytes)
+            } finally {
+                zipBytes.fill(0)
+            }
             (header + encrypted).also {
                 require(it.size <= MAX_CONTAINER_BYTES) { "Encrypted backup exceeds container limit" }
             }
@@ -135,18 +144,30 @@ object EncryptedBackup {
             keyBytes.fill(0)
         }
         require(plaintext.size <= MAX_TOTAL_PLAINTEXT) { "Backup plaintext exceeds size limit" }
-        return readAndVerifyZip(plaintext)
+        return try {
+            readAndVerifyZip(plaintext)
+        } finally {
+            plaintext.fill(0)
+        }
     }
 
     private fun readAndVerifyZip(bytes: ByteArray): Map<String, ByteArray> {
         val files = linkedMapOf<String, ByteArray>()
         var manifest: JSONObject? = null
         var total = 0L
+        val pathKeys = mutableSetOf<String>()
         ZipInputStream(ByteArrayInputStream(bytes)).use { zip ->
             while (true) {
                 val entry = zip.nextEntry ?: break
                 require(!entry.isDirectory) { "Directory entries are not permitted" }
-                validatePath(entry.name)
+                if (entry.name == MANIFEST) {
+                    require(manifest == null) { "Duplicate backup manifest" }
+                } else {
+                    validatePath(entry.name)
+                    require(pathKeys.add(pathCollisionKey(entry.name))) {
+                        "Case-insensitive path collision: " + entry.name
+                    }
+                }
                 require(entry.name !in files && (entry.name != MANIFEST || manifest == null)) {
                     "Duplicate backup path: ${entry.name}"
                 }
@@ -180,11 +201,13 @@ object EncryptedBackup {
         require(declared.length() == files.size) { "Manifest entry count mismatch" }
         val verified = linkedMapOf<String, ByteArray>()
         val declaredPaths = mutableSetOf<String>()
+        val declaredPathKeys = mutableSetOf<String>()
         for (i in 0 until declared.length()) {
             val item = declared.getJSONObject(i)
             val path = item.getString("path")
             validatePath(path)
             require(declaredPaths.add(path)) { "Duplicate manifest path: $path" }
+            require(declaredPathKeys.add(pathCollisionKey(path))) { "Case-insensitive manifest path collision: $path" }
             val data = requireNotNull(files[path]) { "Manifest entry missing: $path" }
             require(item.getLong("size") == data.size.toLong()) { "Entry size mismatch: $path" }
             require(MessageDigest.isEqual(
@@ -197,17 +220,30 @@ object EncryptedBackup {
         return verified
     }
 
+    private fun pathCollisionKey(path: String): String =
+        Normalizer.normalize(path, Normalizer.Form.NFC).lowercase(Locale.ROOT)
+
     private fun validatePath(path: String) {
         require(path.isNotBlank() && !path.startsWith("/") && !path.startsWith("\\")) {
             "Unsafe backup path"
         }
         val normalized = path.replace('\\', '/')
-        require(normalized == path && normalized.split('/').all { it.isNotBlank() && it != "." && it != ".." }) {
-            "Unsafe backup path: $path"
+        require(normalized == path && Normalizer.normalize(path, Normalizer.Form.NFC) == path) {
+            "Backup paths must use NFC-normalized forward-slash form: " + path
         }
-        require(!normalized.contains(':') && normalized.none { it.code < 0x20 }) { "Unsafe backup path: $path" }
+        val segments = normalized.split('/')
+        require(segments.size >= 2 && segments.all {
+            it.isNotBlank() && it != "." && it != ".." &&
+                !it.endsWith(" ") && !it.endsWith(".") &&
+                it.none { character -> character in listOf('<', '>', '"', '|', '?', '*') }
+        }) { "Unsafe backup path: " + path }
+        require(segments.first() in allowedCategories) {
+            "Backup category is not user-owned data: " + segments.first()
+        }
+        require(!normalized.contains(':') && normalized.none {
+            it.code < 0x20 || it.code in 0x7f..0x9f
+        }) { "Unsafe backup path: " + path }
     }
-
     private fun deriveKey(password: CharArray, salt: ByteArray, iterations: Int): ByteArray {
         val spec = PBEKeySpec(password, salt, iterations, 256)
         return try {
