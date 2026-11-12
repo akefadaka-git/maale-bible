@@ -47,6 +47,22 @@ object StudyDataKeyStore {
         wrap(app, dek)
     }
 
+    /**
+     * Remove a newly installed recovery wrapper only after the failed restore has removed
+     * every database file. This prevents the next normal app open from creating an empty
+     * database under a key whose restore operation did not complete.
+     */
+    @Synchronized fun clearRecoveredAfterFailedRestore(context: Context) {
+        val app = context.applicationContext
+        val db = app.getDatabasePath("maale_bible_study.db")
+        val remnants = listOf(db, File(db.path + "-wal"), File(db.path + "-shm"), File(db.path + "-journal"))
+        check(remnants.none(File::exists)) { "Cannot clear recovered key while database files remain" }
+        val prefs = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        check(prefs.edit().clear().commit()) { "Could not clear failed recovery key wrapper" }
+        val store = keyStore()
+        if (store.containsAlias(ALIAS)) check(store.deleteEntry(ALIAS)) { "Could not clear failed recovery Keystore key" }
+    }
+
     private fun wrap(context: Context, dek: ByteArray) {
         val cipher = Cipher.getInstance(TRANSFORMATION)
         cipher.init(Cipher.ENCRYPT_MODE, wrappingKey())
@@ -87,7 +103,7 @@ object StudyDataKeyStore {
     private fun isLegacySqlite(file: File): Boolean = runCatching {
         file.inputStream().use { input ->
             val header = ByteArray(16)
-            input.read(header) == 16 && String(header, Charsets.US_ASCII) == "SQLite format 3\u0000"
+            input.read(header) == 16 && String(header, Charsets.US_ASCII) == "SQLite format 3\\u0000"
         }
     }.getOrDefault(false)
 }
