@@ -70,6 +70,17 @@ class A2BaselineEvidenceTests(unittest.TestCase):
         self.assertEqual(signature["usfm_signed_hash_matches"], 66)
         self.assertEqual(signature["gpg_trust_status"], "UNDEFINED_IN_ISOLATED_KEYRING")
 
+    def test_public_repository_does_not_bundle_raw_scripture_or_source_archive(self):
+        forbidden = []
+        for path in ROOT.rglob("*"):
+            if not path.is_file():
+                continue
+            if path.suffix.lower() in {".usfm", ".usx"}:
+                forbidden.append(str(path.relative_to(ROOT)))
+            if path.name.lower().startswith("mdyeth_usfm") and path.suffix.lower() == ".zip":
+                forbidden.append(str(path.relative_to(ROOT)))
+        self.assertEqual(forbidden, [])
+
     def test_closure_record_preserves_scope_and_exception(self):
         record = CLOSURE.read_text(encoding="utf-8")
         self.assertIn("CLOSED — OWNER-ACCEPTED WITH EXPLICIT SPECIALIST-REVIEW EXCEPTION", record)
