@@ -19,6 +19,7 @@
 | ZIP preflight tooling | `tools/archive_preflight.py`; 14 synthetic tests | PASS — SYNTHETIC |
 | USFM audit tooling | `tools/usfm_audit.py`; manifest/inventory fail-closed controls | PASS — SYNTHETIC |
 | A2 synthetic CI | 27/27 tests passed on run [#43199212983](https://github.com/akefadaka-git/maale-bible/actions/runs/43199212983), tested SHA `b54146c62b9a6e1fc9a530eab9eaed16535800e5` | PASS — CI |
+| Enhanced A2 baseline regression CI | 33/33 tests passed on PR #52 run [#43226548676](https://github.com/akefadaka-git/maale-bible/actions/runs/43226548676), tested SHA `ac857628aea97515f09243a887b2b217c3ea014c` | PASS — EXACT HEAD |
 | Real source acquisition | Owner-provided exact `mdyeth_usfm.zip`; 1,809,863 bytes; SHA-256 recorded | PASS — REAL SOURCE |
 | ZIP integrity and safe handling | 70 entries; CRC clean; no unsafe paths, duplicate normalized paths, special entries, encryption or nested archives | PASS — REAL SOURCE |
 | Digital signature | GPG GOOD SIGNATURE; 68/68 signed checksums match | PASS — CRYPTOGRAPHIC; key trust UNDEFINED |
