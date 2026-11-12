@@ -97,7 +97,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         OutlinedTextField(value=planTitle,onValueChange={planTitle=it},label={Text("New 7-day plan")},modifier=Modifier.fillMaxWidth())
         Button(onClick={
             val now=System.currentTimeMillis()
-            repository.savePlan(ReadingPlan(UUID.randomUUID().toString(),planTitle.trim(),now/86_400_000L,7,emptySet(),now))
+            repository.savePlan(ReadingPlan(UUID.randomUUID().toString(),planTitle.trim(),LocalDate.now().toEpochDay(),7,emptySet(),now))
             planTitle="";refresh++
         },enabled=planTitle.isNotBlank()) { Text("Create plan") }
         plans.forEach { plan ->
