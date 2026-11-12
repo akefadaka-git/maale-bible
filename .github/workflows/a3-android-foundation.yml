@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - reconcile/a3-android-foundation-on-main
+      - feat/a3-offline-study-foundation-2026-11-12
     paths:
       - 'app/**'
       - 'gradle/**'
