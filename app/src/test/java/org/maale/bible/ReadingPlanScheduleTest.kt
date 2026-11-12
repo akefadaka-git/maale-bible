@@ -19,7 +19,7 @@ class ReadingPlanScheduleTest {
     @Test fun completionIsIdempotentAndBounded() {
         val plan = ReadingPlan("p1", "Plan", 20L, 7, emptySet(), 100L)
         assertEquals(1, plan.withDayCompleted(1, 200L).withDayCompleted(1, 300L).completedDays.size)
-        assertEquals(14, plan.copy(completedDays = (1..7).toSet()).completionPercent())
+        assertEquals(100, plan.copy(completedDays = (1..7).toSet()).completionPercent())
         try {
             plan.withDayCompleted(8, 200L)
             throw AssertionError("Expected invalid day to be rejected")
