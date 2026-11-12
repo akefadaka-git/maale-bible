@@ -9,7 +9,29 @@ android {
  buildFeatures { compose=true }
  compileOptions { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }
 }
+
 kotlin { jvmToolchain(17) }
+
+// Fail closed at release time if any bundled learning package is not explicitly approved.
+// An empty directory is valid while no learning packages are shipped.
+val verifyLearningContentForRelease by tasks.registering {
+    val contentDirectory = layout.projectDirectory.dir("src/main/assets/content/books").asFile
+    doLast {
+        val packages = contentDirectory.listFiles { file -> file.isFile && file.extension == "json" }
+            ?.sortedBy { it.name }
+            .orEmpty()
+        val unapproved = packages.filter { file ->
+            val manifest = groovy.json.JsonSlurper().parse(file) as? Map<*, *>
+            manifest?.get("publication_state") != "approved_for_release"
+        }
+        check(unapproved.isEmpty()) {
+            "Release blocked: learning packages lack explicit approval: ${unapproved.joinToString { it.name }}"
+        }
+    }
+}
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    dependsOn(verifyLearningContentForRelease)
+}
 dependencies {
  implementation(platform("androidx.compose:compose-bom:2025.12.00"))
  implementation("androidx.activity:activity-compose:1.13.0")
