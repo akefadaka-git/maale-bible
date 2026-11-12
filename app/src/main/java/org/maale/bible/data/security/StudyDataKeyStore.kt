@@ -60,7 +60,10 @@ object StudyDataKeyStore {
         val prefs = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         check(prefs.edit().clear().commit()) { "Could not clear failed recovery key wrapper" }
         val store = keyStore()
-        if (store.containsAlias(ALIAS)) check(store.deleteEntry(ALIAS)) { "Could not clear failed recovery Keystore key" }
+        if (store.containsAlias(ALIAS)) {
+            store.deleteEntry(ALIAS)
+            check(!store.containsAlias(ALIAS)) { "Could not clear failed recovery Keystore key" }
+        }
     }
 
     private fun wrap(context: Context, dek: ByteArray) {
