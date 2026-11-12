@@ -16,7 +16,7 @@ private fun initializeEncryptedStudyStore(context: Context): ByteArray {
 }
 
 class StudyDatabase(context: Context) : SQLiteOpenHelper(
-    context.applicationContext, DB_NAME, initializeEncryptedStudyStore(context), null, DB_VERSION
+    context.applicationContext, DB_NAME, initializeEncryptedStudyStore(context), null, DB_VERSION, 0, null, null, false
 ), StudyRepository {
     init {
         LegacyStudyDatabaseMigration.migrate(context.applicationContext,
