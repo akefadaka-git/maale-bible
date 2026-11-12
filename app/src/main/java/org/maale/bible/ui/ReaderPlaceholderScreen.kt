@@ -21,6 +21,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             ?.let { ReaderNavigation(it.bookId,it.chapter,it.verse) } ?: ReaderNavigation(bookId))
     }
     var noteText by remember { mutableStateOf("") }
+    var editingAnnotationId by remember { mutableStateOf<String?>(null) }
     var planTitle by remember { mutableStateOf("") }
     var refresh by remember { mutableIntStateOf(0) }
     LaunchedEffect(navigation) {
@@ -63,8 +64,9 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Button(onClick = {
             if(noteText.isNotBlank()) {
                 val now=System.currentTimeMillis()
-                repository.saveAnnotation(StudyAnnotation(UUID.randomUUID().toString(),bookId,navigation.chapter,navigation.verse,AnnotationKind.NOTE,noteText,null,now,now))
-                noteText=""; refresh++
+                val existing = editingAnnotationId?.let { id -> repository.getAnnotations(bookId).firstOrNull { it.id == id } }
+                repository.saveAnnotation(StudyAnnotation(existing?.id ?: UUID.randomUUID().toString(),bookId,navigation.chapter,navigation.verse,AnnotationKind.NOTE,noteText,existing?.color,existing?.createdAtEpochMs ?: now,now))
+                noteText=""; editingAnnotationId=null; refresh++
             }
         },enabled=noteText.isNotBlank()) { Text("Save note") }
         Divider(Modifier.padding(vertical=6.dp))
@@ -81,8 +83,11 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         LazyColumn(Modifier.heightIn(max=110.dp)) {
             items(annotations,key={it.id}) { item ->
                 Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
-                    Text("${item.kind}: chapter ${item.chapter}, verse ${item.verse} ${item.body}")
-                    TextButton(onClick={repository.deleteAnnotation(item.id);refresh++}) { Text("Delete") }
+                    Column(Modifier.weight(1f)) {
+                        Text("${item.kind}: chapter ${item.chapter}, verse ${item.verse} ${item.body}")
+                        if (item.kind == AnnotationKind.NOTE) TextButton(onClick={noteText=item.body;editingAnnotationId=item.id}) { Text("Edit") }
+                    }
+                    TextButton(onClick={repository.deleteAnnotation(item.id);if(editingAnnotationId==item.id){editingAnnotationId=null;noteText=""};refresh++}) { Text("Delete") }
                 }
             }
         }
@@ -94,7 +99,16 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             repository.savePlan(ReadingPlan(UUID.randomUUID().toString(),planTitle.trim(),now/86_400_000L,7,emptySet(),now))
             planTitle="";refresh++
         },enabled=planTitle.isNotBlank()) { Text("Create plan") }
-        plans.forEach { plan -> Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days completed") }
+        plans.forEach { plan ->
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
+                Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days completed")
+                TextButton(onClick={
+                    val nextDay=(1..plan.durationDays).firstOrNull { it !in plan.completedDays }
+                    if(nextDay!=null) repository.savePlan(plan.copy(completedDays=plan.completedDays+nextDay,updatedAtEpochMs=System.currentTimeMillis()))
+                    refresh++
+                },enabled=plan.completedDays.size<plan.durationDays) { Text("Complete day") }
+            }
+        }
         Spacer(Modifier.weight(1f))
         Text("Personal study data is stored locally on this device.",style=MaterialTheme.typography.bodySmall)
         OutlinedButton(onClick=onBack) { Text("Back to books") }
