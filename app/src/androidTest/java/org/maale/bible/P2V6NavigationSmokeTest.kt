@@ -7,6 +7,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import android.content.Context
@@ -18,6 +19,26 @@ import org.junit.Test
 
 class P2V6NavigationSmokeTest {
     private fun mark(step: String) = Log.i("P2V6NavigationSmokeTest", step)
+
+    private fun awaitText(text: String, timeoutMillis: Long = 10_000L) {
+        composeRule.waitUntil(timeoutMillis) {
+            composeRule.onAllNodesWithText(text).fetchSemanticsNodes().isNotEmpty()
+        }
+    }
+
+    private fun selectEnglish() {
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
+    }
+
+    private fun openGenesisLearningCentre() {
+        awaitText("Explore the Bible")
+        composeRule.onNodeWithText("Explore the Bible").performClick()
+        awaitText("Books of the Maale Bible")
+        composeRule.onNodeWithTag("books_list").performScrollToNode(hasContentDescription("Open Genesis"))
+        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
+        awaitText("Bible book learning centre")
+    }
 
     @get:Rule
     val composeRule = createAndroidComposeRule<MainActivity>()
@@ -56,51 +77,57 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Explore the Bible").performScrollTo().assertIsDisplayed()
     }
 
-    @Test(timeout = 120_000)
-    fun homeBooksReaderBackAndSearchDestinationsRemainReachable() {
-        mark("nav-01-open-language-selector")
-        composeRule.onNodeWithTag("language_selector").performClick()
-        mark("nav-02-select-english")
-        composeRule.onNodeWithTag("language_english").performClick()
-        mark("nav-03-assert-home-title")
+    @Test(timeout = 60_000)
+    fun homeBooksAndGenesisLearningCentreAreReachable() {
+        mark("nav-01-select-english")
+        selectEnglish()
+        mark("nav-02-assert-home")
+        awaitText("ጌኤዦ ማፃኣፖ")
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
-        mark("nav-04-open-books")
-        composeRule.onNodeWithText("Explore the Bible").performClick()
-        mark("nav-05-assert-books-title")
-        composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
-        mark("nav-06-assert-old-testament")
+        mark("nav-03-open-books")
+        openGenesisLearningCentre()
+        mark("nav-04-assert-testament-navigation")
+        awaitText("Old Testament")
         composeRule.onNodeWithText("Old Testament").assertIsDisplayed()
-        mark("nav-07-assert-new-testament")
         composeRule.onNodeWithText("New Testament").assertIsDisplayed()
-
-        mark("nav-08-scroll-genesis-into-view")
-        composeRule.onNodeWithTag("books_list").performScrollToNode(hasContentDescription("Open Genesis"))
-        mark("nav-09-open-genesis")
-        composeRule.onNodeWithContentDescription("Open Genesis").performClick()
-
-        mark("nav-10-assert-learning-centre")
-        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
         composeRule.onNodeWithText("Introduction").assertIsDisplayed()
         composeRule.onNodeWithText("Inductive study").assertIsDisplayed()
         composeRule.onNodeWithText("Quiz").assertIsDisplayed()
+    }
 
-        mark("nav-11-open-reader")
+    @Test(timeout = 60_000)
+    fun genesisLearningCentreReaderAndBackNavigationAreReachable() {
+        mark("reader-01-select-english")
+        selectEnglish()
+        mark("reader-02-open-learning-centre")
+        openGenesisLearningCentre()
+        mark("reader-03-open-reader")
         composeRule.onNodeWithText("Open this book in the Bible reader").performScrollTo().performClick()
-        mark("nav-12-assert-reader-id")
+        mark("reader-04-await-canonical-reader")
+        awaitText("Canonical book ID • GEN")
         composeRule.onNodeWithText("Canonical book ID • GEN").assertIsDisplayed()
         composeRule.onNodeWithText(
             "Verified Maale scripture text is not available in this build yet."
         ).performScrollTo().assertIsDisplayed()
-
-        mark("nav-13-reader-back")
+        mark("reader-05-reader-back")
         composeRule.onNodeWithText("←").performClick()
-        mark("nav-14-learning-back-to-books")
+        mark("reader-06-learning-back-to-books")
         composeRule.onNodeWithText("‹  All books").performClick()
+        awaitText("Books of the Maale Bible")
         composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
+    }
 
-        mark("nav-15-open-search")
+    @Test(timeout = 60_000)
+    fun searchDestinationRemainsReachableAfterBooksNavigation() {
+        mark("search-01-select-english")
+        selectEnglish()
+        mark("search-02-open-books")
+        composeRule.onNodeWithText("Explore the Bible").performClick()
+        awaitText("Books of the Maale Bible")
+        mark("search-03-open-search")
         composeRule.onNodeWithText("Search").performClick()
-        mark("nav-16-assert-search")
+        mark("search-04-await-search-screen")
+        awaitText("Search with purpose.")
         composeRule.onNodeWithText("Search with purpose.").assertIsDisplayed()
     }
 
