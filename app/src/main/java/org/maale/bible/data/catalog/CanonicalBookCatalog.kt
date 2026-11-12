@@ -1,5 +1,7 @@
 package org.maale.bible.data.catalog
+
 import org.maale.bible.domain.model.Book
+
 /** Metadata-only catalogue for the Owner-approved 2008 MDYTWF / mdyeth edition. */
 object CanonicalBookCatalog {
     val books = listOf(
@@ -26,6 +28,21 @@ object CanonicalBookCatalog {
         Book(61,"2PE","2 Peter"), Book(62,"1JN","1 John"), Book(63,"2JN","2 John"),
         Book(64,"3JN","3 John"), Book(65,"JUD","Jude"), Book(66,"REV","Revelation")
     )
+
     private val byId = books.associateBy(Book::usfmId)
+
     fun find(usfmId: String): Book? = byId[usfmId]
+
+    /**
+     * Searches catalogue metadata only. It never searches or returns scripture text.
+     * Results retain the canonical order from the approved book inventory.
+     */
+    fun search(query: String): List<Book> {
+        val normalized = query.trim()
+        if (normalized.isEmpty()) return books
+        return books.filter { book ->
+            book.englishName.contains(normalized, ignoreCase = true) ||
+                book.usfmId.contains(normalized, ignoreCase = true)
+        }
+    }
 }
