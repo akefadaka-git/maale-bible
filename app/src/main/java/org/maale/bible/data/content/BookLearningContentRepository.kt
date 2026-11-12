@@ -53,8 +53,11 @@ data class BookLearningContent(
     val quizQuestions: List<BookQuizQuestion>,
     val sourceCount: Int
 ) {
-    val isApproved: Boolean get() = publicationState == "approved_for_release"
+    val isApproved: Boolean get() = isApprovedPublicationState(publicationState)
 }
+
+internal fun isApprovedPublicationState(publicationState: String): Boolean =
+    publicationState == "approved_for_release"
 
 object BookLearningContentRepository {
     fun load(context: Context, bookId: String): BookLearningContent? {
@@ -64,6 +67,10 @@ object BookLearningContentRepository {
         } catch (_: Exception) {
             return null
         }
+        val publicationState = root.optString("publication_state", "draft_not_for_release")
+        // Fail closed: unapproved/draft content must never reach the UI or quiz evaluator.
+        if (!isApprovedPublicationState(publicationState)) return null
+
         val locale = if (context.resources.configuration.locales[0].language == "am") "am" else "en"
         val localeContent = root.optJSONObject("locales")?.optJSONObject(locale) ?: return null
         val introductionJson = localeContent.optJSONObject("introduction") ?: return null
@@ -115,7 +122,7 @@ object BookLearningContentRepository {
         return BookLearningContent(
             bookId = bookId,
             locale = locale,
-            publicationState = root.optString("publication_state", "draft_not_for_release"),
+            publicationState = publicationState,
             introduction = intro,
             inductiveStudies = studies,
             quizQuestions = questions,
