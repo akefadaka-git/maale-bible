@@ -17,6 +17,8 @@ This repository contains project documentation, source-audit tooling and the And
 - Owner-accepted real-source validation report: [docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md](docs/source-verification/REAL_SOURCE_VALIDATION_REPORT_2026-11-07.md)
 - Candidate source register: content/source-register/README.md
 - Source manifest schema: content/manifests/source-manifest.schema.json
+- Optional expected book/chapter inventory schema: content/manifests/expected-inventory.schema.json
+- Versioned USFM audit report schema (v1.2.0): content/manifests/usfm-audit-report.schema.json
 - Source verification procedure: docs/source-verification/README.md
 - Source package readiness and safety checklist: docs/source-verification/SOURCE_READINESS_CHECKLIST.md
 - ZIP metadata-only preflight: tools/archive_preflight.py
@@ -45,12 +47,17 @@ Only after the Owner separately authorizes acquisition and intake, and the appro
 
     python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --output audit-report.json
 
-The audit reports structural metadata and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness.
+If an independently reviewed and Owner-approved expected inventory is available, it may be supplied explicitly:
+
+    python tools/usfm_audit.py --manifest MANIFEST.json --source-root SOURCE_DIRECTORY --expected-inventory EXPECTED_INVENTORY.json --output audit-report.json
+
+The expected inventory contains book IDs and chapter numbers only. It is optional and requires a source reference and an explicit Owner approval reference. Duplicate `books[].book_id` values are rejected by the audit engine at runtime; JSON Schema validation alone cannot enforce uniqueness by that property, so consumers must run the audit engine. When a package includes unsupported formats, the inventory comparison is marked not verifiable rather than treating uninspected books as missing. It must not be treated as a canon assertion unless its reference has been independently established and approved.
+
+The audit reports structural metadata, stable issue codes, and file hashes; it does not print scripture text. A passing audit is not proof of canon completeness, translation accuracy, linguistic correctness, legal permission, or publication readiness. Structural success never authorizes content intake.
 
 ## Content restrictions
 
-Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the Owner separately authorizes the exact source-package acquisition and intake. Keep content_intake_authorized=false. Android and backend implementation are not part of the current A2 authorization.
-
+Do not download, acquire, unpack, inspect, hash, ingest, or commit USFM, USX, scripture excerpts, audio, scans, or other source-content files until the Owner separately authorizes the exact source-package acquisition and intake. Keep `content_intake_authorized=false`. Android and backend implementation do not authorize production content ingestion or publication.
 
 ## A3 Android foundation
 
