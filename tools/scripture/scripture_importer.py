@@ -18,7 +18,7 @@ CHAPTER_RE = re.compile(r"^\s*([0-9]+)\s*(.*)$", re.DOTALL)
 CHAPTER_MARKERS={"c"}; VERSE_MARKERS={"v"}; BOOK_MARKERS={"id"}
 HEADING_MARKERS={"s","s1","s2","s3","s4","r","d","sp","ms","ms1","ms2","ms3"}
 ALTERNATE_LABEL_MARKERS={"ca","cp","va","vp"}; NOTE_MARKERS={"f","x"}
-INLINE_MARKERS={"add","bd","bdit","bk","dc","em","it","k","nd","no","ord","pn","qt","sc","sig","sls","sup","tl","wj","w","ref","rq","xo","xk","xt","fig","qac","qs","pro","lik","lit","ior","iqt","ph","jmp"}
+INLINE_MARKERS={"add","bd","bdit","bk","dc","em","it","k","nd","no","ord","pn","qt","sc","sig","sls","sup","tl","wj","w","ref","rq","xo","xk","xt","fig","qac","qs","pro","lik","lit","ior","iqt","ph","jmp","fr","ft","fq","fqa","fk","fl","fw","fp","fv","fdc","xq","xot","xop"}
 STRUCTURAL_MARKERS=set("""ide h toc1 toc2 toc3 mt mt1 mt2 mt3 mt4 mte mte1 mte2 imt imt1 imt2 imt3 imt4 is is1 is2 is3 ip ipi im imi ipq imq ipr iq iq1 iq2 iq3 iq4 ib ili ili1 ili2 ili3 ili4 io io1 io2 io3 io4 iot iex p m po pr cls pmo pm pmc pmr pi pi1 pi2 pi3 mi nb b q q1 q2 q3 q4 qr qc qa qm qm1 qm2 qm3 qd li li1 li2 li3 li4 lim lim1 lim2 lim3 lim4 lh lf tr th th1 th2 th3 th4 tc tc1 tc2 tc3 tc4 tcr pc ph1 ph2 ph3 ph4 periph z zpa-x""".split())
 SUPPORTED_MARKERS=BOOK_MARKERS|CHAPTER_MARKERS|VERSE_MARKERS|HEADING_MARKERS|ALTERNATE_LABEL_MARKERS|NOTE_MARKERS|INLINE_MARKERS|STRUCTURAL_MARKERS
 
@@ -36,7 +36,8 @@ def safe_archive_members(zf):
         key=str(path).casefold()
         if key in members: raise ImportErrorClosed(f"duplicate normalized archive path: {name!r}")
         mode=info.external_attr>>16
-        if stat.S_ISLNK(mode) or (mode and not (stat.S_ISREG(mode) or stat.S_ISDIR(mode))):
+        file_type = stat.S_IFMT(mode)
+        if stat.S_ISLNK(mode) or (file_type and file_type not in (stat.S_IFREG, stat.S_IFDIR)):
             raise ImportErrorClosed(f"unsupported archive entry type: {name!r}")
         if info.flag_bits&1: raise ImportErrorClosed(f"encrypted archive entry: {name!r}")
         if info.file_size>MAX_ENTRY_BYTES: raise ImportErrorClosed(f"archive entry too large: {name!r}")
@@ -74,7 +75,7 @@ def parse_usfm(data,source):
     except UnicodeDecodeError as exc: raise ImportErrorClosed(f"{source}: invalid UTF-8: {exc}") from exc
     if "\ufffd" in text: raise ImportErrorClosed(f"{source}: replacement character present")
     if unicodedata.normalize("NFC",text)!=text: raise ImportErrorClosed(f"{source}: source is not NFC")
-    book_id=None; chapter=None; verses=[]; headings=[]; current_verse=None; current_heading=None; in_note=False
+    book_id=None; chapter=None; verses=[]; headings=[]; current_verse=None; current_heading=None; in_note=False; in_alternate_label=False
     for line_no,raw in enumerate(text.splitlines(),1):
         if not raw.strip():
             if current_verse is not None: current_verse["text"]+=" "
@@ -115,7 +116,7 @@ def parse_usfm(data,source):
                 body=strip_inline(payload,line_no,source).strip()
                 if body: current_heading={"chapter":chapter or 0,"marker":marker,"text":body,"ordinal":len(headings)+1,"line":line_no}; headings.append(current_heading)
                 current_verse=None; continue
-            if marker in ALTERNATE_LABEL_MARKERS: continue
+            if marker in ALTERNATE_LABEL_MARKERS:\n                in_alternate_label = True if not closing else False\n                continue
             if marker in INLINE_MARKERS:
                 visible=payload.split("|",1)[0] if marker=="w" and "|" in payload else payload
                 visible=strip_inline(visible,line_no,source)
@@ -196,9 +197,15 @@ def import_archive(source,manifest_path,output):
             if parsed_id!=bid: raise ImportErrorClosed(f"{path}: manifest ID {bid} != USFM ID {parsed_id}")
             chapters=sorted({v["chapter"] for v in pv})
             if chapters!=list(range(1,max(chapters)+1)): raise ImportErrorClosed(f"{path}: non-contiguous chapters")
+            if rec.get("chapter_count") is not None and len(chapters)!=rec["chapter_count"]:
+                raise ImportErrorClosed(f"{path}: chapter count differs from evidence manifest")
+            if rec.get("verse_marker_count") is not None and len(pv)!=rec["verse_marker_count"]:
+                raise ImportErrorClosed(f"{path}: verse-marker count differs from evidence manifest")
             books.append({"book_id":bid,"ordinal":ordinal,"path":path,"sha256":file_hash,"chapters":chapters})
             verses.extend({**v,"book_id":bid,"path":path} for v in pv)
             headings.extend({**h,"book_id":bid,"path":path} for h in ph)
+    if sum(len(b["chapters"]) for b in books)!=1189 or len(verses)!=30506:
+        raise ImportErrorClosed("whole-edition chapter/verse totals differ from the verified intake baseline")
     create_database(output,{"archive_sha256":digest,"archive_bytes":len(archive)},books,verses,headings)
     return {"status":"PRIVATE_CANDIDATE_IMPORTED_NOT_RELEASEABLE","edition_id":EDITION_ID,"archive_sha256":digest,
     "books":len(books),"chapters":sum(len(b["chapters"]) for b in books),"verses":len(verses),"headings":len(headings),
