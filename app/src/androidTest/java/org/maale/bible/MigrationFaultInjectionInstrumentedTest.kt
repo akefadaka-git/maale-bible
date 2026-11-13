@@ -47,6 +47,9 @@ class MigrationFaultInjectionInstrumentedTest {
             file.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE
         )
         try {
+            // Re-enable WAL on the anchor connection: Android may revert the
+            // fixture to TRUNCATE when createLegacy closes its last connection.
+            assertTrue("Unable to enable WAL on migration anchor", walAnchor.enableWriteAheadLogging())
             walAnchor.rawQuery("PRAGMA journal_mode", null).use { cursor ->
                 assertTrue("Legacy fixture must remain queryable", cursor.moveToFirst())
                 assertEquals("wal", cursor.getString(0).lowercase())
