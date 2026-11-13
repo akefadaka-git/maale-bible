@@ -19,7 +19,12 @@ class MigrationFaultInjectionInstrumentedTest {
         file.parentFile?.mkdirs()
         val db = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
         try {
-            db.execSQL("PRAGMA journal_mode=$journalMode")
+            db.rawQuery("PRAGMA journal_mode=$journalMode", null).use { cursor ->
+                check(cursor.moveToFirst()) { "Unable to set legacy journal mode to $journalMode" }
+                check(cursor.getString(0).equals(journalMode, ignoreCase = true)) {
+                    "Requested $journalMode journal mode but SQLite returned ${cursor.getString(0)}"
+                }
+            }
             db.execSQL("CREATE TABLE reading_position (singleton INTEGER PRIMARY KEY CHECK(singleton=1), book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
             db.execSQL("CREATE TABLE annotations (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, kind TEXT NOT NULL, body TEXT NOT NULL, color TEXT, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
