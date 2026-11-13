@@ -82,7 +82,7 @@ def parse_usfm(data,source):
             continue
         for marker,payload,closing in tokenize_line(raw):
             if marker is None:
-                if in_note: continue
+                if in_note or in_alternate_label: continue
                 if current_heading is not None: current_heading["text"]+=payload
                 elif current_verse is not None: current_verse["text"]+=payload
                 elif payload.strip(): raise ImportErrorClosed(f"{source}:{line_no}: text outside chapter/verse context")
