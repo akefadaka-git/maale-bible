@@ -24,7 +24,6 @@ import org.maale.bible.data.security.StudyDataKeyStore
 import org.maale.bible.domain.model.Bookmark
 import org.maale.bible.ui.PendingDocumentPickerState
 import androidx.lifecycle.ViewModelProvider
-import java.io.File
 
 @RunWith(AndroidJUnit4::class)
 class DocumentPickerEndToEndInstrumentedTest {
@@ -89,7 +88,7 @@ class DocumentPickerEndToEndInstrumentedTest {
         compose.waitForIdle()
 
         compose.onNodeWithTag("backup_status").assertTextEquals("Backup export cancelled.")
-        val state = ViewModelProvider(compose.activity)[PendingDocumentPickerState::class.java]
+        val state = ViewModelProvider(compose.activity).get(PendingDocumentPickerState::class.java)
         assertNull(state.consumeExportKey())
     }
 
