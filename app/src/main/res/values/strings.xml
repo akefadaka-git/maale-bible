@@ -111,7 +111,7 @@ pause. Read. Reflect.</string>
     <string name="action_open">Open</string>
     <string name="reader_canonical_book_id">Canonical book ID</string>
     <string name="header_notifications">Notifications</string>
-    <string name="header_no_notifications">You're all caught up. No new notifications.</string>
+    <string name="header_no_notifications">You are all caught up. No new notifications.</string>
     <string name="header_profile">Profile</string>
     <string name="header_guest_mode">Guest reader · local-only</string>
     <string name="header_language">Interface language</string>

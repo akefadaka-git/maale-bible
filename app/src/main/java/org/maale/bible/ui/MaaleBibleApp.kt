@@ -12,9 +12,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
+undefinedimport androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -70,7 +68,7 @@ fun MaaleBibleApp() {
                 TopAppBar(
                     title = {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(11.dp)) {
-                            MaaleBibleBrandMark(38.dp)
+                            MaaleBibleBrandSymbol(size = 38.dp)
                             Column(verticalArrangement = Arrangement.spacedBy(0.dp)) {
                                 Text(stringResource(R.string.app_name), style = MaterialTheme.typography.titleMedium)
                                 Text(
@@ -197,31 +195,6 @@ fun MaaleBibleApp() {
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun MaaleBibleBrandMark(size: androidx.compose.ui.unit.Dp) {
-    Box(
-        Modifier.size(size).clip(CircleShape)
-            .background(Brush.linearGradient(listOf(Color(0xFF173F38), Color(0xFF0B1020)))),
-        contentAlignment = Alignment.Center
-    ) {
-        Canvas(Modifier.fillMaxSize().padding(size * 0.19f)) {
-            val gold = Color(0xFFD9B76E)
-            val stroke = Stroke(width = this.size.minDimension * 0.075f)
-            val pages = Path().apply {
-                moveTo(this@Canvas.size.width * 0.08f, this@Canvas.size.height * 0.22f)
-                cubicTo(this@Canvas.size.width * 0.32f, this@Canvas.size.height * 0.12f, this@Canvas.size.width * 0.43f, this@Canvas.size.height * 0.25f, this@Canvas.size.width * 0.5f, this@Canvas.size.height * 0.38f)
-                cubicTo(this@Canvas.size.width * 0.57f, this@Canvas.size.height * 0.25f, this@Canvas.size.width * 0.68f, this@Canvas.size.height * 0.12f, this@Canvas.size.width * 0.92f, this@Canvas.size.height * 0.22f)
-                lineTo(this@Canvas.size.width * 0.92f, this@Canvas.size.height * 0.78f)
-                cubicTo(this@Canvas.size.width * 0.68f, this@Canvas.size.height * 0.68f, this@Canvas.size.width * 0.57f, this@Canvas.size.height * 0.79f, this@Canvas.size.width * 0.5f, this@Canvas.size.height * 0.9f)
-                cubicTo(this@Canvas.size.width * 0.43f, this@Canvas.size.height * 0.79f, this@Canvas.size.width * 0.32f, this@Canvas.size.height * 0.68f, this@Canvas.size.width * 0.08f, this@Canvas.size.height * 0.78f)
-                close()
-            }
-            drawPath(pages, gold, style = stroke)
-            drawLine(gold, androidx.compose.ui.geometry.Offset(size.width / 2f, size.height * 0.38f), androidx.compose.ui.geometry.Offset(size.width / 2f, size.height * 0.9f), stroke.width)
         }
     }
 }

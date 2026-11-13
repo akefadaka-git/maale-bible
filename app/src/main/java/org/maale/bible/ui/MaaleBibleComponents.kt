@@ -30,18 +30,19 @@ fun MaaleBibleBrandSymbol(modifier: Modifier = Modifier, size: Dp = 40.dp) {
         contentAlignment = Alignment.Center
     ) {
         Canvas(Modifier.fillMaxSize().padding(size * .18f)) {
-            val stroke = Stroke(width = this.size.minDimension * .075f)
+            val canvasSize = this.size
+            val stroke = Stroke(width = canvasSize.minDimension * .075f)
             val p = Path().apply {
-                moveTo(size.width * .08f, size.height * .2f)
-                cubicTo(size.width * .32f, size.height * .12f, size.width * .43f, size.height * .25f, size.width * .5f, size.height * .38f)
-                cubicTo(size.width * .57f, size.height * .25f, size.width * .68f, size.height * .12f, size.width * .92f, size.height * .2f)
-                lineTo(size.width * .92f, size.height * .8f)
-                cubicTo(size.width * .68f, size.height * .7f, size.width * .57f, size.height * .8f, size.width * .5f, size.height * .92f)
-                cubicTo(size.width * .43f, size.height * .8f, size.width * .32f, size.height * .7f, size.width * .08f, size.height * .8f)
+                moveTo(canvasSize.width * .08f, canvasSize.height * .2f)
+                cubicTo(canvasSize.width * .32f, canvasSize.height * .12f, canvasSize.width * .43f, canvasSize.height * .25f, canvasSize.width * .5f, canvasSize.height * .38f)
+                cubicTo(canvasSize.width * .57f, canvasSize.height * .25f, canvasSize.width * .68f, canvasSize.height * .12f, canvasSize.width * .92f, canvasSize.height * .2f)
+                lineTo(canvasSize.width * .92f, canvasSize.height * .8f)
+                cubicTo(canvasSize.width * .68f, canvasSize.height * .7f, canvasSize.width * .57f, canvasSize.height * .8f, canvasSize.width * .5f, canvasSize.height * .92f)
+                cubicTo(canvasSize.width * .43f, canvasSize.height * .8f, canvasSize.width * .32f, canvasSize.height * .7f, canvasSize.width * .08f, canvasSize.height * .8f)
                 close()
             }
             drawPath(p, Color(0xFFD9B76E), style = stroke)
-            drawLine(Color(0xFFD9B76E), androidx.compose.ui.geometry.Offset(size.width * .5f, size.height * .38f), androidx.compose.ui.geometry.Offset(size.width * .5f, size.height * .9f), stroke.width)
+            drawLine(Color(0xFFD9B76E), androidx.compose.ui.geometry.Offset(canvasSize.width * .5f, canvasSize.height * .38f), androidx.compose.ui.geometry.Offset(canvasSize.width * .5f, canvasSize.height * .9f), stroke.width)
         }
     }
 }
