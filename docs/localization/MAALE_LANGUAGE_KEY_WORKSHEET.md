@@ -249,6 +249,34 @@ The following 68 keys are present in the English Android resource file but are a
 | `study_comments_description` | Attach contextual comments to selected verified scripture passages. Comment creation will remain locked until canonical passage identities and the authorized scripture text are integrated. | English fallback (Amharic not supplied) |  |
 | `study_comments_locked` | VERIFIED PASSAGE REFERENCES REQUIRED | English fallback (Amharic not supplied) |  |
 
+
+## 9. Additional screen-resource inventory (not yet in the original worksheet tables)
+
+The initial 112/180 count covered only `strings.xml`. The following Android resource files also contain visible interface copy and must be included in the full locale audit. No Maale wording is supplied for these keys in this worksheet; do not fill them by machine translation or inference.
+
+| Resource file | English keys | Amharic keys | Maale keys | Current Maale disposition |
+|---|---:|---:|---:|---|
+| `book_explorer.xml` | 33 | 0 | 0 | 33 English fallbacks |
+| `book_explorer_testaments.xml` | 4 | 4 | 0 | 4 English fallbacks |
+| `book_learning.xml` | 43 | 43 | 0 | 43 English fallbacks |
+| **Additional total** | **80** | **47** | **0** | **80 English fallbacks** |
+
+**Additional pending Maale keys (80):**
+
+- `book_explorer.xml`: 
+- `book_explorer_testaments.xml`: 
+- `book_learning.xml`: 
+
+### Full resource inventory
+
+| Locale | Keys present | Keys absent from 261-key English reference |
+|---|---:|---:|
+| English base | 261 | 0 |
+| Amharic | 160 | 101 |
+| Maale | 113 | 148 |
+
+The 112 Owner-supplied Maale UI entries cover 112 of 260 non-app-title keys (43.1%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure is retained only as the `strings.xml`-specific ratio. The 68 core `strings.xml` fallbacks and 80 additional screen-resource fallbacks are distinct sets, totaling 148 missing Maale entries.
+
 ## How to send Maale wording
 
 Reply with any subset of keys and their Maale wording. You can send a group at a time; you do not need to complete the entire worksheet in one message. The following 112 entries have now been supplied and recorded (out of 180 non-app-title UI keys): `nav_home`, `nav_books`, `nav_search`, `nav_bibles`, `nav_listen`, `nav_study`, `language_label`, `language_maale`, `language_amharic`, `language_english`, `language_fallback_notice`, `home_make_it_yours`, `home_reading_journey`, `home_explore`, `home_world_of_scripture`, `home_catalogue`, `home_browse_catalogue`, `home_study_space`, `home_study_description`, `home_the_living_word`, `home_pause_read_reflect`, `home_make_space`, `home_explore_bible`, `home_daily_scripture`, `home_quiet_place`, `home_content_not_loaded`, `home_begin_journey`, `home_start`, `books_title`, `books_description`, `books_open_book`, `search_eyebrow`, `search_title`, `search_description`, `search_field_label`, `search_field_hint`, `action_clear`, `search_books_heading`, `action_open`, `search_no_results`, `search_error`, `search_capabilities`, `search_available`, `search_waiting_download`, `search_in_development`, `reader_exit_focus`, `reader_title`, `reader_collection`, `reader_canonical_book_id`, `reader_focus`, `reader_content_unavailable`, `reader_content_not_loaded`, `reader_chapter_navigation`, `library_title`, `library_choose_editions`, `library_open_license_sources`, `library_review_before_install`, `library_review_required`, `library_partial`, `library_open_source`, `library_view_source_license`, `library_download_package`, `listen_heading`, `listen_now_playing`, `listen_audio_not_loaded`, `listen_no_recording`, `listen_play_unavailable`, `listen_library`, `listen_library_empty`, `listen_offline`, `listen_downloads_unavailable`, `study_your_space`, `study_deeper`, `study_private_workspace`, `study_notes`, `study_bookmarks`, `study_highlights`, `study_collections`, `study_reflection_notes`, `study_capture_thought`, `study_new_note`, `study_edit_note`, `study_write_thought`, `study_saved_privately`, `study_save`, `study_cancel`, `study_delete`, `study_refresh`, `study_empty_notes`, `account_open`, `account_login`, `account_register`, `account_guest`, `account_username`, `account_mobile`, `account_submit`, `account_otp`, `account_password`, `account_title`, `account_guest_first`, `account_service_unavailable_title`, `account_identifier`, `account_continue_guest`.
@@ -264,4 +292,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 112 of 180 non-app-title UI keys have Owner-supplied Maale wording recorded (62.2% intake completeness). The remaining 68 keys are explicitly listed above as English fallback in both Maale and Amharic. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** 112 of 260 non-app-title Android UI keys have Owner-supplied Maale wording recorded (43.1% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 80 additional Explorer/Testament/Learning Centre keys lack Maale wording, for 148 Maale fallbacks overall. Amharic currently has 101 fallbacks across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.

@@ -1,6 +1,7 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -51,6 +52,10 @@ class P2V6NavigationSmokeTest {
         val context = ApplicationProvider.getApplicationContext<Context>()
         context.getSharedPreferences("maale_bible_preferences", Context.MODE_PRIVATE)
             .edit().clear().commit()
+        // Each test must start from a newly composed first-launch state. Clearing
+        // SharedPreferences alone does not reset the already-running Compose state.
+        composeRule.activityRule.scenario.recreate()
+        composeRule.waitForIdle()
     }
 
     @Test
@@ -157,6 +162,54 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Quiz not yet available").assertIsDisplayed()
         assertTrue(composeRule.onAllNodesWithText("According to Genesis 1, what does the opening chapter present God doing?").fetchSemanticsNodes().isEmpty())
         assertTrue(composeRule.onAllNodesWithText("Check answer").fetchSemanticsNodes().isEmpty())
+    }
+
+
+    @Test(timeout = 60_000)
+    fun maaleIsFirstLaunchDefaultAndLocaleChoicePersistsAcrossActivityRecreation() {
+        // @Before clears the stored choice and recreates the activity, so this
+        // assertion verifies the actual first-launch default rather than enum order.
+        composeRule.onNodeWithText("ጌዔዦ ማፃኣፖ ቡሊ ዛጌ", substring = false).assertIsDisplayed()
+
+        composeRule.onNodeWithTag("language_selector")
+            .assertHasClickAction()
+            .performClick()
+        composeRule.onNodeWithTag("language_maale")
+            .assertIsDisplayed()
+            .assertHasClickAction()
+        composeRule.onNodeWithTag("language_amharic")
+            .assertIsDisplayed()
+            .assertHasClickAction()
+        composeRule.onNodeWithTag("language_english")
+            .assertIsDisplayed()
+            .assertHasClickAction()
+        composeRule.onNodeWithText(
+            "ማኣሎ ሙኡጫ ጊኢጊንቲ ሃሣ ዛጊንቲባኣሢ ፖራንጄሦና ዻዊንታኔ።",
+            substring = false
+        ).assertIsDisplayed()
+
+        // Amharic: immediate rendering and persistence after Activity recreation.
+        composeRule.onNodeWithTag("language_amharic").performClick()
+        composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ", substring = false).assertIsDisplayed()
+        composeRule.activityRule.scenario.recreate()
+        composeRule.waitForIdle()
+        composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ", substring = false).assertIsDisplayed()
+
+        // English: immediate rendering and persistence after Activity recreation.
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_english").performClick()
+        composeRule.onNodeWithText("Explore the Bible", substring = false).assertIsDisplayed()
+        composeRule.activityRule.scenario.recreate()
+        composeRule.waitForIdle()
+        composeRule.onNodeWithText("Explore the Bible", substring = false).assertIsDisplayed()
+
+        // Maale remains selectable after other locales and persists across restart.
+        composeRule.onNodeWithTag("language_selector").performClick()
+        composeRule.onNodeWithTag("language_maale").performClick()
+        composeRule.onNodeWithText("ጌዔዦ ማፃኣፖ ቡሊ ዛጌ", substring = false).assertIsDisplayed()
+        composeRule.activityRule.scenario.recreate()
+        composeRule.waitForIdle()
+        composeRule.onNodeWithText("ጌዔዦ ማፃኣፖ ቡሊ ዛጌ", substring = false).assertIsDisplayed()
     }
 
 }
