@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">ጌኤዦ ማፃኣፖ</string>
+    <string name="nav_listen">ማዳመጥ</string>
     <string name="nav_home">መነሻ</string>
     <string name="nav_books">መጻሕፍት</string>
     <string name="nav_search">ፍለጋ</string>
