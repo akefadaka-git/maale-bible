@@ -66,6 +66,7 @@ fun MaaleBibleApp() {
         Scaffold(
             topBar = {
                 TopAppBar(
+                    modifier = Modifier.fillMaxWidth().height(64.dp),
                     title = {
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(11.dp)) {
                             MaaleBibleBrandSymbol(size = 38.dp)
