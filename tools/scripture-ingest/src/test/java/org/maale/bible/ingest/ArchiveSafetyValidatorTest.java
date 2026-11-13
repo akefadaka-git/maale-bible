@@ -1,0 +1,6 @@
+package org.maale.bible.ingest;
+import static org.junit.jupiter.api.Assertions.*; import java.nio.file.*; import java.util.zip.*; import java.io.*; import org.junit.jupiter.api.Test;
+class ArchiveSafetyValidatorTest {
+ @Test void extractsVerifiedSyntheticZip() throws Exception {Path d=Files.createTempDirectory("zip");Path z=d.resolve("a.zip");try(ZipOutputStream o=new ZipOutputStream(Files.newOutputStream(z))){o.putNextEntry(new ZipEntry("GEN.usfm"));o.write("\\id GEN Synthetic\n".getBytes());o.closeEntry();}Path out=d.resolve("out");ArchiveSafetyValidator.extractVerified(z,Sha256Verifier.sha256(z),out,new ArchiveSafetyValidator.Limits(10,10000,10000,100));assertTrue(Files.exists(out.resolve("GEN.usfm")));}
+ @Test void rejectsWrongArchiveDigestBeforeExtraction() throws Exception {Path d=Files.createTempDirectory("zip");Path z=d.resolve("a.zip");Files.write(z,new byte[]{1});assertThrows(java.io.IOException.class,()->ArchiveSafetyValidator.extractVerified(z,"0".repeat(64),d.resolve("out"),new ArchiveSafetyValidator.Limits(10,1000,1000,10)));assertFalse(Files.exists(d.resolve("out")));}
+}
