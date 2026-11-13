@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - main
+      - feat/maale-launcher-identity-ui
     paths:
       - 'app/**'
       - 'build.gradle.kts'
