@@ -2,7 +2,7 @@
 
 **Product:** Maale Bible — ጌኤዦ ማፃኣፖ  
 **Date:** 2026-11-14  
-**Status:** IMPLEMENTATION SPECIFICATION — NOT STARTED; OWNER AUTHORIZATION REQUIRED  
+**Status:** OWNER-AUTHORIZED IMPLEMENTATION — PARTIAL; RESTRICTED CORPUS EVIDENCE PENDING  
 **Depends on:** Owner approval of `P1_0_ENGINEERING_CONTRACT_DECISIONS_2026-11-14.md`  
 **Requirements baseline:** P0 v1.0, frozen at `61902345e7ff2d6cd831f433bee33f5775412864`  
 **Inspected app baseline:** PR #59 head `58eb32acc10415e3dfa6683a5342b6da824d5d27`  
@@ -14,7 +14,7 @@ P1.1 implements the **source validation and deterministic ingestion foundation**
 
 P1.1 does **not** implement the Android reader, UI, catalogue grouping, E.C./G.C. selector, package signing, production trust-root/key generation, package distribution, public scripture hosting or full package activation. P1.1 must not place scripture payload or source archives in the public repository.
 
-No implementation begins until the Owner explicitly authorizes P1.1 after reviewing the five engineering contracts. This specification is not that authorization.
+Owner authorization to implement P1.1 was given on 2026-11-14. Implementation is limited to the specified metadata-only tooling and synthetic tests. Actual corpus processing remains restricted-workspace-only; merge, signing, release, deployment and publication remain separately gated.
 
 ## 2. Source scope and hard gates
 
