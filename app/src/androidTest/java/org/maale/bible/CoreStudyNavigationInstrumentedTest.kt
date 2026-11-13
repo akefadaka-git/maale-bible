@@ -6,6 +6,7 @@ import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -23,6 +24,10 @@ import org.maale.bible.data.repository.StudyDatabase
 class CoreStudyNavigationInstrumentedTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
 
+    private fun waitForTag(tag: String) {
+        compose.waitUntil(5_000) { compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isNotEmpty() }
+    }
+
     @Before fun selectEnglishForEnglishAssertions() {
         AppLanguage.save(compose.activity, AppLanguage.ENGLISH)
         compose.activityRule.scenario.recreate()
@@ -34,13 +39,18 @@ class CoreStudyNavigationInstrumentedTest {
 
     @Test fun bookReaderBookmarkAndStudyHubFlowIsConnected() {
         compose.onNodeWithTag("navigation_books").performClick()
+        waitForTag("books_screen")
+        compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").performClick()
+        waitForTag("reader_screen")
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
         compose.onNodeWithTag("reader_add_bookmark_button").performClick()
         compose.waitForIdle()
         compose.onNodeWithText("Bookmarks (1)").assertExists()
         compose.onNodeWithTag("navigation_more").performClick()
+        waitForTag("more_screen")
         compose.onNodeWithTag("more_study_tab").performClick()
+        waitForTag("study_hub_list")
         compose.onNodeWithTag("study_hub_list").performScrollToNode(hasText("Bookmarks (1)"))
         compose.onNodeWithTag("study_bookmarks_count").assertIsDisplayed()
         compose.onNodeWithText("Bookmarks (1)").assertIsDisplayed()
@@ -67,10 +77,15 @@ class CoreStudyNavigationInstrumentedTest {
     }
 
     @Test fun studyDashboardRendersCalendarChartAndMapDisclosureAndScrolls() {
-        compose.onNodeWithText("More").performClick()
-        compose.onNodeWithText("Study").performClick()
+        compose.onNodeWithTag("navigation_more").performClick()
+        waitForTag("more_screen")
+        compose.onNodeWithTag("more_study_tab").performClick()
+        waitForTag("study_hub_list")
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasTestTag("study_week_context"))
         compose.onNodeWithTag("study_week_context").assertIsDisplayed()
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasTestTag("study_insights_chart"))
         compose.onNodeWithTag("study_insights_chart").assertIsDisplayed()
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasTestTag("study_places_preview"))
         compose.onNodeWithTag("study_places_preview").assertIsDisplayed()
         compose.onNodeWithTag("study_hub_list").performScrollToNode(hasTestTag("study_annotations_count"))
         compose.onNodeWithTag("study_annotations_count").assertIsDisplayed()
@@ -79,12 +94,16 @@ class CoreStudyNavigationInstrumentedTest {
     @Test fun compactNavigationIsVisibleAndInteractive() {
         compose.onNodeWithTag("navigation_compact").assertIsDisplayed()
         compose.onNodeWithTag("navigation_books").performClick()
+        waitForTag("books_screen")
+        compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").assertIsDisplayed()
     }
 
     @Test fun settingsExposeAccessibilityAndPortableBackupControls() {
         compose.onNodeWithTag("navigation_more").performClick()
+        waitForTag("more_screen")
         compose.onNodeWithTag("more_settings_tab").performClick()
+        waitForTag("settings_screen")
         compose.onNodeWithTag("settings_accessibility_section").assertIsDisplayed()
         compose.onNodeWithText("Create encrypted backup").assertExists()
         compose.onNodeWithText("Restore backup").assertExists()
