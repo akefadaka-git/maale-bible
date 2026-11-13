@@ -47,11 +47,15 @@ Requires Python 3.10+:
 
 The GitHub Actions workflow runs on relevant pull requests, changes pushed to `main`, and manual dispatch. CI uses synthetic fixtures and metadata-only evidence; the real scripture archive is not stored in or processed by public CI.
 
-## Binding content restrictions
+## Current content-intake authority
 
-- `content_intake_authorized=false` remains in force.
-- Do not commit USFM, USX, scripture excerpts, raw source archives or derived scripture datasets.
-- Keep the original source archive and extracted scripture files in restricted, non-public evidence storage.
-- Audio, images, fonts, logos, maps, recordings and third-party metadata require separate rights evidence.
-- Do not silently normalize, correct, transliterate, paraphrase or alter source scripture.
-- A2 closure does not authorize production ingestion, distribution, signing, release, deployment or publication.
+- The Owner's 2026-11-08 authorization for controlled intake of Maale, Amharic, English and necessary Bible/study sources is reconciled in [Owner Content-Intake Authority Reconciliation](docs/licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md).
+- The older `content_intake_authorized=false` wording is historical and superseded for current project authority by that later, source-specific gated decision. Closed A2 records remain unchanged.
+- Every source requires provenance, rights/licence/permission, attribution, integrity, compatibility and quality review. Candidate evaluation does not imply approval for packaging or distribution.
+- Raw scripture, source archives, protected assets and derived datasets remain outside the public repository unless the exact licence permits publication and the Owner separately approves it.
+- Audio and third-party assets remain individually rights-gated. A2 closure does not authorize merge, signing, release, deployment or publication.
+
+## Current product requirements
+
+- [Owner-approved Product Requirements Baseline v1.0](docs/product/PRODUCT_REQUIREMENTS_BASELINE_v1.0_2026-11-14.md) — P0 frozen 2026-11-14.
+- [A3 Product-Gap Reassessment](docs/product/A3_PRODUCT_GAP_REASSESSMENT_2026-11-14.md).
