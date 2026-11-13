@@ -24,6 +24,9 @@ class ParserTests(unittest.TestCase):
     def test_verse_range_label_preserved(self):
         _,verses,_=parse_usfm(b"\\id GEN\n\\c 1\n\\v 3-4 combined text\n","range.usfm")
         self.assertEqual(verses[0]["label"],"3-4")
+    def test_alternate_verse_label_is_not_added_to_display_text(self):
+        _,verses,_=parse_usfm(b"\\id GEN\n\\c 1\n\\v 1\\va 1a\\va* Main verse text\n","alt.usfm")
+        self.assertEqual(verses[0]["text"],"Main verse text")
 
 class PackageTests(unittest.TestCase):
     def test_zip_traversal_rejected(self):
