@@ -201,6 +201,8 @@ fun MaaleBibleApp() {
 
 @Composable
 private fun MaaleBellGlyph() {
+    val ink = MaterialTheme.colorScheme.onSurface
+    val accent = MaterialTheme.colorScheme.primary
     Canvas(Modifier.size(23.dp).semantics { contentDescription = "Notifications" }) {
         val p = Path().apply {
             moveTo(size.width * .5f, size.height * .13f)
@@ -210,16 +212,16 @@ private fun MaaleBellGlyph() {
             lineTo(size.width * .78f, size.height * .5f)
             cubicTo(size.width * .78f, size.height * .31f, size.width * .71f, size.height * .13f, size.width * .5f, size.height * .13f)
         }
-        drawPath(p, MaterialTheme.colorScheme.onSurface, style = Stroke(width = 1.8.dp.toPx()))
-        drawLine(MaterialTheme.colorScheme.onSurface, androidx.compose.ui.geometry.Offset(size.width * .43f, size.height * .84f), androidx.compose.ui.geometry.Offset(size.width * .57f, size.height * .84f), 1.8.dp.toPx())
-        drawCircle(MaterialTheme.colorScheme.primary, radius = 1.6.dp.toPx(), center = androidx.compose.ui.geometry.Offset(size.width * .5f, size.height * .08f))
+        drawPath(p, ink, style = Stroke(width = 1.8.dp.toPx()))
+        drawLine(ink, androidx.compose.ui.geometry.Offset(size.width * .43f, size.height * .84f), androidx.compose.ui.geometry.Offset(size.width * .57f, size.height * .84f), 1.8.dp.toPx())
+        drawCircle(accent, radius = 1.6.dp.toPx(), center = androidx.compose.ui.geometry.Offset(size.width * .5f, size.height * .08f))
     }
 }
 
 @Composable
 private fun MaaleProfileGlyph() {
+    val ink = MaterialTheme.colorScheme.onSurface
     Canvas(Modifier.size(23.dp).semantics { contentDescription = "Profile" }) {
-        val ink = MaterialTheme.colorScheme.onSurface
         drawCircle(ink, radius = size.minDimension * .18f, center = androidx.compose.ui.geometry.Offset(size.width * .5f, size.height * .31f), style = Stroke(width = 1.8.dp.toPx()))
         val shoulders = Path().apply {
             moveTo(size.width * .16f, size.height * .9f)
