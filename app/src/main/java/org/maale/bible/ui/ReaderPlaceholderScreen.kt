@@ -2,7 +2,6 @@ package org.maale.bible.ui
 
 import org.maale.bible.R
 
-import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -73,9 +72,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(modifier = Modifier.testTag("reader_add_bookmark_button"), onClick = {
                 val bookmark = Bookmark(UUID.randomUUID().toString(), bookId, navigation.chapter, navigation.verse, System.currentTimeMillis())
-                Log.i("R6_CLICK", "stage=before_write; repository=" + repository.javaClass.name + "; repositoryIdentity=" + System.identityHashCode(repository) + "; bookId=" + bookId + "; chapter=" + navigation.chapter + "; verse=" + navigation.verse + "; bookmarkId=" + bookmark.id)
                 repository.addBookmark(bookmark)
-                Log.i("R6_CLICK", "stage=after_write; repositoryIdentity=" + System.identityHashCode(repository) + "; bookmarkId=" + bookmark.id)
                 refresh++
             }) { Text(stringResource(R.string.reader_add_bookmark)) }
             OutlinedButton(onClick = {
