@@ -169,6 +169,8 @@ def create_database(output,edition,books,verses,headings):
         db=sqlite3.connect(tmp)
         try:
             db.execute("PRAGMA foreign_keys=ON"); db.execute("PRAGMA journal_mode=DELETE"); db.execute("PRAGMA synchronous=FULL")
+            db.execute("PRAGMA application_id=1296192066")
+            db.execute("PRAGMA user_version=1")
             db.executescript("""
             CREATE TABLE package_metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL);
             CREATE TABLE books(edition_id TEXT NOT NULL,book_id TEXT NOT NULL,ordinal INTEGER NOT NULL,source_path TEXT NOT NULL,source_sha256 TEXT NOT NULL,PRIMARY KEY(edition_id,book_id),UNIQUE(edition_id,ordinal));
@@ -177,7 +179,7 @@ def create_database(output,edition,books,verses,headings):
             CREATE TABLE headings(edition_id TEXT NOT NULL,book_id TEXT NOT NULL,chapter_number INTEGER NOT NULL,ordinal INTEGER NOT NULL,marker TEXT NOT NULL,text TEXT NOT NULL,source_path TEXT NOT NULL,source_line INTEGER NOT NULL,PRIMARY KEY(edition_id,book_id,ordinal),FOREIGN KEY(edition_id,book_id) REFERENCES books(edition_id,book_id));
             CREATE INDEX verses_lookup ON verses(edition_id,book_id,chapter_number,ordinal);
             """)
-            metadata={"package_format":"MAALE-SCRIPTURE-SQLITE-1","edition_id":EDITION_ID,"language":LANGUAGE,
+            metadata={"package_format":"MAALE-SCRIPTURE-SQLITE-1","schema_version":"1","edition_id":EDITION_ID,"language":LANGUAGE,
             "source_archive_sha256":edition["archive_sha256"],"source_archive_bytes":str(edition["archive_bytes"]),
             "license":"CC BY-SA 4.0","attribution":"Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.",
             "signer_trust":"UNDEFINED_IN_ISOLATED_KEYRING","release_eligible":"false","content_is_immutable":"true"}
