@@ -1,6 +1,9 @@
 package org.maale.bible.data.security
 
 import android.content.Context
+import android.net.Uri
+import java.io.ByteArrayOutputStream
+import java.io.InputStream
 import android.util.Base64
 import net.zetetic.database.sqlcipher.SQLiteDatabase
 import org.bouncycastle.crypto.generators.Argon2BytesGenerator
@@ -26,6 +29,44 @@ object PortableStudyBackup {
     fun generateRecoveryKey(): String =
         Base64.encodeToString(ByteArray(32).also(random::nextBytes),
             Base64.URL_SAFE or Base64.NO_WRAP or Base64.NO_PADDING)
+
+    /** Write the encrypted envelope to a user-selected document, not UI state or an Intent extra. */
+    fun exportToUri(context: Context, database: StudyDatabase, recoveryKey: String, uri: Uri) {
+        val output = requireNotNull(context.contentResolver.openOutputStream(uri, "wt")) {
+            "Could not open selected backup destination"
+        }
+        output.buffered().use { stream ->
+            val bytes = export(context, database, recoveryKey).toByteArray(Charsets.UTF_8)
+            try { stream.write(bytes); stream.flush() } finally { bytes.fill(0) }
+        }
+    }
+
+    /** Read a bounded user-selected document before authenticating and restoring it. */
+    fun restoreFromUri(context: Context, uri: Uri, recoveryKey: String) {
+        val input = requireNotNull(context.contentResolver.openInputStream(uri)) {
+            "Could not open selected backup file"
+        }
+        val bytes = readBounded(input)
+        try { restore(context, String(bytes, Charsets.UTF_8), recoveryKey) }
+        finally { bytes.fill(0) }
+    }
+
+    private fun readBounded(input: InputStream): ByteArray {
+        input.use { source ->
+            val output = ByteArrayOutputStream()
+            val buffer = ByteArray(8192)
+            var total = 0
+            while (true) {
+                val count = source.read(buffer)
+                if (count < 0) break
+                total += count
+                require(total <= MAX_ENVELOPE_CHARS) { "Backup exceeds supported size" }
+                output.write(buffer, 0, count)
+            }
+            buffer.fill(0)
+            return output.toByteArray()
+        }
+    }
 
     fun export(context: Context, database: StudyDatabase, recoveryKey: String): String {
         val dek = StudyDataKeyStore.load(context)
