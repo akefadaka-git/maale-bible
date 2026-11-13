@@ -1,6 +1,5 @@
 package org.maale.bible.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,7 +19,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -115,6 +113,7 @@ fun HomeScreen(
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Text("Continue your journey", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
             Card(
+                onClick = onOpenBooks,
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(20.dp),
                 colors = CardDefaults.cardColors(containerColor = colors.surfaceVariant)
@@ -150,8 +149,8 @@ fun HomeScreen(
                 )
                 QuickAction(
                     symbol = "▧",
-                    title = "My study",
-                    detail = "Notes & plans",
+                    title = "Books",
+                    detail = "Browse the catalogue",
                     onClick = onOpenBooks,
                     modifier = Modifier.weight(1f)
                 )
