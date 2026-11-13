@@ -7,12 +7,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import org.maale.bible.data.repository.StudyDatabase
 
-private enum class AppDestination(val label: String) {
-    HOME("Home"), BOOKS("Books"), SEARCH("Search"), STUDY("Study"), SETTINGS("Settings")
+private enum class AppDestination(val labelRes: Int) {
+    HOME(R.string.nav_home), BOOKS(R.string.nav_books), SEARCH(R.string.nav_search), STUDY(R.string.nav_study), SETTINGS(R.string.nav_settings)
 }
 
 @Composable
@@ -31,7 +32,7 @@ fun MaaleBibleApp() {
                         selected = current == item && selectedBookId == null,
                         onClick = { selectedBookId = null; destination = item.name },
                         icon = {},
-                        label = { Text(item.label) }
+                        label = { Text(stringResource(item.labelRes)) }
                     )
                 }
             }
