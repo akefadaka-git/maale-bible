@@ -88,12 +88,20 @@ def parse_usfm(data,source):
                 elif payload.strip(): raise ImportErrorClosed(f"{source}:{line_no}: text outside chapter/verse context")
                 continue
             if marker not in SUPPORTED_MARKERS: raise ImportErrorClosed(f"{source}:{line_no}: unsupported USFM marker \\{marker}")
-            if marker in NOTE_MARKERS: in_note=not closing; continue
+            if marker in NOTE_MARKERS:
+                in_note = not closing
+                if closing and payload and current_verse is not None:
+                    current_verse["text"] += payload
+                continue
             if in_note: continue
             if closing:
                 if marker in ALTERNATE_LABEL_MARKERS:
                     in_alternate_label = False
-                elif marker not in INLINE_MARKERS:
+                elif marker in INLINE_MARKERS:
+                    if current_verse is not None: current_verse["text"] += payload
+                    elif current_heading is not None: current_heading["text"] += payload
+                    elif payload.strip(): raise ImportErrorClosed(f"{source}:{line_no}: inline tail outside verse/heading")
+                else:
                     raise ImportErrorClosed(f"{source}:{line_no}: unexpected closing marker \\{marker}*")
                 continue
             if marker in BOOK_MARKERS:
