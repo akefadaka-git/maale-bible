@@ -20,6 +20,7 @@ private enum class AppDestination(val labelRes: Int) {
 fun MaaleBibleApp() {
     val context = LocalContext.current
     val studyRepository = remember(context) { StudyDatabase(context.applicationContext) }
+    DisposableEffect(studyRepository) { onDispose { studyRepository.close() } }
     var destination by rememberSaveable { mutableStateOf(AppDestination.HOME.name) }
     var selectedBookId by rememberSaveable { mutableStateOf<String?>(null) }
     val current = AppDestination.valueOf(destination)
@@ -52,7 +53,7 @@ fun MaaleBibleApp() {
                 AppDestination.BOOKS -> BooksScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.SEARCH -> CatalogueSearchScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.STUDY -> StudyHubScreen(repository = studyRepository, onOpenBook = { selectedBookId = it }, modifier = contentModifier)
-                AppDestination.SETTINGS -> SettingsScreen(modifier = contentModifier)
+                AppDestination.SETTINGS -> SettingsScreen(repository = studyRepository, modifier = contentModifier)
             }
         }
     }
