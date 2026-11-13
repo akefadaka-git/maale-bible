@@ -68,15 +68,23 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
     ) { uri ->
         if (uri == null) {
             selectedRestoreUri = null
+            restoreKey = ""
             status = "Backup selection cancelled."
         } else {
-            runCatching {
+            val permission = runCatching {
                 context.contentResolver.takePersistableUriPermission(
                     uri, android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
             }
-            selectedRestoreUri = uri.toString()
-            status = "Backup selected. Enter its recovery key, then choose Restore."
+            if (permission.isFailure) {
+                selectedRestoreUri = null
+                restoreKey = ""
+                status = "The selected document permission could not be retained. Choose the file again."
+            } else {
+                selectedRestoreUri = uri.toString()
+                restoreKey = ""
+                status = "Backup selected. Enter its recovery key, then choose Restore."
+            }
         }
     }
 
