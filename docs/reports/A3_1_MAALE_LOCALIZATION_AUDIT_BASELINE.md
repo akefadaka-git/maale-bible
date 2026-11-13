@@ -18,6 +18,8 @@ The canonical English resource file contains 125 string keys. The Maale resource
 
 The 84 Maale-only names are not counted as translations of canonical keys. They may be legacy or feature-specific aliases. Do not delete or rename them until source-code references and resource-merger behavior have been checked.
 
+**Audit scope:** the current script audits Android `<string>` resources in these two files. It does not yet audit `<plurals>`, string arrays, Compose hard-coded literals, accessibility descriptions generated outside these resources, or runtime-rendered text.
+
 ## Missing canonical keys
 
 The following keys need an approved Maale equivalent:
