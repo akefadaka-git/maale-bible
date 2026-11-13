@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 import org.maale.bible.domain.model.*
 import org.maale.bible.domain.repository.StudyRepository
@@ -45,7 +46,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Chapter ${navigation.chapter} · Verse ${navigation.verse}", style = MaterialTheme.typography.titleLarge)
-                Text("Scripture text is not available in this build. These are personal reading coordinates only; chapter and verse boundaries are not inferred.")
+                Text(stringResource(R.string.reader_coordinates_notice))
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     OutlinedButton(onClick = { navigation = navigation.previousChapter() }) { Text("Previous chapter") }
                     Button(onClick = { navigation = navigation.nextChapter() }) { Text("Next chapter") }
