@@ -250,9 +250,9 @@ The following 68 keys are present in the English Android resource file but are a
 | `study_comments_locked` | VERIFIED PASSAGE REFERENCES REQUIRED | English fallback (Amharic not supplied) |  |
 
 
-## 9. Additional screen-resource inventory (not yet in the original worksheet tables)
+## 11. Additional screen-resource inventory (complete locale audit)
 
-The initial 112/180 count covered only `strings.xml`. The following Android resource files also contain visible interface copy and must be included in the full locale audit. No Maale wording is supplied for these keys in this worksheet; do not fill them by machine translation or inference.
+The initial 112/180 count covered only `strings.xml`. These three Android resource files also contain visible interface copy and must be included in the full locale audit. No Maale wording is supplied for these keys; do not fill them by machine translation or inference.
 
 | Resource file | English keys | Amharic keys | Maale keys | Current Maale disposition |
 |---|---:|---:|---:|---|
@@ -263,9 +263,9 @@ The initial 112/180 count covered only `strings.xml`. The following Android reso
 
 **Additional pending Maale keys (80):**
 
-- `book_explorer.xml`: 
-- `book_explorer_testaments.xml`: 
-- `book_learning.xml`: 
+- `book_explorer.xml`: `explorer_eyebrow`, `explorer_catalogue_count`, `explorer_catalogue_note`, `explorer_search_label`, `explorer_search_hint`, `explorer_all_categories`, `explorer_results_count`, `explorer_content_status`, `explorer_no_results`, `explorer_footer_notice`, `explorer_book_code`, `explorer_book_content_pending`, `explorer_category_law`, `explorer_category_law_desc`, `explorer_category_history`, `explorer_category_history_desc`, `explorer_category_wisdom`, `explorer_category_wisdom_desc`, `explorer_category_major_prophets`, `explorer_category_major_prophets_desc`, `explorer_category_minor_prophets`, `explorer_category_minor_prophets_desc`, `explorer_category_gospels`, `explorer_category_gospels_desc`, `explorer_category_acts`, `explorer_category_acts_desc`, `explorer_category_paul`, `explorer_category_paul_desc`, `explorer_category_general`, `explorer_category_general_desc`, `explorer_category_revelation`, `explorer_category_revelation_desc`, `explorer_open_atlas`
+- `book_explorer_testaments.xml`: `explorer_old_testament`, `explorer_new_testament`, `explorer_old_testament_desc`, `explorer_new_testament_desc`
+- `book_learning.xml`: `learning_tab_overview`, `learning_tab_inductive`, `learning_tab_quiz`, `learning_back_to_books`, `learning_book_metadata`, `learning_centre_title`, `learning_centre_description`, `learning_bilingual_status`, `learning_introduction_title`, `learning_introduction_pending`, `learning_background_title`, `learning_background_fields`, `learning_structure_title`, `learning_structure_fields`, `learning_themes_title`, `learning_themes_fields`, `learning_related_title`, `learning_related_fields`, `learning_open_reader`, `learning_inductive_intro`, `learning_observation_title`, `learning_observation_prompts`, `learning_interpretation_title`, `learning_interpretation_prompts`, `learning_application_title`, `learning_application_prompts`, `learning_study_guide_pending_title`, `learning_study_guide_pending`, `learning_quiz_title`, `learning_quiz_pending`, `learning_quiz_unavailable`, `learning_provenance_notice`, `learning_setting_title`, `learning_audience_title`, `learning_key_people_title`, `learning_interpretive_care_title`, `learning_source_count`, `learning_draft_warning`, `learning_quiz_score`, `learning_true`, `learning_false`, `learning_check_answer`, `learning_answer_correct`, `learning_answer_incorrect`, `learning_answer_references`
 
 ### Full resource inventory
 
@@ -275,7 +275,7 @@ The initial 112/180 count covered only `strings.xml`. The following Android reso
 | Amharic | 160 | 101 |
 | Maale | 113 | 148 |
 
-The 112 Owner-supplied Maale UI entries cover 112 of 260 non-app-title keys (43.1%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure is retained only as the `strings.xml`-specific ratio. The 68 core `strings.xml` fallbacks and 80 additional screen-resource fallbacks are distinct sets, totaling 148 missing Maale entries.
+The 112 Owner-supplied Maale UI entries cover 112 of 260 non-app-title keys (43.1%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure applies only to core `strings.xml`. The 68 core string fallbacks and 80 additional screen-resource fallbacks are distinct sets, totaling 148 missing Maale entries. Amharic has 101 missing entries.
 
 ## How to send Maale wording
 

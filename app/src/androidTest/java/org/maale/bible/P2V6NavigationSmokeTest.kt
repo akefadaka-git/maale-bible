@@ -15,6 +15,7 @@ import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
@@ -37,7 +38,7 @@ class P2V6NavigationSmokeTest {
     private fun openGenesisLearningCentre() {
         awaitText("Explore the Bible")
         composeRule.onNodeWithText("Explore the Bible").performClick()
-        awaitText("Books of the Maale Bible")
+        awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
         composeRule.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_card_GEN"))
         composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
@@ -94,10 +95,8 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("ጌኤዦ ማፃኣፖ").assertIsDisplayed()
         mark("nav-03-open-books")
         openGenesisLearningCentre()
-        mark("nav-04-assert-testament-navigation")
-        awaitText("Old Testament")
-        composeRule.onNodeWithText("Old Testament").assertIsDisplayed()
-        composeRule.onNodeWithText("New Testament").assertIsDisplayed()
+        mark("nav-04-assert-learning-centre-tabs")
+        awaitText("Introduction")
         composeRule.onNodeWithText("Introduction").assertIsDisplayed()
         composeRule.onNodeWithText("Inductive study").assertIsDisplayed()
         composeRule.onNodeWithText("Quiz").assertIsDisplayed()
@@ -122,7 +121,7 @@ class P2V6NavigationSmokeTest {
         mark("reader-06-learning-back-to-books")
         composeRule.onNodeWithText("‹  All books").performClick()
         awaitText("Books of the Maale Bible")
-        composeRule.onNodeWithText("Books of the Maale Bible").assertIsDisplayed()
+        composeRule.onNodeWithText("EXPLORE BY CATEGORY").assertIsDisplayed()
     }
 
     @Test(timeout = 60_000)
@@ -190,6 +189,9 @@ class P2V6NavigationSmokeTest {
 
         // Amharic: immediate rendering and persistence after Activity recreation.
         composeRule.onNodeWithTag("language_amharic").performClick()
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val preferences = context.getSharedPreferences("maale_bible_preferences", Context.MODE_PRIVATE)
+        assertEquals("am", preferences.getString("ui_language", null))
         composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ", substring = false).assertIsDisplayed()
         composeRule.activityRule.scenario.recreate()
         composeRule.waitForIdle()
@@ -198,6 +200,7 @@ class P2V6NavigationSmokeTest {
         // English: immediate rendering and persistence after Activity recreation.
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_english").performClick()
+        assertEquals("en", preferences.getString("ui_language", null))
         composeRule.onNodeWithText("Explore the Bible", substring = false).assertIsDisplayed()
         composeRule.activityRule.scenario.recreate()
         composeRule.waitForIdle()
@@ -206,6 +209,7 @@ class P2V6NavigationSmokeTest {
         // Maale remains selectable after other locales and persists across restart.
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_maale").performClick()
+        assertEquals("mdy", preferences.getString("ui_language", null))
         composeRule.onNodeWithText("ጌዔዦ ማፃኣፖ ቡሊ ዛጌ", substring = false).assertIsDisplayed()
         composeRule.activityRule.scenario.recreate()
         composeRule.waitForIdle()
