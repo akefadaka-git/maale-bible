@@ -1,5 +1,7 @@
 # A3 offline study foundation — 2026-11-12
 
+> **Authority history note (2026-11-14):** The statement below that scripture-content intake remains unauthorized records the authority state at the time this 2026-11-12 foundation slice was prepared. It is superseded as current project-level authority by the Owner's 2026-11-08 controlled content-intake authorization, reconciled in [Owner Content-Intake Authority Reconciliation](../licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md). No scripture content was added by this historical study-foundation change. Source-specific rights and distribution gates remain mandatory.
+
 ## Scope
 - Coordinate-only reader navigation; chapter and verse bounds are not inferred.
 - SQLite persistence for reading position, bookmarks, highlights, notes, and reading plans.
