@@ -2,7 +2,7 @@
 
 **Product:** Maale Bible — ጌኤዦ ማፃኣፖ  
 **Date:** 2026-11-14  
-**Status:** PROPOSED TECHNICAL CONTRACT — OWNER REVIEW REQUIRED BEFORE IMPLEMENTATION  
+**Status:** OWNER-DIRECTED CONTRACT DECISIONS RECORDED — P1.1 IMPLEMENTATION AUTHORIZATION REMAINS SEPARATE  
 **Authority:** P0 Product Requirements Baseline v1.0 and Owner Content Intake Authority Reconciliation  
 **Branch:** `planning/p1-critical-bible-experience-2026-11-14`
 
@@ -267,4 +267,4 @@ The following decisions are the proposed P1.0 architecture baseline:
 4. Package authenticity uses Ed25519 signatures rooted in an offline Owner-controlled trust root; SHA-256 provides payload integrity; rotation/revocation metadata is signed and anti-rollback protected.
 5. Civil dates are stored as ISO Gregorian epoch-day; instants remain UTC; E.C. is default display/input calendar and G.C. is selectable; calendar preference never changes canonical identity.
 
-**Owner decision required:** approve, amend or reject these five contract decisions before P1.1 implementation. Approval of this document alone does not authorize source acquisition, key generation, implementation, merge or release.
+**Decision record:** These five architecture decisions are recorded in response to the Owner's explicit direction to resolve the contracts before preparing P1.1. They are the governing P1.0 technical baseline for task specification. This instruction does not authorize production key generation, actual source processing, implementation, merge, signing, deployment or publication. Any material change requires a documented Owner-approved change.
