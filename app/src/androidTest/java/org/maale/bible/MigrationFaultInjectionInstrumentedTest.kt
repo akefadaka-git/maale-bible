@@ -40,8 +40,18 @@ class MigrationFaultInjectionInstrumentedTest {
     @Test fun walCheckpointFailureIsFailClosedAndLeavesLegacyRowsReadable() {
         val file = context.getDatabasePath(StudyDatabase.DB_NAME)
         createLegacy(file, "WAL")
-        StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
+        // Keep a second connection open across migration startup. SQLite may
+        // checkpoint/remove WAL sidecars when the last connection closes; the
+        // anchor guarantees the migration reopens a database still in WAL mode.
+        val walAnchor = PlainSQLiteDatabase.openDatabase(
+            file.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE
+        )
         try {
+            walAnchor.rawQuery("PRAGMA journal_mode", null).use { cursor ->
+                assertTrue("Legacy fixture must remain queryable", cursor.moveToFirst())
+                assertEquals("wal", cursor.getString(0).lowercase())
+            }
+            StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
             assertThrows(Exception::class.java) { StudyDatabase(context) }
             assertTrue(file.exists())
             PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY).use { db ->
@@ -52,6 +62,7 @@ class MigrationFaultInjectionInstrumentedTest {
             }
         } finally {
             StudyMigrationFaultInjection.failAt = null
+            walAnchor.close()
             context.deleteDatabase(StudyDatabase.DB_NAME)
         }
     }
