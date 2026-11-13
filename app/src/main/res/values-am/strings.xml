@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">መነሻ</string>
+    <string name="nav_books">መጻሕፍት</string>
+    <string name="nav_search">ፍለጋ</string>
+    <string name="nav_study">ጥናት</string>
+    <string name="nav_settings">ቅንብሮች</string>
+    <string name="home_tagline">ከመጀመሪያው ጀምሮ ከመስመር ውጭ የሚሠራ የንባብ ልምድ</string>
+    <string name="browse_books">66ቱን መጻሕፍት ይመልከቱ</string>
+    <string name="books_title">የማሌ መጽሐፍ ቅዱስ መጻሕፍት</string>
+    <string name="books_catalogue_notice">ይፋዊው የ66 መጻሕፍት ዝርዝር። በዚህ ስሪት የመጽሐፍ ቅዱስ ጽሑፍ አልተጫነም።</string>
+    <string name="search_title">መጽሐፍ ይፈልጉ</string>
+    <string name="search_hint">የመጽሐፉ ስም ወይም ኮድ</string>
+    <string name="search_support">በዚህ መሣሪያ የተቀመጡትን 66 መጻሕፍት ይፈልጋል።</string>
+    <string name="search_clear">አጽዳ</string>
+    <string name="search_no_results">ከፍለጋዎ ጋር የሚዛመድ መጽሐፍ የለም</string>
+    <string name="search_results_count">%1$d መጻሕፍት ተገኝተዋል</string>
+    <string name="search_try">የእንግሊዝኛ የመጽሐፍ ስም ወይም ባለሦስት ፊደል USFM ኮድ ይሞክሩ።</string>
+    <string name="search_boundary">ይህ ፍለጋ የመጻሕፍት ስሞችንና የዝርዝር ኮዶችን ብቻ ይፈልጋል። የመጽሐፍ ቅዱስ ጽሑፍ ፍለጋ የይዘት ማስገቢያ ፈቃድ እስኪገኝ ድረስ አይገኝም።</string>
+    <string name="settings_accessibility">ተደራሽነት</string>
+    <string name="settings_accessibility_help">መተግበሪያው የAndroid የፊደል መጠን፣ የማሳያ መጠን፣ ንፅፅር እና የስክሪን አንባቢ ቅንብሮችን ይከተላል። እነዚህን በመሣሪያዎ ቅንብሮች ውስጥ ያስተካክሉ።</string>
+    <string name="settings_language">ቋንቋ</string>
+    <string name="settings_language_help">የመተግበሪያው ምናሌዎች በአማርኛና በእንግሊዝኛ ይገኛሉ። የማሌ በይነገጽ ትርጉም በዝግጅት ላይ ነው። የመጽሐፍ ቅዱስ ቋንቋ ምርጫ ገና አልተከፈተም።</string>
+    <string name="settings_backup">የተመሰጠረ የጥናት ቅጂ</string>
+    <string name="settings_backup_help">የመልሶ ማግኛ ቁልፍ ቅጂውን በArgon2id እና AES-GCM ይመሰጥራል። ቁልፉን ከቅጂው ተለይቶ በደህና ያስቀምጡ።</string>
+    <string name="settings_create_backup">የተመሰጠረ ቅጂ ፍጠር</string>
+    <string name="settings_recovery_key">የመልሶ ማግኛ ቁልፍ — በተለየ እና በደህና ያስቀምጡ</string>
+    <string name="settings_restore">የተመሰጠረ ቅጂ መልሶ ማግኘት</string>
+    <string name="settings_recovery_key_hint">የመልሶ ማግኛ ቁልፍ</string>
+    <string name="settings_envelope_hint">የቅጂ JSON ይዘት</string>
+    <string name="settings_restore_button">ቅጂውን መልስ</string>
+    <string name="settings_content">የይዘት መገኘት</string>
+    <string name="settings_content_help">የመጻሕፍት ዝርዝሩ ከመስመር ውጭ ይገኛል። የጽሑፍ፣ የድምፅ እና የትርጉም ይዘቶች የምንጭና የፈቃድ ማረጋገጫ እስኪያልፉ ድረስ አይከፈቱም።</string>
+    <string name="reader_coordinates_notice">በዚህ ስሪት የመጽሐፍ ቅዱስ ጽሑፍ አይገኝም። እነዚህ የግል የንባብ ቦታ መጠቆሚያዎች ብቻ ናቸው፤ የምዕራፍና የቁጥር ወሰኖች አልተገመቱም።</string>
+    <string name="study_empty">የጥናት ማከማቻዎ ባዶ ነው። የንባብ ቦታ፣ ዕልባት፣ ማድመቂያ ወይም ማስታወሻ ለማስቀመጥ መጽሐፍ ይክፈቱ።</string>
+</resources>
