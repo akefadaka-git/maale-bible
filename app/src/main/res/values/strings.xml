@@ -99,4 +99,9 @@ pause. Read. Reflect.</string>
     <string name="listen_offline_desc">Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.</string>
     <string name="listen_downloads_missing">DOWNLOADS NOT AVAILABLE</string>
     <string name="nav_more">More</string>
+    <string name="language_label">Interface language</string>
+    <string name="language_maale">Maale (default)</string>
+    <string name="language_amharic">Amharic</string>
+    <string name="language_english">English</string>
+    <string name="language_fallback_notice">Maale is the default. Labels without a reviewed Maale translation currently use English fallback text.</string>
 </resources>
