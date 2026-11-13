@@ -136,4 +136,4 @@ Tests must include positive fixtures and adversarial negative fixtures. Syntheti
 | LIC-01 through LIC-10 release controls | SPECIFIED; NOT IMPLEMENTED |
 | Public scripture distribution | NOT AUTHORIZED BY THIS DOCUMENT |
 
-This contract authorizes implementation planning and synthetic test development only. It does not itself authorize publishing source content, merging PRs, signing, deploying or releasing the application.
+This contract defines the technical requirements for implementing the importer against the Owner-authorized, rights-verified source package. It does not authorize publishing source content, merging PRs, signing, deploying or releasing the application.
