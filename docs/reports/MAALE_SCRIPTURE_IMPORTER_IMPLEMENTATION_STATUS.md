@@ -1,9 +1,9 @@
 # Maale scripture importer — implementation status
 
 **Branch:** feat/a3-scripture-importer  
-**Verified implementation head:** 5b3b1ac64f75e940c5921e2e39116cb5087d36f8  
+**Verified implementation head:** fd6200a5310edc4429b83a2fd5a148cfa53e6498  
 **Draft PR:** https://github.com/akefadaka-git/maale-bible/pull/61  
-**CI run:** https://github.com/akefadaka-git/maale-bible/actions/runs/43528078305
+**CI run:** https://github.com/akefadaka-git/maale-bible/actions/runs/43528890832
 
 ## Verified
 
