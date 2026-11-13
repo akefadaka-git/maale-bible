@@ -6,6 +6,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import org.maale.bible.data.repository.StudyDatabase
@@ -48,7 +49,7 @@ fun MaaleBibleApp() {
             when (current) {
                 AppDestination.HOME -> HomeScreen(onOpenBooks = { destination = AppDestination.BOOKS.name }, modifier = contentModifier)
                 AppDestination.BOOKS -> BooksScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
-                AppDestination.SEARCH -> SearchPlaceholderScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
+                AppDestination.SEARCH -> CatalogueSearchScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.STUDY -> StudyHubScreen(repository = studyRepository, onOpenBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.SETTINGS -> SettingsScreen(modifier = contentModifier)
             }
