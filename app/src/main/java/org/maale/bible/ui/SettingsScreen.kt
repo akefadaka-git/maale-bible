@@ -1,5 +1,7 @@
 package org.maale.bible.ui
 
+import org.maale.bible.R
+
 import android.content.Intent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
