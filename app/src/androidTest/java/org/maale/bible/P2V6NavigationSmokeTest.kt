@@ -207,7 +207,7 @@ class P2V6NavigationSmokeTest {
         composeRule.waitForIdle()
         composeRule.onNodeWithText("Explore the Bible", substring = false).assertIsDisplayed()
 
-        // Maale remains selectable after other locales and persists across restart.
+        // Maale remains selectable after other locales and persists across Activity recreation.
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_maale").performClick()
         assertEquals("mdy", preferences.getString("ui_language", null))

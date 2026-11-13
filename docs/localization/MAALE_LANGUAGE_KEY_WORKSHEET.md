@@ -258,10 +258,10 @@ The initial 112/180 count covered only `strings.xml`. These three Android resour
 |---|---:|---:|---:|---|
 | `book_explorer.xml` | 33 | 0 | 0 | 33 English fallbacks |
 | `book_explorer_testaments.xml` | 4 | 4 | 0 | 4 English fallbacks |
-| `book_learning.xml` | 45 | 45 | 0 | 43 English fallbacks |
+| `book_learning.xml` | 45 | 45 | 0 | 45 English fallbacks |
 | **Additional total** | **82** | **49** | **0** | **82 English fallbacks** |
 
-**Additional pending Maale keys (80):**
+**Additional pending Maale keys (82):**
 
 - `book_explorer.xml`: `explorer_eyebrow`, `explorer_catalogue_count`, `explorer_catalogue_note`, `explorer_search_label`, `explorer_search_hint`, `explorer_all_categories`, `explorer_results_count`, `explorer_content_status`, `explorer_no_results`, `explorer_footer_notice`, `explorer_book_code`, `explorer_book_content_pending`, `explorer_category_law`, `explorer_category_law_desc`, `explorer_category_history`, `explorer_category_history_desc`, `explorer_category_wisdom`, `explorer_category_wisdom_desc`, `explorer_category_major_prophets`, `explorer_category_major_prophets_desc`, `explorer_category_minor_prophets`, `explorer_category_minor_prophets_desc`, `explorer_category_gospels`, `explorer_category_gospels_desc`, `explorer_category_acts`, `explorer_category_acts_desc`, `explorer_category_paul`, `explorer_category_paul_desc`, `explorer_category_general`, `explorer_category_general_desc`, `explorer_category_revelation`, `explorer_category_revelation_desc`, `explorer_open_atlas`
 - `book_explorer_testaments.xml`: `explorer_old_testament`, `explorer_new_testament`, `explorer_old_testament_desc`, `explorer_new_testament_desc`

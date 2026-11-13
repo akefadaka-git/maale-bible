@@ -25,7 +25,7 @@
 - Android resource locale configuration is applied within the Compose application.
 - Core `strings.xml` inventory: base English 181 keys, Amharic 113, Maale 113. The Maale resource contains the app title plus 112 Owner-supplied UI entries; 68 core feature keys are absent from both Maale and Amharic and use base-English fallback.
 - Additional resource inventory: `book_explorer.xml` has 33 base keys and no Amharic or Maale file; `book_explorer_testaments.xml` has 4 base and 4 Amharic keys but no Maale file; `book_learning.xml` has 45 base and 45 Amharic keys but no Maale file.
-- Aggregate inventory: 261 base keys, 160 Amharic keys and 113 Maale keys. Therefore 150 keys are absent from Maale and 101 are absent from Amharic. Missing-key sets are intentional fallback, not completed translations.
+- Aggregate inventory: 263 base keys, 162 Amharic keys and 113 Maale keys. Therefore 150 keys are absent from Maale and 101 are absent from Amharic. Missing-key sets are intentional fallback, not completed translations.
 - The worksheet records 112 Owner-supplied Maale UI keys out of 262 non-app-title keys (42.7% of the complete inventory). The 62.2% figure applies only to the 180 non-app-title keys in core `strings.xml`.
 - Owner-supplied Maale wording is preserved as intake; it is not represented as formal community linguistic approval. No Maale or Amharic wording was invented in this remediation.
 - Source audit of Home, Books, Search, Reader, Bible Downloads, Audio, Smart Study, Book Learning, Atlas and Account found user-facing prose resource-backed. Remaining direct literals are icons, navigation glyphs, placeholders, metadata and formatted timestamps. Resource-backed does not mean translated: missing locale entries still fall back to English.
