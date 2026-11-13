@@ -50,13 +50,17 @@ The Owner-supplied written response states that MDYTWF / mdyeth is the 2008 Full
 - A2_BASELINE_ACCEPTED_WITH_EXCEPTION: machine-verifiable source baseline accepted by Owner with a named residual risk.
 - APPROVED_FOR_CONTENT_INTAKE: separate explicit Owner authorization for the exact content-intake operation.
 
-**Current source status: A2_BASELINE_ACCEPTED_WITH_EXCEPTION. NOT APPROVED_FOR_PRODUCTION_CONTENT_INTAKE.**
+**Current project-level authority:** Owner-authorized controlled content intake from 2026-11-08, reconciled in [Owner Content-Intake Authority Reconciliation](../../docs/licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md). The Maale 2008 source remains A2_BASELINE_ACCEPTED_WITH_EXCEPTION; source-specific integration/distribution gates still apply.
+
+## Current authority update (2026-11-14)
+
+The Owner's 2026-11-08 authorization permits controlled intake/evaluation for Maale, Amharic, English and other necessary Bible/study sources, subject to individual provenance, rights, attribution, integrity and quality gates. It does not grant blanket distribution rights or public-repository publication. See the [canonical authority reconciliation](../../docs/licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md).
 
 ## Residual risk and continuing restrictions
 
 - Maale-language/Ethiopic-script specialist review: DEFERRED — Owner-accepted residual risk; no specialist sign-off is claimed.
 - GPG key trust certification: UNDEFINED; cryptographic validity is not signer identity certification.
 - Original rights-holder email/signatory authentication: documentary caveat.
-- `content_intake_authorized=false` remains binding.
+- The older `content_intake_authorized=false` statement is historical and superseded for current project-level authority by the 2026-11-08 Owner authorization as reconciled on 2026-11-14. Do not rewrite closed A2 evidence; apply the source-specific conditions in the reconciliation decision.
 - Do not commit raw USFM/USX, scripture excerpts, source archives or derived scripture datasets to this public repository.
 - Audio, artwork, fonts, logos, recordings, maps and third-party metadata remain separately rights-gated.
