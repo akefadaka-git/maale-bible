@@ -1,0 +1,14 @@
+{
+  "profileVersion": "1.0.0",
+  "sourceId": "MDYTWF",
+  "editionId": "mdyeth-2008-full",
+  "status": "BLOCKED_PENDING_RESTRICTED_CORPUS_RUN",
+  "generationMethod": "Scan exact SHA-256-verified USFM corpus in Owner-approved restricted workspace; count marker occurrences without copying text.",
+  "markers": [],
+  "unknownMarkersMustFail": true,
+  "outputRestrictions": {
+    "publicRepository": false,
+    "publicCiArtifacts": false,
+    "scriptureText": false
+  }
+}
