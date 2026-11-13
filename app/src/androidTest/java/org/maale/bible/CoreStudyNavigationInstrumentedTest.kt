@@ -22,22 +22,22 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("Chapter 1 · Verse 1").assertIsDisplayed()
         compose.onNodeWithText("Add bookmark").performClick()
         compose.onNodeWithText("Study").performClick()
-        compose.onNodeWithText("Bookmarks (1)").assertExists()
-        compose.onNodeWithText("Genesis").assertExists()
+        compose.onNodeWithText("Bookmarks (1)").assertIsDisplayed()
+        compose.onNodeWithText("Genesis").assertIsDisplayed()
     }
 
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
         compose.onNodeWithText("Search").performClick()
-        compose.onNodeWithText("Find a book").assertExists()
-        compose.onNodeWithText("Book name or code").assertExists()
-        compose.onNodeWithText("1. Genesis").assertExists()
+        compose.onNodeWithText("Find a book").assertIsDisplayed()
+        compose.onNodeWithText("Book name or code").assertIsDisplayed()
+        compose.onNodeWithText("1. Genesis").assertIsDisplayed()
     }
 
     @Test fun settingsExposeAccessibilityAndPortableBackupControls() {
         compose.onNodeWithText("Settings").performClick()
-        compose.onNodeWithText("Accessibility").assertExists()
-        compose.onNodeWithText("Create encrypted backup").assertExists()
-        compose.onNodeWithText("Restore backup").assertExists()
+        compose.onNodeWithText("Accessibility").assertIsDisplayed()
+        compose.onNodeWithText("Create encrypted backup").assertIsDisplayed()
+        compose.onNodeWithText("Restore backup").assertIsDisplayed()
         compose.onNodeWithContentDescription("Select encrypted backup file").assertIsDisplayed()
     }
 
