@@ -118,7 +118,9 @@ def parse_usfm(data,source):
                 body=strip_inline(payload,line_no,source).strip()
                 if body: current_heading={"chapter":chapter or 0,"marker":marker,"text":body,"ordinal":len(headings)+1,"line":line_no}; headings.append(current_heading)
                 current_verse=None; continue
-            if marker in ALTERNATE_LABEL_MARKERS:\n                in_alternate_label = True if not closing else False\n                continue
+            if marker in ALTERNATE_LABEL_MARKERS:
+                in_alternate_label = True
+                continue\n                continue
             if marker in INLINE_MARKERS:
                 visible=payload.split("|",1)[0] if marker=="w" and "|" in payload else payload
                 visible=strip_inline(visible,line_no,source)
