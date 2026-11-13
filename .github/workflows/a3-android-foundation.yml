@@ -39,6 +39,17 @@ jobs:
           cache: gradle
       - name: Run Android unit tests and assemble debug APK
         run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
+      - name: Enable KVM for Android emulator
+        run: |
+          if [ ! -e /dev/kvm ]; then
+            echo "::error::KVM device /dev/kvm is unavailable on this runner"
+            exit 1
+          fi
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          sudo chmod 666 /dev/kvm
+          ls -l /dev/kvm
       - name: Run SQLite persistence, restart and backup instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -46,4 +57,5 @@ jobs:
           target: google_apis
           arch: x86_64
           emulator-boot-timeout: 900
+          disable-linux-hardware-acceleration: false
           script: ./gradlew --no-daemon --max-workers=2 --console=plain :app:connectedDebugAndroidTest
