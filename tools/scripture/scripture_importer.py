@@ -120,7 +120,7 @@ def parse_usfm(data,source):
                 current_verse=None; continue
             if marker in ALTERNATE_LABEL_MARKERS:
                 in_alternate_label = True
-                continue\n                continue
+                continue
             if marker in INLINE_MARKERS:
                 visible=payload.split("|",1)[0] if marker=="w" and "|" in payload else payload
                 visible=strip_inline(visible,line_no,source)
