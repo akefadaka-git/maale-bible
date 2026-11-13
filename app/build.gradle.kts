@@ -35,7 +35,7 @@ dependencies {
     androidTestImplementation(platform("androidx.compose:compose-bom:2025.12.00"))
     androidTestImplementation("androidx.test.ext:junit:1.3.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
-    androidTestImplementation("org.jetbrains.kotlin:kotlin-stdlib")
+    androidTestImplementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.10")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
