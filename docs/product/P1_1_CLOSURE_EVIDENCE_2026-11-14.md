@@ -1,7 +1,7 @@
 # P1.1 Exact-Head Closure Evidence — 2026-11-14
 
 **Branch:** `implementation/p1-1-source-ingestion-2026-11-14`  
-**Implementation code head reviewed:** `201fb61456f9ca29c5734675a91177a009a62ee1`  
+**Implementation code head reviewed:** `590add76d67370d7fe43a007c3e8775391954e27`  
 **Implementation status:** PARTIAL — metadata and synthetic-only validator foundation implemented  
 **Closure status:** NOT CLOSED  
 **Merge / release / signing / deployment:** NOT AUTHORIZED
@@ -33,13 +33,16 @@
 | Check | Result | Scope / limitation |
 |---|---|---|
 | Source manifest assembled from existing metadata hash register | PASS | 66 unique IDs; no scripture text copied |
-| Marker-inventory generator algorithm | PASS | Local Python synthetic fixture: 66 files; marker counts correct; output contained no fixture text. This is not the Maale corpus run |
+| Exact committed JSON metadata validation | PASS | Parsed manifest, policy, marker profile and schemas; archive SHA and 66-ID set cross-match the existing hash register; distribution remains fail-closed |
+| Marker-inventory generator logic | PASS | Local Python synthetic 66-file fixture: marker counts correct; output contained no fixture text. This is not the Maale corpus run |
 | Core Java compilation | PASS | Local `javac` compilation of SHA-256, Unicode, inventory and redacted-report classes on Java 21; not the full Maven build |
+| Synthetic inventory and Unicode runtime checks | PASS | Local Java run validated 66 synthetic book IDs and rejected malformed UTF-8 and non-NFC input |
+| Full production-source syntax/API-shape check | PASS WITH LIMITATION | Local `javac` compiled all production sources against minimal dependency API stubs; this is not validation against actual Maven dependencies |
 | Redacted report serialization | PASS | Local Java execution; parsed output as JSON and confirmed text-free report flag |
 | Full Maven/JUnit suite | NOT RUN | Maven is unavailable in the local execution environment |
 | GitHub Actions exact-head status | UNKNOWN / NOT RETURNED | GitHub combined status query returned no status checks for the implementation head; no successful workflow run is claimed |
 | Commons Compress ZIP validator compilation/runtime | NOT RUN | Requires Maven dependency resolution; no local Maven executable |
-| JSON Schema validation | NOT RUN | Schema files committed; formal schema test remains required |
+| JSON Schema validation | NOT RUN | Schema JSON parsed; formal JSON Schema engine validation remains required |
 | Actual 2008 Maale archive extraction and per-file verification | NOT RUN | Exact archive not present in an accessible Owner-approved restricted workspace |
 | Corpus-derived USFM marker inventory | BLOCKED | No corpus-derived marker counts generated; marker profile remains explicitly pending |
 | Restricted redaction scan | NOT RUN | Synthetic output only; restricted corpus evidence is absent |
