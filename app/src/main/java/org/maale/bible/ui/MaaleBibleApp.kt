@@ -243,7 +243,7 @@ private fun MoreScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 12.dp),
+        modifier = modifier.fillMaxSize().testTag("more_screen").padding(horizontal = 20.dp, vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Text(stringResource(R.string.nav_more), style = MaterialTheme.typography.headlineSmall)
