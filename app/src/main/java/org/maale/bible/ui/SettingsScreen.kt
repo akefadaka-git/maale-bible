@@ -12,55 +12,59 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import org.maale.bible.data.repository.StudyDatabase
+import org.maale.bible.data.security.PortableStudyBackup
 
 @Composable
 fun SettingsScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val repository = remember(context) { StudyDatabase(context.applicationContext) }
-    var backupText by remember { mutableStateOf("") }
+    var recoveryKey by rememberSaveable { mutableStateOf("") }
+    var backupEnvelope by rememberSaveable { mutableStateOf("") }
+    var restoreKey by rememberSaveable { mutableStateOf("") }
     var status by remember { mutableStateOf<String?>(null) }
+
     Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Settings", style = MaterialTheme.typography.headlineSmall)
-        Text("Reading and accessibility", style = MaterialTheme.typography.titleMedium)
-        Text("Maale Bible follows the Android system font-size, display-size, contrast and screen-reader settings. Use your device Settings → Accessibility to adjust them.")
+        Text("Accessibility", style = MaterialTheme.typography.titleMedium)
+        Text("The interface respects Android system font size, display size, contrast and screen-reader settings. Adjust these under your device Settings → Accessibility.")
         Text("Language", style = MaterialTheme.typography.titleMedium)
-        Text("The app shell currently provides English navigation and the Maale-script product name. Approved Maale and Amharic interface translations are not yet packaged; scripture language selection is not enabled.")
+        Text("The shell currently provides English navigation and the Maale-script product name. Maale and Amharic interface translations are not yet packaged. Scripture language selection is not enabled.")
         HorizontalDivider()
-        Text("Encrypted study data", style = MaterialTheme.typography.titleMedium)
-        Text("Bookmarks, highlights, notes, reading position and plans are stored in the app-private SQLCipher database. Portable backup requires the recovery key created for that backup.")
-        Button(
-            onClick = {
-                runCatching {
-                    val json = repository.exportBackup()
-                    val send = Intent(Intent.ACTION_SEND).apply {
-                        type = "application/json"
-                        putExtra(Intent.EXTRA_SUBJECT, "Maale Bible study backup")
-                        putExtra(Intent.EXTRA_TEXT, json)
-                    }
-                    context.startActivity(Intent.createChooser(send, "Share encrypted study backup"))
-                    status = "Backup prepared for sharing. Keep the recovery key separate and secure."
-                }.onFailure { status = "Backup failed: ${it.message ?: "unknown error"}" }
-            },
-            modifier = Modifier.semantics { contentDescription = "Export encrypted study backup" }
-        ) { Text("Export study backup") }
-        OutlinedTextField(
-            value = backupText,
-            onValueChange = { backupText = it },
-            modifier = Modifier.fillMaxWidth(),
-            label = { Text("Paste a backup envelope to restore") },
-            minLines = 3
-        )
-        Button(
-            onClick = {
-                runCatching {
-                    repository.restoreBackup(backupText)
-                    backupText = ""
-                    status = "Backup restored successfully."
-                }.onFailure { status = "Restore rejected: ${it.message ?: "invalid backup"}" }
-            },
-            enabled = backupText.isNotBlank(),
-            modifier = Modifier.semantics { contentDescription = "Restore study backup from pasted envelope" }
-        ) { Text("Restore backup") }
+        Text("Portable encrypted study backup", style = MaterialTheme.typography.titleMedium)
+        Text("A recovery key encrypts the backup with Argon2id and AES-GCM. Keep the recovery key separately from the backup. Anyone with both can restore your private notes.")
+        Button(onClick = {
+            runCatching {
+                recoveryKey = PortableStudyBackup.generateRecoveryKey()
+                backupEnvelope = PortableStudyBackup.export(context, repository, recoveryKey)
+                val send = Intent(Intent.ACTION_SEND).apply {
+                    type = "application/json"
+                    putExtra(Intent.EXTRA_SUBJECT, "Maale Bible encrypted study backup")
+                    putExtra(Intent.EXTRA_TEXT, backupEnvelope)
+                }
+                context.startActivity(Intent.createChooser(send, "Save encrypted study backup"))
+                status = "Encrypted backup prepared. Save the recovery key below separately."
+            }.onFailure { status = "Backup failed: ${it.message ?: "unknown error"}" }
+        }, modifier = Modifier.semantics { contentDescription = "Create and share portable encrypted study backup" }) {
+            Text("Create encrypted backup")
+        }
+        if (recoveryKey.isNotBlank()) {
+            Text("Recovery key — store this securely and separately", style = MaterialTheme.typography.titleSmall)
+            SelectionContainer { Text(recoveryKey, style = MaterialTheme.typography.bodySmall) }
+        }
+        HorizontalDivider()
+        Text("Restore portable backup", style = MaterialTheme.typography.titleMedium)
+        OutlinedTextField(value = restoreKey, onValueChange = { restoreKey = it }, label = { Text("Recovery key") }, modifier = Modifier.fillMaxWidth(), singleLine = true)
+        OutlinedTextField(value = backupEnvelope, onValueChange = { backupEnvelope = it }, label = { Text("Backup envelope JSON") }, modifier = Modifier.fillMaxWidth(), minLines = 4)
+        Button(onClick = {
+            runCatching {
+                PortableStudyBackup.restore(context, backupEnvelope, restoreKey)
+                backupEnvelope = ""; restoreKey = ""
+                status = "Backup restored. Existing database data was not overwritten."
+            }.onFailure { status = "Restore rejected: ${it.message ?: "invalid backup"}" }
+        }, enabled = backupEnvelope.isNotBlank() && restoreKey.isNotBlank(),
+            modifier = Modifier.semantics { contentDescription = "Restore encrypted study backup using recovery key" }) {
+            Text("Restore backup")
+        }
         status?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
         HorizontalDivider()
         Text("Content availability", style = MaterialTheme.typography.titleMedium)
