@@ -26,9 +26,14 @@ object PortableStudyBackup {
     private const val MAX_ENVELOPE_CHARS = 32 * 1024 * 1024
     private val random = SecureRandom()
 
-    fun generateRecoveryKey(): String =
-        Base64.encodeToString(ByteArray(32).also(random::nextBytes),
-            Base64.URL_SAFE or Base64.NO_WRAP or Base64.NO_PADDING)
+    fun generateRecoveryKey(): String {
+        val raw = ByteArray(32).also(random::nextBytes)
+        return try {
+            Base64.encodeToString(raw, Base64.URL_SAFE or Base64.NO_WRAP or Base64.NO_PADDING)
+        } finally {
+            raw.fill(0)
+        }
+    }
 
     /** Write the encrypted envelope to a user-selected document, not UI state or an Intent extra. */
     fun exportToUri(context: Context, database: StudyDatabase, recoveryKey: String, uri: Uri) {
@@ -55,16 +60,19 @@ object PortableStudyBackup {
         input.use { source ->
             val output = ByteArrayOutputStream()
             val buffer = ByteArray(8192)
-            var total = 0
-            while (true) {
-                val count = source.read(buffer)
-                if (count < 0) break
-                total += count
-                require(total <= MAX_ENVELOPE_CHARS) { "Backup exceeds supported size" }
-                output.write(buffer, 0, count)
+            try {
+                var total = 0
+                while (true) {
+                    val count = source.read(buffer)
+                    if (count < 0) break
+                    total += count
+                    require(total <= MAX_ENVELOPE_CHARS) { "Backup exceeds supported size" }
+                    output.write(buffer, 0, count)
+                }
+                return output.toByteArray()
+            } finally {
+                buffer.fill(0)
             }
-            buffer.fill(0)
-            return output.toByteArray()
         }
     }
 
