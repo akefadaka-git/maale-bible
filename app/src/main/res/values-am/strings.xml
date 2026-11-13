@@ -99,4 +99,9 @@
     <string name="listen_offline_desc">የማውረድ ዝርዝር፣ የማከማቻ አጠቃቀም፣ የታማኝነት ምርመራና የማስወገድ ቁጥጥሮች የድምፅ ካታሎግና የፋይል ፖሊሲ ከተጠናቀቁ በኋላ ይነቃሉ።</string>
     <string name="listen_downloads_missing">ማውረዶች አይገኙም</string>
     <string name="nav_more">ተጨማሪ</string>
+    <string name="language_label">የመተግበሪያ ቋንቋ</string>
+    <string name="language_maale">ማሌኛ (ነባሪ)</string>
+    <string name="language_amharic">አማርኛ</string>
+    <string name="language_english">እንግሊዝኛ</string>
+    <string name="language_fallback_notice">የማሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
 </resources>
