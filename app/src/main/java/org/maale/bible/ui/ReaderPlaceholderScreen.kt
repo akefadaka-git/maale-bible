@@ -9,7 +9,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
@@ -23,18 +22,10 @@ import org.maale.bible.domain.repository.StudyRepository
 import java.util.UUID
 import java.time.LocalDate
 
-private val readerNavigationStateSaver = Saver<ReaderNavigation, Any>(
-    save = { state -> listOf(state.bookId, state.chapter, state.verse) },
-    restore = { saved ->
-        val values = saved as List<*>
-        ReaderNavigation(values[0] as String, values[1] as Int, values[2] as Int)
-    }
-)
-
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val book = CanonicalBookCatalog.find(bookId)
-    var navigation by rememberSaveable(bookId, stateSaver = readerNavigationStateSaver) {
+    var navigation by remember(bookId) {
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
     }

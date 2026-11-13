@@ -14,47 +14,58 @@ import java.io.File
 class MigrationFaultInjectionInstrumentedTest {
     private val context get() = InstrumentationRegistry.getInstrumentation().targetContext
 
-    private fun createLegacy(file: File, journalMode: String = "DELETE", keepOpen: Boolean = false): PlainSQLiteDatabase {
+    private fun createLegacy(file: File, journalMode: String = "DELETE") {
         context.deleteDatabase(StudyDatabase.DB_NAME)
         file.parentFile?.mkdirs()
         val db = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
         try {
-            val actualMode = db.rawQuery("PRAGMA journal_mode=$journalMode", null).use { cursor ->
-                check(cursor.moveToFirst()) { "Unable to set legacy journal mode" }
-                cursor.getString(0)
+            if (journalMode.equals("WAL", ignoreCase = true)) {
+                check(db.enableWriteAheadLogging()) { "Unable to enable WAL for legacy migration fixture" }
             }
-            assertEquals("Legacy fixture journal mode", journalMode.lowercase(), actualMode.lowercase())
+            db.rawQuery("PRAGMA journal_mode=$journalMode", null).use { cursor ->
+                check(cursor.moveToFirst()) { "Unable to set legacy journal mode to $journalMode" }
+                check(cursor.getString(0).equals(journalMode, ignoreCase = true)) {
+                    "Requested $journalMode journal mode but SQLite returned ${cursor.getString(0)}"
+                }
+            }
             db.execSQL("CREATE TABLE reading_position (singleton INTEGER PRIMARY KEY CHECK(singleton=1), book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
             db.execSQL("CREATE TABLE annotations (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, kind TEXT NOT NULL, body TEXT NOT NULL, color TEXT, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("CREATE TABLE reading_plans (id TEXT PRIMARY KEY, title TEXT NOT NULL, start_day INTEGER NOT NULL, duration_days INTEGER NOT NULL, completed_days TEXT NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("INSERT INTO bookmarks VALUES ('fault-1','GEN',2,3,123,'preserve me')")
             db.version = StudyDatabase.DB_VERSION
-        } finally { if (!keepOpen) db.close() }
-        return db
+        } finally { db.close() }
     }
 
     @Test fun walCheckpointFailureIsFailClosedAndLeavesLegacyRowsReadable() {
         val file = context.getDatabasePath(StudyDatabase.DB_NAME)
-        // Keep the original Android SQLite connection open: Android may normalize journal
-        // mode when the final connection closes and a new connection is opened.
-        val fixture = createLegacy(file, "WAL", keepOpen = true)
+        createLegacy(file, "WAL")
+        // Keep a second connection open across migration startup. SQLite may
+        // checkpoint/remove WAL sidecars when the last connection closes; the
+        // anchor guarantees the migration reopens a database still in WAL mode.
+        val walAnchor = PlainSQLiteDatabase.openDatabase(
+            file.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE
+        )
         try {
-            val activeMode = fixture.rawQuery("PRAGMA journal_mode", null).use { cursor ->
-                assertTrue(cursor.moveToFirst())
-                cursor.getString(0)
+            // Re-enable WAL on the anchor connection: Android may revert the
+            // fixture to TRUNCATE when createLegacy closes its last connection.
+            assertTrue("Unable to enable WAL on migration anchor", walAnchor.enableWriteAheadLogging())
+            walAnchor.rawQuery("PRAGMA journal_mode", null).use { cursor ->
+                assertTrue("Legacy fixture must remain queryable", cursor.moveToFirst())
+                assertEquals("wal", cursor.getString(0).lowercase())
             }
-            assertEquals("WAL fixture must remain active for the migration attempt", "wal", activeMode.lowercase())
             StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
             assertThrows(Exception::class.java) { StudyDatabase(context) }
             assertTrue(file.exists())
-            fixture.rawQuery("SELECT label FROM bookmarks WHERE id='fault-1'", null).use { cursor ->
-                assertTrue(cursor.moveToFirst())
-                assertEquals("preserve me", cursor.getString(0))
+            PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY).use { db ->
+                db.rawQuery("SELECT label FROM bookmarks WHERE id='fault-1'", null).use { cursor ->
+                    assertTrue(cursor.moveToFirst())
+                    assertEquals("preserve me", cursor.getString(0))
+                }
             }
         } finally {
             StudyMigrationFaultInjection.failAt = null
-            fixture.close()
+            walAnchor.close()
             context.deleteDatabase(StudyDatabase.DB_NAME)
         }
     }
