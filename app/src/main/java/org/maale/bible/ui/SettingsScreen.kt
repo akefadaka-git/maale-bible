@@ -10,6 +10,9 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
@@ -23,6 +26,7 @@ import org.maale.bible.data.repository.StudyDatabase
 @Composable
 fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
     // Sensitive values are transient and never serialized into saved-instance state.
     var recoveryKey by remember { mutableStateOf("") }
     var pendingExportKey by remember { mutableStateOf<String?>(null) }
@@ -37,13 +41,19 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         if (uri == null || key == null) {
             status = "Backup export cancelled."
         } else {
-            runCatching {
-                PortableStudyBackup.exportToUri(context, repository, key, uri)
-                recoveryKey = key
-                status = "Encrypted backup saved. Store the recovery key separately; it cannot be recovered if this screen is closed."
-            }.onFailure {
-                recoveryKey = ""
-                status = "Backup failed: ${it.message ?: "unknown error"}"
+            scope.launch {
+                status = "Preparing encrypted backup…"
+                runCatching {
+                    withContext(Dispatchers.IO) {
+                        PortableStudyBackup.exportToUri(context, repository, key, uri)
+                    }
+                }.onSuccess {
+                    recoveryKey = key
+                    status = "Encrypted backup saved. Store the recovery key separately; it cannot be recovered if this screen is closed."
+                }.onFailure {
+                    recoveryKey = ""
+                    status = "Backup failed: ${it.message ?: "unknown error"}"
+                }
             }
         }
     }
@@ -54,13 +64,20 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         if (uri == null) {
             status = "Backup selection cancelled."
         } else {
-            runCatching {
-                require(restoreKey.isNotBlank()) { "Enter the recovery key before selecting a backup" }
-                PortableStudyBackup.restoreFromUri(context, uri, restoreKey)
-                restoreKey = ""
-                status = "Backup restored. Existing database data was not overwritten."
-            }.onFailure {
-                status = "Restore rejected: ${it.message ?: "invalid backup"}"
+            val key = restoreKey
+            scope.launch {
+                status = "Validating and restoring backup…"
+                runCatching {
+                    require(key.isNotBlank()) { "Enter the recovery key before selecting a backup" }
+                    withContext(Dispatchers.IO) {
+                        PortableStudyBackup.restoreFromUri(context, uri, key)
+                    }
+                }.onSuccess {
+                    restoreKey = ""
+                    status = "Backup restored. Existing database data was not overwritten."
+                }.onFailure {
+                    status = "Restore rejected: ${it.message ?: "invalid backup"}"
+                }
             }
         }
     }
