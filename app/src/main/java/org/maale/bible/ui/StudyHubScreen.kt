@@ -22,9 +22,9 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
     val annotations = remember(refresh) { repository.getAnnotations() }
     val plans = remember(refresh) { repository.getPlans() }
     LazyColumn(modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        item { Text("My study", style = MaterialTheme.typography.headlineSmall) }
+        item { Text(stringResource(R.string.study_title), style = MaterialTheme.typography.headlineSmall) }
         item { Text("Your private reading activity, saved locally.", style = MaterialTheme.typography.bodyMedium) }
-        item { Text("Reading plans (${plans.size})", style = MaterialTheme.typography.titleMedium) }
+        item { Text(stringResource(R.string.study_plans, plans.size), style = MaterialTheme.typography.titleMedium) }
         items(plans, key = { "plan-${it.id}" }) { plan ->
             Card(Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(12.dp)) {
@@ -34,18 +34,18 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
                 }
             }
         }
-        item { Text("Bookmarks (${bookmarks.size})", style = MaterialTheme.typography.titleMedium) }
+        item { Text(stringResource(R.string.study_bookmarks, bookmarks.size), style = MaterialTheme.typography.titleMedium) }
         items(bookmarks, key = { "bookmark-${it.id}" }) { bookmark ->
             val name = CanonicalBookCatalog.find(bookmark.bookId)?.englishName ?: bookmark.bookId
             ListItem(
                 headlineContent = { Text(name) },
                 supportingContent = { Text("Chapter ${bookmark.chapter}, verse ${bookmark.verse}") },
-                trailingContent = { TextButton(onClick = { repository.removeBookmark(bookmark.id); refresh++ }) { Text("Remove") } },
+                trailingContent = { TextButton(onClick = { repository.removeBookmark(bookmark.id); refresh++ }) { Text(stringResource(R.string.reader_remove)) } },
                 modifier = Modifier.clickable { onOpenBook(bookmark.bookId) }.semantics { contentDescription = "Open bookmark in $name" }
             )
             HorizontalDivider()
         }
-        item { Text("Highlights and notes (${annotations.size})", style = MaterialTheme.typography.titleMedium) }
+        item { Text(stringResource(R.string.study_annotations, annotations.size), style = MaterialTheme.typography.titleMedium) }
         items(annotations, key = { "annotation-${it.id}" }) { annotation ->
             val name = CanonicalBookCatalog.find(annotation.bookId)?.englishName ?: annotation.bookId
             ListItem(
