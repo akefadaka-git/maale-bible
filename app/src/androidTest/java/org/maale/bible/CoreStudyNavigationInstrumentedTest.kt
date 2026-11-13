@@ -1,7 +1,9 @@
 package org.maale.bible
 
+import androidx.compose.ui.test.assertDoesNotExist
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -36,5 +38,20 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("Accessibility").assertExists()
         compose.onNodeWithText("Create encrypted backup").assertExists()
         compose.onNodeWithText("Restore backup").assertExists()
+        compose.onNodeWithContentDescription("Select encrypted backup file").assertIsDisplayed()
+    }
+
+    @Test fun restoreKeyIsNotRequestedUntilAfterDocumentSelection() {
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithContentDescription("Select encrypted backup file").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Transient backup recovery key").assertDoesNotExist()
+        compose.onNodeWithContentDescription("Restore selected encrypted backup").assertDoesNotExist()
+    }
+
+    @Test fun settingsRecreationReturnsWithoutRestoringTransientRecoveryMaterial() {
+        compose.onNodeWithText("Settings").performClick()
+        compose.activityRule.scenario.recreate()
+        compose.onNodeWithText("Settings").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Transient backup recovery key").assertDoesNotExist()
     }
 }
