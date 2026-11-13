@@ -19,6 +19,9 @@ class MigrationFaultInjectionInstrumentedTest {
         file.parentFile?.mkdirs()
         val db = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
         try {
+            if (journalMode.equals("WAL", ignoreCase = true)) {
+                check(db.enableWriteAheadLogging()) { "Unable to enable WAL for legacy migration fixture" }
+            }
             db.rawQuery("PRAGMA journal_mode=$journalMode", null).use { cursor ->
                 check(cursor.moveToFirst()) { "Unable to set legacy journal mode to $journalMode" }
                 check(cursor.getString(0).equals(journalMode, ignoreCase = true)) {
