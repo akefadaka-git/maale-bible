@@ -29,8 +29,7 @@ class CoreStudyNavigationInstrumentedTest {
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
         compose.onNodeWithText("Search").performClick()
         compose.onNodeWithText("Search books").performTextInput("Genesis")
-        compose.onNodeWithText("Genesis").assertExists()
-        compose.onNodeWithText("CANONICAL ID  •  GEN").assertExists()
+        compose.onNodeWithText("Genesis, CANONICAL ID  •  GEN, Open  →").assertExists()
     }
 
     @Test fun settingsExposeAccessibilityAndPortableBackupControls() {
