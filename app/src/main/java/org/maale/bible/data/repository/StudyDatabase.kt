@@ -2,6 +2,7 @@ package org.maale.bible.data.repository
 
 import android.content.ContentValues
 import android.content.Context
+import android.util.Log
 import net.zetetic.database.sqlcipher.SQLiteDatabase
 import net.zetetic.database.sqlcipher.SQLiteOpenHelper
 import org.json.JSONArray
@@ -47,14 +48,27 @@ class StudyDatabase(context: Context) : SQLiteOpenHelper(
         if (!it.moveToFirst()) null else ReadingPosition(it.getString(0),it.getInt(1),it.getInt(2),it.getLong(3))
     }
 
-    override fun addBookmark(bookmark: Bookmark) { writableDatabase.insertOrThrow("bookmarks",null,bookmarkValues(bookmark)) }
+    override fun addBookmark(bookmark: Bookmark) {
+        val db = writableDatabase
+        val databasePath = db.rawQuery("PRAGMA database_list", null).use { cursor ->
+            if (cursor.moveToFirst()) cursor.getString(2) else "unknown"
+        }
+        Log.i("R6_DB_WRITE", "stage=before_insert; helperIdentity=" + System.identityHashCode(this) + "; dbIdentity=" + System.identityHashCode(db) + "; path=" + databasePath + "; id=" + bookmark.id + "; bookId=" + bookmark.bookId + "; chapter=" + bookmark.chapter + "; verse=" + bookmark.verse)
+        val rowId = db.insertOrThrow("bookmarks", null, bookmarkValues(bookmark))
+        val count = db.rawQuery("SELECT COUNT(*) FROM bookmarks WHERE book_id=?", arrayOf(bookmark.bookId)).use { cursor ->
+            if (cursor.moveToFirst()) cursor.getInt(0) else -1
+        }
+        Log.i("R6_DB_WRITE", "stage=after_insert; helperIdentity=" + System.identityHashCode(this) + "; dbIdentity=" + System.identityHashCode(db) + "; path=" + databasePath + "; rowId=" + rowId + "; countForBook=" + count)
+    }
     override fun removeBookmark(id: String) { writableDatabase.delete("bookmarks","id=?",arrayOf(id)) }
     override fun getBookmarks(bookId: String?): List<Bookmark> {
         val rows=mutableListOf<Bookmark>()
         val sql=if(bookId==null) "SELECT id,book_id,chapter,verse,created_at,label FROM bookmarks ORDER BY created_at DESC" else "SELECT id,book_id,chapter,verse,created_at,label FROM bookmarks WHERE book_id=? ORDER BY created_at DESC"
         readableDatabase.rawQuery(sql,if(bookId==null)null else arrayOf(bookId)).use { c ->
             while(c.moveToNext()) rows += Bookmark(c.getString(0),c.getString(1),c.getInt(2),c.getInt(3),c.getLong(4),c.getString(5))
-        }; return rows
+        }
+        Log.i("R6_DB_READ", "helperIdentity=" + System.identityHashCode(this) + "; dbIdentity=" + System.identityHashCode(readableDatabase) + "; bookId=" + bookId + "; returned=" + rows.size)
+        return rows
     }
     private fun bookmarkValues(b: Bookmark)=ContentValues().apply { put("id",b.id);put("book_id",b.bookId);put("chapter",b.chapter);put("verse",b.verse);put("created_at",b.createdAtEpochMs);put("label",b.label) }
 
