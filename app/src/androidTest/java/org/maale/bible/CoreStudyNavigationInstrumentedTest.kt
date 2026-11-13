@@ -1,5 +1,6 @@
 package org.maale.bible
 
+import android.util.Log
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
@@ -14,6 +15,7 @@ import androidx.compose.ui.test.printToLog
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -53,7 +55,32 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
         compose.onNodeWithTag("reader_add_bookmark_button").performClick()
         compose.waitForIdle()
-        compose.onNodeWithText("Bookmarks (1)").assertExists()
+
+        // Query through a second repository instance so the test distinguishes a failed write
+        // from a Compose state/semantics refresh or localized-text assertion failure.
+        val verificationRepository = StudyDatabase(compose.activity.applicationContext)
+        val persistedBookmarks = try {
+            verificationRepository.getBookmarks("GEN")
+        } finally {
+            verificationRepository.close()
+        }
+        val expectedReaderCount = compose.activity.getString(R.string.reader_bookmarks, persistedBookmarks.size)
+        Log.i(
+            "R6_DIAGNOSTIC",
+            "stage=reader; persistedCount=${persistedBookmarks.size}; bookIds=${persistedBookmarks.map { it.bookId }}; " +
+                "savedLanguage=${AppLanguage.load(compose.activity).tag}; activityLocales=${compose.activity.resources.configuration.locales.toLanguageTags()}; " +
+                "expectedResourceText=$expectedReaderCount"
+        )
+        assertEquals("R6 database check: exactly one Genesis bookmark must persist after the reader action", 1, persistedBookmarks.size)
+
+        try {
+            compose.onNodeWithText("Bookmarks (1)").assertExists()
+        } catch (failure: Throwable) {
+            compose.onRoot(useUnmergedTree = true).printToLog("R6_READER_AFTER_BOOKMARK")
+            Log.e("R6_DIAGNOSTIC", "Reader bookmark count is persisted but expected Compose text was not found", failure)
+            throw failure
+        }
+
         compose.onNodeWithTag("navigation_more").performClick()
         waitForTag("more_screen")
         compose.onNodeWithTag("more_study_tab").performClick()
