@@ -143,7 +143,7 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         ) {
             Text(stringResource(R.string.settings_restore_button))
         }
-        status?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+        status?.let { Text(it, modifier = Modifier.testTag("backup_status"), style = MaterialTheme.typography.bodySmall) }
         HorizontalDivider()
         Text(stringResource(R.string.settings_content), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_content_help))
