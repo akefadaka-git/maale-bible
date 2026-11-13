@@ -26,7 +26,7 @@ private val readerNavigationStateSaver = Saver<ReaderNavigation, Any>(
     save = { state -> listOf(state.bookId, state.chapter, state.verse) },
     restore = { saved ->
         val values = saved as List<*>
-        mutableStateOf(ReaderNavigation(values[0] as String, values[1] as Int, values[2] as Int))
+        ReaderNavigation(values[0] as String, values[1] as Int, values[2] as Int)
     }
 )
 
