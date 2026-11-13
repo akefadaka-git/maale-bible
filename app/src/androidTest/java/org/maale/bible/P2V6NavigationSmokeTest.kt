@@ -168,6 +168,9 @@ class P2V6NavigationSmokeTest {
     fun maaleIsFirstLaunchDefaultAndLocaleChoicePersistsAcrossActivityRecreation() {
         // @Before clears the stored choice and recreates the activity, so this
         // assertion verifies the actual first-launch default rather than enum order.
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val preferences = context.getSharedPreferences("maale_bible_preferences", Context.MODE_PRIVATE)
+        assertEquals(null, preferences.getString("ui_language", null))
         composeRule.onNodeWithText("ጌዔዦ ማፃኣፖ ቡሊ ዛጌ", substring = false).assertIsDisplayed()
 
         composeRule.onNodeWithTag("language_selector")
@@ -189,8 +192,6 @@ class P2V6NavigationSmokeTest {
 
         // Amharic: immediate rendering and persistence after Activity recreation.
         composeRule.onNodeWithTag("language_amharic").performClick()
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val preferences = context.getSharedPreferences("maale_bible_preferences", Context.MODE_PRIVATE)
         assertEquals("am", preferences.getString("ui_language", null))
         composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ", substring = false).assertIsDisplayed()
         composeRule.activityRule.scenario.recreate()

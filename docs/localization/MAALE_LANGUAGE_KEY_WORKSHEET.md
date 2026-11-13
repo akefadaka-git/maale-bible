@@ -258,8 +258,8 @@ The initial 112/180 count covered only `strings.xml`. These three Android resour
 |---|---:|---:|---:|---|
 | `book_explorer.xml` | 33 | 0 | 0 | 33 English fallbacks |
 | `book_explorer_testaments.xml` | 4 | 4 | 0 | 4 English fallbacks |
-| `book_learning.xml` | 43 | 43 | 0 | 43 English fallbacks |
-| **Additional total** | **80** | **47** | **0** | **80 English fallbacks** |
+| `book_learning.xml` | 45 | 45 | 0 | 43 English fallbacks |
+| **Additional total** | **82** | **49** | **0** | **82 English fallbacks** |
 
 **Additional pending Maale keys (80):**
 
@@ -269,13 +269,13 @@ The initial 112/180 count covered only `strings.xml`. These three Android resour
 
 ### Full resource inventory
 
-| Locale | Keys present | Keys absent from 261-key English reference |
+| Locale | Keys present | Keys absent from 263-key English reference |
 |---|---:|---:|
-| English base | 261 | 0 |
-| Amharic | 160 | 101 |
-| Maale | 113 | 148 |
+| English base | 263 | 0 |
+| Amharic | 162 | 101 |
+| Maale | 113 | 150 |
 
-The 112 Owner-supplied Maale UI entries cover 112 of 260 non-app-title keys (43.1%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure applies only to core `strings.xml`. The 68 core string fallbacks and 80 additional screen-resource fallbacks are distinct sets, totaling 148 missing Maale entries. Amharic has 101 missing entries.
+The 112 Owner-supplied Maale UI entries cover 112 of 262 non-app-title keys (42.7%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure applies only to core `strings.xml`. The 68 core string fallbacks and 82 additional screen-resource fallbacks are distinct sets, totaling 150 missing Maale entries. Amharic has 101 missing entries.
 
 ## How to send Maale wording
 
@@ -292,4 +292,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 112 of 260 non-app-title Android UI keys have Owner-supplied Maale wording recorded (43.1% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 80 additional Explorer/Testament/Learning Centre keys lack Maale wording, for 148 Maale fallbacks overall. Amharic currently has 101 fallbacks across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** 112 of 262 non-app-title Android UI keys have Owner-supplied Maale wording recorded (42.7% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 82 additional Explorer/Testament/Learning Centre keys lack Maale wording, for 148 Maale fallbacks overall. Amharic currently has 101 fallbacks across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
