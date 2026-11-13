@@ -11,6 +11,10 @@ import org.maale.bible.data.repository.StudyDatabase
 import org.maale.bible.data.security.PortableStudyBackup
 import org.maale.bible.data.security.StudyDataKeyStore
 import org.maale.bible.domain.model.Bookmark
+import org.maale.bible.domain.model.ReadingPosition
+import org.maale.bible.domain.model.StudyAnnotation
+import org.maale.bible.domain.model.AnnotationKind
+import org.maale.bible.domain.model.ReadingPlan
 import java.io.File
 
 @RunWith(AndroidJUnit4::class)
@@ -103,4 +107,68 @@ class StudyEncryptionMigrationInstrumentedTest {
         assertThrows(Exception::class.java) { PortableStudyBackup.restore(context, json.toString(), key) }
         assertFalse(context.getDatabasePath(StudyDatabase.DB_NAME).exists())
     }
+
+
+    @Test fun migrationPreservesEveryStudyRecordField() {
+        context.deleteDatabase(StudyDatabase.DB_NAME)
+        val file = context.getDatabasePath(StudyDatabase.DB_NAME)
+        file.parentFile?.mkdirs()
+        val legacy = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
+        legacy.execSQL("CREATE TABLE reading_position (singleton INTEGER PRIMARY KEY CHECK(singleton=1), book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
+        legacy.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
+        legacy.execSQL("CREATE TABLE annotations (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, kind TEXT NOT NULL, body TEXT NOT NULL, color TEXT, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
+        legacy.execSQL("CREATE TABLE reading_plans (id TEXT PRIMARY KEY, title TEXT NOT NULL, start_day INTEGER NOT NULL, duration_days INTEGER NOT NULL, completed_days TEXT NOT NULL, updated_at INTEGER NOT NULL)")
+        legacy.execSQL("INSERT INTO reading_position VALUES (1,'GEN',7,19,1700000000123)")
+        legacy.execSQL("INSERT INTO bookmarks VALUES ('b-1','GEN',7,19,1700000000456,'bookmark label')")
+        legacy.execSQL("INSERT INTO annotations VALUES ('a-1','GEN',7,19,'NOTE','private note',NULL,1700000000500,1700000000600)")
+        legacy.execSQL("INSERT INTO reading_plans VALUES ('p-1','Genesis plan',20000,7,'1,3,7',1700000000700)")
+        legacy.version = 2
+        legacy.close()
+
+        val migrated = StudyDatabase(context)
+        try {
+            assertEquals(ReadingPosition("GEN",7,19,1700000000123), migrated.getReadingPosition())
+            assertEquals(Bookmark("b-1","GEN",7,19,1700000000456,"bookmark label"), migrated.getBookmarks("GEN").single())
+            assertEquals(StudyAnnotation("a-1","GEN",7,19,AnnotationKind.NOTE,"private note",null,1700000000500,1700000000600), migrated.getAnnotations("GEN").single())
+            assertEquals(ReadingPlan("p-1","Genesis plan",20000,7,setOf(1,3,7),1700000000700), migrated.getPlans().single())
+        } finally { migrated.close(); context.deleteDatabase(StudyDatabase.DB_NAME) }
+    }
+
+    @Test fun invalidLegacyRecordAbortsMigrationAndPreservesOriginalDatabase() {
+        context.deleteDatabase(StudyDatabase.DB_NAME)
+        val file = context.getDatabasePath(StudyDatabase.DB_NAME)
+        file.parentFile?.mkdirs()
+        val legacy = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
+        legacy.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
+        legacy.execSQL("INSERT INTO bookmarks VALUES ('bad-1','GEN',0,2,10,'must survive')")
+        legacy.version = 2
+        legacy.close()
+
+        assertThrows(Exception::class.java) { StudyDatabase(context) }
+        assertTrue(file.exists())
+        val stillPlain = PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY)
+        try {
+            stillPlain.rawQuery("SELECT label FROM bookmarks WHERE id='bad-1'", null).use {
+                assertTrue(it.moveToFirst())
+                assertEquals("must survive", it.getString(0))
+            }
+        } finally { stillPlain.close(); context.deleteDatabase(StudyDatabase.DB_NAME) }
+    }
+
+    @Test fun failedTransactionalBackupRestoreLeavesExistingStudyDataIntact() {
+        context.deleteDatabase(StudyDatabase.DB_NAME)
+        val database = StudyDatabase(context)
+        try {
+            database.addBookmark(Bookmark("existing","GEN",1,1,100,"keep this"))
+            val invalid = JSONObject()
+                .put("format","maale-bible-study-backup")
+                .put("version",1)
+                .put("bookmarks", org.json.JSONArray()
+                    .put(JSONObject().put("id","duplicate").put("bookId","GEN").put("chapter",1).put("verse",1).put("createdAt",1).put("label","first"))
+                    .put(JSONObject().put("id","duplicate").put("bookId","EXO").put("chapter",2).put("verse",3).put("createdAt",2).put("label","second")))
+            assertThrows(Exception::class.java) { database.restoreBackup(invalid.toString()) }
+            assertEquals(listOf(Bookmark("existing","GEN",1,1,100,"keep this")), database.getBookmarks())
+        } finally { database.close(); context.deleteDatabase(StudyDatabase.DB_NAME) }
+    }
+
 }

@@ -15,7 +15,7 @@ import java.util.UUID
 import java.time.LocalDate
 
 @Composable
-fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
+fun ReaderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val book = CanonicalBookCatalog.find(bookId)
     var navigation by remember(bookId) {
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
