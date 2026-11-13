@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.weight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -19,12 +18,12 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 @Composable
@@ -43,9 +42,8 @@ fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
         Text("Explore the books of the Maale Bible", style = MaterialTheme.typography.bodyMedium,
             color = colors.onSurfaceVariant)
         OutlinedTextField(value = query, onValueChange = { query = it },
-            modifier = Modifier.fillMaxWidth(), singleLine = true,
-            shape = RoundedCornerShape(18.dp), label = { Text("Find a book") },
-            placeholder = { Text("Search by name or book code") },
+            modifier = Modifier.fillMaxWidth(), singleLine = true, shape = RoundedCornerShape(18.dp),
+            label = { Text("Find a book") }, placeholder = { Text("Search by name or book code") },
             leadingIcon = { Text("⌕", style = MaterialTheme.typography.titleLarge, color = colors.primary) })
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically) {
@@ -67,7 +65,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
                 }
             }
         } else {
-            LazyColumn(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
+            LazyColumn(verticalArrangement = Arrangement.spacedBy(9.dp)) {
                 items(books, key = { it.usfmId }) { book ->
                     Card(modifier = Modifier.fillMaxWidth().clickable { onSelectBook(book.usfmId) }
                         .semantics { contentDescription = "Open " + book.englishName },
