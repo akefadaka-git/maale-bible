@@ -19,7 +19,11 @@ class MigrationFaultInjectionInstrumentedTest {
         file.parentFile?.mkdirs()
         val db = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
         try {
-            db.execSQL("PRAGMA journal_mode=$journalMode")
+            val actualMode = db.rawQuery("PRAGMA journal_mode=$journalMode", null).use { cursor ->
+                check(cursor.moveToFirst()) { "Unable to set legacy journal mode" }
+                cursor.getString(0)
+            }
+            assertEquals("Legacy fixture journal mode", journalMode.lowercase(), actualMode.lowercase())
             db.execSQL("CREATE TABLE reading_position (singleton INTEGER PRIMARY KEY CHECK(singleton=1), book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("CREATE TABLE bookmarks (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, created_at INTEGER NOT NULL, label TEXT NOT NULL DEFAULT '')")
             db.execSQL("CREATE TABLE annotations (id TEXT PRIMARY KEY, book_id TEXT NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, kind TEXT NOT NULL, body TEXT NOT NULL, color TEXT, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL)")
@@ -32,6 +36,13 @@ class MigrationFaultInjectionInstrumentedTest {
     @Test fun walCheckpointFailureIsFailClosedAndLeavesLegacyRowsReadable() {
         val file = context.getDatabasePath(StudyDatabase.DB_NAME)
         createLegacy(file, "WAL")
+        PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE).use { db ->
+            val persistedMode = db.rawQuery("PRAGMA journal_mode", null).use { cursor ->
+                assertTrue(cursor.moveToFirst())
+                cursor.getString(0)
+            }
+            assertEquals("WAL fixture must persist across close/reopen", "wal", persistedMode.lowercase())
+        }
         StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
         try {
             assertThrows(Exception::class.java) { StudyDatabase(context) }
