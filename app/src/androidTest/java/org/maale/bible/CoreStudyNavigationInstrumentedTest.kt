@@ -53,7 +53,12 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("book_item_GEN").performClick()
         waitForTag("reader_screen")
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
-        compose.onNodeWithTag("reader_add_bookmark_button").performClick()
+        compose.onNodeWithTag("reader_screen")
+            .performScrollToNode(hasTestTag("reader_add_bookmark_button"))
+        compose.onNodeWithTag("reader_add_bookmark_button")
+            .assertIsDisplayed()
+            .assertHasClickAction()
+            .performClick()
         compose.waitForIdle()
 
         // Query through a second repository instance so the test distinguishes a failed write
