@@ -13,13 +13,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import org.maale.bible.data.repository.StudyDatabase
+import androidx.compose.ui.res.stringResource
+
 import org.maale.bible.data.security.PortableStudyBackup
 
 @Composable
-fun SettingsScreen(modifier: Modifier = Modifier) {
+fun SettingsScreen(repository: org.maale.bible.data.repository.StudyDatabase, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val repository = remember(context) { StudyDatabase(context.applicationContext) }
     var recoveryKey by rememberSaveable { mutableStateOf("") }
     var backupEnvelope by rememberSaveable { mutableStateOf("") }
     var restoreKey by rememberSaveable { mutableStateOf("") }
@@ -27,13 +27,13 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
 
     Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Settings", style = MaterialTheme.typography.headlineSmall)
-        Text("Accessibility", style = MaterialTheme.typography.titleMedium)
-        Text("The interface respects Android system font size, display size, contrast and screen-reader settings. Adjust these under your device Settings → Accessibility.")
-        Text("Language", style = MaterialTheme.typography.titleMedium)
-        Text("The shell currently provides English navigation and the Maale-script product name. Maale and Amharic interface translations are not yet packaged. Scripture language selection is not enabled.")
+        Text(stringResource(R.string.settings_accessibility), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_accessibility_help))
+        Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_language_help))
         HorizontalDivider()
-        Text("Portable encrypted study backup", style = MaterialTheme.typography.titleMedium)
-        Text("A recovery key encrypts the backup with Argon2id and AES-GCM. Keep the recovery key separately from the backup. Anyone with both can restore your private notes.")
+        Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_backup_help))
         Button(onClick = {
             runCatching {
                 recoveryKey = PortableStudyBackup.generateRecoveryKey()
@@ -47,16 +47,16 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
                 status = "Encrypted backup prepared. Save the recovery key below separately."
             }.onFailure { status = "Backup failed: ${it.message ?: "unknown error"}" }
         }, modifier = Modifier.semantics { contentDescription = "Create and share portable encrypted study backup" }) {
-            Text("Create encrypted backup")
+            Text(stringResource(R.string.settings_create_backup))
         }
         if (recoveryKey.isNotBlank()) {
-            Text("Recovery key — store this securely and separately", style = MaterialTheme.typography.titleSmall)
+            Text(stringResource(R.string.settings_recovery_key), style = MaterialTheme.typography.titleSmall)
             SelectionContainer { Text(recoveryKey, style = MaterialTheme.typography.bodySmall) }
         }
         HorizontalDivider()
-        Text("Restore portable backup", style = MaterialTheme.typography.titleMedium)
-        OutlinedTextField(value = restoreKey, onValueChange = { restoreKey = it }, label = { Text("Recovery key") }, modifier = Modifier.fillMaxWidth(), singleLine = true)
-        OutlinedTextField(value = backupEnvelope, onValueChange = { backupEnvelope = it }, label = { Text("Backup envelope JSON") }, modifier = Modifier.fillMaxWidth(), minLines = 4)
+        Text(stringResource(R.string.settings_restore), style = MaterialTheme.typography.titleMedium)
+        OutlinedTextField(value = restoreKey, onValueChange = { restoreKey = it }, label = { Text(stringResource(R.string.settings_recovery_key_hint)) }, modifier = Modifier.fillMaxWidth(), singleLine = true)
+        OutlinedTextField(value = backupEnvelope, onValueChange = { backupEnvelope = it }, label = { Text(stringResource(R.string.settings_envelope_hint)) }, modifier = Modifier.fillMaxWidth(), minLines = 4)
         Button(onClick = {
             runCatching {
                 PortableStudyBackup.restore(context, backupEnvelope, restoreKey)
@@ -65,12 +65,12 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
             }.onFailure { status = "Restore rejected: ${it.message ?: "invalid backup"}" }
         }, enabled = backupEnvelope.isNotBlank() && restoreKey.isNotBlank(),
             modifier = Modifier.semantics { contentDescription = "Restore encrypted study backup using recovery key" }) {
-            Text("Restore backup")
+            Text(stringResource(R.string.settings_restore_button))
         }
         status?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
         HorizontalDivider()
-        Text("Content availability", style = MaterialTheme.typography.titleMedium)
-        Text("The catalogue is available offline. Scripture text, full-text scripture search, audio and translations remain disabled until their source and rights gates are satisfied.")
+        Text(stringResource(R.string.settings_content), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_content_help))
         Text("Maale Bible · 0.1.0", style = MaterialTheme.typography.labelSmall)
     }
 }
