@@ -86,7 +86,7 @@
     <string name="study_deeper">ዒናፓ ኮሺ ፃናዒሢ</string>
     <string name="study_private_workspace">ኔኤኮ ዱማዼ ቤሲ</string>
     <string name="study_notes">ጶቂሣኒ ፃኣፒ ዓርቂሢ</string>
-    <string name="study_bookmarks">ዱማሲ ዓርቂሢ</string>
+    <string name="study_bookmarks">ዱማሲ ዓርቂሢ (%1$d)</string>
     <string name="study_highlights">ቃላሜና ቲሽኪሢ</string>
     <string name="study_collections">ቡክሶናሢ</string>
     <string name="study_reflection_notes">ማሊ ጶቂሢ ዓርቂንቴባኮ</string>
