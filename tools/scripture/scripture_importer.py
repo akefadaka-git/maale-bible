@@ -169,7 +169,7 @@ def create_database(output,edition,books,verses,headings):
         db=sqlite3.connect(tmp)
         try:
             db.execute("PRAGMA foreign_keys=ON"); db.execute("PRAGMA journal_mode=DELETE"); db.execute("PRAGMA synchronous=FULL")
-            db.execute("PRAGMA application_id=1296192066")
+            db.execute("PRAGMA application_id=1296189762")
             db.execute("PRAGMA user_version=1")
             db.executescript("""
             CREATE TABLE package_metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL);
