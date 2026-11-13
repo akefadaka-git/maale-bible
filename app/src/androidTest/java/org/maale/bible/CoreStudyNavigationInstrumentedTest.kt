@@ -13,6 +13,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.maale.bible.MainActivity
 import org.maale.bible.ui.AppLanguage
+import org.maale.bible.data.repository.StudyDatabase
 
 @RunWith(AndroidJUnit4::class)
 class CoreStudyNavigationInstrumentedTest {
@@ -22,6 +23,9 @@ class CoreStudyNavigationInstrumentedTest {
         AppLanguage.save(compose.activity, AppLanguage.ENGLISH)
         compose.activityRule.scenario.recreate()
         compose.waitForIdle()
+        val repository = StudyDatabase(compose.activity.applicationContext)
+        repository.getBookmarks().forEach { repository.removeBookmark(it.id) }
+        repository.close()
     }
 
     @Test fun bookReaderBookmarkAndStudyHubFlowIsConnected() {
@@ -29,8 +33,11 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("1. Genesis").performClick()
         compose.onNodeWithText("Chapter 1 · Verse 1").assertIsDisplayed()
         compose.onNodeWithText("Add bookmark").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Bookmarks (1)").assertExists()
         compose.onNodeWithText("More").performClick()
         compose.onNodeWithText("Study").performClick()
+        compose.onNodeWithTag("study_bookmarks_count").assertExists()
         compose.onNodeWithText("Bookmarks (1)").assertExists()
         compose.onNodeWithText("Genesis").assertExists()
     }

@@ -110,4 +110,20 @@
     <string name="search_in_development">በልማት ላይ</string>
     <string name="action_open">ክፈት</string>
     <string name="reader_canonical_book_id">መደበኛ የመጽሐፍ መለያ</string>
+    <string name="header_notifications">الإشعارات</string>
+    <string name="header_no_notifications">لا توجد إشعارات جديدة.</string>
+    <string name="header_profile">الملف الشخصي</string>
+    <string name="header_guest_mode">قارئ ضيف · محلي فقط</string>
+    <string name="header_language">لغة الواجهة</string>
+    <string name="study_private_body">تبقى ملاحظات القراءة والمراجع المحفوظة على هذا الجهاز.</string>
+    <string name="study_calendar_title">هذا الأسبوع</string>
+    <string name="study_calendar_today">اليوم · التقويم المحلي</string>
+    <string name="study_insights_title">ملخص دراستك</string>
+    <string name="study_metric_bookmarks">المحفوظات</string>
+    <string name="study_metric_notes">ملاحظات</string>
+    <string name="study_metric_highlights">تمييزات</string>
+    <string name="study_metric_plans">خطط</string>
+    <string name="study_places_title">جغرافية الكتاب المقدس</string>
+    <string name="study_places_body">معاينة للخريطة فقط. لم تُضف بعد بيانات الأماكن الموثقة وخرائط العمل دون اتصال.</string>
+    <string name="study_places_status">بيانات الخريطة غير متاحة</string>
 </resources>
