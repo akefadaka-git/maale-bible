@@ -5,6 +5,10 @@
 **Source edition:** 2008 MDYTWF / mdyeth  
 **Delivery model:** Offline-first Android application
 
+## Current authority addendum — 2026-11-14
+
+This document records the narrower A3 foundation scope approved on 2026-11-07. Its original `content_intake_authorized=false` statement reflected the authority state at that time and is superseded for current project-level content-intake authority by the Owner's 2026-11-08 authorization, reconciled in [Owner Content-Intake Authority Reconciliation](../licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md). Controlled intake/evaluation is authorized for Maale, Amharic, English and necessary Bible/study resources, subject to exact-source rights, attribution, integrity, compatibility and quality gates. This does not authorize blanket packaging/distribution, public corpus commits, merge, signing, deployment or publication. Historical A3 acceptance criteria and implementation evidence below remain a record of the initial foundation slice; the complete current product scope is the [Product Requirements Baseline v1.0](PRODUCT_REQUIREMENTS_BASELINE_v1.0_2026-11-14.md).
+
 ## Objective
 Build the Android application foundation and incrementally deliver a usable offline-first Bible reading experience. The named Maale-language/Ethiopic-script specialist review is explicitly deferred as an accepted residual risk.
 
@@ -21,7 +25,7 @@ Build the Android application foundation and incrementally deliver a usable offl
 ## Implementation sequence
 1. Android project, application shell, design tokens and accessible navigation.
 2. Canonical 66-book catalogue and book/chapter navigation from the Owner-approved inventory.
-3. Offline scripture data layer and USFM-to-domain import pipeline, only after separate content-intake approval.
+3. Offline scripture data layer and USFM-to-domain import pipeline, under the later Owner content-intake authority and only after source-specific rights, quality and integrity gates pass.
 4. Reader experience: typography, chapter navigation, reading position and accessibility.
 5. Local full-text search, bookmarks, highlights and private notes.
 6. Reading plans and progress.
@@ -31,7 +35,7 @@ Build the Android application foundation and incrementally deliver a usable offl
 
 ## Hard boundaries
 - Public repository must not contain raw USFM, verse text, scripture excerpts or generated scripture database.
-- content_intake_authorized=false remains in force. This A3 approval authorizes app code and synthetic fixtures, not production ingestion or distribution of Maale text.
+- The original `content_intake_authorized=false` was the status when this scope was approved on 2026-11-07; it is superseded for current controlled intake by the 2026-11-08 Owner authorization, as reconciled on 2026-11-14. Production packaging/distribution remains source-rights-gated.
 - No audio or third-party assets until separately rights-cleared.
 - No backend, account system, analytics, advertising SDK or cloud sync in the initial offline foundation.
 - Machine encoding checks are not linguistic validation. The accepted specialist-review exception remains tracked.
