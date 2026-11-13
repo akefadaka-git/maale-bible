@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -29,7 +30,7 @@ fun SettingsScreen(repository: org.maale.bible.data.repository.StudyDatabase, mo
 
     Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.nav_settings), style = MaterialTheme.typography.headlineSmall)
-        Text(stringResource(R.string.settings_accessibility), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_accessibility), modifier = Modifier.testTag("settings_accessibility_section"), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_accessibility_help))
         Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_language_help))

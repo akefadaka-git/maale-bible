@@ -107,6 +107,7 @@ fun MaaleBibleApp() {
                             )
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.header_language)) },
+                                modifier = Modifier.testTag("profile_language_item"),
                                 onClick = { profileExpanded = false; languageMenuExpanded = true }
                             )
                         }
@@ -150,6 +151,7 @@ fun MaaleBibleApp() {
                             NavigationBarItem(
                                 selected = current == item && selectedBookId == null,
                                 onClick = { selectedBookId = null; destination = item.name },
+                                modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleMedium) },
                                 label = { Text(stringResource(item.labelRes), maxLines = 1) }
                             )
@@ -166,6 +168,7 @@ fun MaaleBibleApp() {
                             NavigationRailItem(
                                 selected = current == item && selectedBookId == null,
                                 onClick = { selectedBookId = null; destination = item.name },
+                                modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleLarge) },
                                 label = { Text(stringResource(item.labelRes), maxLines = 1) },
                                 alwaysShowLabel = true
@@ -254,6 +257,7 @@ private fun MoreScreen(
                 FilterChip(
                     selected = selected == item,
                     onClick = { onSelect(item) },
+                    modifier = Modifier.testTag(when (item) { MoreDestination.STUDY -> "more_study_tab"; MoreDestination.SETTINGS -> "more_settings_tab"; MoreDestination.LISTEN -> "more_listen_tab" }),
                     label = { Text(stringResource(label), maxLines = 1) }
                 )
             }

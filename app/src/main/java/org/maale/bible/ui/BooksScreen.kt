@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -21,7 +22,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, modifier: Modifier = Modifier) {
         LazyColumn {
             items(CanonicalBookCatalog.books, key = { it.usfmId }) { book ->
                 Column(
-                    Modifier.fillMaxWidth().clickable { onSelectBook(book.usfmId) }
+                    Modifier.fillMaxWidth().testTag("book_item_${book.usfmId}").clickable { onSelectBook(book.usfmId) }
                         .semantics { contentDescription = "Open " + book.englishName }
                         .padding(vertical = 14.dp, horizontal = 8.dp)
                 ) {

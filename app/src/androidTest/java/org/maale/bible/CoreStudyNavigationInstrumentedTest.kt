@@ -33,14 +33,14 @@ class CoreStudyNavigationInstrumentedTest {
     }
 
     @Test fun bookReaderBookmarkAndStudyHubFlowIsConnected() {
-        compose.onNodeWithText("Books").performClick()
-        compose.onNodeWithText("1. Genesis").performClick()
-        compose.onNodeWithText("Chapter 1 · Verse 1").assertIsDisplayed()
-        compose.onNodeWithText("Add bookmark").performClick()
+        compose.onNodeWithTag("navigation_books").performClick()
+        compose.onNodeWithTag("book_item_GEN").performClick()
+        compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
+        compose.onNodeWithTag("reader_add_bookmark_button").performClick()
         compose.waitForIdle()
         compose.onNodeWithText("Bookmarks (1)").assertExists()
-        compose.onNodeWithText("More").performClick()
-        compose.onNodeWithText("Study").performClick()
+        compose.onNodeWithTag("navigation_more").performClick()
+        compose.onNodeWithTag("more_study_tab").performClick()
         compose.onNodeWithTag("study_hub_list").performScrollToNode(hasText("Bookmarks (1)"))
         compose.onNodeWithTag("study_bookmarks_count").assertIsDisplayed()
         compose.onNodeWithText("Bookmarks (1)").assertIsDisplayed()
@@ -63,7 +63,7 @@ class CoreStudyNavigationInstrumentedTest {
     @Test fun profileMenuClearlyIdentifiesLocalGuestMode() {
         compose.onNodeWithTag("profile_button").assertHasClickAction().performClick()
         compose.onNodeWithText("Guest reader · local-only").assertIsDisplayed()
-        compose.onNodeWithText("Interface language").assertExists()
+        compose.onNodeWithTag("profile_language_item").assertIsDisplayed()
     }
 
     @Test fun studyDashboardRendersCalendarChartAndMapDisclosureAndScrolls() {
@@ -78,14 +78,14 @@ class CoreStudyNavigationInstrumentedTest {
 
     @Test fun compactNavigationIsVisibleAndInteractive() {
         compose.onNodeWithTag("navigation_compact").assertIsDisplayed()
-        compose.onNodeWithText("Books").performClick()
-        compose.onNodeWithText("1. Genesis").assertIsDisplayed()
+        compose.onNodeWithTag("navigation_books").performClick()
+        compose.onNodeWithTag("book_item_GEN").assertIsDisplayed()
     }
 
     @Test fun settingsExposeAccessibilityAndPortableBackupControls() {
-        compose.onNodeWithText("More").performClick()
-        compose.onNodeWithText("Settings").performClick()
-        compose.onNodeWithText("Accessibility").assertExists()
+        compose.onNodeWithTag("navigation_more").performClick()
+        compose.onNodeWithTag("more_settings_tab").performClick()
+        compose.onNodeWithTag("settings_accessibility_section").assertIsDisplayed()
         compose.onNodeWithText("Create encrypted backup").assertExists()
         compose.onNodeWithText("Restore backup").assertExists()
     }
