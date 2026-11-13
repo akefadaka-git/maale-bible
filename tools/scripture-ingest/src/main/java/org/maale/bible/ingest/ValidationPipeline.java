@@ -5,15 +5,16 @@ public final class ValidationPipeline {
   private ValidationPipeline() {}
   public static Result run(Path archive,String expectedArchiveSha,Path staging,List<String> expectedBookIds,Map<String,String> expectedFileHashes,ArchiveSafetyValidator.Limits limits) {
     try {
+      if(expectedFileHashes.size()!=expectedBookIds.size()) throw new IOException("FILE_HASH_MANIFEST_COUNT_MISMATCH");
       ArchiveSafetyValidator.extractVerified(archive,expectedArchiveSha,staging,limits);
-      int checked=0;
+      Path root=staging.toRealPath(); int checked=0;
       for(var entry:expectedFileHashes.entrySet()){
-        Path file=staging.resolve(entry.getKey()).normalize();
-        if(!file.startsWith(staging.toAbsolutePath().normalize()) && !file.startsWith(staging.normalize())) return new Result("FAIL_FILE_INTEGRITY",checked,0,List.of("PATH_ESCAPE"));
-        if(!Files.isRegularFile(file)) return new Result("FAIL_FILE_INTEGRITY",checked,0,List.of("EXPECTED_FILE_MISSING"));
+        Path file=root.resolve(entry.getKey()).normalize();
+        if(!file.startsWith(root)) throw new IOException("PATH_ESCAPE");
+        if(!Files.isRegularFile(file)) throw new IOException("EXPECTED_FILE_MISSING");
         Sha256Verifier.verify(file,entry.getValue()); UnicodeValidator.validate(file); checked++;
       }
-      Set<String> ids=UsfmInventoryValidator.validate(staging,expectedBookIds);
+      Set<String> ids=UsfmInventoryValidator.validate(root,expectedBookIds);
       return new Result("PASS_TECHNICAL_VALIDATION",checked,ids.size(),List.of());
     } catch(Exception e) {
       String code=e.getMessage()==null?"VALIDATION_FAILED":e.getMessage().replaceAll("[^A-Z0-9_:-]","_").toUpperCase(Locale.ROOT);
