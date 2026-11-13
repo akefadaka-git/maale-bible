@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 import org.maale.bible.domain.model.completionPercent
 import org.maale.bible.domain.repository.StudyRepository
@@ -55,7 +56,7 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
             HorizontalDivider()
         }
         if (bookmarks.isEmpty() && annotations.isEmpty() && plans.isEmpty()) {
-            item { Text("Your study library is empty. Open a book to save a reading position, bookmark, highlight or note.") }
+            item { Text(stringResource(R.string.study_empty)) }
         }
     }
 }
