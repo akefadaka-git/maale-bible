@@ -115,3 +115,14 @@ python tools/a3/localization_audit.py \
 ```
 
 Add `--strict` to return a non-zero exit code when canonical keys are missing, placeholders differ, or duplicate resource names exist.
+
+
+## Core UI reference reconciliation
+
+A source-reference scan was performed against the nine core Compose UI files in the A3 baseline: app shell, Home, Books, Search, Settings, Study, Reader, Audio and shared components.
+
+- **61 of the 65 missing canonical keys** are referenced in those core UI files and therefore represent active Maale fallback gaps in the inspected UI surface.
+- Four missing canonical keys had no reference in those nine files: `home_tagline`, `browse_books`, `settings_envelope_hint` and `home_tagline` appears once in this set. Their use elsewhere in the repository has not been ruled out.
+- None of the 84 Maale-only resource names was referenced by the nine inspected UI files. This is a scoped result, not proof that they are globally unused; do not remove them until a repository-wide search, including tests and generated/dynamic references, is complete.
+
+The missing-key scan and Maale-only-key scan are resource-name based. They do not substitute for a runtime screen-by-screen fallback audit.
