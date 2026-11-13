@@ -11,6 +11,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import org.maale.bible.data.catalog.CanonicalBookCatalog
+import org.maale.bible.domain.model.completionPercent
 import org.maale.bible.domain.repository.StudyRepository
 
 @Composable
