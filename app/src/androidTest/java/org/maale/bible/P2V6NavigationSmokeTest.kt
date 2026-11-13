@@ -7,10 +7,8 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onAllNodesWithText
-import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
@@ -40,7 +38,10 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_card_GEN"))
+        // Genesis is the first canonical Old Testament result. Assert that the
+        // filtered result is composed and visible before clicking it; scrolling
+        // the parent LazyColumn to its own descendant can deadlock Espresso's
+        // idling bridge on API 30.
         composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
         awaitText("Bible book learning centre")
     }
@@ -142,10 +143,11 @@ class P2V6NavigationSmokeTest {
     fun bookLearningCentreKeepsDraftLearningContentUnavailableInBothLocales() {
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
-        composeRule.onNodeWithText("መጻሕፍት").performClick()
-        composeRule.onNodeWithTag("books_list").assertIsDisplayed()
+        // Use the primary Home action instead of relying on a narrow
+        // seven-item bottom-navigation target.
+        composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ").performClick()
+        awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_card_GEN"))
         composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
