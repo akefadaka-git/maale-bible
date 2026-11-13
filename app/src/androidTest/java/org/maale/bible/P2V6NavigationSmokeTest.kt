@@ -120,7 +120,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("←").performClick()
         mark("reader-06-learning-back-to-books")
         composeRule.onNodeWithText("‹  All books").performClick()
-        awaitText("Books of the Maale Bible")
+        awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithText("EXPLORE BY CATEGORY").assertIsDisplayed()
     }
 
@@ -130,7 +130,7 @@ class P2V6NavigationSmokeTest {
         selectEnglish()
         mark("search-02-open-books")
         composeRule.onNodeWithText("Explore the Bible").performClick()
-        awaitText("Books of the Maale Bible")
+        awaitText("EXPLORE BY CATEGORY")
         mark("search-03-open-search")
         composeRule.onNodeWithText("Search").performClick()
         mark("search-04-await-search-screen")
