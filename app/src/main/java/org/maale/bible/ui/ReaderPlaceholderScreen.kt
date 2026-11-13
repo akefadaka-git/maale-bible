@@ -9,7 +9,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -23,8 +22,8 @@ import org.maale.bible.domain.repository.StudyRepository
 import java.util.UUID
 import java.time.LocalDate
 
-private val readerNavigationStateSaver = Saver<MutableState<ReaderNavigation>, Any>(
-    save = { state -> listOf(state.value.bookId, state.value.chapter, state.value.verse) },
+private val readerNavigationStateSaver = Saver<ReaderNavigation, Any>(
+    save = { state -> listOf(state.bookId, state.chapter, state.verse) },
     restore = { saved ->
         val values = saved as List<*>
         mutableStateOf(ReaderNavigation(values[0] as String, values[1] as Int, values[2] as Int))
