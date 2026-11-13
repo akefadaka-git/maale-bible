@@ -19,7 +19,7 @@ CHAPTER_MARKERS={"c"}; VERSE_MARKERS={"v"}; BOOK_MARKERS={"id"}
 HEADING_MARKERS={"s","s1","s2","s3","s4","r","d","sp","ms","ms1","ms2","ms3"}
 ALTERNATE_LABEL_MARKERS={"ca","cp","va","vp"}; NOTE_MARKERS={"f","x"}
 INLINE_MARKERS={"add","bd","bdit","bk","dc","em","it","k","nd","no","ord","pn","qt","sc","sig","sls","sup","tl","wj","w","ref","rq","xo","xk","xt","fig","qac","qs","pro","lik","lit","ior","iqt","ph","jmp","fr","ft","fq","fqa","fk","fl","fw","fp","fv","fdc","xq","xot","xop"}
-STRUCTURAL_MARKERS=set("""ide h toc1 toc2 toc3 mt mt1 mt2 mt3 mt4 mte mte1 mte2 imt imt1 imt2 imt3 imt4 is is1 is2 is3 ip ipi im imi ipq imq ipr iq iq1 iq2 iq3 iq4 ib ili ili1 ili2 ili3 ili4 io io1 io2 io3 io4 iot iex p m po pr cls pmo pm pmc pmr pi pi1 pi2 pi3 mi nb b q q1 q2 q3 q4 qr qc qa qm qm1 qm2 qm3 qd li li1 li2 li3 li4 lim lim1 lim2 lim3 lim4 lh lf tr th th1 th2 th3 th4 tc tc1 tc2 tc3 tc4 tcr pc ph1 ph2 ph3 ph4 periph z zpa-x""".split())
+STRUCTURAL_MARKERS=set("""ide h toc1 toc2 toc3 mt mt1 mt2 mt3 mt4 mte mte1 mte2 imt imt1 imt2 imt3 imt4 is is1 is2 is3 ip ipi im imi ipq imq ipr iq iq1 iq2 iq3 iq4 ib ili ili1 ili2 ili3 ili4 io io1 io2 io3 io4 iot iex p m po pr cls pmo pm pmc pmr pi pi1 pi2 pi3 mi nb b q q1 q2 q3 q4 qr qc qa qm qm1 qm2 qm3 qd li li1 li2 li3 li4 lim lim1 lim2 lim3 lim4 lh lf tr th th1 th2 th3 th4 tc tc1 tc2 tc3 tc4 tcr pc ph1 ph2 ph3 ph4 periph cl rem sts z zpa-x""".split())
 SUPPORTED_MARKERS=BOOK_MARKERS|CHAPTER_MARKERS|VERSE_MARKERS|HEADING_MARKERS|ALTERNATE_LABEL_MARKERS|NOTE_MARKERS|INLINE_MARKERS|STRUCTURAL_MARKERS
 
 class ImportErrorClosed(ValueError): pass
@@ -195,8 +195,12 @@ def create_database(output,edition,books,verses,headings):
         raise
 
 def import_archive(source,manifest_path,output):
-    manifest=load_manifest(manifest_path); archive=source.read_bytes()
-    if len(archive)!=EXPECTED_ARCHIVE_BYTES: raise ImportErrorClosed(f"archive size mismatch: {len(archive)}")
+    manifest=load_manifest(manifest_path)
+    try: source_size=source.stat().st_size
+    except OSError as exc: raise ImportErrorClosed(f"cannot stat source archive: {exc}") from exc
+    if source_size!=EXPECTED_ARCHIVE_BYTES: raise ImportErrorClosed(f"archive size mismatch: {source_size}")
+    archive=source.read_bytes()
+    if len(archive)!=EXPECTED_ARCHIVE_BYTES: raise ImportErrorClosed(f"archive size mismatch after read: {len(archive)}")
     digest=sha256(archive)
     if digest!=EXPECTED_ARCHIVE_SHA256: raise ImportErrorClosed(f"archive SHA-256 mismatch: {digest}")
     by_id={x["book_id"]:x for x in manifest["files"]}; books=[]; verses=[]; headings=[]
