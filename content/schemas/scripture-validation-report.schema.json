@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Redacted Scripture Validation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reportVersion",
+    "sourceId",
+    "archiveSha256",
+    "technicalStatus",
+    "rightsStatus",
+    "provenanceStatus",
+    "linguisticStatus",
+    "filesChecked",
+    "booksFound",
+    "errors",
+    "scriptureTextIncluded"
+  ],
+  "properties": {
+    "reportVersion": {
+      "type": "string"
+    },
+    "sourceId": {
+      "type": "string"
+    },
+    "archiveSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "technicalStatus": {
+      "type": "string"
+    },
+    "rightsStatus": {
+      "type": "string"
+    },
+    "provenanceStatus": {
+      "type": "string"
+    },
+    "linguisticStatus": {
+      "type": "string"
+    },
+    "filesChecked": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "booksFound": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9_:-]+$"
+      }
+    },
+    "scriptureTextIncluded": {
+      "const": false
+    }
+  }
+}
