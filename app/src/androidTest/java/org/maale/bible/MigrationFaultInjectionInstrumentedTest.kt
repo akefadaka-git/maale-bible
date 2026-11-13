@@ -14,7 +14,7 @@ import java.io.File
 class MigrationFaultInjectionInstrumentedTest {
     private val context get() = InstrumentationRegistry.getInstrumentation().targetContext
 
-    private fun createLegacy(file: File, journalMode: String = "DELETE") {
+    private fun createLegacy(file: File, journalMode: String = "DELETE", keepOpen: Boolean = false): PlainSQLiteDatabase {
         context.deleteDatabase(StudyDatabase.DB_NAME)
         file.parentFile?.mkdirs()
         val db = PlainSQLiteDatabase.openOrCreateDatabase(file, null)
@@ -30,31 +30,31 @@ class MigrationFaultInjectionInstrumentedTest {
             db.execSQL("CREATE TABLE reading_plans (id TEXT PRIMARY KEY, title TEXT NOT NULL, start_day INTEGER NOT NULL, duration_days INTEGER NOT NULL, completed_days TEXT NOT NULL, updated_at INTEGER NOT NULL)")
             db.execSQL("INSERT INTO bookmarks VALUES ('fault-1','GEN',2,3,123,'preserve me')")
             db.version = StudyDatabase.DB_VERSION
-        } finally { db.close() }
+        } finally { if (!keepOpen) db.close() }
+        return db
     }
 
     @Test fun walCheckpointFailureIsFailClosedAndLeavesLegacyRowsReadable() {
         val file = context.getDatabasePath(StudyDatabase.DB_NAME)
-        createLegacy(file, "WAL")
-        PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READWRITE).use { db ->
-            val persistedMode = db.rawQuery("PRAGMA journal_mode", null).use { cursor ->
+        // Keep the original Android SQLite connection open: Android may normalize journal
+        // mode when the final connection closes and a new connection is opened.
+        val fixture = createLegacy(file, "WAL", keepOpen = true)
+        try {
+            val activeMode = fixture.rawQuery("PRAGMA journal_mode", null).use { cursor ->
                 assertTrue(cursor.moveToFirst())
                 cursor.getString(0)
             }
-            assertEquals("WAL fixture must persist across close/reopen", "wal", persistedMode.lowercase())
-        }
-        StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
-        try {
+            assertEquals("WAL fixture must remain active for the migration attempt", "wal", activeMode.lowercase())
+            StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
             assertThrows(Exception::class.java) { StudyDatabase(context) }
             assertTrue(file.exists())
-            PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY).use { db ->
-                db.rawQuery("SELECT label FROM bookmarks WHERE id='fault-1'", null).use { cursor ->
-                    assertTrue(cursor.moveToFirst())
-                    assertEquals("preserve me", cursor.getString(0))
-                }
+            fixture.rawQuery("SELECT label FROM bookmarks WHERE id='fault-1'", null).use { cursor ->
+                assertTrue(cursor.moveToFirst())
+                assertEquals("preserve me", cursor.getString(0))
             }
         } finally {
             StudyMigrationFaultInjection.failAt = null
+            fixture.close()
             context.deleteDatabase(StudyDatabase.DB_NAME)
         }
     }
