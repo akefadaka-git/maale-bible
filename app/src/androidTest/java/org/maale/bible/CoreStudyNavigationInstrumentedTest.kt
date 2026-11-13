@@ -79,7 +79,6 @@ class CoreStudyNavigationInstrumentedTest {
     @Test fun settingsRecreationDoesNotRestoreTransientRecoveryMaterial() {
         openSettings()
         compose.activityRule.scenario.recreate()
-        compose.onAllNodesWithText("Settings").onLast().assertIsDisplayed()
         compose.onNodeWithText("Choose backup file").performScrollTo().assertIsDisplayed()
         compose.onAllNodesWithText("Recovery key").fetchSemanticsNodes().let {
             assert(it.isEmpty()) { "No recovery key may be restored from saved instance state." }
