@@ -126,7 +126,7 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
             value = restoreKey,
             onValueChange = { restoreKey = it },
             label = { Text(stringResource(R.string.settings_recovery_key_hint)) },
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().testTag("restore_recovery_key_input"),
             singleLine = true
         )
         Button(
