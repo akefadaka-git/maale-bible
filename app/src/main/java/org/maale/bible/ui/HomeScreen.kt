@@ -28,22 +28,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HomeScreen(
-    onOpenBooks: () -> Unit,
-    onOpenSearch: () -> Unit,
-    modifier: Modifier = Modifier
-) {
+fun HomeScreen(onOpenBooks: () -> Unit, onOpenSearch: () -> Unit, modifier: Modifier = Modifier) {
     val colors = MaterialTheme.colorScheme
     Column(
         modifier = modifier.fillMaxSize().verticalScroll(rememberScrollState())
             .padding(horizontal = 20.dp, vertical = 18.dp),
         verticalArrangement = Arrangement.spacedBy(22.dp)
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween) {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text("ጌኤዦ ማፃኣፖ", style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold, color = colors.onSurface)
@@ -56,22 +49,14 @@ fun HomeScreen(
                 }
             }
         }
-
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(30.dp),
-            colors = CardDefaults.cardColors(containerColor = colors.primary)
-        ) {
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(24.dp),
-                verticalArrangement = Arrangement.spacedBy(14.dp)
-            ) {
+        Card(Modifier.fillMaxWidth(), shape = RoundedCornerShape(30.dp),
+            colors = CardDefaults.cardColors(containerColor = colors.primary)) {
+            Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                 Surface(shape = RoundedCornerShape(50), color = colors.onPrimary.copy(alpha = 0.14f)) {
                     Text("✦  YOUR FAITH. YOUR LANGUAGE.", modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
                         style = MaterialTheme.typography.labelSmall, color = colors.onPrimary, fontWeight = FontWeight.Bold)
                 }
-                Text("Let the Word
-light your way.", style = MaterialTheme.typography.headlineLarge,
+                Text("Let the Word\nlight your way.", style = MaterialTheme.typography.headlineLarge,
                     color = colors.onPrimary, fontWeight = FontWeight.Bold)
                 Text("A dedicated home for the Maale Bible, reading and reflection.",
                     style = MaterialTheme.typography.bodyLarge, color = colors.onPrimary.copy(alpha = 0.88f))
@@ -82,14 +67,10 @@ light your way.", style = MaterialTheme.typography.headlineLarge,
                 }
             }
         }
-
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("Your library", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-            Card(
-                onClick = onOpenBooks, modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(22.dp),
-                colors = CardDefaults.cardColors(containerColor = colors.surfaceVariant)
-            ) {
+            Card(onClick = onOpenBooks, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(22.dp),
+                colors = CardDefaults.cardColors(containerColor = colors.surfaceVariant)) {
                 Row(Modifier.fillMaxWidth().padding(18.dp), verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     Surface(shape = RoundedCornerShape(17.dp), color = colors.secondaryContainer) {
@@ -106,7 +87,6 @@ light your way.", style = MaterialTheme.typography.headlineLarge,
                 }
             }
         }
-
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("Study tools", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -114,8 +94,8 @@ light your way.", style = MaterialTheme.typography.headlineLarge,
                 QuickAction("▧", "Books", "Browse library", onOpenBooks, Modifier.weight(1f))
             }
         }
-
-        Surface(Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), color = colors.surfaceVariant.copy(alpha = 0.72f)) {
+        Surface(Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp),
+            color = colors.surfaceVariant.copy(alpha = 0.72f)) {
             Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(7.dp)) {
                 Text("A trusted edition", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                 Text("This build provides the book catalogue. Verified scripture text and content-based study tools will be enabled after approved offline content integration.",
