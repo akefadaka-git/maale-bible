@@ -13,6 +13,7 @@ on:
     branches:
       - reconcile/a3-android-foundation-on-main
       - feat/a3-offline-study-foundation-2026-11-12
+      - feat/a3-final-hardening-2026-11-13
     paths:
       - 'app/**'
       - 'gradle/**'
