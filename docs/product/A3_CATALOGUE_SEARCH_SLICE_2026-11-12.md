@@ -1,5 +1,7 @@
 # A3 Android — Metadata Catalogue Search Slice
 
+> **Authority history note (2026-11-14):** The statement below that `content_intake_authorized=false` records the authority state at the time this 2026-11-12 implementation slice was prepared. It is superseded as current project-level authority by the Owner's 2026-11-08 controlled content-intake authorization, reconciled in [Owner Content-Intake Authority Reconciliation](../licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md). This historical slice still correctly records that no scripture text was ingested in that change. Source-specific rights and distribution gates remain mandatory.
+
 **Date:** 2026-11-12  
 **Base:** `main` at `38d792ec1647ed52fbafdfce9f5dd294b4e47107`  
 **Branch:** `feat/a3-catalog-search-2026-11-12`  
