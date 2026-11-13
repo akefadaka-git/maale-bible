@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import org.maale.bible.ui.theme.MaaleBibleColors
 
 @Composable
@@ -55,25 +56,25 @@ fun HomeScreen(onOpenBooks: () -> Unit, modifier: Modifier = Modifier) {
             LivingWordHero(onOpenBooks = onOpenBooks)
             DailyScriptureCard()
             SectionHeading(
-                eyebrow = "MAKE IT YOURS",
-                title = "Your reading journey"
+                eyebrow = stringResource(R.string.home_make_yours),
+                title = stringResource(R.string.home_journey)
             )
             ReadingJourneyCard(onOpenBooks = onOpenBooks)
             SectionHeading(
-                eyebrow = "EXPLORE",
-                title = "A world of Scripture"
+                eyebrow = stringResource(R.string.home_explore),
+                title = stringResource(R.string.home_world)
             )
             if (wideLayout) {
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     ExploreCard(
-                        title = "66-book catalogue",
-                        description = "Browse the canonical book list.",
+                        title = stringResource(R.string.home_catalogue),
+                        description = stringResource(R.string.home_catalogue_desc),
                         marker = "01",
                         modifier = Modifier.weight(1f)
                     )
                     ExploreCard(
-                        title = "Study space",
-                        description = "A home for notes and discoveries.",
+                        title = stringResource(R.string.home_study_space),
+                        description = stringResource(R.string.home_study_desc),
                         marker = "02",
                         modifier = Modifier.weight(1f)
                     )
@@ -81,19 +82,19 @@ fun HomeScreen(onOpenBooks: () -> Unit, modifier: Modifier = Modifier) {
             } else {
                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     ExploreCard(
-                        title = "66-book catalogue",
-                        description = "Browse the canonical book list.",
+                        title = stringResource(R.string.home_catalogue),
+                        description = stringResource(R.string.home_catalogue_desc),
                         marker = "01"
                     )
                     ExploreCard(
-                        title = "Study space",
-                        description = "A home for notes and discoveries.",
+                        title = stringResource(R.string.home_study_space),
+                        description = stringResource(R.string.home_study_desc),
                         marker = "02"
                     )
                 }
             }
             Text(
-                text = "MAALE BIBLE  •  LIVING WORD EXPERIENCE",
+                text = stringResource(R.string.home_footer),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier
@@ -115,7 +116,7 @@ private fun HomeHeader() {
         )
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
-                text = "MAALE BIBLE",
+                text = stringResource(R.string.home_brand),
                 style = MaterialTheme.typography.labelLarge,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.Bold
@@ -128,7 +129,7 @@ private fun HomeHeader() {
             )
             Spacer(Modifier.width(9.dp))
             Text(
-                text = "LIVING WORD EXPERIENCE",
+                text = stringResource(R.string.home_living_experience),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -186,19 +187,19 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Text(
-                text = "THE LIVING WORD",
+                text = stringResource(R.string.home_hero_label),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaaleBibleColors.LivingCyan,
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "A moment to\npause. Read. Reflect.",
+                text = stringResource(R.string.home_hero_title),
                 style = MaterialTheme.typography.headlineMedium,
                 color = Color(0xFFF5F1E8),
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "Make space for Scripture, one chapter at a time.",
+                text = stringResource(R.string.home_hero_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color(0xFFE0E5ED),
                 modifier = Modifier.fillMaxWidth(0.82f)
@@ -211,7 +212,7 @@ private fun LivingWordHero(onOpenBooks: () -> Unit) {
                     contentColor = MaaleBibleColors.Midnight
                 )
             ) {
-                Text("Explore the Bible", fontWeight = FontWeight.SemiBold)
+                Text(stringResource(R.string.home_explore_button), fontWeight = FontWeight.SemiBold)
                 Spacer(Modifier.width(8.dp))
                 Text("→", fontWeight = FontWeight.Bold)
             }
@@ -243,25 +244,25 @@ private fun DailyScriptureCard() {
                 )
                 Spacer(Modifier.width(9.dp))
                 Text(
-                    text = "DAILY SCRIPTURE",
+                    text = stringResource(R.string.home_daily),
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold
                 )
             }
             Text(
-                text = "A quiet place for today's Word.",
+                text = stringResource(R.string.home_daily_title),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "Your verified Maale Bible passage will appear here when the approved scripture text is integrated.",
+                text = stringResource(R.string.home_daily_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Text(
-                text = "SCRIPTURE CONTENT NOT YET LOADED",
+                text = stringResource(R.string.home_content_missing),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold
@@ -317,19 +318,19 @@ private fun ReadingJourneyCard(onOpenBooks: () -> Unit) {
             }
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(
-                    text = "Begin your journey",
+                    text = stringResource(R.string.home_begin),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onSurface,
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = "Choose a book to start. Reading progress will appear here as it becomes available.",
+                    text = stringResource(R.string.home_begin_desc),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             Button(onClick = onOpenBooks) {
-                Text("Start")
+                Text(stringResource(R.string.home_start))
             }
         }
     }
