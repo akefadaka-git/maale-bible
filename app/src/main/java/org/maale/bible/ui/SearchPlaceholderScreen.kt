@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 @Composable
@@ -39,23 +40,23 @@ fun CatalogueSearchScreen(
             .padding(horizontal = 16.dp, vertical = 20.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Find a book", style = MaterialTheme.typography.headlineSmall)
+        Text(stringResource(R.string.search_title), style = MaterialTheme.typography.headlineSmall)
         OutlinedTextField(
             value = query,
             onValueChange = { query = it },
             modifier = Modifier.fillMaxWidth(),
-            label = { Text("Book name or code") },
-            trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text("Clear") } },
+            label = { Text(stringResource(R.string.search_hint)) },
+            trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text(stringResource(R.string.search_clear)) } },
             singleLine = true,
-            supportingText = { Text("Searches the 66-book catalogue stored on this device.") }
+            supportingText = { Text(stringResource(R.string.search_support)) }
         )
         Text(
-            text = if (results.isEmpty()) "No books match “$query”" else "${results.size} books found",
+            text = if (results.isEmpty()) stringResource(R.string.search_no_results) else stringResource(R.string.search_results_count, results.size),
             style = MaterialTheme.typography.labelLarge
         )
         if (results.isEmpty()) {
             Text(
-                "Try an English book name or a three-character USFM code.",
+                stringResource(R.string.search_try),
                 style = MaterialTheme.typography.bodyMedium
             )
         } else {
@@ -83,7 +84,7 @@ fun CatalogueSearchScreen(
             }
         }
         Text(
-            "This search covers book names and catalogue codes only. Scripture search remains unavailable until a separate content-intake approval.",
+            stringResource(R.string.search_boundary),
             style = MaterialTheme.typography.bodySmall
         )
     }
