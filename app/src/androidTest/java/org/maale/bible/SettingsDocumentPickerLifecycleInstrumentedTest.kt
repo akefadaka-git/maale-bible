@@ -33,7 +33,7 @@ class SettingsDocumentPickerLifecycleInstrumentedTest {
         assertNull("Restore key must be consumed exactly once", after.consumeRestoreKey())
     }
 
-    @Test fun newPickerStateDoesNotRestoreSecretsFromSavedInstanceState() {
+    @Test fun freshPickerStateStartsWithoutPendingSecrets() {
         val fresh = PendingDocumentPickerState()
         assertNull(fresh.consumeExportKey())
         assertNull(fresh.consumeRestoreKey())
