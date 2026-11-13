@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -82,9 +83,9 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         }
     }
 
-    Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(modifier.fillMaxSize().testTag("settings_screen").verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Settings", style = MaterialTheme.typography.headlineSmall)
-        Text(stringResource(R.string.settings_accessibility), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.settings_accessibility), modifier = Modifier.testTag("settings_accessibility_section"), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_accessibility_help))
         Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_language_help))

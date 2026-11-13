@@ -1,5 +1,6 @@
 name: A3 Android foundation verification
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - 'app/**'
@@ -14,6 +15,7 @@ on:
       - reconcile/a3-android-foundation-on-main
       - feat/a3-offline-study-foundation-2026-11-12
       - feat/a3-final-hardening-2026-11-13
+      - integration/unified-ui-a3-2026-11-13
     paths:
       - 'app/**'
       - 'gradle/**'
@@ -22,16 +24,27 @@ on:
       - 'build.gradle.kts'
       - 'settings.gradle.kts'
       - '.github/workflows/a3-android-foundation.yml'
+concurrency:
+  group: a3-android-foundation-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
   android-foundation:
-    # Ubuntu 22.04 avoids the observed Ubuntu 24.04 emulator boot timeout
-    # on this runner/action combination; app build and test scope is unchanged.
     runs-on: ubuntu-22.04
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+      - name: Enable KVM for Android emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          if [ -e /dev/kvm ]; then
+            ls -l /dev/kvm
+          else
+            echo "::warning::/dev/kvm is unavailable; emulator will run without hardware acceleration"
+          fi
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -47,3 +60,15 @@ jobs:
           arch: x86_64
           emulator-boot-timeout: 900
           script: ./gradlew --no-daemon --max-workers=2 --console=plain :app:connectedDebugAndroidTest
+      - name: Upload debug APK and Android test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: maale-bible-android-debug-and-test-reports
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/reports/tests/testDebugUnitTest/**
+            app/build/outputs/androidTest-results/connected/**
+            app/build/reports/androidTests/connected/**

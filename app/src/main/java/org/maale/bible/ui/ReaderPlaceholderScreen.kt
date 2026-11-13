@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -39,7 +40,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
     val annotations = remember(refresh, bookId) { repository.getAnnotations(bookId) }
     val plans = remember(refresh) { repository.getPlans() }
 
-    Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+    Column(modifier.fillMaxSize().testTag("reader_screen").verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Text(book?.englishName ?: bookId, style = MaterialTheme.typography.headlineSmall)
             TextButton(onClick = onBack) { Text("Books") }
@@ -47,7 +48,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("Chapter ${navigation.chapter} · Verse ${navigation.verse}", style = MaterialTheme.typography.titleLarge)
+                Text("Chapter ${navigation.chapter} · Verse ${navigation.verse}", modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
                 Text(stringResource(R.string.reader_coordinates_notice))
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     OutlinedButton(onClick = { navigation = navigation.previousChapter() }) { Text(stringResource(R.string.reader_previous_chapter)) }
@@ -60,8 +61,9 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             }
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(onClick = {
-                repository.addBookmark(Bookmark(UUID.randomUUID().toString(), bookId, navigation.chapter, navigation.verse, System.currentTimeMillis()))
+            OutlinedButton(modifier = Modifier.testTag("reader_add_bookmark_button"), onClick = {
+                val bookmark = Bookmark(UUID.randomUUID().toString(), bookId, navigation.chapter, navigation.verse, System.currentTimeMillis())
+                repository.addBookmark(bookmark)
                 refresh++
             }) { Text(stringResource(R.string.reader_add_bookmark)) }
             OutlinedButton(onClick = {
