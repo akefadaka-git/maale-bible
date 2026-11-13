@@ -1,7 +1,7 @@
 # P1.1 Exact-Head Closure Evidence — 2026-11-14
 
 **Branch:** `implementation/p1-1-source-ingestion-2026-11-14`  
-**Implementation code head reviewed:** `590add76d67370d7fe43a007c3e8775391954e27`  
+**Implementation code head reviewed:** `732d4c6c849b7cef8b0325fd30d7b282429d288c`  
 **Implementation status:** PARTIAL — metadata and synthetic-only validator foundation implemented  
 **Closure status:** NOT CLOSED  
 **Merge / release / signing / deployment:** NOT AUTHORIZED
@@ -22,7 +22,7 @@
 - Frozen validation policy: `content/manifests/p1-source-validation-policy.v1.json`.
 - Source-manifest and redacted-report JSON schemas.
 - SHA-256 verifier with known-vector and mismatch tests.
-- ZIP safety extraction: archive hash pre-check, normalized-path and traversal rejection, duplicate-path detection, symlink/encryption rejection, entry/expanded-size and compression-ratio limits, bounded streaming and staging cleanup on failure.
+- ZIP safety extraction: archive hash pre-check, normalized-path and traversal rejection, duplicate-path detection, symlink/encryption rejection, entry/expanded-size and compression-ratio limits, bounded streaming, CRC verification, special Unix-entry rejection and staging cleanup on extraction or pipeline failure.
 - 66-book USFM inventory validator with strict UTF-8 decoding, NFC, replacement-character and control-character checks.
 - Redacted report writer that accepts only stable error codes and sets `scriptureTextIncluded=false`.
 - Restricted-only marker inventory generator: verifies each expected file's byte size and SHA-256, rejects duplicate IDs, counts marker tokens, and writes only marker counts and per-book metadata.
