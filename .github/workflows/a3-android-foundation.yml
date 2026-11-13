@@ -23,6 +23,9 @@ on:
       - 'build.gradle.kts'
       - 'settings.gradle.kts'
       - '.github/workflows/a3-android-foundation.yml'
+concurrency:
+  group: a3-android-foundation-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:

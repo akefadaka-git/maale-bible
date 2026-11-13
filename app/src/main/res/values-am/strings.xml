@@ -104,4 +104,10 @@
     <string name="language_amharic">አማርኛ</string>
     <string name="language_english">እንግሊዝኛ</string>
     <string name="language_fallback_notice">የማሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
+    <string name="search_eyebrow">ቅዱሳት መጻሕፍትን ያግኙ</string>
+    <string name="search_capabilities">የፍለጋ ችሎታዎች</string>
+    <string name="search_available">ይገኛል</string>
+    <string name="search_in_development">በልማት ላይ</string>
+    <string name="action_open">ክፈት</string>
+    <string name="reader_canonical_book_id">መደበኛ የመጽሐፍ መለያ</string>
 </resources>

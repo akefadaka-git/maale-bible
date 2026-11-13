@@ -28,10 +28,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.maale.bible.R
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 /**
@@ -68,19 +71,19 @@ fun CatalogueSearchScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                text = "DISCOVER THE SCRIPTURES",
+                text = stringResource(R.string.search_eyebrow),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "Search with purpose.",
+                text = stringResource(R.string.search_title),
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onBackground,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "Find a book by its name or canonical code. Scripture phrase search will activate when verified text is indexed.",
+                text = stringResource(R.string.search_support),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -89,13 +92,14 @@ fun CatalogueSearchScreen(
                 onValueChange = { query = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .semantics { contentDescription = "Search Bible book names or canonical codes" },
+                    .testTag("catalogue_search_input")
+                    .semantics { contentDescription = stringResource(R.string.search_hint) },
                 singleLine = true,
-                label = { Text("Search books") },
+                label = { Text(stringResource(R.string.search_hint)) },
                 placeholder = { Text("e.g. Genesis or GEN") },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        TextButton(onClick = { query = "" }) { Text("Clear") }
+                        TextButton(onClick = { query = "" }) { Text(stringResource(R.string.search_clear)) }
                     }
                 }
             )
@@ -110,7 +114,7 @@ fun CatalogueSearchScreen(
                         .background(MaterialTheme.colorScheme.primary, CircleShape)
                 )
                 Text(
-                    text = "BOOK CATALOGUE  •  66 METADATA ENTRIES",
+                    text = stringResource(R.string.books_title),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary,
                     fontWeight = FontWeight.Bold
@@ -129,9 +133,9 @@ fun CatalogueSearchScreen(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text("No book matches", style = MaterialTheme.typography.titleMedium)
+                    Text(stringResource(R.string.search_no_results), style = MaterialTheme.typography.titleMedium)
                     Text(
-                        "Try a book name such as Psalms, or a canonical code such as PSA.",
+                        stringResource(R.string.search_try),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -139,7 +143,7 @@ fun CatalogueSearchScreen(
             }
         } else {
             Text(
-                text = "${matchingBooks.size} book match${if (matchingBooks.size == 1) "" else "es"}",
+                text = stringResource(R.string.search_results_count, matchingBooks.size),
                 modifier = Modifier.widthIn(max = 760.dp).fillMaxWidth(),
                 style = MaterialTheme.typography.titleSmall
             )
@@ -153,7 +157,7 @@ fun CatalogueSearchScreen(
                 items(matchingBooks, key = { it.usfmId }) { book ->
                     Card(
                         onClick = { onSelectBook(book.usfmId) },
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth().testTag("catalogue_result_${book.usfmId}"),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
                     ) {
                         Row(
@@ -163,12 +167,12 @@ fun CatalogueSearchScreen(
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
                                 Text(book.englishName, style = MaterialTheme.typography.titleMedium)
                                 Text(
-                                    "CANONICAL ID  •  ${book.usfmId}",
+                                    "${stringResource(R.string.reader_canonical_book_id)}  •  ${book.usfmId}",
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
-                            Text("Open  →", color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge)
+                            Text(stringResource(R.string.action_open), color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge)
                         }
                     }
                 }
@@ -187,14 +191,14 @@ private fun SearchCapabilityCard() {
             modifier = Modifier.padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Text("SEARCH CAPABILITIES", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
+            Text(stringResource(R.string.search_capabilities), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
             Text("A clear path from book discovery to scripture search.", style = MaterialTheme.typography.titleMedium)
-            CapabilityLine("Available now", "Book-name and USFM-code lookup")
-            CapabilityLine("Preparing", "Keyword and exact-phrase search across verified scripture text")
-            CapabilityLine("Preparing", "Language-aware search and offline index")
+            CapabilityLine(stringResource(R.string.search_available), "Book-name and USFM-code lookup")
+            CapabilityLine(stringResource(R.string.search_in_development), "Keyword and exact-phrase search across verified scripture text")
+            CapabilityLine(stringResource(R.string.search_in_development), "Language-aware search and offline index")
             Surface(color = MaterialTheme.colorScheme.secondaryContainer, shape = MaterialTheme.shapes.medium) {
                 Text(
-                    "SCRIPTURE INDEX NOT YET AVAILABLE",
+                    stringResource(R.string.search_boundary),
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSecondaryContainer,

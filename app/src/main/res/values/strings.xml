@@ -104,4 +104,10 @@ pause. Read. Reflect.</string>
     <string name="language_amharic">Amharic</string>
     <string name="language_english">English</string>
     <string name="language_fallback_notice">Maale is the default. Labels without a reviewed Maale translation currently use English fallback text.</string>
+    <string name="search_eyebrow">Discover the Scriptures</string>
+    <string name="search_capabilities">Search capabilities</string>
+    <string name="search_available">Available</string>
+    <string name="search_in_development">In development</string>
+    <string name="action_open">Open</string>
+    <string name="reader_canonical_book_id">Canonical book ID</string>
 </resources>
