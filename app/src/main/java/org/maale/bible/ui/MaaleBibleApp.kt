@@ -15,7 +15,12 @@ import androidx.compose.ui.platform.LocalContext
 import org.maale.bible.data.repository.StudyDatabase
 
 private enum class AppDestination(val labelRes: Int) {
-    HOME(R.string.nav_home), BOOKS(R.string.nav_books), SEARCH(R.string.nav_search), STUDY(R.string.nav_study), SETTINGS(R.string.nav_settings)
+    HOME(R.string.nav_home),
+    BOOKS(R.string.nav_books),
+    SEARCH(R.string.nav_search),
+    LISTEN(R.string.nav_listen),
+    STUDY(R.string.nav_study),
+    SETTINGS(R.string.nav_settings)
 }
 
 @Composable
@@ -35,7 +40,7 @@ fun MaaleBibleApp() {
                         selected = current == item && selectedBookId == null,
                         onClick = { selectedBookId = null; destination = item.name },
                         icon = {},
-                        label = { Text(stringResource(item.labelRes)) }
+                        label = { Text(stringResource(item.labelRes), maxLines = 1) }
                     )
                 }
             }
@@ -54,6 +59,7 @@ fun MaaleBibleApp() {
                 AppDestination.HOME -> HomeScreen(onOpenBooks = { destination = AppDestination.BOOKS.name }, modifier = contentModifier)
                 AppDestination.BOOKS -> BooksScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.SEARCH -> CatalogueSearchScreen(onSelectBook = { selectedBookId = it }, modifier = contentModifier)
+                AppDestination.LISTEN -> AudioPlaceholderScreen(modifier = contentModifier)
                 AppDestination.STUDY -> StudyHubScreen(repository = studyRepository, onOpenBook = { selectedBookId = it }, modifier = contentModifier)
                 AppDestination.SETTINGS -> SettingsScreen(repository = studyRepository, modifier = contentModifier)
             }
