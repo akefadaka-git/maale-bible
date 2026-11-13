@@ -37,7 +37,7 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
     val highlightsCount = annotations.count { it.kind == AnnotationKind.HIGHLIGHT }
 
     LazyColumn(
-        modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 12.dp),
+        modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 12.dp).testTag("study_hub_list"),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         item {
@@ -86,7 +86,7 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
             )
             HorizontalDivider()
         }
-        item { Text(stringResource(R.string.study_annotations, annotations.size), style = MaterialTheme.typography.titleMedium) }
+        item { Text(stringResource(R.string.study_annotations, annotations.size), modifier = Modifier.testTag("study_annotations_count"), style = MaterialTheme.typography.titleMedium) }
         items(annotations, key = { "annotation-${it.id}" }) { annotation ->
             val name = CanonicalBookCatalog.find(annotation.bookId)?.englishName ?: annotation.bookId
             ListItem(
@@ -106,7 +106,7 @@ fun StudyHubScreen(repository: StudyRepository, onOpenBook: (String) -> Unit, mo
 private fun StudyWeekContextCard() {
     val today = LocalDate.now()
     val days = (6 downTo 0).map { today.minusDays(it.toLong()) }
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+    Card(modifier = Modifier.testTag("study_week_context"), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Text(stringResource(R.string.study_calendar_title), style = MaterialTheme.typography.titleMedium)
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -142,7 +142,7 @@ private fun StudyInsightsChart(bookmarks: Int, notes: Int, highlights: Int, plan
         Triple(stringResource(R.string.study_metric_plans), plans, MaterialTheme.colorScheme.error)
     )
     val maxValue = (metrics.maxOfOrNull { it.second } ?: 0).coerceAtLeast(1)
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+    Card(modifier = Modifier.testTag("study_insights_chart"), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
         Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text(stringResource(R.string.study_insights_title), style = MaterialTheme.typography.titleMedium)
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.Bottom) {
@@ -170,7 +170,7 @@ private fun StudyInsightsChart(bookmarks: Int, notes: Int, highlights: Int, plan
 
 @Composable
 private fun BiblePlacesPreviewCard() {
-    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+    Card(modifier = Modifier.testTag("study_places_preview"), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(14.dp), verticalAlignment = Alignment.CenterVertically) {
             MaaleBibleDecorativeMapSurface(Modifier.size(width = 112.dp, height = 92.dp))
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {

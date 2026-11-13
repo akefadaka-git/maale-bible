@@ -1,6 +1,10 @@
 package org.maale.bible
 
+import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -37,15 +41,45 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("Bookmarks (1)").assertExists()
         compose.onNodeWithText("More").performClick()
         compose.onNodeWithText("Study").performClick()
-        compose.onNodeWithTag("study_bookmarks_count").assertExists()
-        compose.onNodeWithText("Bookmarks (1)").assertExists()
-        compose.onNodeWithText("Genesis").assertExists()
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasText("Bookmarks (1)"))
+        compose.onNodeWithTag("study_bookmarks_count").assertIsDisplayed()
+        compose.onNodeWithText("Bookmarks (1)").assertIsDisplayed()
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasText("Genesis"))
+        compose.onNodeWithText("Genesis").assertIsDisplayed()
     }
 
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
         compose.onNodeWithText("Search").performClick()
         compose.onNodeWithTag("catalogue_search_input").performTextInput("Genesis")
         compose.onNodeWithTag("catalogue_result_GEN").assertExists()
+    }
+
+
+    @Test fun notificationMenuHasAccessibleActionAndHonestEmptyState() {
+        compose.onNodeWithTag("notifications_button").assertHasClickAction().performClick()
+        compose.onNodeWithText("You are all caught up. No new notifications.").assertIsDisplayed()
+    }
+
+    @Test fun profileMenuClearlyIdentifiesLocalGuestMode() {
+        compose.onNodeWithTag("profile_button").assertHasClickAction().performClick()
+        compose.onNodeWithText("Guest reader · local-only").assertIsDisplayed()
+        compose.onNodeWithText("Interface language").assertExists()
+    }
+
+    @Test fun studyDashboardRendersCalendarChartAndMapDisclosureAndScrolls() {
+        compose.onNodeWithText("More").performClick()
+        compose.onNodeWithText("Study").performClick()
+        compose.onNodeWithTag("study_week_context").assertIsDisplayed()
+        compose.onNodeWithTag("study_insights_chart").assertIsDisplayed()
+        compose.onNodeWithTag("study_places_preview").assertIsDisplayed()
+        compose.onNodeWithTag("study_hub_list").performScrollToNode(hasTestTag("study_annotations_count"))
+        compose.onNodeWithTag("study_annotations_count").assertIsDisplayed()
+    }
+
+    @Test fun compactNavigationIsVisibleAndInteractive() {
+        compose.onNodeWithTag("navigation_compact").assertIsDisplayed()
+        compose.onNodeWithText("Books").performClick()
+        compose.onNodeWithText("1. Genesis").assertIsDisplayed()
     }
 
     @Test fun settingsExposeAccessibilityAndPortableBackupControls() {

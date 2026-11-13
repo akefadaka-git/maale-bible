@@ -145,7 +145,7 @@ fun MaaleBibleApp() {
             },
             bottomBar = {
                 if (!expandedLayout) {
-                    NavigationBar {
+                    NavigationBar(modifier = Modifier.testTag("navigation_compact")) {
                         AppDestination.entries.forEach { item ->
                             NavigationBarItem(
                                 selected = current == item && selectedBookId == null,
@@ -160,7 +160,7 @@ fun MaaleBibleApp() {
         ) { padding ->
             Row(Modifier.fillMaxSize().padding(padding)) {
                 if (expandedLayout) {
-                    NavigationRail(containerColor = MaterialTheme.colorScheme.surface) {
+                    NavigationRail(modifier = Modifier.testTag("navigation_expanded"), containerColor = MaterialTheme.colorScheme.surface) {
                         Spacer(Modifier.height(8.dp))
                         AppDestination.entries.forEach { item ->
                             NavigationRailItem(
