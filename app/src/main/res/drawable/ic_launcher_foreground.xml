@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/maale_icon_gold"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54,15 L54,39" />
+    <path
+        android:fillColor="@color/maale_icon_gold"
+        android:pathData="M49,23 L54,15 L59,23 Z" />
+    <path
+        android:fillColor="@color/maale_icon_cream"
+        android:pathData="M18,43 C29,38 42,40 54,48 C66,40 79,38 90,43 L90,79 C77,74 65,77 54,85 C43,77 31,74 18,79 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/maale_icon_gold"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54,48 L54,85 M25,51 C35,49 43,52 48,56 M25,62 C35,60 43,63 48,67 M83,51 C73,49 65,52 60,56 M83,62 C73,60 65,63 60,67" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/maale_icon_gold"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M15,88 C28,82 41,84 54,92 C67,84 80,82 93,88" />
+</vector>
