@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Maale: missing translations are explicit English fallbacks; replace only with reviewed wording. -->
     <string name="app_name">ጌኤዦ ማፃኣፖ</string>
+    <string name="nav_home">ካራ</string>
+    <string name="nav_books">ማፃኣፖ</string>
+    <string name="nav_search">ኮዔ</string>
+    <string name="nav_bibles">ጌዔዦ ማፃኣፖ</string>
+    <string name="nav_listen">ዋይዜ</string>
+    <string name="nav_study">ፃናዔ</string>
     <string name="language_label">ሙኢቺ</string>
     <string name="language_maale">ማሌሦ</string>
     <string name="language_amharic">ዓማሬሦ</string>
     <string name="language_english">ፖራንጄሦ</string>
-    <string name="nav_bibles">ጌዔዦ ማፃኣፖ</string>
-    <!-- Owner-supplied Maale navigation wording; preserve spelling exactly. -->
-    <string name="nav_home">ካራ</string>
-    <string name="nav_books">ማፃኣፖ</string>
-    <string name="nav_search">ኮዔ</string>
-    <string name="nav_listen">ዋይዜ</string>
-    <string name="nav_study">ፃናዔ</string>
-    <!-- Owner-supplied Maale home and catalogue wording; preserve spelling exactly. -->
+    <string name="language_fallback_notice">ማኣሎ ሙኡጫ ጊኢጊንቲ ሃሣ ዛጊንቲባኣሢ ፖራንጄሦና ዻዊንታኔ።</string>
     <string name="home_make_it_yours">ኔሮ ማሄ</string>
     <string name="home_reading_journey">ኔ ናባባ ጎይፆ</string>
     <string name="home_explore">ቡሊ ዛጌ</string>
@@ -21,61 +21,73 @@
     <string name="home_browse_catalogue">ማፃኣፖ ዚርዝሮ ዛጌ</string>
     <string name="home_study_space">ናባቦ ቤሲ</string>
     <string name="home_study_description">ናባቢ ዔኬ ባኮና ማሊፆ ኔኤኮ ፃኣፖ ዓርቆ ቤሲ</string>
+    <string name="home_living_word_experience">ናንጊና ናንጋ ቃኣሎ ጎይፆ ናንጊ ዴንቆባኣዚ</string>
     <string name="home_the_living_word">ናንጋ ቃኣላ</string>
     <string name="home_pause_read_reflect">ዻካ ሳኣቴ ካፒንቴ! ናባቤ! ኮሺ ሂንዳ ማሌ!</string>
-    <!-- Owner-supplied Maale home wording; preserve spelling exactly. -->
     <string name="home_make_space">ዻካ ሳኣቴዪዳ ጌዔዦ ማፃኣፓፓ ፔቴ ዓይሢ ናባባኒ ጊዜ ዒንጌ!</string>
     <string name="home_explore_bible">ጌዔዦ ማፃኣፖ ቡሊ ዛጌ</string>
     <string name="home_daily_scripture">ሃና ኬሎ ቃኣላ</string>
     <string name="home_quiet_place">ሃና ኬሎ ቃኣሎም ዚቲ ጌዔ ቤሲ</string>
+    <string name="home_passage_pending">ጌኤዦ ማፃኣፖ ማኣሌ ሙኡቺና ጊኢጊንቴ ጫኣኒንቲ ጋፔስካፓ ሃኖ ቤዞይዳ ጴዻኔ።</string>
     <string name="home_content_not_loaded">ጌዔዦ ማፃኣፓ ቡሉንቲባኣሴ!</string>
     <string name="home_begin_journey">ጎይፆ ሃንታኒ ዓርቄ!</string>
+    <string name="home_choose_book">ናባባኒ ማፃኣፔ ዶኦሬ</string>
     <string name="home_start">ዓርቄ</string>
     <string name="books_title">ማኣሌሦ ማፃኣፔ</string>
     <string name="books_description">66 ጌኤዦ ማፃኣፖኮ ዚርዝሬ። ሃይካ ጌኤዦ ማፃኣፓ ጫኣኒንቲባኣሴ።</string>
     <string name="books_open_book">%1$s ቡሌ</string>
+    <string name="account_open">ኔና ዱማሶ ባኮ</string>
+    <string name="account_title">ኔኤና ዱማሳ ሱንሢ</string>
+    <string name="account_guest_first">ሾኦቺ ማዒ ናባባኒ ዳንዳኣኔ። ኔና ዱማሳ ሱንሢ ቡሊሢ ጊዴ ኮይሳያቱዋሴ።</string>
+    <string name="account_service_unavailable_title">ዱማሳ ሱንፃ ካኣሚባኣሴ</string>
+    <string name="account_service_unavailable_body">ኔኤኮ ናባቢሢና ዲጪሢ ዓኣቶ ሃይካ ጴዻኔ።</string>
+    <string name="account_login">ኔና ዱማሳ ባኮና ጌሌ</string>
+    <string name="account_register">ማዝጋቢንቴ</string>
+    <string name="account_identifier">ፃቃሚንታ ሱንሢ ሃንጎ ሲልኬ ቁፁሬ</string>
+    <string name="account_identifier_help">ሃኔ ማዢንቶይዳ ፒዙሞ ዔርዛ API ፒዜ ቤሲ ባኣሴ። ኔኤኮ ዱማሳ ሱንፆና ጌላኒና ዓኪ ዱማሳ ሱንሢ ቡላኒ ዳንዳዑዋሴ። ዱማሳ ሱንፃ ዳክንታኒ ሃንጎ ጌሢንታኒ ዳንዳዒባኣሴ።</string>
+    <string name="account_password">ዓኣቺንቴ ቃኣላ</string>
+    <string name="account_username">ፃቃሚንታ ሱንፆ</string>
+    <string name="account_mobile">ሲልኬ ቁፁሬ</string>
+    <string name="account_mobile_help">ኔኤኮ ፃቃሚንቶ ዱማሳ ሱንፆ ሃንጎ + ሚሊኪቴና ዎላ ዓጮ ዱማሳ ጉቤ ሲልኮ ቁፁሮ ፃኣፒ ጌልዜ።</string>
+    <string name="account_request_otp">ማዝሃቢንቶ ኮዴ ዳኮም ዖኦጬ</string>
+    <string name="account_otp">ፒዜ ማዒፆ ዔርዛ ኮዴ</string>
+    <string name="account_verify_register">ዳኪንቴ ኮዶ ጌልዚ ፒዚሲንካና ማዝጋቢንቴ</string>
+    <string name="account_otp_policy">ፔቴ ጊዜ ዳካንታ ኮዳ ማዝጋቢንታኔ ሌሊ ማኣዳኔ። ኔኤኮ ዱማሲ ጌላ ቤዞ ጌላኒ ዱማሳ ሱንፆ ሃንጎ ሲልኮ ቁፆሮና ሃሳ ዓኣሺንቴ ቃኣሎና ጌላኔ።</string>
+    <string name="account_continue_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
     <string name="search_eyebrow">ጌዔዦ ማፃኣፖ ዴንቂሢ።</string>
     <string name="search_title">ማሊሢና ኮዔ!</string>
     <string name="search_description">ጫኒንቴ ጌኤዦ ማፃኣፖ ጋራ ዒንቴርኔቴ ባያ ኮዔ፥ ሃንጎ ማፃኣፖ ሱንፆና ዱማሳ ሱንፆና ኮዒ ዴንቄ።</string>
     <string name="search_field_label">ጌኤዦ ማፃኣፖ ጋራ ኮዔ</string>
     <string name="search_field_hint">ኮዓኒ ማሌ ቃኣሎማ ሃንጎ ሱንፆ ጌሊዜ!</string>
-    <!-- Owner-supplied Maale search wording; preserve spelling and format placeholders exactly. -->
     <string name="action_clear">ዑጬ</string>
     <string name="search_books_heading">ማፃኣፔ %1$d</string>
     <string name="action_open">ቡሌ</string>
     <string name="search_no_results">ኔ ዖኦጬ ኮይፃ ጌኤዦ ማፃኣፖይዳ ፔቴታዖ ጴዺባኣሴ።</string>
     <string name="search_error">ኮይፃ ፔቴዳዖ ዴንቄ ባኣዚ ባኣሴ። ጫኣኒንቴ ማፃኣፖ ሂንዳ ማሂ ዛጌ።</string>
-    <!-- Owner-supplied Maale language and search-status wording; preserve spelling exactly. -->
-    <string name="language_fallback_notice">ማኣሎ ሙኡጫ ጊኢጊንቲ ሃሣ ዛጊንቲባኣሢ ፖራንጄሦና ዻዊንታኔ።</string>
     <string name="search_capabilities">ኮይፆኮ ዔራቶ</string>
     <string name="search_available">ዓኣኔ</string>
     <string name="search_waiting_download">ኬዳኒ ካፒሢዳ ዓኣኔ።</string>
     <string name="search_in_development">ሃጋ ኮሺንቲዳ ዓኣኔ።</string>
-    <!-- Owner-supplied Maale reader wording; preserve spelling exactly. -->
     <string name="reader_exit_focus">ዒኖና ማሊፆና ጌሢ ናባቢፆ ሃሼ</string>
     <string name="reader_title">ጌኤዦ ማፃኣፖ ናባባ ዓሲ</string>
     <string name="reader_collection">ጌኤዦ ማፃኣፖዪዳ ዓኣ ቡኪንቴ ማፃኣፔ</string>
     <string name="reader_canonical_book_id">ማፃኣፖ ዱማሳ ባኮ</string>
     <string name="reader_focus">ዒኖና ማሊፆና ጌሢሢ</string>
-    <!-- Owner-supplied Maale reader and library wording; preserve spelling exactly. -->
     <string name="reader_content_unavailable">ማኣሌ ሙኡቺና ጊኢጊንቴ ማፃኣፔ ሃኖ ማዢንቶዩዳ ባኣሴ</string>
     <string name="reader_content_not_loaded">ጫኒንቴ ባኣዚ ባኣሢሮ ጴዹዋሴ።</string>
     <string name="reader_chapter_navigation">ዓይሢ ኮዖያ</string>
     <string name="library_title">ጌኤዦ ማፃኣፖኮ ማፃኣፔ ማኣሪ</string>
     <string name="library_choose_editions">ሂቴሜቶ ዶኦሬ</string>
-    <!-- Owner-supplied Maale library wording; preserve spelling exactly. -->
     <string name="library_open_license_sources">ጉሪ ፒቃዴ ዓኣያ</string>
     <string name="library_review_before_install">ጫኣናንዳሢኮ ቤርታ ኮሺ ዛጌ</string>
     <string name="library_review_required">ኮሺ ዛጊሢ ኮይሳኔ</string>
     <string name="library_partial">ዛላኬ</string>
     <string name="library_open_source">ጉሪ ፒቃዴ</string>
-    <!-- Owner-supplied Maale library and listening wording; preserve spelling exactly. -->
     <string name="library_view_source_license">ጴዻ ቤዞና ዓኣ ፒቃዶና ኮሺ ዛጌ</string>
     <string name="library_download_package">ጫኣኒንታንዳጉዲ ኬይሴ</string>
     <string name="listen_heading">ቃኣሎ ዒና ጌሢ ዋይዜ. ማሌ ጶቂሤ. ቃኣሎ ባንሢ ማዔ!</string>
     <string name="listen_now_playing">ሃሢ ዋይዚንቲሢዳ ዓኣኔ</string>
     <string name="listen_audio_not_loaded">ዑኡሲ ጫኒንቲባኣሴ</string>
-    <!-- Owner-supplied Maale listening wording; preserve spelling exactly. -->
     <string name="listen_no_recording">ዋይዛኒ ዑኡሲ ዶኦሪንቲባኣሴ</string>
     <string name="listen_play_unavailable">ዑኡዞ ዓማሊሳኒ ዳንዳዒባኣሴ</string>
     <string name="listen_library">ዑኡዛ ቡኪንቴ ማኣሪ</string>
@@ -100,27 +112,74 @@
     <string name="study_delete">ባይዜ</string>
     <string name="study_refresh">ማሂ ዓካሴ</string>
     <string name="study_empty_notes">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
-    <string name="account_open">ኔና ዱማሶ ባኮ</string>
-    <string name="account_login">ኔና ዱማሳ ባኮና ጌሌ</string>
-    <string name="account_register">ማዝጋቢንቴ</string>
     <string name="account_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
-    <string name="account_username">ፃቃሚንታ ሱንፆ</string>
-    <string name="account_mobile">ሲልኬ ቁፁሬ</string>
-    <string name="account_password">ዓኣቺንቴ ቃኣላ</string>
     <string name="account_submit">ዴንዴ</string>
-    <string name="account_otp">ፒዜ ማዒፆ ዔርዛ ኮዴ</string>
-    <string name="account_title">ኔኤና ዱማሳ ሱንሢ</string>
-    <string name="account_guest_first">ሾኦቺ ማዒ ናባባኒ ዳንዳኣኔ። ኔና ዱማሳ ሱንሢ ቡሊሢ ጊዴ ኮይሳያቱዋሴ።</string>
-    <string name="account_service_unavailable_title">ዱማሳ ሱንፃ ካኣሚባኣሴ</string>
-    <string name="account_identifier">ፃቃሚንታ ሱንሢ ሃንጎ ሲልኬ ቁፁሬ</string>
-    <string name="account_continue_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
-    <string name="home_living_word_experience">ናንጊና ናንጋ ቃኣሎ ጎይፆ ናንጊ ዴንቆባኣዚ</string>
-    <string name="home_passage_pending">ጌኤዦ ማፃኣፖ ማኣሌ ሙኡቺና ጊኢጊንቴ ጫኣኒንቲ ጋፔስካፓ ሃኖ ቤዞይዳ ጴዻኔ።</string>
-    <string name="home_choose_book">ናባባኒ ማፃኣፔ ዶኦሬ</string>
-    <string name="account_service_unavailable_body">ኔኤኮ ናባቢሢና ዲጪሢ ዓኣቶ ሃይካ ጴዻኔ።</string>
-    <string name="account_identifier_help">ሃኔ ማዢንቶይዳ ፒዙሞ ዔርዛ API ፒዜ ቤሲ ባኣሴ። ኔኤኮ ዱማሳ ሱንፆና ጌላኒና ዓኪ ዱማሳ ሱንሢ ቡላኒ ዳንዳዑዋሴ። ዱማሳ ሱንፃ ዳክንታኒ ሃንጎ ጌሢንታኒ ዳንዳዒባኣሴ።</string>
-    <string name="account_mobile_help">ኔኤኮ ፃቃሚንቶ ዱማሳ ሱንፆ ሃንጎ + ሚሊኪቴና ዎላ ዓጮ ዱማሳ ጉቤ ሲልኮ ቁፁሮ ፃኣፒ ጌልዜ።</string>
-    <string name="account_request_otp">ማዝሃቢንቶ ኮዴ ዳኮም ዖኦጬ</string>
-    <string name="account_verify_register">ዳኪንቴ ኮዶ ጌልዚ ፒዚሲንካና ማዝጋቢንቴ</string>
-    <string name="account_otp_policy">ፔቴ ጊዜ ዳካንታ ኮዳ ማዝጋቢንታኔ ሌሊ ማኣዳኔ። ኔኤኮ ዱማሲ ጌላ ቤዞ ጌላኒ ዱማሳ ሱንፆ ሃንጎ ሲልኮ ቁፆሮና ሃሳ ዓኣሺንቴ ቃኣሎና ጌላኔ።</string>
+    <string name="search_loading_editions" translatable="false">Loading installed Bible editions…</string>
+    <string name="search_no_edition" translatable="false">No offline scripture edition is installed on this device.</string>
+    <string name="search_list_failed" translatable="false">Installed Bible editions could not be listed.</string>
+    <string name="search_verifying_edition" translatable="false">Verifying %1$s…</string>
+    <string name="search_selected_not_installed" translatable="false">Selected edition is not installed.</string>
+    <string name="search_indexed_passages" translatable="false">%1$s · %2$d indexed passages</string>
+    <string name="search_integrity_failed" translatable="false">The selected scripture package failed integrity verification.</string>
+    <string name="search_result_count" translatable="false">%1$d scripture results</string>
+    <string name="search_searching" translatable="false">Searching installed scripture…</string>
+    <string name="search_accessibility" translatable="false">Search installed Bible text, book names or canonical codes</string>
+    <string name="search_capability_description" translatable="false">Find words and phrases across installed Bible editions.</string>
+    <string name="search_book_lookup" translatable="false">Book-name and USFM-code lookup</string>
+    <string name="search_offline_full_text" translatable="false">Offline full-text search in installed scripture</string>
+    <string name="search_edition_filters" translatable="false">Edition filters and language-aware search</string>
+    <string name="reader_quiet_space" translatable="false">A quiet space for the Word</string>
+    <string name="reader_no_sample_notice" translatable="false">No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated.</string>
+    <string name="reader_navigation_waiting" translatable="false">Chapter and verse navigation is waiting for verified book structure.</string>
+    <string name="reader_navigation_locked" translatable="false">Navigation locked — source not integrated</string>
+    <string name="library_description" translatable="false">Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status.</string>
+    <string name="library_incomplete_notice" translatable="false">This edition is not a complete Bible release yet.</string>
+    <string name="library_install_blocked" translatable="false">Not enabled for in-app installation until editorial or rights review is complete.</string>
+    <string name="library_open_official_source" translatable="false">Open official source</string>
+    <string name="listen_title" translatable="false">A listening space.</string>
+    <string name="listen_description" translatable="false">A calm home for spoken Scripture, with listening and offline access designed around verified audio.</string>
+    <string name="listen_track_metadata" translatable="false">Track title, reader, language and duration will appear with the approved audio asset.</string>
+    <string name="listen_library_description" translatable="false">Your verified recordings will live here.</string>
+    <string name="listen_browse_description" translatable="false">Browse by book, chapter, language and narrator when authorized recordings and their metadata are available.</string>
+    <string name="listen_no_assets" translatable="false">No audio assets in this build</string>
+    <string name="listen_keep_audio" translatable="false">Keep approved audio close.</string>
+    <string name="listen_download_policy" translatable="false">Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.</string>
+    <string name="study_save_error" translatable="false">Your study notes could not be saved. Please try again.</string>
+    <string name="study_saving" translatable="false">Saving…</string>
+    <string name="study_save_reflection" translatable="false">Save reflection</string>
+    <string name="study_update_reflection" translatable="false">Update reflection</string>
+    <string name="study_cancel_edit" translatable="false">Cancel edit</string>
+    <string name="study_saved_reflections" translatable="false">Saved reflections</string>
+    <string name="study_loading_notes" translatable="false">Loading your notes from this device…</string>
+    <string name="study_saved_reflections_count" translatable="false">%1$d saved reflection(s)</string>
+    <string name="study_no_reflections" translatable="false">No reflections yet</string>
+    <string name="study_start_reflection" translatable="false">Start with a question, a personal insight or something you want to revisit.</string>
+    <string name="study_private_reflection" translatable="false">Private reflection</string>
+    <string name="study_updated" translatable="false">Updated %1$s</string>
+    <string name="study_saved_passages" translatable="false">Saved passages</string>
+    <string name="study_bookmarks_description" translatable="false">Bookmarks will connect to canonical book, chapter and verse identifiers after verified scripture structure is integrated.</string>
+    <string name="study_passage_references_unavailable" translatable="false">Passage references not available</string>
+    <string name="study_highlights_description" translatable="false">Highlight colours and annotations will be attached to verified passage ranges. No highlight can be created against an unverified reference.</string>
+    <string name="study_verified_passage_required" translatable="false">Verified passage data required</string>
+    <string name="study_collections_description" translatable="false">Organize bookmarks, notes and highlights into themes once durable passage-linked records are available.</string>
+    <string name="study_collection_storage_unavailable" translatable="false">Collection storage not connected</string>
+    <string name="study_not_connected" translatable="false">Not connected yet</string>
+    <string name="study_inactive_description" translatable="false">This area is intentionally inactive until verified passage identities and durable study operations are available.</string>
+    <string name="study_local_private" translatable="false">Local study • private on-device storage</string>
+    <string name="study_persistent_notes" translatable="false">Persistent study notes</string>
+    <string name="study_loading_device" translatable="false">Loading notes from your device.</string>
+    <string name="study_saving_device" translatable="false">Saving your changes securely on this device.</string>
+    <string name="study_local_persistence" translatable="false">Your journal notes are stored locally and remain available after you reopen the app.</string>
+    <string name="study_note_missing" translatable="false">This note no longer exists. Refresh the list and try again.</string>
+    <string name="nav_atlas" translatable="false">Atlas</string>
+    <string name="atlas_title" translatable="false">Bible Atlas</string>
+    <string name="atlas_subtitle" translatable="false">Explore the places, regions and journeys connected with Scripture.</string>
+    <string name="atlas_map_placeholder" translatable="false">ATLAS MAP</string>
+    <string name="atlas_source_pending" translatable="false">Verified geographic data and licensed map sources have not yet been integrated.</string>
+    <string name="atlas_locations_pending" translatable="false">Place names, coordinates, boundaries and routes will appear only after source verification.</string>
+    <string name="atlas_no_fabricated_data" translatable="false">No locations or routes are invented or displayed in this preview.</string>
+    <string name="atlas_map_legend" translatable="false">MAP DATA PENDING VERIFICATION</string>
+    <string name="study_comments" translatable="false">Inline comments</string>
+    <string name="study_comments_description" translatable="false">Attach contextual comments to selected verified scripture passages. Comment creation will remain locked until canonical passage identities and the authorized scripture text are integrated.</string>
+    <string name="study_comments_locked" translatable="false">VERIFIED PASSAGE REFERENCES REQUIRED</string>
 </resources>

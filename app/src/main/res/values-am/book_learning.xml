@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Amharic: explicit English fallback pending reviewed translation. -->
     <string name="learning_tab_overview">መግቢያ</string>
     <string name="learning_tab_inductive">ኢንዳክቲቭ ጥናት</string>
     <string name="learning_tab_quiz">ፈተና</string>
@@ -32,7 +33,6 @@
     <string name="learning_quiz_pending">በእንግሊዝኛና በአማርኛ የሚቀርቡ ፈተናዎች ባለብዙ ምርጫ፣ እውነት/ሐሰት፣ ክፍተት መሙላት፣ ማዛመድ፣ የምዕራፍ ግንዛቤና የመጽሐፍ አጠቃላይ ግምገማን ያካትታሉ። እያንዳንዱ መልስ ማብራሪያና የተረጋገጠ የቅዱስ መጽሐፍ ማጣቀሻ ይኖረዋል።</string>
     <string name="learning_quiz_unavailable">ፈተናው ገና አልተዘጋጀም</string>
     <string name="learning_provenance_notice">የይዘት መስፈርት፦ ቅዱስ ጽሑፍ፣ መግቢያዎች፣ የጥናት መመሪያዎችና የፈተና ጥያቄዎች የተለያዩ የይዘት ዓይነቶች ናቸው። እያንዳንዱ የራሱ ምንጭ፣ ፈቃድ ወይም ፈቃድ ማስረጃ፣ የምንጭ መጥቀስ፣ የቋንቋ ግምገማና ከእትሙ ጋር ተስማሚነት ይፈልጋል። ያልተረጋገጠ ይዘት እንደ ጸደቀ አይታይም።</string>
-
     <string name="learning_setting_title">ታሪካዊና ባህላዊ አውድ</string>
     <string name="learning_audience_title">የመጀመሪያ ተቀባዮችና ዓላማ</string>
     <string name="learning_key_people_title">ዋና ዋና ሰዎች</string>

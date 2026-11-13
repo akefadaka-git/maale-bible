@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Amharic: missing translations are explicit English fallbacks; replace only with reviewed wording. -->
     <string name="app_name">የማሌ መጽሐፍ ቅዱስ</string>
     <string name="nav_home">መነሻ</string>
     <string name="nav_books">መጻሕፍት</string>
@@ -12,7 +13,6 @@
     <string name="language_amharic">አማርኛ</string>
     <string name="language_english">እንግሊዝኛ</string>
     <string name="language_fallback_notice">የማሌ ትርጉም ያልተገመገመላቸው መለያዎች ለጊዜው በእንግሊዝኛ ይታያሉ።</string>
-
     <string name="home_make_it_yours">የእርስዎ ያድርጉት</string>
     <string name="home_reading_journey">የንባብ ጉዞዎ</string>
     <string name="home_explore">ያስሱ</string>
@@ -33,11 +33,9 @@
     <string name="home_begin_journey">ጉዞዎን ይጀምሩ</string>
     <string name="home_choose_book">ለመጀመር መጽሐፍ ይምረጡ። የንባብ እድገት ሲገኝ እዚህ ይታያል።</string>
     <string name="home_start">ጀምር</string>
-
     <string name="books_title">የማሌ መጽሐፍ ቅዱስ መጻሕፍት</string>
     <string name="books_description">ይፋዊው የ66 መጻሕፍት ዝርዝር። የቅዱስ መጽሐፍ ጽሑፍ በዚህ ስሪት ውስጥ አልተጫነም።</string>
     <string name="books_open_book">%1$s ክፈት</string>
-
     <string name="account_open">መለያ</string>
     <string name="account_title">የእርስዎ መለያ</string>
     <string name="account_guest_first">እንደ እንግዳ ሆነው ማንበብ ይችላሉ። መለያ መፍጠር ግዴታ አይደለም።</string>
@@ -116,4 +114,72 @@
     <string name="study_empty_notes">ማስታወሻዎችዎ እዚህ ይታያሉ።</string>
     <string name="account_guest">እንደ እንግዳ ሆነው ይቀጥሉ</string>
     <string name="account_submit">ቀጥል</string>
+    <string name="search_loading_editions" translatable="false">Loading installed Bible editions…</string>
+    <string name="search_no_edition" translatable="false">No offline scripture edition is installed on this device.</string>
+    <string name="search_list_failed" translatable="false">Installed Bible editions could not be listed.</string>
+    <string name="search_verifying_edition" translatable="false">Verifying %1$s…</string>
+    <string name="search_selected_not_installed" translatable="false">Selected edition is not installed.</string>
+    <string name="search_indexed_passages" translatable="false">%1$s · %2$d indexed passages</string>
+    <string name="search_integrity_failed" translatable="false">The selected scripture package failed integrity verification.</string>
+    <string name="search_result_count" translatable="false">%1$d scripture results</string>
+    <string name="search_searching" translatable="false">Searching installed scripture…</string>
+    <string name="search_accessibility" translatable="false">Search installed Bible text, book names or canonical codes</string>
+    <string name="search_capability_description" translatable="false">Find words and phrases across installed Bible editions.</string>
+    <string name="search_book_lookup" translatable="false">Book-name and USFM-code lookup</string>
+    <string name="search_offline_full_text" translatable="false">Offline full-text search in installed scripture</string>
+    <string name="search_edition_filters" translatable="false">Edition filters and language-aware search</string>
+    <string name="reader_quiet_space" translatable="false">A quiet space for the Word</string>
+    <string name="reader_no_sample_notice" translatable="false">No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated.</string>
+    <string name="reader_navigation_waiting" translatable="false">Chapter and verse navigation is waiting for verified book structure.</string>
+    <string name="reader_navigation_locked" translatable="false">Navigation locked — source not integrated</string>
+    <string name="library_description" translatable="false">Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status.</string>
+    <string name="library_incomplete_notice" translatable="false">This edition is not a complete Bible release yet.</string>
+    <string name="library_install_blocked" translatable="false">Not enabled for in-app installation until editorial or rights review is complete.</string>
+    <string name="library_open_official_source" translatable="false">Open official source</string>
+    <string name="listen_title" translatable="false">A listening space.</string>
+    <string name="listen_description" translatable="false">A calm home for spoken Scripture, with listening and offline access designed around verified audio.</string>
+    <string name="listen_track_metadata" translatable="false">Track title, reader, language and duration will appear with the approved audio asset.</string>
+    <string name="listen_library_description" translatable="false">Your verified recordings will live here.</string>
+    <string name="listen_browse_description" translatable="false">Browse by book, chapter, language and narrator when authorized recordings and their metadata are available.</string>
+    <string name="listen_no_assets" translatable="false">No audio assets in this build</string>
+    <string name="listen_keep_audio" translatable="false">Keep approved audio close.</string>
+    <string name="listen_download_policy" translatable="false">Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.</string>
+    <string name="study_save_error" translatable="false">Your study notes could not be saved. Please try again.</string>
+    <string name="study_saving" translatable="false">Saving…</string>
+    <string name="study_save_reflection" translatable="false">Save reflection</string>
+    <string name="study_update_reflection" translatable="false">Update reflection</string>
+    <string name="study_cancel_edit" translatable="false">Cancel edit</string>
+    <string name="study_saved_reflections" translatable="false">Saved reflections</string>
+    <string name="study_loading_notes" translatable="false">Loading your notes from this device…</string>
+    <string name="study_saved_reflections_count" translatable="false">%1$d saved reflection(s)</string>
+    <string name="study_no_reflections" translatable="false">No reflections yet</string>
+    <string name="study_start_reflection" translatable="false">Start with a question, a personal insight or something you want to revisit.</string>
+    <string name="study_private_reflection" translatable="false">Private reflection</string>
+    <string name="study_updated" translatable="false">Updated %1$s</string>
+    <string name="study_saved_passages" translatable="false">Saved passages</string>
+    <string name="study_bookmarks_description" translatable="false">Bookmarks will connect to canonical book, chapter and verse identifiers after verified scripture structure is integrated.</string>
+    <string name="study_passage_references_unavailable" translatable="false">Passage references not available</string>
+    <string name="study_highlights_description" translatable="false">Highlight colours and annotations will be attached to verified passage ranges. No highlight can be created against an unverified reference.</string>
+    <string name="study_verified_passage_required" translatable="false">Verified passage data required</string>
+    <string name="study_collections_description" translatable="false">Organize bookmarks, notes and highlights into themes once durable passage-linked records are available.</string>
+    <string name="study_collection_storage_unavailable" translatable="false">Collection storage not connected</string>
+    <string name="study_not_connected" translatable="false">Not connected yet</string>
+    <string name="study_inactive_description" translatable="false">This area is intentionally inactive until verified passage identities and durable study operations are available.</string>
+    <string name="study_local_private" translatable="false">Local study • private on-device storage</string>
+    <string name="study_persistent_notes" translatable="false">Persistent study notes</string>
+    <string name="study_loading_device" translatable="false">Loading notes from your device.</string>
+    <string name="study_saving_device" translatable="false">Saving your changes securely on this device.</string>
+    <string name="study_local_persistence" translatable="false">Your journal notes are stored locally and remain available after you reopen the app.</string>
+    <string name="study_note_missing" translatable="false">This note no longer exists. Refresh the list and try again.</string>
+    <string name="nav_atlas" translatable="false">Atlas</string>
+    <string name="atlas_title" translatable="false">Bible Atlas</string>
+    <string name="atlas_subtitle" translatable="false">Explore the places, regions and journeys connected with Scripture.</string>
+    <string name="atlas_map_placeholder" translatable="false">ATLAS MAP</string>
+    <string name="atlas_source_pending" translatable="false">Verified geographic data and licensed map sources have not yet been integrated.</string>
+    <string name="atlas_locations_pending" translatable="false">Place names, coordinates, boundaries and routes will appear only after source verification.</string>
+    <string name="atlas_no_fabricated_data" translatable="false">No locations or routes are invented or displayed in this preview.</string>
+    <string name="atlas_map_legend" translatable="false">MAP DATA PENDING VERIFICATION</string>
+    <string name="study_comments" translatable="false">Inline comments</string>
+    <string name="study_comments_description" translatable="false">Attach contextual comments to selected verified scripture passages. Comment creation will remain locked until canonical passage identities and the authorized scripture text are integrated.</string>
+    <string name="study_comments_locked" translatable="false">VERIFIED PASSAGE REFERENCES REQUIRED</string>
 </resources>

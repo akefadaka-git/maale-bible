@@ -158,7 +158,7 @@
 
 ## 9. Additional UI resources discovered during locale reconciliation
 
-These nine existing English/Amharic resources were not represented in the original translation worksheet. They are included here so the Maale intake register covers the complete current UI resource-key union. Until Maale wording is supplied, Android falls back to the English base resource.
+These nine existing English/Amharic resources were not represented in the original translation worksheet. They are included here so the Maale intake register covers the complete current UI resource-key union. Existing Maale wording is retained where supplied; missing locale values are now explicit English fallbacks marked translatable=false.
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
@@ -176,7 +176,7 @@ These nine existing English/Amharic resources were not represented in the origin
 
 ## 10. Additional feature resources pending translation
 
-The following 68 keys are present in the English Android resource file but are absent from both the Amharic and Maale resource files. Android therefore uses the English base string for both locales. The Amharic column below records this fallback state, not an Amharic translation. Maale wording is intentionally blank pending Owner/community input. Format placeholders such as %1$s and %2$d must be preserved exactly in any translation.
+The following 68 core keys previously lacked Amharic and Maale entries. They are now explicitly present in both locale XML files as English fallback resources marked translatable=false. The Amharic column below records fallback state, not an Amharic translation. Maale wording remains pending Owner/community input. Format placeholders such as %1$s and %2$d must be preserved exactly in any translation.
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
@@ -252,16 +252,16 @@ The following 68 keys are present in the English Android resource file but are a
 
 ## 11. Additional screen-resource inventory (complete locale audit)
 
-The initial 112/180 count covered only `strings.xml`. These three Android resource files also contain visible interface copy and must be included in the full locale audit. No Maale wording is supplied for these keys; do not fill them by machine translation or inference.
+The initial 112/180 count covered only `strings.xml`. These three Android resource files also contain visible interface copy. Missing locale values are now explicit base-English fallback strings marked `translatable=false`; do not mistake them for translations or replace them with machine-generated Maale wording.
 
-| Resource file | English keys | Amharic keys | Maale keys | Current Maale disposition |
-|---|---:|---:|---:|---|
-| `book_explorer.xml` | 33 | 0 | 0 | 33 English fallbacks |
-| `book_explorer_testaments.xml` | 4 | 4 | 0 | 4 English fallbacks |
-| `book_learning.xml` | 45 | 45 | 0 | 45 English fallbacks |
-| **Additional total** | **82** | **49** | **0** | **82 English fallbacks** |
+| Resource file | English keys | Amharic translations | Amharic fallbacks | Maale translations | Maale fallbacks |
+|---|---:|---:|---:|---:|---:|
+| `book_explorer.xml` | 33 | 0 | 33 | 0 | 33 |
+| `book_explorer_testaments.xml` | 4 | 4 | 0 | 0 | 4 |
+| `book_learning.xml` | 45 | 45 | 0 | 0 | 45 |
+| **Additional total** | **82** | **49** | **33** | **0** | **82** |
 
-**Additional pending Maale keys (82):**
+**Additional Maale keys still requiring approved wording (82; explicit English fallbacks are now installed):**
 
 - `book_explorer.xml`: `explorer_eyebrow`, `explorer_catalogue_count`, `explorer_catalogue_note`, `explorer_search_label`, `explorer_search_hint`, `explorer_all_categories`, `explorer_results_count`, `explorer_content_status`, `explorer_no_results`, `explorer_footer_notice`, `explorer_book_code`, `explorer_book_content_pending`, `explorer_category_law`, `explorer_category_law_desc`, `explorer_category_history`, `explorer_category_history_desc`, `explorer_category_wisdom`, `explorer_category_wisdom_desc`, `explorer_category_major_prophets`, `explorer_category_major_prophets_desc`, `explorer_category_minor_prophets`, `explorer_category_minor_prophets_desc`, `explorer_category_gospels`, `explorer_category_gospels_desc`, `explorer_category_acts`, `explorer_category_acts_desc`, `explorer_category_paul`, `explorer_category_paul_desc`, `explorer_category_general`, `explorer_category_general_desc`, `explorer_category_revelation`, `explorer_category_revelation_desc`, `explorer_open_atlas`
 - `book_explorer_testaments.xml`: `explorer_old_testament`, `explorer_new_testament`, `explorer_old_testament_desc`, `explorer_new_testament_desc`
@@ -269,13 +269,13 @@ The initial 112/180 count covered only `strings.xml`. These three Android resour
 
 ### Full resource inventory
 
-| Locale | Keys present | Keys absent from 263-key English reference |
-|---|---:|---:|
-| English base | 263 | 0 |
-| Amharic | 162 | 101 |
-| Maale | 113 | 150 |
+| Locale | Resource keys present | Existing locale wording | Explicit English fallbacks |
+|---|---:|---:|---:|
+| English base | 263 | 263 | 0 |
+| Amharic | 263 | 162 | 101 |
+| Maale | 263 | 113 | 150 |
 
-The 112 Owner-supplied Maale UI entries cover 112 of 262 non-app-title keys (42.7%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure applies only to core `strings.xml`. The 68 core string fallbacks and 82 additional screen-resource fallbacks are distinct sets, totaling 150 missing Maale entries. Amharic has 101 missing entries.
+The 112 Owner-supplied Maale UI entries cover 112 of 262 non-app-title keys (42.7%) across the full Android resource inventory. The earlier 112/180 (62.2%) figure applies only to core `strings.xml`. All 263 resource keys now exist in each locale resource set. Of these, 150 Maale entries and 101 Amharic entries are explicit English fallbacks marked `translatable=false`, not completed translations.
 
 ## How to send Maale wording
 
@@ -292,4 +292,4 @@ language_label = [Maale wording]
 
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
-**Current status:** 112 of 262 non-app-title Android UI keys have Owner-supplied Maale wording recorded (42.7% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 82 additional Explorer/Testament/Learning Centre keys lack Maale wording, for 150 Maale fallbacks overall. Amharic currently has 101 fallbacks across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+**Current status:** All 263 Android resource keys are now present in the English, Amharic and Maale resource directories. 112 of 262 non-app-title Android UI keys have Owner-supplied Maale wording recorded (42.7% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 82 additional Explorer/Testament/Learning Centre keys still lack Maale wording, for 150 explicit English fallback entries overall. Amharic currently has 101 explicit English fallback entries across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.

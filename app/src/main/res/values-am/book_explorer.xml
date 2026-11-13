@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Amharic: explicit English fallback pending reviewed translation. -->
+    <string name="explorer_eyebrow" translatable="false">EXPLORE BY CATEGORY</string>
+    <string name="explorer_catalogue_count" translatable="false">66 books · 10 collections</string>
+    <string name="explorer_catalogue_note" translatable="false">Browse the biblical library by section, title or canonical code.</string>
+    <string name="explorer_search_label" translatable="false">Find a book</string>
+    <string name="explorer_search_hint" translatable="false">Search Genesis, John, ROM…</string>
+    <string name="explorer_all_categories" translatable="false">All</string>
+    <string name="explorer_results_count" translatable="false">%1$d books found</string>
+    <string name="explorer_content_status" translatable="false">CATALOGUE · TEXT PENDING</string>
+    <string name="explorer_no_results" translatable="false">No books match this search. Try another title or code.</string>
+    <string name="explorer_footer_notice" translatable="false">Book names and canonical order are catalogue metadata. Verified Maale scripture text and localized book names will appear when the authorized edition content is integrated.</string>
+    <string name="explorer_book_code" translatable="false">%1$s · Book %2$d</string>
+    <string name="explorer_book_content_pending" translatable="false">Scripture text not installed in this build</string>
+    <string name="explorer_category_law" translatable="false">Law / Torah</string>
+    <string name="explorer_category_law_desc" translatable="false">The five books of Moses</string>
+    <string name="explorer_category_history" translatable="false">Historical books</string>
+    <string name="explorer_category_history_desc" translatable="false">Israel’s story and its people</string>
+    <string name="explorer_category_wisdom" translatable="false">Poetry &amp; wisdom</string>
+    <string name="explorer_category_wisdom_desc" translatable="false">Worship, wisdom and reflection</string>
+    <string name="explorer_category_major_prophets" translatable="false">Major prophets</string>
+    <string name="explorer_category_major_prophets_desc" translatable="false">Longer prophetic books</string>
+    <string name="explorer_category_minor_prophets" translatable="false">The Twelve</string>
+    <string name="explorer_category_minor_prophets_desc" translatable="false">The twelve shorter prophetic books</string>
+    <string name="explorer_category_gospels" translatable="false">The Gospels</string>
+    <string name="explorer_category_gospels_desc" translatable="false">The life and teaching of Jesus</string>
+    <string name="explorer_category_acts" translatable="false">Early Church</string>
+    <string name="explorer_category_acts_desc" translatable="false">The story of the first Christian communities</string>
+    <string name="explorer_category_paul" translatable="false">Paul’s letters</string>
+    <string name="explorer_category_paul_desc" translatable="false">Letters associated with Paul</string>
+    <string name="explorer_category_general" translatable="false">General letters</string>
+    <string name="explorer_category_general_desc" translatable="false">Letters to the wider Church</string>
+    <string name="explorer_category_revelation" translatable="false">Apocalyptic prophecy</string>
+    <string name="explorer_category_revelation_desc" translatable="false">The Revelation of John</string>
+    <string name="explorer_open_atlas" translatable="false">Explore the Bible Atlas</string>
+</resources>
