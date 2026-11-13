@@ -91,7 +91,9 @@ def parse_usfm(data,source):
             if marker in NOTE_MARKERS: in_note=not closing; continue
             if in_note: continue
             if closing:
-                if marker not in INLINE_MARKERS and marker not in ALTERNATE_LABEL_MARKERS:
+                if marker in ALTERNATE_LABEL_MARKERS:
+                    in_alternate_label = False
+                elif marker not in INLINE_MARKERS:
                     raise ImportErrorClosed(f"{source}:{line_no}: unexpected closing marker \\{marker}*")
                 continue
             if marker in BOOK_MARKERS:
