@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 
 /**
  * Audio and offline-listening UI foundation.
@@ -47,19 +48,19 @@ fun AudioPlaceholderScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(7.dp)
         ) {
             Text(
-                "LISTEN • REFLECT • RETURN",
+                stringResource(R.string.listen_eyebrow),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 fontWeight = FontWeight.Bold
             )
             Text(
-                "A listening space.",
+                stringResource(R.string.listen_title),
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onBackground,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                "A calm home for spoken Scripture, with listening and offline access designed around verified audio.",
+                stringResource(R.string.listen_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -100,7 +101,7 @@ private fun AudioPlayerCard() {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    "NOW LISTENING",
+                    stringResource(R.string.listen_now),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary,
                     fontWeight = FontWeight.Bold
@@ -111,7 +112,7 @@ private fun AudioPlayerCard() {
                     shape = MaterialTheme.shapes.small
                 ) {
                     Text(
-                        "AUDIO NOT LOADED",
+                        stringResource(R.string.listen_missing),
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -142,13 +143,13 @@ private fun AudioPlayerCard() {
 
             Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
                 Text(
-                    "No verified recording selected",
+                    stringResource(R.string.listen_no_track),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onSurface,
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    "Track title, reader, language and duration will appear with the approved audio asset.",
+                    stringResource(R.string.listen_track_desc),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -171,7 +172,7 @@ private fun AudioPlayerCard() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Button(onClick = {}, enabled = false) {
-                    Text("▶  Play unavailable")
+                    Text(stringResource(R.string.listen_play_unavailable))
                 }
             }
         }
@@ -190,19 +191,19 @@ private fun AudioLibraryCard() {
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                "AUDIO LIBRARY",
+                stringResource(R.string.listen_library),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 fontWeight = FontWeight.Bold
             )
-            Text("Your verified recordings will live here.", style = MaterialTheme.typography.titleMedium)
+            Text(stringResource(R.string.listen_library_title), style = MaterialTheme.typography.titleMedium)
             Text(
-                "Browse by book, chapter, language and narrator when authorized recordings and their metadata are available.",
+                stringResource(R.string.listen_library_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Text(
-                "LIBRARY EMPTY  •  NO AUDIO ASSETS IN THIS BUILD",
+                stringResource(R.string.listen_library_empty),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold
@@ -223,20 +224,20 @@ private fun OfflineListeningCard() {
             verticalArrangement = Arrangement.spacedBy(9.dp)
         ) {
             Text(
-                "OFFLINE LISTENING",
+                stringResource(R.string.listen_offline),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 fontWeight = FontWeight.Bold
             )
-            Text("Keep approved audio close.", style = MaterialTheme.typography.titleMedium)
+            Text(stringResource(R.string.listen_offline_title), style = MaterialTheme.typography.titleMedium)
             Text(
-                "Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.",
+                stringResource(R.string.listen_offline_desc),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Surface(color = MaterialTheme.colorScheme.secondaryContainer, shape = MaterialTheme.shapes.medium) {
                 Text(
-                    "DOWNLOADS NOT AVAILABLE",
+                    stringResource(R.string.listen_downloads_missing),
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSecondaryContainer,
