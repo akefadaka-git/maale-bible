@@ -97,6 +97,8 @@ def parse_usfm(data,source):
             if closing:
                 if marker in ALTERNATE_LABEL_MARKERS:
                     in_alternate_label = False
+                    if current_verse is not None: current_verse["text"] += payload
+                    elif current_heading is not None: current_heading["text"] += payload
                 elif marker in INLINE_MARKERS:
                     if current_verse is not None: current_verse["text"] += payload
                     elif current_heading is not None: current_heading["text"] += payload
