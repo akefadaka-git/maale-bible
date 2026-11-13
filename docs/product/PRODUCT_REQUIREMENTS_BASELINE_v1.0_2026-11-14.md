@@ -14,7 +14,7 @@
 
 By the Owner's explicit P0 instruction on 2026-11-14, this document establishes and freezes the complete product requirements baseline for the Maale Bible Android product, reconciles the later content-intake authority with older repository statements, and records prioritized acceptance criteria before implementation.
 
-This baseline is the product-level requirements authority for future A3 implementation planning. It supersedes the narrower initial A3 foundation-slice scope as the definition of the intended product. It does not erase the historical purpose or evidence of A1/A2 closure, nor does it turn existing placeholder screens into accepted product features.
+This baseline is the product-level requirements authority for future A3 implementation planning. The current content-intake authority is separately recorded in [Owner Content-Intake Authority Reconciliation](../licensing/OWNER_CONTENT_INTAKE_AUTHORITY_RECONCILIATION_2026-11-14.md). It supersedes the narrower initial A3 foundation-slice scope as the definition of the intended product. It does not erase the historical purpose or evidence of A1/A2 closure, nor does it turn existing placeholder screens into accepted product features.
 
 **Freeze rule:** requirements may be changed only through an explicit Owner-approved change record that identifies the requirement IDs, reason, impact, affected acceptance tests and revised baseline version. Implementation convenience, an existing placeholder, a passing CI run, or a third-party source does not silently change this baseline.
 
