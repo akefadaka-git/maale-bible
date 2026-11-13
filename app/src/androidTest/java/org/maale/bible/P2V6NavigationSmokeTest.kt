@@ -38,11 +38,12 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        // Genesis is the first canonical Old Testament result. Assert that the
-        // filtered result is composed and visible before clicking it; scrolling
-        // the parent LazyColumn to its own descendant can deadlock Espresso's
-        // idling bridge on API 30.
-        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
+        // Scroll the lazy item itself into the viewport. Scrolling the parent
+        // LazyColumn to a descendant previously stalled API 30's idling bridge.
+        composeRule.onNodeWithTag("book_card_GEN")
+            .performScrollTo()
+            .assertIsDisplayed()
+            .performClick()
         awaitText("Bible book learning centre")
     }
 
