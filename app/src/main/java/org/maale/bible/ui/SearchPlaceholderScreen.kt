@@ -46,6 +46,7 @@ fun CatalogueSearchScreen(
     onSelectBook: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val searchFieldDescription = stringResource(R.string.search_hint)
     var query by remember { mutableStateOf("") }
     val normalizedQuery = query.trim()
     val matchingBooks = remember(normalizedQuery) {
@@ -93,7 +94,7 @@ fun CatalogueSearchScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .testTag("catalogue_search_input")
-                    .semantics { contentDescription = stringResource(R.string.search_hint) },
+                    .semantics { contentDescription = searchFieldDescription },
                 singleLine = true,
                 label = { Text(stringResource(R.string.search_hint)) },
                 placeholder = { Text("e.g. Genesis or GEN") },
