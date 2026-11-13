@@ -28,7 +28,7 @@ fun SettingsScreen(repository: org.maale.bible.data.repository.StudyDatabase, mo
     var restoreKey by rememberSaveable { mutableStateOf("") }
     var status by remember { mutableStateOf<String?>(null) }
 
-    Column(modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(modifier.fillMaxSize().testTag("settings_screen").verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.nav_settings), style = MaterialTheme.typography.headlineSmall)
         Text(stringResource(R.string.settings_accessibility), modifier = Modifier.testTag("settings_accessibility_section"), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_accessibility_help))
