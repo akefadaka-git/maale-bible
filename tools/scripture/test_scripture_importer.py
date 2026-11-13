@@ -45,6 +45,8 @@ class PackageTests(unittest.TestCase):
             try:
                 row=db.execute("SELECT edition_id,book_id,chapter_number,verse_label,text FROM verses").fetchone()
                 self.assertEqual(row,("MDYTWF-2008-MAALE-FULL","GEN",1,"1","Fixture text"))
+                self.assertEqual(db.execute("PRAGMA user_version").fetchone()[0],1)
+                self.assertEqual(db.execute("PRAGMA application_id").fetchone()[0],1296192066)
                 self.assertEqual(db.execute("SELECT value FROM package_metadata WHERE key='release_eligible'").fetchone()[0],"false")
             finally: db.close()
             with self.assertRaises(ImportErrorClosed): create_database(path,{},books,verses,[])
