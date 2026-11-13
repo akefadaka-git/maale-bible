@@ -1,6 +1,6 @@
 package org.maale.bible
 
-import androidx.compose.ui.test.assertExists
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -17,7 +17,7 @@ class CoreStudyNavigationInstrumentedTest {
     @Test fun bookReaderBookmarkAndStudyHubFlowIsConnected() {
         compose.onNodeWithText("Books").performClick()
         compose.onNodeWithText("1. Genesis").performClick()
-        compose.onNodeWithText("Chapter 1 · Verse 1").assertExists()
+        compose.onNodeWithText("Chapter 1 · Verse 1").assertIsDisplayed()
         compose.onNodeWithText("Add bookmark").performClick()
         compose.onNodeWithText("Study").performClick()
         compose.onNodeWithText("Bookmarks (1)").assertExists()
