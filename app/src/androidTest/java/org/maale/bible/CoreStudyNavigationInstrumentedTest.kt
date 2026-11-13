@@ -25,7 +25,12 @@ class CoreStudyNavigationInstrumentedTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
 
     private fun waitForTag(tag: String) {
-        compose.waitUntil(5_000) { compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isNotEmpty() }
+        try {
+            compose.waitUntil(5_000) { compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isNotEmpty() }
+        } catch (failure: Throwable) {
+            compose.onRoot(useUnmergedTree = true).printToLog("NAV_DIAGNOSTIC_$tag")
+            throw failure
+        }
     }
 
     @Before fun selectEnglishForEnglishAssertions() {
