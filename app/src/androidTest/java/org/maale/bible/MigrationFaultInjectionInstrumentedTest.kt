@@ -4,6 +4,7 @@ import android.database.sqlite.SQLiteDatabase as PlainSQLiteDatabase
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.*
+import java.io.IOException
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.maale.bible.data.repository.StudyDatabase
@@ -55,7 +56,9 @@ class MigrationFaultInjectionInstrumentedTest {
                 assertEquals("wal", cursor.getString(0).lowercase())
             }
             StudyMigrationFaultInjection.failAt = "BEFORE_WAL_CHECKPOINT"
-            assertThrows(Exception::class.java) { StudyDatabase(context) }
+            val failure = assertThrows(IOException::class.java) { StudyDatabase(context) }
+            assertEquals("Injected migration interruption at BEFORE_WAL_CHECKPOINT", failure.message)
+            assertNull("WAL checkpoint failpoint must be consumed", StudyMigrationFaultInjection.failAt)
             assertTrue(file.exists())
             PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY).use { db ->
                 db.rawQuery("SELECT label FROM bookmarks WHERE id='fault-1'", null).use { cursor ->
@@ -75,7 +78,9 @@ class MigrationFaultInjectionInstrumentedTest {
         createLegacy(file)
         StudyMigrationFaultInjection.failAt = "AFTER_LEGACY_RENAME"
         try {
-            assertThrows(Exception::class.java) { StudyDatabase(context) }
+            val failure = assertThrows(IOException::class.java) { StudyDatabase(context) }
+            assertEquals("Injected migration interruption at AFTER_LEGACY_RENAME", failure.message)
+            assertNull("Legacy-rename failpoint must be consumed", StudyMigrationFaultInjection.failAt)
             val rollback = File(file.parentFile, "maale_bible_study.plaintext.rollback")
             val temp = File(file.parentFile, "maale_bible_study.enc.tmp")
             assertTrue("Legacy rollback must survive interrupted cutover", rollback.exists())
@@ -97,7 +102,9 @@ class MigrationFaultInjectionInstrumentedTest {
         createLegacy(file)
         StudyMigrationFaultInjection.failAt = "AFTER_ENCRYPTED_RENAME"
         try {
-            assertThrows(Exception::class.java) { StudyDatabase(context) }
+            val failure = assertThrows(IOException::class.java) { StudyDatabase(context) }
+            assertEquals("Injected migration interruption at AFTER_ENCRYPTED_RENAME", failure.message)
+            assertNull("Encrypted-rename failpoint must be consumed", StudyMigrationFaultInjection.failAt)
             assertTrue("Rollback must restore the plaintext source after a failed post-rename check", file.exists())
             val restored = PlainSQLiteDatabase.openDatabase(file.absolutePath, null, PlainSQLiteDatabase.OPEN_READONLY)
             try {
