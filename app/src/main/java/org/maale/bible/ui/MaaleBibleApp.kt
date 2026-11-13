@@ -1,4 +1,4 @@
-package org.maale.bible
+package org.maale.bible.ui
 
 import org.maale.bible.R
 import androidx.compose.foundation.layout.Arrangement
