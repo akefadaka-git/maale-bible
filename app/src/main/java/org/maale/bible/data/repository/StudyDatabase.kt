@@ -47,14 +47,17 @@ class StudyDatabase(context: Context) : SQLiteOpenHelper(
         if (!it.moveToFirst()) null else ReadingPosition(it.getString(0),it.getInt(1),it.getInt(2),it.getLong(3))
     }
 
-    override fun addBookmark(bookmark: Bookmark) { writableDatabase.insertOrThrow("bookmarks",null,bookmarkValues(bookmark)) }
+    override fun addBookmark(bookmark: Bookmark) {
+        writableDatabase.insertOrThrow("bookmarks", null, bookmarkValues(bookmark))
+    }
     override fun removeBookmark(id: String) { writableDatabase.delete("bookmarks","id=?",arrayOf(id)) }
     override fun getBookmarks(bookId: String?): List<Bookmark> {
         val rows=mutableListOf<Bookmark>()
         val sql=if(bookId==null) "SELECT id,book_id,chapter,verse,created_at,label FROM bookmarks ORDER BY created_at DESC" else "SELECT id,book_id,chapter,verse,created_at,label FROM bookmarks WHERE book_id=? ORDER BY created_at DESC"
         readableDatabase.rawQuery(sql,if(bookId==null)null else arrayOf(bookId)).use { c ->
             while(c.moveToNext()) rows += Bookmark(c.getString(0),c.getString(1),c.getInt(2),c.getInt(3),c.getLong(4),c.getString(5))
-        }; return rows
+        }
+        return rows
     }
     private fun bookmarkValues(b: Bookmark)=ContentValues().apply { put("id",b.id);put("book_id",b.bookId);put("chapter",b.chapter);put("verse",b.verse);put("created_at",b.createdAtEpochMs);put("label",b.label) }
 
