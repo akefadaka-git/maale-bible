@@ -6,11 +6,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,33 +22,27 @@ import org.maale.bible.data.catalog.CanonicalBookCatalog
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val book = CanonicalBookCatalog.find(bookId)
-    Column(
-        modifier.fillMaxSize().padding(22.dp),
-        verticalArrangement = Arrangement.spacedBy(18.dp)
-    ) {
-        Text("THE READER", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
+    val colors = MaterialTheme.colorScheme
+    Column(modifier.fillMaxSize().padding(22.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
+        Text("YOUR READING SPACE", style = MaterialTheme.typography.labelMedium,
+            color = colors.primary, fontWeight = FontWeight.Bold)
         Text(book?.englishName ?: bookId, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text("Maale Bible · ${book?.usfmId ?: bookId}", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(22.dp),
-            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-        ) {
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(20.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text("▤", style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.primary)
-                Text("Your reading space is being prepared", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
-                Text(
-                    "The approved Maale scripture source is not bundled in this build. This screen will display verified chapter text after the separately governed offline content integration is completed.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+        Text("MAALE BIBLE  ·  ${book?.usfmId ?: bookId}", style = MaterialTheme.typography.labelMedium,
+            color = colors.onSurfaceVariant)
+        Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(26.dp),
+            colors = CardDefaults.cardColors(containerColor = colors.surfaceVariant)) {
+            Column(Modifier.fillMaxWidth().padding(24.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Surface(shape = RoundedCornerShape(22.dp), color = colors.primaryContainer) {
+                    Text("▤", modifier = Modifier.padding(horizontal = 28.dp, vertical = 20.dp),
+                        style = MaterialTheme.typography.displaySmall, color = colors.onPrimaryContainer)
+                }
+                Text("A quiet place to reflect", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                Text("The approved Maale scripture source is not bundled in this build. Verified chapter text will appear here after the separately governed offline content integration is complete.",
+                    style = MaterialTheme.typography.bodyMedium, color = colors.onSurfaceVariant)
             }
         }
-        OutlinedButton(onClick = onBack, modifier = Modifier.fillMaxWidth()) {
+        OutlinedButton(onClick = onBack, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) {
             Text("Back to all books")
         }
     }
