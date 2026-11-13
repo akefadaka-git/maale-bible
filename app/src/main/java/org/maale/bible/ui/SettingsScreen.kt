@@ -2,6 +2,7 @@ package org.maale.bible.ui
 
 import org.maale.bible.R
 
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -10,6 +11,7 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -27,20 +29,23 @@ import org.maale.bible.data.repository.StudyDatabase
 fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    // Sensitive values are transient and never serialized into saved-instance state.
+
+    // Recovery material is deliberately transient: never use rememberSaveable or SavedStateHandle.
     var recoveryKey by remember { mutableStateOf("") }
-    var pendingExportKey by remember { mutableStateOf<String?>(null) }
     var restoreKey by remember { mutableStateOf("") }
+    // A SAF document URI is not secret and may survive configuration recreation.
+    var selectedRestoreUri by rememberSaveable { mutableStateOf<String?>(null) }
     var status by remember { mutableStateOf<String?>(null) }
 
     val createBackup = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("application/json")
     ) { uri ->
-        val key = pendingExportKey
-        pendingExportKey = null
-        if (uri == null || key == null) {
+        if (uri == null) {
             status = "Backup export cancelled."
         } else {
+            // Generate the key only after the picker returns. Nothing secret is held while
+            // the external document picker is in the foreground.
+            val key = PortableStudyBackup.generateRecoveryKey()
             scope.launch {
                 status = "Preparing encrypted backup…"
                 runCatching {
@@ -49,7 +54,7 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
                     }
                 }.onSuccess {
                     recoveryKey = key
-                    status = "Encrypted backup saved. Store the recovery key separately; it cannot be recovered if this screen is closed."
+                    status = "Encrypted backup saved. Store the recovery key separately; it is held only while this screen remains active."
                 }.onFailure {
                     recoveryKey = ""
                     status = "Backup failed: ${it.message ?: "unknown error"}"
@@ -62,23 +67,16 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         ActivityResultContracts.OpenDocument()
     ) { uri ->
         if (uri == null) {
+            selectedRestoreUri = null
             status = "Backup selection cancelled."
         } else {
-            val key = restoreKey
-            scope.launch {
-                status = "Validating and restoring backup…"
-                runCatching {
-                    require(key.isNotBlank()) { "Enter the recovery key before selecting a backup" }
-                    withContext(Dispatchers.IO) {
-                        PortableStudyBackup.restoreFromUri(context, uri, key)
-                    }
-                }.onSuccess {
-                    restoreKey = ""
-                    status = "Backup restored. Existing database data was not overwritten."
-                }.onFailure {
-                    status = "Restore rejected: ${it.message ?: "invalid backup"}"
-                }
+            runCatching {
+                context.contentResolver.takePersistableUriPermission(
+                    uri, android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
             }
+            selectedRestoreUri = uri.toString()
+            status = "Backup selected. Enter its recovery key, then choose Restore."
         }
     }
 
@@ -92,7 +90,7 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_backup_help))
         Button(onClick = {
-            pendingExportKey = PortableStudyBackup.generateRecoveryKey()
+            recoveryKey = ""
             createBackup.launch("maale-bible-study-backup.json")
         }, modifier = Modifier.semantics { contentDescription = "Create encrypted study backup in a user-selected file" }) {
             Text(stringResource(R.string.settings_create_backup))
@@ -104,19 +102,46 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         }
         HorizontalDivider()
         Text(stringResource(R.string.settings_restore), style = MaterialTheme.typography.titleMedium)
-        OutlinedTextField(
-            value = restoreKey,
-            onValueChange = { restoreKey = it },
-            label = { Text(stringResource(R.string.settings_recovery_key_hint)) },
-            modifier = Modifier.fillMaxWidth(),
-            singleLine = true
-        )
         Button(
             onClick = { openBackup.launch(arrayOf("application/json", "application/octet-stream")) },
-            enabled = restoreKey.isNotBlank(),
-            modifier = Modifier.semantics { contentDescription = "Select encrypted backup file and restore using recovery key" }
+            modifier = Modifier.semantics { contentDescription = "Select encrypted backup file" }
         ) {
-            Text(stringResource(R.string.settings_restore_button))
+            Text(if (selectedRestoreUri == null) "Choose backup file" else "Choose a different backup")
+        }
+        selectedRestoreUri?.let {
+            Text("Backup file selected. The recovery key is requested after file selection.")
+            OutlinedTextField(
+                value = restoreKey,
+                onValueChange = { restoreKey = it },
+                label = { Text(stringResource(R.string.settings_recovery_key_hint)) },
+                modifier = Modifier.fillMaxWidth().semantics { contentDescription = "Transient backup recovery key" },
+                singleLine = true
+            )
+            Button(
+                onClick = {
+                    val uri = Uri.parse(selectedRestoreUri)
+                    val key = restoreKey
+                    scope.launch {
+                        status = "Validating and restoring backup…"
+                        runCatching {
+                            require(key.isNotBlank()) { "Enter the recovery key" }
+                            withContext(Dispatchers.IO) {
+                                PortableStudyBackup.restoreFromUri(context, uri, key)
+                            }
+                        }.onSuccess {
+                            restoreKey = ""
+                            selectedRestoreUri = null
+                            status = "Backup restored. Existing database data was not overwritten."
+                        }.onFailure {
+                            status = "Restore rejected: ${it.message ?: "invalid backup"}"
+                        }
+                    }
+                },
+                enabled = restoreKey.isNotBlank(),
+                modifier = Modifier.semantics { contentDescription = "Restore selected encrypted backup" }
+            ) {
+                Text(stringResource(R.string.settings_restore_button))
+            }
         }
         status?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
         HorizontalDivider()
