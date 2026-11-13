@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 @Composable
-fun SearchPlaceholderScreen(
+fun CatalogueSearchScreen(
     onSelectBook: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
