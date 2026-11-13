@@ -1,12 +1,20 @@
 package org.maale.bible
 
 import android.net.Uri
+import android.view.KeyEvent
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.assertTextEquals
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Rule
 import org.junit.Assert.fail
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,10 +23,13 @@ import org.maale.bible.data.security.PortableStudyBackup
 import org.maale.bible.data.security.StudyDataKeyStore
 import org.maale.bible.domain.model.Bookmark
 import org.maale.bible.ui.PendingDocumentPickerState
+import androidx.lifecycle.ViewModelProvider
 import java.io.File
 
 @RunWith(AndroidJUnit4::class)
 class DocumentPickerEndToEndInstrumentedTest {
+    @get:Rule val compose = createAndroidComposeRule<MainActivity>()
+
     private val authority = "content://org.maale.bible.test.documents/documents/"
     private val instrumentation get() = InstrumentationRegistry.getInstrumentation()
     private val target get() = instrumentation.targetContext
@@ -66,6 +77,34 @@ class DocumentPickerEndToEndInstrumentedTest {
             cleanStudyStore()
             testContext.contentResolver.delete(uri, null, null)
         }
+    }
+
+
+    @Test fun createDocumentPickerCancellationReturnsToSettingsAndClearsPendingExportKey() {
+        compose.onNodeWithTag("navigation_more").performClick()
+        compose.onNodeWithTag("more_settings_tab").performClick()
+        compose.onNodeWithContentDescription("Create encrypted study backup in a user-selected file").performClick()
+        instrumentation.waitForIdleSync()
+        instrumentation.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK)
+        compose.waitForIdle()
+
+        compose.onNodeWithTag("backup_status").assertTextEquals("Backup export cancelled.")
+        val state = ViewModelProvider(compose.activity)[PendingDocumentPickerState::class.java]
+        assertNull(state.consumeExportKey())
+    }
+
+    @Test fun openDocumentPickerCancellationReturnsToSettingsAndConsumesPendingRestoreKey() {
+        compose.onNodeWithTag("navigation_more").performClick()
+        compose.onNodeWithTag("more_settings_tab").performClick()
+        compose.onNodeWithTag("restore_recovery_key_input").performTextInput("synthetic-recovery-key")
+        compose.onNodeWithContentDescription("Select encrypted backup file and restore using recovery key").performClick()
+        instrumentation.waitForIdleSync()
+        instrumentation.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK)
+        compose.waitForIdle()
+
+        compose.onNodeWithTag("backup_status").assertTextEquals("Backup selection cancelled.")
+        val state = ViewModelProvider(compose.activity)[PendingDocumentPickerState::class.java]
+        assertNull(state.consumeRestoreKey())
     }
 
     @Test fun cancellationConsumesPendingExportAndRestoreKeysWithoutPersistingThem() {
