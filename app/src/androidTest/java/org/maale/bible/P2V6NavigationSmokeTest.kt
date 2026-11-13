@@ -10,6 +10,8 @@ import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
@@ -33,17 +35,26 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("language_english").performClick()
     }
 
+    private fun revealGenesisCard() {
+        val list = composeRule.onNodeWithTag("books_list")
+        // LazyColumn exposes only composed items to the test semantics tree.
+        // Use real swipe gestures to bring the filtered result into view.
+        repeat(3) {
+            list.performTouchInput { swipeUp() }
+            composeRule.waitForIdle()
+        }
+        composeRule.waitUntil(5_000L) {
+            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
+        }
+        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
+    }
+
     private fun openGenesisLearningCentre() {
         awaitText("Explore the Bible")
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        // Scroll the lazy item itself into the viewport. Scrolling the parent
-        // LazyColumn to a descendant previously stalled API 30's idling bridge.
-        composeRule.onNodeWithTag("book_card_GEN")
-            .performScrollTo()
-            .assertIsDisplayed()
-            .performClick()
+        revealGenesisCard()
         awaitText("Bible book learning centre")
     }
 
@@ -149,7 +160,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ").performClick()
         awaitText("EXPLORE BY CATEGORY")
         composeRule.onNodeWithTag("books_search").performTextInput("GEN")
-        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
+        revealGenesisCard()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
         composeRule.onNodeWithText("ፈተና").performClick()
