@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">Home</string>
+    <string name="nav_books">Books</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_study">Study</string>
+    <string name="nav_settings">Settings</string>
+    <string name="home_tagline">Offline-first reading experience</string>
+    <string name="browse_books">Browse 66 books</string>
+    <string name="books_title">Books of the Maale Bible</string>
+    <string name="books_catalogue_notice">Official 66-book catalogue. Scripture content is not loaded in this build.</string>
+    <string name="search_title">Find a book</string>
+    <string name="search_hint">Book name or code</string>
+    <string name="search_support">Searches the 66-book catalogue stored on this device.</string>
+    <string name="search_clear">Clear</string>
+    <string name="search_no_results">No books match your search</string>
+    <string name="search_results_count">%1$d books found</string>
+    <string name="search_try">Try an English book name or a three-character USFM code.</string>
+    <string name="search_boundary">This search covers book names and catalogue codes only. Scripture search is unavailable until content intake is approved.</string>
+    <string name="settings_accessibility">Accessibility</string>
+    <string name="settings_accessibility_help">The interface respects Android system font size, display size, contrast and screen-reader settings. Adjust these under your device Settings → Accessibility.</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_help">The app supports English and Amharic navigation. Maale interface translations are still being prepared. Scripture language selection is not enabled.</string>
+    <string name="settings_backup">Portable encrypted study backup</string>
+    <string name="settings_backup_help">A recovery key encrypts the backup with Argon2id and AES-GCM. Keep the recovery key separately from the backup.</string>
+    <string name="settings_create_backup">Create encrypted backup</string>
+    <string name="settings_recovery_key">Recovery key — store this securely and separately</string>
+    <string name="settings_restore">Restore portable backup</string>
+    <string name="settings_recovery_key_hint">Recovery key</string>
+    <string name="settings_envelope_hint">Backup envelope JSON</string>
+    <string name="settings_restore_button">Restore backup</string>
+    <string name="settings_content">Content availability</string>
+    <string name="settings_content_help">The catalogue is available offline. Scripture text, full-text scripture search, audio and translations remain disabled until their source and rights gates are satisfied.</string>
+    <string name="reader_coordinates_notice">Scripture text is not available in this build. These are personal reading coordinates only; chapter and verse boundaries are not inferred.</string>
+    <string name="study_empty">Your study library is empty. Open a book to save a reading position, bookmark, highlight or note.</string>
+</resources>
