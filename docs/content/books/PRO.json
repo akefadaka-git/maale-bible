@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-pro-bilingual-v1",
+  "book": {
+    "usfm_id": "PRO",
+    "english_name": "Proverbs",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "pending",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-proverbs",
+      "title": "Proverbs",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/proverbs/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "esv-proverbs",
+      "title": "Introduction to Proverbs",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-proverbs/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "bibleproject-proverbs",
+      "title": "Proverbs",
+      "publisher": "BibleProject",
+      "url": "https://bibleproject.com/guides/book-of-proverbs/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Proverbs — book introduction",
+        "summary": "Proverbs gathers wisdom instruction about speech, work, relationships and justice. It names reverence for the LORD as the beginning of knowledge. Its sayings are general principles, not mechanical guarantees.",
+        "authorship": "The book names Solomon, the wise, Agur and Lemuel; its final form reflects multiple collections.",
+        "setting": "The material reflects family instruction, leadership and everyday life in ancient Israel.",
+        "audience_and_purpose": "Proverbs gathers wisdom instruction about speech, work, relationships and justice. It names reverence for the LORD as the beginning of knowledge. Its sayings are general principles, not mechanical guarantees.",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "Introduction and orientation",
+            "summary": "The book establishes its central questions and literary voice."
+          },
+          {
+            "range": "Main section",
+            "heading": "Exploration and instruction",
+            "summary": "Dialogues, prayers or sayings develop the central themes."
+          },
+          {
+            "range": "Closing",
+            "heading": "Conclusion and response",
+            "summary": "The closing material gathers the book’s challenge and invites faithful response."
+          }
+        ],
+        "themes": [
+          "Fear of the LORD",
+          "Justice and speech",
+          "Wisdom versus folly"
+        ],
+        "key_people": [
+          "Solomon",
+          "Agur",
+          "Lemuel",
+          "Personified Wisdom"
+        ],
+        "key_passages": [
+          "PRO 1:1-7",
+          "PRO 3:1-12",
+          "PRO 8:1-36",
+          "PRO 9:1-18",
+          "PRO 22:1-16",
+          "PRO 31:10-31"
+        ],
+        "interpretive_care": [
+          "Proverbs are general principles, not unconditional guarantees.",
+          "Read sayings in literary context and attend to justice."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "PRO-S01",
+          "range": "PRO 1:1–7",
+          "title": "The beginning of wisdom",
+          "observation": [
+            "Identify the learners and stated purpose."
+          ],
+          "interpretation": [
+            "Why is reverence for the LORD foundational to knowledge?"
+          ],
+          "application": [
+            "Choose one area where you can become teachable."
+          ]
+        },
+        {
+          "id": "PRO-S02",
+          "range": "PRO 3:1–12",
+          "title": "Trust and direction",
+          "observation": [
+            "List the commands and outcomes."
+          ],
+          "interpretation": [
+            "What does wholehearted trust mean here?"
+          ],
+          "application": [
+            "Bring one decision to God in prayer."
+          ]
+        },
+        {
+          "id": "PRO-S03",
+          "range": "PRO 8:1–36",
+          "title": "Wisdom calls publicly",
+          "observation": [
+            "Observe where Wisdom speaks."
+          ],
+          "interpretation": [
+            "How is wisdom related to creation and justice?"
+          ],
+          "application": [
+            "Make one wise choice visible in public life."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "PRO-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What is the beginning of knowledge?",
+          "options": [
+            "Fear of the LORD",
+            "Military strength",
+            "Wealth",
+            "Age"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Proverbs 1:7 identifies reverence for the LORD as foundational.",
+          "references": [
+            "PRO 1:7"
+          ]
+        },
+        {
+          "id": "PRO-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Every proverb is an unconditional guarantee for every situation.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Proverbs are general wisdom principles.",
+          "references": [
+            "PRO 10:1-5"
+          ]
+        },
+        {
+          "id": "PRO-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Where is Wisdom personified calling publicly?",
+          "options": [
+            "Proverbs 2",
+            "Proverbs 5",
+            "Proverbs 8",
+            "Proverbs 31"
+          ],
+          "correct_option_id": "C",
+          "explanation": "Proverbs 8 portrays Wisdom calling publicly.",
+          "references": [
+            "PRO 8:1-36"
+          ]
+        },
+        {
+          "id": "PRO-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "In whom should a person trust with all the heart?",
+          "options": [
+            "Personal wealth",
+            "The LORD",
+            "Public opinion",
+            "Military power"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Proverbs 3:5 calls for wholehearted trust.",
+          "references": [
+            "PRO 3:5-6"
+          ]
+        },
+        {
+          "id": "PRO-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Proverbs contains more than one collection of sayings.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The book identifies multiple collections.",
+          "references": [
+            "PRO 1:1",
+            "PRO 25:1"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "ምሳሌ — መግቢያ",
+        "summary": "ምሳሌ መጽሐፍ ስለ ንግግር፣ ሥራ፣ ግንኙነትና ፍትሕ የጥበብ ትምህርቶችን ይሰበስባል። የእግዚአብሔርን መፍራት የእውቀት መጀመሪያ ነው ይላል። ምሳሌዎቹ አጠቃላይ መርሆች ናቸው።",
+        "authorship": "መጽሐፉ ከሰሎሞን፣ ከጥበበኞች፣ ከአጉርና ከልሙኤል ጋር የተያያዙ ስብስቦችን ይጠቅሳል። የመጨረሻው ቅርጽ ብዙ ስብስቦችን ያካትታል።",
+        "setting": "ትምህርቶቹ የቤተሰብ ሕይወትን፣ የመሪነት ሥልጠናንና ዕለታዊ ውሳኔዎችን ያንጸባርቃሉ።",
+        "audience_and_purpose": "ምሳሌ መጽሐፍ ስለ ንግግር፣ ሥራ፣ ግንኙነትና ፍትሕ የጥበብ ትምህርቶችን ይሰበስባል። የእግዚአብሔርን መፍራት የእውቀት መጀመሪያ ነው ይላል። ምሳሌዎቹ አጠቃላይ መርሆች ናቸው።",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "መግቢያ",
+            "summary": "ለተማሪዎች የተሰጠ መመሪያና የጥበብ ጥሪ።"
+          },
+          {
+            "range": "Main section",
+            "heading": "የጥበብ ስብስቦች",
+            "summary": "ስለ ንግግር፣ ሥራና ግንኙነት አጫጭር አባባሎች።"
+          },
+          {
+            "range": "Closing",
+            "heading": "ሌሎች የጥበብ ትምህርቶች",
+            "summary": "የተለያዩ የጥበብ ስብስቦችና ምሳሌዎች።"
+          }
+        ],
+        "themes": [
+          "የእግዚአብሔር ፍርሃት",
+          "ፍትሕና ትክክለኛ ንግግር",
+          "ጥበብና ሞኝነት"
+        ],
+        "key_people": [
+          "ሰሎሞን",
+          "አጉር",
+          "ልሙኤል",
+          "ጥበብ"
+        ],
+        "key_passages": [
+          "PRO 1:1-7",
+          "PRO 3:1-12",
+          "PRO 8:1-36",
+          "PRO 9:1-18",
+          "PRO 22:1-16",
+          "PRO 31:10-31"
+        ],
+        "interpretive_care": [
+          "ምሳሌዎች አጠቃላይ የጥበብ መርሆች ናቸው፤ ሁሉን የሚያረጋግጡ ዋስትናዎች አይደሉም።",
+          "አባባሎችን በአውዳቸው አንብቡ፤ ፍትሕንም አስቡ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "PRO-S01",
+          "range": "PRO 1:1–7",
+          "title": "The beginning of wisdom",
+          "observation": [
+            "የመጽሐፉን ዓላማና ተማሪዎቹን ለዩ።"
+          ],
+          "interpretation": [
+            "እግዚአብሔርን መፍራት ለምን የእውቀት መጀመሪያ ነው?"
+          ],
+          "application": [
+            "ትምህርት ለመቀበል ዝግጁ የምትሆኑበትን አንድ ዘርፍ ምረጡ።"
+          ]
+        },
+        {
+          "id": "PRO-S02",
+          "range": "PRO 3:1–12",
+          "title": "Trust and direction",
+          "observation": [
+            "ትእዛዞቹንና ውጤቶቹን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "በሙሉ ልብ መታመን ምን ማለት ነው?"
+          ],
+          "application": [
+            "አንድ ውሳኔ በጸሎት አቅርቡ።"
+          ]
+        },
+        {
+          "id": "PRO-S03",
+          "range": "PRO 8:1–36",
+          "title": "Wisdom calls publicly",
+          "observation": [
+            "ጥበብ የምትናገርባቸውን ቦታዎች ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ጥበብ ከፍጥረትና ከፍትሕ ጋር እንዴት ተያይዛለች?"
+          ],
+          "application": [
+            "በሕዝብ ሕይወት ጥበብን በተግባር አሳዩ።"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "PRO-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የእውቀት መጀመሪያ ምንድን ነው?",
+          "options": [
+            "እግዚአብሔርን መፍራት",
+            "የጦር ኃይል",
+            "ሀብት",
+            "ዕድሜ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ምሳሌ 1:7 ይህን ያስተምራል።",
+          "references": [
+            "PRO 1:7"
+          ]
+        },
+        {
+          "id": "PRO-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "እያንዳንዱ ምሳሌ በሁሉም ሁኔታ የማይቀር ዋስትና ነው።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ምሳሌዎች አጠቃላይ የጥበብ መርሆች ናቸው።",
+          "references": [
+            "PRO 10:1-5"
+          ]
+        },
+        {
+          "id": "PRO-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ጥበብ በግልጽ የምትጠራው በየትኛው ምዕራፍ ነው?",
+          "options": [
+            "ምሳሌ 2",
+            "ምሳሌ 5",
+            "ምሳሌ 8",
+            "ምሳሌ 31"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ምሳሌ 8 ጥበብን በሕዝብ ፊት ያቀርባል።",
+          "references": [
+            "PRO 8:1-36"
+          ]
+        },
+        {
+          "id": "PRO-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ሰው በሙሉ ልቡ በማን መታመን አለበት?",
+          "options": [
+            "በሀብት",
+            "በእግዚአብሔር",
+            "በሕዝብ አስተያየት",
+            "በጦር ኃይል"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ምሳሌ 3:5 በእግዚአብሔር መታመንን ያስተምራል።",
+          "references": [
+            "PRO 3:5-6"
+          ]
+        },
+        {
+          "id": "PRO-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ምሳሌ መጽሐፍ ከአንድ በላይ ስብስቦችን ይዟል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "A",
+          "explanation": "መጽሐፉ ብዙ ስብስቦችን ይጠቅሳል።",
+          "references": [
+            "PRO 1:1",
+            "PRO 25:1"
+          ]
+        }
+      ]
+    }
+  }
+}
