@@ -189,7 +189,8 @@
           "explanation": "Solomon builds the temple after David’s preparations.",
           "references": [
             "1KI 5:1-9:9"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q02",
@@ -201,7 +202,8 @@
           "explanation": "The division is narrated after Solomon’s death and Rehoboam’s accession.",
           "references": [
             "1KI 12:1-24"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q03",
@@ -218,7 +220,8 @@
           "explanation": "Elijah challenges the prophets of Baal in 1 Kings 18.",
           "references": [
             "1KI 18:20-40"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q04",
@@ -235,7 +238,8 @@
           "explanation": "Solomon asks for an understanding heart to govern the people.",
           "references": [
             "1KI 3:3-15"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q05",
@@ -247,7 +251,8 @@
           "explanation": "The book repeatedly criticizes the northern kings for covenant disloyalty and rival worship.",
           "references": [
             "1KI 15:25-16:34"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -392,7 +397,9 @@
           "correct_option_id": "A",
           "references": [
             "1KI 5:1-9:9"
-          ]
+          ],
+          "explanation": "Solomon builds the temple after David’s preparations.",
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q02",
@@ -404,7 +411,8 @@
           "explanation": "ከሰሎሞን ሞትና ከሮብዓም መንገሥ በኋላ መከፋፈሉ ይተረካል።",
           "references": [
             "1KI 12:1-24"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "1KI-Q03",
@@ -420,7 +428,9 @@
           "correct_option_id": "A",
           "references": [
             "1KI 18:20-40"
-          ]
+          ],
+          "explanation": "Elijah challenges the prophets of Baal in 1 Kings 18.",
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q04",
@@ -436,7 +446,9 @@
           "correct_option_id": "A",
           "references": [
             "1KI 3:3-15"
-          ]
+          ],
+          "explanation": "Solomon asks for an understanding heart to govern the people.",
+          "explanation_locale": "en"
         },
         {
           "id": "1KI-Q05",
@@ -448,7 +460,8 @@
           "explanation": "መጽሐፉ የሰሜኑን ነገሥታት በቃል ኪዳን አለመታመንና በተቃራኒ አምልኮ በተደጋጋሚ ይተቻል።",
           "references": [
             "1KI 15:25-16:34"
-          ]
+          ],
+          "explanation_locale": "am"
         }
       ]
     }
