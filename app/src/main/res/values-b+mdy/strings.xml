@@ -220,4 +220,13 @@
 <string name="study_places_title" translatable="false">Biblical geography</string>
 <string name="study_places_body" translatable="false">A map preview only. Verified place records and offline map layers are not yet included.</string>
 <string name="study_places_status" translatable="false">MAP DATA NOT LOADED</string>
+    <string name="reader_scripture_chapter_title" translatable="false">Chapter %1$d</string>
+    <string name="reader_scripture_not_installed_title" translatable="false">Maale Bible text is not installed</string>
+    <string name="reader_scripture_not_installed_body" translatable="false">The verified 2008 Maale Full Bible package must be privately installed before chapter text can be displayed. This app does not contain an unverified or substituted scripture text.</string>
+    <string name="reader_scripture_preview_title" translatable="false">Candidate scripture package — debug preview only</string>
+    <string name="reader_scripture_preview_body" translatable="false">This edition package is not marked release-eligible. It can be inspected only in a debug build after private installation.</string>
+    <string name="reader_scripture_chapter_missing_title" translatable="false">Chapter not available</string>
+    <string name="reader_scripture_chapter_missing_body" translatable="false">This chapter is not present in the installed edition package.</string>
+    <string name="reader_scripture_invalid_title" translatable="false">Scripture package could not be verified</string>
+    <string name="reader_scripture_invalid_body" translatable="false">The installed package does not match the expected Maale Bible edition and schema. No text was displayed.</string>
 </resources>
