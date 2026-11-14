@@ -2,6 +2,7 @@ package org.maale.bible.ui
 
 import org.maale.bible.R
 
+import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -20,6 +21,8 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStoreOwner
 
 import org.maale.bible.data.security.PortableStudyBackup
 import org.maale.bible.data.repository.StudyDatabase
@@ -28,19 +31,26 @@ import org.maale.bible.data.repository.StudyDatabase
 fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    // Sensitive values are transient and never serialized into saved-instance state.
+    val registryOwner = LocalActivityResultRegistryOwner.current
+    val pickerState = remember(registryOwner) {
+        val storeOwner = registryOwner as? ViewModelStoreOwner
+            ?: error("Activity Result registry owner must also own a ViewModelStore")
+        ViewModelProvider(storeOwner)[PendingDocumentPickerState::class.java]
+    }
+    // Recovery keys are held only in memory: the ViewModel survives configuration
+    // recreation but does not serialize these secrets into saved-instance state.
     var recoveryKey by remember { mutableStateOf("") }
-    var pendingExportKey by remember { mutableStateOf<String?>(null) }
     var restoreKey by remember { mutableStateOf("") }
     var status by remember { mutableStateOf<String?>(null) }
 
     val createBackup = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("application/json")
     ) { uri ->
-        val key = pendingExportKey
-        pendingExportKey = null
-        if (uri == null || key == null) {
+        val key = pickerState.consumeExportKey()
+        if (uri == null) {
             status = "Backup export cancelled."
+        } else if (key == null) {
+            status = "Backup export could not resume because its recovery key is unavailable. Start a new backup."
         } else {
             scope.launch {
                 status = "Preparing encrypted backup…"
@@ -62,10 +72,12 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
     val openBackup = rememberLauncherForActivityResult(
         ActivityResultContracts.OpenDocument()
     ) { uri ->
+        val key = pickerState.consumeRestoreKey()
         if (uri == null) {
             status = "Backup selection cancelled."
+        } else if (key.isNullOrBlank()) {
+            status = "Restore could not resume because the recovery key is unavailable. Re-enter the key and select the backup again."
         } else {
-            val key = restoreKey
             scope.launch {
                 status = "Validating and restoring backup…"
                 runCatching {
@@ -93,8 +105,13 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
         Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_backup_help))
         Button(onClick = {
-            pendingExportKey = PortableStudyBackup.generateRecoveryKey()
-            createBackup.launch("maale-bible-study-backup.json")
+            val key = PortableStudyBackup.generateRecoveryKey()
+            pickerState.storeExportKey(key)
+            runCatching { createBackup.launch("maale-bible-study-backup.json") }
+                .onFailure {
+                    pickerState.clearExportKey()
+                    status = "Backup picker could not be opened: ${it.message ?: "unknown error"}"
+                }
         }, modifier = Modifier.semantics { contentDescription = "Create encrypted study backup in a user-selected file" }) {
             Text(stringResource(R.string.settings_create_backup))
         }
@@ -109,17 +126,24 @@ fun SettingsScreen(repository: StudyDatabase, modifier: Modifier = Modifier) {
             value = restoreKey,
             onValueChange = { restoreKey = it },
             label = { Text(stringResource(R.string.settings_recovery_key_hint)) },
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().testTag("restore_recovery_key_input"),
             singleLine = true
         )
         Button(
-            onClick = { openBackup.launch(arrayOf("application/json", "application/octet-stream")) },
+            onClick = {
+                pickerState.storeRestoreKey(restoreKey)
+                runCatching { openBackup.launch(arrayOf("application/json", "application/octet-stream")) }
+                    .onFailure {
+                        pickerState.clearRestoreKey()
+                        status = "Backup picker could not be opened: ${it.message ?: "unknown error"}"
+                    }
+            },
             enabled = restoreKey.isNotBlank(),
             modifier = Modifier.semantics { contentDescription = "Select encrypted backup file and restore using recovery key" }
         ) {
             Text(stringResource(R.string.settings_restore_button))
         }
-        status?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+        status?.let { Text(it, modifier = Modifier.testTag("backup_status"), style = MaterialTheme.typography.bodySmall) }
         HorizontalDivider()
         Text(stringResource(R.string.settings_content), style = MaterialTheme.typography.titleMedium)
         Text(stringResource(R.string.settings_content_help))
