@@ -229,4 +229,15 @@
     <string name="reader_scripture_chapter_missing_body" translatable="false">This chapter is not present in the installed edition package.</string>
     <string name="reader_scripture_invalid_title" translatable="false">Scripture package could not be verified</string>
     <string name="reader_scripture_invalid_body" translatable="false">The installed package does not match the expected Maale Bible edition and schema. No text was displayed.</string>
+    <string name="reader_coordinates_notice" translatable="false">Your reading position is saved on this device. Chapter text appears when the verified edition package is installed.</string>
+    <string name="reader_back_to_books" translatable="false">Books</string>
+    <string name="reader_position_coordinates" translatable="false">Chapter %1$d · Verse %2$d</string>
+    <string name="reader_bookmark_coordinates" translatable="false">Chapter %1$d, verse %2$d</string>
+    <string name="reader_annotation_coordinates" translatable="false">%1$s · %2$d:%3$d — %4$s</string>
+    <string name="reader_annotation_note_kind" translatable="false">Note</string>
+    <string name="reader_annotation_highlight_kind" translatable="false">Highlight</string>
+    <string name="reader_plan_progress" translatable="false">%1$s: %2$d/%3$d days · %4$d%%</string>
+    <string name="reader_no_day_due" translatable="false">No day due today</string>
+    <string name="reader_complete_day" translatable="false">Complete day %1$d</string>
+    <string name="reader_private_notice" translatable="false">Your study data is stored locally in the encrypted study database.</string>
 </resources>
