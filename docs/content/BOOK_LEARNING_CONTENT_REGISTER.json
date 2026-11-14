@@ -4300,9 +4300,9 @@
   ],
   "implementation_snapshot": {
     "snapshot_date": "2026-11-14",
-    "books_with_draft_introduction_inductive_study_and_quiz": 0,
-    "books_with_chapter_guides_started": 66,
-    "books_not_started": 0,
+    "books_with_draft_introduction_inductive_study_and_quiz": 21,
+    "books_with_chapter_guides_started": 0,
+    "books_not_started": 45,
     "release_approved_books": 0,
     "scripture_text_included": false,
     "draft_preview_policy": "DEBUG_BUILDS_ONLY",
