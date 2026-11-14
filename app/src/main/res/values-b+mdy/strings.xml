@@ -220,4 +220,13 @@
 <string name="study_places_title" translatable="false">Biblical geography</string>
 <string name="study_places_body" translatable="false">A map preview only. Verified place records and offline map layers are not yet included.</string>
 <string name="study_places_status" translatable="false">MAP DATA NOT LOADED</string>
+    <string name="reader_chapter_title" translatable="false">Chapter %1$d</string>
+    <string name="reader_import_package" translatable="false">Import scripture package</string>
+    <string name="reader_package_importing" translatable="false">Validating and installing…</string>
+    <string name="reader_package_imported" translatable="false">Internal review package installed. Scripture is available offline in this debug build.</string>
+    <string name="reader_package_import_failed" translatable="false">Package rejected. No scripture content was installed.</string>
+    <string name="reader_package_preview_warning" translatable="false">Internal review package only. It is unsigned and not approved for release.</string>
+    <string name="reader_package_attribution" translatable="false">Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.</string>
+    <string name="reader_package_license" translatable="false">License: CC BY-SA 4.0</string>
+    <string name="reader_chapter_content_missing" translatable="false">This chapter is not present in the installed package.</string>
 </resources>
