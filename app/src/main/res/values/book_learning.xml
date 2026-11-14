@@ -47,4 +47,5 @@
     <string name="learning_answer_incorrect">Not quite — review the explanation</string>
     <string name="learning_answer_references">References: %1$s</string>
     <string name="learning_explanation_fallback">Explanation language: English (Amharic review pending).</string>
+    <string name="learning_unknown_book">Unknown book</string>
 </resources>
