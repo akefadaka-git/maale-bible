@@ -13,6 +13,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 @Composable
-fun SearchPlaceholderScreen(
+fun CatalogueSearchScreen(
     onSelectBook: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -38,12 +39,13 @@ fun SearchPlaceholderScreen(
             .padding(horizontal = 16.dp, vertical = 20.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Search the catalogue", style = MaterialTheme.typography.headlineSmall)
+        Text("Find a book", style = MaterialTheme.typography.headlineSmall)
         OutlinedTextField(
             value = query,
             onValueChange = { query = it },
             modifier = Modifier.fillMaxWidth(),
             label = { Text("Book name or code") },
+            trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text("Clear") } },
             singleLine = true,
             supportingText = { Text("Searches the 66-book catalogue stored on this device.") }
         )
