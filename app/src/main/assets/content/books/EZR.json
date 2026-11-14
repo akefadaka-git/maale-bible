@@ -172,7 +172,8 @@
           "explanation": "Ezra opens with Cyrus’s decree allowing the exiles to return.",
           "references": [
             "EZR 1:1-4"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EZR-Q02",
@@ -184,7 +185,8 @@
           "explanation": "The narrative records opposition and a later resumption and completion of the work.",
           "references": [
             "EZR 4:1-24; 6:13-22"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EZR-Q03",
@@ -201,7 +203,8 @@
           "explanation": "Ezra leads the later return and teaching mission.",
           "references": [
             "EZR 7:1-10"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EZR-Q04",
@@ -218,7 +221,8 @@
           "explanation": "The book contains Hebrew narrative and Aramaic documents.",
           "references": [
             "EZR 4:8-6:18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EZR-Q05",
@@ -230,7 +234,8 @@
           "explanation": "They were traditionally treated as one combined book in the Hebrew canon.",
           "references": [
             "EZR 1:1-4; NEH 1:1-3"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -359,7 +364,8 @@
           "references": [
             "EZR 1:1-4"
           ],
-          "explanation": "ዕዝራ በምርኮኞች እንዲመለሱ በቂሮስ አዋጅ ይጀምራል።"
+          "explanation": "ዕዝራ በምርኮኞች እንዲመለሱ በቂሮስ አዋጅ ይጀምራል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EZR-Q02",
@@ -367,10 +373,12 @@
           "difficulty": "easy",
           "prompt": "ቤተ መቅደሱ ከመጠናቀቁ በፊት ግንባታው ተቃውሞ ገጠመው።",
           "options": [],
-          "correct_answer": false,
+          "correct_answer": true,
           "references": [
             "EZR 4:1-24; 6:13-22"
-          ]
+          ],
+          "explanation": "The narrative records opposition and a later resumption and completion of the work.",
+          "explanation_locale": "en"
         },
         {
           "id": "EZR-Q03",
@@ -387,7 +395,8 @@
           "references": [
             "EZR 7:1-10"
           ],
-          "explanation": "ዕዝራ የኋለኛውን መመለስና የማስተማር ተልዕኮ ይመራል።"
+          "explanation": "ዕዝራ የኋለኛውን መመለስና የማስተማር ተልዕኮ ይመራል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EZR-Q04",
@@ -404,7 +413,8 @@
           "references": [
             "EZR 4:8-6:18"
           ],
-          "explanation": "መጽሐፉ የዕብራይስጥ ትረካና የአራማይክ ሰነዶችን ይይዛል።"
+          "explanation": "መጽሐፉ የዕብራይስጥ ትረካና የአራማይክ ሰነዶችን ይይዛል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EZR-Q05",
@@ -415,7 +425,9 @@
           "correct_answer": false,
           "references": [
             "EZR 1:1-4; NEH 1:1-3"
-          ]
+          ],
+          "explanation": "They were traditionally treated as one combined book in the Hebrew canon.",
+          "explanation_locale": "en"
         }
       ]
     }
