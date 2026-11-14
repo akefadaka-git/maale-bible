@@ -210,4 +210,13 @@
     <string name="account_request_otp">የማረጋገጫ ኮድ ይጠይቁ</string>
     <string name="account_verify_register">ኮዱን ያረጋግጡ እና ይመዝገቡ</string>
     <string name="account_otp_policy">የማረጋገጫ ኮዶች ከአጭር ጊዜ በኋላ ያበቃሉ። እንደገና መጠየቅ ይችላሉ። በደህና ለመግባት የተጠቃሚ ስምዎን ወይም ሞባይል ቁጥርዎን ይጠቀሙ።</string>
+    <string name="reader_chapter_title">ምዕራፍ %1$d</string>
+    <string name="reader_import_package">የመጽሐፍ ቅዱስ ጥቅል ያስገቡ</string>
+    <string name="reader_package_importing">በማረጋገጥ እና በመጫን ላይ…</string>
+    <string name="reader_package_imported">የውስጥ ግምገማ ጥቅሉ ተጭኗል። በዚህ የሙከራ ስሪት መጽሐፍ ቅዱስን ከመስመር ውጭ ማንበብ ይችላሉ።</string>
+    <string name="reader_package_import_failed">ጥቅሉ ተቀባይነት አላገኘም። ምንም የመጽሐፍ ቅዱስ ይዘት አልተጫነም።</string>
+    <string name="reader_package_preview_warning">ለውስጣዊ ግምገማ ብቻ፤ ጥቅሉ በፊርማ አልተረጋገጠም እና ለመልቀቅ አልተፈቀደም።</string>
+    <string name="reader_package_attribution">የማዕሌ መጽሐፍ ቅዱስ (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International እና Bible Society of Ethiopia.</string>
+    <string name="reader_package_license">ፈቃድ፦ CC BY-SA 4.0</string>
+    <string name="reader_chapter_content_missing">ይህ ምዕራፍ በተጫነው ጥቅል ውስጥ አልተገኘም።</string>
 </resources>
