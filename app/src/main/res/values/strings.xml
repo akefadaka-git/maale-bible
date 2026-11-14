@@ -210,4 +210,13 @@ pause. Read. Reflect.</string>
     <string name="account_request_otp">Request verification code</string>
     <string name="account_verify_register">Verify code and register</string>
     <string name="account_otp_policy">Verification codes expire after a short time and can be requested again. Use your username or mobile number to sign in securely.</string>
+    <string name="reader_scripture_chapter_title">Chapter %1$d</string>
+    <string name="reader_scripture_not_installed_title">Maale Bible text is not installed</string>
+    <string name="reader_scripture_not_installed_body">The verified 2008 Maale Full Bible package must be privately installed before chapter text can be displayed. This app does not contain an unverified or substituted scripture text.</string>
+    <string name="reader_scripture_preview_title">Candidate scripture package — debug preview only</string>
+    <string name="reader_scripture_preview_body">This edition package is not marked release-eligible. It can be inspected only in a debug build after private installation.</string>
+    <string name="reader_scripture_chapter_missing_title">Chapter not available</string>
+    <string name="reader_scripture_chapter_missing_body">This chapter is not present in the installed edition package.</string>
+    <string name="reader_scripture_invalid_title">Scripture package could not be verified</string>
+    <string name="reader_scripture_invalid_body">The installed package does not match the expected Maale Bible edition and schema. No text was displayed.</string>
 </resources>
