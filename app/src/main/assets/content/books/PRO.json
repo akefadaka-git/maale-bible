@@ -156,7 +156,8 @@
           "explanation": "Proverbs 1:7 identifies reverence for the LORD as foundational.",
           "references": [
             "PRO 1:7"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "PRO-Q02",
@@ -167,11 +168,12 @@
             "True",
             "False"
           ],
-          "correct_option_id": "B",
           "explanation": "Proverbs are general wisdom principles.",
           "references": [
             "PRO 10:1-5"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "en"
         },
         {
           "id": "PRO-Q03",
@@ -188,7 +190,8 @@
           "explanation": "Proverbs 8 portrays Wisdom calling publicly.",
           "references": [
             "PRO 8:1-36"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "PRO-Q04",
@@ -205,7 +208,8 @@
           "explanation": "Proverbs 3:5 calls for wholehearted trust.",
           "references": [
             "PRO 3:5-6"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "PRO-Q05",
@@ -216,12 +220,13 @@
             "True",
             "False"
           ],
-          "correct_option_id": "A",
           "explanation": "The book identifies multiple collections.",
           "references": [
             "PRO 1:1",
             "PRO 25:1"
-          ]
+          ],
+          "correct_answer": true,
+          "explanation_locale": "en"
         }
       ]
     },
@@ -334,7 +339,8 @@
           "explanation": "ምሳሌ 1:7 ይህን ያስተምራል።",
           "references": [
             "PRO 1:7"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "PRO-Q02",
@@ -345,11 +351,12 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "B",
           "explanation": "ምሳሌዎች አጠቃላይ የጥበብ መርሆች ናቸው።",
           "references": [
             "PRO 10:1-5"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "am"
         },
         {
           "id": "PRO-Q03",
@@ -366,7 +373,8 @@
           "explanation": "ምሳሌ 8 ጥበብን በሕዝብ ፊት ያቀርባል።",
           "references": [
             "PRO 8:1-36"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "PRO-Q04",
@@ -383,7 +391,8 @@
           "explanation": "ምሳሌ 3:5 በእግዚአብሔር መታመንን ያስተምራል።",
           "references": [
             "PRO 3:5-6"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "PRO-Q05",
@@ -394,12 +403,13 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "A",
           "explanation": "መጽሐፉ ብዙ ስብስቦችን ይጠቅሳል።",
           "references": [
             "PRO 1:1",
             "PRO 25:1"
-          ]
+          ],
+          "correct_answer": true,
+          "explanation_locale": "am"
         }
       ]
     }
