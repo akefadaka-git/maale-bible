@@ -43,7 +43,7 @@ jobs:
       max-parallel: 1
       matrix:
         # PR updates validate one API first; dispatch the full matrix explicitly.
-        api: ${{ github.event_name == 'pull_request' && fromJSON('[30]') || (inputs.full_android_matrix && fromJSON('[26,28,30,33,35,36]')) || fromJSON('[30]') }}
+        api: ${{ github.event_name == 'pull_request' && fromJSON('[30]') || ((inputs.full_android_matrix || (github.event_name == 'push' && github.ref_name == 'fix/a2-remediation-complete')) && fromJSON('[26,28,30,33,35,36]')) || fromJSON('[30]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
