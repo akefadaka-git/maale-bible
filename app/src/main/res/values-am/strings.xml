@@ -33,7 +33,7 @@
     <string name="settings_restore_button">ቅጂውን መልስ</string>
     <string name="settings_content">የይዘት መገኘት</string>
     <string name="settings_content_help">የመጻሕፍት ዝርዝሩ ከመስመር ውጭ ይገኛል። የጽሑፍ፣ የድምፅ እና የትርጉም ይዘቶች የምንጭና የፈቃድ ማረጋገጫ እስኪያልፉ ድረስ አይከፈቱም።</string>
-    <string name="reader_coordinates_notice">በዚህ ስሪት የመጽሐፍ ቅዱስ ጽሑፍ አይገኝም። እነዚህ የግል የንባብ ቦታ መጠቆሚያዎች ብቻ ናቸው፤ የምዕራፍና የቁጥር ወሰኖች አልተገመቱም።</string>
+    <string name="reader_coordinates_notice">የንባብ ቦታዎ በዚህ መሣሪያ ላይ ይቀመጣል። የተረጋገጠው የእትም ጥቅል ሲጫን የምዕራፍ ጽሑፍ ይታያል።</string>
     <string name="study_empty">የጥናት ማከማቻዎ ባዶ ነው። የንባብ ቦታ፣ ዕልባት፣ ማድመቂያ ወይም ማስታወሻ ለማስቀመጥ መጽሐፍ ይክፈቱ።</string>
     <string name="reader_position">የንባብ ቦታ</string>
     <string name="reader_previous_chapter">ያለፈው ምዕራፍ</string>
