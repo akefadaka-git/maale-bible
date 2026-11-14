@@ -3,7 +3,6 @@ package org.maale.bible.ui
 import org.maale.bible.R
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -18,7 +17,6 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
-import org.maale.bible.data.catalog.CanonicalBookCatalog
 import org.maale.bible.data.scripture.ScriptureChapter
 import org.maale.bible.data.scripture.ScriptureChapterResult
 import org.maale.bible.data.scripture.ScripturePackageRepository
@@ -30,7 +28,6 @@ import java.time.LocalDate
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val book = CanonicalBookCatalog.find(bookId)
     val scriptureResult = remember(context, bookId, navigation.chapter) {
         ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter)
     }
