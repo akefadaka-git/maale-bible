@@ -219,4 +219,15 @@
     <string name="reader_scripture_chapter_missing_body">ይህ ምዕራፍ በተጫነው የመጽሐፍ ቅዱስ እትም ውስጥ የለም።</string>
     <string name="reader_scripture_invalid_title">የመጽሐፍ ቅዱስ ጥቅሉን ማረጋገጥ አልተቻለም</string>
     <string name="reader_scripture_invalid_body">የተጫነው ጥቅል ከሚጠበቀው የማዕሌ መጽሐፍ ቅዱስ እትምና መዋቅር ጋር አይዛመድም። ምንም ጽሑፍ አልታየም።</string>
+    <string name="reader_coordinates_notice">የንባብ ቦታዎ በዚህ መሣሪያ ላይ ይቀመጣል። የተረጋገጠው የእትም ጥቅል ሲጫን የምዕራፍ ጽሑፍ ይታያል።</string>
+    <string name="reader_back_to_books">መጽሐፍት</string>
+    <string name="reader_position_coordinates">ምዕራፍ %1$d · ቁጥር %2$d</string>
+    <string name="reader_bookmark_coordinates">ምዕራፍ %1$d፣ ቁጥር %2$d</string>
+    <string name="reader_annotation_coordinates">%1$s · %2$d:%3$d — %4$s</string>
+    <string name="reader_annotation_note_kind">ማስታወሻ</string>
+    <string name="reader_annotation_highlight_kind">ማድመቂያ</string>
+    <string name="reader_plan_progress">%1$s፦ %2$d/%3$d ቀናት · %4$d%%</string>
+    <string name="reader_no_day_due">ዛሬ የሚፈጸም ቀን የለም</string>
+    <string name="reader_complete_day">ቀን %1$d ፈጽም</string>
+    <string name="reader_private_notice">የጥናት መረጃዎ በተመሰጠረው የጥናት ዳታቤዝ ውስጥ በዚህ መሣሪያ ላይ ይቀመጣል።</string>
 </resources>
