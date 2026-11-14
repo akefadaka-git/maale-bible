@@ -177,7 +177,8 @@
           "explanation": "Mordecai challenges Esther to act for her people.",
           "references": [
             "EST 4:12-17"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EST-Q02",
@@ -189,7 +190,8 @@
           "explanation": "The Hebrew text does not directly name God; fasting and providential reversals are prominent.",
           "references": [
             "EST 4:1-17; 9:20-32"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EST-Q03",
@@ -206,7 +208,8 @@
           "explanation": "The book links the deliverance with the annual festival of Purim.",
           "references": [
             "EST 9:20-32"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EST-Q04",
@@ -223,7 +226,8 @@
           "explanation": "Haman persuades the king to issue a decree against the Jews.",
           "references": [
             "EST 3:1-15"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EST-Q05",
@@ -235,7 +239,8 @@
           "explanation": "The Greek form contains additional material and differences from the Hebrew form.",
           "references": [
             "EST 1:1-10:3"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -369,7 +374,8 @@
           "references": [
             "EST 4:12-17"
           ],
-          "explanation": "መርዶክዮስ አስቴርን ለሕዝቧ እንድትሠራ ያበረታታታል።"
+          "explanation": "መርዶክዮስ አስቴርን ለሕዝቧ እንድትሠራ ያበረታታታል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EST-Q02",
@@ -380,7 +386,9 @@
           "correct_answer": false,
           "references": [
             "EST 4:1-17; 9:20-32"
-          ]
+          ],
+          "explanation": "The Hebrew text does not directly name God; fasting and providential reversals are prominent.",
+          "explanation_locale": "en"
         },
         {
           "id": "EST-Q03",
@@ -397,7 +405,8 @@
           "references": [
             "EST 9:20-32"
           ],
-          "explanation": "መጽሐፉ መዳኑን ከዓመታዊው የፑሪም በዓል ጋር ያገናኛል።"
+          "explanation": "መጽሐፉ መዳኑን ከዓመታዊው የፑሪም በዓል ጋር ያገናኛል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EST-Q04",
@@ -414,7 +423,8 @@
           "references": [
             "EST 3:1-15"
           ],
-          "explanation": "ሐማ በአይሁድ ላይ አዋጅ እንዲወጣ ንጉሡን ያሳምናል።"
+          "explanation": "ሐማ በአይሁድ ላይ አዋጅ እንዲወጣ ንጉሡን ያሳምናል።",
+          "explanation_locale": "am"
         },
         {
           "id": "EST-Q05",
@@ -425,7 +435,9 @@
           "correct_answer": false,
           "references": [
             "EST 1:1-10:3"
-          ]
+          ],
+          "explanation": "The Greek form contains additional material and differences from the Hebrew form.",
+          "explanation_locale": "en"
         }
       ]
     }
