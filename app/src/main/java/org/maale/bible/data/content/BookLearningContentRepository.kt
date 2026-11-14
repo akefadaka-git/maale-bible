@@ -1,7 +1,7 @@
 package org.maale.bible.data.content
 
 import android.content.Context
-import org.maale.bible.BuildConfig
+import android.content.pm.ApplicationInfo
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -70,7 +70,7 @@ internal fun canDisplayBookLearningContent(publicationState: String, allowDraftP
         (allowDraftPreview && publicationState == "draft_not_for_release")
 
 object BookLearningContentRepository {
-    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = BuildConfig.DEBUG): BookLearningContent? {
+    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0): BookLearningContent? {
         val assetPath = "content/books/$bookId.json"
         val root = try {
             context.assets.open(assetPath).bufferedReader(Charsets.UTF_8).use { JSONObject(it.readText()) }
