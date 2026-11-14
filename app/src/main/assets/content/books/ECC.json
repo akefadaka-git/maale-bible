@@ -155,7 +155,8 @@
           "explanation": "Hevel evokes breath, vapor and transience.",
           "references": [
             "ECC 1:2"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "ECC-Q02",
@@ -166,11 +167,12 @@
             "True",
             "False"
           ],
-          "correct_option_id": "B",
           "explanation": "Its conclusion calls readers to revere God.",
           "references": [
             "ECC 12:13-14"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "en"
         },
         {
           "id": "ECC-Q03",
@@ -187,7 +189,8 @@
           "explanation": "The poem names times for many human experiences.",
           "references": [
             "ECC 3:1-8"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "ECC-Q04",
@@ -204,7 +207,8 @@
           "explanation": "Ecclesiastes 12:1 calls readers to remember their Creator.",
           "references": [
             "ECC 12:1"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "ECC-Q05",
@@ -215,11 +219,12 @@
             "True",
             "False"
           ],
-          "correct_option_id": "B",
           "explanation": "Authorship and dating remain debated.",
           "references": [
             "ECC 1:1"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "en"
         }
       ]
     },
@@ -331,7 +336,8 @@
           "explanation": "ሄቬል ትንፋሽንና ጊዜያዊነትን ያስታውሳል።",
           "references": [
             "ECC 1:2"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "ECC-Q02",
@@ -342,11 +348,12 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "B",
           "explanation": "መደምደሚያው እግዚአብሔርን መፍራትን ይጠራል።",
           "references": [
             "ECC 12:13-14"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "am"
         },
         {
           "id": "ECC-Q03",
@@ -363,7 +370,8 @@
           "explanation": "ግጥሙ ለብዙ የሕይወት ሁኔታዎች ጊዜ እንዳለ ይገልጻል።",
           "references": [
             "ECC 3:1-8"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "ECC-Q04",
@@ -380,7 +388,8 @@
           "explanation": "መክብብ 12:1 ፈጣሪን እንድናስብ ይጠራል።",
           "references": [
             "ECC 12:1"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "ECC-Q05",
@@ -391,11 +400,12 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "B",
           "explanation": "ደራሲነትና ዘመን ውይይት ያለባቸው ናቸው።",
           "references": [
             "ECC 1:1"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "am"
         }
       ]
     }
