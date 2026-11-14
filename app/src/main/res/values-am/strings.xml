@@ -210,4 +210,13 @@
     <string name="account_request_otp">የማረጋገጫ ኮድ ይጠይቁ</string>
     <string name="account_verify_register">ኮዱን ያረጋግጡ እና ይመዝገቡ</string>
     <string name="account_otp_policy">የማረጋገጫ ኮዶች ከአጭር ጊዜ በኋላ ያበቃሉ። እንደገና መጠየቅ ይችላሉ። በደህና ለመግባት የተጠቃሚ ስምዎን ወይም ሞባይል ቁጥርዎን ይጠቀሙ።</string>
+    <string name="reader_scripture_chapter_title">ምዕራፍ %1$d</string>
+    <string name="reader_scripture_not_installed_title">የማዕሌ መጽሐፍ ቅዱስ ጽሑፍ አልተጫነም</string>
+    <string name="reader_scripture_not_installed_body">የምዕራፍ ጽሑፍ ከመታየቱ በፊት የተረጋገጠው የ2008 የማዕሌ ሙሉ መጽሐፍ ቅዱስ ጥቅል በግል መጫን አለበት። ይህ መተግበሪያ ያልተረጋገጠ ወይም በሌላ ጽሑፍ የተተካ የመጽሐፍ ቅዱስ ጽሑፍ አያካትትም።</string>
+    <string name="reader_scripture_preview_title">የጊዜያዊ የመጽሐፍ ቅዱስ ጥቅል — በሙከራ ስሪት ብቻ</string>
+    <string name="reader_scripture_preview_body">ይህ የእትም ጥቅል ለመለቀቅ አልተፈቀደም። በግል ከተጫነ በኋላ በሙከራ ስሪት ብቻ ሊመረመር ይችላል።</string>
+    <string name="reader_scripture_chapter_missing_title">ምዕራፉ አልተገኘም</string>
+    <string name="reader_scripture_chapter_missing_body">ይህ ምዕራፍ በተጫነው የመጽሐፍ ቅዱስ እትም ውስጥ የለም።</string>
+    <string name="reader_scripture_invalid_title">የመጽሐፍ ቅዱስ ጥቅሉን ማረጋገጥ አልተቻለም</string>
+    <string name="reader_scripture_invalid_body">የተጫነው ጥቅል ከሚጠበቀው የማዕሌ መጽሐፍ ቅዱስ እትምና መዋቅር ጋር አይዛመድም። ምንም ጽሑፍ አልታየም።</string>
 </resources>
