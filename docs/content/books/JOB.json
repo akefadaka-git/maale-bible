@@ -158,7 +158,8 @@
           "explanation": "The book challenges simple claims that suffering always proves guilt.",
           "references": [
             "JOB 1:1-22"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "JOB-Q02",
@@ -169,11 +170,12 @@
             "True",
             "False"
           ],
-          "correct_option_id": "B",
           "explanation": "The book resists universal explanations.",
           "references": [
             "JOB 38:1-42:17"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "en"
         },
         {
           "id": "JOB-Q03",
@@ -190,7 +192,8 @@
           "explanation": "These are the three friends in the main dialogue.",
           "references": [
             "JOB 2:11"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "JOB-Q04",
@@ -207,7 +210,8 @@
           "explanation": "The divine speeches begin from the whirlwind.",
           "references": [
             "JOB 38:1"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "JOB-Q05",
@@ -218,11 +222,12 @@
             "True",
             "False"
           ],
-          "correct_option_id": "B",
           "explanation": "The conclusion challenges their claims.",
           "references": [
             "JOB 42:7-9"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "en"
         }
       ]
     },
@@ -337,7 +342,8 @@
           "explanation": "መከራ ሁልጊዜ የግል ጥፋት ነው የሚለውን ሐሳብ ይፈትናል።",
           "references": [
             "JOB 1:1-22"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "JOB-Q02",
@@ -348,11 +354,12 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "B",
           "explanation": "መጽሐፉ ቀላል ማብራሪያዎችን ይቃወማል።",
           "references": [
             "JOB 38:1-42:17"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "am"
         },
         {
           "id": "JOB-Q03",
@@ -369,7 +376,8 @@
           "explanation": "እነዚህ በዋናው ውይይት የሚታዩ ወዳጆች ናቸው።",
           "references": [
             "JOB 2:11"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "JOB-Q04",
@@ -386,7 +394,8 @@
           "explanation": "ንግግሩ ከዐውሎ ነፋስ ይጀምራል።",
           "references": [
             "JOB 38:1"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "JOB-Q05",
@@ -397,11 +406,12 @@
             "እውነት",
             "ሐሰት"
           ],
-          "correct_option_id": "B",
           "explanation": "መደምደሚያው ንግግራቸውን ይቃወማል።",
           "references": [
             "JOB 42:7-9"
-          ]
+          ],
+          "correct_answer": false,
+          "explanation_locale": "am"
         }
       ]
     }
