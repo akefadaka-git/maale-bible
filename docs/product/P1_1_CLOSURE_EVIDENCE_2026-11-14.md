@@ -1,7 +1,7 @@
 # P1.1 Exact-Head Closure Evidence — 2026-11-14
 
 **Branch:** `implementation/p1-1-source-ingestion-2026-11-14`  
-**Current branch head:** `d4f166e1fb7131826751138be7d0f6f16bb3f750`  
+**Exact code/test head:** `d4f166e1fb7131826751138be7d0f6f16bb3f750`  
 **Implementation status:** PARTIAL — exact-head CI and restricted corpus evidence pass; one integration verification remains  
 **Closure status:** NOT CLOSED  
 **Merge / release / signing / deployment / publication:** NOT AUTHORIZED
