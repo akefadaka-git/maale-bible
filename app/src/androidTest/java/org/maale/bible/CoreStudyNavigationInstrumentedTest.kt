@@ -107,7 +107,7 @@ class CoreStudyNavigationInstrumentedTest {
         waitForTag("book_learning_screen")
         compose.onNodeWithText("INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.").assertExists()
         compose.onNodeWithText("Genesis — beginnings, humanity and the family of Israel").assertExists()
-        compose.onNodeWithText("Quiz").performClick()
+        compose.onNodeWithTag("learning_tab_quiz").performClick()
         compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
     }
 
