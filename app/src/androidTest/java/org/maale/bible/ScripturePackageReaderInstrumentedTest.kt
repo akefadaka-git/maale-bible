@@ -77,7 +77,7 @@ class ScripturePackageReaderInstrumentedTest {
                 "CREATE TABLE verses(edition_id TEXT NOT NULL, book_id TEXT NOT NULL, chapter_number INTEGER NOT NULL, verse_label TEXT NOT NULL, ordinal INTEGER NOT NULL, text TEXT NOT NULL, source_path TEXT NOT NULL, source_line INTEGER NOT NULL, PRIMARY KEY(edition_id, book_id, chapter_number, verse_label), FOREIGN KEY(edition_id, book_id, chapter_number) REFERENCES chapters(edition_id, book_id, chapter_number))"
             )
             database.execSQL(
-                "CREATE TABLE headings(edition_id TEXT NOT NULL, book_id TEXT NOT NULL, chapter_number INTEGER NOT NULL, ordinal INTEGER NOT NULL, marker TEXT NOT NULL, text TEXT NOT NULL, source_path TEXT NOT NULL, source_line INTEGER NOT NULL, PRIMARY KEY(edition_id, book_id, ordinal), FOREIGN KEY(edition_id, book_id, chapter_number) REFERENCES chapters(edition_id, book_id, chapter_number))"
+                "CREATE TABLE headings(edition_id TEXT NOT NULL, book_id TEXT NOT NULL, chapter_number INTEGER NOT NULL, ordinal INTEGER NOT NULL, marker TEXT NOT NULL, text TEXT NOT NULL, source_path TEXT NOT NULL, source_line INTEGER NOT NULL, PRIMARY KEY(edition_id, book_id, ordinal), FOREIGN KEY(edition_id, book_id) REFERENCES books(edition_id, book_id))"
             )
             database.execSQL(
                 "CREATE INDEX verses_lookup ON verses(edition_id, book_id, chapter_number, ordinal)"
@@ -156,9 +156,6 @@ class ScripturePackageReaderInstrumentedTest {
                 database.setTransactionSuccessful()
             } finally {
                 database.endTransaction()
-                bookStatement.close()
-                chapterStatement.close()
-                verseStatement.close()
             }
         } finally {
             database.close()
