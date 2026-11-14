@@ -37,7 +37,7 @@ fun BookLearningScreen(
     val book = remember(bookId) { CanonicalBookCatalog.find(bookId) }
     val content = remember(bookId, context) { BookLearningContentRepository.load(context, bookId) }
     var selectedTab by rememberSaveable(bookId) { mutableStateOf(BookLearningTab.OVERVIEW) }
-    val title = book?.englishName ?: bookId
+    val title = book?.let { stringResource(bookNameResource(it.usfmId)) } ?: bookId
     val testament = if ((book?.order ?: 0) <= 39) stringResource(R.string.explorer_old_testament) else stringResource(R.string.explorer_new_testament)
 
     Column(
@@ -86,6 +86,77 @@ fun BookLearningScreen(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
     }
+}
+
+/** Maps canonical USFM book identifiers to localized Android string resources. */
+internal fun bookNameResource(usfmId: String): Int = when (usfmId) {
+    "GEN" -> R.string.book_name_gen
+    "EXO" -> R.string.book_name_exo
+    "LEV" -> R.string.book_name_lev
+    "NUM" -> R.string.book_name_num
+    "DEU" -> R.string.book_name_deu
+    "JOS" -> R.string.book_name_jos
+    "JDG" -> R.string.book_name_jdg
+    "RUT" -> R.string.book_name_rut
+    "1SA" -> R.string.book_name_1sa
+    "2SA" -> R.string.book_name_2sa
+    "1KI" -> R.string.book_name_1ki
+    "2KI" -> R.string.book_name_2ki
+    "1CH" -> R.string.book_name_1ch
+    "2CH" -> R.string.book_name_2ch
+    "EZR" -> R.string.book_name_ezr
+    "NEH" -> R.string.book_name_neh
+    "EST" -> R.string.book_name_est
+    "JOB" -> R.string.book_name_job
+    "PSA" -> R.string.book_name_psa
+    "PRO" -> R.string.book_name_pro
+    "ECC" -> R.string.book_name_ecc
+    "SNG" -> R.string.book_name_sng
+    "ISA" -> R.string.book_name_isa
+    "JER" -> R.string.book_name_jer
+    "LAM" -> R.string.book_name_lam
+    "EZK" -> R.string.book_name_ezk
+    "DAN" -> R.string.book_name_dan
+    "HOS" -> R.string.book_name_hos
+    "JOL" -> R.string.book_name_jol
+    "AMO" -> R.string.book_name_amo
+    "OBA" -> R.string.book_name_oba
+    "JON" -> R.string.book_name_jon
+    "MIC" -> R.string.book_name_mic
+    "NAM" -> R.string.book_name_nam
+    "HAB" -> R.string.book_name_hab
+    "ZEP" -> R.string.book_name_zep
+    "HAG" -> R.string.book_name_hag
+    "ZEC" -> R.string.book_name_zec
+    "MAL" -> R.string.book_name_mal
+    "MAT" -> R.string.book_name_mat
+    "MRK" -> R.string.book_name_mrk
+    "LUK" -> R.string.book_name_luk
+    "JHN" -> R.string.book_name_jhn
+    "ACT" -> R.string.book_name_act
+    "ROM" -> R.string.book_name_rom
+    "1CO" -> R.string.book_name_1co
+    "2CO" -> R.string.book_name_2co
+    "GAL" -> R.string.book_name_gal
+    "EPH" -> R.string.book_name_eph
+    "PHP" -> R.string.book_name_php
+    "COL" -> R.string.book_name_col
+    "1TH" -> R.string.book_name_1th
+    "2TH" -> R.string.book_name_2th
+    "1TI" -> R.string.book_name_1ti
+    "2TI" -> R.string.book_name_2ti
+    "TIT" -> R.string.book_name_tit
+    "PHM" -> R.string.book_name_phm
+    "HEB" -> R.string.book_name_heb
+    "JAS" -> R.string.book_name_jas
+    "1PE" -> R.string.book_name_1pe
+    "2PE" -> R.string.book_name_2pe
+    "1JN" -> R.string.book_name_1jn
+    "2JN" -> R.string.book_name_2jn
+    "3JN" -> R.string.book_name_3jn
+    "JUD" -> R.string.book_name_jud
+    "REV" -> R.string.book_name_rev
+    else -> R.string.learning_unknown_book
 }
 
 @Composable
