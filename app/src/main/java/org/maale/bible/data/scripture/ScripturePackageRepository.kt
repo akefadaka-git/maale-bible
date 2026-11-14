@@ -35,6 +35,8 @@ object ScripturePackageRepository {
     private const val PACKAGE_FILE = "maale-mdytwf-2008.sqlite"
     private const val EXPECTED_FORMAT = "MAALE-SCRIPTURE-SQLITE-1"
     private const val EXPECTED_EDITION = "MDYTWF-2008-MAALE-FULL"
+    private const val EXPECTED_SOURCE_SHA256 = "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11"
+    private const val EXPECTED_ATTRIBUTION = "Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia."
 
     fun loadChapter(context: Context, bookId: String, chapterNumber: Int): ScriptureChapterResult {
         if (!bookId.matches(Regex("[A-Z0-9]{3}")) || chapterNumber < 1) {
@@ -53,8 +55,23 @@ object ScripturePackageRepository {
                 if (metadata["package_format"] != EXPECTED_FORMAT ||
                     metadata["schema_version"] != "1" ||
                     metadata["edition_id"] != EXPECTED_EDITION ||
-                    metadata["language"] != "mdy"
+                    metadata["language"] != "mdy" ||
+                    metadata["source_archive_sha256"] != EXPECTED_SOURCE_SHA256 ||
+                    metadata["license"] != "CC BY-SA 4.0" ||
+                    metadata["attribution"] != EXPECTED_ATTRIBUTION ||
+                    metadata["content_is_immutable"] != "true" ||
+                    metadata["signer_trust"] != "UNDEFINED_IN_ISOLATED_KEYRING"
                 ) return@use ScriptureChapterResult.InvalidPackage
+
+                val userVersion = db.rawQuery("PRAGMA user_version", null).use {
+                    if (it.moveToFirst()) it.getInt(0) else -1
+                }
+                val applicationId = db.rawQuery("PRAGMA application_id", null).use {
+                    if (it.moveToFirst()) it.getInt(0) else -1
+                }
+                if (userVersion != 1 || applicationId != 1296189762) {
+                    return@use ScriptureChapterResult.InvalidPackage
+                }
 
                 val releaseEligible = metadata["release_eligible"] == "true"
                 if (!canDisplayScripturePackage(releaseEligible, allowDebugPreview)) {
