@@ -35,8 +35,8 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Scroll the LazyColumn by semantic item identity. Fixed swipe counts are
-        // viewport- and density-dependent and can leave off-screen items uncomposed.
+        // Scroll the LazyColumn by semantic item identity, composing the target
+        // before the click without relying on viewport-dependent gesture counts.
         val list = composeRule.onNodeWithTag("books_list")
         list.performScrollToNode(hasContentDescription("Open Genesis"))
         composeRule.onNodeWithContentDescription("Open Genesis")
