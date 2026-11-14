@@ -24,8 +24,10 @@ permissions:
   contents: read
 jobs:
   android-foundation:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    # Keep the known-stable runner image and allow a full emulator cold boot
+    # plus instrumentation without the previous 50-minute cancellation window.
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -33,5 +35,24 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Cache Android emulator AVD
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: android-api35-google-apis-x86_64-${{ runner.os }}-v1
       - name: Run Android unit tests and assemble debug APK
         run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
+      - name: Run SQLite persistence, restart and backup instrumentation tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          emulator-boot-timeout: 1800
+          force-avd-creation: false
+          emulator-options: ${{ steps.avd-cache.outputs.cache-hit == 'true' && '-no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none' || '-no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none' }}
+          disable-animations: true
+          script: ./gradlew --no-daemon --max-workers=2 --console=plain --stacktrace :app:connectedDebugAndroidTest
