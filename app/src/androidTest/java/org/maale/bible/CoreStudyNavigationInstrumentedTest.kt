@@ -1,6 +1,7 @@
 package org.maale.bible
 
 import android.content.Intent
+import androidx.lifecycle.Lifecycle
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -110,9 +111,14 @@ class CoreStudyNavigationInstrumentedTest {
             )
             assert(pickerVisible) { "DocumentsUI did not become visible for $action." }
 
-            // Recreate the caller while the external picker owns the foreground. The
-            // cancellation result must be delivered to the newly registered launcher.
+            // The external picker has stopped the caller Activity. Align the scenario
+            // with that CREATED/STOPPED state before recreation so it does not attempt
+            // to resume an Activity that is still behind DocumentsUI.
+            compose.activityRule.scenario.moveToState(Lifecycle.State.CREATED)
             compose.activityRule.scenario.recreate()
+
+            // The system picker remains foreground until cancellation. Its result
+            // must be delivered to the recreated ActivityResult launcher.
             device.pressBack()
             compose.waitUntil(timeoutMillis = 10_000) {
                 compose.onAllNodesWithText(expectedStatus).fetchSemanticsNodes().isNotEmpty()
