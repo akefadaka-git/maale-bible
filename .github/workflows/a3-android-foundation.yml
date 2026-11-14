@@ -12,7 +12,6 @@ on:
   push:
     branches:
       - reconcile/a3-android-foundation-on-main
-      - feat/a3-offline-study-foundation-2026-11-12
     paths:
       - 'app/**'
       - 'gradle/**'
@@ -36,6 +35,14 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Cache Android emulator AVD
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: android-api35-google-apis-x86_64-${{ runner.os }}-v1
       - name: Run Android unit tests and assemble debug APK
         run: ./gradlew --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
       - name: Run SQLite persistence, restart and backup instrumentation tests
@@ -45,6 +52,7 @@ jobs:
           target: google_apis
           arch: x86_64
           emulator-boot-timeout: 1800
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          force-avd-creation: false
+          emulator-options: ${{ steps.avd-cache.outputs.cache-hit == 'true' && '-no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none' || '-no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none' }}
           disable-animations: true
           script: ./gradlew --no-daemon --max-workers=2 --console=plain --stacktrace :app:connectedDebugAndroidTest

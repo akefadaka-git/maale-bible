@@ -29,11 +29,14 @@ internal object LegacyStudyDatabaseMigration {
             // Recover interrupted rename/cutover before attempting a new migration.
             if (rollback.exists()) {
                 if (live.exists() && isEncryptedAndHealthy(live, dek)) {
-                    rollback.delete()
+                    deleteDatabaseFiles(rollback)
                 } else if (!live.exists() && temp.exists() && isEncryptedAndHealthy(temp, dek)) {
+                    // A crash may have occurred immediately after live -> rollback,
+                    // before the old plaintext WAL/SHM files were removed.
+                    deleteSidecars(live)
                     atomicMove(temp, live)
                     check(isEncryptedAndHealthy(live, dek)) { "Encrypted cutover verification failed" }
-                    rollback.delete()
+                    deleteDatabaseFiles(rollback)
                 } else {
                     if (live.exists()) deleteDatabaseFiles(live)
                     if (temp.exists()) deleteDatabaseFiles(temp)
@@ -197,13 +200,17 @@ internal object LegacyStudyDatabaseMigration {
     }
 
     private fun deleteSidecars(file: File) {
-        listOf("-wal", "-shm", "-journal").forEach { File(file.path + it).delete() }
+        listOf("-wal", "-shm", "-journal").forEach { suffix ->
+            Files.deleteIfExists(File(file.path + suffix).toPath())
+        }
     }
 
     private fun deleteDatabaseFiles(file: File) {
+        deleteSidecars(file)
         CipherSQLiteDatabase.deleteDatabase(file)
         PlainSQLiteDatabase.deleteDatabase(file)
-        deleteSidecars(file)
+        Files.deleteIfExists(file.toPath())
+        check(!file.exists()) { "Could not remove database file ${file.name}" }
     }
 
     private val TABLES = listOf("reading_position", "bookmarks", "annotations", "reading_plans")
