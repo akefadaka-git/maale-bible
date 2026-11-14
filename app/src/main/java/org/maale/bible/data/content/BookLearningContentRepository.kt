@@ -29,6 +29,7 @@ data class BookQuizQuestion(
     val correctOptionId: String?,
     val correctAnswer: Boolean?,
     val explanation: String,
+    val explanationLocale: String,
     val references: List<String>
 )
 
@@ -113,6 +114,7 @@ object BookLearningContentRepository {
                 correctOptionId = item.optString("correct_option_id").takeIf { it.isNotBlank() },
                 correctAnswer = correctAnswer,
                 explanation = item.optString("explanation"),
+                explanationLocale = item.optString("explanation_locale", locale).ifBlank { locale },
                 references = item.optJSONArray("references").toStringList()
             )
         }
