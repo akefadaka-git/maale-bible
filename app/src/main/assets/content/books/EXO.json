@@ -198,7 +198,8 @@
           "explanation": "God says that he has seen and heard the suffering of the Israelites and will act to deliver them.",
           "references": [
             "EXO 3:7-10"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q02",
@@ -215,7 +216,8 @@
           "explanation": "Moses is called to confront Pharaoh and lead the Israelites out.",
           "references": [
             "EXO 3:10; 12:31-42"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q03",
@@ -227,7 +229,8 @@
           "explanation": "The text says children are to ask about the observance and parents are to explain it.",
           "references": [
             "EXO 12:24-27"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q04",
@@ -244,7 +247,8 @@
           "explanation": "The covenant and law-giving are located at Mount Sinai.",
           "references": [
             "EXO 19:1-8; 20:1-17"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q05",
@@ -256,7 +260,8 @@
           "explanation": "The closing chapter describes the cloud covering the tent and the glory of the LORD filling the tabernacle.",
           "references": [
             "EXO 40:34-38"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -401,7 +406,9 @@
           "correct_option_id": "A",
           "references": [
             "EXO 3:7-10"
-          ]
+          ],
+          "explanation": "God says that he has seen and heard the suffering of the Israelites and will act to deliver them.",
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q02",
@@ -417,7 +424,9 @@
           "correct_option_id": "B",
           "references": [
             "EXO 3:10; 12:31-42"
-          ]
+          ],
+          "explanation": "Moses is called to confront Pharaoh and lead the Israelites out.",
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q03",
@@ -425,11 +434,12 @@
           "difficulty": "easy",
           "prompt": "የፋሲካ መመሪያ ለቀጣዩ ትውልድ ሥርዓቱ ምን ማለት እንደሆነ መንገርን ያካትታል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "The text says children are to ask about the observance and parents are to explain it.",
           "references": [
             "EXO 12:24-27"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "EXO-Q04",
@@ -446,7 +456,8 @@
           "explanation": "ሲና ተራራ የቃል ኪዳንና የሕግ መስጠት ቦታ ነው።",
           "references": [
             "EXO 19:1-8; 20:1-17"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "EXO-Q05",
@@ -454,11 +465,12 @@
           "difficulty": "medium",
           "prompt": "የዘፀአት መጽሐፍ የእግዚአብሔር ክብር ድንኳኑን ሞልቶ በመግለጥ ይደመደማል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "The closing chapter describes the cloud covering the tent and the glory of the LORD filling the tabernacle.",
           "references": [
             "EXO 40:34-38"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     }
