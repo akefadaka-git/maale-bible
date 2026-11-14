@@ -93,9 +93,11 @@ class ScripturePackageManager(context: Context) {
                 if (backup.exists()) backup.renameTo(installedPackage)
                 throw IOException("Cannot install the validated package.")
             }
-            installedPackage.setReadable(true, true)
-            installedPackage.setWritable(false, true)
-            installedPackage.setReadOnly()
+            if (!installedPackage.setReadable(true, true) || !installedPackage.setReadOnly()) {
+                installedPackage.delete()
+                if (backup.exists()) backup.renameTo(installedPackage)
+                throw IOException("Cannot make the installed scripture package read-only.")
+            }
             backup.delete()
             return metadata.copy(packageSha256 = sha256(installedPackage))
         } finally {
@@ -119,7 +121,13 @@ class ScripturePackageManager(context: Context) {
         require(file.length() in MIN_PACKAGE_BYTES..MAX_PACKAGE_BYTES) { "Scripture package size is invalid." }
         FileInputStream(file).use { input ->
             val signature = ByteArray(SQLITE_HEADER.size)
-            require(input.read(signature) == signature.size && signature.contentEquals(SQLITE_HEADER)) {
+            var offset = 0
+            while (offset < signature.size) {
+                val read = input.read(signature, offset, signature.size - offset)
+                if (read < 0) break
+                offset += read
+            }
+            require(offset == signature.size && signature.contentEquals(SQLITE_HEADER)) {
                 "Selected file is not a SQLite package."
             }
         }
