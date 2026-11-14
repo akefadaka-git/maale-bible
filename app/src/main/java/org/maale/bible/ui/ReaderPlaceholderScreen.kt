@@ -49,12 +49,12 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
     Column(modifier.fillMaxSize().testTag("reader_screen").verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Text(stringResource(bookNameResource(bookId)), style = MaterialTheme.typography.headlineSmall)
-            TextButton(onClick = onBack) { Text("Books") }
+            TextButton(onClick = onBack) { Text(stringResource(R.string.reader_back_to_books)) }
         }
         Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("Chapter ${navigation.chapter} · Verse ${navigation.verse}", modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
+                Text(stringResource(R.string.reader_position_coordinates, navigation.chapter, navigation.verse), modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
                 Text(stringResource(R.string.reader_coordinates_notice))
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     OutlinedButton(onClick = { navigation = navigation.previousChapter() }) { Text(stringResource(R.string.reader_previous_chapter)) }
@@ -111,7 +111,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Text(stringResource(R.string.reader_bookmarks, bookmarks.size), style = MaterialTheme.typography.titleMedium)
         bookmarks.forEach { item ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("Chapter ${item.chapter}, verse ${item.verse}")
+                Text(stringResource(R.string.reader_bookmark_coordinates, item.chapter, item.verse))
                 TextButton(onClick = { navigation = ReaderNavigation(bookId, item.chapter, item.verse) }) { Text(stringResource(R.string.reader_go_to)) }
                 TextButton(onClick = { repository.removeBookmark(item.id); refresh++ }) { Text(stringResource(R.string.reader_remove)) }
             }
@@ -120,7 +120,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         annotations.forEach { item ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column(Modifier.weight(1f)) {
-                    Text("${item.kind}: ${item.chapter}:${item.verse} ${item.body}")
+                    Text(stringResource(R.string.reader_annotation_coordinates, stringResource(if (item.kind == AnnotationKind.NOTE) R.string.reader_annotation_note_kind else R.string.reader_annotation_highlight_kind), item.chapter, item.verse, item.body))
                     if (item.kind == AnnotationKind.NOTE) TextButton(onClick = { noteText = item.body; editingAnnotationId = item.id; navigation = ReaderNavigation(bookId, item.chapter, item.verse) }) { Text(stringResource(R.string.reader_edit)) }
                 }
                 TextButton(onClick = { repository.deleteAnnotation(item.id); refresh++ }) { Text(stringResource(R.string.reader_delete)) }
@@ -136,16 +136,16 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         }, enabled = planTitle.isNotBlank()) { Text(stringResource(R.string.reader_create_plan)) }
         plans.forEach { plan ->
             Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-                Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days · ${plan.completionPercent()}%", style = MaterialTheme.typography.titleSmall)
+                Text(stringResource(R.string.reader_plan_progress, plan.title, plan.completedDays.size, plan.durationDays, plan.completionPercent()), style = MaterialTheme.typography.titleSmall)
                 LinearProgressIndicator(progress = { plan.completionPercent() / 100f }, modifier = Modifier.fillMaxWidth())
                 val dueDay = plan.schedule(LocalDate.now().toEpochDay()).firstOrNull { it.status == PlanDayStatus.DUE || it.status == PlanDayStatus.OVERDUE }
                 TextButton(onClick = {
                     if (dueDay != null) repository.savePlan(plan.withDayCompleted(dueDay.dayNumber, System.currentTimeMillis()))
                     refresh++
-                }, enabled = dueDay != null) { Text(if (dueDay == null) "No day due today" else "Complete day ${dueDay.dayNumber}") }
+                }, enabled = dueDay != null) { Text(if (dueDay == null) stringResource(R.string.reader_no_day_due) else stringResource(R.string.reader_complete_day, dueDay.dayNumber)) }
             }
         }
-        Text("Study data is stored locally and protected by the app's encrypted database.", style = MaterialTheme.typography.bodySmall)
+        Text(stringResource(R.string.reader_private_notice), style = MaterialTheme.typography.bodySmall)
     }
 }
 
