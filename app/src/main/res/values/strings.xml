@@ -210,4 +210,13 @@ pause. Read. Reflect.</string>
     <string name="account_request_otp">Request verification code</string>
     <string name="account_verify_register">Verify code and register</string>
     <string name="account_otp_policy">Verification codes expire after a short time and can be requested again. Use your username or mobile number to sign in securely.</string>
+    <string name="reader_chapter_title">Chapter %1$d</string>
+    <string name="reader_import_package">Import scripture package</string>
+    <string name="reader_package_importing">Validating and installing…</string>
+    <string name="reader_package_imported">Internal review package installed. Scripture is available offline in this debug build.</string>
+    <string name="reader_package_import_failed">Package rejected. No scripture content was installed.</string>
+    <string name="reader_package_preview_warning">Internal review package only. It is unsigned and not approved for release.</string>
+    <string name="reader_package_attribution">Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.</string>
+    <string name="reader_package_license">License: CC BY-SA 4.0</string>
+    <string name="reader_chapter_content_missing">This chapter is not present in the installed package.</string>
 </resources>
