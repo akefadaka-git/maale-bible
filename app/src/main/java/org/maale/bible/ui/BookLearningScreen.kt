@@ -170,6 +170,7 @@ private fun QuizContent(content: BookLearningContent?) {
                 question = question,
                 selectedAnswer = answers[question.id],
                 submitted = question.id in submitted,
+                showExplanationFallback = question.explanationLocale != content.locale,
                 onSelect = { value ->
                     answers = answers + (question.id to value)
                     submitted = submitted - question.id
@@ -185,6 +186,7 @@ private fun QuizQuestionCard(
     question: BookQuizQuestion,
     selectedAnswer: String?,
     submitted: Boolean,
+    showExplanationFallback: Boolean,
     onSelect: (String) -> Unit,
     onSubmit: () -> Unit
 ) {
@@ -234,6 +236,9 @@ private fun QuizQuestionCard(
                     style = MaterialTheme.typography.titleSmall,
                     color = if (correct) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
                 )
+                if (showExplanationFallback) {
+                    Text(stringResource(R.string.learning_explanation_fallback), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
+                }
                 Text(question.explanation, style = MaterialTheme.typography.bodyMedium)
                 if (question.references.isNotEmpty()) {
                     Text(
