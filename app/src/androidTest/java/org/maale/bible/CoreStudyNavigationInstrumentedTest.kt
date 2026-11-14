@@ -52,7 +52,7 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").performClick()
         waitForTag("book_learning_screen")
-        compose.onNodeWithTag("learning_open_reader_button").assertIsDisplayed().performClick()
+        compose.onNodeWithTag("learning_open_reader_button").performScrollTo().assertIsDisplayed().performClick()
         waitForTag("reader_screen")
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
         compose.onNodeWithTag("reader_screen")
