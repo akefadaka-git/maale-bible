@@ -186,7 +186,8 @@
           "explanation": "Leviticus 16 gives the central instructions for the Day of Atonement.",
           "references": [
             "LEV 16:1-34"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "LEV-Q02",
@@ -198,7 +199,8 @@
           "explanation": "Leviticus 19 joins the call to holiness with commands about honesty, justice and love of neighbour.",
           "references": [
             "LEV 19:1-18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "LEV-Q03",
@@ -215,7 +217,8 @@
           "explanation": "Aaron and his sons are ordained for priestly service.",
           "references": [
             "LEV 8:1-13"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "LEV-Q04",
@@ -232,7 +235,8 @@
           "explanation": "The command appears within the Holiness Collection in Leviticus 19.",
           "references": [
             "LEV 19:18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "LEV-Q05",
@@ -244,7 +248,8 @@
           "explanation": "Leviticus 25 describes the Sabbath year and Jubilee, including release and land-rest provisions.",
           "references": [
             "LEV 25:1-17"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -387,7 +392,8 @@
           "explanation": "ዘሌዋውያን 16 ስለ ስርየት ቀን ዋና መመሪያዎችን ይሰጣል።",
           "references": [
             "LEV 16:1-34"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "LEV-Q02",
@@ -395,11 +401,12 @@
           "difficulty": "easy",
           "prompt": "ዘሌዋውያን ቅድስናን ሰዎች ባልንጀሮቻቸውን ከሚያዩበት አያያዝ ጋር ያገናኛል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "Leviticus 19 joins the call to holiness with commands about honesty, justice and love of neighbour.",
           "references": [
             "LEV 19:1-18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "LEV-Q03",
@@ -416,7 +423,8 @@
           "explanation": "አሮንና ልጆቹ ለካህናት አገልግሎት ተሾሙ።",
           "references": [
             "LEV 8:1-13"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "LEV-Q04",
@@ -433,7 +441,8 @@
           "explanation": "ይህ ትእዛዝ በዘሌዋውያን 19 የቅድስና ሕጎች ክፍል ውስጥ ይገኛል።",
           "references": [
             "LEV 19:18"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "LEV-Q05",
@@ -441,11 +450,12 @@
           "difficulty": "medium",
           "prompt": "ዘሌዋውያን 25 ስለ ሰንበት ዓመትና ስለ ኢዮቤል መመሪያዎችን ይዟል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "Leviticus 25 describes the Sabbath year and Jubilee, including release and land-rest provisions.",
           "references": [
             "LEV 25:1-17"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     }
