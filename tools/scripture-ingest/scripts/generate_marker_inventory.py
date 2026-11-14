@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Restricted-workspace-only USFM marker inventory generator. Never emits scripture text."""
 import argparse, collections, hashlib, json, pathlib, re
-MARKER = re.compile(r"\\([A-Za-z0-9]+|\\*)")
+MARKER = re.compile(r"\\([A-Za-z0-9]+|\*)")
 def sha256(path):
     h=hashlib.sha256()
     with path.open("rb") as f:
