@@ -119,7 +119,7 @@ private fun OverviewContent(content: BookLearningContent?, bookId: String, onOpe
             color = MaterialTheme.colorScheme.secondary
         )
     }
-    Button(onClick = { onOpenReader(bookId) }, modifier = Modifier.fillMaxWidth()) {
+    Button(onClick = { onOpenReader(bookId) }, modifier = Modifier.fillMaxWidth().testTag("learning_open_reader_button")) {
         Text(stringResource(R.string.learning_open_reader))
     }
 }
