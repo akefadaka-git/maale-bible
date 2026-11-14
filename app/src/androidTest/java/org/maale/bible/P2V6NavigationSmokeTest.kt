@@ -1,18 +1,16 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.onAllNodesWithText
-import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
-import androidx.compose.ui.test.performTouchInput
-import androidx.compose.ui.test.swipeUp
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
@@ -37,17 +35,13 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
+        // Scroll the LazyColumn by semantic item identity. Fixed swipe counts are
+        // viewport- and density-dependent and can leave off-screen items uncomposed.
         val list = composeRule.onNodeWithTag("books_list")
-        // LazyColumn exposes only composed items to the test semantics tree.
-        // Use real swipe gestures to bring the filtered result into view.
-        repeat(3) {
-            list.performTouchInput { swipeUp() }
-            composeRule.waitForIdle()
-        }
-        composeRule.waitUntil(5_000L) {
-            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
-        }
-        composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed().performClick()
+        list.performScrollToNode(hasContentDescription("Open Genesis"))
+        composeRule.onNodeWithContentDescription("Open Genesis")
+            .assertIsDisplayed()
+            .performClick()
     }
 
     private fun openGenesisLearningCentre() {
