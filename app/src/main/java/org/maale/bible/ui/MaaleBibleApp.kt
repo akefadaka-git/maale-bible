@@ -56,9 +56,8 @@ fun MaaleBibleApp() {
     ) {
         var destination by rememberSaveable { mutableStateOf(AppDestination.HOME.name) }
         var moreDestination by rememberSaveable { mutableStateOf(MoreDestination.LISTEN.name) }
-        var learningBookId by rememberSaveable { mutableStateOf<String?>(null) }
-        var readerBookId by rememberSaveable { mutableStateOf<String?>(null) }
-        var readerReturnToLearningBookId by rememberSaveable { mutableStateOf<String?>(null) }
+        var activeBookId by rememberSaveable { mutableStateOf<String?>(null) }
+        var activeBookScreen by rememberSaveable { mutableStateOf("none") }
         var languageMenuExpanded by rememberSaveable { mutableStateOf(false) }
         var notificationsExpanded by rememberSaveable { mutableStateOf(false) }
         var profileExpanded by rememberSaveable { mutableStateOf(false) }
@@ -152,8 +151,8 @@ fun MaaleBibleApp() {
                     NavigationBar(modifier = Modifier.testTag("navigation_compact")) {
                         AppDestination.entries.forEach { item ->
                             NavigationBarItem(
-                                selected = current == item && learningBookId == null && readerBookId == null,
-                                onClick = { learningBookId = null; readerBookId = null; readerReturnToLearningBookId = null; destination = item.name },
+                                selected = current == item && activeBookScreen == "none",
+                                onClick = { activeBookId = null; activeBookScreen = "none"; destination = item.name },
                                 modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleMedium) },
                                 label = { Text(stringResource(item.labelRes), maxLines = 1) }
@@ -169,8 +168,8 @@ fun MaaleBibleApp() {
                         Spacer(Modifier.height(8.dp))
                         AppDestination.entries.forEach { item ->
                             NavigationRailItem(
-                                selected = current == item && learningBookId == null && readerBookId == null,
-                                onClick = { learningBookId = null; readerBookId = null; readerReturnToLearningBookId = null; destination = item.name },
+                                selected = current == item && activeBookScreen == "none",
+                                onClick = { activeBookId = null; activeBookScreen = "none"; destination = item.name },
                                 modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleLarge) },
                                 label = { Text(stringResource(item.labelRes), maxLines = 1) },
@@ -181,36 +180,27 @@ fun MaaleBibleApp() {
                 }
                 Box(Modifier.weight(1f).fillMaxHeight()) {
                     when {
-                        learningBookId != null -> BookLearningScreen(
-                            bookId = learningBookId.orEmpty(),
-                            onBack = { learningBookId = null; destination = AppDestination.BOOKS.name },
-                            onOpenReader = { bookId ->
-                                readerReturnToLearningBookId = bookId
-                                learningBookId = null
-                                readerBookId = bookId
-                            },
+                        activeBookScreen == "learning" && activeBookId != null -> BookLearningScreen(
+                            bookId = activeBookId.orEmpty(),
+                            onBack = { activeBookScreen = "none"; activeBookId = null; destination = AppDestination.BOOKS.name },
+                            onOpenReader = { activeBookScreen = "reader" },
                             modifier = Modifier.fillMaxSize()
                         )
-                        readerBookId != null -> ReaderPlaceholderScreen(
-                            bookId = readerBookId.orEmpty(),
+                        activeBookScreen == "reader" && activeBookId != null -> ReaderPlaceholderScreen(
+                            bookId = activeBookId.orEmpty(),
                             repository = studyRepository,
-                            onBack = {
-                                readerBookId = null
-                                learningBookId = readerReturnToLearningBookId
-                                readerReturnToLearningBookId = null
-                                if (learningBookId == null) destination = AppDestination.BOOKS.name
-                            },
+                            onBack = { activeBookScreen = "learning" },
                             modifier = Modifier.fillMaxSize()
                         )
                         else -> when (current) {
                             AppDestination.HOME -> HomeScreen(onOpenBooks = { destination = AppDestination.BOOKS.name })
-                            AppDestination.BOOKS -> BooksScreen(onSelectBook = { learningBookId = it })
-                            AppDestination.SEARCH -> CatalogueSearchScreen(onSelectBook = { learningBookId = it })
+                            AppDestination.BOOKS -> BooksScreen(onSelectBook = { activeBookId = it; activeBookScreen = "learning" })
+                            AppDestination.SEARCH -> CatalogueSearchScreen(onSelectBook = { activeBookId = it; activeBookScreen = "learning" })
                             AppDestination.MORE -> MoreScreen(
                                 selected = MoreDestination.valueOf(moreDestination),
                                 onSelect = { moreDestination = it.name },
                                 repository = studyRepository,
-                                onOpenBook = { learningBookId = it },
+                                onOpenBook = { activeBookId = it; activeBookScreen = "learning" },
                                 modifier = Modifier.fillMaxSize()
                             )
                         }
