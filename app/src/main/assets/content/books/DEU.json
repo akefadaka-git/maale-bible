@@ -182,7 +182,8 @@
           "explanation": "Deuteronomy 6:4-9 begins with the call to hear, and commands wholehearted love of God.",
           "references": [
             "DEU 6:4-9"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "DEU-Q02",
@@ -194,7 +195,8 @@
           "explanation": "Remembering the exodus and wilderness journey is a major part of Moses’ teaching.",
           "references": [
             "DEU 5:15; 8:2; 24:18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "DEU-Q03",
@@ -211,7 +213,8 @@
           "explanation": "Joshua is commissioned to lead the people after Moses.",
           "references": [
             "DEU 31:1-8"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "DEU-Q04",
@@ -228,7 +231,8 @@
           "explanation": "Moses calls the people to choose life by loving and obeying God.",
           "references": [
             "DEU 30:15-20"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "DEU-Q05",
@@ -240,7 +244,8 @@
           "explanation": "Chapter 34 concludes the Torah’s final book with Moses’ death and a reflection on his unique role.",
           "references": [
             "DEU 34:1-12"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -379,7 +384,8 @@
           "explanation": "ዘዳግም 6:4-9 በመስማት ጥሪ ይጀምራል፤ እግዚአብሔርንም በሙሉ ልብ እንድንወድ ያዛል።",
           "references": [
             "DEU 6:4-9"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "DEU-Q02",
@@ -387,11 +393,12 @@
           "difficulty": "easy",
           "prompt": "ዘዳግም እግዚአብሔር ያደረገውን እንዲያስታውስ እስራኤልን በተደጋጋሚ ይጠራል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "Remembering the exodus and wilderness journey is a major part of Moses’ teaching.",
           "references": [
             "DEU 5:15; 8:2; 24:18"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "DEU-Q03",
@@ -408,7 +415,8 @@
           "explanation": "ከሙሴ በኋላ ሕዝቡን እንዲመራ ኢያሱ ተሾመ።",
           "references": [
             "DEU 31:1-8"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "DEU-Q04",
@@ -425,7 +433,8 @@
           "explanation": "ሙሴ ሕዝቡ እግዚአብሔርን በመውደድና በመታዘዝ ሕይወትን እንዲመርጥ ይጠራል።",
           "references": [
             "DEU 30:15-20"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "DEU-Q05",
@@ -433,11 +442,12 @@
           "difficulty": "medium",
           "prompt": "ዘዳግም በሙሴ ሞት ታሪክ ይደመደማል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "Chapter 34 concludes the Torah’s final book with Moses’ death and a reflection on his unique role.",
           "references": [
             "DEU 34:1-12"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     }
