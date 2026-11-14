@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="book_name_gen" translatable="false">Genesis</string>
+    <string name="book_name_exo" translatable="false">Exodus</string>
+    <string name="book_name_lev" translatable="false">Leviticus</string>
+    <string name="book_name_num" translatable="false">Numbers</string>
+    <string name="book_name_deu" translatable="false">Deuteronomy</string>
+    <string name="book_name_jos" translatable="false">Joshua</string>
+    <string name="book_name_jdg" translatable="false">Judges</string>
+    <string name="book_name_rut" translatable="false">Ruth</string>
+    <string name="book_name_1sa" translatable="false">1 Samuel</string>
+    <string name="book_name_2sa" translatable="false">2 Samuel</string>
+    <string name="book_name_1ki" translatable="false">1 Kings</string>
+    <string name="book_name_2ki" translatable="false">2 Kings</string>
+    <string name="book_name_1ch" translatable="false">1 Chronicles</string>
+    <string name="book_name_2ch" translatable="false">2 Chronicles</string>
+    <string name="book_name_ezr" translatable="false">Ezra</string>
+    <string name="book_name_neh" translatable="false">Nehemiah</string>
+    <string name="book_name_est" translatable="false">Esther</string>
+    <string name="book_name_job" translatable="false">Job</string>
+    <string name="book_name_psa" translatable="false">Psalms</string>
+    <string name="book_name_pro" translatable="false">Proverbs</string>
+    <string name="book_name_ecc" translatable="false">Ecclesiastes</string>
+    <string name="book_name_sng" translatable="false">Song of Songs</string>
+    <string name="book_name_isa" translatable="false">Isaiah</string>
+    <string name="book_name_jer" translatable="false">Jeremiah</string>
+    <string name="book_name_lam" translatable="false">Lamentations</string>
+    <string name="book_name_ezk" translatable="false">Ezekiel</string>
+    <string name="book_name_dan" translatable="false">Daniel</string>
+    <string name="book_name_hos" translatable="false">Hosea</string>
+    <string name="book_name_jol" translatable="false">Joel</string>
+    <string name="book_name_amo" translatable="false">Amos</string>
+    <string name="book_name_oba" translatable="false">Obadiah</string>
+    <string name="book_name_jon" translatable="false">Jonah</string>
+    <string name="book_name_mic" translatable="false">Micah</string>
+    <string name="book_name_nam" translatable="false">Nahum</string>
+    <string name="book_name_hab" translatable="false">Habakkuk</string>
+    <string name="book_name_zep" translatable="false">Zephaniah</string>
+    <string name="book_name_hag" translatable="false">Haggai</string>
+    <string name="book_name_zec" translatable="false">Zechariah</string>
+    <string name="book_name_mal" translatable="false">Malachi</string>
+    <string name="book_name_mat" translatable="false">Matthew</string>
+    <string name="book_name_mrk" translatable="false">Mark</string>
+    <string name="book_name_luk" translatable="false">Luke</string>
+    <string name="book_name_jhn" translatable="false">John</string>
+    <string name="book_name_act" translatable="false">Acts</string>
+    <string name="book_name_rom" translatable="false">Romans</string>
+    <string name="book_name_1co" translatable="false">1 Corinthians</string>
+    <string name="book_name_2co" translatable="false">2 Corinthians</string>
+    <string name="book_name_gal" translatable="false">Galatians</string>
+    <string name="book_name_eph" translatable="false">Ephesians</string>
+    <string name="book_name_php" translatable="false">Philippians</string>
+    <string name="book_name_col" translatable="false">Colossians</string>
+    <string name="book_name_1th" translatable="false">1 Thessalonians</string>
+    <string name="book_name_2th" translatable="false">2 Thessalonians</string>
+    <string name="book_name_1ti" translatable="false">1 Timothy</string>
+    <string name="book_name_2ti" translatable="false">2 Timothy</string>
+    <string name="book_name_tit" translatable="false">Titus</string>
+    <string name="book_name_phm" translatable="false">Philemon</string>
+    <string name="book_name_heb" translatable="false">Hebrews</string>
+    <string name="book_name_jas" translatable="false">James</string>
+    <string name="book_name_1pe" translatable="false">1 Peter</string>
+    <string name="book_name_2pe" translatable="false">2 Peter</string>
+    <string name="book_name_1jn" translatable="false">1 John</string>
+    <string name="book_name_2jn" translatable="false">2 John</string>
+    <string name="book_name_3jn" translatable="false">3 John</string>
+    <string name="book_name_jud" translatable="false">Jude</string>
+    <string name="book_name_rev" translatable="false">Revelation</string>
+</resources>
