@@ -190,7 +190,8 @@
           "explanation": "Elisha receives Elijah’s prophetic mantle.",
           "references": [
             "2KI 2:1-14"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q02",
@@ -202,7 +203,8 @@
           "explanation": "The fall of Samaria marks the end of the northern kingdom.",
           "references": [
             "2KI 17:5-23"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q03",
@@ -219,7 +221,8 @@
           "explanation": "Josiah responds to the discovered book and leads reforms.",
           "references": [
             "2KI 22:1-23:25"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q04",
@@ -236,7 +239,8 @@
           "explanation": "Babylon conquers Jerusalem and destroys the temple.",
           "references": [
             "2KI 25:1-21"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q05",
@@ -248,7 +252,8 @@
           "explanation": "The closing verses report Jehoiachin’s release and changed status.",
           "references": [
             "2KI 25:27-30"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -394,7 +399,9 @@
           "correct_option_id": "A",
           "references": [
             "2KI 2:1-14"
-          ]
+          ],
+          "explanation": "Elisha receives Elijah’s prophetic mantle.",
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q02",
@@ -406,7 +413,8 @@
           "explanation": "የሰማርያ ውድቀት የሰሜኑን መንግሥት መጨረሻ ያመለክታል።",
           "references": [
             "2KI 17:5-23"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "2KI-Q03",
@@ -422,7 +430,9 @@
           "correct_option_id": "A",
           "references": [
             "2KI 22:1-23:25"
-          ]
+          ],
+          "explanation": "Josiah responds to the discovered book and leads reforms.",
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q04",
@@ -438,7 +448,9 @@
           "correct_option_id": "A",
           "references": [
             "2KI 25:1-21"
-          ]
+          ],
+          "explanation": "Babylon conquers Jerusalem and destroys the temple.",
+          "explanation_locale": "en"
         },
         {
           "id": "2KI-Q05",
@@ -450,7 +462,8 @@
           "explanation": "የመጨረሻዎቹ ቁጥሮች ዮአኪን መፈታቱንና የኑሮ ሁኔታው መቀየሩን ይገልጻሉ።",
           "references": [
             "2KI 25:27-30"
-          ]
+          ],
+          "explanation_locale": "am"
         }
       ]
     }
