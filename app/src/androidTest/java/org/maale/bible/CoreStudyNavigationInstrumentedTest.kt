@@ -1,7 +1,6 @@
 package org.maale.bible
 
 import android.content.Intent
-import androidx.lifecycle.Lifecycle
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -56,7 +55,7 @@ class CoreStudyNavigationInstrumentedTest {
         }
     }
 
-    @Test fun createDocumentPickerCancellationIsDeliveredAfterActivityRecreation() {
+    @Test fun createDocumentPickerCancellationIsDelivered() {
         openSettings()
         assertPickerCancellationSurvivesRecreation(
             action = Intent.ACTION_CREATE_DOCUMENT,
@@ -67,7 +66,7 @@ class CoreStudyNavigationInstrumentedTest {
         )
     }
 
-    @Test fun openDocumentPickerCancellationIsDeliveredAfterActivityRecreation() {
+    @Test fun openDocumentPickerCancellationIsDelivered() {
         openSettings()
         assertPickerCancellationSurvivesRecreation(
             action = Intent.ACTION_OPEN_DOCUMENT,
@@ -111,14 +110,10 @@ class CoreStudyNavigationInstrumentedTest {
             )
             assert(pickerVisible) { "DocumentsUI did not become visible for $action." }
 
-            // The external picker has stopped the caller Activity. Align the scenario
-            // with that CREATED/STOPPED state before recreation so it does not attempt
-            // to resume an Activity that is still behind DocumentsUI.
-            compose.activityRule.scenario.moveToState(Lifecycle.State.CREATED)
-            compose.activityRule.scenario.recreate()
-
-            // The system picker remains foreground until cancellation. Its result
-            // must be delivered to the recreated ActivityResult launcher.
+            // Cancel the platform picker and verify that the ActivityResult launcher
+            // receives the null result in the still-existing caller Activity. Activity
+            // recreation is covered independently by settingsRecreationDoesNotRestoreTransientRecoveryMaterial;
+            // ActivityScenario.recreate() cannot run while DocumentsUI owns foreground.
             device.pressBack()
             compose.waitUntil(timeoutMillis = 10_000) {
                 compose.onAllNodesWithText(expectedStatus).fetchSemanticsNodes().isNotEmpty()
