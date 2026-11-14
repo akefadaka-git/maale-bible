@@ -1,58 +1,65 @@
 # P1.1 Exact-Head Closure Evidence — 2026-11-14
 
 **Branch:** `implementation/p1-1-source-ingestion-2026-11-14`  
-**Implementation code head reviewed:** `732d4c6c849b7cef8b0325fd30d7b282429d288c`  
-**Implementation status:** PARTIAL — metadata and synthetic-only validator foundation implemented  
+**Current branch head:** `d4f166e1fb7131826751138be7d0f6f16bb3f750`  
+**Implementation status:** PARTIAL — exact-head CI and restricted corpus evidence pass; one integration verification remains  
 **Closure status:** NOT CLOSED  
-**Merge / release / signing / deployment:** NOT AUTHORIZED
+**Merge / release / signing / deployment / publication:** NOT AUTHORIZED
 
 ## Frozen metadata-only inputs
 
 - Selected source: MDYTWF / mdyeth, 2008 Maale Full Bible.
 - Archive SHA-256: `4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11`.
 - Per-file metadata hash register: `content/manifests/maale-usfm-file-hashes.json`.
-- Frozen expected inventory: 66 unique USFM book IDs, drawn from the existing hash register. The validator compares the ID set; it does not infer display order from ZIP order.
-- Historical A2 counts: 1,189 chapters; 30,506 verse-marker lines.
-- New P1 manifest, policy, source schema and report schema contain metadata only. Distribution is explicitly NOT APPROVED.
-- Rights state: A2 baseline accepted with exception; original signer identity/authority caveat remains; Maale specialist linguistic review DEFERRED.
+- Frozen inventory: 66 unique expected USFM book IDs.
+- Rights state: A2 baseline accepted with exception; cryptographic signer trust remains undefined; Maale specialist linguistic review remains DEFERRED.
+- Distribution state remains NOT APPROVED. Restricted validation does not grant publication or distribution rights.
 
 ## Implemented
 
-- Metadata-only source manifest: `content/manifests/maale-p1-source-manifest.v1.json`.
-- Frozen validation policy: `content/manifests/p1-source-validation-policy.v1.json`.
-- Source-manifest and redacted-report JSON schemas.
-- SHA-256 verifier with known-vector and mismatch tests.
-- ZIP safety extraction: archive hash pre-check, normalized-path and traversal rejection, duplicate-path detection, symlink/encryption rejection, entry/expanded-size and compression-ratio limits, bounded streaming, CRC verification, special Unix-entry rejection and staging cleanup on extraction or pipeline failure.
-- 66-book USFM inventory validator with strict UTF-8 decoding, NFC, replacement-character and control-character checks.
-- Redacted report writer that accepts only stable error codes and sets `scriptureTextIncluded=false`.
-- Restricted-only marker inventory generator: verifies each expected file's byte size and SHA-256, rejects duplicate IDs, counts marker tokens, and writes only marker counts and per-book metadata.
-- Maven/JUnit test suite and synthetic-only GitHub Actions workflow.
+- Metadata-only source manifest, frozen validation policy, source-manifest and redacted-report schemas.
+- SHA-256 verifier and safe ZIP extraction implementation with traversal, normalized duplicate, symlink/special entry, encryption, entry count/size, expanded size, compression ratio, bounded streaming, CRC and cleanup checks.
+- 66-book USFM inventory validator with strict UTF-8, NFC, replacement-character and control-character checks.
+- Redacted report writer and restricted-only marker inventory generator.
+- Maven/JUnit synthetic test suite and GitHub Actions regression test for the Python marker generator.
 
-## Verification actually performed
+## Exact-head CI evidence
 
-| Check | Result | Scope / limitation |
+| Check | Result | Evidence |
 |---|---|---|
-| Source manifest assembled from existing metadata hash register | PASS | 66 unique IDs; no scripture text copied |
-| Exact committed JSON metadata validation | PASS | Parsed manifest, policy, marker profile and schemas; archive SHA and 66-ID set cross-match the existing hash register; distribution remains fail-closed |
-| Marker-inventory generator logic | PASS | Local Python synthetic 66-file fixture: marker counts correct; output contained no fixture text. This is not the Maale corpus run |
-| Core Java compilation | PASS | Local `javac` compilation of SHA-256, Unicode, inventory and redacted-report classes on Java 21; not the full Maven build |
-| Synthetic inventory and Unicode runtime checks | PASS | Local Java run validated 66 synthetic book IDs and rejected malformed UTF-8 and non-NFC input |
-| Full production-source syntax/API-shape check | PASS WITH LIMITATION | Local `javac` compiled all production sources against minimal dependency API stubs; this is not validation against actual Maven dependencies |
-| Redacted report serialization | PASS | Local Java execution; parsed output as JSON and confirmed text-free report flag |
-| Full Maven/JUnit suite | NOT RUN | Maven is unavailable in the local execution environment |
-| GitHub Actions exact-head status | UNKNOWN / NOT RETURNED | GitHub combined status query returned no status checks for the implementation head; no successful workflow run is claimed |
-| Commons Compress ZIP validator compilation/runtime | NOT RUN | Requires Maven dependency resolution; no local Maven executable |
-| JSON Schema validation | NOT RUN | Schema JSON parsed; formal JSON Schema engine validation remains required |
-| Actual 2008 Maale archive extraction and per-file verification | NOT RUN | Exact archive not present in an accessible Owner-approved restricted workspace |
-| Corpus-derived USFM marker inventory | BLOCKED | No corpus-derived marker counts generated; marker profile remains explicitly pending |
-| Restricted redaction scan | NOT RUN | Synthetic output only; restricted corpus evidence is absent |
+| P1.1 Python marker-generator regression | PASS | Run [#43550622738](https://github.com/akefadaka-git/maale-bible/actions/runs/43550622738), head `d4f166e1fb7131826751138be7d0f6f16bb3f750`; 1 test passed |
+| Maven/JUnit synthetic suite | PASS | Same run; 15 tests, 0 failures, 0 errors, 0 skipped; `BUILD SUCCESS` |
+| Earlier exact PR-head Maven run | PASS | [#43550202451](https://github.com/akefadaka-git/maale-bible/actions/runs/43550202451), 15 tests passed |
+| A2 source-readiness evidence | PASS | [#43550202454](https://github.com/akefadaka-git/maale-bible/actions/runs/43550202454) |
 
-## Required evidence to close P1.1
+The restricted corpus was never sent to GitHub Actions. CI used synthetic fixtures only.
 
-1. Run the complete Maven/JUnit suite on the exact implementation branch head and retain the successful run URL and SHA.
-2. In the Owner-approved restricted workspace, verify the archive SHA before extraction, then verify all 66 file hashes, inventory, UTF-8/NFC and control-character checks.
-3. Run `tools/scripture-ingest/scripts/generate_marker_inventory.py` against that exact verified corpus. Store its output only in restricted evidence storage unless a separate disclosure review approves a metadata-only public profile.
-4. Produce a redacted validation report and scan it for scripture text, source excerpts, protected payload, and user data.
-5. Preserve the rights/provenance exception and DEFERRED specialist-review state. A technical PASS is not distribution approval.
+## Restricted corpus evidence
 
-**Disposition:** PARTIAL. The metadata-only contract and synthetic implementation are committed, but P1.1 is not VERIFIED-CLOSED. P1.2 parser implementation, package signing, package activation, merge and distribution remain outside this closure.
+The original Owner-provided `mdyeth_usfm.zip` was recovered from the Library and materialized into the isolated restricted workspace. It was not downloaded from a substitute source.
+
+| Check | Result | Evidence |
+|---|---|---|
+| Archive identity | PASS | 1,809,863 bytes; SHA-256 exactly matches the frozen manifest |
+| ZIP structure and safe extraction | PASS | 70 entries; 7,554,174 expanded bytes; no traversal, absolute paths, normalized duplicates, symlinks/special entries, encryption, or configured limit violations; CRC-checked extraction completed |
+| Archive signature | PASS WITH TRUST CAVEAT | Good signature; fingerprint `54D714D76956DA6673DC1EEA5F62009D93505F26`; GPG trust remains UNDEFINED |
+| Signed per-file hashes | PASS | 66/66 USFM files match the archive's signed hash list; no mismatches |
+| Book inventory | PASS | 66/66 expected unique book IDs; no missing or unexpected IDs |
+| Structural counts | PASS | 1,189 chapters; 30,506 verse-marker lines |
+| Unicode | PASS | 66/66 strict UTF-8; 0 non-NFC files; 0 replacement characters; 0 unexpected controls |
+| Corpus marker inventory | PASS — RESTRICTED ONLY | Generated with the corrected marker generator; 66 books, 37 marker kinds and 77,099 marker occurrences; output retained only in restricted storage |
+| Redaction scan | PASS | Redacted JSON report and marker inventory parse; metadata allowlist validated; no verse text, source excerpts or scripture payload found; `scriptureTextIncluded=false` |
+
+The marker inventory and restricted validation report are intentionally not committed to the public repository or uploaded as public CI artifacts.
+
+## Remaining integration verification
+
+- **NOT RUN:** Execute the production Java `ArchiveSafetyValidator` / `ValidationPipeline` against this exact real archive inside the restricted workspace with the actual Commons Compress dependency. Maven and the dependency are unavailable in the restricted local runtime. The Java implementation passes the synthetic exact-head Maven suite, while the real archive was safely extracted and verified through the isolated independent restricted-workspace procedure above.
+- **NOT RUN:** Formal JSON Schema engine validation. The committed schemas were parsed as JSON.
+- **NOT RUN:** Maale specialist linguistic review. This remains an explicit A2 exception and must not be inferred from technical checks.
+
+## Disposition
+
+**P1.1 remains PARTIAL and NOT VERIFIED-CLOSED.** Exact-head CI and the restricted corpus checks pass, including real marker inventory generation and redaction verification. Closure is held only on the production Java pipeline's real-archive integration run; no substitute implementation result is represented as that Java run.
+
+P1.2 parser implementation, merge, package signing, activation, release, deployment and distribution remain outside this gate and require separate authorization.
