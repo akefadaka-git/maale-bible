@@ -219,7 +219,7 @@
     <string name="reader_scripture_chapter_missing_body">ይህ ምዕራፍ በተጫነው የመጽሐፍ ቅዱስ እትም ውስጥ የለም።</string>
     <string name="reader_scripture_invalid_title">የመጽሐፍ ቅዱስ ጥቅሉን ማረጋገጥ አልተቻለም</string>
     <string name="reader_scripture_invalid_body">የተጫነው ጥቅል ከሚጠበቀው የማዕሌ መጽሐፍ ቅዱስ እትምና መዋቅር ጋር አይዛመድም። ምንም ጽሑፍ አልታየም።</string>
-    <string name="reader_coordinates_notice">የንባብ ቦታዎ በዚህ መሣሪያ ላይ ይቀመጣል። የተረጋገጠው የእትም ጥቅል ሲጫን የምዕራፍ ጽሑፍ ይታያል።</string>
+    
     <string name="reader_back_to_books">መጽሐፍት</string>
     <string name="reader_position_coordinates">ምዕራፍ %1$d · ቁጥር %2$d</string>
     <string name="reader_bookmark_coordinates">ምዕራፍ %1$d፣ ቁጥር %2$d</string>
