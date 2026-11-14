@@ -33,7 +33,7 @@
     <string name="settings_restore_button">Restore backup</string>
     <string name="settings_content">Content availability</string>
     <string name="settings_content_help">The catalogue is available offline. Scripture text, full-text scripture search, audio and translations remain disabled until their source and rights gates are satisfied.</string>
-    <string name="reader_coordinates_notice">Scripture text is not available in this build. These are personal reading coordinates only; chapter and verse boundaries are not inferred.</string>
+    <string name="reader_coordinates_notice">Your reading position is saved on this device. Chapter text appears when the verified edition package is installed.</string>
     <string name="study_empty">Your study library is empty. Open a book to save a reading position, bookmark, highlight or note.</string>
     <string name="reader_position">Reading position</string>
     <string name="reader_previous_chapter">Previous chapter</string>
