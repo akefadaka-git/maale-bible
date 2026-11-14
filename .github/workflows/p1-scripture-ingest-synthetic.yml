@@ -1,0 +1,37 @@
+name: P1.1 Scripture ingestion synthetic tests
+on:
+  push:
+    branches:
+      - implementation/p1-1-source-ingestion-2026-11-14
+    paths:
+      - "tools/scripture-ingest/**"
+      - "content/manifests/**"
+      - "content/schemas/**"
+      - ".github/workflows/p1-scripture-ingest-synthetic.yml"
+  pull_request:
+    paths:
+      - "tools/scripture-ingest/**"
+      - "content/manifests/**"
+      - "content/schemas/**"
+      - ".github/workflows/p1-scripture-ingest-synthetic.yml"
+permissions:
+  contents: read
+jobs:
+  synthetic-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run synthetic marker-inventory tests
+        working-directory: tools/scripture-ingest
+        run: python -m unittest discover -s scripts -p 'test_*.py' -v
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - name: Run synthetic tests only
+        working-directory: tools/scripture-ingest
+        run: mvn --batch-mode --no-transfer-progress test

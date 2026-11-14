@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maale-bible.invalid/schemas/scripture-source-manifest.schema.json",
+  "title": "Metadata-only Scripture Source Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifestVersion",
+    "manifestType",
+    "sourceId",
+    "editionId",
+    "languageTag",
+    "sourceName",
+    "sourceArchiveName",
+    "expectedArchiveSha256",
+    "expectedFileManifest",
+    "expectedFileCount",
+    "expectedBookIds",
+    "licenceId",
+    "attributionRecordId",
+    "reviewState",
+    "linguisticReviewState",
+    "distributionState"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "type": "string"
+    },
+    "manifestType": {
+      "const": "RESTRICTED_SOURCE_INGESTION_INPUT"
+    },
+    "sourceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "editionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "languageTag": {
+      "type": "string"
+    },
+    "sourceName": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "rightsHolders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceRevision": {
+      "type": "string"
+    },
+    "sourceArchiveName": {
+      "type": "string"
+    },
+    "expectedArchiveSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "expectedFileManifest": {
+      "type": "string"
+    },
+    "expectedFileCount": {
+      "const": 66
+    },
+    "expectedBookIds": {
+      "type": "array",
+      "minItems": 66,
+      "maxItems": 66,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9]{3}$"
+      }
+    },
+    "expectedChapterCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "expectedVerseMarkerLines": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "licenceId": {
+      "type": "string"
+    },
+    "attributionRecordId": {
+      "type": "string"
+    },
+    "sourceProfileId": {
+      "type": "string"
+    },
+    "usfmVersionProfile": {
+      "type": "string"
+    },
+    "reviewState": {
+      "type": "string"
+    },
+    "linguisticReviewState": {
+      "type": "string"
+    },
+    "distributionState": {
+      "const": "NOT_APPROVED_BY_THIS_MANIFEST"
+    }
+  }
+}
