@@ -191,7 +191,8 @@
           "explanation": "Numbers 13 names twelve representatives, one from each tribe.",
           "references": [
             "NUM 13:1-16"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NUM-Q02",
@@ -203,7 +204,8 @@
           "explanation": "Joshua and Caleb give a faithful report and urge the people to trust God.",
           "references": [
             "NUM 14:6-9"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NUM-Q03",
@@ -220,7 +222,8 @@
           "explanation": "Joshua is commissioned before the community as Moses’ successor.",
           "references": [
             "NUM 27:18-23"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NUM-Q04",
@@ -237,7 +240,8 @@
           "explanation": "The final chapters place Israel on the plains of Moab by the Jordan.",
           "references": [
             "NUM 22:1; 36:13"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NUM-Q05",
@@ -249,7 +253,8 @@
           "explanation": "The book combines census and genealogical material with stories, laws and travel accounts.",
           "references": [
             "NUM 1–36"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -397,7 +402,8 @@
           "explanation": "ዘኁልቁ 13 ከእያንዳንዱ ነገድ አንድ ሰው የሆኑ አሥራ ሁለት ተወካዮችን ይጠቅሳል።",
           "references": [
             "NUM 13:1-16"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "NUM-Q02",
@@ -405,11 +411,12 @@
           "difficulty": "easy",
           "prompt": "ኢያሱና ካሌብ ሕዝቡ ለፍርሃት እንዳይሸነፍ ያበረታታሉ።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "Joshua and Caleb give a faithful report and urge the people to trust God.",
           "references": [
             "NUM 14:6-9"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NUM-Q03",
@@ -426,7 +433,8 @@
           "explanation": "ኢያሱ በማኅበረሰቡ ፊት እንደ ሙሴ ተተኪ ተሾመ።",
           "references": [
             "NUM 27:18-23"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "NUM-Q04",
@@ -443,7 +451,8 @@
           "explanation": "የመጨረሻዎቹ ምዕራፎች እስራኤል በዮርዳኖስ አጠገብ በሞዓብ ሜዳ እንዳለች ያሳያሉ።",
           "references": [
             "NUM 22:1; 36:13"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "NUM-Q05",
@@ -451,11 +460,12 @@
           "difficulty": "medium",
           "prompt": "ዘኁልቁ የቆጠራ ዝርዝሮችንና የምድረ በዳ ጉዞ ትረካዎችን ይዟል።",
           "options": [],
-          "correct_answer": "",
-          "explanation": true,
+          "correct_answer": true,
+          "explanation": "The book combines census and genealogical material with stories, laws and travel accounts.",
           "references": [
             "NUM 1–36"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     }
