@@ -46,4 +46,5 @@
     <string name="learning_answer_correct" translatable="false">Correct</string>
     <string name="learning_answer_incorrect" translatable="false">Not quite — review the explanation</string>
     <string name="learning_answer_references" translatable="false">References: %1$s</string>
+    <string name="learning_explanation_fallback" translatable="false">Explanation language: English (Amharic review pending).</string>
 </resources>
