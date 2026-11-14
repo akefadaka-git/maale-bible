@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'app/**'
+      - 'tools/i18n/**'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
@@ -35,6 +36,8 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+      - name: Validate EN, AM and Maale resource parity
+        run: python3 tools/i18n/check_android_resource_parity.py
       - name: Enable KVM for Android emulator
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
