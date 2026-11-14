@@ -261,4 +261,31 @@ class P2V2LocalStudyPersistenceTest {
         file.delete()
     }
 
+    @Test fun v2ToV4MigrationPreservesPassageNotesAndMappingData() {
+        val file = tempDb("p4-v2-migration.db")
+        val legacy = BundledSQLiteDriver().open(file.absolutePath)
+        legacy.execute("PRAGMA foreign_keys = ON")
+        legacy.execute("CREATE TABLE canonical_passages(id TEXT PRIMARY KEY NOT NULL, book_id TEXT NOT NULL, chapter INTEGER NOT NULL CHECK(chapter > 0), verse_start INTEGER NOT NULL CHECK(verse_start > 0), verse_end INTEGER NOT NULL CHECK(verse_end >= verse_start))")
+        legacy.execute("CREATE TABLE editions(id TEXT PRIMARY KEY NOT NULL, language_tag TEXT NOT NULL, title TEXT NOT NULL)")
+        legacy.execute("CREATE TABLE edition_passage_map(id INTEGER PRIMARY KEY AUTOINCREMENT, edition_id TEXT NOT NULL REFERENCES editions(id) ON DELETE CASCADE, edition_ref TEXT NOT NULL, canonical_id TEXT REFERENCES canonical_passages(id) ON DELETE CASCADE, mapping_status TEXT NOT NULL CHECK(mapping_status IN ('EXACT','SPLIT','MERGED','PARTIAL','UNMAPPED')), UNIQUE(edition_id, edition_ref))")
+        legacy.execute("CREATE TABLE study_notes(id TEXT PRIMARY KEY NOT NULL, canonical_id TEXT NOT NULL REFERENCES canonical_passages(id) ON DELETE CASCADE, body TEXT NOT NULL CHECK(length(body) > 0), created_at INTEGER NOT NULL CHECK(created_at >= 0))")
+        legacy.execute("CREATE INDEX index_notes_canonical ON study_notes(canonical_id)")
+        legacy.execute("INSERT INTO canonical_passages VALUES('GEN.1.1','GEN',1,1,1)")
+        legacy.execute("INSERT INTO editions VALUES('synthetic-en','en','Synthetic English')")
+        legacy.execute("INSERT INTO edition_passage_map(edition_id,edition_ref,canonical_id,mapping_status) VALUES('synthetic-en','GEN 1:1','GEN.1.1','EXACT')")
+        legacy.execute("INSERT INTO study_notes VALUES('legacy-v2-note','GEN.1.1','Preserve v2 note',125)")
+        legacy.execute("PRAGMA user_version = 2")
+        legacy.close()
+
+        LocalStudyDatabase.openFile(file).use { db ->
+            assertEquals(4L, db.userVersion())
+            assertEquals(1L, db.mappingCount())
+            assertEquals(1L, db.noteCount())
+            db.addJournalNote("new-v4-journal", "New private journal entry", 200L)
+            assertEquals(2L, db.noteCount())
+            assertEquals("New private journal entry", db.journalNotes().single().body)
+        }
+        file.delete()
+    }
+
 }

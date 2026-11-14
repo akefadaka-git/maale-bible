@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-2sa-bilingual-v1",
+  "book": {
+    "usfm_id": "2SA",
+    "english_name": "2 Samuel",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-2samuel",
+      "title": "2 Samuel",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/2-samuel/",
+      "use": "Structure, David’s reign, covenant and narrative themes"
+    },
+    {
+      "id": "esv-samuel",
+      "title": "Introduction to 1–2 Samuel",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/",
+      "use": "Literary context, Davidic covenant and interpretive themes"
+    },
+    {
+      "id": "usccb-2samuel",
+      "title": "2 Samuel",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/2samuel/0",
+      "use": "Canonical text and book context"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "summary": "2 Samuel follows David from the death of Saul through David’s reign over Judah and all Israel. It presents the consolidation of the kingdom, the covenant promise concerning David’s house, military and political achievements, grave personal wrongdoing, family violence, rebellion and the complex consequences of royal power.",
+        "authorship": "The book does not name its final author. 1–2 Samuel were originally one literary work and preserve traditions and narratives about Samuel, Saul and David. The composition and editing history are debated; proposed links to prophetic records should be described as possibilities or traditions, not established authorship.",
+        "setting": "The narrative is set in the early monarchy, moving from the aftermath of Saul’s death to David’s rule from Jerusalem. Its world includes Judah, the northern tribes, neighboring peoples and court and family settings.",
+        "audience_and_purpose": "The book explores kingship, covenant, justice, sin, repentance and the effects of leadership on a whole community. It remembers David’s covenant promise while refusing to conceal David’s abuse of power and the damage that follows.",
+        "structure": [
+          {
+            "range": "1:1–4:12",
+            "heading": "David becomes king in Judah",
+            "summary": "David mourns Saul and Jonathan, is anointed in Judah, and the conflict between the houses of Saul and David continues."
+          },
+          {
+            "range": "5:1–6:23",
+            "heading": "David rules all Israel",
+            "summary": "The tribes recognize David; Jerusalem becomes the royal center and the ark is brought there."
+          },
+          {
+            "range": "7:1–10:19",
+            "heading": "Covenant and victories",
+            "summary": "Nathan delivers the promise concerning David’s house; David’s rule expands and he shows kindness to Mephibosheth."
+          },
+          {
+            "range": "11:1–12:31",
+            "heading": "David’s sin and its exposure",
+            "summary": "David takes Bathsheba and arranges Uriah’s death; Nathan confronts him and consequences follow."
+          },
+          {
+            "range": "13:1–20:26",
+            "heading": "Conflict within David’s house",
+            "summary": "Amnon’s violence, Absalom’s revolt and Sheba’s rebellion expose deep fractures."
+          },
+          {
+            "range": "21:1–24:25",
+            "heading": "Closing narratives",
+            "summary": "Poems, accounts of warriors, national crisis and the census form a concluding collection."
+          }
+        ],
+        "themes": [
+          "The covenant promise to David and the future of his house",
+          "The moral accountability of rulers",
+          "The destructive consequences of abuse and concealed wrongdoing",
+          "Repentance, mercy and continuing consequences",
+          "Family, political and national conflict",
+          "Worship and the place of Jerusalem"
+        ],
+        "key_people": [
+          "David",
+          "Nathan",
+          "Bathsheba",
+          "Uriah",
+          "Joab",
+          "Absalom",
+          "Mephibosheth",
+          "Solomon"
+        ],
+        "key_passages": [
+          "2SA 1:17-27",
+          "2SA 5:1-12",
+          "2SA 7:1-17",
+          "2SA 9:1-13",
+          "2SA 11:1-27",
+          "2SA 12:1-14",
+          "2SA 15:1-14",
+          "2SA 22:1-51"
+        ],
+        "interpretive_care": [
+          "Do not treat the Davidic covenant as a claim that David’s conduct was always righteous; the narrative explicitly condemns grave wrongdoing.",
+          "The account of sexual violence and political abuse should be handled with care and never framed as the victim’s responsibility.",
+          "Distinguish the narrator’s description of events from moral approval; the consequences of David’s actions extend beyond him.",
+          "Chronological and editorial questions in the closing chapters are complex; do not force every episode into a simple continuous timeline."
+        ],
+        "title": "2 Samuel — covenant, kingship and accountability"
+      },
+      "inductive_studies": [
+        {
+          "id": "2SA-S01",
+          "range": "2SA 7:1-17",
+          "title": "The promise to David",
+          "observation": [
+            "List what David proposes, what Nathan first says, and what God promises."
+          ],
+          "interpretation": [
+            "How does the promise shift attention from David building a house to God establishing David’s house?"
+          ],
+          "application": [
+            "How should a promise shape leadership without becoming a claim to personal entitlement?"
+          ]
+        },
+        {
+          "id": "2SA-S02",
+          "range": "2SA 11:1-27",
+          "title": "Power and accountability",
+          "observation": [
+            "Trace David’s actions and identify who bears the cost of his decisions."
+          ],
+          "interpretation": [
+            "What does the narrative reveal about unchecked power and the concealment of wrongdoing?"
+          ],
+          "application": [
+            "What accountability structures protect people when leaders misuse authority?"
+          ]
+        },
+        {
+          "id": "2SA-S03",
+          "range": "2SA 12:1-14",
+          "title": "Nathan confronts David",
+          "observation": [
+            "Identify the parable, David’s response and Nathan’s declaration."
+          ],
+          "interpretation": [
+            "Why is the story told before David is directly accused?"
+          ],
+          "application": [
+            "How can truthful correction be offered with courage and care?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2SA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who brings David the promise concerning his house?",
+          "options": [
+            "Nathan",
+            "Samuel",
+            "Gad",
+            "Joab"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Nathan delivers the message in the cited passage.",
+          "references": [
+            "2SA 7:1-17"
+          ]
+        },
+        {
+          "id": "2SA-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "David is promised that his house and kingdom will be established.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The covenant promise concerns David’s house and kingdom.",
+          "references": [
+            "2SA 7:11-16"
+          ]
+        },
+        {
+          "id": "2SA-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who confronts David after his wrongdoing with Bathsheba and Uriah?",
+          "options": [
+            "Nathan",
+            "Joab",
+            "Absalom",
+            "Mephibosheth"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Nathan tells David a parable and names his wrongdoing.",
+          "references": [
+            "2SA 12:1-14"
+          ]
+        },
+        {
+          "id": "2SA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which son leads a revolt against David?",
+          "options": [
+            "Absalom",
+            "Solomon",
+            "Amnon",
+            "Jonathan"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Absalom’s rebellion occupies a major section of the narrative.",
+          "references": [
+            "2SA 15:1-14"
+          ]
+        },
+        {
+          "id": "2SA-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The narrative presents David’s abuse of power as harmless because he is king.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "The prophet confronts David and the narrative describes severe consequences.",
+          "references": [
+            "2SA 11:1-12:14"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "summary": "2 ሳሙኤል መጽሐፍ ከሳኦል ሞት በኋላ የዳዊትን በይሁዳና በእስራኤል ሁሉ ላይ ያለውን ንግሥና ይከተላል። የመንግሥቱን መጠናከር፣ ስለ ዳዊት ቤት የተሰጠውን ቃል ኪዳን፣ የጦርነትና የፖለቲካ ስኬቶችን፣ ከባድ የግል ኃጢአትን፣ የቤተሰብ ግጭትንና የንጉሣዊ ሥልጣን ውጤቶችን ያቀርባል።",
+        "authorship": "መጽሐፉ የመጨረሻ ጸሐፊውን አይጠቅስም። 1ኛና 2ኛ ሳሙኤል በመጀመሪያ አንድ የሥነ ጽሑፍ ሥራ ነበሩ፤ ስለ ሳሙኤል፣ ሳኦልና ዳዊት የተለያዩ ትውፊቶችን ይይዛሉ። የአጻጻፍና የአርትዖት ታሪካቸው በምሁራን ይወያያል፤ ከነቢያት መዝገቦች ጋር የሚያያዙ ሐሳቦች እንደ ትውፊት ወይም ግምት መቅረብ አለባቸው።",
+        "setting": "ትረካው በቀደመው የንጉሥነት ዘመን ይካሄዳል፤ ከሳኦል ሞት በኋላ ይጀምራልና ዳዊት ከኢየሩሳሌም እስከሚገዛ ድረስ ይቀጥላል። ይሁዳን፣ የሰሜኑን ነገዶችና አጎራባች ሕዝቦችን ያካትታል።",
+        "audience_and_purpose": "መጽሐፉ ንግሥናን፣ ቃል ኪዳንን፣ ፍትሕን፣ ኃጢአትን፣ ንስሐንና የአመራር ተጽዕኖን ይመረምራል። የዳዊትን ቃል ኪዳን ሲያስታውስ የዳዊትን የሥልጣን በደልና የተከተለውን ጉዳት አይሸፍንም።",
+        "structure": [
+          {
+            "range": "1:1–4:12",
+            "heading": "ዳዊት በይሁዳ ንጉሥ ሆነ",
+            "summary": "ዳዊት ለሳኦልና ለዮናታን ያለውን ሐዘን ይገልጻል፤ በይሁዳ ይቀባል።"
+          },
+          {
+            "range": "5:1–6:23",
+            "heading": "ዳዊት በእስራኤል ሁሉ ላይ ገዛ",
+            "summary": "ነገዶቹ ዳዊትን ይቀበላሉ፤ ኢየሩሳሌም የመንግሥት ማዕከል ትሆናለች።"
+          },
+          {
+            "range": "7:1–10:19",
+            "heading": "ቃል ኪዳንና ድሎች",
+            "summary": "ናታን ስለ ዳዊት ቤት የተሰጠውን ተስፋ ያቀርባል፤ ዳዊትም ድሎችን ያገኛል።"
+          },
+          {
+            "range": "11:1–12:31",
+            "heading": "የዳዊት ኃጢአትና መገለጡ",
+            "summary": "ዳዊት ቤርሳቤህን ይወስዳል፣ ኦርዮንም ለሞት ያጋልጣል፤ ናታን ይገሥጸዋል።"
+          },
+          {
+            "range": "13:1–20:26",
+            "heading": "በዳዊት ቤት ያለ ግጭት",
+            "summary": "የአምኖን ጥቃት፣ የአቤሴሎም ዓመፅና የሴባ አመፅ ጥልቅ መለያየትን ያሳያሉ።"
+          },
+          {
+            "range": "21:1–24:25",
+            "heading": "የመጨረሻ ታሪኮች",
+            "summary": "መዝሙሮች፣ የተዋጊዎች ታሪክ፣ ብሔራዊ ችግርና የሕዝብ ቆጠራ ይዘጋጃሉ።"
+          }
+        ],
+        "themes": [
+          "ለዳዊት የተሰጠው ቃል ኪዳንና የቤቱ ወደፊት",
+          "የገዢዎች ሥነ ምግባራዊ ተጠያቂነት",
+          "የሥልጣን በደልና የተሸሸገ ኃጢአት አውዳሚ ውጤት",
+          "ንስሐ፣ ምሕረትና የሚቀጥሉ ውጤቶች",
+          "የቤተሰብና የፖለቲካ ግጭት",
+          "አምልኮና የኢየሩሳሌም ሚና"
+        ],
+        "key_people": [
+          "ዳዊት",
+          "ናታን",
+          "ቤርሳቤህ",
+          "ኦርዮ",
+          "ኢዮአብ",
+          "አቤሴሎም",
+          "ሜፊቦሴት",
+          "ሰሎሞን"
+        ],
+        "key_passages": [
+          "2SA 1:17-27",
+          "2SA 5:1-12",
+          "2SA 7:1-17",
+          "2SA 9:1-13",
+          "2SA 11:1-27",
+          "2SA 12:1-14",
+          "2SA 15:1-14",
+          "2SA 22:1-51"
+        ],
+        "interpretive_care": [
+          "የዳዊት ቃል ኪዳን ዳዊት ሁልጊዜ ጻድቅ ነበር ማለት አይደለም፤ ትረካው ከባድ ጥፋቱን በግልጽ ይኮንናል።",
+          "የጾታዊ ጥቃትና የሥልጣን በደል ታሪኮችን በጥንቃቄ ያቅርቡ፤ ተጎጂዋን ተጠያቂ አታድርጉ።",
+          "የታሪኩን መግለጫ ከሥነ ምግባራዊ ይሁንታ ይለዩ።",
+          "በመጨረሻዎቹ ምዕራፎች ያሉ የጊዜ ቅደም ተከተልና የአርትዖት ጉዳዮች ውስብስብ ናቸው።"
+        ],
+        "title": "2 ሳሙኤል — ቃል ኪዳን፣ ንግሥናና ተጠያቂነት"
+      },
+      "inductive_studies": [
+        {
+          "id": "2SA-S01",
+          "range": "2SA 7:1-17",
+          "title": "ለዳዊት የተሰጠው ተስፋ",
+          "observation": [
+            "ዳዊት ያቀረበውን፣ ናታን መጀመሪያ የተናገረውንና እግዚአብሔር የገባውን ቃል ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ተስፋው ዳዊት ቤት ከመገንባት ወደ እግዚአብሔር የዳዊትን ቤት ማጽናት ትኩረትን እንዴት ይቀይራል?"
+          ],
+          "application": [
+            "ተስፋ አመራርን እንዴት ሊመራ ይችላል ነገር ግን የግል መብት ጥያቄ ሳይሆን?"
+          ]
+        },
+        {
+          "id": "2SA-S02",
+          "range": "2SA 11:1-27",
+          "title": "ሥልጣንና ተጠያቂነት",
+          "observation": [
+            "የዳዊትን ድርጊቶች ተከታተሉ፤ የውሳኔዎቹን ዋጋ ማን እንደከፈለ ለዩ።"
+          ],
+          "interpretation": [
+            "ትረካው ስለ ያልተገደበ ሥልጣንና ስለ ጥፋት መሸፈን ምን ያሳያል?"
+          ],
+          "application": [
+            "መሪዎች ሥልጣንን ሲያበላሹ ሰዎችን የሚጠብቁ የተጠያቂነት ሥርዓቶች ምን ሊሆኑ ይችላሉ?"
+          ]
+        },
+        {
+          "id": "2SA-S03",
+          "range": "2SA 12:1-14",
+          "title": "ናታን ዳዊትን ገሠጸ",
+          "observation": [
+            "ምሳሌውን፣ የዳዊትን ምላሽና የናታንን መግለጫ ለዩ።"
+          ],
+          "interpretation": [
+            "ዳዊት በቀጥታ ከመከሰሱ በፊት ታሪኩ ለምን በምሳሌ ቀረበ?"
+          ],
+          "application": [
+            "እውነተኛ ተግሣጽን በድፍረትና በጥንቃቄ እንዴት ማቅረብ ይቻላል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2SA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ስለ ዳዊት ቤት የተሰጠውን ተስፋ ለዳዊት ያቀረበው ማን ነው?",
+          "options": [
+            "ናታን",
+            "ሳሙኤል",
+            "ጋድ",
+            "ኢዮአብ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2SA 7:1-17"
+          ]
+        },
+        {
+          "id": "2SA-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "2SA 7:11-16",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "ቃል ኪዳኑ ስለ ዳዊት ቤትና መንግሥት ነው።",
+          "references": [
+            "2SA 7:11-16"
+          ]
+        },
+        {
+          "id": "2SA-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ዳዊት ከቤርሳቤህና ከኦርዮ ጋር ከፈጸመው ጥፋት በኋላ የገሠጸው ማን ነው?",
+          "options": [
+            "ናታን",
+            "ኢዮአብ",
+            "አቤሴሎም",
+            "ሜፊቦሴት"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2SA 12:1-14"
+          ]
+        },
+        {
+          "id": "2SA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በዳዊት ላይ ዓመፅ ያነሳው ልጁ ማን ነው?",
+          "options": [
+            "አቤሴሎም",
+            "ሰሎሞን",
+            "አምኖን",
+            "ዮናታን"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2SA 15:1-14"
+          ]
+        },
+        {
+          "id": "2SA-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "2SA 11:1-12:14",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "ነቢዩ ዳዊትን ይገሥጸዋል፤ ትረካውም ከባድ ውጤቶችን ያሳያል።",
+          "references": [
+            "2SA 11:1-12:14"
+          ]
+        }
+      ]
+    }
+  }
+}

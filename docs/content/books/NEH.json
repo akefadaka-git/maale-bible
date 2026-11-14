@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-neh-bilingual-v1",
+  "book": {
+    "usfm_id": "NEH",
+    "english_name": "Nehemiah",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-nehemiah",
+      "title": "Nehemiah",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/nehemiah/",
+      "use": "Memoirs, wall rebuilding and community reforms"
+    },
+    {
+      "id": "usccb-nehemiah",
+      "title": "Nehemiah",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/nehemiah/0",
+      "use": "Nehemiah’s memoirs, Persian period and structure"
+    },
+    {
+      "id": "esv-nehemiah",
+      "title": "Introduction to Nehemiah",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-nehemiah/",
+      "use": "Date, themes and purpose"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Nehemiah — rebuilding, covenant and community",
+        "summary": "Nehemiah describes the Persian-appointed governor’s return to Jerusalem, the rebuilding of the city walls amid opposition, the public reading of the Torah with Ezra, covenant renewal, repopulation and further reforms. It combines Nehemiah’s memoir-like reports with lists and communal records.",
+        "authorship": "The book is anonymous as a whole but contains first-person memoir material attributed to Nehemiah. It was once part of a combined Ezra-Nehemiah work. The identity of the compiler and the relationship among the memoirs and other sources remain debated.",
+        "setting": "The narrative is set in the Persian period, beginning with Nehemiah’s service at Susa and his arrival in Jerusalem around 445 BCE. It concerns the province of Judah under Persian imperial authority.",
+        "audience_and_purpose": "The book presents practical leadership, prayer, public responsibility, rebuilding and covenant renewal. It also records social inequality, opposition and difficult boundary reforms, which should be examined in their historical context.",
+        "structure": [
+          {
+            "range": "1:1–2:20",
+            "heading": "Nehemiah’s concern and commission",
+            "summary": "Nehemiah hears of Jerusalem’s condition, prays and receives permission to travel."
+          },
+          {
+            "range": "3:1–7:73",
+            "heading": "The wall is rebuilt",
+            "summary": "Families and groups repair sections while facing intimidation, internal pressure and resource challenges."
+          },
+          {
+            "range": "8:1–10:39",
+            "heading": "Torah reading and covenant renewal",
+            "summary": "Ezra reads the law; the people respond with confession, worship and a written commitment."
+          },
+          {
+            "range": "11:1–12:47",
+            "heading": "Jerusalem repopulated and wall dedicated",
+            "summary": "Lists describe residents and leaders; the wall is dedicated with celebration."
+          },
+          {
+            "range": "13:1–31",
+            "heading": "Nehemiah’s later reforms",
+            "summary": "Nehemiah addresses temple provisions, Sabbath practices and community boundaries."
+          }
+        ],
+        "themes": [
+          "Prayer and practical leadership",
+          "Collective work and shared responsibility",
+          "Public reading and understanding of Torah",
+          "Justice, debt and economic fairness",
+          "Covenant renewal and communal identity",
+          "Opposition, perseverance and reform"
+        ],
+        "key_people": [
+          "Nehemiah",
+          "Artaxerxes I",
+          "Ezra",
+          "Sanballat",
+          "Tobiah",
+          "Geshem",
+          "Eliashib"
+        ],
+        "key_passages": [
+          "NEH 1:1-11",
+          "NEH 2:1-20",
+          "NEH 4:1-23",
+          "NEH 5:1-19",
+          "NEH 6:15-16",
+          "NEH 8:1-12",
+          "NEH 9:1-38",
+          "NEH 13:4-31"
+        ],
+        "interpretive_care": [
+          "Nehemiah’s memoirs provide important first-person testimony, but the book as a whole is edited and includes other materials.",
+          "The wall project is both a practical civic undertaking and a theological symbol; do not reduce it to only one dimension.",
+          "The book’s reforms concerning marriage and group boundaries reflect a particular post-exilic context and should not be used to justify modern discrimination or coercion.",
+          "Nehemiah’s leadership is presented positively in many respects, but his own actions and the social effects of reforms can still be examined critically."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "NEH-S01",
+          "range": "NEH 2:11-20",
+          "title": "Inspect before rebuilding",
+          "observation": [
+            "List Nehemiah’s observations, his plan and the people’s response."
+          ],
+          "interpretation": [
+            "Why does Nehemiah inspect quietly before announcing the project?"
+          ],
+          "application": [
+            "What should leaders learn about listening and evidence before mobilizing people?"
+          ]
+        },
+        {
+          "id": "NEH-S02",
+          "range": "NEH 5:1-19",
+          "title": "Justice among the builders",
+          "observation": [
+            "Identify the complaints about debt and the governor’s response."
+          ],
+          "interpretation": [
+            "How does economic exploitation threaten a project meant to restore the community?"
+          ],
+          "application": [
+            "What safeguards can prevent powerful people from benefiting at the expense of others?"
+          ]
+        },
+        {
+          "id": "NEH-S03",
+          "range": "NEH 8:1-12",
+          "title": "The people understand the law",
+          "observation": [
+            "Observe who reads, who explains and how the people respond."
+          ],
+          "interpretation": [
+            "Why is understanding the reading as important as hearing it?"
+          ],
+          "application": [
+            "How can a community make learning accessible and connect it to shared celebration?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "NEH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What task does Nehemiah receive permission to undertake?",
+          "options": [
+            "Rebuild Jerusalem’s walls",
+            "Build a new palace in Susa",
+            "Conquer Samaria",
+            "Replace the Persian king"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Nehemiah is authorized to return and rebuild Jerusalem’s walls.",
+          "references": [
+            "NEH 2:1-20"
+          ]
+        },
+        {
+          "id": "NEH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Nehemiah records economic exploitation among the returned community.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Chapter 5 records complaints about debt, interest and the burdens on poorer families.",
+          "references": [
+            "NEH 5:1-19"
+          ]
+        },
+        {
+          "id": "NEH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Who reads the Torah publicly in Nehemiah 8?",
+          "options": [
+            "Ezra",
+            "Nehemiah",
+            "Sanballat",
+            "Artaxerxes"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Ezra reads the law while others help the people understand it.",
+          "references": [
+            "NEH 8:1-12"
+          ]
+        },
+        {
+          "id": "NEH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "How long did the wall rebuilding take according to the narrative?",
+          "options": [
+            "52 days",
+            "12 months",
+            "3 years",
+            "7 days"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Nehemiah reports that the wall was completed in fifty-two days.",
+          "references": [
+            "NEH 6:15-16"
+          ]
+        },
+        {
+          "id": "NEH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book records only construction work and no worship or covenant renewal.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "It includes public Torah reading, confession, covenant renewal and worship.",
+          "references": [
+            "NEH 8:1-10:39"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ነህምያ — እንደገና መገንባት፣ ቃል ኪዳንና ማኅበረሰብ",
+        "summary": "ነህምያ መጽሐፍ በፋርስ ንጉሥ የተሾመው ገዢ ወደ ኢየሩሳሌም መመለሱን፣ ከተማይቱ ግንብ በተቃውሞ መካከል እንደገና መገንባቱን፣ ከዕዝራ ጋር የኦሪት ሕዝባዊ ንባብን፣ የቃል ኪዳን እድሳትን፣ የከተማይቱን ሰፈራና ተጨማሪ ማሻሻያዎችን ይተርካል። የነህምያን የግል መዝገብ የሚመስሉ ክፍሎችን፣ ዝርዝሮችንና የማኅበረሰብ መዝገቦችን ያቀላቅላል።",
+        "authorship": "መጽሐፉ በአጠቃላይ ስሙን የሚጠቅስ ጸሐፊ የለውም፤ ነገር ግን ከነህምያ ጋር የተያያዙ በመጀመሪያ ሰው የተጻፉ የትዝታ ክፍሎችን ይይዛል። ቀደም ሲል ከዕዝራ ጋር አንድ መጽሐፍ ነበር። የአርታዒው ማንነትና የትዝታዎቹ ከሌሎች ምንጮች ጋር ያላቸው ግንኙነት ይወያያል።",
+        "setting": "ትረካው በፋርስ ዘመን ይካሄዳል፤ ነህምያ በሱሳ ሲያገለግል ይጀምራልና በ445 ዓ.ዓ. አካባቢ ወደ ኢየሩሳሌም ይመጣል። የይሁዳ ክልል በፋርስ ግዛት ሥር እንዳለ ይገልጻል።",
+        "audience_and_purpose": "መጽሐፉ ተግባራዊ አመራርን፣ ጸሎትን፣ ሕዝባዊ ኃላፊነትን፣ መገንባትንና የቃል ኪዳን እድሳትን ያቀርባል። ማኅበራዊ ኢፍትሐዊነትን፣ ተቃውሞንና አስቸጋሪ የድንበር ማሻሻያዎችንም ይመዘግባል፤ እነዚህ በታሪካዊ አውዳቸው መመርመር አለባቸው።",
+        "structure": [
+          {
+            "range": "1:1–2:20",
+            "heading": "የነህምያ ጭንቀትና ተልዕኮ",
+            "summary": "ነህምያ ስለ ኢየሩሳሌም ሁኔታ ይሰማል፣ ይጸልያልና ለመጓዝ ፈቃድ ይቀበላል።"
+          },
+          {
+            "range": "3:1–7:73",
+            "heading": "ግንቡ እንደገና ተገነባ",
+            "summary": "ቤተሰቦችና ቡድኖች ክፍሎችን ይጠግናሉ፤ ማስፈራራትን፣ ውስጣዊ ጫናንና የሀብት ችግርን ይጋፈጣሉ።"
+          },
+          {
+            "range": "8:1–10:39",
+            "heading": "የኦሪት ንባብና የቃል ኪዳን እድሳት",
+            "summary": "ዕዝራ ሕጉን ያነባል፤ ሕዝቡም በንስሐ፣ በአምልኮና በጽሑፍ ቃል ኪዳን ምላሽ ይሰጣል።"
+          },
+          {
+            "range": "11:1–12:47",
+            "heading": "ኢየሩሳሌም ተሞላችና ግንቡ ተመረቀ",
+            "summary": "ዝርዝሮች ነዋሪዎችንና መሪዎችን ያሳያሉ፤ ግንቡም በደስታ ይመረቃል።"
+          },
+          {
+            "range": "13:1–31",
+            "heading": "የነህምያ የኋለኛ ማሻሻያዎች",
+            "summary": "ነህምያ የቤተ መቅደስ አቅርቦትን፣ ሰንበትንና የማኅበረሰብ ድንበሮችን ይመለከታል።"
+          }
+        ],
+        "themes": [
+          "ጸሎትና ተግባራዊ አመራር",
+          "የጋራ ሥራና የተጋራ ኃላፊነት",
+          "የኦሪት ሕዝባዊ ንባብና መረዳት",
+          "ፍትሕ፣ ዕዳና ኢኮኖሚያዊ ፍትሐዊነት",
+          "የቃል ኪዳን እድሳትና የማኅበረሰብ ማንነት",
+          "ተቃውሞ፣ ጽናትና ማሻሻያ"
+        ],
+        "key_people": [
+          "ነህምያ",
+          "አርጤክስስ 1ኛ",
+          "ዕዝራ",
+          "ሰንባላጥ",
+          "ጦቢያ",
+          "ጌሴም",
+          "ኤልያሴብ"
+        ],
+        "key_passages": [
+          "NEH 1:1-11",
+          "NEH 2:1-20",
+          "NEH 4:1-23",
+          "NEH 5:1-19",
+          "NEH 6:15-16",
+          "NEH 8:1-12",
+          "NEH 9:1-38",
+          "NEH 13:4-31"
+        ],
+        "interpretive_care": [
+          "የነህምያ የትዝታ ክፍሎች በመጀመሪያ ሰው የተጻፉ ጠቃሚ ምስክሮች ናቸው፤ መጽሐፉ ግን በአጠቃላይ ከሌሎች ጽሑፎች ጋር ተስተካክሏል።",
+          "የግንቡ ሥራ ተግባራዊ የከተማ ሥራም ሆኖ ሥነ መለኮታዊ ምልክት ነው፤ አንድ ብቻ ትርጉም አትስጡት።",
+          "ስለ ጋብቻና የቡድን ድንበር የተደረጉ ማሻሻያዎች ከምርኮ በኋላ ያለውን አውድ ይመለከታሉ፤ ለዘመናዊ መድልዎ ወይም ማስገደድ ማረጋገጫ አይደሉም።",
+          "የነህምያን አመራር በብዙ መልኩ አዎንታዊ ቢቀርብም ድርጊቶቹንና የማሻሻያዎቹን ማኅበራዊ ውጤት በጥልቀት መመርመር ይቻላል።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "NEH-S01",
+          "range": "NEH 2:11-20",
+          "title": "ከመገንባት በፊት መመርመር",
+          "observation": [
+            "የነህምያን ምልከታዎች፣ ዕቅዱንና የሕዝቡን ምላሽ ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ነህምያ ፕሮጀክቱን ከማሳወቁ በፊት በዝምታ ለምን መረመረ?"
+          ],
+          "application": [
+            "መሪዎች ሰዎችን ከማንቀሳቀሳቸው በፊት ስለ ማዳመጥና ማስረጃ ምን መማር አለባቸው?"
+          ]
+        },
+        {
+          "id": "NEH-S02",
+          "range": "NEH 5:1-19",
+          "title": "በገንቢዎች መካከል ፍትሕ",
+          "observation": [
+            "ስለ ዕዳ የቀረቡትን ቅሬታዎችና የገዢውን ምላሽ ለዩ።"
+          ],
+          "interpretation": [
+            "ማኅበረሰቡን ለመመለስ የተጀመረ ሥራ በኢኮኖሚያዊ ብዝበዛ እንዴት ሊጎዳ ይችላል?"
+          ],
+          "application": [
+            "ኃያላን ሰዎች በሌሎች ወጪ እንዳይጠቀሙ ምን መከላከያዎች ያስፈልጋሉ?"
+          ]
+        },
+        {
+          "id": "NEH-S03",
+          "range": "NEH 8:1-12",
+          "title": "ሕዝቡ ሕጉን ተረዳ",
+          "observation": [
+            "ማን እንደሚያነብ፣ ማን እንደሚያብራራና ሕዝቡ እንዴት ምላሽ እንደሰጠ ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ንባቡን መረዳት እንደ መስማት አስፈላጊ የሆነው ለምንድን ነው?"
+          ],
+          "application": [
+            "ማኅበረሰብ ትምህርትን ለሁሉም ተደራሽ አድርጎ ከጋራ ደስታ ጋር እንዴት ሊያገናኘው ይችላል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "NEH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ነህምያ ለመፈጸም ፈቃድ የተቀበለው ምን ሥራ ነው?",
+          "options": [
+            "የኢየሩሳሌምን ግንብ እንደገና መገንባት",
+            "በሱሳ አዲስ ቤተ መንግሥት መገንባት",
+            "ሰማርያን መውረር",
+            "የፋርስን ንጉሥ መተካት"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "NEH 2:1-20"
+          ],
+          "explanation": "ነህምያ ወደ ኢየሩሳሌም ተመልሶ ግንቡን እንዲገነባ ፈቃድ ተሰጠው።"
+        },
+        {
+          "id": "NEH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ነህምያ በተመለሰው ማኅበረሰብ ውስጥ የኢኮኖሚ ብዝበዛ መኖሩን ይመዘግባል።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "NEH 5:1-19"
+          ]
+        },
+        {
+          "id": "NEH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በነህምያ 8 ኦሪትን በሕዝብ ፊት ያነበበው ማን ነው?",
+          "options": [
+            "ዕዝራ",
+            "ነህምያ",
+            "ሰንባላጥ",
+            "አርጤክስስ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "NEH 8:1-12"
+          ],
+          "explanation": "ዕዝራ ሕጉን ያነባል፤ ሌሎችም ሕዝቡ እንዲረዳ ይረዳሉ።"
+        },
+        {
+          "id": "NEH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በትረካው መሠረት የግንቡ ግንባታ ምን ያህል ጊዜ ወሰደ?",
+          "options": [
+            "52 ቀናት",
+            "12 ወራት",
+            "3 ዓመታት",
+            "7 ቀናት"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "NEH 6:15-16"
+          ],
+          "explanation": "ነህምያ ግንቡ በ52 ቀናት እንደተጠናቀቀ ይናገራል።"
+        },
+        {
+          "id": "NEH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "መጽሐፉ የግንባታ ሥራን ብቻ ይመዘግባል፤ አምልኮንና የቃል ኪዳን እድሳትን አይጠቅስም።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "NEH 8:1-10:39"
+          ]
+        }
+      ]
+    }
+  }
+}

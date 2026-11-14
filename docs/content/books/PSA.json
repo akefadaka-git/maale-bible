@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-psa-bilingual-v1",
+  "book": {
+    "usfm_id": "PSA",
+    "english_name": "Psalms",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "pending",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-psalms",
+      "title": "Psalms",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/psalms/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "esv-psalms",
+      "title": "Introduction to Psalms",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-psalms/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "bibleproject-psalms",
+      "title": "Psalms",
+      "publisher": "BibleProject",
+      "url": "https://bibleproject.com/guides/book-of-psalms/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Psalms — book introduction",
+        "summary": "Psalms is a five-book collection of prayers and songs for worship. It includes lament, praise, thanksgiving, royal and wisdom poetry, giving language to grief, joy, repentance and hope.",
+        "authorship": "The Psalter is a collection formed over time; headings associate psalms with David and other figures, but do not settle every authorship question.",
+        "setting": "The poems arise from worship, personal crisis, royal life, pilgrimage and communal memory.",
+        "audience_and_purpose": "Psalms is a five-book collection of prayers and songs for worship. It includes lament, praise, thanksgiving, royal and wisdom poetry, giving language to grief, joy, repentance and hope.",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "Introduction and orientation",
+            "summary": "The book establishes its central questions and literary voice."
+          },
+          {
+            "range": "Main section",
+            "heading": "Exploration and instruction",
+            "summary": "Dialogues, prayers or sayings develop the central themes."
+          },
+          {
+            "range": "Closing",
+            "heading": "Conclusion and response",
+            "summary": "The closing material gathers the book’s challenge and invites faithful response."
+          }
+        ],
+        "themes": [
+          "Prayer and worship",
+          "Lament and thanksgiving",
+          "God’s kingship and faithfulness"
+        ],
+        "key_people": [
+          "David",
+          "Asaph",
+          "Sons of Korah",
+          "Moses",
+          "Solomon"
+        ],
+        "key_passages": [
+          "PSA 1:1-6",
+          "PSA 23:1-6",
+          "PSA 51:1-19",
+          "PSA 73:1-28",
+          "PSA 90:1-17",
+          "PSA 119:1-176",
+          "PSA 150:1-6"
+        ],
+        "interpretive_care": [
+          "Read poetic images as poetry.",
+          "Lament is faithful prayer; do not shame grief or questions."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "PSA-S01",
+          "range": "PSA 1:1–6",
+          "title": "Two ways of life",
+          "observation": [
+            "Compare the images of the righteous and wicked."
+          ],
+          "interpretation": [
+            "How does the tree image communicate rootedness?"
+          ],
+          "application": [
+            "Choose a practice that roots you in God’s instruction."
+          ]
+        },
+        {
+          "id": "PSA-S02",
+          "range": "PSA 23:1–6",
+          "title": "The shepherd’s care",
+          "observation": [
+            "List the actions describing the shepherd."
+          ],
+          "interpretation": [
+            "How do guidance and presence answer fear?"
+          ],
+          "application": [
+            "Identify where you need comfort this week."
+          ]
+        },
+        {
+          "id": "PSA-S03",
+          "range": "PSA 51:1–19",
+          "title": "Confession and renewal",
+          "observation": [
+            "Identify David’s requests."
+          ],
+          "interpretation": [
+            "How are mercy and a renewed heart connected?"
+          ],
+          "application": [
+            "Pair confession with a step toward repair."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "PSA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "How many books form the traditional structure of Psalms?",
+          "options": [
+            "Three",
+            "Four",
+            "Five",
+            "Seven"
+          ],
+          "correct_option_id": "C",
+          "explanation": "The Psalter is arranged in five books.",
+          "references": [
+            "PSA 1-150"
+          ]
+        },
+        {
+          "id": "PSA-Q02",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which image opens Psalm 23?",
+          "options": [
+            "A royal throne",
+            "The LORD as shepherd",
+            "A sea storm",
+            "A vineyard"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Psalm 23 begins with the shepherd image.",
+          "references": [
+            "PSA 23:1"
+          ]
+        },
+        {
+          "id": "PSA-Q03",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Psalms contains only praise and no lament.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The collection includes lament and other genres.",
+          "references": [
+            "PSA 13:1-6"
+          ]
+        },
+        {
+          "id": "PSA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Psalm 1 compares the righteous to what?",
+          "options": [
+            "A tree by streams",
+            "A ship at sea",
+            "A tower",
+            "A mountain"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The righteous are pictured as a fruitful tree.",
+          "references": [
+            "PSA 1:1-3"
+          ]
+        },
+        {
+          "id": "PSA-Q05",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What does Psalm 51 ask God to create?",
+          "options": [
+            "A new kingdom",
+            "A clean heart",
+            "A temple",
+            "An army"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The psalm asks for a clean heart.",
+          "references": [
+            "PSA 51:10"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "መዝሙረ ዳዊት — መግቢያ",
+        "summary": "መዝሙረ ዳዊት ለአምልኮ የተሰበሰቡ ጸሎቶችና መዝሙሮች ናቸው። ልቅሶ፣ ምስጋና፣ የንጉሥ መዝሙርና ጥበብን ይዟል፤ ለሐዘን፣ ለደስታና ለተስፋ የጸሎት ቃላት ይሰጣል።",
+        "authorship": "መዝሙረ ዳዊት በጊዜ ሂደት የተሰበሰበ መጽሐፍ ነው። ርዕሶቹ መዝሙሮችን ከዳዊትና ከሌሎች ሰዎች ጋር ያያይዛሉ፤ ሁሉንም የደራሲነት ጥያቄ ግን አይፈቱም።",
+        "setting": "መዝሙሮቹ ከአምልኮ፣ ከግል መከራ፣ ከንጉሣዊ ሕይወትና ከማኅበረሰብ ትዝታ የተለያዩ ሁኔታዎች ይመጣሉ።",
+        "audience_and_purpose": "መዝሙረ ዳዊት ለአምልኮ የተሰበሰቡ ጸሎቶችና መዝሙሮች ናቸው። ልቅሶ፣ ምስጋና፣ የንጉሥ መዝሙርና ጥበብን ይዟል፤ ለሐዘን፣ ለደስታና ለተስፋ የጸሎት ቃላት ይሰጣል።",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "መግቢያ",
+            "summary": "ጥበብና ንግሥና ለመዝሙር ስብስቡ መግቢያ ይሆናሉ።"
+          },
+          {
+            "range": "Main section",
+            "heading": "የመዝሙር ስብስቦች",
+            "summary": "የተለያዩ ልቅሶዎች፣ ጸሎቶችና ምስጋናዎች ይሰበሰባሉ።"
+          },
+          {
+            "range": "Closing",
+            "heading": "መደምደሚያ",
+            "summary": "የመጨረሻው ክፍል ወደ ምስጋና ያመራል።"
+          }
+        ],
+        "themes": [
+          "ጸሎትና አምልኮ",
+          "ልቅሶና ምስጋና",
+          "የእግዚአብሔር ንግሥናና ታማኝነት"
+        ],
+        "key_people": [
+          "ዳዊት",
+          "አሳፍ",
+          "የቆሬ ልጆች",
+          "ሙሴ",
+          "ሰሎሞን"
+        ],
+        "key_passages": [
+          "PSA 1:1-6",
+          "PSA 23:1-6",
+          "PSA 51:1-19",
+          "PSA 73:1-28",
+          "PSA 90:1-17",
+          "PSA 119:1-176",
+          "PSA 150:1-6"
+        ],
+        "interpretive_care": [
+          "የመዝሙር ርዕሶች ጠቃሚ ቢሆኑም ሁሉንም የደራሲነት ጥያቄ አይፈቱም።",
+          "የግጥም ምስሎችን በግጥም አውድ ውስጥ አንብቡ፤ ልቅሶን አትኮንኑ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "PSA-S01",
+          "range": "PSA 1:1–6",
+          "title": "Two ways of life",
+          "observation": [
+            "ስለ ጻድቅና ክፉ ሰው የተጠቀሱትን ምስሎች አነጻጽሩ።"
+          ],
+          "interpretation": [
+            "የዛፉ ምሳሌ መሠረት መያዝን እንዴት ያሳያል?"
+          ],
+          "application": [
+            "በእግዚአብሔር ቃል ለመጽናት አንድ ልምድ ምረጡ።"
+          ]
+        },
+        {
+          "id": "PSA-S02",
+          "range": "PSA 23:1–6",
+          "title": "The shepherd’s care",
+          "observation": [
+            "እረኛውን የሚገልጹ ተግባራትን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "መመራትና መገኘት ፍርሃትን እንዴት ይመልሳሉ?"
+          ],
+          "application": [
+            "በዚህ ሳምንት መጽናናት የሚያስፈልግዎትን ቦታ ጥቀሱ።"
+          ]
+        },
+        {
+          "id": "PSA-S03",
+          "range": "PSA 51:1–19",
+          "title": "Confession and renewal",
+          "observation": [
+            "የዳዊትን ጥያቄዎች ለዩ።"
+          ],
+          "interpretation": [
+            "ምሕረትና አዲስ ልብ እንዴት ይገናኛሉ?"
+          ],
+          "application": [
+            "ንስሐን ከማስተካከያ እርምጃ ጋር አያይዙ።"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "PSA-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "መዝሙረ ዳዊት በስንት ክፍል ተደርጎ ይታያል?",
+          "options": [
+            "ሦስት",
+            "አራት",
+            "አምስት",
+            "ሰባት"
+          ],
+          "correct_option_id": "C",
+          "explanation": "መዝሙረ ዳዊት በአምስት ክፍሎች ተደርጓል።",
+          "references": [
+            "PSA 1-150"
+          ]
+        },
+        {
+          "id": "PSA-Q02",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "መዝሙር 23 በምን ምስል ይጀምራል?",
+          "options": [
+            "የንጉሥ ዙፋን",
+            "እግዚአብሔር እረኛ ነው",
+            "የባሕር ማዕበል",
+            "የወይን እርሻ"
+          ],
+          "correct_option_id": "B",
+          "explanation": "እግዚአብሔርን እንደ እረኛ ያቀርባል።",
+          "references": [
+            "PSA 23:1"
+          ]
+        },
+        {
+          "id": "PSA-Q03",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "መዝሙረ ዳዊት ምስጋናን ብቻ ይዟል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ልቅሶና ሌሎች ዘውጎችንም ይዟል።",
+          "references": [
+            "PSA 13:1-6"
+          ]
+        },
+        {
+          "id": "PSA-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "መዝሙር 1 ጻድቅን ከምን ጋር ያነጻጽራል?",
+          "options": [
+            "በውኃ ዳር ከተተከለ ዛፍ",
+            "መርከብ",
+            "ግንብ",
+            "ተራራ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ጻድቅ እንደ ፍሬ የሚያፈራ ዛፍ ተገልጿል።",
+          "references": [
+            "PSA 1:1-3"
+          ]
+        },
+        {
+          "id": "PSA-Q05",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "መዝሙር 51 ምን እንዲፈጥር ይጠይቃል?",
+          "options": [
+            "አዲስ መንግሥት",
+            "ንጹሕ ልብ",
+            "ቤተ መቅደስ",
+            "ሠራዊት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "መዝሙሩ ንጹሕ ልብ ይጠይቃል።",
+          "references": [
+            "PSA 51:10"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-2ch-bilingual-v1",
+  "book": {
+    "usfm_id": "2CH",
+    "english_name": "2 Chronicles",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-2chronicles",
+      "title": "2 Chronicles",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/2-chronicles/",
+      "use": "Post-exilic purpose, royal narrative and book outline"
+    },
+    {
+      "id": "usccb-historical-books-introduction",
+      "title": "Historical Introduction: The Historical Books",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/historicalintroduction/0",
+      "use": "Canonical and theological context for Chronicles, Ezra and Nehemiah"
+    },
+    {
+      "id": "esv-chronicles",
+      "title": "Introduction to 1–2 Chronicles",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/",
+      "use": "Composition, themes and canonical context"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "2 Chronicles — temple, reform and return",
+        "summary": "2 Chronicles continues the account of the monarchy with a strong focus on Solomon’s temple and the kings of Judah. It recounts temple worship, the divided monarchy from Judah’s perspective, reforms under Hezekiah and Josiah, Jerusalem’s fall and Cyrus’s decree allowing the exiles to return.",
+        "authorship": "The author is anonymous and conventionally called the Chronicler. The book is part of the larger work of Chronicles and draws on Samuel, Kings and other records. Its final form is commonly associated with the post-exilic community; exact authorship and date remain debated.",
+        "setting": "The narrative looks back from the restoration period to Solomon and the kings of Judah, ending with the Babylonian exile and Persian rule under Cyrus. Its central geographic focus is Jerusalem and the temple.",
+        "audience_and_purpose": "The book encourages a post-exilic community to understand continuity with Israel’s past and to renew worship and communal life. Its history is theological interpretation, not a neutral or exhaustive modern chronicle.",
+        "structure": [
+          {
+            "range": "1:1–9:31",
+            "heading": "Solomon and the temple",
+            "summary": "Solomon receives wisdom, builds and dedicates the temple, and his reign is described."
+          },
+          {
+            "range": "10:1–12:16",
+            "heading": "The kingdom divides",
+            "summary": "Rehoboam’s response to the northern tribes leads to division and conflict."
+          },
+          {
+            "range": "13:1–20:37",
+            "heading": "Judah’s kings and prophetic counsel",
+            "summary": "Abijah, Asa and Jehoshaphat are presented with attention to worship, reform and reliance on God."
+          },
+          {
+            "range": "21:1–28:27",
+            "heading": "Judah’s decline",
+            "summary": "Later kings, including Jehoram, Ahaziah, Joash, Amaziah, Uzziah, Jotham and Ahaz, are evaluated."
+          },
+          {
+            "range": "29:1–32:33",
+            "heading": "Hezekiah’s reform",
+            "summary": "The temple is cleansed, worship restored and Jerusalem faces Assyria."
+          },
+          {
+            "range": "33:1–35:27",
+            "heading": "Manasseh, Amon and Josiah",
+            "summary": "The account includes Manasseh’s later humbling and Josiah’s reform and Passover."
+          },
+          {
+            "range": "36:1–23",
+            "heading": "Exile and return decree",
+            "summary": "Judah falls, Jerusalem is destroyed and Cyrus authorizes return and rebuilding."
+          }
+        ],
+        "themes": [
+          "Temple worship and communal identity",
+          "Covenant faithfulness and the evaluation of kings",
+          "Repentance, reform and renewed worship",
+          "Prophetic warning and royal responsibility",
+          "Memory, exile and restoration hope"
+        ],
+        "key_people": [
+          "Solomon",
+          "Rehoboam",
+          "Asa",
+          "Jehoshaphat",
+          "Hezekiah",
+          "Manasseh",
+          "Josiah",
+          "Cyrus"
+        ],
+        "key_passages": [
+          "2CH 1:7-12",
+          "2CH 5:1-14",
+          "2CH 7:11-22",
+          "2CH 20:1-30",
+          "2CH 29:1-19",
+          "2CH 30:1-27",
+          "2CH 34:1-33",
+          "2CH 36:15-23"
+        ],
+        "interpretive_care": [
+          "Chronicles retells Kings with distinctive theological and worship-related emphases; compare accounts carefully rather than assuming they are interchangeable.",
+          "The Chronicler’s evaluations are shaped by covenant theology and should not be converted into simplistic formulas that every illness or defeat proves personal wrongdoing.",
+          "The temple and royal reforms are central, but the book also records failures, violence and political complexity.",
+          "The closing decree of Cyrus opens a path to return; it does not mean restoration was instantly complete."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "2CH-S01",
+          "range": "2CH 7:11-22",
+          "title": "Temple dedication and covenant",
+          "observation": [
+            "Identify the conditions, promises and warnings in the passage."
+          ],
+          "interpretation": [
+            "How does the text connect worship with justice and covenant loyalty?"
+          ],
+          "application": [
+            "What practices help a community keep worship connected to everyday conduct?"
+          ]
+        },
+        {
+          "id": "2CH-S02",
+          "range": "2CH 20:1-30",
+          "title": "Jehoshaphat seeks help",
+          "observation": [
+            "Observe the crisis, the communal prayer and the response to the threat."
+          ],
+          "interpretation": [
+            "What does the prayer reveal about dependence, fear and public leadership?"
+          ],
+          "application": [
+            "How can a community respond to a crisis without pretending it has no fear?"
+          ]
+        },
+        {
+          "id": "2CH-S03",
+          "range": "2CH 34:1-33",
+          "title": "Josiah hears the law",
+          "observation": [
+            "List the discovery, the king’s response and the covenant actions."
+          ],
+          "interpretation": [
+            "Why does hearing the law lead to both personal humility and public change?"
+          ],
+          "application": [
+            "What is one responsible way to act when a community discovers it has drifted from its commitments?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2CH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who builds and dedicates the temple in the opening section?",
+          "options": [
+            "Solomon",
+            "Hezekiah",
+            "Josiah",
+            "Rehoboam"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Solomon is the central figure in chapters 1–9.",
+          "references": [
+            "2CH 2:1-7:22"
+          ]
+        },
+        {
+          "id": "2CH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "2 Chronicles gives special attention to the kings of Judah.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "The narrative mainly follows Judah’s monarchy after the division.",
+          "references": [
+            "2CH 10:1-28:27"
+          ]
+        },
+        {
+          "id": "2CH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which king leads a major temple reform in 2 Chronicles 29–32?",
+          "options": [
+            "Hezekiah",
+            "Ahab",
+            "Manasseh",
+            "Ahaz"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Hezekiah restores temple worship and organizes the Passover.",
+          "references": [
+            "2CH 29:1-30:27"
+          ]
+        },
+        {
+          "id": "2CH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which Persian king’s decree closes the book?",
+          "options": [
+            "Cyrus",
+            "Darius",
+            "Artaxerxes",
+            "Xerxes"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Cyrus authorizes the return and rebuilding of the temple.",
+          "references": [
+            "2CH 36:22-23"
+          ]
+        },
+        {
+          "id": "2CH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book ends with Judah’s restoration already fully completed.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "The decree opens the way for return; it does not narrate the completed restoration.",
+          "references": [
+            "2CH 36:22-23"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "2 ዜና መዋዕል — ቤተ መቅደስ፣ ማሻሻያና መመለስ",
+        "summary": "2 ዜና መዋዕል የንጉሥነትን ታሪክ ይቀጥላል፤ በሰሎሞን ቤተ መቅደስና በይሁዳ ነገሥታት ላይ በተለይ ያተኩራል። የቤተ መቅደስ አምልኮን፣ ከይሁዳ አንጻር የተከፋፈለውን መንግሥት፣ በሕዝቅያስና በኢዮስያስ ዘመን የተደረጉ ማሻሻያዎችን፣ የኢየሩሳሌምን ውድቀትና ምርኮኞች እንዲመለሱ የቂሮስን አዋጅ ይተርካል።",
+        "authorship": "ጸሐፊው ስሙ ያልታወቀ ሲሆን በተለምዶ ዜና መዋዕል ጸሐፊ ይባላል። መጽሐፉ ከዜና መዋዕል ትልቅ ሥራ ክፍል ሲሆን ከሳሙኤል፣ ነገሥትና ከሌሎች መዝገቦች ይጠቀማል። የመጨረሻ ቅርጹ ከምርኮ በኋላ ካለው ማኅበረሰብ ጋር ይያያዛል፤ ጸሐፊውና ትክክለኛው ዘመን ግን ይወያያሉ።",
+        "setting": "ትረካው ከመመለስ ዘመን አንጻር የሰሎሞንንና የይሁዳን ነገሥታት ይመለከታል፤ በባቢሎን ምርኮና በቂሮስ ዘመን የመመለስ አዋጅ ይጠናቀቃል። ዋና ቦታው ኢየሩሳሌምና ቤተ መቅደሱ ናቸው።",
+        "audience_and_purpose": "መጽሐፉ ከምርኮ በኋላ ያለ ማኅበረሰብ ከእስራኤል ያለፈ ታሪክ ጋር ያለውን ቀጣይነት እንዲረዳና አምልኮንና የማኅበረሰብ ሕይወትን እንዲያድስ ያበረታታል። ታሪኩ ሥነ መለኮታዊ ትርጓሜ ነው፤ ዘመናዊ ገለልተኛ የታሪክ መዝገብ አይደለም።",
+        "structure": [
+          {
+            "range": "1:1–9:31",
+            "heading": "ሰሎሞንና ቤተ መቅደሱ",
+            "summary": "ሰሎሞን ጥበብን ይቀበላል፣ ቤተ መቅደሱን ይገነባልና ይመርቃል።"
+          },
+          {
+            "range": "10:1–12:16",
+            "heading": "መንግሥቱ ተከፋፈለ",
+            "summary": "የሮብዓም ምላሽ የሰሜኑን ነገዶች መለያየትና ግጭት ያመጣል።"
+          },
+          {
+            "range": "13:1–20:37",
+            "heading": "የይሁዳ ነገሥታትና ትንቢታዊ ምክር",
+            "summary": "አብያ፣ አሳና ኢዮሳፍጥ ከአምልኮ፣ ከማሻሻያና ከእግዚአብሔር መታመን አንጻር ይቀርባሉ።"
+          },
+          {
+            "range": "21:1–28:27",
+            "heading": "የይሁዳ ውድቀት",
+            "summary": "ዮራም፣ አካዝያስ፣ ኢዮአስ፣ አሜስያስ፣ ዖዝያስ፣ ዮአታምና አካዝ ይገመገማሉ።"
+          },
+          {
+            "range": "29:1–32:33",
+            "heading": "የሕዝቅያስ ማሻሻያ",
+            "summary": "ቤተ መቅደሱ ይነጻል፣ አምልኮ ይታደሳል፣ ኢየሩሳሌምም የአሦርን ስጋት ትጋፈጣለች።"
+          },
+          {
+            "range": "33:1–35:27",
+            "heading": "ምናሴ፣ አሞንና ኢዮስያስ",
+            "summary": "የምናሴ የኋለኛ ትሕትናና የኢዮስያስ ማሻሻያና ፋሲካ ይተረካሉ።"
+          },
+          {
+            "range": "36:1–23",
+            "heading": "ምርኮና የመመለስ አዋጅ",
+            "summary": "ይሁዳ ይወድቃል፣ ኢየሩሳሌም ትፈርሳለች፤ ቂሮስ መመለስንና ግንባታን ይፈቅዳል።"
+          }
+        ],
+        "themes": [
+          "ቤተ መቅደስ አምልኮና የማኅበረሰብ ማንነት",
+          "የቃል ኪዳን ታማኝነትና የነገሥታት ግምገማ",
+          "ንስሐ፣ ማሻሻያና የታደሰ አምልኮ",
+          "ትንቢታዊ ማስጠንቀቂያና የንጉሥ ኃላፊነት",
+          "ትውስታ፣ ምርኮና የመመለስ ተስፋ"
+        ],
+        "key_people": [
+          "ሰሎሞን",
+          "ሮብዓም",
+          "አሳ",
+          "ኢዮሳፍጥ",
+          "ሕዝቅያስ",
+          "ምናሴ",
+          "ኢዮስያስ",
+          "ቂሮስ"
+        ],
+        "key_passages": [
+          "2CH 1:7-12",
+          "2CH 5:1-14",
+          "2CH 7:11-22",
+          "2CH 20:1-30",
+          "2CH 29:1-19",
+          "2CH 30:1-27",
+          "2CH 34:1-33",
+          "2CH 36:15-23"
+        ],
+        "interpretive_care": [
+          "ዜና መዋዕል ከነገሥት ታሪክ በተለየ የሥነ መለኮትና የአምልኮ አጽንዖት ይደግማል፤ ሁለቱን በጥንቃቄ አወዳድሩ።",
+          "የነገሥታት ግምገማ የቃል ኪዳን ሥነ መለኮትን ይከተላል፤ ሕመም ወይም ሽንፈት ሁሉ የግል ኃጢአት ማስረጃ ነው ብሎ አታቅርቡ።",
+          "የቤተ መቅደስና የንጉሣዊ ማሻሻያዎች አጽንዖት ቢኖራቸውም ውድቀትና የፖለቲካ ውስብስብነት አሉ።",
+          "የቂሮስ አዋጅ የመመለስ መንገድ ይከፍታል፤ መመለሱ ወዲያውኑ ተጠናቋል ማለት አይደለም።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "2CH-S01",
+          "range": "2CH 7:11-22",
+          "title": "የቤተ መቅደሱ ምረቃና ቃል ኪዳን",
+          "observation": [
+            "በምንባቡ ያሉትን ሁኔታዎች፣ ተስፋዎችና ማስጠንቀቂያዎች ለዩ።"
+          ],
+          "interpretation": [
+            "ጽሑፉ አምልኮን ከፍትሕና ከቃል ኪዳን ታማኝነት ጋር እንዴት ያገናኛል?"
+          ],
+          "application": [
+            "ማኅበረሰብ አምልኮን ከዕለታዊ አኗኗር ጋር እንዲያገናኝ ምን ልምዶች ይረዳሉ?"
+          ]
+        },
+        {
+          "id": "2CH-S02",
+          "range": "2CH 20:1-30",
+          "title": "ኢዮሳፍጥ እርዳታ ፈለገ",
+          "observation": [
+            "ችግሩን፣ የሕዝቡን ጸሎትና ለአደጋው የተሰጠውን ምላሽ ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ጸሎቱ ስለ መታመን፣ ፍርሃትና ሕዝባዊ አመራር ምን ያሳያል?"
+          ],
+          "application": [
+            "ማኅበረሰብ ፍርሃት እንደሌለው ሳያስመስል ለችግር እንዴት ሊመልስ ይችላል?"
+          ]
+        },
+        {
+          "id": "2CH-S03",
+          "range": "2CH 34:1-33",
+          "title": "ኢዮስያስ ሕጉን ሰማ",
+          "observation": [
+            "መጽሐፉ መገኘቱን፣ የንጉሡን ምላሽና የቃል ኪዳን ድርጊቶችን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "ሕጉን መስማት ለምን ወደ የግል ትሕትናና ወደ ሕዝባዊ ለውጥ ይመራል?"
+          ],
+          "application": [
+            "ማኅበረሰብ ከቃል ኪዳኑ እንደራቀ ሲያውቅ በኃላፊነት ሊወስደው የሚችለው አንድ እርምጃ ምንድን ነው?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "2CH-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በ2 ዜና መዋዕል 1–9 ዋና ሰው የሆነው ማን ነው?",
+          "options": [
+            "ሰሎሞን",
+            "ሕዝቅያስ",
+            "ኢዮስያስ",
+            "ሮብዓም"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2CH 2:1-7:22"
+          ],
+          "explanation": "ሰሎሞን በምዕራፍ 1–9 ዋና ሰው ነው።"
+        },
+        {
+          "id": "2CH-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "2 ዜና መዋዕል በተለይ ለይሁዳ ነገሥታት ትኩረት ይሰጣል።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "2CH 10:1-28:27"
+          ]
+        },
+        {
+          "id": "2CH-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በ2 ዜና መዋዕል 29–32 ትልቅ የቤተ መቅደስ ማሻሻያ የመራው ንጉሥ ማን ነው?",
+          "options": [
+            "ሕዝቅያስ",
+            "አክዓብ",
+            "ምናሴ",
+            "አካዝ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2CH 29:1-30:27"
+          ],
+          "explanation": "ሕዝቅያስ አምልኮን ያድሳልና ፋሲካን ያደራጃል።"
+        },
+        {
+          "id": "2CH-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "መጽሐፉ በየትኛው የፋርስ ንጉሥ አዋጅ ይዘጋል?",
+          "options": [
+            "ቂሮስ",
+            "ዳርዮስ",
+            "አርጤክስስ",
+            "ዜርክሲስ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "2CH 36:22-23"
+          ],
+          "explanation": "ቂሮስ መመለስንና ቤተ መቅደሱን መገንባት ይፈቅዳል።"
+        },
+        {
+          "id": "2CH-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "መጽሐፉ የይሁዳ መመለስ ሙሉ በሙሉ ተጠናቋል በሚል ይዘጋል።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "2CH 36:22-23"
+          ]
+        }
+      ]
+    }
+  }
+}

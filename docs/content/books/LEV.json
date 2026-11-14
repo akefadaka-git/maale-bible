@@ -1,0 +1,453 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-LEV-v1",
+  "book": {
+    "usfm_id": "LEV",
+    "english_name": "Leviticus",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "usccb-leviticus",
+      "title": "The Book of Leviticus",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/leviticus/0",
+      "use": "Sacrifice, purity, priesthood, holiness and outline"
+    },
+    {
+      "id": "abs-leviticus",
+      "title": "Bible Study Guide: Leviticus",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-leviticus/",
+      "use": "Literary divisions and historical context"
+    },
+    {
+      "id": "sots-leviticus",
+      "title": "Leviticus: The Priestly Vision of Holiness",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/publications/guides-to-the-old-testament/",
+      "use": "Scholarly book-level context"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Leviticus — holiness, worship and life together",
+        "summary": "Leviticus stands at the centre of the Torah’s wilderness narrative. It gives instructions about offerings, priestly service, purity, atonement, sacred time and holy conduct. Its concern is not ritual alone: it describes a community whose worship, relationships, economic practices and treatment of neighbours are shaped by the holiness of God.",
+        "authorship": "The book is traditionally associated with Moses and is strongly connected with priestly traditions. Its laws and narrative materials show literary development; scholars debate their dates and stages. Do not assign every passage a single date or author without qualification.",
+        "setting": "The book’s narrative setting is the tent of meeting at Sinai, between the tabernacle’s completion in Exodus and Israel’s departure in Numbers. Its instructions address worship and community life in an ancient Israelite setting.",
+        "audience_and_purpose": "Leviticus instructs Israel and its priests in worship, purity, atonement and holy living. It links devotion to God with justice, restraint, care for vulnerable people and responsibility within the community.",
+        "structure": [
+          {
+            "range": "1–7",
+            "heading": "Offerings and sacrifices",
+            "summary": "Instructions for the main offerings and the responsibilities of priests."
+          },
+          {
+            "range": "8–10",
+            "heading": "Priestly ordination",
+            "summary": "Aaron and his sons are ordained; the opening priestly service includes a severe warning."
+          },
+          {
+            "range": "11–16",
+            "heading": "Purity and atonement",
+            "summary": "Purity regulations culminate in the Day of Atonement."
+          },
+          {
+            "range": "17–22",
+            "heading": "Holiness in worship and conduct",
+            "summary": "Rules shape blood, sexuality, priestly conduct and care for others."
+          },
+          {
+            "range": "23–25",
+            "heading": "Festivals, Sabbath and Jubilee",
+            "summary": "Sacred seasons and land practices structure communal life."
+          },
+          {
+            "range": "26–27",
+            "heading": "Covenant outcomes and vows",
+            "summary": "Blessings, warnings and regulations concerning vows and dedicated things."
+          }
+        ],
+        "themes": [
+          "Holiness and the presence of God",
+          "Atonement, forgiveness and restored relationship",
+          "Worship shaped by reverence and responsibility",
+          "Ethical holiness: justice, honesty and neighbour-love",
+          "Care for land, workers and vulnerable people",
+          "Sacred time, rest and communal memory"
+        ],
+        "key_people": [
+          "Moses",
+          "Aaron",
+          "Aaron’s sons Nadab and Abihu",
+          "The priests",
+          "The people of Israel"
+        ],
+        "key_passages": [
+          "LEV 16:1-34",
+          "LEV 17:10-14",
+          "LEV 19:1-18",
+          "LEV 19:33-34",
+          "LEV 23:1-44",
+          "LEV 25:1-17",
+          "LEV 26:1-13"
+        ],
+        "interpretive_care": [
+          "Do not reduce Leviticus to obsolete ritual rules; explain its literary, covenantal and historical setting.",
+          "Distinguish ritual purity from moral guilt; the book uses related but not identical categories.",
+          "Avoid using individual laws without considering their immediate context and the book’s wider concern for holiness and justice."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "LEV-S01",
+          "range": "LEV 16:1-34",
+          "title": "The Day of Atonement",
+          "observation": [
+            "Trace the sequence of actions and identify who performs each one.",
+            "Notice the language of cleansing, removal and atonement."
+          ],
+          "interpretation": [
+            "What does the ritual communicate about communal sin and restored access?",
+            "Why are preparation and boundaries emphasized?"
+          ],
+          "application": [
+            "What practices of confession, repair and reconciliation are needed in your community?",
+            "How can worship lead to restored relationships?"
+          ]
+        },
+        {
+          "id": "LEV-S02",
+          "range": "LEV 19:1-18",
+          "title": "Holiness in everyday relationships",
+          "observation": [
+            "Mark the commands about worship, honesty, wages, the poor and neighbours.",
+            "Notice the repeated call to holiness and the command to love the neighbour."
+          ],
+          "interpretation": [
+            "How does the passage connect holiness with ordinary social behaviour?",
+            "Why are economic justice and truthful speech included?"
+          ],
+          "application": [
+            "Identify one practical action that protects a vulnerable neighbour.",
+            "What would honest and fair dealings look like in your daily work?"
+          ]
+        },
+        {
+          "id": "LEV-S03",
+          "range": "LEV 25:1-17",
+          "title": "Sabbath, land and release",
+          "observation": [
+            "Identify the cycles of rest and release described in the passage.",
+            "Notice how land, labour and property are treated as accountable gifts."
+          ],
+          "interpretation": [
+            "How do Sabbath and Jubilee challenge permanent exploitation?",
+            "What does the text teach about ownership and responsibility?"
+          ],
+          "application": [
+            "Where could rest or fair release improve your community?",
+            "How might you protect workers and people in debt?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "LEV-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which chapter describes the Day of Atonement?",
+          "options": [
+            "Leviticus 5",
+            "Leviticus 10",
+            "Leviticus 16",
+            "Leviticus 27"
+          ],
+          "correct_option_id": "C",
+          "explanation": "Leviticus 16 gives the central instructions for the Day of Atonement.",
+          "references": [
+            "LEV 16:1-34"
+          ]
+        },
+        {
+          "id": "LEV-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Leviticus connects holiness with how people treat their neighbours.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Leviticus 19 joins the call to holiness with commands about honesty, justice and love of neighbour.",
+          "references": [
+            "LEV 19:1-18"
+          ]
+        },
+        {
+          "id": "LEV-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is ordained as Israel’s high priest in Leviticus 8?",
+          "options": [
+            "Joshua",
+            "Aaron",
+            "Samuel",
+            "Ezra"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Aaron and his sons are ordained for priestly service.",
+          "references": [
+            "LEV 8:1-13"
+          ]
+        },
+        {
+          "id": "LEV-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which chapter contains the command to love your neighbour as yourself?",
+          "options": [
+            "Leviticus 11",
+            "Leviticus 16",
+            "Leviticus 19",
+            "Leviticus 25"
+          ],
+          "correct_option_id": "C",
+          "explanation": "The command appears within the Holiness Collection in Leviticus 19.",
+          "references": [
+            "LEV 19:18"
+          ]
+        },
+        {
+          "id": "LEV-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Leviticus 25 includes instructions about Sabbath years and Jubilee.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Leviticus 25 describes the Sabbath year and Jubilee, including release and land-rest provisions.",
+          "references": [
+            "LEV 25:1-17"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዘሌዋውያን — ቅድስና፣ አምልኮና አብሮ መኖር",
+        "summary": "ዘሌዋውያን በኦሪት የምድረ በዳ ትረካ መካከል ይገኛል። ስለ መሥዋዕት፣ ስለ ካህናት አገልግሎት፣ ስለ ንጽሕና፣ ስለ ስርየት፣ ስለ ቅዱስ ጊዜና ስለ ቅዱስ ኑሮ መመሪያዎችን ይሰጣል። ጉዳዩ ሥርዓት ብቻ አይደለም፤ አምልኮ፣ ግንኙነት፣ ኢኮኖሚያዊ ተግባርና ለባልንጀራ የሚደረግ አያያዝ በእግዚአብሔር ቅድስና የሚመራ ማኅበረሰብን ይገልጣል።",
+        "authorship": "መጽሐፉ በባህል ከሙሴ ጋር ይያያዛል፤ ከካህናት ባህልም ጋር ጠንካራ ግንኙነት አለው። ሕጎቹና ትረካዎቹ የጽሑፍ እድገት ሂደት እንዳላቸው ምሁራን ይወያያሉ። ሁሉንም ክፍሎች ያለ ማብራሪያ በአንድ ዘመን ወይም በአንድ ደራሲ ላይ አትመድቡ።",
+        "setting": "የመጽሐፉ ትረካዊ አውድ በሲና ያለው የመገናኛ ድንኳን ነው፤ ይህም በዘፀአት ድንኳኑ ከተጠናቀቀ በኋላና በዘኁልቁ ሕዝቡ ከመነሳቱ በፊት ነው። መመሪያዎቹ በጥንታዊ እስራኤል የአምልኮና የማኅበረሰብ ሕይወት ላይ ያተኩራሉ።",
+        "audience_and_purpose": "ዘሌዋውያን እስራኤልንና ካህናቱን ስለ አምልኮ፣ ንጽሕና፣ ስርየትና ቅዱስ ኑሮ ያስተምራል። ለእግዚአብሔር መሰጠትን ከፍትሕ፣ ከራስን መግዛት፣ ለተጋላጭ ሰዎች ከማሰብና ከማኅበረሰብ ኃላፊነት ጋር ያገናኛል።",
+        "structure": [
+          {
+            "range": "1–7",
+            "heading": "መሥዋዕቶችና መባዎች",
+            "summary": "ዋና ዋና መሥዋዕቶችና የካህናት ኃላፊነት።"
+          },
+          {
+            "range": "8–10",
+            "heading": "የካህናት ሹመት",
+            "summary": "አሮንና ልጆቹ ይሾማሉ፤ የመጀመሪያው አገልግሎት ከባድ ማስጠንቀቂያን ያካትታል።"
+          },
+          {
+            "range": "11–16",
+            "heading": "ንጽሕናና ስርየት",
+            "summary": "የንጽሕና መመሪያዎች በስርየት ቀን ይደመደማሉ።"
+          },
+          {
+            "range": "17–22",
+            "heading": "በአምልኮና በኑሮ ቅድስና",
+            "summary": "ደምን፣ የጾታ ሥነ ምግባርን፣ የካህናትን ሥራና ለሌሎች የሚደረግ አያያዝ ይመራሉ።"
+          },
+          {
+            "range": "23–25",
+            "heading": "በዓላት፣ ሰንበትና ኢዮቤል",
+            "summary": "ቅዱሳን ወቅቶችና የመሬት አያያዝ የማኅበረሰብ ሕይወትን ይዋቀራሉ።"
+          },
+          {
+            "range": "26–27",
+            "heading": "የቃል ኪዳን ውጤቶችና ስእለቶች",
+            "summary": "በረከቶች፣ ማስጠንቀቂያዎችና ስእለቶችን የሚመለከቱ ሕጎች።"
+          }
+        ],
+        "themes": [
+          "ቅድስናና የእግዚአብሔር መገኘት",
+          "ስርየት፣ ይቅርታና የተመለሰ ግንኙነት",
+          "በአክብሮትና በኃላፊነት የሚመራ አምልኮ",
+          "ሥነ ምግባራዊ ቅድስና፦ ፍትሕ፣ ታማኝነትና የባልንጀራ ፍቅር",
+          "ለመሬት፣ ለሠራተኞችና ለተጋላጭ ሰዎች እንክብካቤ",
+          "ቅዱስ ጊዜ፣ ዕረፍትና የማኅበረሰብ ትውስታ"
+        ],
+        "key_people": [
+          "ሙሴ",
+          "አሮን",
+          "የአሮን ልጆች ናዳብና አቢሁ",
+          "ካህናት",
+          "የእስራኤል ሕዝብ"
+        ],
+        "key_passages": [
+          "ዘሌ 16:1-34",
+          "ዘሌ 17:10-14",
+          "ዘሌ 19:1-18",
+          "ዘሌ 19:33-34",
+          "ዘሌ 23:1-44",
+          "ዘሌ 25:1-17",
+          "ዘሌ 26:1-13"
+        ],
+        "interpretive_care": [
+          "ዘሌዋውያንን ያለፈ ጊዜ የሥርዓት ሕጎች ብቻ አድርጎ አታቅርቡ፤ ሥነ ጽሑፋዊና የቃል ኪዳን አውዱን ያብራሩ።",
+          "ሥርዓታዊ ንጽሕናን ከሥነ ምግባራዊ በደል ለዩ፤ ተያያዥ ቢሆኑም አንድ አይደሉም።",
+          "እያንዳንዱን ሕግ በቅርብ አውዱና በመጽሐፉ አጠቃላይ የቅድስናና የፍትሕ ጉዳይ ውስጥ አንብቡ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "LEV-S01",
+          "range": "LEV 16:1-34",
+          "title": "የስርየት ቀን",
+          "observation": [
+            "የተግባሮቹን ቅደም ተከተልና እያንዳንዱን የሚፈጽመውን ሰው ይከታተሉ።",
+            "ስለ ማንጻት፣ ማስወገድና ስርየት የሚናገሩትን ቃላት ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ሥርዓቱ ስለ ማኅበረሰብ ኃጢአትና ስለ ተመለሰ መቅረብ ምን ያስተላልፋል?",
+            "ዝግጅትና ድንበር ለምን ተጠናክረው ተጠቅሰዋል?"
+          ],
+          "application": [
+            "በማኅበረሰብዎ ውስጥ የኑዛዜ፣ የጥገናና የእርቅ ልምዶች ምን ያስፈልጋሉ?",
+            "አምልኮ ወደ ተመለሱ ግንኙነቶች እንዴት ሊመራ ይችላል?"
+          ]
+        },
+        {
+          "id": "LEV-S02",
+          "range": "LEV 19:1-18",
+          "title": "በዕለታዊ ግንኙነት ውስጥ ቅድስና",
+          "observation": [
+            "ስለ አምልኮ፣ ታማኝነት፣ ደመወዝ፣ ድሆችና ባልንጀራ የተሰጡትን ትእዛዛት ምልክት ያድርጉ።",
+            "የቅድስና ጥሪንና ባልንጀራን የመውደድ ትእዛዝን ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ክፍሉ ቅድስናን ከዕለታዊ ማኅበራዊ ባህሪ ጋር እንዴት ያገናኛል?",
+            "የኢኮኖሚ ፍትሕና እውነተኛ ንግግር ለምን ተካተዋል?"
+          ],
+          "application": [
+            "ተጋላጭ ባልንጀራን የሚጠብቅ አንድ ተግባራዊ እርምጃ ይለዩ።",
+            "በዕለታዊ ሥራዎ ውስጥ ታማኝና ፍትሐዊ ግንኙነት ምን ይመስላል?"
+          ]
+        },
+        {
+          "id": "LEV-S03",
+          "range": "LEV 25:1-17",
+          "title": "ሰንበት፣ መሬትና ነፃ መልቀቅ",
+          "observation": [
+            "በክፍሉ የተገለጹትን የዕረፍትና የመልቀቅ ዑደቶች ይለዩ።",
+            "መሬት፣ ጉልበትና ንብረት በኃላፊነት የሚያዙ ስጦታዎች መሆናቸውን ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ሰንበትና ኢዮቤል ዘላቂ ብዝበዛን እንዴት ይፈትናሉ?",
+            "ጽሑፉ ስለ ባለቤትነትና ኃላፊነት ምን ያስተምራል?"
+          ],
+          "application": [
+            "ዕረፍት ወይም ፍትሐዊ ነፃ መልቀቅ ማኅበረሰብዎን የት ሊያሻሽል ይችላል?",
+            "ሠራተኞችንና ዕዳ ያለባቸውን ሰዎች እንዴት መጠበቅ ይቻላል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "LEV-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "የስርየት ቀንን የሚገልጸው የትኛው ምዕራፍ ነው?",
+          "options": [
+            "ዘሌዋውያን 5",
+            "ዘሌዋውያን 10",
+            "ዘሌዋውያን 16",
+            "ዘሌዋውያን 27"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ዘሌዋውያን 16 ስለ ስርየት ቀን ዋና መመሪያዎችን ይሰጣል።",
+          "references": [
+            "LEV 16:1-34"
+          ]
+        },
+        {
+          "id": "LEV-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘሌዋውያን ቅድስናን ሰዎች ባልንጀሮቻቸውን ከሚያዩበት አያያዝ ጋር ያገናኛል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "LEV 19:1-18"
+          ]
+        },
+        {
+          "id": "LEV-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘሌዋውያን 8 የእስራኤል ሊቀ ካህን ሆኖ የተሾመው ማን ነው?",
+          "options": [
+            "ኢያሱ",
+            "አሮን",
+            "ሳሙኤል",
+            "ዕዝራ"
+          ],
+          "correct_option_id": "B",
+          "explanation": "አሮንና ልጆቹ ለካህናት አገልግሎት ተሾሙ።",
+          "references": [
+            "LEV 8:1-13"
+          ]
+        },
+        {
+          "id": "LEV-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "እንደ ራስህ ባልንጀራህን ውደድ የሚለው ትእዛዝ በየትኛው ምዕራፍ ይገኛል?",
+          "options": [
+            "ዘሌዋውያን 11",
+            "ዘሌዋውያን 16",
+            "ዘሌዋውያን 19",
+            "ዘሌዋውያን 25"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ይህ ትእዛዝ በዘሌዋውያን 19 የቅድስና ሕጎች ክፍል ውስጥ ይገኛል።",
+          "references": [
+            "LEV 19:18"
+          ]
+        },
+        {
+          "id": "LEV-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዘሌዋውያን 25 ስለ ሰንበት ዓመትና ስለ ኢዮቤል መመሪያዎችን ይዟል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "LEV 25:1-17"
+          ]
+        }
+      ]
+    }
+  }
+}
