@@ -14,6 +14,16 @@ import java.nio.file.StandardCopyOption
  * One-time, crash-recoverable plaintext-to-SQLCipher cutover.
  * The legacy source is retained until the encrypted target passes integrity and row-count checks.
  */
+internal object StudyMigrationFaultInjection {
+    @Volatile var failAt: String? = null
+    fun hit(point: String) {
+        if (failAt == point) {
+            failAt = null
+            throw java.io.IOException("Injected migration interruption at $point")
+        }
+    }
+}
+
 internal object LegacyStudyDatabaseMigration {
     private const val TEMP = "maale_bible_study.enc.tmp"
     private const val LEGACY = "maale_bible_study.plaintext.rollback"
@@ -59,6 +69,7 @@ internal object LegacyStudyDatabaseMigration {
                     it.getString(0)
                 }
                 if (journalMode.equals("wal", true)) {
+                    StudyMigrationFaultInjection.hit("BEFORE_WAL_CHECKPOINT")
                     val checkpointed = source.rawQuery("PRAGMA wal_checkpoint(TRUNCATE)", null).use { result ->
                         check(result.moveToFirst()) { "Unable to checkpoint legacy WAL" }
                         result.getInt(0) == 0 && result.getInt(1) == result.getInt(2)
@@ -74,8 +85,10 @@ internal object LegacyStudyDatabaseMigration {
             fsync(temp)
             atomicMove(live, rollback)
             deleteSidecars(live)
+            StudyMigrationFaultInjection.hit("AFTER_LEGACY_RENAME")
             try {
                 atomicMove(temp, live)
+                StudyMigrationFaultInjection.hit("AFTER_ENCRYPTED_RENAME")
                 check(isEncryptedAndHealthy(live, dek)) { "Encrypted database failed post-cutover verification" }
                 deleteDatabaseFiles(rollback)
             } catch (failure: Throwable) {

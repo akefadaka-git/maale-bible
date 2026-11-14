@@ -1,5 +1,7 @@
 package org.maale.bible.ui
 
+import org.maale.bible.R
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,6 +15,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,10 +25,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.catalog.CanonicalBookCatalog
 
 @Composable
-fun SearchPlaceholderScreen(
+fun CatalogueSearchScreen(
     onSelectBook: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -38,22 +42,23 @@ fun SearchPlaceholderScreen(
             .padding(horizontal = 16.dp, vertical = 20.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Search the catalogue", style = MaterialTheme.typography.headlineSmall)
+        Text(stringResource(R.string.search_title), style = MaterialTheme.typography.headlineSmall)
         OutlinedTextField(
             value = query,
             onValueChange = { query = it },
             modifier = Modifier.fillMaxWidth(),
-            label = { Text("Book name or code") },
+            label = { Text(stringResource(R.string.search_hint)) },
+            trailingIcon = { if (query.isNotEmpty()) TextButton(onClick = { query = "" }) { Text(stringResource(R.string.search_clear)) } },
             singleLine = true,
-            supportingText = { Text("Searches the 66-book catalogue stored on this device.") }
+            supportingText = { Text(stringResource(R.string.search_support)) }
         )
         Text(
-            text = if (results.isEmpty()) "No books match “$query”" else "${results.size} books found",
+            text = if (results.isEmpty()) stringResource(R.string.search_no_results) else stringResource(R.string.search_results_count, results.size),
             style = MaterialTheme.typography.labelLarge
         )
         if (results.isEmpty()) {
             Text(
-                "Try an English book name or a three-character USFM code.",
+                stringResource(R.string.search_try),
                 style = MaterialTheme.typography.bodyMedium
             )
         } else {
@@ -81,7 +86,7 @@ fun SearchPlaceholderScreen(
             }
         }
         Text(
-            "This search covers book names and catalogue codes only. Scripture search remains unavailable until a separate content-intake approval.",
+            stringResource(R.string.search_boundary),
             style = MaterialTheme.typography.bodySmall
         )
     }
