@@ -1,7 +1,6 @@
 package org.maale.bible
 
 import android.content.Intent
-import android.content.IntentFilter
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -11,6 +10,9 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.uiautomator.By
+import androidx.test.uiautomator.UiDevice
+import androidx.test.uiautomator.Until
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -40,7 +42,7 @@ class CoreStudyNavigationInstrumentedTest {
         openSettings()
         compose.onNodeWithText("Accessibility").assertIsDisplayed()
         compose.onNodeWithText("Create encrypted backup").performScrollTo().assertIsDisplayed()
-        compose.onNodeWithText("Restore backup").performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText("Restore portable backup").performScrollTo().assertIsDisplayed()
         compose.onNodeWithContentDescription("Select encrypted backup file")
             .performScrollTo().assertIsDisplayed()
     }
@@ -96,22 +98,29 @@ class CoreStudyNavigationInstrumentedTest {
         expectedStatus: String
     ) {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
-        val monitor = instrumentation.addMonitor(IntentFilter(action), null, false)
+        val device = UiDevice.getInstance(instrumentation)
         try {
             launchPicker()
-            val picker = instrumentation.waitForMonitorWithTimeout(monitor, 10_000)
-            assert(picker != null) { "The system document picker for $action was not launched." }
+            // SAF launches the platform DocumentsUI process. Observe the foreground
+            // package rather than relying on Instrumentation.ActivityMonitor, which
+            // does not reliably report external ActivityResultContract launches.
+            val pickerVisible = device.wait(
+                Until.hasObject(By.pkg("com.google.android.documentsui")),
+                15_000
+            )
+            assert(pickerVisible) { "DocumentsUI did not become visible for $action." }
 
             // Recreate the caller while the external picker owns the foreground. The
             // cancellation result must be delivered to the newly registered launcher.
             compose.activityRule.scenario.recreate()
-            instrumentation.uiAutomation.executeShellCommand("input keyevent KEYCODE_BACK").close()
+            device.pressBack()
             compose.waitUntil(timeoutMillis = 10_000) {
                 compose.onAllNodesWithText(expectedStatus).fetchSemanticsNodes().isNotEmpty()
             }
             compose.onNodeWithText(expectedStatus).assertIsDisplayed()
         } finally {
-            instrumentation.removeMonitor(monitor)
+            // Keep the test isolated if the platform picker remains open on failure.
+            device.pressBack()
         }
     }
 }
