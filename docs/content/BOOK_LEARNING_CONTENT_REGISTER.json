@@ -4297,5 +4297,15 @@
         }
       }
     }
-  ]
+  ],
+  "implementation_snapshot": {
+    "snapshot_date": "2026-11-14",
+    "books_with_draft_introduction_inductive_study_and_quiz": 0,
+    "books_with_chapter_guides_started": 66,
+    "books_not_started": 0,
+    "release_approved_books": 0,
+    "scripture_text_included": false,
+    "draft_preview_policy": "DEBUG_BUILDS_ONLY",
+    "note": "Draft counts describe learning materials only. They do not represent scripture-text import, language approval, rights approval, theological review, or release readiness."
+  }
 }
