@@ -51,6 +51,8 @@ class CoreStudyNavigationInstrumentedTest {
         waitForTag("books_screen")
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").performClick()
+        waitForTag("book_learning_screen")
+        compose.onNodeWithText("Open this book in the Bible reader").performClick()
         waitForTag("reader_screen")
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
         compose.onNodeWithTag("reader_screen")
@@ -95,6 +97,18 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("Bookmarks (1)").assertIsDisplayed()
         compose.onNodeWithTag("study_hub_list").performScrollToNode(hasText("Genesis"))
         compose.onNodeWithText("Genesis").assertIsDisplayed()
+    }
+
+    @Test fun bookLearningCentrePreviewsDraftIntroductionAndQuizInDebugBuild() {
+        compose.onNodeWithTag("navigation_books").performClick()
+        waitForTag("books_screen")
+        compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
+        compose.onNodeWithTag("book_item_GEN").performClick()
+        waitForTag("book_learning_screen")
+        compose.onNodeWithText("INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.").assertExists()
+        compose.onNodeWithText("Genesis — beginnings, humanity and the family of Israel").assertExists()
+        compose.onNodeWithText("Quiz").performClick()
+        compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
     }
 
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
