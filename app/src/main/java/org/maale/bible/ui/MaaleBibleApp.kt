@@ -152,7 +152,7 @@ fun MaaleBibleApp() {
                     NavigationBar(modifier = Modifier.testTag("navigation_compact")) {
                         AppDestination.entries.forEach { item ->
                             NavigationBarItem(
-                                selected = current == item && selectedBookId == null,
+                                selected = current == item && learningBookId == null && readerBookId == null,
                                 onClick = { learningBookId = null; readerBookId = null; readerReturnToLearningBookId = null; destination = item.name },
                                 modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleMedium) },
@@ -169,7 +169,7 @@ fun MaaleBibleApp() {
                         Spacer(Modifier.height(8.dp))
                         AppDestination.entries.forEach { item ->
                             NavigationRailItem(
-                                selected = current == item && selectedBookId == null,
+                                selected = current == item && learningBookId == null && readerBookId == null,
                                 onClick = { learningBookId = null; readerBookId = null; readerReturnToLearningBookId = null; destination = item.name },
                                 modifier = Modifier.testTag(if (item == AppDestination.BOOKS) "navigation_books" else if (item == AppDestination.MORE) "navigation_more" else "navigation_${item.name.lowercase()}"),
                                 icon = { Text(item.glyph, style = MaterialTheme.typography.titleLarge) },
