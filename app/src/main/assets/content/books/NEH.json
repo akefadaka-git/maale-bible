@@ -176,7 +176,8 @@
           "explanation": "Nehemiah is authorized to return and rebuild Jerusalem’s walls.",
           "references": [
             "NEH 2:1-20"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NEH-Q02",
@@ -188,7 +189,8 @@
           "explanation": "Chapter 5 records complaints about debt, interest and the burdens on poorer families.",
           "references": [
             "NEH 5:1-19"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NEH-Q03",
@@ -205,7 +207,8 @@
           "explanation": "Ezra reads the law while others help the people understand it.",
           "references": [
             "NEH 8:1-12"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NEH-Q04",
@@ -222,7 +225,8 @@
           "explanation": "Nehemiah reports that the wall was completed in fifty-two days.",
           "references": [
             "NEH 6:15-16"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "NEH-Q05",
@@ -234,7 +238,8 @@
           "explanation": "It includes public Torah reading, confession, covenant renewal and worship.",
           "references": [
             "NEH 8:1-10:39"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -367,7 +372,8 @@
           "references": [
             "NEH 2:1-20"
           ],
-          "explanation": "ነህምያ ወደ ኢየሩሳሌም ተመልሶ ግንቡን እንዲገነባ ፈቃድ ተሰጠው።"
+          "explanation": "ነህምያ ወደ ኢየሩሳሌም ተመልሶ ግንቡን እንዲገነባ ፈቃድ ተሰጠው።",
+          "explanation_locale": "am"
         },
         {
           "id": "NEH-Q02",
@@ -375,10 +381,12 @@
           "difficulty": "easy",
           "prompt": "ነህምያ በተመለሰው ማኅበረሰብ ውስጥ የኢኮኖሚ ብዝበዛ መኖሩን ይመዘግባል።",
           "options": [],
-          "correct_answer": false,
+          "correct_answer": true,
           "references": [
             "NEH 5:1-19"
-          ]
+          ],
+          "explanation": "Chapter 5 records complaints about debt, interest and the burdens on poorer families.",
+          "explanation_locale": "en"
         },
         {
           "id": "NEH-Q03",
@@ -395,7 +403,8 @@
           "references": [
             "NEH 8:1-12"
           ],
-          "explanation": "ዕዝራ ሕጉን ያነባል፤ ሌሎችም ሕዝቡ እንዲረዳ ይረዳሉ።"
+          "explanation": "ዕዝራ ሕጉን ያነባል፤ ሌሎችም ሕዝቡ እንዲረዳ ይረዳሉ።",
+          "explanation_locale": "am"
         },
         {
           "id": "NEH-Q04",
@@ -412,7 +421,8 @@
           "references": [
             "NEH 6:15-16"
           ],
-          "explanation": "ነህምያ ግንቡ በ52 ቀናት እንደተጠናቀቀ ይናገራል።"
+          "explanation": "ነህምያ ግንቡ በ52 ቀናት እንደተጠናቀቀ ይናገራል።",
+          "explanation_locale": "am"
         },
         {
           "id": "NEH-Q05",
@@ -423,7 +433,9 @@
           "correct_answer": false,
           "references": [
             "NEH 8:1-10:39"
-          ]
+          ],
+          "explanation": "It includes public Torah reading, confession, covenant renewal and worship.",
+          "explanation_locale": "en"
         }
       ]
     }
