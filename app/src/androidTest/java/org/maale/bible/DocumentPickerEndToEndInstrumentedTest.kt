@@ -8,6 +8,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.assertTextEquals
+import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertEquals
@@ -104,6 +105,28 @@ class DocumentPickerEndToEndInstrumentedTest {
         compose.onNodeWithTag("backup_status").assertTextEquals("Backup selection cancelled.")
         val state = ViewModelProvider(compose.activity)[PendingDocumentPickerState::class.java]
         assertNull(state.consumeRestoreKey())
+    }
+
+
+    @Test fun pendingRecoveryKeysSurviveActivityConfigurationRecreation() {
+        val scenario = ActivityScenario.launch(MainActivity::class.java)
+        try {
+            scenario.onActivity { activity ->
+                val state = ViewModelProvider(activity).get(PendingDocumentPickerState::class.java)
+                state.storeExportKey("export-key-across-recreation")
+                state.storeRestoreKey("restore-key-across-recreation")
+            }
+            scenario.recreate()
+            scenario.onActivity { activity ->
+                val state = ViewModelProvider(activity).get(PendingDocumentPickerState::class.java)
+                assertEquals("export-key-across-recreation", state.consumeExportKey())
+                assertEquals("restore-key-across-recreation", state.consumeRestoreKey())
+                assertNull(state.consumeExportKey())
+                assertNull(state.consumeRestoreKey())
+            }
+        } finally {
+            scenario.close()
+        }
     }
 
     @Test fun cancellationConsumesPendingExportAndRestoreKeysWithoutPersistingThem() {
