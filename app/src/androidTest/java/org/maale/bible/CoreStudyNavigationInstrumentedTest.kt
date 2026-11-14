@@ -55,6 +55,7 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("learning_open_reader_button").performScrollTo().assertIsDisplayed().performClick()
         waitForTag("reader_screen")
         compose.onNodeWithTag("reader_current_position").assertIsDisplayed()
+        compose.onNodeWithTag("reader_import_scripture_package").assertExists()
         compose.onNodeWithTag("reader_screen")
             .performScrollToNode(hasTestTag("reader_add_bookmark_button"))
         compose.onNodeWithTag("reader_add_bookmark_button")
