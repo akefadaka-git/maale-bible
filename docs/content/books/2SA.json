@@ -182,7 +182,8 @@
           "explanation": "Nathan delivers the message in the cited passage.",
           "references": [
             "2SA 7:1-17"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q02",
@@ -194,7 +195,8 @@
           "explanation": "The covenant promise concerns David’s house and kingdom.",
           "references": [
             "2SA 7:11-16"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q03",
@@ -211,7 +213,8 @@
           "explanation": "Nathan tells David a parable and names his wrongdoing.",
           "references": [
             "2SA 12:1-14"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q04",
@@ -228,7 +231,8 @@
           "explanation": "Absalom’s rebellion occupies a major section of the narrative.",
           "references": [
             "2SA 15:1-14"
-          ]
+          ],
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q05",
@@ -240,7 +244,8 @@
           "explanation": "The prophet confronts David and the narrative describes severe consequences.",
           "references": [
             "2SA 11:1-12:14"
-          ]
+          ],
+          "explanation_locale": "en"
         }
       ]
     },
@@ -378,7 +383,9 @@
           "correct_option_id": "A",
           "references": [
             "2SA 7:1-17"
-          ]
+          ],
+          "explanation": "Nathan delivers the message in the cited passage.",
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q02",
@@ -390,7 +397,8 @@
           "explanation": "ቃል ኪዳኑ ስለ ዳዊት ቤትና መንግሥት ነው።",
           "references": [
             "2SA 7:11-16"
-          ]
+          ],
+          "explanation_locale": "am"
         },
         {
           "id": "2SA-Q03",
@@ -406,7 +414,9 @@
           "correct_option_id": "A",
           "references": [
             "2SA 12:1-14"
-          ]
+          ],
+          "explanation": "Nathan tells David a parable and names his wrongdoing.",
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q04",
@@ -422,7 +432,9 @@
           "correct_option_id": "A",
           "references": [
             "2SA 15:1-14"
-          ]
+          ],
+          "explanation": "Absalom’s rebellion occupies a major section of the narrative.",
+          "explanation_locale": "en"
         },
         {
           "id": "2SA-Q05",
@@ -434,7 +446,8 @@
           "explanation": "ነቢዩ ዳዊትን ይገሥጸዋል፤ ትረካውም ከባድ ውጤቶችን ያሳያል።",
           "references": [
             "2SA 11:1-12:14"
-          ]
+          ],
+          "explanation_locale": "am"
         }
       ]
     }
