@@ -65,11 +65,12 @@ fun BookLearningScreen(
                 Text(stringResource(R.string.learning_bilingual_status), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onPrimaryContainer)
             }
         }
-        TabRow(selectedTabIndex = selectedTab.ordinal) {
+        PrimaryTabRow(selectedTabIndex = selectedTab.ordinal) {
             BookLearningTab.entries.forEach { tab ->
                 Tab(
                     selected = selectedTab == tab,
                     onClick = { selectedTab = tab },
+                    modifier = Modifier.testTag("learning_tab_${tab.name.lowercase()}"),
                     text = { Text(stringResource(tab.label)) }
                 )
             }
