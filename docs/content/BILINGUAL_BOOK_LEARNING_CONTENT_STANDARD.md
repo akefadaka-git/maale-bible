@@ -44,6 +44,8 @@ Maale is the primary app language. Maale learning content is a later language-re
 - Interpretation must account for genre, context and textual uncertainty.
 - Application must not detach a passage from its original context.
 - Quiz answer rationales must explain why the answer is supported; scripture references must resolve against the selected verified edition.
+- Machine-readable multiple-choice answers use `correct_option_id` (`A`, `B`, `C`, `D`) matching the displayed option order. True/false answers use a JSON Boolean `correct_answer`; do not encode true/false as option letters.
+- Every rationale is a non-empty string. `explanation_locale` identifies its actual language (`en` or `am`). If a locale-specific rationale is unavailable, an explicitly labelled English fallback may be used for internal draft review; the UI must not present it as a translation.
 - Do not generate questions from unavailable scripture text or unsupported facts.
 - Track attempt history and scores separately from content assets; allow repeat practice without overwriting prior results.
 
@@ -53,7 +55,7 @@ The learning centre is designed to connect to a Bible dictionary (terms, people 
 
 ## 6. Release acceptance
 
-A book's bilingual learning package is releasable only when its EN and AM introduction, chapter guides, inductive study and quiz bank have independently passed the required source, rights, language, editorial and QA gates. Partial availability must be displayed by component and locale. No app-level "complete" badge may conceal missing content.
+A book's bilingual learning package is releasable only when its EN and AM introduction, chapter guides, inductive study and quiz bank have independently passed the required source, rights, language, editorial and QA gates. Debug builds may expose clearly labelled draft packages for internal review only; release builds must fail closed for every package not explicitly approved for release. Partial availability must be displayed by component and locale. No app-level "complete" badge may conceal missing content.
 
 ## 7. Initial register
 
