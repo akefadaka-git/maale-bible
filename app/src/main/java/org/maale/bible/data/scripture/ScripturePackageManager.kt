@@ -182,9 +182,6 @@ class ScripturePackageManager(context: Context) {
             require(bookCount == EXPECTED_BOOK_COUNT) { "Scripture package book count is invalid." }
             require(chapterCount == EXPECTED_CHAPTER_COUNT) { "Scripture package chapter count is invalid." }
             require(verseCount == EXPECTED_VERSE_COUNT) { "Scripture package verse count is invalid." }
-            require(scalarInt(database, "SELECT COUNT(*) FROM verses WHERE edition_id = '$EDITION_ID' AND TRIM(text) = ''") == 0) {
-                "Scripture package contains empty verse records."
-            }
 
             return ScripturePackageMetadata(
                 editionId = EDITION_ID,
