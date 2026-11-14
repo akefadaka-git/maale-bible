@@ -28,12 +28,12 @@ import java.time.LocalDate
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val scriptureResult = remember(context, bookId, navigation.chapter) {
-        ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter)
-    }
     var navigation by remember(bookId) {
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
+    }
+    val scriptureResult = remember(context, bookId, navigation.chapter) {
+        ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter)
     }
     var noteText by rememberSaveable(bookId) { mutableStateOf("") }
     var editingAnnotationId by rememberSaveable(bookId) { mutableStateOf<String?>(null) }
