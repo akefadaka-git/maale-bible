@@ -54,9 +54,15 @@ def collect_references(node, output: set[str]) -> None:
         for key, value in node.items():
             if key in reference_keys:
                 if isinstance(value, str) and value.strip():
-                    output.add(value.strip())
+                    normalized = value.strip().replace("–", "-").replace("—", "-")
+                    if key == "range" and re.fullmatch(r"\d+-\d+", normalized):
+                        normalized = "GEN " + normalized
+                    output.add(normalized)
                 elif isinstance(value, list):
-                    output.update(str(item).strip() for item in value if isinstance(item, str) and item.strip())
+                    for item in value:
+                        if isinstance(item, str) and item.strip():
+                            normalized = item.strip().replace("–", "-").replace("—", "-")
+                            output.add(normalized)
             collect_references(value, output)
     elif isinstance(node, list):
         for value in node:
