@@ -48,4 +48,13 @@
     <string name="learning_answer_references">ማጣቀሻዎች፦ %1$s</string>
     <string name="learning_explanation_fallback">የማብራሪያ ቋንቋ፦ እንግሊዝኛ (የአማርኛ ግምገማ በመጠባበቅ ላይ)።</string>
     <string name="learning_unknown_book">መጽሐፉ አልታወቀም</string>
+    <string name="learning_quiz_progress">ጥያቄ %1$d ከ %2$d</string>
+    <string name="learning_quiz_complete">ፈተናው ተጠናቋል</string>
+    <string name="learning_quiz_final_score">ውጤት፦ %1$d ከ %2$d ትክክል</string>
+    <string name="learning_next_question">ቀጣይ ጥያቄ</string>
+    <string name="learning_see_results">ውጤቱን ይመልከቱ</string>
+    <string name="learning_retry_quiz">እንደገና ይሞክሩ</string>
+    <string name="learning_chapter_guides_title">የየምዕራፉ የጥናት መመሪያዎች</string>
+    <string name="learning_chapter_guides_pending">የምዕራፍ መመሪያዎች በእያንዳንዱ መጽሐፍ ቅደም ተከተል እየተዘጋጁ ነው፤ የምንጭና የማጣቀሻ ማረጋገጫ ከተደረገ በኋላ ይታያሉ።</string>
+    <string name="learning_chapter_number">ምዕራፍ %1$d</string>
 </resources>
