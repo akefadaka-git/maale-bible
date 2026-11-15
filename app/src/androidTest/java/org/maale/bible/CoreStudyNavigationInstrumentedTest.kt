@@ -40,6 +40,7 @@ class CoreStudyNavigationInstrumentedTest {
     }
 
     @Before fun selectEnglishForEnglishAssertions() {
+        ScriptureEditionSelectionStore.save(compose.activity, ScriptureEditionCatalog.PRIMARY_MAALE_ID)
         AppLanguage.save(compose.activity, AppLanguage.ENGLISH)
         compose.activityRule.scenario.recreate()
         compose.waitForIdle()
@@ -61,7 +62,7 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("reader_screen")
             .performScrollToNode(hasTestTag("scripture_package_status"))
         compose.onNodeWithTag("scripture_package_status").assertIsDisplayed()
-        compose.onNodeWithText("Maale Bible text is not installed").assertExists()
+        compose.onNodeWithText("Selected Bible edition is not installed").assertExists()
         compose.onNodeWithTag("reader_screen")
             .performScrollToNode(hasTestTag("reader_add_bookmark_button"))
         compose.onNodeWithTag("reader_add_bookmark_button")
@@ -182,18 +183,22 @@ class CoreStudyNavigationInstrumentedTest {
 
             compose.onNodeWithTag("reader_edition_selector").performClick()
             compose.onNodeWithTag("reader_edition_ENG-NIV").performClick()
-            compose.onNodeWithText("English: New International Version").assertExists()
             compose.waitForIdle()
+            assertEquals("ENG-NIV", ScriptureEditionSelectionStore.load(compose.activity.applicationContext))
+            compose.onNodeWithTag("reader_edition_selector").assert(hasText("English: New International Version"))
 
             compose.activityRule.scenario.recreate()
             compose.waitForIdle()
-            compose.onNodeWithText("English: New International Version").assertExists()
+            assertEquals("ENG-NIV", ScriptureEditionSelectionStore.load(compose.activity.applicationContext))
+            compose.onNodeWithTag("reader_edition_selector").assert(hasText("English: New International Version"))
             compose.onNodeWithTag("scripture_package_status").assertIsDisplayed()
         } finally {
             ScriptureEditionSelectionStore.save(
                 compose.activity.applicationContext,
                 ScriptureEditionCatalog.PRIMARY_MAALE_ID
             )
+            compose.activityRule.scenario.recreate()
+            compose.waitForIdle()
         }
     }
 
