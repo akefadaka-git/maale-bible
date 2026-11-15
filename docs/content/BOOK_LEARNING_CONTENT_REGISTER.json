@@ -52,10 +52,10 @@
             "review_status": "exact_edition_source_check_and_editorial_theological_review_pending"
           },
           "am": {
-            "status": "not_translated",
-            "source_ids": [],
-            "chapter_count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "50_chapter_guides_with_350_structured_study_prompts_draft_translation",
+            "count": 50,
+            "study_prompt_count": 350,
+            "review_status": "qualified_amharic_language_review_exact_edition_source_check_and_editorial_theological_review_pending"
           }
         },
         "inductive_study": {
@@ -97,7 +97,7 @@
             "quality_note": "New items are predominantly true/false; diversify question formats and deepen explanations before approval."
           },
           "am": {
-            "status": "draft_unreviewed",
+            "status": "102_unique_items_draft_translation",
             "source_ids": [
               "sots-genesis",
               "usccb-genesis",
@@ -105,7 +105,9 @@
               "cambridge-pentateuch",
               "bibleproject-genesis"
             ],
-            "review_status": "language_review_required"
+            "question_count": 102,
+            "review_status": "amharic_language_review_exact_edition_reference_validation_and_theological_review_pending",
+            "quality_note": "The current Android quiz renderer supports multiple-choice and true/false only; question-format expansion and deeper explanations remain pending."
           }
         },
         "memory_verses": {
@@ -115,9 +117,9 @@
             "review_status": "verify_exact_edition_wording_before_release"
           },
           "am": {
-            "status": "not_translated",
-            "count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "count": 7,
+            "review_status": "amharic_language_review_and_exact_edition_wording_validation_pending"
           }
         },
         "key_verses": {
@@ -127,9 +129,9 @@
             "review_status": "verify_references_and_editorial_selection"
           },
           "am": {
-            "status": "not_translated",
-            "count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "count": 18,
+            "review_status": "amharic_language_review_reference_and_editorial_selection_pending"
           }
         },
         "commentary": {
@@ -139,9 +141,9 @@
             "review_status": "theological_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_translated",
-            "unit_count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "unit_count": 6,
+            "review_status": "amharic_language_review_theological_and_editorial_review_pending"
           }
         },
         "concordance": {
@@ -151,9 +153,9 @@
             "review_status": "reference_validation_pending"
           },
           "am": {
-            "status": "not_translated",
-            "entry_count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "entry_count": 14,
+            "review_status": "amharic_language_review_name_and_reference_validation_pending"
           }
         },
         "dictionary": {
@@ -163,9 +165,9 @@
             "review_status": "editorial_review_pending"
           },
           "am": {
-            "status": "not_translated",
-            "entry_count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "entry_count": 5,
+            "review_status": "amharic_language_review_terminology_and_editorial_review_pending"
           }
         },
         "timeline": {
@@ -175,9 +177,9 @@
             "review_status": "historical_context_review_pending"
           },
           "am": {
-            "status": "not_translated",
-            "event_count": 0,
-            "review_status": "qualified_amharic_translation_required"
+            "status": "draft_translation",
+            "event_count": 5,
+            "review_status": "amharic_language_review_historical_context_review_pending"
           }
         }
       }
@@ -4390,7 +4392,7 @@
     ],
     "chapter_guides_en_completed_count": 1,
     "chapter_guides_en_chapters": 50,
-    "chapter_guides_am_completed_count": 0,
+    "chapter_guides_am_completed_count": 1,
     "genesis_quiz_question_count": 102,
     "genesis_quiz_minimum": 100,
     "genesis_key_verses": 18,
@@ -4399,7 +4401,12 @@
     "genesis_dictionary_entries": 5,
     "genesis_commentary_units": 6,
     "genesis_chapter_guides_en": 50,
-    "genesis_content_status": "draft_review_required",
-    "genesis_chapter_study_prompts_en": 350
+    "genesis_content_status": "draft_bilingual_coverage_review_required",
+    "genesis_chapter_study_prompts_en": 350,
+    "chapter_guides_am_chapters": 50,
+    "genesis_am_quiz_question_count": 102,
+    "genesis_chapter_guides_am": 50,
+    "genesis_chapter_study_prompts_am": 350,
+    "genesis_commentary_units_am": 6
   }
 }
