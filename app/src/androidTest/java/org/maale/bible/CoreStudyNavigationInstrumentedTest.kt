@@ -155,7 +155,7 @@ class CoreStudyNavigationInstrumentedTest {
         var selected = ""
         val question = org.maale.bible.data.content.BookQuizQuestion(
             id = "test-multi", type = "multiple_select", difficulty = "medium", prompt = "Select all valid details",
-            options = listOf("First", "Second", "Third", "Fourth"), correctOptionIds = listOf("A", "C"),
+            options = listOf("First", "Second", "Third", "Fourth"), correctOptionId = null, correctOptionIds = listOf("A", "C"), correctAnswer = null,
             explanation = "The first and third details are supported.", explanationLocale = "en", references = listOf("GEN 9:8-17")
         )
         compose.setContent {
@@ -173,7 +173,7 @@ class CoreStudyNavigationInstrumentedTest {
         var typed = ""
         val question = org.maale.bible.data.content.BookQuizQuestion(
             id = "test-short", type = "short_answer", difficulty = "medium", prompt = "Name the second son",
-            options = emptyList(), acceptedAnswers = listOf("Ephraim"),
+            options = emptyList(), correctOptionId = null, acceptedAnswers = listOf("Ephraim"), correctAnswer = null,
             explanation = "Ephraim is the second son.", explanationLocale = "en", references = listOf("GEN 41:50-52")
         )
         compose.setContent {
