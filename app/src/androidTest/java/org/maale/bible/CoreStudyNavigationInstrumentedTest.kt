@@ -119,6 +119,9 @@ class CoreStudyNavigationInstrumentedTest {
         assertNotNull("Genesis learning package must load in the debug test build", debugContent)
         assertEquals("Genesis content must follow the English test locale", "en", debugContent?.locale)
         assertEquals("Genesis quiz must expose its first question", "GEN-Q01", debugContent?.quizQuestions?.firstOrNull()?.id)
+        assertEquals("Genesis quiz must load 110 questions", 110, debugContent?.quizQuestions?.size)
+        assertEquals("Genesis quiz must load four multiple-select questions", 4, debugContent?.quizQuestions?.count { it.type == "multiple_select" })
+        assertEquals("Genesis quiz must load four short-answer questions", 4, debugContent?.quizQuestions?.count { it.type == "short_answer" })
         assertEquals("Genesis chapter guides must expose chapter one", 1, debugContent?.chapterGuides?.firstOrNull()?.chapter)
         assertEquals("Genesis commentary units must load for the selected locale", 6, debugContent?.commentaryUnits?.size)
         assertEquals("Genesis introduction must expose composition context", true, debugContent?.introduction?.dateAndComposition?.isNotBlank())
@@ -144,6 +147,41 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("learning_tab_quiz").performClick()
         compose.waitForIdle()
         compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
+    }
+
+    @Test fun multipleSelectQuestionRendersAndReturnsSelectedOptionIds() {
+        var selected = ""
+        val question = org.maale.bible.data.content.BookQuizQuestion(
+            id = "test-multi", type = "multiple_select", difficulty = "medium", prompt = "Select all valid details",
+            options = listOf("First", "Second", "Third", "Fourth"), correctOptionIds = listOf("A", "C"),
+            explanation = "The first and third details are supported.", explanationLocale = "en", references = listOf("GEN 9:8-17")
+        )
+        compose.setContent {
+            org.maale.bible.ui.QuizQuestionCard(
+                question = question, selectedAnswer = selected, submitted = false,
+                showExplanationFallback = false, onSelect = { selected = it }, onSubmit = {}
+            )
+        }
+        compose.onNodeWithText("Select every correct option").assertExists()
+        compose.onNodeWithTag("learning_quiz_option_A").performClick()
+        assertEquals("A", selected)
+    }
+
+    @Test fun shortAnswerQuestionAcceptsTypedText() {
+        var typed = ""
+        val question = org.maale.bible.data.content.BookQuizQuestion(
+            id = "test-short", type = "short_answer", difficulty = "medium", prompt = "Name the second son",
+            options = emptyList(), acceptedAnswers = listOf("Ephraim"),
+            explanation = "Ephraim is the second son.", explanationLocale = "en", references = listOf("GEN 41:50-52")
+        )
+        compose.setContent {
+            org.maale.bible.ui.QuizQuestionCard(
+                question = question, selectedAnswer = typed, submitted = false,
+                showExplanationFallback = false, onSelect = { typed = it }, onSubmit = {}
+            )
+        }
+        compose.onNodeWithTag("learning_quiz_short_answer").performTextInput("Ephraim")
+        assertEquals("Ephraim", typed)
     }
 
     @Test fun quizSupportsAnswerLockingProgressResultsAndRetry() {
