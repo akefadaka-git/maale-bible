@@ -1,5 +1,7 @@
 package org.maale.bible.ui
 
+import android.content.pm.ApplicationInfo
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -42,7 +44,22 @@ fun BookLearningScreen(
     var selectedEditionId by rememberSaveable { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
     val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId) ?: ScriptureEditionCatalog.editions.first()
     val book = remember(bookId) { CanonicalBookCatalog.find(bookId) }
-    val content = remember(bookId, context) { BookLearningContentRepository.load(context, bookId) }
+    val content = remember(bookId, context) {
+        BookLearningContentRepository.load(context, bookId).also { loaded ->
+            val packageFlags = try {
+                @Suppress("DEPRECATION")
+                context.packageManager.getApplicationInfo(context.packageName, 0).flags
+            } catch (_: Exception) { 0 }
+            Log.i(
+                "BOOK_LEARNING_CONTENT_DIAGNOSTIC",
+                "book=$bookId; context=${context.javaClass.name}; appContext=${context.applicationContext.javaClass.name}; " +
+                    "package=${context.packageName}; contextFlags=${context.applicationInfo.flags}; " +
+                    "appFlags=${context.applicationContext.applicationInfo.flags}; packageFlags=$packageFlags; " +
+                    "debugFlag=${ApplicationInfo.FLAG_DEBUGGABLE}; locale=${context.resources.configuration.locales.toLanguageTags()}; " +
+                    "loaded=${loaded != null}; publication=${loaded?.publicationState}; quiz=${loaded?.quizQuestions?.size}; guides=${loaded?.chapterGuides?.size}"
+            )
+        }
+    }
     var selectedTab by rememberSaveable(bookId) { mutableStateOf(BookLearningTab.OVERVIEW) }
     val title = book?.let { stringResource(bookNameResource(it.usfmId)) } ?: bookId
     val testament = if ((book?.order ?: 0) <= 39) stringResource(R.string.explorer_old_testament) else stringResource(R.string.explorer_new_testament)
