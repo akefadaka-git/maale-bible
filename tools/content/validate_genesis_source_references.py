@@ -91,7 +91,7 @@ def validate_one(reference: str, books: dict[str, dict[int, set[int]]]) -> list[
             start_verse = number(verse_start_label)
             end_chapter = int(verse_end_chapter_label) if verse_end_chapter_label else chapter_start
             end_verse = number(verse_end_label) if verse_end_label else start_verse
-            if end_chapter < chapter_start or end_chapter > chapter_end:
+            if end_chapter < chapter_start or end_chapter not in books[book_id]:
                 issues.append(f"invalid cross-chapter range in {part!r}")
                 continue
             if end_chapter == chapter_start:
