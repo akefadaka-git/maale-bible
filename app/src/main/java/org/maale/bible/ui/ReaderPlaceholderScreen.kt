@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.scripture.ScriptureChapter
 import org.maale.bible.data.scripture.ScriptureEditionCatalog
+import org.maale.bible.data.scripture.ScriptureEditionSelectionStore
 import org.maale.bible.data.scripture.ScriptureChapterResult
 import org.maale.bible.data.scripture.ScripturePackageRepository
 import org.maale.bible.domain.model.*
@@ -33,7 +34,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
     }
-    var selectedEditionId by rememberSaveable(bookId) { mutableStateOf(ScriptureEditionCatalog.PRIMARY_MAALE_ID) }
+    var selectedEditionId by rememberSaveable(bookId) { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
     var editionMenuExpanded by remember { mutableStateOf(false) }
     val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId)
         ?: ScriptureEditionCatalog.editions.first()
@@ -66,7 +67,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
                     DropdownMenuItem(
                         text = { Column { Text(edition.title); Text("${edition.languageName} · ${edition.status.name}", style = MaterialTheme.typography.labelSmall) } },
                         modifier = Modifier.testTag("reader_edition_${edition.id}"),
-                        onClick = { selectedEditionId = edition.id; editionMenuExpanded = false }
+                        onClick = { if (ScriptureEditionSelectionStore.save(context, edition.id)) selectedEditionId = edition.id; editionMenuExpanded = false }
                     )
                 }
             }
