@@ -44,7 +44,7 @@ def validate() -> list[str]:
                 fail(errors, f"{locale_name} introduction missing {field}.")
         if not intro.get("canonical_connections"):
             fail(errors, f"{locale_name} introduction missing canonical_connections.")
-        for key, expected in (("chapter_guides", 50), ("inductive_studies", 4), ("quiz", 102)):
+        for key, expected in (("chapter_guides", 50), ("inductive_studies", 4), ("quiz", 110)):
             rows = locale.get(key, [])
             if len(rows) != expected:
                 fail(errors, f"{locale_name} {key}: expected {expected}, found {len(rows)}.")
@@ -65,14 +65,22 @@ def validate() -> list[str]:
         for item in locale.get("quiz", []):
             if not item.get("prompt") or not item.get("explanation") or not item.get("references") or not item.get("learning_objective") or not item.get("difficulty"):
                 fail(errors, f"{locale_name} quiz {item.get('id')} lacks prompt, explanation or references.")
-            if item.get("type") not in {"true_false", "multiple_choice"}:
+            if item.get("type") not in {"true_false", "multiple_choice", "multiple_select", "short_answer"}:
                 fail(errors, f"{locale_name} quiz {item.get('id')} uses an unsupported Android question type.")
             if item.get("type") == "true_false" and type(item.get("correct_answer")) is not bool:
                 fail(errors, f"{locale_name} quiz {item.get('id')} true/false answer is not Boolean.")
-            if item.get("type") == "multiple_choice":
+            if item.get("type") in {"multiple_choice", "multiple_select"}:
                 options = item.get("options", [])
-                if len(options) != 4 or item.get("correct_option_id") not in {"A", "B", "C", "D"}:
-                    fail(errors, f"{locale_name} quiz {item.get('id')} has invalid multiple-choice answer.")
+                if len(options) != 4:
+                    fail(errors, f"{locale_name} quiz {item.get('id')} must have four options.")
+                if item.get("type") == "multiple_choice" and item.get("correct_option_id") not in {"A", "B", "C", "D"}:
+                    fail(errors, f"{locale_name} quiz {item.get('id')} has invalid single-choice answer.")
+                if item.get("type") == "multiple_select":
+                    keys = item.get("correct_option_ids", [])
+                    if len(keys) not in {2, 3} or not set(keys).issubset({"A", "B", "C", "D"}):
+                        fail(errors, f"{locale_name} quiz {item.get('id')} has invalid multiple-select keys.")
+            if item.get("type") == "short_answer" and not item.get("accepted_answers"):
+                fail(errors, f"{locale_name} quiz {item.get('id')} lacks accepted short answers.")
             for ref in item.get("references", []):
                 match = REF.search(ref)
                 if match and match.group(1) == "GEN" and not 1 <= int(match.group(2)) <= 50:
@@ -83,8 +91,8 @@ def validate() -> list[str]:
         for source, translated in zip(en_quiz, am_quiz):
             if translated.get("id") != source.get("id") + "-AM":
                 fail(errors, f"Amharic quiz ID mismatch for {source.get('id')}.")
-            source_answer = source.get("correct_answer", source.get("correct_option_id"))
-            translated_answer = translated.get("correct_answer", translated.get("correct_option_id"))
+            source_answer = source.get("correct_answer", source.get("correct_option_ids", source.get("accepted_answers", source.get("correct_option_id"))))
+            translated_answer = translated.get("correct_answer", translated.get("correct_option_ids", translated.get("accepted_answers", translated.get("correct_option_id"))))
             if source_answer != translated_answer:
                 fail(errors, f"Quiz answer mismatch for {source.get('id')}.")
             if translated.get("explanation_locale") != "am":
