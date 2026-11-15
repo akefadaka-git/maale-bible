@@ -55,6 +55,9 @@ fun BookLearningScreen(
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
+        if (content?.localeStatus == "english_fallback_review_required") {
+            Text(stringResource(R.string.learning_locale_fallback_notice), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.error)
+        }
         Card(
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
             shape = MaterialTheme.shapes.extraLarge

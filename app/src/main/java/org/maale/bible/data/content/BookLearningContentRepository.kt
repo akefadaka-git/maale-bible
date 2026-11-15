@@ -49,6 +49,7 @@ data class BookLearningIntroduction(
 data class BookLearningContent(
     val bookId: String,
     val locale: String,
+    val localeStatus: String,
     val publicationState: String,
     val introduction: BookLearningIntroduction,
     val inductiveStudies: List<BookInductiveStudy>,
@@ -75,7 +76,13 @@ object BookLearningContentRepository {
         val root = try {
             context.assets.open(assetPath).bufferedReader(Charsets.UTF_8).use { JSONObject(it.readText()) }
         } catch (_: Exception) {
-            return null
+            try {
+                val collection = context.assets.open("content/books/remaining_books.json")
+                    .bufferedReader(Charsets.UTF_8).use { JSONObject(it.readText()) }
+                collection.optJSONObject("books")?.optJSONObject(bookId) ?: return null
+            } catch (_: Exception) {
+                return null
+            }
         }
         val publicationState = root.optString("publication_state", "draft_not_for_release")
         // Release builds fail closed. Debug builds may preview explicitly marked drafts for review.
@@ -133,6 +140,7 @@ object BookLearningContentRepository {
         return BookLearningContent(
             bookId = bookId,
             locale = locale,
+            localeStatus = localeContent.optString("locale_status", "draft"),
             publicationState = publicationState,
             introduction = intro,
             inductiveStudies = studies,

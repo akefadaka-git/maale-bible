@@ -1741,14 +1741,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -1765,26 +1765,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -1798,14 +1798,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -1822,26 +1822,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -1855,14 +1855,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -1879,26 +1879,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -1912,14 +1912,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -1936,26 +1936,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -1969,14 +1969,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -1993,26 +1993,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2026,14 +2026,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2050,26 +2050,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2083,14 +2083,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2107,26 +2107,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2140,14 +2140,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2164,26 +2164,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2197,14 +2197,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2221,26 +2221,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2254,14 +2254,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2278,26 +2278,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2311,14 +2311,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2335,26 +2335,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2368,14 +2368,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2392,26 +2392,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2425,14 +2425,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2449,26 +2449,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2482,14 +2482,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2506,26 +2506,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2539,14 +2539,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2563,26 +2563,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2596,14 +2596,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2620,26 +2620,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2653,14 +2653,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2677,26 +2677,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2710,14 +2710,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2734,26 +2734,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2767,14 +2767,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2791,26 +2791,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2824,14 +2824,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2848,26 +2848,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2881,14 +2881,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2905,26 +2905,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2938,14 +2938,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -2962,26 +2962,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -2995,14 +2995,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3019,26 +3019,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3052,14 +3052,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3076,26 +3076,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3109,14 +3109,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3133,26 +3133,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3166,14 +3166,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3190,26 +3190,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3223,14 +3223,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3247,26 +3247,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3280,14 +3280,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3304,26 +3304,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3337,14 +3337,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3361,26 +3361,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3394,14 +3394,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3418,26 +3418,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3451,14 +3451,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3475,26 +3475,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3508,14 +3508,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3532,26 +3532,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3565,14 +3565,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3589,26 +3589,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3622,14 +3622,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3646,26 +3646,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3679,14 +3679,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3703,26 +3703,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3736,14 +3736,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3760,26 +3760,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3793,14 +3793,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3817,26 +3817,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3850,14 +3850,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3874,26 +3874,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3907,14 +3907,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3931,26 +3931,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -3964,14 +3964,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -3988,26 +3988,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -4021,14 +4021,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -4045,26 +4045,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -4078,14 +4078,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -4102,26 +4102,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -4135,14 +4135,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -4159,26 +4159,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -4192,14 +4192,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -4216,26 +4216,26 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
@@ -4249,14 +4249,14 @@
       "content": {
         "introduction": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "chapter_guides": {
@@ -4273,39 +4273,41 @@
         },
         "inductive_study": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         },
         "quiz_bank": {
           "en": {
-            "status": "not_started",
+            "status": "draft_unreviewed",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "source_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "english_fallback_review_required",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "review_status": "amharic_translation_required"
           }
         }
       }
     }
   ],
   "implementation_snapshot": {
-    "snapshot_date": "2026-11-14",
+    "snapshot_date": "2026-11-15",
     "books_with_draft_introduction_inductive_study_and_quiz": 21,
     "books_with_chapter_guides_started": 0,
-    "books_not_started": 45,
+    "books_not_started": 0,
     "release_approved_books": 0,
     "scripture_text_included": false,
     "draft_preview_policy": "DEBUG_BUILDS_ONLY",
-    "note": "Draft counts describe learning materials only. They do not represent scripture-text import, language approval, rights approval, theological review, or release readiness."
+    "note": "21 books have English and Amharic draft learning packages. The remaining 45 have English draft learning packages with an explicitly labelled English fallback in the Amharic locale; they are not Amharic translations. All 66 remain unapproved, and chapter-by-chapter guides are not yet authored.",
+    "books_with_english_draft_introduction_inductive_study_and_quiz": 66,
+    "books_with_amharic_translation_review_required": 45
   }
 }

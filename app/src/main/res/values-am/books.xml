@@ -66,4 +66,5 @@
     <string name="book_name_3jn">3 ዮሐንስ</string>
     <string name="book_name_jud">ይሁዳ</string>
     <string name="book_name_rev">ራእይ</string>
+    <string name="learning_locale_fallback_notice">የአማርኛ ትርጉም ለዚህ መጽሐፍ ገና አልተዘጋጀም። ለጊዜው የእንግሊዝኛ ረቂቅ ቅጂ ለውስጣዊ ግምገማ እየታየ ነው።</string>
 </resources>
