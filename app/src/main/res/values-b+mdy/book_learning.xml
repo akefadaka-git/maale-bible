@@ -68,4 +68,6 @@
     <string name="learning_prayer_prompt_title" translatable="false">Prayer prompt</string>
     <string name="learning_commentary_title" translatable="false">Commentary and theological notes</string>
     <string name="learning_quiz_pending" translatable="false">The current quiz supports multiple choice and true/false only. Maale translation is not yet available; fill-in, matching, short-answer and chapter comprehension formats are also pending implementation.</string>
+    <string name="learning_quiz_short_answer_hint" translatable="false">Type your answer (Maale localization pending)</string>
+    <string name="learning_quiz_select_all_hint" translatable="false">Select every correct option (Maale localization pending)</string>
 </resources>
