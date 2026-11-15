@@ -183,8 +183,8 @@ class CoreStudyNavigationInstrumentedTest {
 
             compose.onNodeWithTag("reader_edition_selector").performClick()
             compose.onNodeWithTag("reader_edition_ENG-NIV").performClick()
+            compose.waitUntil(5_000) { ScriptureEditionSelectionStore.load(compose.activity.applicationContext) == "ENG-NIV" }
             compose.waitForIdle()
-            assertEquals("ENG-NIV", ScriptureEditionSelectionStore.load(compose.activity.applicationContext))
             compose.onNodeWithTag("reader_edition_selector").assert(hasText("English: New International Version"))
 
             compose.activityRule.scenario.recreate()
