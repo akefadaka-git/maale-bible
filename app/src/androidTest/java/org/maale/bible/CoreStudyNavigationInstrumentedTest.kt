@@ -145,6 +145,19 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("learning_quiz_question_GEN-Q01").assertIsDisplayed()
     }
 
+    @Test fun genesisChapterGuidesRenderFromFirstThroughFiftiethChapter() {
+        compose.onNodeWithTag("navigation_books").performClick()
+        waitForTag("books_screen")
+        compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
+        compose.onNodeWithTag("book_item_GEN").performClick()
+        waitForTag("book_learning_screen")
+        compose.onNodeWithTag("learning_tab_inductive").performClick()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_chapter_guide_1"))
+        compose.onNodeWithTag("learning_chapter_guide_1").assertIsDisplayed()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_chapter_guide_50"))
+        compose.onNodeWithTag("learning_chapter_guide_50").assertIsDisplayed()
+    }
+
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
         compose.onNodeWithText("Search").performClick()
         compose.onNodeWithTag("catalogue_search_input").performTextInput("Genesis")
