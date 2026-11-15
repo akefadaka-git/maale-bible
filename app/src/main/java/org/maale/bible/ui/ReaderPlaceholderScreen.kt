@@ -18,6 +18,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import org.maale.bible.data.scripture.ScriptureChapter
+import org.maale.bible.data.scripture.ScriptureEditionCatalog
 import org.maale.bible.data.scripture.ScriptureChapterResult
 import org.maale.bible.data.scripture.ScripturePackageRepository
 import org.maale.bible.domain.model.*
@@ -32,8 +33,12 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
     }
-    val scriptureResult = remember(context, bookId, navigation.chapter) {
-        ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter)
+    var selectedEditionId by rememberSaveable(bookId) { mutableStateOf(ScriptureEditionCatalog.PRIMARY_MAALE_ID) }
+    var editionMenuExpanded by remember { mutableStateOf(false) }
+    val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId)
+        ?: ScriptureEditionCatalog.editions.first()
+    val scriptureResult = remember(context, bookId, navigation.chapter, selectedEditionId) {
+        ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter, selectedEditionId)
     }
     var noteText by rememberSaveable(bookId) { mutableStateOf("") }
     var editingAnnotationId by rememberSaveable(bookId) { mutableStateOf<String?>(null) }
