@@ -2,6 +2,7 @@ package org.maale.bible
 
 import android.util.Log
 import androidx.compose.ui.test.assertHasClickAction
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
