@@ -1,7 +1,7 @@
 package org.maale.bible.ui
 
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.ui.test.assertExists
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -47,7 +47,7 @@ class QuizQuestionCardInstrumentedTest {
                 )
             }
         }
-        compose.onNodeWithText("Select every correct option").assertExists()
+        compose.onNodeWithText("Select every correct option").assertIsDisplayed()
         compose.onNodeWithTag("learning_quiz_option_A").performClick()
         assertEquals("A", selected)
     }
