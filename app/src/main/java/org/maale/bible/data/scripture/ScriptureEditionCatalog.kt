@@ -47,7 +47,7 @@ object ScriptureEditionCatalog {
             "Revised edition lineage; confirm exact 2005 text, canon and digital distribution rights."),
         amharic("AMH-NASV-2001", "New Amharic Standard Version (NASV)", "Biblica", "2001",
             "Confirm exact edition identity and obtain digital-use permission."),
-        amharic("AMH-MILLENNIUM", "Millennium Amharic Bible", "Ethiopian Orthodox Tewahedo Church / Bible Society of Ethiopia", null,
+        amharic("AMH-MILLENNIUM", "Millennium Amharic Bible (identity unverified)", "Publisher not established", null,
             "Confirm publication record, full canon and rights-holder authorization before import."),
 
         // English catalogue: 42 distinct translation/version candidates. Availability and
@@ -95,9 +95,9 @@ object ScriptureEditionCatalog {
         english("ENG-WYC", "Wycliffe Bible", "1382"),
         english("ENG-LEB", "Lexham English Bible", "2012"),
         english("ENG-NEB", "New English Bible", "1970"),
-        english("ENG-OEB", "Open English Bible", "2010"),
+        english("ENG-OEB", "Open English Bible", "2010–present", fullBible = false),
         english("ENG-KJ21", "21st Century King James Version", "1994"),
-        english("ENG-RV", "Revised Version", "1881"),
+        english("ENG-RV", "Revised Version", "1881 (New Testament); 1885 (complete Bible)"),
         english("ENG-YLT", "Young's Literal Translation", "1862")
     )
 
