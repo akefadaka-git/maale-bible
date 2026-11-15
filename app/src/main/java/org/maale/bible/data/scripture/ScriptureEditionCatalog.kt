@@ -93,6 +93,11 @@ object ScriptureEditionCatalog {
         english("ENG-WEB", "World English Bible", null),
         english("ENG-WEY", "Weymouth New Testament", "1903", fullBible = false),
         english("ENG-WYC", "Wycliffe Bible", "1382"),
+        english("ENG-LEB", "Lexham English Bible", "2012"),
+        english("ENG-NEB", "New English Bible", "1970"),
+        english("ENG-OEB", "Open English Bible", "2010"),
+        english("ENG-KJ21", "21st Century King James Version", "1994"),
+        english("ENG-RV", "Revised Version", "1881"),
         english("ENG-YLT", "Young's Literal Translation", "1862")
     )
 
