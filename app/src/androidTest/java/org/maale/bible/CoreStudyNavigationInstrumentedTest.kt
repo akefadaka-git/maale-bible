@@ -115,7 +115,6 @@ class CoreStudyNavigationInstrumentedTest {
 
     @Test fun bookLearningCentrePreviewsDraftIntroductionAndQuizInDebugBuild() {
         val debugContent = BookLearningContentRepository.load(compose.activity, "GEN")
-        Log.i("LEARNING_CONTENT_DIAGNOSTIC", "locale=${compose.activity.resources.configuration.locales.toLanguageTags()}; appLanguage=${AppLanguage.load(compose.activity)}; debuggable=${compose.activity.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE != 0}; contentLoaded=${debugContent != null}; publicationState=${debugContent?.publicationState}; quizCount=${debugContent?.quizQuestions?.size}; chapterGuideCount=${debugContent?.chapterGuides?.size}")
         assertNotNull("Genesis learning package must load in the debug test build", debugContent)
         assertEquals("Genesis content must follow the English test locale", "en", debugContent?.locale)
         assertEquals("Genesis quiz must expose its first question", "GEN-Q01", debugContent?.quizQuestions?.firstOrNull()?.id)
@@ -127,7 +126,9 @@ class CoreStudyNavigationInstrumentedTest {
         waitForTag("book_learning_screen")
         compose.onNodeWithText("INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.").assertExists()
         compose.onNodeWithText("Genesis — beginnings, humanity and the family of Israel").assertExists()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_tab_quiz"))
         compose.onNodeWithTag("learning_tab_quiz").performClick()
+        compose.waitForIdle()
         compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
     }
 
@@ -137,7 +138,9 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").performClick()
         waitForTag("book_learning_screen")
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_tab_quiz"))
         compose.onNodeWithTag("learning_tab_quiz").performClick()
+        compose.waitForIdle()
         compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q01"))
 
         repeat(8) {
@@ -166,7 +169,9 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
         compose.onNodeWithTag("book_item_GEN").performClick()
         waitForTag("book_learning_screen")
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_tab_inductive"))
         compose.onNodeWithTag("learning_tab_inductive").performClick()
+        compose.waitForIdle()
         compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_chapter_guide_1"))
         compose.onNodeWithTag("learning_chapter_guide_1").assertIsDisplayed()
         compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_chapter_guide_50"))
