@@ -25,8 +25,21 @@ def validate() -> list[str]:
 
     if doc.get("publication_state") != "draft_not_for_release":
         fail(errors, "Genesis must remain draft_not_for_release.")
-    if doc.get("content_rights", {}).get("scripture_text_included") is not False:
-        fail(errors, "Learning package must not embed scripture text.")
+    rights = doc.get("content_rights", {})
+    if rights.get("scripture_text_included") is not False or rights.get("direct_quotations") is not False:
+        fail(errors, "Learning package must not embed Scripture text or direct quotations.")
+    if rights.get("source_license") != "CC BY-SA 4.0" or rights.get("source_license_url") != "https://creativecommons.org/licenses/by-sa/4.0/":
+        fail(errors, "Pinned source license metadata is missing or incorrect.")
+    if rights.get("source_archive_sha256") != "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11":
+        fail(errors, "Owner-accepted source archive hash is missing or incorrect.")
+    if rights.get("genesis_usfm_sha256") != "cc9b7703d660bd39da8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392":
+        fail(errors, "Owner-accepted Genesis source hash is missing or incorrect.")
+    if "Maale Bible (ጌኤዦ ማፃኣፖ)" not in rights.get("required_attribution", ""):
+        fail(errors, "Required Maale Bible attribution is missing.")
+    if rights.get("no_endorsement_required") is not True or rights.get("share_alike_required_for_scripture_adaptations") is not True:
+        fail(errors, "No-endorsement and ShareAlike obligations must be recorded.")
+    if rights.get("source_images_imported") is not False:
+        fail(errors, "Source image rights must remain separately gated.")
     if doc.get("book", {}).get("usfm_id") != "GEN":
         fail(errors, "Package identity is not GEN.")
 
