@@ -30,7 +30,7 @@
     <string name="learning_study_guide_pending_title">ለዚህ መጽሐፍ የተዘጋጀ ኢንዳክቲቭ የጥናት መመሪያ</string>
     <string name="learning_study_guide_pending">የምዕራፍ መመሪያዎች፣ የውይይት ጥያቄዎች፣ የማሰላሰል ልምምዶችና የቡድን ጥናት ቁሳቁሶች የመጽሐፉ ይዘትና ማጣቀሻዎች ከተረጋገጡ በኋላ ይጨመራሉ።</string>
     <string name="learning_quiz_title">የመጽሐፉ እውቀት ምዘና</string>
-    <string name="learning_quiz_pending">በእንግሊዝኛና በአማርኛ የሚቀርቡ ፈተናዎች ባለብዙ ምርጫ፣ እውነት/ሐሰት፣ ክፍተት መሙላት፣ ማዛመድ፣ የምዕራፍ ግንዛቤና የመጽሐፍ አጠቃላይ ግምገማን ያካትታሉ። እያንዳንዱ መልስ ማብራሪያና የተረጋገጠ የቅዱስ መጽሐፍ ማጣቀሻ ይኖረዋል።</string>
+ 
     <string name="learning_quiz_unavailable">ፈተናው ገና አልተዘጋጀም</string>
     <string name="learning_provenance_notice">የይዘት መስፈርት፦ ቅዱስ ጽሑፍ፣ መግቢያዎች፣ የጥናት መመሪያዎችና የፈተና ጥያቄዎች የተለያዩ የይዘት ዓይነቶች ናቸው። እያንዳንዱ የራሱ ምንጭ፣ ፈቃድ ወይም ፈቃድ ማስረጃ፣ የምንጭ መጥቀስ፣ የቋንቋ ግምገማና ከእትሙ ጋር ተስማሚነት ይፈልጋል። ያልተረጋገጠ ይዘት እንደ ጸደቀ አይታይም።</string>
     <string name="learning_setting_title">ታሪካዊና ባህላዊ አውድ</string>
