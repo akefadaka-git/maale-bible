@@ -7,8 +7,6 @@ on:
       - 'tools/i18n/**'
       - 'tools/content/**'
       - 'docs/content/books/GEN.json'
-      - 'tools/content/**'
-      - 'docs/content/books/GEN.json'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
@@ -24,6 +22,9 @@ on:
       - integration/maale-learning-centre-2026-11-14
     paths:
       - 'app/**'
+      - 'tools/content/**'
+      - 'tools/i18n/**'
+      - 'docs/content/books/GEN.json'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
