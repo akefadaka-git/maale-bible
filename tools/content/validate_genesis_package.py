@@ -44,6 +44,14 @@ def validate() -> list[str]:
         fail(errors, "Package identity is not GEN.")
 
     locales = doc.get("locales", {})
+    def contains_quote(node):
+        if isinstance(node, dict):
+            return any(contains_quote(value) for value in node.values())
+        if isinstance(node, list):
+            return any(contains_quote(value) for value in node)
+        return isinstance(node, str) and any(mark in node for mark in ('"', "“", "”", "‘", "’"))
+    if contains_quote(locales):
+        fail(errors, "Learning content contains quoted text; verify that no direct Scripture quotation is embedded.")
     en, am = locales.get("en", {}), locales.get("am", {})
     if set(locales) != {"en", "am"}:
         fail(errors, "Only explicitly authored EN and AM locales may be present; do not fabricate Maale.")
