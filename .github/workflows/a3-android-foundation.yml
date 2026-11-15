@@ -46,6 +46,13 @@ jobs:
         run: python3 tools/i18n/check_android_resource_parity.py
       - name: Validate Genesis EN/AM content coverage and asset parity
         run: python3 tools/content/validate_genesis_package.py
+      - name: Download and verify pinned 2008 Maale source for reference audit
+        run: |
+          mkdir -p build/source
+          curl --fail --location --silent --show-error https://ebible.org/Scriptures/mdyeth_usfm.zip -o build/source/mdyeth_usfm.zip
+          echo "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11  build/source/mdyeth_usfm.zip" | sha256sum --check
+      - name: Validate every Genesis learning reference against exact 2008 source
+        run: python3 tools/content/validate_genesis_source_references.py --source-zip build/source/mdyeth_usfm.zip
       - name: Enable KVM for Android emulator
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
