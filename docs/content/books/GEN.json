@@ -3314,10 +3314,136 @@
           ]
         }
       ],
-      "quiz": [],
+      "quiz": [
+        {
+          "id": "GEN-Q01-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?",
+          "options": [
+            "ሰማይንና ምድርን መፍጠርና ሥርዓት ማስያዝ",
+            "በኢየሩሳሌም ቤተ መቅደስ መሥራት",
+            "ሙሴን ከቁጥቋጦው መጥራት",
+            "ንጉሣዊ አገዛዝ ማቋቋም"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ዘፍጥረት 1 እግዚአብሔርን ፈጣሪ እንደሆነ ያቀርባል፤ ዓለምን በሥርዓት ፈጥሮ መልካም ብሎ ይገልጻል።",
+          "references": [
+            "GEN 1:1-31"
+          ]
+        },
+        {
+          "id": "GEN-Q02-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 2–3 ታሪክ ውስጥ ዋና የሆነው ገነት የትኛው ነው?",
+          "options": [
+            "ጌቴሴማኒ",
+            "ኤደን",
+            "ቀርሜሎስ",
+            "ሳሮን"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ዘፍጥረት 2–3 የመጀመሪያዎቹ ሰዎች በኤደን ገነት እንደነበሩ ይናገራል።",
+          "references": [
+            "GEN 2:8-15"
+          ]
+        },
+        {
+          "id": "GEN-Q03-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት 12 አብራም መጠራቱንና ከምድር፣ ከዘርና ከበረከት ጋር የተያያዙ ተስፋዎችን ይመዘግባል።",
+          "correct_answer": true,
+          "explanation": "የአብራም ጥሪ የአባቶችን ታሪክ ይጀምራል፤ እነዚህም ተስፋዎች የዘፍጥረትን ቀጣይ ታሪክ ይቀርጻሉ።",
+          "references": [
+            "GEN 12:1-3"
+          ]
+        },
+        {
+          "id": "GEN-Q04-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በጥፋት ውኃ ታሪክ ውስጥ መርከቡን የሠራው ማን ነው?",
+          "options": [
+            "አብርሃም",
+            "ያዕቆብ",
+            "ኖኅ",
+            "ዮሴፍ"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ኖኅ መርከቡን እንዲሠራና ቤተሰቡንና የሕያዋን ፍጥረታትን እንዲጠብቅ ታዘዘ።",
+          "references": [
+            "GEN 6:13-22"
+          ]
+        },
+        {
+          "id": "GEN-Q05-AM",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ከጥፋት ውኃ በኋላ ከኖኅ ጋር በተደረገው ቃል ኪዳን ምልክት የሆነው ምንድን ነው?",
+          "options": [
+            "ቀስተ ደመና",
+            "በኢየሩሳሌም የድንጋይ መሠዊያ",
+            "የናስ እባብ",
+            "የእሳት ዓምድ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ቀስተ ደመናው ከኖኅና ከምድር ጋር የተደረገው ቃል ኪዳን ምልክት ነው።",
+          "references": [
+            "GEN 9:8-17"
+          ]
+        },
+        {
+          "id": "GEN-Q06-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 17–18 መወለዱ የተነገረና በ21 የተዘገበው የአብርሃምና የሣራ ልጅ ማን ነው?",
+          "options": [
+            "እስማኤል",
+            "ይስሐቅ",
+            "ያዕቆብ",
+            "ኤሳው"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ይስሐቅ ለአብርሃምና ለሣራ ከተሰጠው ተስፋ ጋር የተያያዘው ልጅ ነው።",
+          "references": [
+            "GEN 17:15-21",
+            "GEN 21:1-7"
+          ]
+        },
+        {
+          "id": "GEN-Q07-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከያዕቆብ ልጆች መካከል ልዩ ልብስ የተሰጠውና በኋላ ወደ ግብፅ የሄደው ማን ነው?",
+          "options": [
+            "ይሁዳ",
+            "ብንያም",
+            "ዮሴፍ",
+            "ሮቤል"
+          ],
+          "correct_option_id": "C",
+          "explanation": "የዮሴፍ ወንድሞች ሸጡት፤ እርሱም ወደ ግብፅ ተወሰደ፣ ታሪኩም በዚያ ቀጠለ።",
+          "references": [
+            "GEN 37:3-28"
+          ]
+        },
+        {
+          "id": "GEN-Q08-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት መጨረሻ ዮሴፍ ወንድሞቹ ለክፉ ያሰቡትን እግዚአብሔር ለበጎ እንዳደረገው ይናገራል።",
+          "correct_answer": true,
+          "explanation": "የዮሴፍ ቃል በዘፍጥረት 50:20 በሰው ክፋት መካከል የእግዚአብሔርን ሥራ ያጠቃልላል።",
+          "references": [
+            "GEN 50:15-21"
+          ]
+        }
+      ],
       "chapter_guides": [],
       "chapter_guides_status": "not_translated",
-      "content_status": "translation_required; English content is not represented as Amharic"
+      "content_status": "existing draft locale preserved; full translation and review still required"
     }
   }
 }
