@@ -16,6 +16,14 @@ internal data class BookQuizSessionState(
         return copy(selectedAnswers = selectedAnswers + (questionId to answer))
     }
 
+    fun toggleOption(questionId: String, optionId: String): BookQuizSessionState {
+        if (questionId in submittedAnswers || optionId.isBlank()) return this
+        val selected = selectedAnswers[questionId].orEmpty().split(",").filter { it.isNotBlank() }.toMutableSet()
+        if (!selected.add(optionId)) selected.remove(optionId)
+        val next = selected.sorted().joinToString(",")
+        return copy(selectedAnswers = if (next.isBlank()) selectedAnswers - questionId else selectedAnswers + (questionId to next))
+    }
+
     fun submit(questionId: String): BookQuizSessionState {
         if (questionId in submittedAnswers || selectedAnswers[questionId].isNullOrBlank()) return this
         return copy(submittedAnswers = submittedAnswers + questionId)
@@ -41,11 +49,16 @@ internal data class BookQuizSessionState(
     fun isComplete(questionCount: Int): Boolean = questionCount > 0 && currentIndex >= questionCount
 }
 
+private fun normalizeQuizAnswer(value: String): String =
+    value.lowercase().trim().replace(Regex("[^\\p{L}\\p{N}]+"), " ").trim()
+
 internal fun BookQuizQuestion.isCorrect(answer: String?): Boolean {
     if (answer == null) return false
     return when (type) {
         "true_false" -> correctAnswer?.toString() == answer
         "multiple_choice" -> correctOptionId == answer
+        "multiple_select" -> answer.split(",").filter { it.isNotBlank() }.toSet() == correctOptionIds.toSet()
+        "short_answer" -> acceptedAnswers.any { normalizeQuizAnswer(it) == normalizeQuizAnswer(answer) }
         else -> false
     }
 }
