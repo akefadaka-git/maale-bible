@@ -46,14 +46,19 @@
         },
         "chapter_guides": {
           "en": {
-            "status": "not_started",
-            "source_ids": [],
-            "review_status": "not_reviewed"
+            "status": "draft_source_based_review_required",
+            "source_ids": [
+              "usccb-genesis",
+              "bibleorg-genesis-outline"
+            ],
+            "chapter_count": 50,
+            "review_status": "scripture_reference_validation_and_editorial_review_pending"
           },
           "am": {
-            "status": "not_started",
+            "status": "not_translated",
             "source_ids": [],
-            "review_status": "not_reviewed"
+            "chapter_count": 0,
+            "review_status": "qualified_amharic_translation_required"
           }
         },
         "inductive_study": {
@@ -4306,8 +4311,14 @@
     "release_approved_books": 0,
     "scripture_text_included": false,
     "draft_preview_policy": "DEBUG_BUILDS_ONLY",
-    "note": "21 books have English and Amharic draft learning packages. The remaining 45 have English draft learning packages with an explicitly labelled English fallback in the Amharic locale; they are not Amharic translations. All 66 remain unapproved, and chapter-by-chapter guides are not yet authored.",
+    "note": "Genesis is the first book with 50 source-based English chapter guides; all remain drafts pending edition-specific reference validation and editorial/theological review. Amharic chapter guides are not yet translated.",
     "books_with_english_draft_introduction_inductive_study_and_quiz": 66,
-    "books_with_amharic_translation_review_required": 45
+    "books_with_amharic_translation_review_required": 45,
+    "chapter_guides_completed_en_books": [
+      "GEN"
+    ],
+    "chapter_guides_en_completed_count": 1,
+    "chapter_guides_en_chapters": 50,
+    "chapter_guides_am_completed_count": 0
   }
 }
