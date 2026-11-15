@@ -11,7 +11,7 @@ import zipfile
 from pathlib import Path
 
 ARCHIVE_SHA256 = "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11"
-GENESIS_SHA256 = "cc9b7703d660bd39da8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392"
+GENESIS_SHA256 = "cc9b7703d660bd39dfda8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392"
 ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = ROOT / "docs/content/books/GEN.json"
 BOOK_FILE = re.compile(r"^\d{2}-([A-Z0-9]{3})mdyeth\.usfm$")
