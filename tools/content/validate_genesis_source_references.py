@@ -135,8 +135,9 @@ def main() -> int:
     except (OSError, zipfile.BadZipFile, UnicodeError, ValueError, StopIteration) as exc:
         print(f"FAIL: source archive parsing: {exc}", file=sys.stderr)
         return 1
-    if digest(genesis_bytes) != GENESIS_SHA256:
-        print("FAIL: Genesis USFM hash differs from Owner-accepted baseline.", file=sys.stderr)
+    actual_genesis_sha = digest(genesis_bytes)
+    if actual_genesis_sha != GENESIS_SHA256:
+        print(f"FAIL: Genesis USFM hash differs from recorded baseline. member={genesis_name}; actual_sha256={actual_genesis_sha}; bytes={len(genesis_bytes)}; recorded_sha256={GENESIS_SHA256}", file=sys.stderr)
         return 1
     if len(books) != 66:
         print(f"FAIL: expected 66 source books, found {len(books)}.", file=sys.stderr)
