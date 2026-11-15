@@ -17,9 +17,11 @@ The documentation package and Android asset contain matching English and Amharic
 | Chapter guides | 50 | 50 |
 | Structured chapter-study prompts | 350 | 350 |
 | Inductive studies | 4 | 4 |
-| Quiz questions | 102 | 102 |
+| Quiz questions | 110 | 110 |
 | Multiple-choice questions | 6 | 6 |
 | True/false questions | 96 | 96 |
+| Multiple-select questions | 4 | 4 |
+| Short-answer questions | 4 | 4 |
 | Key-verse study entries | 18 | 18 |
 | Memorization-verse entries | 7 | 7 |
 | Commentary units | 6 | 6 |
@@ -33,10 +35,10 @@ The Android learning model and screen now read and display the additional introd
 
 ## 2. Content-quality qualifications
 
-- The quiz bank is currently 6 multiple-choice and 96 true/false items in each locale. The Android quiz renderer supports those two types; completion, matching and other assessment formats remain unimplemented. The existing authoring standard calls for broader formats, so this is a recorded coverage gap, not a passed requirement.
+- The quiz bank now contains 6 multiple-choice, 96 true/false, 4 multiple-select and 4 short-answer items in each locale. The Android renderer and scoring/session model support all four types. Completion and matching formats remain unimplemented. The 86 previously generic true/false rationales in each locale have been replaced with passage-specific draft explanations; the ten false statements have explicit corrections. These explanations still require independent review.
 - Some quiz rationales are concise and repetitive. Their exact references and explanations still require source-level and editorial review.
-- The Amharic material is generated draft text. It has not been signed off by an independent Amharic language editor.
-- Maale learning content is not translated. A qualified Maale language specialist and agreed orthography review are required. English fallback is disclosed rather than represented as Maale.
+- The Amharic material is generated draft text. A qualified reviewer candidate has been identified and an outreach email draft prepared; no independent language sign-off has been received.
+- Maale learning content is not translated. A qualified Maale translator candidate has been identified and an outreach email draft prepared; agreed orthography, independent community review and signed approval remain required. English fallback is disclosed rather than represented as Maale.
 - Commentary units are original draft notes, not a substitute for a licensed study Bible or a completed theological review.
 
 ## 3. Consolidated biblical review — preliminary
@@ -56,16 +58,16 @@ Sources consulted:
 
 | Gate | Status | Evidence / remaining work |
 |---|---|---|
-| English editorial review | **PENDING** | No independent English editor sign-off recorded |
+| English editorial review | **PENDING** | No independent English editor sign-off recorded; institutional referral requested |
 | Amharic language review | **PENDING** | Full draft coverage exists; qualified reviewer sign-off absent |
-| Maale language review | **MISSING** | No qualified specialist or approved orthography review recorded |
+| Maale language review | **MISSING** | No Maale translation or qualified sign-off recorded; candidate identified for outreach |
 | Theological review | **PENDING** | Six commentary units and all study/quiz material require independent theological review |
-| Exact scripture-reference validation | **PENDING** | Must reconcile all references against exact 2008 MDYTWF/MDYETH source text |
-| Rights review | **PARTIAL** | Written permission and CC BY-SA 4.0 terms are recorded; repository asset/attribution review remains |
+| Exact scripture-reference validation | **PENDING** | Automated validator integrated; corrected exact Genesis source hash; final CI pass pending |
+| Rights review | **PARTIAL** | Attribution and CC BY-SA 4.0 notices implemented in app and package; final asset audit remains |
 | Historical/editorial claims | **PENDING** | Date, authorship and historical claims require editorial disposition |
 | Publication approval | **NOT APPROVED** | Keep `draft_not_for_release`; release builds remain fail-closed |
 
-The exact authorized source identity and archive-integrity report were previously recorded. The source archive itself is not currently available in the accessible working Library, and no real-source SQLite scripture package has been generated or installed. No scripture text is embedded in these learning packages.
+The exact authorized source archive is downloaded in CI and its SHA-256 is checked against the Owner-accepted baseline. The extracted Genesis USFM hash was corrected to the actual 64-character SHA-256 computed from that pinned archive. The source-reference validator checks every collected learning-package reference against all 66 books. Its first exact-source run exposed the previously truncated Genesis hash; the corrected audit is now queued. No real-source SQLite scripture package has been generated or installed, and no scripture text is embedded in these learning packages.
 
 ## 5. Technical verification
 
@@ -77,7 +79,7 @@ Implemented:
 - Unit tests for explicit English fallback behavior for Maale and unsupported locales.
 - Release gate remains `draft_not_for_release`; no publication-state elevation was made.
 
-The exact-head workflow for the final implementation commit must complete successfully before the technical gate is marked PASS. A previous Android workflow passed before these content and UI changes; that older run is not evidence for this latest head.
+The exact-head workflow must complete successfully before the technical gate is marked PASS. The workflow now runs resource parity, content validation, source-reference parser unit tests, downloads and verifies the pinned 2008 archive, validates all references, then runs Android unit tests, APK assembly and instrumentation.
 
 ## 6. Closure decision
 
@@ -88,8 +90,8 @@ The exact-head workflow for the final implementation commit must complete succes
 3. Qualified Amharic language review.
 4. Qualified Maale translation and language review.
 5. Independent theological review.
-6. Completion of quiz-format coverage and stronger item rationales.
+6. Independent review of the expanded quiz formats, answer keys and passage-specific rationales.
 7. Exact-head Android/content CI and final QA.
-8. Rights and attribution review of the final repository assets.
+8. Final rights and attribution audit of the app and repository assets.
 
 Keep PR #63 open and draft. Do not merge, deploy, publish, or change Genesis from `draft_not_for_release` until the outstanding A4 gates have evidence and explicit approval. A5 deployment remains separate.
