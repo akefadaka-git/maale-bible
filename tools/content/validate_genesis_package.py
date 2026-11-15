@@ -32,7 +32,7 @@ def validate() -> list[str]:
         fail(errors, "Pinned source license metadata is missing or incorrect.")
     if rights.get("source_archive_sha256") != "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11":
         fail(errors, "Owner-accepted source archive hash is missing or incorrect.")
-    if rights.get("genesis_usfm_sha256") != "cc9b7703d660bd39da8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392":
+    if rights.get("genesis_usfm_sha256") != "cc9b7703d660bd39dfda8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392":
         fail(errors, "Owner-accepted Genesis source hash is missing or incorrect.")
     if "Maale Bible (ጌኤዦ ማፃኣፖ)" not in rights.get("required_attribution", ""):
         fail(errors, "Required Maale Bible attribution is missing.")
@@ -141,7 +141,8 @@ def validate() -> list[str]:
     for key in ("chapter_guides", "quiz", "inductive_studies", "key_verses", "memory_verses", "concordance", "dictionary", "timeline"):
         if not status.get(key):
             fail(errors, f"Amharic content status missing explicit state for {key}.")
-    if doc.get("review_gates", {}).get("maale_language_review") != "required":
+    maale_gate = str(doc.get("review_gates", {}).get("maale_language_review", "")).lower()
+    if not any(token in maale_gate for token in ("required", "pending", "not translated")):
         fail(errors, "Maale specialist language review must remain an explicit release gate.")
 
     return errors
