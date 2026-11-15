@@ -4407,6 +4407,11 @@
     "genesis_am_quiz_question_count": 102,
     "genesis_chapter_guides_am": 50,
     "genesis_chapter_study_prompts_am": 350,
-    "genesis_commentary_units_am": 6
+    "genesis_commentary_units_am": 6,
+    "genesis_key_verses_am": 18,
+    "genesis_memory_verses_am": 7,
+    "genesis_concordance_entries_am": 14,
+    "genesis_dictionary_entries_am": 5,
+    "genesis_timeline_events_am": 5
   }
 }
