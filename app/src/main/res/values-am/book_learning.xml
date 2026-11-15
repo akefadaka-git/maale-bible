@@ -32,7 +32,7 @@
     <string name="learning_quiz_title">የመጽሐፉ እውቀት ምዘና</string>
  
     <string name="learning_quiz_unavailable">ፈተናው ገና አልተዘጋጀም</string>
-    <string name="learning_provenance_notice">የይዘት መስፈርት፦ ቅዱስ ጽሑፍ፣ መግቢያዎች፣ የጥናት መመሪያዎችና የፈተና ጥያቄዎች የተለያዩ የይዘት ዓይነቶች ናቸው። እያንዳንዱ የራሱ ምንጭ፣ ፈቃድ ወይም ፈቃድ ማስረጃ፣ የምንጭ መጥቀስ፣ የቋንቋ ግምገማና ከእትሙ ጋር ተስማሚነት ይፈልጋል። ያልተረጋገጠ ይዘት እንደ ጸደቀ አይታይም።</string>
+    <string name="learning_provenance_notice">የማዕሌ መጽሐፍ ቅዱስ (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International እና the Bible Society of Ethiopia። የቅዱስ ጽሑፉ ምንጭ CC BY-SA 4.0 ፈቃድ ሥር ነው። የዘፍጥረት የጥናት መመሪያዎች የመጀመሪያ ረቂቅ ሥራዎች ናቸው፤ ቀጥተኛ የቅዱስ ጽሑፍ ጥቅስ አያካትቱም። የመብት ባለቤቶች ድጋፍ እንዳለ አይገልጽም። የቅዱስ ጽሑፍ ማስተካከያ ለማንኛውም ለውጥ ምልክት ማድረግና በCC BY-SA 4.0 መሠረት ማሰራጨት አለበት።</string>
     <string name="learning_setting_title">ታሪካዊና ባህላዊ አውድ</string>
     <string name="learning_audience_title">የመጀመሪያ ተቀባዮችና ዓላማ</string>
     <string name="learning_key_people_title">ዋና ዋና ሰዎች</string>
