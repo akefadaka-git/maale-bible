@@ -21,7 +21,8 @@
     "amharic_language_review": "required",
     "theological_review": "pending",
     "scripture_reference_validation": "pending",
-    "qa": "pending"
+    "qa": "pending",
+    "chapter_guide_editorial_review": "pending"
   },
   "sources": [
     {
@@ -58,6 +59,13 @@
       "publisher": "BibleProject",
       "url": "https://bibleproject.com/guides/book-of-genesis/",
       "use": "Literary overview and thematic synthesis"
+    },
+    {
+      "id": "bibleorg-genesis-outline",
+      "title": "Introduction to Genesis and detailed outline",
+      "publisher": "Bible.org",
+      "url": "https://bible.org/seriespage/1-introduction-genesis",
+      "use": "Chapter-level narrative sequence and outline; used as a secondary outline and compared with the USCCB Genesis introduction."
     }
   ],
   "locales": {
@@ -333,7 +341,1210 @@
             "GEN 50:15-21"
           ]
         }
-      ]
+      ],
+      "chapter_guides": [
+        {
+          "chapter": 1,
+          "title": "Creation and the ordered world",
+          "summary": "The chapter presents God bringing the heavens and earth into an ordered, life-supporting world through a sequence of creative commands, culminating in humanity and the seventh-day rest.",
+          "observation": [
+            "Read Genesis 1 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "creation, order, goodness and human vocation.",
+            "How does the repeated pattern of command, fulfilment and evaluation shape the chapter's picture of creation?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning creation, order, goodness and human vocation, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 1"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 2,
+          "title": "The garden and human vocation",
+          "summary": "The narrative focuses on the human creature, the garden, work and responsibility, the command concerning the tree, and the creation of a companion.",
+          "observation": [
+            "Read Genesis 2 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "human vocation, limits, work and companionship.",
+            "How do responsibility, dependence and companionship shape the human place within the garden?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning human vocation, limits, work and companionship, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 2"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 3,
+          "title": "Distrust, disobedience and exile",
+          "summary": "The serpent questions the command; the humans eat, hide and blame, and the chapter records judgment, clothing and expulsion from the garden.",
+          "observation": [
+            "Read Genesis 3 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "trust, responsibility, consequence and mercy.",
+            "How does the narrative connect distrust with fractured relationships and loss, while also showing divine initiative?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning trust, responsibility, consequence and mercy, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 3"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 4,
+          "title": "Cain, Abel and expanding human society",
+          "summary": "The chapter recounts the brothers' offerings, Cain's murder of Abel, the consequences for Cain, his descendants and the birth of Seth.",
+          "observation": [
+            "Read Genesis 4 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "anger, violence, accountability and culture.",
+            "How does the story trace the spread of violence alongside the development of human society and worship?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning anger, violence, accountability and culture, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 4"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 5,
+          "title": "Adam's descendants to Noah",
+          "summary": "A genealogy traces generations from Adam through Seth to Noah, repeatedly marking human mortality and highlighting Enoch's distinctive walk with God.",
+          "observation": [
+            "Read Genesis 5 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "genealogy, mortality and continuity.",
+            "What does the repeated genealogy formula communicate about human life, death and the continuity of the family line?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning genealogy, mortality and continuity, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 5"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 6,
+          "title": "Human corruption and Noah's commission",
+          "summary": "The chapter describes widespread corruption, identifies Noah as one who finds favour, and records the instructions to build the ark.",
+          "observation": [
+            "Read Genesis 6 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "corruption, favour, obedience and preservation.",
+            "How does the contrast between the earth's corruption and Noah's response prepare the reader for the flood account?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning corruption, favour, obedience and preservation, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 6"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 7,
+          "title": "The flood begins",
+          "summary": "Noah, his household and the creatures enter the ark; the waters rise and the narrative emphasizes the scale of the flood.",
+          "observation": [
+            "Read Genesis 7 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "judgment, obedience and preservation.",
+            "How does the chapter portray the relationship between warning, obedience and preservation?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning judgment, obedience and preservation, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 7"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 8,
+          "title": "The waters recede",
+          "summary": "God remembers Noah; the waters gradually recede, Noah tests the conditions, leaves the ark and offers worship.",
+          "observation": [
+            "Read Genesis 8 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "waiting, deliverance and worship.",
+            "What does the measured sequence of waiting and testing teach about responding after a crisis?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning waiting, deliverance and worship, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 8"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 9,
+          "title": "The covenant with Noah",
+          "summary": "God blesses Noah's family, gives instructions concerning life and blood, establishes a covenant sign, and the chapter closes with Noah's family episode.",
+          "observation": [
+            "Read Genesis 9 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "covenant, human life and responsibility.",
+            "How do the covenant promises and commands shape the responsibilities of life after the flood?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning covenant, human life and responsibility, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 9"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 10,
+          "title": "The nations descended from Noah",
+          "summary": "The genealogy lists the descendants of Noah's sons and describes the spread of families and peoples across the earth.",
+          "observation": [
+            "Read Genesis 10 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "shared ancestry, peoples and geography.",
+            "How does the table of nations present both the diversity and connectedness of human communities?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning shared ancestry, peoples and geography, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 10"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 11,
+          "title": "Babel and the line to Abram",
+          "summary": "The chapter tells of the city and tower at Babel, the confusion of languages and the genealogy from Shem to Terah.",
+          "observation": [
+            "Read Genesis 11 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "human ambition, language and transition to Abram.",
+            "How does the Babel episode contrast human attempts to secure a name with the family line that leads to Abram?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning human ambition, language and transition to Abram, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 11"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 12,
+          "title": "Abram's call and journey",
+          "summary": "God calls Abram to leave his country with promises of land, descendants and blessing; Abram travels to Canaan and later goes to Egypt during famine.",
+          "observation": [
+            "Read Genesis 12 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "calling, promise, migration and trust.",
+            "How do the promises given to Abram frame both his journey and the difficult choices that follow?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning calling, promise, migration and trust, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 12"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 13,
+          "title": "Abram and Lot separate",
+          "summary": "As their households grow, Abram and Lot separate; Lot chooses the Jordan plain, and God renews the land promise to Abram.",
+          "observation": [
+            "Read Genesis 13 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "conflict, generosity and promise.",
+            "What does Abram's response to conflict reveal about trust, restraint and the promise of land?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning conflict, generosity and promise, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 13"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 14,
+          "title": "Abram rescues Lot",
+          "summary": "Abram pursues the kings who captured Lot, rescues the captives, and encounters Melchizedek and the king of Sodom.",
+          "observation": [
+            "Read Genesis 14 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "courage, kinship and allegiance.",
+            "How do Abram's actions and his responses to the two kings clarify the source of his allegiance?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning courage, kinship and allegiance, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 14"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 15,
+          "title": "The covenant promise",
+          "summary": "Abram voices concern about an heir; God renews the promise of descendants and land, and the covenant is enacted in a solemn scene.",
+          "observation": [
+            "Read Genesis 15 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "faith, promise and covenant.",
+            "How does the chapter hold Abram's questions and God's commitment together?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning faith, promise and covenant, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 15"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 16,
+          "title": "Hagar and Ishmael",
+          "summary": "Sarai gives Hagar to Abram; conflict follows, Hagar flees, and a divine messenger meets her and speaks about her son.",
+          "observation": [
+            "Read Genesis 16 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "human plans, vulnerability and divine care.",
+            "How does the encounter with Hagar challenge readers to notice people made vulnerable by household power?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning human plans, vulnerability and divine care, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 16"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 17,
+          "title": "The covenant sign and Isaac's promise",
+          "summary": "God renews the covenant with Abram, gives new names, establishes circumcision as its sign and promises that Sarah will bear Isaac.",
+          "observation": [
+            "Read Genesis 17 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "covenant identity, promise and response.",
+            "How do the changed names, covenant sign and promised child develop the promises already given?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning covenant identity, promise and response, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 17"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 18,
+          "title": "Visitors and intercession",
+          "summary": "Visitors announce Sarah's future son; Abraham receives them and then intercedes concerning the justice of the coming judgment on Sodom.",
+          "observation": [
+            "Read Genesis 18 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "hospitality, promise, justice and intercession.",
+            "How does Abraham's hospitality lead into his questions about divine justice?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning hospitality, promise, justice and intercession, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 18"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 19,
+          "title": "Sodom and Lot",
+          "summary": "The visitors arrive in Sodom, Lot receives them, the city is judged, and Lot's family escapes with tragic consequences afterward.",
+          "observation": [
+            "Read Genesis 19 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "hospitality, violence, judgment and deliverance.",
+            "How should readers distinguish the narrative's critique of violence from the morally complex actions of its characters?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning hospitality, violence, judgment and deliverance, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 19"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 20,
+          "title": "Abraham and Sarah in Gerar",
+          "summary": "Abraham presents Sarah as his sister in Gerar; Abimelech takes her, is warned in a dream and confronts Abraham.",
+          "observation": [
+            "Read Genesis 20 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "fear, truth and protection.",
+            "What does this episode reveal about fear, deception and the protection of Sarah?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning fear, truth and protection, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 20"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 21,
+          "title": "Isaac is born",
+          "summary": "Sarah gives birth to Isaac; Hagar and Ishmael leave the household, Abraham makes an agreement with Abimelech and settles at Beersheba.",
+          "observation": [
+            "Read Genesis 21 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "promise fulfilled, family tension and treaty.",
+            "How does the chapter place the joy of the promised birth beside the painful consequences of family conflict?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning promise fulfilled, family tension and treaty, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 21"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 22,
+          "title": "The test of Abraham",
+          "summary": "Abraham is tested concerning Isaac; the child is spared, a substitute is provided, and the chapter also records Nahor's descendants.",
+          "observation": [
+            "Read Genesis 22 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "testing, trust and provision.",
+            "How does the resolution of the test shape the chapter's portrayal of trust and divine provision?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning testing, trust and provision, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 22"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 23,
+          "title": "Sarah's death and burial",
+          "summary": "Sarah dies, and Abraham negotiates and purchases a burial place at Machpelah from the Hittites.",
+          "observation": [
+            "Read Genesis 23 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "grief, land and lasting memory.",
+            "How does the careful negotiation over a burial place connect grief with the family's long-term connection to the land?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning grief, land and lasting memory, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 23"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 24,
+          "title": "A wife for Isaac",
+          "summary": "Abraham's servant travels to find a wife for Isaac, meets Rebekah, recounts his mission to her family and brings her to Isaac.",
+          "observation": [
+            "Read Genesis 24 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "faithful action, hospitality and family continuity.",
+            "Which decisions and actions move the mission forward, and how do the characters respond to uncertainty?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning faithful action, hospitality and family continuity, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 24"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 25,
+          "title": "Abraham's death and the next generation",
+          "summary": "The chapter records Abraham's later family and death, Ishmael's descendants, and the birth and early conflict of Esau and Jacob.",
+          "observation": [
+            "Read Genesis 25 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "generations, inheritance and sibling tension.",
+            "How does the chapter transition from Abraham to Isaac's sons and introduce the conflict that shapes the next narrative?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning generations, inheritance and sibling tension, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 25"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 26,
+          "title": "Isaac, Abimelech and the wells",
+          "summary": "Isaac faces famine and conflict in Gerar, experiences disputes over wells, receives renewed assurance of the promise and makes a treaty.",
+          "observation": [
+            "Read Genesis 26 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "continuity, conflict and peaceful settlement.",
+            "How does Isaac respond to repeated conflict over resources, and what does the chapter say about peace-making?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning continuity, conflict and peaceful settlement, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 26"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 27,
+          "title": "Jacob receives the blessing",
+          "summary": "Rebekah and Jacob deceive Isaac; Jacob receives the blessing intended for Esau, whose grief turns to anger.",
+          "observation": [
+            "Read Genesis 27 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "deception, family favouritism and consequence.",
+            "How do favouritism and deception shape the relationships in this family, and what consequences follow?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning deception, family favouritism and consequence, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 27"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 28,
+          "title": "Jacob's dream at Bethel",
+          "summary": "Jacob leaves home, dreams of a stairway joining earth and heaven, receives a promise and marks the place at Bethel.",
+          "observation": [
+            "Read Genesis 28 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "exile, divine presence and promise.",
+            "How does the promise at Bethel address Jacob's vulnerability as he leaves home?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning exile, divine presence and promise, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 28"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 29,
+          "title": "Jacob's marriages and children",
+          "summary": "Jacob meets Rachel, serves Laban, marries Leah and Rachel, and the births of several children begin the growth of Israel's family.",
+          "observation": [
+            "Read Genesis 29 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "love, rivalry and family formation.",
+            "How do unequal affection and rivalry affect the household, and how does the narrative trace the growth of the family?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning love, rivalry and family formation, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 29"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 30,
+          "title": "Children and flocks increase",
+          "summary": "The rivalry between Leah and Rachel continues through household arrangements and births; Jacob negotiates his wages and his flocks increase.",
+          "observation": [
+            "Read Genesis 30 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "family rivalry, fertility and prosperity.",
+            "How do the family conflicts and Jacob's negotiations reveal the costs of rivalry and the limits of human control?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning family rivalry, fertility and prosperity, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 30"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 31,
+          "title": "Jacob leaves Laban",
+          "summary": "Jacob departs with his family and possessions; Laban pursues him, they confront one another and establish a boundary covenant.",
+          "observation": [
+            "Read Genesis 31 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "departure, conflict and negotiated peace.",
+            "How does the chapter move from accusation to a negotiated boundary, and what remains unresolved?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning departure, conflict and negotiated peace, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 31"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 32,
+          "title": "Jacob prepares to meet Esau",
+          "summary": "Jacob fears meeting Esau, prays, sends gifts and wrestles through the night, receiving the name Israel.",
+          "observation": [
+            "Read Genesis 32 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "fear, prayer, transformation and reconciliation.",
+            "How do prayer, practical preparation and the wrestling episode shape Jacob's movement toward the meeting?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning fear, prayer, transformation and reconciliation, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 32"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 33,
+          "title": "Jacob and Esau meet",
+          "summary": "Jacob approaches Esau with caution; the brothers meet, embrace and speak, then travel on separate paths.",
+          "observation": [
+            "Read Genesis 33 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "reconciliation, humility and boundaries.",
+            "What signs of reconciliation appear, and why does the chapter still preserve distinct choices about where each brother goes?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning reconciliation, humility and boundaries, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 33"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 34,
+          "title": "Dinah and Shechem",
+          "summary": "Dinah is violated by Shechem; negotiations follow, but Simeon and Levi use deception and violence against the city.",
+          "observation": [
+            "Read Genesis 34 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "sexual violence, honour, anger and justice.",
+            "How should readers attend to Dinah's experience while critically examining the retaliatory violence of her brothers?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning sexual violence, honour, anger and justice, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 34"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 35,
+          "title": "Jacob returns to Bethel",
+          "summary": "Jacob's household removes foreign gods and returns to Bethel; God renews the promise, Rachel dies giving birth to Benjamin and Isaac dies.",
+          "observation": [
+            "Read Genesis 35 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "renewal, promise, loss and family identity.",
+            "How does the chapter combine covenant renewal with grief and changes within the family?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning renewal, promise, loss and family identity, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 35"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 36,
+          "title": "Esau's descendants",
+          "summary": "The chapter records Esau's wives, descendants, clans and the rulers of Edom.",
+          "observation": [
+            "Read Genesis 36 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "genealogy, kinship and neighbouring peoples.",
+            "Why does Genesis preserve the genealogy of Esau, and how does it situate Israel among related peoples?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning genealogy, kinship and neighbouring peoples, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 36"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 37,
+          "title": "Joseph's dreams and sale",
+          "summary": "Joseph's dreams intensify his brothers' resentment; they sell him, deceive Jacob and send Joseph to Egypt.",
+          "observation": [
+            "Read Genesis 37 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "favouritism, envy and betrayal.",
+            "How do the dreams, family favouritism and the brothers' choices combine to drive the narrative?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning favouritism, envy and betrayal, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 37"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 38,
+          "title": "Judah and Tamar",
+          "summary": "Judah's family experiences loss and injustice; Tamar acts to secure the family duty owed to her, and Judah acknowledges his responsibility.",
+          "observation": [
+            "Read Genesis 38 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "justice, family duty and recognition.",
+            "How does Tamar expose Judah's failure to fulfil his responsibility, and what changes when he recognizes the truth?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning justice, family duty and recognition, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 38"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 39,
+          "title": "Joseph in Potiphar's house",
+          "summary": "Joseph serves in Potiphar's household, refuses his master's wife's advances, is falsely accused and imprisoned, where he receives responsibility.",
+          "observation": [
+            "Read Genesis 39 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "integrity, false accusation and resilience.",
+            "How does the chapter portray integrity when doing right leads to unjust consequences?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning integrity, false accusation and resilience, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 39"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 40,
+          "title": "The cupbearer and baker",
+          "summary": "In prison Joseph interprets the dreams of Pharaoh's cupbearer and baker; the outcomes unfold, but Joseph is forgotten for a time.",
+          "observation": [
+            "Read Genesis 40 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "gifts, interpretation and waiting.",
+            "What does the chapter show about the use of Joseph's ability and the experience of waiting after an apparent promise?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning gifts, interpretation and waiting, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 40"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 41,
+          "title": "Pharaoh's dreams and Joseph's rise",
+          "summary": "Joseph interprets Pharaoh's dreams, proposes a plan for the years of abundance and famine, and is appointed to oversee Egypt's preparations.",
+          "observation": [
+            "Read Genesis 41 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "wisdom, planning and public responsibility.",
+            "How does Joseph connect interpretation with practical planning for the common good?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning wisdom, planning and public responsibility, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 41"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 42,
+          "title": "The brothers' first journey to Egypt",
+          "summary": "Famine brings Joseph's brothers to Egypt; Joseph recognizes them, tests their account and keeps Simeon while sending the others home.",
+          "observation": [
+            "Read Genesis 42 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "memory, testing and conscience.",
+            "What signs suggest that the brothers are beginning to confront the past, and why does Joseph test them?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning memory, testing and conscience, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 42"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 43,
+          "title": "The brothers return with Benjamin",
+          "summary": "The family debates the risk of sending Benjamin; Judah offers responsibility, and the brothers return to Egypt and dine with Joseph.",
+          "observation": [
+            "Read Genesis 43 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "responsibility, trust and family strain.",
+            "How does Judah's pledge change the family's response to the crisis?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning responsibility, trust and family strain, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 43"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 44,
+          "title": "Joseph tests his brothers again",
+          "summary": "Joseph's cup is placed in Benjamin's sack; the brothers return, and Judah pleads to take Benjamin's place.",
+          "observation": [
+            "Read Genesis 44 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "accountability, substitution and changed character.",
+            "How does Judah's plea differ from the brothers' earlier treatment of Joseph, and what does it reveal about change?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning accountability, substitution and changed character, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 44"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 45,
+          "title": "Joseph reveals himself",
+          "summary": "Joseph reveals his identity, explains the family's arrival in Egypt within the unfolding events and sends the brothers to bring Jacob.",
+          "observation": [
+            "Read Genesis 45 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "recognition, forgiveness and providence.",
+            "How does Joseph speak about human wrongdoing and divine purpose without denying the harm done?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning recognition, forgiveness and providence, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 45"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 46,
+          "title": "Jacob's family travels to Egypt",
+          "summary": "Jacob receives assurance before travelling to Egypt; the chapter lists his household and records the reunion with Joseph.",
+          "observation": [
+            "Read Genesis 46 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "migration, family continuity and reassurance.",
+            "How does the chapter connect the move to Egypt with the earlier promises and the family's future?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning migration, family continuity and reassurance, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 46"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 47,
+          "title": "The family settles in Egypt",
+          "summary": "Joseph presents his family to Pharaoh, settles them in Goshen and administers food during the continuing famine.",
+          "observation": [
+            "Read Genesis 47 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "hospitality, survival and economic power.",
+            "What does the chapter reveal about the responsibilities and consequences of managing resources during famine?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning hospitality, survival and economic power, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 47"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 48,
+          "title": "Ephraim and Manasseh are blessed",
+          "summary": "Jacob adopts Joseph's sons as his own for inheritance purposes and gives the younger Ephraim the precedence in blessing.",
+          "observation": [
+            "Read Genesis 48 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "inheritance, reversal and family memory.",
+            "How does Jacob's blessing continue Genesis' pattern of unexpected reversals in family inheritance?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning inheritance, reversal and family memory, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 48"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 49,
+          "title": "Jacob blesses his sons and dies",
+          "summary": "Jacob gathers his sons, speaks over them, gives burial instructions and dies in Egypt.",
+          "observation": [
+            "Read Genesis 49 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "tribal identity, blessing and legacy.",
+            "How do the words to the sons look beyond individual lives toward the future of the tribes?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning tribal identity, blessing and legacy, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 49"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        },
+        {
+          "chapter": 50,
+          "title": "Jacob is buried and Joseph dies",
+          "summary": "Joseph's brothers fear retaliation after Jacob's death; Joseph reassures them, lives to see another generation and asks that his bones be carried up from Egypt.",
+          "observation": [
+            "Read Genesis 50 as a complete unit. Identify the main people, actions, setting and repeated details.",
+            "Trace the sequence of events and note what the narrator explicitly states."
+          ],
+          "interpretation": [
+            "forgiveness, hope and unfinished promise.",
+            "How does Joseph's final request keep the promise of the land in view even as the family remains in Egypt?"
+          ],
+          "application": [
+            "What response does this chapter invite concerning forgiveness, hope and unfinished promise, while taking its ancient setting and literary form seriously?",
+            "Name one question that requires discussion or further source checking rather than a quick conclusion."
+          ],
+          "references": [
+            "GEN 50"
+          ],
+          "source_ids": [
+            "usccb-genesis",
+            "bibleorg-genesis-outline"
+          ]
+        }
+      ],
+      "chapter_guides_status": "draft_source_based_review_required"
     },
     "am": {
       "locale_status": "draft_translation",
@@ -607,7 +1818,9 @@
             "GEN 50:15-21"
           ]
         }
-      ]
+      ],
+      "chapter_guides": [],
+      "chapter_guides_status": "not_translated"
     }
   }
 }
