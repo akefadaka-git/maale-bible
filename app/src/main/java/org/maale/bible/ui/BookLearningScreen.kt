@@ -109,7 +109,7 @@ fun BookLearningScreen(
             BookLearningTab.entries.forEach { tab ->
                 Tab(
                     selected = selectedTab == tab,
-                    onClick = { selectedTab = tab },
+                    onClick = { Log.i("BOOK_LEARNING_TAB_DIAGNOSTIC", "click=${tab.name}; before=${selectedTab.name}"); selectedTab = tab },
                     modifier = Modifier.testTag("learning_tab_${tab.name.lowercase()}"),
                     text = { Text(stringResource(tab.label)) }
                 )
