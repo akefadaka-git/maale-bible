@@ -155,4 +155,89 @@
 <string name="study_empty">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
 <string name="reader_notes">ጶቂሣኒ ፃኣፒ ዓርቂሢ</string>
 <string name="reader_save_note">ጎቢሺ ጌሤ</string>
+<string name="nav_settings" translatable="false">Settings</string>
+<string name="home_tagline" translatable="false">Offline-first reading experience</string>
+<string name="browse_books" translatable="false">Browse 66 books</string>
+<string name="search_hint" translatable="false">Book name or code</string>
+<string name="search_support" translatable="false">Searches the 66-book catalogue stored on this device.</string>
+<string name="search_try" translatable="false">Try an English book name or a three-character USFM code.</string>
+<string name="search_boundary" translatable="false">This search covers book names and catalogue codes only. Scripture search is unavailable until content intake is approved.</string>
+<string name="settings_accessibility" translatable="false">Accessibility</string>
+<string name="settings_accessibility_help" translatable="false">The interface respects Android system font size, display size, contrast and screen-reader settings. Adjust these under your device Settings → Accessibility.</string>
+<string name="settings_language_help" translatable="false">The app supports English and Amharic navigation. Maale interface translations are still being prepared. Scripture language selection is not enabled.</string>
+<string name="settings_backup" translatable="false">Portable encrypted study backup</string>
+<string name="settings_backup_help" translatable="false">A recovery key encrypts the backup with Argon2id and AES-GCM. Keep the recovery key separately from the backup.</string>
+<string name="settings_create_backup" translatable="false">Create encrypted backup</string>
+<string name="settings_recovery_key" translatable="false">Recovery key — store this securely and separately</string>
+<string name="settings_restore" translatable="false">Restore portable backup</string>
+<string name="settings_recovery_key_hint" translatable="false">Recovery key</string>
+<string name="settings_envelope_hint" translatable="false">Backup envelope JSON</string>
+<string name="settings_restore_button" translatable="false">Restore backup</string>
+<string name="settings_content" translatable="false">Content availability</string>
+<string name="settings_content_help" translatable="false">The catalogue is available offline. Scripture text, full-text scripture search, audio and translations remain disabled until their source and rights gates are satisfied.</string>
+    <string name="reader_coordinates_notice" translatable="false">Your reading position is saved on this device. Chapter text appears when the verified edition package is installed.</string>
+<string name="reader_position" translatable="false">Reading position</string>
+<string name="reader_previous_chapter" translatable="false">Previous chapter</string>
+<string name="reader_next_chapter" translatable="false">Next chapter</string>
+<string name="reader_previous_verse" translatable="false">Previous verse</string>
+<string name="reader_next_verse" translatable="false">Next verse</string>
+<string name="reader_add_bookmark" translatable="false">Add bookmark</string>
+<string name="reader_highlight" translatable="false">Highlight position</string>
+<string name="reader_note_hint" translatable="false">Write a private note</string>
+<string name="reader_update_note" translatable="false">Update note</string>
+<string name="reader_bookmarks" translatable="false">Bookmarks (%1$d)</string>
+<string name="reader_annotations" translatable="false">Highlights and notes (%1$d)</string>
+<string name="reader_plans" translatable="false">Reading plans</string>
+<string name="reader_new_plan" translatable="false">New reading plan</string>
+<string name="reader_create_plan" translatable="false">Create 7-day plan</string>
+<string name="reader_edit" translatable="false">Edit</string>
+<string name="reader_delete" translatable="false">Delete</string>
+<string name="reader_remove" translatable="false">Remove</string>
+<string name="reader_go_to" translatable="false">Go to</string>
+<string name="study_plans" translatable="false">Reading plans (%1$d)</string>
+<string name="study_annotations" translatable="false">Highlights and notes (%1$d)</string>
+<string name="listen_title" translatable="false">A listening space.</string>
+<string name="listen_desc" translatable="false">A calm home for spoken Scripture, with listening and offline access designed around verified audio.</string>
+<string name="listen_track_desc" translatable="false">Track title, reader, language and duration will appear with the approved audio asset.</string>
+<string name="listen_library_title" translatable="false">Your verified recordings will live here.</string>
+<string name="listen_library_desc" translatable="false">Browse by book, chapter, language and narrator when authorized recordings and their metadata are available.</string>
+<string name="listen_offline_title" translatable="false">Keep approved audio close.</string>
+<string name="listen_offline_desc" translatable="false">Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.</string>
+<string name="nav_more" translatable="false">More</string>
+<string name="header_notifications" translatable="false">Notifications</string>
+<string name="header_no_notifications" translatable="false">You are all caught up. No new notifications.</string>
+<string name="header_profile" translatable="false">Profile</string>
+<string name="header_guest_mode" translatable="false">Guest reader · local-only</string>
+<string name="header_language" translatable="false">Interface language</string>
+<string name="study_private_body" translatable="false">Your reading notes and saved references stay on this device.</string>
+<string name="study_calendar_title" translatable="false">This week</string>
+<string name="study_calendar_today" translatable="false">Today · local calendar</string>
+<string name="study_insights_title" translatable="false">Your study at a glance</string>
+<string name="study_metric_bookmarks" translatable="false">Saved</string>
+<string name="study_metric_notes" translatable="false">Notes</string>
+<string name="study_metric_highlights" translatable="false">Highlights</string>
+<string name="study_metric_plans" translatable="false">Plans</string>
+<string name="study_places_title" translatable="false">Biblical geography</string>
+<string name="study_places_body" translatable="false">A map preview only. Verified place records and offline map layers are not yet included.</string>
+<string name="study_places_status" translatable="false">MAP DATA NOT LOADED</string>
+    <string name="reader_scripture_chapter_title" translatable="false">Chapter %1$d</string>
+    <string name="reader_scripture_not_installed_title" translatable="false">Selected Bible edition is not installed</string>
+    <string name="reader_scripture_not_installed_body" translatable="false">The selected Bible edition\'s verified text package is not installed. Choose an edition with an installed, verified package to read its chapters. Catalogue entries do not include or imply access to scripture text.</string>
+    <string name="reader_scripture_preview_title" translatable="false">Candidate scripture package — debug preview only</string>
+    <string name="reader_scripture_preview_body" translatable="false">This edition package is not marked release-eligible. It can be inspected only in a debug build after private installation.</string>
+    <string name="reader_scripture_chapter_missing_title" translatable="false">Chapter not available</string>
+    <string name="reader_scripture_chapter_missing_body" translatable="false">This chapter is not present in the installed edition package.</string>
+    <string name="reader_scripture_invalid_title" translatable="false">Scripture package could not be verified</string>
+    <string name="reader_scripture_invalid_body" translatable="false">The installed package does not match the expected Maale Bible edition and schema. No text was displayed.</string>
+    
+    <string name="reader_back_to_books" translatable="false">Books</string>
+    <string name="reader_position_coordinates" translatable="false">Chapter %1$d · Verse %2$d</string>
+    <string name="reader_bookmark_coordinates" translatable="false">Chapter %1$d, verse %2$d</string>
+    <string name="reader_annotation_coordinates" translatable="false">%1$s · %2$d:%3$d — %4$s</string>
+    <string name="reader_annotation_note_kind" translatable="false">Note</string>
+    <string name="reader_annotation_highlight_kind" translatable="false">Highlight</string>
+    <string name="reader_plan_progress" translatable="false">%1$s: %2$d/%3$d days · %4$d%%</string>
+    <string name="reader_no_day_due" translatable="false">No day due today</string>
+    <string name="reader_complete_day" translatable="false">Complete day %1$d</string>
+    <string name="reader_private_notice" translatable="false">Your study data is stored locally in the encrypted study database.</string>
 </resources>

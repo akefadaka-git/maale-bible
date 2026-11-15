@@ -1,0 +1,4428 @@
+{
+  "schema_version": "1.0.0",
+  "canon_profile": "protestant_66_book",
+  "base_catalogue_edition": "MDYTWF/mdyeth 2008 Maale Full Bible",
+  "content_languages": [
+    "en",
+    "am"
+  ],
+  "content_policy": "Scripture, introductions, inductive guides, quizzes and reference articles are separately governed content assets. Do not mark available until provenance, rights, attribution, integrity, language review and edition compatibility are recorded.",
+  "counts": {
+    "old_testament": 39,
+    "new_testament": 27,
+    "total": 66
+  },
+  "books": [
+    {
+      "order": 1,
+      "usfm_id": "GEN",
+      "title": "Genesis",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "review_status": "editorial_and_historical_claim_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "50_chapter_guides_with_structured_study_prompts_draft",
+            "count": 50,
+            "study_prompt_count": 350,
+            "review_status": "exact_edition_source_check_and_editorial_theological_review_pending"
+          },
+          "am": {
+            "status": "50_chapter_guides_with_350_structured_study_prompts_draft_translation",
+            "count": 50,
+            "study_prompt_count": 350,
+            "review_status": "qualified_amharic_language_review_exact_edition_source_check_and_editorial_theological_review_pending"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "110_unique_items_draft_unreviewed",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "question_count": 110,
+            "review_status": "pinned_2008_source_reference_validation_and_independent_editorial_theological_review_pending",
+            "quality_note": "Six multiple-choice, 96 true/false, four multiple-select and four short-answer items. True/false rationales now include passage-specific draft explanations; independent review remains required."
+          },
+          "am": {
+            "status": "110_unique_items_draft_translation",
+            "source_ids": [
+              "sots-genesis",
+              "usccb-genesis",
+              "yale-genesis",
+              "cambridge-pentateuch",
+              "bibleproject-genesis"
+            ],
+            "question_count": 110,
+            "review_status": "qualified_amharic_language_review_pinned_2008_source_reference_validation_and_theological_review_pending",
+            "quality_note": "Amharic draft translations of all 110 items, including four multiple-select and four short-answer items; qualified language and theological review remain pending."
+          }
+        },
+        "memory_verses": {
+          "en": {
+            "status": "draft",
+            "count": 7,
+            "review_status": "verify_exact_edition_wording_before_release"
+          },
+          "am": {
+            "status": "draft_translation",
+            "count": 7,
+            "review_status": "amharic_language_review_and_exact_edition_wording_validation_pending"
+          }
+        },
+        "key_verses": {
+          "en": {
+            "status": "draft",
+            "count": 18,
+            "review_status": "verify_references_and_editorial_selection"
+          },
+          "am": {
+            "status": "draft_translation",
+            "count": 18,
+            "review_status": "amharic_language_review_reference_and_editorial_selection_pending"
+          }
+        },
+        "commentary": {
+          "en": {
+            "status": "original_draft",
+            "unit_count": 6,
+            "review_status": "theological_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_translation",
+            "unit_count": 6,
+            "review_status": "amharic_language_review_theological_and_editorial_review_pending"
+          }
+        },
+        "concordance": {
+          "en": {
+            "status": "draft",
+            "entry_count": 14,
+            "review_status": "reference_validation_pending"
+          },
+          "am": {
+            "status": "draft_translation",
+            "entry_count": 14,
+            "review_status": "amharic_language_review_name_and_reference_validation_pending"
+          }
+        },
+        "dictionary": {
+          "en": {
+            "status": "draft",
+            "entry_count": 5,
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_translation",
+            "entry_count": 5,
+            "review_status": "amharic_language_review_terminology_and_editorial_review_pending"
+          }
+        },
+        "timeline": {
+          "en": {
+            "status": "draft",
+            "event_count": 5,
+            "review_status": "historical_context_review_pending"
+          },
+          "am": {
+            "status": "draft_translation",
+            "event_count": 5,
+            "review_status": "amharic_language_review_historical_context_review_pending"
+          }
+        }
+      }
+    },
+    {
+      "order": 2,
+      "usfm_id": "EXO",
+      "title": "Exodus",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-exodus",
+              "yale-exodus",
+              "sots-exodus",
+              "abs-exodus"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 3,
+      "usfm_id": "LEV",
+      "title": "Leviticus",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-leviticus",
+              "abs-leviticus",
+              "sots-leviticus"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 4,
+      "usfm_id": "NUM",
+      "title": "Numbers",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-numbers",
+              "sots-numbers",
+              "usccb-numbers"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 5,
+      "usfm_id": "DEU",
+      "title": "Deuteronomy",
+      "testament": "OT",
+      "category": "law",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-deuteronomy",
+              "abs-deuteronomy",
+              "biblesociety-deuteronomy"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 6,
+      "usfm_id": "JOS",
+      "title": "Joshua",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-joshua",
+              "sots-joshua",
+              "usccb-joshua"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 7,
+      "usfm_id": "JDG",
+      "title": "Judges",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-judges",
+              "abs-judges",
+              "sots-judges"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 8,
+      "usfm_id": "RUT",
+      "title": "Ruth",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ruth",
+              "esv-ruth",
+              "baker-ruth"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 9,
+      "usfm_id": "1SA",
+      "title": "1 Samuel",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1samuel",
+              "esv-samuel",
+              "biblesociety-1samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 10,
+      "usfm_id": "2SA",
+      "title": "2 Samuel",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2samuel",
+              "esv-samuel",
+              "usccb-2samuel"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 11,
+      "usfm_id": "1KI",
+      "title": "1 Kings",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-1kings",
+              "esv-kings",
+              "gnbdc-1kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 12,
+      "usfm_id": "2KI",
+      "title": "2 Kings",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2kings",
+              "esv-kings",
+              "gnbdc-2kings"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 13,
+      "usfm_id": "1CH",
+      "title": "1 Chronicles",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "usccb-1chronicles",
+              "abs-1chronicles",
+              "biblesociety-1chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 14,
+      "usfm_id": "2CH",
+      "title": "2 Chronicles",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-2chronicles",
+              "usccb-historical-books-introduction",
+              "esv-chronicles"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 15,
+      "usfm_id": "EZR",
+      "title": "Ezra",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ezra",
+              "usccb-ezra",
+              "esv-ezra"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 16,
+      "usfm_id": "NEH",
+      "title": "Nehemiah",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-nehemiah",
+              "usccb-nehemiah",
+              "esv-nehemiah"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 17,
+      "usfm_id": "EST",
+      "title": "Esther",
+      "testament": "OT",
+      "category": "history",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-esther",
+              "usccb-esther",
+              "esv-esther"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 18,
+      "usfm_id": "JOB",
+      "title": "Job",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-job",
+              "esv-job",
+              "bibleproject-job"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 19,
+      "usfm_id": "PSA",
+      "title": "Psalms",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-psalms",
+              "esv-psalms",
+              "bibleproject-psalms"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 20,
+      "usfm_id": "PRO",
+      "title": "Proverbs",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-proverbs",
+              "esv-proverbs",
+              "bibleproject-proverbs"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 21,
+      "usfm_id": "ECC",
+      "title": "Ecclesiastes",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "editorial_review_pending"
+          },
+          "am": {
+            "status": "draft_unreviewed",
+            "source_ids": [
+              "abs-ecclesiastes",
+              "esv-ecclesiastes",
+              "bibleproject-ecclesiastes"
+            ],
+            "review_status": "language_review_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 22,
+      "usfm_id": "SNG",
+      "title": "Song of Songs",
+      "testament": "OT",
+      "category": "wisdom",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 23,
+      "usfm_id": "ISA",
+      "title": "Isaiah",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 24,
+      "usfm_id": "JER",
+      "title": "Jeremiah",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 25,
+      "usfm_id": "LAM",
+      "title": "Lamentations",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 26,
+      "usfm_id": "EZK",
+      "title": "Ezekiel",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 27,
+      "usfm_id": "DAN",
+      "title": "Daniel",
+      "testament": "OT",
+      "category": "major_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 28,
+      "usfm_id": "HOS",
+      "title": "Hosea",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 29,
+      "usfm_id": "JOL",
+      "title": "Joel",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 30,
+      "usfm_id": "AMO",
+      "title": "Amos",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 31,
+      "usfm_id": "OBA",
+      "title": "Obadiah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 32,
+      "usfm_id": "JON",
+      "title": "Jonah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 33,
+      "usfm_id": "MIC",
+      "title": "Micah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 34,
+      "usfm_id": "NAM",
+      "title": "Nahum",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 35,
+      "usfm_id": "HAB",
+      "title": "Habakkuk",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 36,
+      "usfm_id": "ZEP",
+      "title": "Zephaniah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 37,
+      "usfm_id": "HAG",
+      "title": "Haggai",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 38,
+      "usfm_id": "ZEC",
+      "title": "Zechariah",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 39,
+      "usfm_id": "MAL",
+      "title": "Malachi",
+      "testament": "OT",
+      "category": "minor_prophets",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 40,
+      "usfm_id": "MAT",
+      "title": "Matthew",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 41,
+      "usfm_id": "MRK",
+      "title": "Mark",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 42,
+      "usfm_id": "LUK",
+      "title": "Luke",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 43,
+      "usfm_id": "JHN",
+      "title": "John",
+      "testament": "NT",
+      "category": "gospels",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 44,
+      "usfm_id": "ACT",
+      "title": "Acts",
+      "testament": "NT",
+      "category": "acts",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 45,
+      "usfm_id": "ROM",
+      "title": "Romans",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 46,
+      "usfm_id": "1CO",
+      "title": "1 Corinthians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 47,
+      "usfm_id": "2CO",
+      "title": "2 Corinthians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 48,
+      "usfm_id": "GAL",
+      "title": "Galatians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 49,
+      "usfm_id": "EPH",
+      "title": "Ephesians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 50,
+      "usfm_id": "PHP",
+      "title": "Philippians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 51,
+      "usfm_id": "COL",
+      "title": "Colossians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 52,
+      "usfm_id": "1TH",
+      "title": "1 Thessalonians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 53,
+      "usfm_id": "2TH",
+      "title": "2 Thessalonians",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 54,
+      "usfm_id": "1TI",
+      "title": "1 Timothy",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 55,
+      "usfm_id": "2TI",
+      "title": "2 Timothy",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 56,
+      "usfm_id": "TIT",
+      "title": "Titus",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 57,
+      "usfm_id": "PHM",
+      "title": "Philemon",
+      "testament": "NT",
+      "category": "pauline",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 58,
+      "usfm_id": "HEB",
+      "title": "Hebrews",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 59,
+      "usfm_id": "JAS",
+      "title": "James",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 60,
+      "usfm_id": "1PE",
+      "title": "1 Peter",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 61,
+      "usfm_id": "2PE",
+      "title": "2 Peter",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 62,
+      "usfm_id": "1JN",
+      "title": "1 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 63,
+      "usfm_id": "2JN",
+      "title": "2 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 64,
+      "usfm_id": "3JN",
+      "title": "3 John",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 65,
+      "usfm_id": "JUD",
+      "title": "Jude",
+      "testament": "NT",
+      "category": "general_letters",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    },
+    {
+      "order": 66,
+      "usfm_id": "REV",
+      "title": "Revelation",
+      "testament": "NT",
+      "category": "revelation",
+      "content": {
+        "introduction": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "chapter_guides": {
+          "en": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          },
+          "am": {
+            "status": "not_started",
+            "source_ids": [],
+            "review_status": "not_reviewed"
+          }
+        },
+        "inductive_study": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        },
+        "quiz_bank": {
+          "en": {
+            "status": "draft_unreviewed",
+            "source_ids": [],
+            "review_status": "source_and_editorial_review_pending"
+          },
+          "am": {
+            "status": "english_fallback_review_required",
+            "source_ids": [],
+            "review_status": "amharic_translation_required"
+          }
+        }
+      }
+    }
+  ],
+  "implementation_snapshot": {
+    "snapshot_date": "2026-11-15",
+    "books_with_draft_introduction_inductive_study_and_quiz": 21,
+    "books_with_chapter_guides_started": 0,
+    "books_not_started": 0,
+    "release_approved_books": 0,
+    "scripture_text_included": false,
+    "draft_preview_policy": "DEBUG_BUILDS_ONLY",
+    "note": "Genesis has 110 English and 110 Amharic draft quiz items across four formats. Exact 2008 source-reference validator and reviewer outreach workflow are implemented; language, editorial, theological and final technical approvals remain pending.",
+    "books_with_english_draft_introduction_inductive_study_and_quiz": 66,
+    "books_with_amharic_translation_review_required": 45,
+    "chapter_guides_completed_en_books": [
+      "GEN"
+    ],
+    "chapter_guides_en_completed_count": 1,
+    "chapter_guides_en_chapters": 50,
+    "chapter_guides_am_completed_count": 1,
+    "genesis_quiz_question_count": 110,
+    "genesis_quiz_minimum": 100,
+    "genesis_key_verses": 18,
+    "genesis_memory_verses": 7,
+    "genesis_concordance_entries": 14,
+    "genesis_dictionary_entries": 5,
+    "genesis_commentary_units": 6,
+    "genesis_chapter_guides_en": 50,
+    "genesis_content_status": "draft_bilingual_coverage_review_required",
+    "genesis_chapter_study_prompts_en": 350,
+    "chapter_guides_am_chapters": 50,
+    "genesis_am_quiz_question_count": 110,
+    "genesis_chapter_guides_am": 50,
+    "genesis_chapter_study_prompts_am": 350,
+    "genesis_commentary_units_am": 6,
+    "genesis_key_verses_am": 18,
+    "genesis_memory_verses_am": 7,
+    "genesis_concordance_entries_am": 14,
+    "genesis_dictionary_entries_am": 5,
+    "genesis_timeline_events_am": 5,
+    "genesis_quiz_multiple_choice_count": 6,
+    "genesis_quiz_true_false_count": 96,
+    "genesis_quiz_multiple_select_count": 4,
+    "genesis_quiz_short_answer_count": 4,
+    "genesis_quiz_rationale_generic_count": 0,
+    "genesis_source_reference_validator": "implemented_ci_pending_pass",
+    "genesis_maale_translation_status": "not_translated_qualified_review_requested",
+    "genesis_amharic_review_status": "draft_complete_independent_review_pending",
+    "genesis_english_editorial_review_status": "pending",
+    "genesis_theological_review_status": "pending",
+    "genesis_rights_attribution_review_status": "implemented_final_audit_pending"
+  }
+}

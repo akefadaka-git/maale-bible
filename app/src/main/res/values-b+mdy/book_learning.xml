@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Maale: explicit English fallback pending reviewed translation. -->
+    <string name="learning_tab_overview" translatable="false">Introduction</string>
+    <string name="learning_tab_inductive" translatable="false">Inductive study</string>
+    <string name="learning_tab_quiz" translatable="false">Quiz</string>
+    <string name="learning_back_to_books" translatable="false">All books</string>
+    <string name="learning_book_metadata" translatable="false">%1$s · Canonical position %2$d</string>
+    <string name="learning_centre_title" translatable="false">Bible book learning centre</string>
+    <string name="learning_centre_description" translatable="false">A dedicated place for the book introduction, historical context, outline, themes, guided study and knowledge checks.</string>
+    <string name="learning_bilingual_status" translatable="false">English and Amharic draft content tracks · Maale translation, source and editorial review pending</string>
+    <string name="learning_introduction_title" translatable="false">Book introduction · English and Amharic</string>
+    <string name="learning_introduction_pending" translatable="false">A book-specific introduction will be published here in both languages after source verification and editorial review. No generic text is presented as a researched introduction.</string>
+    <string name="learning_background_title" translatable="false">Author, date and historical setting</string>
+    <string name="learning_background_fields" translatable="false">Author or authorship position, composition date or range, historical setting, original audience and relevant uncertainty will be documented with sources.</string>
+    <string name="learning_structure_title" translatable="false">Book structure and chapter outline</string>
+    <string name="learning_structure_fields" translatable="false">A chapter-by-chapter outline, literary structure and major movements will be added from reviewed study sources.</string>
+    <string name="learning_themes_title" translatable="false">Main themes and key teachings</string>
+    <string name="learning_themes_fields" translatable="false">Book-specific themes, theological topics, key people and events will be linked to verified passages.</string>
+    <string name="learning_related_title" translatable="false">Key passages and cross-references</string>
+    <string name="learning_related_fields" translatable="false">References will use canonical book, chapter and verse identifiers and will resolve only against an installed, verified Bible edition.</string>
+    <string name="learning_open_reader" translatable="false">Open this book in the Bible reader</string>
+    <string name="learning_inductive_intro" translatable="false">Study each passage through Observation, Interpretation and Application. The prompts below are a reusable study method; book-specific guides remain under editorial preparation.</string>
+    <string name="learning_observation_title" translatable="false">1 · Observation — What does the text say?</string>
+    <string name="learning_observation_prompts" translatable="false">Who is involved? What happens? Where and when? What words, ideas or actions are repeated? What does the passage explicitly state?</string>
+    <string name="learning_interpretation_title" translatable="false">2 · Interpretation — What does the text mean?</string>
+    <string name="learning_interpretation_prompts" translatable="false">What is the literary and historical context? What did the passage communicate to its first audience? How do its structure and surrounding passages shape its meaning?</string>
+    <string name="learning_application_title" translatable="false">3 · Application — How should I respond?</string>
+    <string name="learning_application_prompts" translatable="false">What truth should I trust? What attitude or action should change? What should I practise, avoid, repair or pray about? How can I apply this faithfully in my context?</string>
+    <string name="learning_study_guide_pending_title" translatable="false">Book-specific inductive study guide</string>
+    <string name="learning_study_guide_pending" translatable="false">Chapter guides, discussion questions, reflection exercises and group-study material will be added after the book content and references are verified.</string>
+    <string name="learning_quiz_title" translatable="false">Book knowledge assessment</string>
+ 
+    <string name="learning_quiz_unavailable" translatable="false">Quiz not yet available</string>
+    <string name="learning_provenance_notice" translatable="false">Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia. Source Scripture: CC BY-SA 4.0. These are original draft learning materials, not a Maale translation. No endorsement by the rights holders is implied; adapted Scripture text must identify changes and remain CC BY-SA 4.0.</string>
+    <string name="learning_setting_title" translatable="false">Historical and cultural setting</string>
+    <string name="learning_audience_title" translatable="false">Original audience and purpose</string>
+    <string name="learning_key_people_title" translatable="false">Key people</string>
+    <string name="learning_interpretive_care_title" translatable="false">Interpretive cautions</string>
+    <string name="learning_source_count" translatable="false">%1$d research sources recorded · see the content package for references</string>
+    <string name="learning_draft_warning" translatable="false">INTERNAL DRAFT — not approved for release. Maale translation and language review, English editorial review, and source/theological verification are still required.</string>
+    <string name="learning_quiz_score" translatable="false">Checked answers: %1$d · correct: %2$d</string>
+    <string name="learning_true" translatable="false">True</string>
+    <string name="learning_false" translatable="false">False</string>
+    <string name="learning_check_answer" translatable="false">Check answer</string>
+    <string name="learning_answer_correct" translatable="false">Correct</string>
+    <string name="learning_answer_incorrect" translatable="false">Not quite — review the explanation</string>
+    <string name="learning_answer_references" translatable="false">References: %1$s</string>
+    <string name="learning_explanation_fallback" translatable="false">Explanation language: English (Maale translation and review pending).</string>
+    <string name="learning_unknown_book" translatable="false">Unknown book</string>
+    <string name="learning_quiz_progress">Question %1$d of %2$d</string>
+    <string name="learning_quiz_complete">Quiz complete</string>
+    <string name="learning_quiz_final_score">Final score: %1$d of %2$d correct</string>
+    <string name="learning_next_question">Next question</string>
+    <string name="learning_see_results">See results</string>
+    <string name="learning_retry_quiz">Try again</string>
+    <string name="learning_chapter_guides_title">Chapter-by-chapter study guides</string>
+    <string name="learning_chapter_guides_pending">English fallback: chapter guides are being prepared one book at a time; Maale translation and source review are required.</string>
+    <string name="learning_chapter_number">Chapter %1$d</string>
+    <string name="learning_date_composition_title" translatable="false">Date and composition</string>
+    <string name="learning_genre_title" translatable="false">Literary genres</string>
+    <string name="learning_theological_contribution_title" translatable="false">Theological contribution</string>
+    <string name="learning_canonical_connections_title" translatable="false">Canonical connections</string>
+    <string name="learning_literary_context_title" translatable="false">Literary context</string>
+    <string name="learning_cross_references_title" translatable="false">Cross-references</string>
+    <string name="learning_discussion_prompts_title" translatable="false">Discussion questions</string>
+    <string name="learning_chapter_review_title" translatable="false">Chapter review</string>
+    <string name="learning_prayer_prompt_title" translatable="false">Prayer prompt</string>
+    <string name="learning_commentary_title" translatable="false">Commentary and theological notes</string>
+    <string name="learning_quiz_pending" translatable="false">The current quiz supports multiple choice and true/false only. Maale translation is not yet available; fill-in, matching, short-answer and chapter comprehension formats are also pending implementation.</string>
+    <string name="learning_quiz_short_answer_hint" translatable="false">Type your answer (Maale localization pending)</string>
+    <string name="learning_quiz_select_all_hint" translatable="false">Select every correct option (Maale localization pending)</string>
+</resources>

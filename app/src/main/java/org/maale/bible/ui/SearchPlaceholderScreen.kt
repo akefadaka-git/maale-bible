@@ -25,6 +25,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,6 +38,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.maale.bible.R
 import org.maale.bible.data.catalog.CanonicalBookCatalog
+import org.maale.bible.data.scripture.ScriptureEditionCatalog
+import org.maale.bible.data.scripture.ScriptureEditionSelectionStore
 
 /**
  * Smart search foundation. Book metadata lookup is functional; full-text
@@ -46,6 +50,9 @@ fun CatalogueSearchScreen(
     onSelectBook: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    var selectedEditionId by rememberSaveable { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
+    val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId) ?: ScriptureEditionCatalog.editions.first()
     val searchFieldDescription = stringResource(R.string.search_hint)
     var query by remember { mutableStateOf("") }
     val normalizedQuery = query.trim()
@@ -86,6 +93,19 @@ fun CatalogueSearchScreen(
             Text(
                 text = stringResource(R.string.search_support),
                 style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            ScriptureEditionSelector(
+                selectedEditionId = selectedEditionId,
+                onEditionSelected = { editionId ->
+                    if (ScriptureEditionSelectionStore.save(context, editionId)) selectedEditionId = editionId
+                },
+                selectorTag = "search_edition_selector"
+            )
+            Text(
+                "Selected edition: ${selectedEdition.title}. Scripture text search is unavailable until a verified package is installed; current results search book metadata only.",
+                modifier = Modifier.testTag("search_edition_context"),
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             OutlinedTextField(

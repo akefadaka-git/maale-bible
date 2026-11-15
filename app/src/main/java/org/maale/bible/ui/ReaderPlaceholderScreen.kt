@@ -11,12 +11,17 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
-import org.maale.bible.data.catalog.CanonicalBookCatalog
+import org.maale.bible.data.scripture.ScriptureChapter
+import org.maale.bible.data.scripture.ScriptureEditionCatalog
+import org.maale.bible.data.scripture.ScriptureEditionSelectionStore
+import org.maale.bible.data.scripture.ScriptureChapterResult
+import org.maale.bible.data.scripture.ScripturePackageRepository
 import org.maale.bible.domain.model.*
 import org.maale.bible.domain.repository.StudyRepository
 import java.util.UUID
@@ -24,10 +29,16 @@ import java.time.LocalDate
 
 @Composable
 fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack: () -> Unit, modifier: Modifier = Modifier) {
-    val book = CanonicalBookCatalog.find(bookId)
+    val context = LocalContext.current
     var navigation by remember(bookId) {
         mutableStateOf(repository.getReadingPosition()?.takeIf { it.bookId == bookId }
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
+    }
+    var selectedEditionId by rememberSaveable(bookId) { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
+    val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId)
+        ?: ScriptureEditionCatalog.editions.first()
+    val scriptureResult = remember(context, bookId, navigation.chapter, selectedEditionId) {
+        ScripturePackageRepository.loadChapter(context, bookId, navigation.chapter, selectedEditionId)
     }
     var noteText by rememberSaveable(bookId) { mutableStateOf("") }
     var editingAnnotationId by rememberSaveable(bookId) { mutableStateOf<String?>(null) }
@@ -42,13 +53,20 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
 
     Column(modifier.fillMaxSize().testTag("reader_screen").verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(book?.englishName ?: bookId, style = MaterialTheme.typography.headlineSmall)
-            TextButton(onClick = onBack) { Text("Books") }
+            Text(stringResource(bookNameResource(bookId)), style = MaterialTheme.typography.headlineSmall)
+            TextButton(onClick = onBack) { Text(stringResource(R.string.reader_back_to_books)) }
         }
         Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)
+        ScriptureEditionSelector(
+            selectedEditionId = selectedEditionId,
+            onEditionSelected = { editionId ->
+                if (ScriptureEditionSelectionStore.save(context, editionId)) selectedEditionId = editionId
+            },
+            selectorTag = "reader_edition_selector"
+        )
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("Chapter ${navigation.chapter} · Verse ${navigation.verse}", modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
+                Text(stringResource(R.string.reader_position_coordinates, navigation.chapter, navigation.verse), modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
                 Text(stringResource(R.string.reader_coordinates_notice))
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     OutlinedButton(onClick = { navigation = navigation.previousChapter() }) { Text(stringResource(R.string.reader_previous_chapter)) }
@@ -59,6 +77,25 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
                     Button(onClick = { navigation = navigation.nextVerse() }) { Text(stringResource(R.string.reader_next_verse)) }
                 }
             }
+        }
+        when (val result = scriptureResult) {
+            is ScriptureChapterResult.Available -> ScriptureChapterCard(result.chapter)
+            ScriptureChapterResult.PackageNotInstalled -> ReaderScriptureNotice(
+                stringResource(R.string.reader_scripture_not_installed_title),
+                stringResource(R.string.reader_scripture_not_installed_body)
+            )
+            ScriptureChapterResult.PreviewOnly -> ReaderScriptureNotice(
+                stringResource(R.string.reader_scripture_preview_title),
+                stringResource(R.string.reader_scripture_preview_body)
+            )
+            ScriptureChapterResult.ChapterUnavailable -> ReaderScriptureNotice(
+                stringResource(R.string.reader_scripture_chapter_missing_title),
+                stringResource(R.string.reader_scripture_chapter_missing_body)
+            )
+            ScriptureChapterResult.InvalidPackage -> ReaderScriptureNotice(
+                stringResource(R.string.reader_scripture_invalid_title),
+                stringResource(R.string.reader_scripture_invalid_body)
+            )
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(modifier = Modifier.testTag("reader_add_bookmark_button"), onClick = {
@@ -86,7 +123,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         Text(stringResource(R.string.reader_bookmarks, bookmarks.size), style = MaterialTheme.typography.titleMedium)
         bookmarks.forEach { item ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("Chapter ${item.chapter}, verse ${item.verse}")
+                Text(stringResource(R.string.reader_bookmark_coordinates, item.chapter, item.verse))
                 TextButton(onClick = { navigation = ReaderNavigation(bookId, item.chapter, item.verse) }) { Text(stringResource(R.string.reader_go_to)) }
                 TextButton(onClick = { repository.removeBookmark(item.id); refresh++ }) { Text(stringResource(R.string.reader_remove)) }
             }
@@ -95,7 +132,7 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         annotations.forEach { item ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column(Modifier.weight(1f)) {
-                    Text("${item.kind}: ${item.chapter}:${item.verse} ${item.body}")
+                    Text(stringResource(R.string.reader_annotation_coordinates, stringResource(if (item.kind == AnnotationKind.NOTE) R.string.reader_annotation_note_kind else R.string.reader_annotation_highlight_kind), item.chapter, item.verse, item.body))
                     if (item.kind == AnnotationKind.NOTE) TextButton(onClick = { noteText = item.body; editingAnnotationId = item.id; navigation = ReaderNavigation(bookId, item.chapter, item.verse) }) { Text(stringResource(R.string.reader_edit)) }
                 }
                 TextButton(onClick = { repository.deleteAnnotation(item.id); refresh++ }) { Text(stringResource(R.string.reader_delete)) }
@@ -111,15 +148,59 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
         }, enabled = planTitle.isNotBlank()) { Text(stringResource(R.string.reader_create_plan)) }
         plans.forEach { plan ->
             Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-                Text("${plan.title}: ${plan.completedDays.size}/${plan.durationDays} days · ${plan.completionPercent()}%", style = MaterialTheme.typography.titleSmall)
+                Text(stringResource(R.string.reader_plan_progress, plan.title, plan.completedDays.size, plan.durationDays, plan.completionPercent()), style = MaterialTheme.typography.titleSmall)
                 LinearProgressIndicator(progress = { plan.completionPercent() / 100f }, modifier = Modifier.fillMaxWidth())
                 val dueDay = plan.schedule(LocalDate.now().toEpochDay()).firstOrNull { it.status == PlanDayStatus.DUE || it.status == PlanDayStatus.OVERDUE }
                 TextButton(onClick = {
                     if (dueDay != null) repository.savePlan(plan.withDayCompleted(dueDay.dayNumber, System.currentTimeMillis()))
                     refresh++
-                }, enabled = dueDay != null) { Text(if (dueDay == null) "No day due today" else "Complete day ${dueDay.dayNumber}") }
+                }, enabled = dueDay != null) { Text(if (dueDay == null) stringResource(R.string.reader_no_day_due) else stringResource(R.string.reader_complete_day, dueDay.dayNumber)) }
             }
         }
-        Text("Study data is stored locally and protected by the app's encrypted database.", style = MaterialTheme.typography.bodySmall)
+        Text(stringResource(R.string.reader_private_notice), style = MaterialTheme.typography.bodySmall)
+    }
+}
+
+
+@Composable
+private fun ScriptureChapterCard(chapter: ScriptureChapter) {
+    Card(
+        modifier = Modifier.fillMaxWidth().testTag("scripture_chapter_content"),
+        shape = MaterialTheme.shapes.large
+    ) {
+        Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Text(
+                stringResource(R.string.reader_scripture_chapter_title, chapter.chapterNumber),
+                style = MaterialTheme.typography.titleLarge
+            )
+            chapter.headings.forEach { heading ->
+                Text(heading.text, style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            }
+            LazyColumn(
+                modifier = Modifier.fillMaxWidth().heightIn(max = 560.dp),
+                contentPadding = PaddingValues(vertical = 4.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                items(chapter.verses, key = { it.label }) { verse ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Text(verse.label, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                        Text(verse.text, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReaderScriptureNotice(title: String, body: String) {
+    Card(
+        modifier = Modifier.fillMaxWidth().testTag("scripture_package_status"),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+    ) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(title, style = MaterialTheme.typography.titleMedium)
+            Text(body, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
     }
 }
