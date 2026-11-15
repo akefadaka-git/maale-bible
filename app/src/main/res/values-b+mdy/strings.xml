@@ -222,7 +222,7 @@
 <string name="study_places_status" translatable="false">MAP DATA NOT LOADED</string>
     <string name="reader_scripture_chapter_title" translatable="false">Chapter %1$d</string>
     <string name="reader_scripture_not_installed_title" translatable="false">Selected Bible edition is not installed</string>
-    <string name="reader_scripture_not_installed_body" translatable="false">The selected Bible edition's verified text package is not installed. Choose an edition with an installed, verified package to read its chapters. Catalogue entries do not include or imply access to scripture text.</string>
+    <string name="reader_scripture_not_installed_body" translatable="false">The selected Bible edition\'s verified text package is not installed. Choose an edition with an installed, verified package to read its chapters. Catalogue entries do not include or imply access to scripture text.</string>
     <string name="reader_scripture_preview_title" translatable="false">Candidate scripture package — debug preview only</string>
     <string name="reader_scripture_preview_body" translatable="false">This edition package is not marked release-eligible. It can be inspected only in a debug build after private installation.</string>
     <string name="reader_scripture_chapter_missing_title" translatable="false">Chapter not available</string>
