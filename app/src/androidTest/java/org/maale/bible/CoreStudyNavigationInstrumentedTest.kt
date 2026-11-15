@@ -183,9 +183,14 @@ class CoreStudyNavigationInstrumentedTest {
             waitForTag("reader_screen")
 
             compose.onNodeWithTag("reader_edition_selector").performClick()
-            compose.onNodeWithTag("reader_edition_ENG-NIV").performClick()
-            compose.waitUntil(5_000) { ScriptureEditionSelectionStore.load(compose.activity.applicationContext) == "ENG-NIV" }
+            compose.onNodeWithTag("reader_edition_ENG-NIV").assertIsDisplayed().assertHasClickAction().performClick()
             compose.waitForIdle()
+            val selectedAfterTap = ScriptureEditionSelectionStore.load(compose.activity.applicationContext)
+            Log.i("EDITION_SELECTION_DIAGNOSTIC", "selectedAfterTap=$selectedAfterTap; expected=ENG-NIV")
+            if (selectedAfterTap != "ENG-NIV") {
+                compose.onRoot(useUnmergedTree = true).printToLog("EDITION_SELECTION_AFTER_TAP")
+            }
+            assertEquals("Selecting NIV must synchronously persist the shared edition preference", "ENG-NIV", selectedAfterTap)
             compose.onNodeWithTag("reader_edition_selector").assert(hasText("English: New International Version"))
 
             compose.activityRule.scenario.recreate()
