@@ -145,6 +145,14 @@
           "Do not claim that Genesis names Moses as its author; describe the traditional attribution and the range of scholarly discussion.",
           "Do not impose a single modern chronology on primeval narratives or patriarchal stories without explaining the method and uncertainty.",
           "Distinguish the book's literary and theological claims from claims that require independent historical or archaeological evidence."
+        ],
+        "date_and_composition": "Genesis does not state when its final literary form was composed. Traditional attribution connects the Torah with Moses, while modern scholarship debates the sources, traditions and editorial processes behind the Pentateuch. Proposed dates depend on the scholarly model and evidence used; this guide therefore gives no single composition date as settled fact.",
+        "genre": "Genesis is a composite literary work containing theological narrative, genealogies, ancestral family narratives, covenant scenes, poetry and blessings. Genesis 1–11 uses primeval narrative forms, while chapters 12–50 focus on ancestral stories.",
+        "theological_contribution": "Genesis presents God as Creator and giver of life; explores human dignity, vocation, disobedience and violence; holds judgment together with mercy and preservation; and traces promises, covenant, descendants, land and blessing through Israel's ancestors. Its narratives also portray family conflict, reconciliation and providence without excusing wrongdoing.",
+        "canonical_connections": [
+          "Genesis opens the Pentateuch and supplies the creation and ancestral background for Exodus and the later Torah.",
+          "The promises to Abraham, Isaac and Jacob are recalled in the Exodus narrative and later biblical accounts of Israel.",
+          "New Testament genealogies and writings such as Romans 4 and Galatians 3 interpret Abraham's faith and the promise of blessing in their own canonical contexts."
         ]
       },
       "inductive_studies": [
@@ -4203,6 +4211,14 @@
           "ዘፍጥረት ሙሴን በስም ደራሲ አድርጎ አይጠቅስም፤ ባህላዊ አመለካከትንና የምሁራን ውይይትን ለይቶ ማቅረብ አለበት።",
           "ስለ መጀመሪያ ታሪኮችና ስለ አባቶች ታሪክ አንድ የዘመን ስሌት ያለ ማብራሪያና ያለ እርግጠኝነት መግደድ የለበትም።",
           "የመጽሐፉን ሥነ-ጽሑፋዊና ሥነ-መለኮታዊ መልእክት ከተለየ ታሪካዊ ወይም አርኪዮሎጂያዊ ማስረጃ ከሚፈልጉ ጥያቄዎች መለየት አለበት።"
+        ],
+        "date_and_composition": "ዘፍጥረት መጽሐፍ በመጨረሻው ሥነ-ጽሑፋዊ ቅርጹ መቼ እንደተዘጋጀ በግልጽ አይናገርም። ባህላዊ አመለካከት ኦሪትን ከሙሴ ጋር ያያይዛል፤ ዘመናዊ ጥናት ግን ከፔንታቱክ ጀርባ ያሉትን ምንጮች፣ ባህሎችና የአርትዖት ሂደቶች ይመረምራል። የሚቀርቡት የዘመን ግምቶች በተጠቀመው የምሁራን አቀራረብና ማስረጃ ይለያያሉ፤ ስለዚህ አንድ የተረጋገጠ የጽሑፉ ዝግጅት ዘመን አንደሆነ አንቀርብም።",
+        "genre": "ዘፍጥረት ሥነ-መለኮታዊ ትረካዎችን፣ የዘር ሐረጎችን፣ የአባቶች ቤተሰብ ታሪኮችን፣ የቃል ኪዳን ታሪኮችን፣ ግጥሞችንና በረከቶችን የያዘ የተለያዩ ሥነ-ጽሑፋዊ ዓይነቶች ያሉት መጽሐፍ ነው። ዘፍጥረት 1–11 የመጀመሪያ ዘመን ትረካዎችን ይጠቀማል፤ 12–50 ግን በአባቶች ታሪኮች ላይ ያተኩራል።",
+        "theological_contribution": "ዘፍጥረት እግዚአብሔርን ፈጣሪና የሕይወት ሰጪ አድርጎ ያቀርባል፤ የሰውን ክብር፣ ጥሪ፣ አለመታዘዝና ዓመፅ ይመረምራል፤ ፍርድን ከምሕረትና ጥበቃ ጋር ያቀራርባል፤ በእስራኤል አባቶች ታሪክ ውስጥ ተስፋን፣ ቃል ኪዳንን፣ ዘርን፣ ምድርንና በረከትን ይከታተላል። ትረካዎቹ የቤተሰብ ግጭትን፣ እርቅንና የእግዚአብሔርን አመራር ያሳያሉ፤ የሰውን ክፋት ግን አያጸድቁም።",
+        "canonical_connections": [
+          "ዘፍጥረት የፔንታቱክ መክፈቻ ሲሆን ለዘፀአትና ለቀጣዮቹ የኦሪት መጻሕፍት የፍጥረትና የአባቶች ታሪክ መሠረት ይሰጣል።",
+          "ለአብርሃም፣ ለይስሐቅና ለያዕቆብ የተሰጡት ተስፋዎች በዘፀአትና በኋለኞቹ የመጽሐፍ ቅዱስ ትረካዎች ውስጥ ይታወሳሉ።",
+          "የአዲስ ኪዳን የዘር ሐረጎችና እንደ ሮሜ 4 እና ገላትያ 3 ያሉ ጽሑፎች የአብርሃምን እምነትና የበረከት ተስፋ በራሳቸው ቀኖናዊ አውድ ይተረጉማሉ።"
         ]
       },
       "inductive_studies": [
