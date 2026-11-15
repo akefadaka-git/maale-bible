@@ -91,7 +91,7 @@ object ScriptureEditionSourceRegistry {
             sourceVerification = "IDENTITY_UNRESOLVED_DO_NOT_PRESENT_AS_VERIFIED_EDITION",
             packageFileName = null, packageSha256 = null, signerFingerprint = null, releaseEligible = false
         ),
-        *ScriptureEditionCatalog.editions.filter { it.languageTag == "en" }.map { edition ->
+        ) + ScriptureEditionCatalog.editions.filter { it.languageTag == "en" }.map { edition ->
             val pending = ScriptureEditionSourceRecord(
                 editionId = edition.id,
                 sourceTitle = edition.title,
