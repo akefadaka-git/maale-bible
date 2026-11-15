@@ -3462,5 +3462,51 @@
       "chapter_guides_status": "not_translated",
       "content_status": "existing draft locale preserved; full translation and review still required"
     }
+  },
+  "source_provenance": {
+    "edition_id": "MDYTWF",
+    "ebible_id": "mdyeth",
+    "title": "2008 Maale Full Bible",
+    "language_code": "mdy",
+    "script": "Ethiopic",
+    "archive_filename": "mdyeth_usfm.zip",
+    "archive_sha256": "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11",
+    "genesis_usfm_path": "02-GENmdyeth.usfm",
+    "genesis_usfm_sha256": "cc9b7703d660bd39dfda8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392",
+    "genesis_source_bytes": 347847,
+    "genesis_source_lines": 2434,
+    "source_chapters": 50,
+    "source_verse_marker_lines": 1524,
+    "archive_validation_report": "maale-a2-real-source-validation-report.md",
+    "signed_hash_validation": "66/66 USFM file hashes matched the signed hash list",
+    "signature_fingerprint": "54D714D76956DA6673DC1EEA5F62009D93505F26",
+    "signature_trust_status": "GPG signature cryptographically valid; key trust undefined in isolated keyring",
+    "permission_record": {
+      "title": "Written Confirmation Regarding Licensing of the 2008 Maale Full Bible (MDYTWF / mdyeth)",
+      "issuer": "The Word for the World International",
+      "signatory": "Dr. Tesfaye Yohannes, East African representative",
+      "rights_holders": [
+        "The Word for the World International",
+        "The Bible Society of Ethiopia"
+      ],
+      "license": "CC BY-SA 4.0",
+      "permitted_uses": [
+        "offline storage and caching",
+        "in-app display",
+        "search indexing",
+        "bookmarks",
+        "annotations",
+        "user sharing"
+      ],
+      "required_attribution": "Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.",
+      "obligations": [
+        "include CC BY-SA 4.0 licence link",
+        "identify modifications",
+        "do not imply endorsement",
+        "distribute adaptations under ShareAlike"
+      ],
+      "separate_2007_mdybse_new_testament_excluded": true
+    },
+    "ingestion_status": "source identity and archive integrity validated; raw scripture not committed to this public repository; exact-edition app-package ingestion and verse-by-verse validation remain pending"
   }
 }
