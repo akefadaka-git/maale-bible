@@ -34,12 +34,12 @@ def validate() -> list[str]:
     en, am = locales.get("en", {}), locales.get("am", {})
     if set(locales) != {"en", "am"}:
         fail(errors, "Only explicitly authored EN and AM locales may be present; do not fabricate Maale.")
-    if asset.get("locales", {}).get("am") != am:
-        fail(errors, "Android asset Amharic locale differs from documentation source.")
+    if asset.get("locales", {}).get("en") != en or asset.get("locales", {}).get("am") != am:
+        fail(errors, "Android asset EN/AM locales differ from documentation source.")
 
     for locale_name, locale in (("EN", en), ("AM", am)):
         intro = locale.get("introduction", {})
-        for field in ("title", "summary", "authorship", "setting", "audience_and_purpose"):
+        for field in ("title", "summary", "authorship", "setting", "audience_and_purpose", "date_and_composition", "genre", "theological_contribution", "canonical_connections"):
             if not isinstance(intro.get(field), str) or not intro[field].strip():
                 fail(errors, f"{locale_name} introduction missing {field}.")
         for key, expected in (("chapter_guides", 50), ("inductive_studies", 4), ("quiz", 102)):
@@ -50,15 +50,21 @@ def validate() -> list[str]:
         for chapter, guide in enumerate(guides, start=1):
             if guide.get("chapter") != chapter:
                 fail(errors, f"{locale_name} chapter guide order/identity mismatch at {chapter}.")
-            for field in ("title", "summary", "observation", "interpretation", "application", "references"):
+            for field in ("title", "summary", "observation", "interpretation", "application", "references", "literary_context", "cross_references", "discussion_prompts", "review", "chapter_specific_study"):
                 if not guide.get(field):
                     fail(errors, f"{locale_name} chapter {chapter} missing {field}.")
             if not guide.get("references") or f"GEN {chapter}" not in guide["references"]:
                 fail(errors, f"{locale_name} chapter {chapter} lacks its chapter reference.")
 
+        for study in locale.get("inductive_studies", []):
+            if not study.get("prayer_prompt"):
+                fail(errors, f"{locale_name} inductive study {study.get('id')} lacks a prayer prompt.")
+
         for item in locale.get("quiz", []):
-            if not item.get("prompt") or not item.get("explanation") or not item.get("references"):
+            if not item.get("prompt") or not item.get("explanation") or not item.get("references") or not item.get("learning_objective") or not item.get("difficulty"):
                 fail(errors, f"{locale_name} quiz {item.get('id')} lacks prompt, explanation or references.")
+            if item.get("type") not in {"true_false", "multiple_choice"}:
+                fail(errors, f"{locale_name} quiz {item.get('id')} uses an unsupported Android question type.")
             if item.get("type") == "true_false" and type(item.get("correct_answer")) is not bool:
                 fail(errors, f"{locale_name} quiz {item.get('id')} true/false answer is not Boolean.")
             if item.get("type") == "multiple_choice":
