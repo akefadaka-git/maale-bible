@@ -66,5 +66,5 @@
     <string name="book_name_3jn">3 John</string>
     <string name="book_name_jud">Jude</string>
     <string name="book_name_rev">Revelation</string>
-    <string name="learning_locale_fallback_notice">Amharic translation is not yet available for this book. Showing an English draft for internal review only.</string>
+    <string name="learning_locale_fallback_notice">A translation in your selected language is not yet available. Showing an English draft for internal review only.</string>
 </resources>
