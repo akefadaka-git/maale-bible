@@ -137,6 +137,14 @@
           "Do not claim that Genesis names Moses as its author; describe the traditional attribution and the range of scholarly discussion.",
           "Do not impose a single modern chronology on primeval narratives or patriarchal stories without explaining the method and uncertainty.",
           "Distinguish the book's literary and theological claims from claims that require independent historical or archaeological evidence."
+        ],
+        "date_and_composition": "Genesis does not state when its final literary form was composed. Traditional attribution connects the Torah with Moses, while modern scholarship debates the sources, traditions and editorial processes behind the Pentateuch. Proposed dates depend on the scholarly model and evidence used; this guide therefore gives no single composition date as settled fact.",
+        "genre": "Genesis is a composite literary work containing theological narrative, genealogies, ancestral family narratives, covenant scenes, poetry and blessings. Genesis 1–11 uses primeval narrative forms, while chapters 12–50 focus on ancestral stories.",
+        "theological_contribution": "Genesis presents God as Creator and giver of life; explores human dignity, vocation, disobedience and violence; holds judgment together with mercy and preservation; and traces promises, covenant, descendants, land and blessing through Israel's ancestors. Its narratives also portray family conflict, reconciliation and providence without excusing wrongdoing.",
+        "canonical_connections": [
+          "Genesis opens the Pentateuch and supplies the creation and ancestral background for Exodus and the later Torah.",
+          "The promises to Abraham, Isaac and Jacob are recalled in the Exodus narrative and later biblical accounts of Israel.",
+          "New Testament genealogies and writings such as Romans 4 and Galatians 3 interpret Abraham's faith and the promise of blessing in their own canonical contexts."
         ]
       },
       "inductive_studies": [
@@ -233,7 +241,9 @@
           "explanation": "Genesis 1 presents God as Creator who brings the world into ordered existence and calls it good.",
           "references": [
             "GEN 1:1-31"
-          ]
+          ],
+          "learning_objective": "Identify the opening claim of Genesis and the scope of the creation account.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q02",
@@ -250,7 +260,9 @@
           "explanation": "Genesis 2–3 locates the first human couple in the garden of Eden.",
           "references": [
             "GEN 2:8-15"
-          ]
+          ],
+          "learning_objective": "Recognize the garden setting and its role in the human vocation narrative.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q03",
@@ -261,7 +273,9 @@
           "explanation": "The call of Abram begins the ancestral narratives and introduces promises that shape the rest of Genesis.",
           "references": [
             "GEN 12:1-3"
-          ]
+          ],
+          "learning_objective": "Identify the call of Abram and its promise of blessing.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q04",
@@ -278,7 +292,9 @@
           "explanation": "Noah is instructed to build the ark and preserve his household and representatives of living creatures.",
           "references": [
             "GEN 6:13-22"
-          ]
+          ],
+          "learning_objective": "Recall the ark instructions and Noah's role in the flood narrative.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q05",
@@ -295,7 +311,9 @@
           "explanation": "The rainbow is given as the sign of the covenant with Noah and the earth.",
           "references": [
             "GEN 9:8-17"
-          ]
+          ],
+          "learning_objective": "Explain the covenant sign given after the flood.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q06",
@@ -313,7 +331,9 @@
           "references": [
             "GEN 17:15-21",
             "GEN 21:1-7"
-          ]
+          ],
+          "learning_objective": "Trace the promise of Isaac and its fulfilment.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q07",
@@ -330,7 +350,9 @@
           "explanation": "Joseph's brothers sell him, and he is taken to Egypt, where his story continues.",
           "references": [
             "GEN 37:3-28"
-          ]
+          ],
+          "learning_objective": "Follow the conflict between Joseph and his brothers.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q08",
@@ -341,7 +363,1231 @@
           "explanation": "Joseph's words in Genesis 50:20 summarize the theme of providence amid human wrongdoing.",
           "references": [
             "GEN 50:15-21"
-          ]
+          ],
+          "learning_objective": "Interpret Joseph's final reflection on wrongdoing and providence.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q09",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Genesis opens with God creating the heavens and the earth.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 1:1"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q10",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The first creation account ends with the seventh day being blessed and made holy.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 2:1-3"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q11",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The sun, moon and stars are described as appearing on the first day.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 1:14-19"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q12",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Humanity is described as created in God's image.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 1:26-27"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q13",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The first human is formed from the dust of the ground.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 2:7"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q14",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The garden of Eden is planted by the LORD God.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 2:8"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q15",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The man is told not to eat from the tree of the knowledge of good and evil.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 2:16-17"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q16",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The woman is described as formed from the man's side.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 2:21-23"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q17",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The serpent questions the command given by God.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 3:1-5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q18",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "After eating, the man and woman hide from God.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 3:7-10"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q19",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The man accepts responsibility without blaming anyone else.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 3:12"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q20",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The humans are sent out of the garden after disobedience.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 3:22-24"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q21",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Cain is a farmer and Abel keeps flocks.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 4:2"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q22",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Cain kills Abel.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 4:8"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q23",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Cain answers that he is his brother's keeper.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 4:9"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q24",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Seth is born after the account of Abel's death.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 4:25"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q25",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Enoch walks with God and is taken by God.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 5:21-24"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q26",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Noah finds favor in the eyes of the LORD.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 6:8"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q27",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Noah is instructed to build an ark.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 6:13-22"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q28",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The flood narrative says the earth was filled with violence.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 6:11-13"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q29",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Noah sends out a raven and then a dove.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 8:6-12"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q30",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The rainbow is given as a covenant sign.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 9:12-17"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q31",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Noah's sons are Shem, Ham and Japheth.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 9:18"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q32",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The Babel story describes one language before the scattering.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 11:1-9"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q33",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Abram's original home is associated with Ur of the Chaldeans.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 11:27-31"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q34",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Abram is called to leave his country and go to a land God will show him.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 12:1"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q35",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The promise to Abram includes blessing for the families of the earth.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 12:2-3"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q36",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Abram travels to Egypt during a famine.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 12:10"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q37",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Lot and Abram separate because their possessions and herds are too extensive to remain together.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 13:5-12"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q38",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Abram rescues Lot after a battle involving local kings.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 14:1-16"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q39",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Melchizedek is king of Salem and priest of God Most High.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 14:18"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q40",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Abram is promised descendants as numerous as the stars.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 15:5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q41",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Abram's faith is counted to him as righteousness.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 15:6"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q42",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Hagar is Sarah's Egyptian servant.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 16:1"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q43",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Ishmael is the son of Abram and Hagar.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 16:15"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q44",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Abram's name is changed to Abraham.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 17:5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q45",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Sarai's name is changed to Sarah.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 17:15"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q46",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Circumcision is established as a sign of the covenant.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 17:9-14"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q47",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Sarah laughs when she hears the promise that she will have a son.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 18:9-15"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q48",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Abraham intercedes concerning the fate of Sodom.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 18:22-33"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q49",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Lot's wife looks back while fleeing Sodom.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 19:26"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q50",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Isaac is born when Abraham is one hundred years old.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 21:1-5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q51",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Hagar and Ishmael are sent away before Isaac is born.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 21:8-14"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q52",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Abraham is tested concerning Isaac.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 22:1-2"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q53",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "A ram is offered instead of Isaac.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 22:13"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q54",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Sarah is buried in the cave of Machpelah.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 23:1-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q55",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Rebekah becomes Isaac's wife.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 24:57-67"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q56",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Esau is born before Jacob.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 25:24-26"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q57",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Esau sells his birthright for food.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 25:29-34"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q58",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Isaac is told by God to remain in the land during famine.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 26:1-6"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q59",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Jacob receives Isaac's blessing while disguised as Esau.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 27:1-29"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q60",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Esau plans to kill Jacob after the blessing.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 27:41"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q61",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Jacob dreams of a stairway reaching to heaven at Bethel.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 28:10-17"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q62",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Laban gives Rachel to Jacob before Leah.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 29:21-30"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q63",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Leah bears sons before Rachel bears Joseph.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 29:31-35; 30:22-24"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q64",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Jacob wrestles through the night at Peniel.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 32:22-32"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q65",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Jacob receives the name Israel.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 32:28"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q66",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Esau embraces Jacob when they meet again.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 33:1-11"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q67",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Dinah is the daughter of Jacob and Leah.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 30:21; 34:1"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q68",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Benjamin is younger than Joseph.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 35:16-18"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q69",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joseph receives a distinctive robe from Jacob.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 37:3"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q70",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph's dreams contribute to his brothers' hatred of him.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 37:5-11"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q71",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph is sold and taken to Egypt.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 37:25-28"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q72",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Potiphar's wife falsely accuses Joseph.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 39:7-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q73",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joseph interprets the dreams of Pharaoh's officials in prison.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 40:1-23"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q74",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Pharaoh dreams of seven healthy cows and seven thin cows.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 41:1-7"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q75",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph interprets Pharaoh's dreams as seven years of plenty followed by seven years of famine.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 41:25-32"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q76",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Pharaoh appoints Joseph to a position of authority over Egypt.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 41:39-44"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q77",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joseph's brothers travel to Egypt to buy grain.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 42:1-5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q78",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph reveals his identity to his brothers on their first arrival.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 42:7-24; 45:1-3"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q79",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph requires the brothers to bring Benjamin to Egypt.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 42:15-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q80",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Judah offers himself in place of Benjamin.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 44:18-34"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q81",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Joseph reveals his identity to his brothers in Genesis 45.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 45:1-4"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q82",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph says God sent him ahead to preserve life.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 45:5-8"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q83",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Jacob's family settles in Goshen.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 46:28-34; 47:1-6"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q84",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Jacob blesses Ephraim and Manasseh.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 48:1-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q85",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Jacob places his right hand on Manasseh, the older son.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 48:13-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q86",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Genesis 49 records Jacob's final words concerning his sons.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 49:1-28"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q87",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Jacob asks to be buried in the family burial place at Machpelah.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 49:29-32"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q88",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Joseph dies in Egypt at the age of 110.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 50:22-26"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q89",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Genesis ends with Joseph's coffin in Egypt.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 50:26"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q90",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Joseph says his brothers intended harm but God intended it for good.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 50:20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q91",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Genesis includes the giving of the Ten Commandments at Mount Sinai.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "EXO 20:1-17"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q92",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "Genesis 1–11 is commonly described as primeval history.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 1-11"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q93",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Genesis 12–50 mainly follows the ancestral family narratives.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 12-50"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q94",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The promises of descendants, land and blessing recur throughout the ancestral narratives.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q95",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Every family in Genesis is portrayed as free from jealousy and conflict.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 4; 27; 29-37; 42-50"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q96",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The flood narrative ends with a covenant involving the earth and living creatures.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 9:8-17"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q97",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The Joseph story connects human wrongdoing with the preservation of many lives.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 45:5-8; 50:20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q98",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Abraham's covenant promises are repeated to Isaac.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 26:2-5"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q99",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "God's promise to Jacob at Bethel includes presence and protection.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 28:13-15"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q100",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "The story of Joseph occupies the final major section of Genesis.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 37-50"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q101",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Genesis describes Israel's family entering Egypt before the Exodus.",
+          "correct_answer": true,
+          "explanation": "The statement is supported by the cited passage.",
+          "references": [
+            "GEN 46-50"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q102",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The book of Genesis ends with the Israelites already having received the law at Sinai.",
+          "correct_answer": false,
+          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "references": [
+            "GEN 50:26; EXO 19-20"
+          ],
+          "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
+          "explanation_locale": "en"
         }
       ],
       "chapter_guides": [
@@ -367,7 +1613,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Creation and the ordered world",
+            "passage": "GEN 1",
+            "observation": [
+              "Read Genesis 1 in full. Identify the people, places, actions and repeated words connected with “Creation and the ordered world”.",
+              "Trace the movement of the events described here: The chapter presents God bringing the heavens and earth into an ordered, life-supporting world through a sequence of creative commands, culminating in humanity and the seventh-day rest.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Creation and the ordered world” develop themes introduced earlier?",
+              "Which details in Genesis 1 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 1 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 2,
@@ -391,7 +1656,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The garden and human vocation",
+            "passage": "GEN 2",
+            "observation": [
+              "Read Genesis 2 in full. Identify the people, places, actions and repeated words connected with “The garden and human vocation”.",
+              "Trace the movement of the events described here: The narrative focuses on the human creature, the garden, work and responsibility, the command concerning the tree, and the creation of a companion.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The garden and human vocation” develop themes introduced earlier?",
+              "Which details in Genesis 2 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 2 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 3,
@@ -415,7 +1699,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Distrust, disobedience and exile",
+            "passage": "GEN 3",
+            "observation": [
+              "Read Genesis 3 in full. Identify the people, places, actions and repeated words connected with “Distrust, disobedience and exile”.",
+              "Trace the movement of the events described here: The serpent questions the command; the humans eat, hide and blame, and the chapter records judgment, clothing and expulsion from the garden.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Distrust, disobedience and exile” develop themes introduced earlier?",
+              "Which details in Genesis 3 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 3 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 4,
@@ -439,7 +1742,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Cain, Abel and expanding human society",
+            "passage": "GEN 4",
+            "observation": [
+              "Read Genesis 4 in full. Identify the people, places, actions and repeated words connected with “Cain, Abel and expanding human society”.",
+              "Trace the movement of the events described here: The chapter recounts the brothers' offerings, Cain's murder of Abel, the consequences for Cain, his descendants and the birth of Seth.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Cain, Abel and expanding human society” develop themes introduced earlier?",
+              "Which details in Genesis 4 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 4 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 5,
@@ -463,7 +1785,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Adam's descendants to Noah",
+            "passage": "GEN 5",
+            "observation": [
+              "Read Genesis 5 in full. Identify the people, places, actions and repeated words connected with “Adam's descendants to Noah”.",
+              "Trace the movement of the events described here: A genealogy traces generations from Adam through Seth to Noah, repeatedly marking human mortality and highlighting Enoch's distinctive walk with God.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Adam's descendants to Noah” develop themes introduced earlier?",
+              "Which details in Genesis 5 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 5 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 6,
@@ -487,7 +1828,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Human corruption and Noah's commission",
+            "passage": "GEN 6",
+            "observation": [
+              "Read Genesis 6 in full. Identify the people, places, actions and repeated words connected with “Human corruption and Noah's commission”.",
+              "Trace the movement of the events described here: The chapter describes widespread corruption, identifies Noah as one who finds favour, and records the instructions to build the ark.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Human corruption and Noah's commission” develop themes introduced earlier?",
+              "Which details in Genesis 6 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 6 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 7,
@@ -511,7 +1871,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The flood begins",
+            "passage": "GEN 7",
+            "observation": [
+              "Read Genesis 7 in full. Identify the people, places, actions and repeated words connected with “The flood begins”.",
+              "Trace the movement of the events described here: Noah, his household and the creatures enter the ark; the waters rise and the narrative emphasizes the scale of the flood.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The flood begins” develop themes introduced earlier?",
+              "Which details in Genesis 7 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 7 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 8,
@@ -535,7 +1914,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The waters recede",
+            "passage": "GEN 8",
+            "observation": [
+              "Read Genesis 8 in full. Identify the people, places, actions and repeated words connected with “The waters recede”.",
+              "Trace the movement of the events described here: God remembers Noah; the waters gradually recede, Noah tests the conditions, leaves the ark and offers worship.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The waters recede” develop themes introduced earlier?",
+              "Which details in Genesis 8 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 8 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 9,
@@ -559,7 +1957,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The covenant with Noah",
+            "passage": "GEN 9",
+            "observation": [
+              "Read Genesis 9 in full. Identify the people, places, actions and repeated words connected with “The covenant with Noah”.",
+              "Trace the movement of the events described here: God blesses Noah's family, gives instructions concerning life and blood, establishes a covenant sign, and the chapter closes with Noah's family episode.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The covenant with Noah” develop themes introduced earlier?",
+              "Which details in Genesis 9 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 9 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 10,
@@ -583,7 +2000,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The nations descended from Noah",
+            "passage": "GEN 10",
+            "observation": [
+              "Read Genesis 10 in full. Identify the people, places, actions and repeated words connected with “The nations descended from Noah”.",
+              "Trace the movement of the events described here: The genealogy lists the descendants of Noah's sons and describes the spread of families and peoples across the earth.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The nations descended from Noah” develop themes introduced earlier?",
+              "Which details in Genesis 10 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 10 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 11,
@@ -607,7 +2043,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Babel and the line to Abram",
+            "passage": "GEN 11",
+            "observation": [
+              "Read Genesis 11 in full. Identify the people, places, actions and repeated words connected with “Babel and the line to Abram”.",
+              "Trace the movement of the events described here: The chapter tells of the city and tower at Babel, the confusion of languages and the genealogy from Shem to Terah.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Babel and the line to Abram” develop themes introduced earlier?",
+              "Which details in Genesis 11 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 11 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 12,
@@ -631,7 +2086,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Abram's call and journey",
+            "passage": "GEN 12",
+            "observation": [
+              "Read Genesis 12 in full. Identify the people, places, actions and repeated words connected with “Abram's call and journey”.",
+              "Trace the movement of the events described here: God calls Abram to leave his country with promises of land, descendants and blessing; Abram travels to Canaan and later goes to Egypt during famine.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Abram's call and journey” develop themes introduced earlier?",
+              "Which details in Genesis 12 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 12 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 13,
@@ -655,7 +2129,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Abram and Lot separate",
+            "passage": "GEN 13",
+            "observation": [
+              "Read Genesis 13 in full. Identify the people, places, actions and repeated words connected with “Abram and Lot separate”.",
+              "Trace the movement of the events described here: As their households grow, Abram and Lot separate; Lot chooses the Jordan plain, and God renews the land promise to Abram.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Abram and Lot separate” develop themes introduced earlier?",
+              "Which details in Genesis 13 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 13 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 14,
@@ -679,7 +2172,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Abram rescues Lot",
+            "passage": "GEN 14",
+            "observation": [
+              "Read Genesis 14 in full. Identify the people, places, actions and repeated words connected with “Abram rescues Lot”.",
+              "Trace the movement of the events described here: Abram pursues the kings who captured Lot, rescues the captives, and encounters Melchizedek and the king of Sodom.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Abram rescues Lot” develop themes introduced earlier?",
+              "Which details in Genesis 14 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 14 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 15,
@@ -703,7 +2215,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The covenant promise",
+            "passage": "GEN 15",
+            "observation": [
+              "Read Genesis 15 in full. Identify the people, places, actions and repeated words connected with “The covenant promise”.",
+              "Trace the movement of the events described here: Abram voices concern about an heir; God renews the promise of descendants and land, and the covenant is enacted in a solemn scene.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The covenant promise” develop themes introduced earlier?",
+              "Which details in Genesis 15 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 15 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 16,
@@ -727,7 +2258,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Hagar and Ishmael",
+            "passage": "GEN 16",
+            "observation": [
+              "Read Genesis 16 in full. Identify the people, places, actions and repeated words connected with “Hagar and Ishmael”.",
+              "Trace the movement of the events described here: Sarai gives Hagar to Abram; conflict follows, Hagar flees, and a divine messenger meets her and speaks about her son.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Hagar and Ishmael” develop themes introduced earlier?",
+              "Which details in Genesis 16 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 16 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 17,
@@ -751,7 +2301,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The covenant sign and Isaac's promise",
+            "passage": "GEN 17",
+            "observation": [
+              "Read Genesis 17 in full. Identify the people, places, actions and repeated words connected with “The covenant sign and Isaac's promise”.",
+              "Trace the movement of the events described here: God renews the covenant with Abram, gives new names, establishes circumcision as its sign and promises that Sarah will bear Isaac.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The covenant sign and Isaac's promise” develop themes introduced earlier?",
+              "Which details in Genesis 17 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 17 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 18,
@@ -775,7 +2344,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Visitors and intercession",
+            "passage": "GEN 18",
+            "observation": [
+              "Read Genesis 18 in full. Identify the people, places, actions and repeated words connected with “Visitors and intercession”.",
+              "Trace the movement of the events described here: Visitors announce Sarah's future son; Abraham receives them and then intercedes concerning the justice of the coming judgment on Sodom.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Visitors and intercession” develop themes introduced earlier?",
+              "Which details in Genesis 18 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 18 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 19,
@@ -799,7 +2387,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Sodom and Lot",
+            "passage": "GEN 19",
+            "observation": [
+              "Read Genesis 19 in full. Identify the people, places, actions and repeated words connected with “Sodom and Lot”.",
+              "Trace the movement of the events described here: The visitors arrive in Sodom, Lot receives them, the city is judged, and Lot's family escapes with tragic consequences afterward.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Sodom and Lot” develop themes introduced earlier?",
+              "Which details in Genesis 19 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 19 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 20,
@@ -823,7 +2430,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Abraham and Sarah in Gerar",
+            "passage": "GEN 20",
+            "observation": [
+              "Read Genesis 20 in full. Identify the people, places, actions and repeated words connected with “Abraham and Sarah in Gerar”.",
+              "Trace the movement of the events described here: Abraham presents Sarah as his sister in Gerar; Abimelech takes her, is warned in a dream and confronts Abraham.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Abraham and Sarah in Gerar” develop themes introduced earlier?",
+              "Which details in Genesis 20 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 20 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 21,
@@ -847,7 +2473,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Isaac is born",
+            "passage": "GEN 21",
+            "observation": [
+              "Read Genesis 21 in full. Identify the people, places, actions and repeated words connected with “Isaac is born”.",
+              "Trace the movement of the events described here: Sarah gives birth to Isaac; Hagar and Ishmael leave the household, Abraham makes an agreement with Abimelech and settles at Beersheba.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Isaac is born” develop themes introduced earlier?",
+              "Which details in Genesis 21 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 21 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 22,
@@ -871,7 +2516,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The test of Abraham",
+            "passage": "GEN 22",
+            "observation": [
+              "Read Genesis 22 in full. Identify the people, places, actions and repeated words connected with “The test of Abraham”.",
+              "Trace the movement of the events described here: Abraham is tested concerning Isaac; the child is spared, a substitute is provided, and the chapter also records Nahor's descendants.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The test of Abraham” develop themes introduced earlier?",
+              "Which details in Genesis 22 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 22 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 23,
@@ -895,7 +2559,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Sarah's death and burial",
+            "passage": "GEN 23",
+            "observation": [
+              "Read Genesis 23 in full. Identify the people, places, actions and repeated words connected with “Sarah's death and burial”.",
+              "Trace the movement of the events described here: Sarah dies, and Abraham negotiates and purchases a burial place at Machpelah from the Hittites.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Sarah's death and burial” develop themes introduced earlier?",
+              "Which details in Genesis 23 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 23 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 24,
@@ -919,7 +2602,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "A wife for Isaac",
+            "passage": "GEN 24",
+            "observation": [
+              "Read Genesis 24 in full. Identify the people, places, actions and repeated words connected with “A wife for Isaac”.",
+              "Trace the movement of the events described here: Abraham's servant travels to find a wife for Isaac, meets Rebekah, recounts his mission to her family and brings her to Isaac.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “A wife for Isaac” develop themes introduced earlier?",
+              "Which details in Genesis 24 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 24 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 25,
@@ -943,7 +2645,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Abraham's death and the next generation",
+            "passage": "GEN 25",
+            "observation": [
+              "Read Genesis 25 in full. Identify the people, places, actions and repeated words connected with “Abraham's death and the next generation”.",
+              "Trace the movement of the events described here: The chapter records Abraham's later family and death, Ishmael's descendants, and the birth and early conflict of Esau and Jacob.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Abraham's death and the next generation” develop themes introduced earlier?",
+              "Which details in Genesis 25 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 25 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 26,
@@ -967,7 +2688,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Isaac, Abimelech and the wells",
+            "passage": "GEN 26",
+            "observation": [
+              "Read Genesis 26 in full. Identify the people, places, actions and repeated words connected with “Isaac, Abimelech and the wells”.",
+              "Trace the movement of the events described here: Isaac faces famine and conflict in Gerar, experiences disputes over wells, receives renewed assurance of the promise and makes a treaty.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Isaac, Abimelech and the wells” develop themes introduced earlier?",
+              "Which details in Genesis 26 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 26 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 27,
@@ -991,7 +2731,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob receives the blessing",
+            "passage": "GEN 27",
+            "observation": [
+              "Read Genesis 27 in full. Identify the people, places, actions and repeated words connected with “Jacob receives the blessing”.",
+              "Trace the movement of the events described here: Rebekah and Jacob deceive Isaac; Jacob receives the blessing intended for Esau, whose grief turns to anger.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob receives the blessing” develop themes introduced earlier?",
+              "Which details in Genesis 27 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 27 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 28,
@@ -1015,7 +2774,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob's dream at Bethel",
+            "passage": "GEN 28",
+            "observation": [
+              "Read Genesis 28 in full. Identify the people, places, actions and repeated words connected with “Jacob's dream at Bethel”.",
+              "Trace the movement of the events described here: Jacob leaves home, dreams of a stairway joining earth and heaven, receives a promise and marks the place at Bethel.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob's dream at Bethel” develop themes introduced earlier?",
+              "Which details in Genesis 28 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 28 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 29,
@@ -1039,7 +2817,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob's marriages and children",
+            "passage": "GEN 29",
+            "observation": [
+              "Read Genesis 29 in full. Identify the people, places, actions and repeated words connected with “Jacob's marriages and children”.",
+              "Trace the movement of the events described here: Jacob meets Rachel, serves Laban, marries Leah and Rachel, and the births of several children begin the growth of Israel's family.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob's marriages and children” develop themes introduced earlier?",
+              "Which details in Genesis 29 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 29 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 30,
@@ -1063,7 +2860,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Children and flocks increase",
+            "passage": "GEN 30",
+            "observation": [
+              "Read Genesis 30 in full. Identify the people, places, actions and repeated words connected with “Children and flocks increase”.",
+              "Trace the movement of the events described here: The rivalry between Leah and Rachel continues through household arrangements and births; Jacob negotiates his wages and his flocks increase.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Children and flocks increase” develop themes introduced earlier?",
+              "Which details in Genesis 30 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 30 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 31,
@@ -1087,7 +2903,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob leaves Laban",
+            "passage": "GEN 31",
+            "observation": [
+              "Read Genesis 31 in full. Identify the people, places, actions and repeated words connected with “Jacob leaves Laban”.",
+              "Trace the movement of the events described here: Jacob departs with his family and possessions; Laban pursues him, they confront one another and establish a boundary covenant.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob leaves Laban” develop themes introduced earlier?",
+              "Which details in Genesis 31 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 31 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 32,
@@ -1111,7 +2946,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob prepares to meet Esau",
+            "passage": "GEN 32",
+            "observation": [
+              "Read Genesis 32 in full. Identify the people, places, actions and repeated words connected with “Jacob prepares to meet Esau”.",
+              "Trace the movement of the events described here: Jacob fears meeting Esau, prays, sends gifts and wrestles through the night, receiving the name Israel.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob prepares to meet Esau” develop themes introduced earlier?",
+              "Which details in Genesis 32 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 32 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 33,
@@ -1135,7 +2989,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob and Esau meet",
+            "passage": "GEN 33",
+            "observation": [
+              "Read Genesis 33 in full. Identify the people, places, actions and repeated words connected with “Jacob and Esau meet”.",
+              "Trace the movement of the events described here: Jacob approaches Esau with caution; the brothers meet, embrace and speak, then travel on separate paths.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob and Esau meet” develop themes introduced earlier?",
+              "Which details in Genesis 33 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 33 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 34,
@@ -1159,7 +3032,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Dinah and Shechem",
+            "passage": "GEN 34",
+            "observation": [
+              "Read Genesis 34 in full. Identify the people, places, actions and repeated words connected with “Dinah and Shechem”.",
+              "Trace the movement of the events described here: Dinah is violated by Shechem; negotiations follow, but Simeon and Levi use deception and violence against the city.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Dinah and Shechem” develop themes introduced earlier?",
+              "Which details in Genesis 34 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 34 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 35,
@@ -1183,7 +3075,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob returns to Bethel",
+            "passage": "GEN 35",
+            "observation": [
+              "Read Genesis 35 in full. Identify the people, places, actions and repeated words connected with “Jacob returns to Bethel”.",
+              "Trace the movement of the events described here: Jacob's household removes foreign gods and returns to Bethel; God renews the promise, Rachel dies giving birth to Benjamin and Isaac dies.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob returns to Bethel” develop themes introduced earlier?",
+              "Which details in Genesis 35 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 35 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 36,
@@ -1207,7 +3118,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Esau's descendants",
+            "passage": "GEN 36",
+            "observation": [
+              "Read Genesis 36 in full. Identify the people, places, actions and repeated words connected with “Esau's descendants”.",
+              "Trace the movement of the events described here: The chapter records Esau's wives, descendants, clans and the rulers of Edom.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Esau's descendants” develop themes introduced earlier?",
+              "Which details in Genesis 36 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 36 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 37,
@@ -1231,7 +3161,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Joseph's dreams and sale",
+            "passage": "GEN 37",
+            "observation": [
+              "Read Genesis 37 in full. Identify the people, places, actions and repeated words connected with “Joseph's dreams and sale”.",
+              "Trace the movement of the events described here: Joseph's dreams intensify his brothers' resentment; they sell him, deceive Jacob and send Joseph to Egypt.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Joseph's dreams and sale” develop themes introduced earlier?",
+              "Which details in Genesis 37 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 37 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 38,
@@ -1255,7 +3204,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Judah and Tamar",
+            "passage": "GEN 38",
+            "observation": [
+              "Read Genesis 38 in full. Identify the people, places, actions and repeated words connected with “Judah and Tamar”.",
+              "Trace the movement of the events described here: Judah's family experiences loss and injustice; Tamar acts to secure the family duty owed to her, and Judah acknowledges his responsibility.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Judah and Tamar” develop themes introduced earlier?",
+              "Which details in Genesis 38 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 38 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 39,
@@ -1279,7 +3247,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Joseph in Potiphar's house",
+            "passage": "GEN 39",
+            "observation": [
+              "Read Genesis 39 in full. Identify the people, places, actions and repeated words connected with “Joseph in Potiphar's house”.",
+              "Trace the movement of the events described here: Joseph serves in Potiphar's household, refuses his master's wife's advances, is falsely accused and imprisoned, where he receives responsibility.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Joseph in Potiphar's house” develop themes introduced earlier?",
+              "Which details in Genesis 39 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 39 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 40,
@@ -1303,7 +3290,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The cupbearer and baker",
+            "passage": "GEN 40",
+            "observation": [
+              "Read Genesis 40 in full. Identify the people, places, actions and repeated words connected with “The cupbearer and baker”.",
+              "Trace the movement of the events described here: In prison Joseph interprets the dreams of Pharaoh's cupbearer and baker; the outcomes unfold, but Joseph is forgotten for a time.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The cupbearer and baker” develop themes introduced earlier?",
+              "Which details in Genesis 40 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 40 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 41,
@@ -1327,7 +3333,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Pharaoh's dreams and Joseph's rise",
+            "passage": "GEN 41",
+            "observation": [
+              "Read Genesis 41 in full. Identify the people, places, actions and repeated words connected with “Pharaoh's dreams and Joseph's rise”.",
+              "Trace the movement of the events described here: Joseph interprets Pharaoh's dreams, proposes a plan for the years of abundance and famine, and is appointed to oversee Egypt's preparations.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Pharaoh's dreams and Joseph's rise” develop themes introduced earlier?",
+              "Which details in Genesis 41 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 41 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 42,
@@ -1351,7 +3376,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The brothers' first journey to Egypt",
+            "passage": "GEN 42",
+            "observation": [
+              "Read Genesis 42 in full. Identify the people, places, actions and repeated words connected with “The brothers' first journey to Egypt”.",
+              "Trace the movement of the events described here: Famine brings Joseph's brothers to Egypt; Joseph recognizes them, tests their account and keeps Simeon while sending the others home.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The brothers' first journey to Egypt” develop themes introduced earlier?",
+              "Which details in Genesis 42 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 42 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 43,
@@ -1375,7 +3419,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The brothers return with Benjamin",
+            "passage": "GEN 43",
+            "observation": [
+              "Read Genesis 43 in full. Identify the people, places, actions and repeated words connected with “The brothers return with Benjamin”.",
+              "Trace the movement of the events described here: The family debates the risk of sending Benjamin; Judah offers responsibility, and the brothers return to Egypt and dine with Joseph.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The brothers return with Benjamin” develop themes introduced earlier?",
+              "Which details in Genesis 43 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 43 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 44,
@@ -1399,7 +3462,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Joseph tests his brothers again",
+            "passage": "GEN 44",
+            "observation": [
+              "Read Genesis 44 in full. Identify the people, places, actions and repeated words connected with “Joseph tests his brothers again”.",
+              "Trace the movement of the events described here: Joseph's cup is placed in Benjamin's sack; the brothers return, and Judah pleads to take Benjamin's place.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Joseph tests his brothers again” develop themes introduced earlier?",
+              "Which details in Genesis 44 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 44 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 45,
@@ -1423,7 +3505,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Joseph reveals himself",
+            "passage": "GEN 45",
+            "observation": [
+              "Read Genesis 45 in full. Identify the people, places, actions and repeated words connected with “Joseph reveals himself”.",
+              "Trace the movement of the events described here: Joseph reveals his identity, explains the family's arrival in Egypt within the unfolding events and sends the brothers to bring Jacob.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Joseph reveals himself” develop themes introduced earlier?",
+              "Which details in Genesis 45 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 45 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 46,
@@ -1447,7 +3548,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob's family travels to Egypt",
+            "passage": "GEN 46",
+            "observation": [
+              "Read Genesis 46 in full. Identify the people, places, actions and repeated words connected with “Jacob's family travels to Egypt”.",
+              "Trace the movement of the events described here: Jacob receives assurance before travelling to Egypt; the chapter lists his household and records the reunion with Joseph.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob's family travels to Egypt” develop themes introduced earlier?",
+              "Which details in Genesis 46 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 46 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 47,
@@ -1471,7 +3591,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "The family settles in Egypt",
+            "passage": "GEN 47",
+            "observation": [
+              "Read Genesis 47 in full. Identify the people, places, actions and repeated words connected with “The family settles in Egypt”.",
+              "Trace the movement of the events described here: Joseph presents his family to Pharaoh, settles them in Goshen and administers food during the continuing famine.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “The family settles in Egypt” develop themes introduced earlier?",
+              "Which details in Genesis 47 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 47 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 48,
@@ -1495,7 +3634,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Ephraim and Manasseh are blessed",
+            "passage": "GEN 48",
+            "observation": [
+              "Read Genesis 48 in full. Identify the people, places, actions and repeated words connected with “Ephraim and Manasseh are blessed”.",
+              "Trace the movement of the events described here: Jacob adopts Joseph's sons as his own for inheritance purposes and gives the younger Ephraim the precedence in blessing.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Ephraim and Manasseh are blessed” develop themes introduced earlier?",
+              "Which details in Genesis 48 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 48 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 49,
@@ -1519,7 +3677,26 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
-          ]
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob blesses his sons and dies",
+            "passage": "GEN 49",
+            "observation": [
+              "Read Genesis 49 in full. Identify the people, places, actions and repeated words connected with “Jacob blesses his sons and dies”.",
+              "Trace the movement of the events described here: Jacob gathers his sons, speaks over them, gives burial instructions and dies in Egypt.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob blesses his sons and dies” develop themes introduced earlier?",
+              "Which details in Genesis 49 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 49 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
         },
         {
           "chapter": 50,
@@ -1543,10 +3720,422 @@
           "source_ids": [
             "usccb-genesis",
             "bibleorg-genesis-outline"
+          ],
+          "chapter_specific_study": {
+            "status": "draft_needs_editorial_review",
+            "focus": "Jacob is buried and Joseph dies",
+            "passage": "GEN 50",
+            "observation": [
+              "Read Genesis 50 in full. Identify the people, places, actions and repeated words connected with “Jacob is buried and Joseph dies”.",
+              "Trace the movement of the events described here: Joseph's brothers fear retaliation after Jacob's death; Joseph reassures them, lives to see another generation and asks that his bones be carried up from Egypt.",
+              "Separate details stated directly by the narrator from conclusions readers may infer."
+            ],
+            "interpretation": [
+              "What does this chapter contribute to the larger Genesis narrative, and how does its focus on “Jacob is buried and Joseph dies” develop themes introduced earlier?",
+              "Which details in Genesis 50 are most important for understanding its message, and what alternative readings should be considered carefully?"
+            ],
+            "application": [
+              "What response does this chapter invite today, taking account of its original setting and the experiences of the people in the story?",
+              "What question raised by Genesis 50 should a group discuss further rather than answer too quickly?"
+            ]
+          },
+          "editorial_status": "chapter_specific_study_prompts_added; source_and_editorial_review_pending"
+        }
+      ],
+      "chapter_guides_status": "draft_source_based_review_required",
+      "quiz_bank_metadata": {
+        "target_minimum": 100,
+        "actual_question_count": 102,
+        "count_policy": "Distinct question IDs count; translations and answer variants do not.",
+        "status": "draft_unreviewed",
+        "question_types": [
+          "multiple_choice",
+          "true_false"
+        ],
+        "coverage": "Genesis 1–50: creation, early humanity, flood, Babel, patriarchal narratives, Joseph and whole-book structure.",
+        "note": "Original learning questions; all references require validation against the exact authorized MDYTWF source and editorial/theological review before release.",
+        "quality_note": "The 94 added questions are true/false recall checks with concise rationales. Before release, enrich a balanced subset with multiple-choice, matching and passage-analysis items; independently verify each reference and explanation against MDYTWF and editorial review."
+      },
+      "key_verses": [
+        {
+          "reference": "GEN 1:1",
+          "theme": "God the Creator",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 1:27",
+          "theme": "Human dignity",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 2:2-3",
+          "theme": "The seventh day",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 3:15",
+          "theme": "Conflict and hope",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 4:9",
+          "theme": "Responsibility for others",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 6:8",
+          "theme": "Favor",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 9:13",
+          "theme": "Covenant sign",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 12:2-3",
+          "theme": "Promise and blessing",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 15:6",
+          "theme": "Faith and righteousness",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 17:7",
+          "theme": "Covenant continuity",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 18:14",
+          "theme": "Divine possibility",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 22:14",
+          "theme": "The LORD provides",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 26:24",
+          "theme": "Promise to Isaac",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 28:15",
+          "theme": "Presence and promise",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 32:28",
+          "theme": "Israel",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 33:4",
+          "theme": "Reconciliation",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 45:5",
+          "theme": "Preservation",
+          "study_note": "Read and memorize in the context of the complete passage."
+        },
+        {
+          "reference": "GEN 50:20",
+          "theme": "Providence and responsibility",
+          "study_note": "Read and memorize in the context of the complete passage."
+        }
+      ],
+      "memory_verses": [
+        {
+          "reference": "GEN 1:1",
+          "reason": "The book's opening confession about God as Creator."
+        },
+        {
+          "reference": "GEN 1:27",
+          "reason": "Humanity created in God's image."
+        },
+        {
+          "reference": "GEN 12:2-3",
+          "reason": "Abram's call and blessing for the nations."
+        },
+        {
+          "reference": "GEN 15:6",
+          "reason": "Abram's faith."
+        },
+        {
+          "reference": "GEN 22:14",
+          "reason": "God's provision."
+        },
+        {
+          "reference": "GEN 28:15",
+          "reason": "God's promise of presence to Jacob."
+        },
+        {
+          "reference": "GEN 50:20",
+          "reason": "Providence without excusing human wrongdoing."
+        }
+      ],
+      "commentary": {
+        "status": "original_draft",
+        "editorial_policy": "Original explanatory notes only; distinguish textual observation, scholarly hypotheses and theological interpretation; do not reproduce copyrighted commentary.",
+        "units": [
+          {
+            "range": "GEN 1:1-2:3",
+            "title": "Creation and ordered time",
+            "note": "Repeated speech, fulfilment and evaluation portray an ordered, fruitful world; the seventh day forms the climax."
+          },
+          {
+            "range": "GEN 2:4-3:24",
+            "title": "Human vocation, limits and exile",
+            "note": "The garden narrative explores dependence, work, companionship, command and disobedience; preserve its relational and moral dimensions."
+          },
+          {
+            "range": "GEN 4:1-11:32",
+            "title": "Violence, judgment and the nations",
+            "note": "Cain and Abel, the flood and Babel trace violence and fractured community alongside preservation and renewed beginnings."
+          },
+          {
+            "range": "GEN 12:1-25:18",
+            "title": "Abraham and Sarah",
+            "note": "The story narrows from the nations to one family through promises of land, descendants and blessing, while portraying fear, conflict and waiting."
+          },
+          {
+            "range": "GEN 25:19-36:43",
+            "title": "Isaac, Jacob and Esau",
+            "note": "Sibling rivalry, deception, exile, encounter and reconciliation shape the next generation; the ancestors are not idealized."
+          },
+          {
+            "range": "GEN 37:1-50:26",
+            "title": "Joseph and the family in Egypt",
+            "note": "Betrayal, suffering, wisdom, famine and reconciliation culminate in a reflection on human responsibility and divine preservation."
+          }
+        ]
+      },
+      "concordance": [
+        {
+          "term": "Abraham (Abram)",
+          "category": "person",
+          "references": [
+            "GEN 11:26-32",
+            "GEN 12:1-9",
+            "GEN 15:1-21",
+            "GEN 17:1-27",
+            "GEN 22:1-19",
+            "GEN 25:7-11"
+          ]
+        },
+        {
+          "term": "Sarah (Sarai)",
+          "category": "person",
+          "references": [
+            "GEN 11:29-31",
+            "GEN 16:1-6",
+            "GEN 17:15-21",
+            "GEN 18:9-15",
+            "GEN 21:1-7",
+            "GEN 23:1-20"
+          ]
+        },
+        {
+          "term": "Hagar",
+          "category": "person",
+          "references": [
+            "GEN 16:1-16",
+            "GEN 21:8-21"
+          ]
+        },
+        {
+          "term": "Isaac",
+          "category": "person",
+          "references": [
+            "GEN 17:15-21",
+            "GEN 21:1-7",
+            "GEN 22:1-19",
+            "GEN 24:1-67",
+            "GEN 26:1-35"
+          ]
+        },
+        {
+          "term": "Jacob / Israel",
+          "category": "person",
+          "references": [
+            "GEN 25:19-34",
+            "GEN 27:1-45",
+            "GEN 28:10-22",
+            "GEN 32:22-32",
+            "GEN 35:9-15",
+            "GEN 46:1-7"
+          ]
+        },
+        {
+          "term": "Joseph",
+          "category": "person",
+          "references": [
+            "GEN 37:1-36",
+            "GEN 39:1-23",
+            "GEN 41:1-57",
+            "GEN 45:1-15",
+            "GEN 50:15-26"
+          ]
+        },
+        {
+          "term": "Noah",
+          "category": "person",
+          "references": [
+            "GEN 5:28-32",
+            "GEN 6:8-22",
+            "GEN 7:1-24",
+            "GEN 8:1-22",
+            "GEN 9:1-29"
+          ]
+        },
+        {
+          "term": "Eden",
+          "category": "place",
+          "references": [
+            "GEN 2:8-15",
+            "GEN 3:8-24",
+            "GEN 4:16"
+          ]
+        },
+        {
+          "term": "Babel",
+          "category": "place/topic",
+          "references": [
+            "GEN 10:10",
+            "GEN 11:1-9"
+          ]
+        },
+        {
+          "term": "Covenant",
+          "category": "theme",
+          "references": [
+            "GEN 6:18",
+            "GEN 9:8-17",
+            "GEN 15:1-21",
+            "GEN 17:1-27"
+          ]
+        },
+        {
+          "term": "Blessing",
+          "category": "theme",
+          "references": [
+            "GEN 1:22-28",
+            "GEN 12:1-3",
+            "GEN 27:1-40",
+            "GEN 48:1-20",
+            "GEN 49:1-28"
+          ]
+        },
+        {
+          "term": "Famine",
+          "category": "theme",
+          "references": [
+            "GEN 12:10-20",
+            "GEN 26:1-6",
+            "GEN 41:25-57",
+            "GEN 42:1-5",
+            "GEN 47:13-26"
+          ]
+        },
+        {
+          "term": "Reconciliation",
+          "category": "theme",
+          "references": [
+            "GEN 33:1-11",
+            "GEN 45:1-15",
+            "GEN 50:15-21"
+          ]
+        },
+        {
+          "term": "Providence",
+          "category": "theme",
+          "references": [
+            "GEN 45:5-8",
+            "GEN 50:15-21"
           ]
         }
       ],
-      "chapter_guides_status": "draft_source_based_review_required"
+      "dictionary": [
+        {
+          "term": "Covenant",
+          "definition": "A binding relationship or commitment established by God in the narrative; Genesis includes covenant scenes with Noah and Abraham.",
+          "references": [
+            "GEN 9:8-17",
+            "GEN 15:1-21",
+            "GEN 17:1-27"
+          ]
+        },
+        {
+          "term": "Birthright",
+          "definition": "The firstborn's inherited status and associated privileges; Esau trades his birthright to Jacob.",
+          "references": [
+            "GEN 25:29-34"
+          ]
+        },
+        {
+          "term": "Patriarch",
+          "definition": "A later descriptive term commonly used for the ancestral fathers in Genesis.",
+          "references": [
+            "GEN 12-50"
+          ]
+        },
+        {
+          "term": "Primeval history",
+          "definition": "A scholarly label for Genesis 1–11, the opening narratives about creation, humanity, violence, flood and nations.",
+          "references": [
+            "GEN 1-11"
+          ]
+        },
+        {
+          "term": "USFM",
+          "definition": "A structured markup format used for Bible text files; it is a technical source format, not a translation or edition name.",
+          "references": []
+        }
+      ],
+      "timeline": [
+        {
+          "sequence": 1,
+          "event": "Creation and garden narratives",
+          "reference": "GEN 1:1-3:24",
+          "date_status": "No absolute date asserted by the text."
+        },
+        {
+          "sequence": 2,
+          "event": "Cain, genealogies, flood and Babel",
+          "reference": "GEN 4:1-11:32",
+          "date_status": "No absolute date asserted by the text."
+        },
+        {
+          "sequence": 3,
+          "event": "Abraham and Sarah",
+          "reference": "GEN 12:1-25:18",
+          "date_status": "Patriarchal chronology is debated; avoid false precision."
+        },
+        {
+          "sequence": 4,
+          "event": "Isaac, Jacob and Esau",
+          "reference": "GEN 25:19-36:43",
+          "date_status": "Narrative sequence, not independently fixed calendar dates."
+        },
+        {
+          "sequence": 5,
+          "event": "Joseph and the family in Egypt",
+          "reference": "GEN 37:1-50:26",
+          "date_status": "Narrative sequence; historical dating proposals vary."
+        }
+      ],
+      "chapter_guide_metadata": {
+        "expected_chapters": 50,
+        "actual_chapters": 50,
+        "status": "chapter_specific_study_prompts_added_editorial_review_required",
+        "coverage": "Each chapter now has a structured study focus and observation, interpretation and application prompts grounded in its existing chapter title and summary.",
+        "source_validation": "Chapter-level references only; exact verse boundaries, source headings and scripture wording still require comparison with the approved 2008 MDYTWF source.",
+        "review_note": "Prompts are original draft study aids and require editorial, theological and language review."
+      }
     },
     "am": {
       "locale_status": "draft_translation",
@@ -1614,6 +4203,14 @@
           "ዘፍጥረት ሙሴን በስም ደራሲ አድርጎ አይጠቅስም፤ ባህላዊ አመለካከትንና የምሁራን ውይይትን ለይቶ ማቅረብ አለበት።",
           "ስለ መጀመሪያ ታሪኮችና ስለ አባቶች ታሪክ አንድ የዘመን ስሌት ያለ ማብራሪያና ያለ እርግጠኝነት መግደድ የለበትም።",
           "የመጽሐፉን ሥነ-ጽሑፋዊና ሥነ-መለኮታዊ መልእክት ከተለየ ታሪካዊ ወይም አርኪዮሎጂያዊ ማስረጃ ከሚፈልጉ ጥያቄዎች መለየት አለበት።"
+        ],
+        "date_and_composition": "ዘፍጥረት መጽሐፍ በመጨረሻው ሥነ-ጽሑፋዊ ቅርጹ መቼ እንደተዘጋጀ በግልጽ አይናገርም። ባህላዊ አመለካከት ኦሪትን ከሙሴ ጋር ያያይዛል፤ ዘመናዊ ጥናት ግን ከፔንታቱክ ጀርባ ያሉትን ምንጮች፣ ባህሎችና የአርትዖት ሂደቶች ይመረምራል። የሚቀርቡት የዘመን ግምቶች በተጠቀመው የምሁራን አቀራረብና ማስረጃ ይለያያሉ፤ ስለዚህ አንድ የተረጋገጠ የጽሑፉ ዝግጅት ዘመን አንደሆነ አንቀርብም።",
+        "genre": "ዘፍጥረት ሥነ-መለኮታዊ ትረካዎችን፣ የዘር ሐረጎችን፣ የአባቶች ቤተሰብ ታሪኮችን፣ የቃል ኪዳን ታሪኮችን፣ ግጥሞችንና በረከቶችን የያዘ የተለያዩ ሥነ-ጽሑፋዊ ዓይነቶች ያሉት መጽሐፍ ነው። ዘፍጥረት 1–11 የመጀመሪያ ዘመን ትረካዎችን ይጠቀማል፤ 12–50 ግን በአባቶች ታሪኮች ላይ ያተኩራል።",
+        "theological_contribution": "ዘፍጥረት እግዚአብሔርን ፈጣሪና የሕይወት ሰጪ አድርጎ ያቀርባል፤ የሰውን ክብር፣ ጥሪ፣ አለመታዘዝና ዓመፅ ይመረምራል፤ ፍርድን ከምሕረትና ጥበቃ ጋር ያቀራርባል፤ በእስራኤል አባቶች ታሪክ ውስጥ ተስፋን፣ ቃል ኪዳንን፣ ዘርን፣ ምድርንና በረከትን ይከታተላል። ትረካዎቹ የቤተሰብ ግጭትን፣ እርቅንና የእግዚአብሔርን አመራር ያሳያሉ፤ የሰውን ክፋት ግን አያጸድቁም።",
+        "canonical_connections": [
+          "ዘፍጥረት የፔንታቱክ መክፈቻ ሲሆን ለዘፀአትና ለቀጣዮቹ የኦሪት መጻሕፍት የፍጥረትና የአባቶች ታሪክ መሠረት ይሰጣል።",
+          "ለአብርሃም፣ ለይስሐቅና ለያዕቆብ የተሰጡት ተስፋዎች በዘፀአትና በኋለኞቹ የመጽሐፍ ቅዱስ ትረካዎች ውስጥ ይታወሳሉ።",
+          "የአዲስ ኪዳን የዘር ሐረጎችና እንደ ሮሜ 4 እና ገላትያ 3 ያሉ ጽሑፎች የአብርሃምን እምነትና የበረከት ተስፋ በራሳቸው ቀኖናዊ አውድ ይተረጉማሉ።"
         ]
       },
       "inductive_studies": [
