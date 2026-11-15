@@ -66,5 +66,5 @@
     <string name="book_name_3jn" translatable="false">3 John</string>
     <string name="book_name_jud" translatable="false">Jude</string>
     <string name="book_name_rev" translatable="false">Revelation</string>
-    <string name="learning_locale_fallback_notice" translatable="false">English draft fallback; Amharic translation is not yet available.</string>
+    <string name="learning_locale_fallback_notice" translatable="false">Maale learning translation is not yet available. Showing an English draft for internal review only.</string>
 </resources>
