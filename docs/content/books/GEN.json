@@ -20,19 +20,27 @@
     "permission_evidence": "Written Confirmation Regarding Licensing of the 2008 Maale Full Bible (MDYTWF / mdyeth), issued by The Word for the World International; signed by Dr. Tesfaye Yohannes, East African representative.",
     "required_attribution": "Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia.",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "separate_2007_nt_excluded": true
+    "separate_2007_nt_excluded": true,
+    "source_license": "CC BY-SA 4.0",
+    "source_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source_archive_sha256": "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11",
+    "genesis_usfm_sha256": "cc9b7703d660bd39da8a358f9a3fb27d97f05b04f8851b3cf3e536f9e1f392",
+    "adaptations_notice": "The Genesis learning guides and study aids are original draft material; they contain no direct Scripture quotations. If any Scripture text is adapted and redistributed, identify modifications, do not imply licensor endorsement, and distribute the adaptation under CC BY-SA 4.0.",
+    "no_endorsement_required": true,
+    "share_alike_required_for_scripture_adaptations": true,
+    "source_images_imported": false
   },
   "review_gates": {
     "source_verification": "source_identity_and_structure_verified; passage_reference_validation_pending",
-    "rights_review": "documented_permission_and_CC_BY_SA_4_0_terms_recorded; repository_asset_review_pending",
+    "rights_review": "Owner permission and CC BY-SA 4.0 terms recorded; attribution, modification, no-endorsement and ShareAlike controls added; final asset audit pending",
     "english_editorial_review": "pending",
     "amharic_language_review": "required; all Genesis introductions, chapter guides, inductive studies, quiz items and supporting reference modules have draft Amharic text; independent language review pending",
     "theological_review": "pending",
-    "scripture_reference_validation": "pending_against_exact_2008_MDYTWF_text",
+    "scripture_reference_validation": "automated exact-source validation added; CI evidence pending",
     "qa": "pending",
     "chapter_guide_editorial_review": "pending",
     "maale_language_review": "required",
-    "quiz_review": "102 EN and 102 AM draft items; reference and rationale verification pending"
+    "quiz_review": "110 EN and 110 AM draft items; four multiple-select and four short-answer items added; source and independent editorial review pending"
   },
   "sources": [
     {
@@ -9823,7 +9831,7 @@
       "introduction": "draft_present",
       "chapter_guides": "50_of_50",
       "inductive_studies": "4_of_4",
-      "quiz": "102_of_102",
+      "quiz": "110_of_110",
       "key_verses": "18_of_18",
       "memory_verses": "7_of_7",
       "concordance": "14_of_14",
@@ -9835,7 +9843,7 @@
       "introduction": "draft_present",
       "chapter_guides": "50_of_50_draft_translation",
       "inductive_studies": "4_of_4_draft_translation",
-      "quiz": "102_of_102_draft_translation",
+      "quiz": "110_of_110_draft_translation",
       "key_verses": "18_of_18_draft_translation",
       "memory_verses": "7_of_7_draft_translation",
       "concordance": "14_of_14_draft_translation",
