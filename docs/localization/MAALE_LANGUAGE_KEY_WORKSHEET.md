@@ -293,3 +293,20 @@ language_label = [Maale wording]
 If you prefer, send the Maale word or phrase first and explain its meaning or context. I will map it to the correct key and preserve your spelling. I will ask about ambiguous meanings rather than guess.
 
 **Current status:** All 263 Android resource keys are now present in the English, Amharic and Maale resource directories. 112 of 262 non-app-title Android UI keys have Owner-supplied Maale wording recorded (42.7% full-inventory intake completeness). Within core `strings.xml` alone, the same 112 entries cover 112 of 180 UI keys (62.2%). Another 68 core strings and 82 additional Explorer/Testament/Learning Centre keys still lack Maale wording, for 150 explicit English fallback entries overall. Amharic currently has 101 explicit English fallback entries across the full inventory. This records Owner-supplied wording; it is not a claim of independent community linguistic review or full screen-level localization. This document is a translation intake artifact, not a claim that the app's remaining screens are already localized.
+
+## 6. Owner-supplied Maale translations — 15 November 2026
+
+The following ten entries were supplied directly by the Owner and integrated into the Maale Android resource set. English remains the reference meaning. Amharic entries remain explicit English fallbacks where no Amharic wording was supplied in this batch. Placeholder tokens must remain unchanged.
+
+| Resource key | English reference | Maale wording (Owner-supplied) | Placeholder check |
+|---|---|---|---|
+| `search_loading_editions` | Loading installed Bible editions… | ጫኣኒንቴ ጌኤዦ ማፃኣፖ ቡሎ ቡላኔ ... | PASS |
+| `search_no_edition` | No offline scripture edition is installed on this device. | ሃኖ ሞባይሎዪዳ ዒንቴርኔቴ ባኣንቴ ቡላ ማፃኣፔ ጫኣኒንቲባኣሴ። | PASS |
+| `search_verifying_edition` | Verifying %1$s… | %1$s ጎኑማሢ ዱማሲ ዛጊሢዳኬ ... | PASS — %1$s |
+| `search_integrity_failed` | The selected scripture package failed integrity verification. | ጫኣኒንቴ ማፃኣፔላ ፒዙሞ ዱማሲ ዛጋኣና ፒዚሞ ዱማሳ ፓታኖ ዓላፒባኣሴ። | PASS |
+| `search_result_count` | %1$d scripture results | %1$d ኮዪንቴ ቃኣላ ጴዺፆኮ ዺቡማ | PASS — %1$d |
+| `reader_quiet_space` | A quiet space for the Word | ቃኣሎ ናባኒና ፃናኣኒ ዚቲ ጌዔ ቤሲ | PASS |
+| `reader_no_sample_notice` | No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated. | ፔቴታዖ ዻዊሢም ማዖም ሃሳ ጊኢጊንቴ ማፃኣፔ ጴዺባኣሴ። ጊኢጊንቴ ማፃኣፖ ፃቃሚንታንዳጉዲ ፒቃዴ ዒጊንቴሢ ዛጋዖ ዬፓ ዓይፆና ፓዪዶና ማዻኔ። | PASS |
+| `library_incomplete_notice` | This edition is not a complete Bible release yet. | ሃና ሂቲሜቴላ ሃጋ ጊኢጊንቲሢዳ ዓኣሢሮ ቢያ ማፃኣፖ ኩሙሢ ቱዋሴ። | PASS |
+| `library_install_blocked` | Not enabled for in-app installation until editorial or rights review is complete. | ዛጋ ዓሳ ዛጊ ጋቢሳንዳ ሄላንዳና ሃይካ ጫኣናኒ ፒቃዴ ባኣሴ። | PASS |
+| `study_save_error` | Your study notes could not be saved. Please try again. | ፂናቶ ፃናዒ ማሂ ጵቂሣኒ ኔ ፃኣፒ ዓርቄሢ ጊኢጊንቴ ቤዛ ጌሢፃ ጎይፃ ዔቄኔ። ዬያሮ ላሚ ጊንሣ ሞኮሬ። | PASS |
