@@ -10,12 +10,12 @@
 
 | Order | Remediation | Required acceptance evidence | Status |
 |---|---|---|---|
-| 1 | Android CI reliability | Host contracts, APK build, regression tests and emulator instrumentation pass on APIs 26, 28, 30, 33, 35, 36 at the exact head | **VERIFIED — PR #46 merged; exact-head run 42863806851** |
+| 1 | Android CI reliability | Host contracts, APK build, regression tests and emulator instrumentation pass on APIs 26, 28, 30, 33, 35, 36 at the exact head | **PARTIAL — PR #46 provides the historical six-API baseline (run 42863806851). PR #47 exact-head run 43586458821: host contracts and APK build passed; API 26 instrumentation failed, API 28 retry remains in progress, and API 30/33/35/36 remain cancelled. A test-navigation correction is committed at the newer head; full six-API evidence for that head is still pending.** |
 | 2 | Maale-first UI and language selection | Maale default; selectable Maale/Amharic/English; complete screen resource coverage; persisted preference; explicit fallback; accessibility and rendering checks | **PARTIAL — locale selector and Maale default are implemented. All 263 keys now exist in each locale resource set. Amharic has 162 existing locale values plus 101 explicit English fallbacks; Maale has 123 existing locale values plus 140 explicit English fallbacks. Fallbacks are marked translatable=false and are not translations. Exact-head persistence, rendering and accessibility evidence remains pending; no unapproved wording will be invented.** |
 | 3 | Guest reading and authentication UI | Guest remains first-class; login accepts username or mobile + password; registration OTP-only; no mandatory account; real API contract integration and security tests | **PARTIAL — guest reading remains accessible; login/OTP registration UI is present but disabled because no live API endpoint is configured; server-side authentication must not be simulated** |
 | 4 | Verified edition installation and search-to-reader | Per-edition rights gate; secure package download; archive/hash/signature/manifest validation; atomic install; rollback; installed edition selection; search result opens exact verified passage | **PARTIAL — offline store/search primitives exist; end-to-end install and reader wiring need verification** |
 | 5 | Private notes and database migrations | Notes local/private by default; migration paths tested from every supported prior schema; corruption/recovery and persistence tests; no automatic sync | **PARTIAL — SQLite v4 private journal CRUD and v1/v3 migration coverage already exist; v2-to-v4 preservation test added; full migration/recovery matrix remains to verify** |
-| 6 | Full Android test matrix | Unit + instrumentation suites across API 26/28/30/33/35/36; font scale, locale, offline, accessibility, lifecycle and migration coverage | **PARTIAL — emulator matrix is stable; expanded product-behavior coverage pending** |
+| 6 | Full Android test matrix | Unit + instrumentation suites across API 26/28/30/33/35/36; font scale, locale, offline, accessibility, lifecycle and migration coverage | **PARTIAL — exact-head matrix is not green. API 26 ran 7 tests with 4 failures; two 60-second timeouts originated in LazyList `performScrollToNode` at `revealGenesisCard`, and later Espresso `Already interrogating!` exceptions followed the timeout. SDK, emulator image and KVM setup passed. The test now waits for the initially visible Genesis card by test tag and clicks it directly; this correction is not yet validated on the latest head.** |
 
 ## A2-02 language policy
 
@@ -29,7 +29,7 @@
 - The worksheet records 122 Owner-supplied Maale UI keys out of 262 non-app-title keys (46.6% of the complete inventory). The 67.8% figure applies only to the 180 non-app-title keys in core `strings.xml`.
 - Owner-supplied Maale wording is preserved as intake; it is not represented as formal community linguistic approval. No Maale or Amharic wording was invented in this remediation.
 - Source audit of Home, Books, Search, Reader, Bible Downloads, Audio, Smart Study, Book Learning, Atlas and Account found user-facing prose resource-backed. Remaining direct literals are icons, navigation glyphs, placeholders, metadata and formatted timestamps. Resource-backed does not mean translated: missing locale entries still fall back to English.
-- Exact-head locale persistence, first-launch default, rendering and accessibility instrumentation is being added; emulator and independent TalkBack/device evidence remain pending.
+- Exact-head locale persistence, first-launch default, rendering and accessibility instrumentation is present in the test suite. The API 26 run did not reach those assertions reliably because the navigation helper blocked first; the test helper has been corrected at the latest head, but the rerun is pending.
 
 ## Latest implementation evidence
 
@@ -57,3 +57,11 @@ The resource-key coverage gap is implemented: all 263 keys now exist in all thre
 ## Closure rule
 
 A remediation item is complete only after implementation, tests, exact-head CI evidence, and an explicit evidence-backed disposition. A passing APK build alone does not close product functionality. The six-item programme remains open until all six items pass. A2 remediation closure does not authorize production content ingestion, signing, deployment, store publication, or release.
+
+ 
+## Exact-head API 26 instrumentation diagnosis
+
+Run `43586458821` tested PR #47 head `2d892911ece26cced3a591f59cd310fc97233bea`. Host contracts and debug APK assembly passed. API 26 booted successfully, verified its SDK image, and passed KVM setup. Instrumentation started with seven tests; four failed. The first two navigation failures timed out inside Compose `performScrollToNode` at `P2V6NavigationSmokeTest.kt:42`, called by `revealGenesisCard`. The subsequent `IllegalStateException: Already interrogating!` errors came from Espresso idling after the timed-out scroll interaction; they are downstream synchronization fallout, not an independent authentication or app-data failure.
+
+The test correction at head `8a3302a4fef87c40c6ca5c4572bf6aa5c19e9898` removes the scroll-to-node interaction, waits up to ten seconds for the initially visible canonical Genesis card tag, asserts visibility, and clicks the card directly. It remains **UNVERIFIED** until exact-head Android instrumentation passes.
+
