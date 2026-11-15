@@ -257,9 +257,13 @@ private fun ChapterGuideCard(guide: BookChapterGuide) {
             Text(stringResource(R.string.learning_chapter_number, guide.chapter), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.secondary)
             Text(guide.title, style = MaterialTheme.typography.titleMedium)
             Text(guide.summary, style = MaterialTheme.typography.bodyMedium)
+            if (guide.literaryContext.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_literary_context_title), guide.literaryContext)
             LearningListCard(stringResource(R.string.learning_observation_title), guide.observation)
             LearningListCard(stringResource(R.string.learning_interpretation_title), guide.interpretation)
             LearningListCard(stringResource(R.string.learning_application_title), guide.application)
+            if (guide.crossReferences.isNotEmpty()) LearningListCard(stringResource(R.string.learning_cross_references_title), guide.crossReferences)
+            if (guide.discussionPrompts.isNotEmpty()) LearningListCard(stringResource(R.string.learning_discussion_prompts_title), guide.discussionPrompts)
+            if (guide.review.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_chapter_review_title), guide.review)
             if (guide.references.isNotEmpty()) {
                 Text(stringResource(R.string.learning_answer_references, guide.references.joinToString()), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
             }
@@ -275,6 +279,7 @@ private fun InductiveStudyCard(study: BookInductiveStudy) {
         LearningListCard(stringResource(R.string.learning_observation_title), study.observation)
         LearningListCard(stringResource(R.string.learning_interpretation_title), study.interpretation)
         LearningListCard(stringResource(R.string.learning_application_title), study.application)
+        if (study.prayerPrompt.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_prayer_prompt_title), study.prayerPrompt)
     }
 }
 
