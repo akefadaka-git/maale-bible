@@ -19,6 +19,7 @@ data class ScriptureEdition(
     val publisherOrTradition: String,
     val publicationYear: String?,
     val status: ScriptureEditionStatus,
+    /** Catalogue-level completeness candidate only; not a verified package or canon assertion. */
     val fullBible: Boolean,
     val notes: String
 )
