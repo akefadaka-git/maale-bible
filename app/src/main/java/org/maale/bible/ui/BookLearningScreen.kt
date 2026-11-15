@@ -19,6 +19,8 @@ import org.maale.bible.data.content.BookInductiveStudy
 import org.maale.bible.data.content.BookLearningContent
 import org.maale.bible.data.content.BookLearningContentRepository
 import org.maale.bible.data.content.BookQuizQuestion
+import org.maale.bible.data.content.BookQuizSessionState
+import org.maale.bible.data.content.isCorrect
 
 private enum class BookLearningTab(val label: Int) {
     OVERVIEW(R.string.learning_tab_overview),
@@ -231,27 +233,52 @@ private fun QuizContent(content: BookLearningContent?) {
     if (content == null || questions.isEmpty()) {
         LearningSectionCard(stringResource(R.string.learning_quiz_title), stringResource(R.string.learning_quiz_pending))
         Text(stringResource(R.string.learning_quiz_unavailable), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.secondary)
-    } else {
-        DraftWarning(content)
-        var answers by remember(content.bookId, content.locale) { mutableStateOf<Map<String, String>>(emptyMap()) }
-        var submitted by remember(content.bookId, content.locale) { mutableStateOf<Set<String>>(emptySet()) }
-        val correctCount = questions.count { question ->
-            val answer = answers[question.id]
-            question.id in submitted && quizAnswerIsCorrect(question, answer)
+        return
+    }
+
+    DraftWarning(content)
+    var session by remember(content.bookId, content.locale) { mutableStateOf(BookQuizSessionState()) }
+    val questionCount = questions.size
+    val complete = session.isComplete(questionCount)
+    val currentQuestion = questions.getOrNull(session.currentIndex)
+    val score = session.correctCount(questions)
+
+    if (complete) {
+        Card(
+            modifier = Modifier.fillMaxWidth().testTag("learning_quiz_results"),
+            shape = MaterialTheme.shapes.large
+        ) {
+            Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Text(stringResource(R.string.learning_quiz_complete), style = MaterialTheme.typography.headlineSmall)
+                Text(stringResource(R.string.learning_quiz_final_score, score, questionCount), style = MaterialTheme.typography.titleMedium)
+                Text(stringResource(R.string.learning_quiz_progress, questionCount, questionCount), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Button(onClick = { session = session.restart() }, modifier = Modifier.fillMaxWidth().testTag("learning_quiz_retry")) {
+                    Text(stringResource(R.string.learning_retry_quiz))
+                }
+            }
         }
-        Text(stringResource(R.string.learning_quiz_score, submitted.size, correctCount), style = MaterialTheme.typography.titleSmall)
-        questions.forEach { question ->
-            QuizQuestionCard(
-                question = question,
-                selectedAnswer = answers[question.id],
-                submitted = question.id in submitted,
-                showExplanationFallback = question.explanationLocale != content.locale,
-                onSelect = { value ->
-                    answers = answers + (question.id to value)
-                    submitted = submitted - question.id
-                },
-                onSubmit = { submitted = submitted + question.id }
-            )
+        return
+    }
+
+    val question = currentQuestion ?: return
+    val selectedAnswer = session.selectedAnswer(question.id)
+    val submitted = session.isSubmitted(question.id)
+    Text(stringResource(R.string.learning_quiz_progress, session.currentIndex + 1, questionCount), style = MaterialTheme.typography.titleSmall)
+    Text(stringResource(R.string.learning_quiz_score, session.answeredCount(), score), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    QuizQuestionCard(
+        question = question,
+        selectedAnswer = selectedAnswer,
+        submitted = submitted,
+        showExplanationFallback = question.explanationLocale != content.locale,
+        onSelect = { value -> session = session.select(question.id, value) },
+        onSubmit = { session = session.submit(question.id) }
+    )
+    if (submitted) {
+        Button(
+            onClick = { session = session.advance(question.id, questionCount) },
+            modifier = Modifier.fillMaxWidth().testTag("learning_quiz_next")
+        ) {
+            Text(stringResource(if (session.currentIndex == questionCount - 1) R.string.learning_see_results else R.string.learning_next_question))
         }
     }
 }
@@ -265,9 +292,9 @@ private fun QuizQuestionCard(
     onSelect: (String) -> Unit,
     onSubmit: () -> Unit
 ) {
-    val correct = quizAnswerIsCorrect(question, selectedAnswer)
+    val correct = question.isCorrect(selectedAnswer)
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().testTag("learning_quiz_question_${question.id}"),
         shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
@@ -279,30 +306,22 @@ private fun QuizQuestionCard(
             Text(question.prompt, style = MaterialTheme.typography.titleMedium)
             if (question.type == "true_false") {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilterChip(
-                        selected = selectedAnswer == "true",
-                        onClick = { onSelect("true") },
-                        label = { Text(stringResource(R.string.learning_true)) }
-                    )
-                    FilterChip(
-                        selected = selectedAnswer == "false",
-                        onClick = { onSelect("false") },
-                        label = { Text(stringResource(R.string.learning_false)) }
-                    )
+                    FilterChip(selected = selectedAnswer == "true", onClick = { onSelect("true") }, enabled = !submitted, modifier = Modifier.testTag("learning_quiz_option_true"), label = { Text(stringResource(R.string.learning_true)) })
+                    FilterChip(selected = selectedAnswer == "false", onClick = { onSelect("false") }, enabled = !submitted, modifier = Modifier.testTag("learning_quiz_option_false"), label = { Text(stringResource(R.string.learning_false)) })
                 }
             } else {
                 question.options.forEachIndexed { index, option ->
                     val optionId = ('A'.code + index).toChar().toString()
                     Row(
-                        Modifier.fillMaxWidth().clickable { onSelect(optionId) }.padding(vertical = 2.dp),
+                        Modifier.fillMaxWidth().clickable(enabled = !submitted) { onSelect(optionId) }.padding(vertical = 2.dp).testTag("learning_quiz_option_$optionId"),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        RadioButton(selected = selectedAnswer == optionId, onClick = { onSelect(optionId) })
+                        RadioButton(selected = selectedAnswer == optionId, onClick = { onSelect(optionId) }, enabled = !submitted)
                         Text(option, style = MaterialTheme.typography.bodyMedium)
                     }
                 }
             }
-            Button(onClick = onSubmit, enabled = selectedAnswer != null && !submitted, modifier = Modifier.fillMaxWidth()) {
+            Button(onClick = onSubmit, enabled = selectedAnswer != null && !submitted, modifier = Modifier.fillMaxWidth().testTag("learning_quiz_submit")) {
                 Text(stringResource(R.string.learning_check_answer))
             }
             if (submitted) {
@@ -316,23 +335,10 @@ private fun QuizQuestionCard(
                 }
                 Text(question.explanation, style = MaterialTheme.typography.bodyMedium)
                 if (question.references.isNotEmpty()) {
-                    Text(
-                        stringResource(R.string.learning_answer_references, question.references.joinToString()),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.secondary
-                    )
+                    Text(stringResource(R.string.learning_answer_references, question.references.joinToString()), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
                 }
             }
         }
-    }
-}
-
-private fun quizAnswerIsCorrect(question: BookQuizQuestion, answer: String?): Boolean {
-    if (answer == null) return false
-    return if (question.type == "true_false") {
-        question.correctAnswer?.toString() == answer
-    } else {
-        question.correctOptionId == answer
     }
 }
 
