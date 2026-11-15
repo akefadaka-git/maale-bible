@@ -575,7 +575,7 @@
           "difficulty": "medium",
           "prompt": "Cain answers that he is his brother's keeper.",
           "correct_answer": false,
-          "explanation": "Cain responds with the question, “Am I my brother’s keeper?” in Genesis 4:9; he does not answer that he is his keeper.",
+          "explanation": "In Genesis 4:9 Cain answers with a rhetorical question about whether he is responsible for his brother; he does not affirm that he is.",
           "references": [
             "GEN 4:9"
           ],
@@ -1703,12 +1703,13 @@
           "id": "GEN-Q107",
           "type": "short_answer",
           "difficulty": "medium",
-          "prompt": "After the ram is provided in place of Isaac, what name does Abraham give to the place?",
+          "prompt": "What Hebrew name does Abraham give the place after the ram is provided?",
           "options": [],
           "accepted_answers": [
-            "the lord will provide"
+            "yahweh yireh",
+            "jehovah jireh"
           ],
-          "explanation": "Genesis 22:14 records Abraham naming the place “The LORD will provide.” The answer identifies the name associated with God's provision in that episode.",
+          "explanation": "Genesis 22:14 names the place with a Hebrew expression traditionally transliterated as Yahweh-yireh, associated with God's provision in the narrative.",
           "references": [
             "GEN 22:13-14"
           ],
@@ -5365,7 +5366,7 @@
           "difficulty": "medium",
           "prompt": "ቃየን ወንድሙን እንደሚጠብቅ መሆኑን መለሰ።",
           "correct_answer": false,
-          "explanation": "በዘፍጥረት 4፥9 ቃየን “እኔ የወንድሜ ጠባቂ ነኝን?” ብሎ ይጠይቃል፤ ጠባቂው እንደሆነ አይመልስም።",
+          "explanation": "በዘፍጥረት 4፥9 ቃየን ስለ ወንድሙ ኃላፊነት በጥያቄ መልክ ይመልሳል፤ እርሱ ጠባቂው እንደሆነ አያረጋግጥም።",
           "references": [
             "GEN 4:9"
           ],
@@ -6577,12 +6578,13 @@
           "id": "GEN-Q107-AM",
           "type": "short_answer",
           "difficulty": "medium",
-          "prompt": "በይስሐቅ ፈንታ አውራ በግ ከተሰጠ በኋላ አብርሃም ያንን ቦታ በምን ስም ጠራው?",
+          "prompt": "አውራ በጉ ከተዘጋጀ በኋላ አብርሃም ለቦታው የሰጠው የዕብራይስጥ ስም ምንድን ነው?",
           "options": [],
           "accepted_answers": [
-            "እግዚአብሔር ያዘጋጃል"
+            "ይሖዋ ይሬህ",
+            "ያህዌ ይሬህ"
           ],
-          "explanation": "ዘፍጥረት 22፥14 አብርሃም ቦታውን “እግዚአብሔር ያዘጋጃል” ብሎ እንደጠራው ይመዘግባል።",
+          "explanation": "ዘፍጥረት 22፥14 ቦታውን በዕብራይስጥ ስም ይጠራል፤ ስሙም በተለምዶ ይሖዋ-ይሬህ ተብሎ ይጻፋል፣ በታሪኩም ከእግዚአብሔር ዝግጅት ጋር ይያያዛል。",
           "references": [
             "GEN 22:13-14"
           ],
