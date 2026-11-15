@@ -7,6 +7,7 @@ on:
       - 'tools/i18n/**'
       - 'tools/content/**'
       - 'docs/content/books/GEN.json'
+      - 'docs/content/books/**'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
