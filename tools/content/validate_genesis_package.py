@@ -87,14 +87,27 @@ def validate() -> list[str]:
                     fail(errors, f"{locale_name} quiz {item.get('id')} has out-of-book chapter reference {ref}.")
 
     en_quiz, am_quiz = en.get("quiz", []), am.get("quiz", [])
+    expected_types = {"multiple_choice": 6, "true_false": 96, "multiple_select": 4, "short_answer": 4}
+    for locale_name, rows in (("EN", en_quiz), ("AM", am_quiz)):
+        actual_types = {kind: sum(1 for row in rows if row.get("type") == kind) for kind in expected_types}
+        if actual_types != expected_types:
+            fail(errors, f"{locale_name} quiz type coverage mismatch: {actual_types}.")
+        generic_explanations = {
+            "the statement is supported by the cited passage.",
+            "the statement is not supported by the cited passage; the reference gives the accurate narrative context."
+        }
+        for row in rows:
+            if str(row.get("explanation", "")).strip().lower() in generic_explanations:
+                fail(errors, f"{locale_name} quiz {row.get('id')} still has a generic explanation.")
     if len(en_quiz) == len(am_quiz):
         for source, translated in zip(en_quiz, am_quiz):
             if translated.get("id") != source.get("id") + "-AM":
                 fail(errors, f"Amharic quiz ID mismatch for {source.get('id')}.")
-            source_answer = source.get("correct_answer", source.get("correct_option_ids", source.get("accepted_answers", source.get("correct_option_id"))))
-            translated_answer = translated.get("correct_answer", translated.get("correct_option_ids", translated.get("accepted_answers", translated.get("correct_option_id"))))
-            if source_answer != translated_answer:
-                fail(errors, f"Quiz answer mismatch for {source.get('id')}.")
+            if source.get("type") != "short_answer":
+                source_answer = source.get("correct_answer", source.get("correct_option_ids", source.get("correct_option_id")))
+                translated_answer = translated.get("correct_answer", translated.get("correct_option_ids", translated.get("correct_option_id")))
+                if source_answer != translated_answer:
+                    fail(errors, f"Quiz answer mismatch for {source.get('id')}.")
             if translated.get("explanation_locale") != "am":
                 fail(errors, f"Amharic explanation locale missing for {translated.get('id')}.")
 
