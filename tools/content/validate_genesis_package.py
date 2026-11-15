@@ -94,6 +94,15 @@ def validate() -> list[str]:
         if len(en.get(key, [])) != expected or len(am.get(key, [])) != expected:
             fail(errors, f"Supporting module {key} must have EN/AM coverage of {expected}.")
 
+    en_commentary = en.get("commentary", {}).get("units", [])
+    am_commentary = am.get("commentary", {}).get("units", [])
+    if len(en_commentary) != 6 or len(am_commentary) != 6:
+        fail(errors, "Genesis commentary must contain six EN and six AM draft units.")
+    elif [unit.get("range") for unit in en_commentary] != [unit.get("range") for unit in am_commentary]:
+        fail(errors, "Amharic commentary ranges do not match English source units.")
+    if not doc.get("language_coverage", {}).get("mdy", {}).get("status", "").startswith("not_translated"):
+        fail(errors, "Maale language coverage must remain explicitly untranslated until qualified review.")
+
     status = am.get("content_status", {})
     for key in ("chapter_guides", "quiz", "inductive_studies", "key_verses", "memory_verses", "concordance", "dictionary", "timeline"):
         if not status.get(key):
