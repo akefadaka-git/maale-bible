@@ -241,7 +241,9 @@
           "explanation": "Genesis 1 presents God as Creator who brings the world into ordered existence and calls it good.",
           "references": [
             "GEN 1:1-31"
-          ]
+          ],
+          "learning_objective": "Identify the opening claim of Genesis and the scope of the creation account.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q02",
@@ -258,7 +260,9 @@
           "explanation": "Genesis 2–3 locates the first human couple in the garden of Eden.",
           "references": [
             "GEN 2:8-15"
-          ]
+          ],
+          "learning_objective": "Recognize the garden setting and its role in the human vocation narrative.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q03",
@@ -269,7 +273,9 @@
           "explanation": "The call of Abram begins the ancestral narratives and introduces promises that shape the rest of Genesis.",
           "references": [
             "GEN 12:1-3"
-          ]
+          ],
+          "learning_objective": "Identify the call of Abram and its promise of blessing.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q04",
@@ -286,7 +292,9 @@
           "explanation": "Noah is instructed to build the ark and preserve his household and representatives of living creatures.",
           "references": [
             "GEN 6:13-22"
-          ]
+          ],
+          "learning_objective": "Recall the ark instructions and Noah's role in the flood narrative.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q05",
@@ -303,7 +311,9 @@
           "explanation": "The rainbow is given as the sign of the covenant with Noah and the earth.",
           "references": [
             "GEN 9:8-17"
-          ]
+          ],
+          "learning_objective": "Explain the covenant sign given after the flood.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q06",
@@ -321,7 +331,9 @@
           "references": [
             "GEN 17:15-21",
             "GEN 21:1-7"
-          ]
+          ],
+          "learning_objective": "Trace the promise of Isaac and its fulfilment.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q07",
@@ -338,7 +350,9 @@
           "explanation": "Joseph's brothers sell him, and he is taken to Egypt, where his story continues.",
           "references": [
             "GEN 37:3-28"
-          ]
+          ],
+          "learning_objective": "Follow the conflict between Joseph and his brothers.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q08",
@@ -349,7 +363,9 @@
           "explanation": "Joseph's words in Genesis 50:20 summarize the theme of providence amid human wrongdoing.",
           "references": [
             "GEN 50:15-21"
-          ]
+          ],
+          "learning_objective": "Interpret Joseph's final reflection on wrongdoing and providence.",
+          "explanation_locale": "en"
         },
         {
           "id": "GEN-Q09",
@@ -2787,7 +2803,8 @@
           "true_false"
         ],
         "coverage": "Genesis 1–50: creation, early humanity, flood, Babel, patriarchal narratives, Joseph and whole-book structure.",
-        "note": "Original learning questions; all references require validation against the exact authorized MDYTWF source and editorial/theological review before release."
+        "note": "Original learning questions; all references require validation against the exact authorized MDYTWF source and editorial/theological review before release.",
+        "quality_note": "The 94 added questions are true/false recall checks with concise rationales. Before release, enrich a balanced subset with multiple-choice, matching and passage-analysis items; independently verify each reference and explanation against MDYTWF and editorial review."
       },
       "key_verses": [
         {
