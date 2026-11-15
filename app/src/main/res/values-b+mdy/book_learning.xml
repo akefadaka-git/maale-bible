@@ -57,4 +57,8 @@
     <string name="learning_chapter_guides_title">Chapter-by-chapter study guides</string>
     <string name="learning_chapter_guides_pending">English fallback: chapter guides are being prepared one book at a time; Maale translation and source review are required.</string>
     <string name="learning_chapter_number">Chapter %1$d</string>
+    <string name="learning_date_composition_title" translatable="false">Date and composition</string>
+    <string name="learning_genre_title" translatable="false">Literary genres</string>
+    <string name="learning_theological_contribution_title" translatable="false">Theological contribution</string>
+    <string name="learning_canonical_connections_title" translatable="false">Canonical connections</string>
 </resources>
