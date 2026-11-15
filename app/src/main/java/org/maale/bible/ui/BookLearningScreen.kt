@@ -343,7 +343,7 @@ private fun QuizContent(content: BookLearningContent?) {
 }
 
 @Composable
-private fun QuizQuestionCard(
+internal fun QuizQuestionCard(
     question: BookQuizQuestion,
     selectedAnswer: String?,
     submitted: Boolean,
