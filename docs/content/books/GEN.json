@@ -31,16 +31,16 @@
     "source_images_imported": false
   },
   "review_gates": {
-    "source_verification": "source_identity_and_structure_verified; passage_reference_validation_pending",
-    "rights_review": "Owner permission and CC BY-SA 4.0 terms recorded; attribution, modification, no-endorsement and ShareAlike controls added; final asset audit pending",
-    "english_editorial_review": "pending",
-    "amharic_language_review": "required; all Genesis introductions, chapter guides, inductive studies, quiz items and supporting reference modules have draft Amharic text; independent language review pending",
-    "theological_review": "pending",
-    "scripture_reference_validation": "automated exact-source validation added; CI evidence pending",
-    "qa": "pending",
-    "chapter_guide_editorial_review": "pending",
-    "maale_language_review": "required",
-    "quiz_review": "110 EN and 110 AM draft items; four multiple-select and four short-answer items added; source and independent editorial review pending"
+    "source_verification": "2008 MDYTWF archive SHA-256 pinned and CI download verified; Genesis USFM SHA-256 corrected from exact archive; full reference audit CI pending",
+    "rights_review": "Owner permission and CC BY-SA 4.0 terms recorded; attribution, modification, no-endorsement and ShareAlike controls implemented in app and package; final audit pending",
+    "english_editorial_review": "pending; qualified independent editor referral requested; no sign-off recorded",
+    "amharic_language_review": "pending; candidate identified and outreach draft prepared; no sign-off recorded",
+    "theological_review": "pending; independent Old Testament reviewer candidate identified and outreach draft prepared; no sign-off recorded",
+    "scripture_reference_validation": "exact-source validator integrated and pinned source download verified; final CI reference audit pending",
+    "qa": "exact-head Android unit, build and instrumentation verification pending",
+    "chapter_guide_editorial_review": "pending independent review",
+    "maale_language_review": "not translated; qualified Maale translator candidate identified and outreach draft prepared; community review and sign-off pending",
+    "quiz_review": "110 EN and 110 AM draft items: 6 multiple choice, 96 true/false, 4 multiple-select and 4 short-answer; repetitive true/false rationales replaced with passage-specific draft explanations; source and independent review pending"
   },
   "sources": [
     {
