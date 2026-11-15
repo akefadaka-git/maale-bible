@@ -3,6 +3,7 @@ package org.maale.bible
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -35,11 +36,11 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Genesis is below the catalogue header inside the LazyColumn. Scroll
-        // the tagged card into view explicitly; waiting for its semantics node
-        // without scrolling deadlocks when the lazy item has not been composed.
+        // LazyColumn only exposes composed children. Scroll the parent list to
+        // the target tag instead of calling performScrollTo on an absent child.
+        composeRule.onNodeWithTag("books_list")
+            .performScrollToNode(hasTestTag("book_card_GEN"))
         composeRule.onNodeWithTag("book_card_GEN")
-            .performScrollTo()
             .assertIsDisplayed()
             .performClick()
     }
@@ -48,6 +49,7 @@ class P2V6NavigationSmokeTest {
         awaitText("Explore the Bible")
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("EXPLORE BY CATEGORY")
+        composeRule.onNodeWithTag("books_search").performTextInput("GEN")
         revealGenesisCard()
         awaitText("Bible book learning centre")
     }
