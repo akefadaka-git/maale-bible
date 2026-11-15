@@ -23,10 +23,10 @@
 - Amharic (`am`) and English (`en`) are selectable.
 - The selected language is stored locally in application preferences.
 - Android resource locale configuration is applied within the Compose application.
-- Core `strings.xml` inventory: base English 181 keys. Amharic and Maale each now contain all 181 keys. Amharic has 113 existing locale values plus 68 explicit English fallbacks; Maale has 113 existing locale values plus 68 explicit English fallbacks. The Maale resource contains the app title plus 122 Owner-supplied UI entries.
+- Core `strings.xml` inventory: base English 181 keys. Amharic and Maale each now contain all 181 keys. Amharic has 113 existing locale values plus 68 explicit English fallbacks; Maale has 123 existing locale values plus 58 explicit English fallbacks. The Maale resource contains the app title plus 122 Owner-supplied UI entries.
 - Additional resource inventory: all three files now have Amharic and Maale locale resources. `book_explorer.xml` has 33 explicit English fallbacks in both locales; `book_explorer_testaments.xml` retains 4 Amharic values and adds 4 Maale English fallbacks; `book_learning.xml` retains 45 Amharic values and adds 45 Maale English fallbacks.
 - Aggregate inventory: 263 keys exist in each locale resource set. Amharic has 162 existing locale values and 101 explicit English fallbacks; Maale has 113 existing locale values and 150 explicit English fallbacks. Fallback entries are marked `translatable=false`; they are not completed translations.
-- The worksheet records 112 Owner-supplied Maale UI keys out of 262 non-app-title keys (42.7% of the complete inventory). The 62.2% figure applies only to the 180 non-app-title keys in core `strings.xml`.
+- The worksheet records 122 Owner-supplied Maale UI keys out of 262 non-app-title keys (46.6% of the complete inventory). The 67.8% figure applies only to the 180 non-app-title keys in core `strings.xml`.
 - Owner-supplied Maale wording is preserved as intake; it is not represented as formal community linguistic approval. No Maale or Amharic wording was invented in this remediation.
 - Source audit of Home, Books, Search, Reader, Bible Downloads, Audio, Smart Study, Book Learning, Atlas and Account found user-facing prose resource-backed. Remaining direct literals are icons, navigation glyphs, placeholders, metadata and formatted timestamps. Resource-backed does not mean translated: missing locale entries still fall back to English.
 - Exact-head locale persistence, first-launch default, rendering and accessibility instrumentation is being added; emulator and independent TalkBack/device evidence remain pending.
@@ -52,7 +52,7 @@ Initial implementation files:
 
 ## A2-02 exact-head acceptance boundary
 
-The resource-key coverage gap is implemented: all 263 keys now exist in all three locale resource sets, with explicit English fallbacks for untranslated entries. This is not complete language acceptance. A2-02 remains **PARTIAL** until the 150 Maale fallback entries receive Owner-approved wording (and the 101 Amharic fallback entries receive reviewed Amharic wording where completeness is required), all three locale screens are rendered on the exact tested head, the preference survives recreation, accessibility semantics pass, and device/TalkBack evidence is recorded. The new instrumentation test is not evidence of a successful run until its exact-head Actions job passes.
+The resource-key coverage gap is implemented: all 263 keys now exist in all three locale resource sets, with explicit English fallbacks for untranslated entries. This is not complete language acceptance. A2-02 remains **PARTIAL** until the 140 Maale fallback entries receive Owner-approved wording (and the 101 Amharic fallback entries receive reviewed Amharic wording where completeness is required), all three locale screens are rendered on the exact tested head, the preference survives recreation, accessibility semantics pass, and device/TalkBack evidence is recorded. The new instrumentation test is not evidence of a successful run until its exact-head Actions job passes.
 
 ## Closure rule
 
