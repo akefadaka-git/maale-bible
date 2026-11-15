@@ -49,12 +49,14 @@ def parse_usfm(data: bytes, book_id: str) -> dict[int, set[int]]:
     return chapters
 
 def collect_references(node, output: set[str]) -> None:
+    reference_keys = {"references", "cross_references", "key_passages", "reference", "passage", "range"}
     if isinstance(node, dict):
         for key, value in node.items():
-            if key in {"references", "cross_references"} and isinstance(value, list):
-                output.update(str(item).strip() for item in value if str(item).strip())
-            if key == "range" and isinstance(value, str):
-                output.add(value.strip())
+            if key in reference_keys:
+                if isinstance(value, str) and value.strip():
+                    output.add(value.strip())
+                elif isinstance(value, list):
+                    output.update(str(item).strip() for item in value if isinstance(item, str) and item.strip())
             collect_references(value, output)
     elif isinstance(node, list):
         for value in node:
@@ -91,8 +93,8 @@ def validate_one(reference: str, books: dict[str, dict[int, set[int]]]) -> list[
             start_verse = number(verse_start_label)
             end_chapter = int(verse_end_chapter_label) if verse_end_chapter_label else chapter_start
             end_verse = number(verse_end_label) if verse_end_label else start_verse
-            if end_chapter < chapter_start or end_chapter not in books[book_id]:
-                issues.append(f"invalid cross-chapter range in {part!r}")
+            if end_chapter < chapter_start or end_chapter not in books[book_id] or (end_chapter == chapter_start and end_verse < start_verse):
+                issues.append(f"invalid cross-chapter or reversed verse range in {part!r}")
                 continue
             if end_chapter == chapter_start:
                 missing = [v for v in range(start_verse, end_verse + 1) if v not in books[book_id][chapter_start]]
