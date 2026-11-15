@@ -42,7 +42,10 @@ object ScripturePackageRepository {
         if (!bookId.matches(Regex("[A-Z0-9]{3}")) || chapterNumber < 1 || ScriptureEditionCatalog.find(editionId) == null) {
             return ScriptureChapterResult.InvalidPackage
         }
-        // Only the approved Maale package is currently supported by the installed-package reader.\n        // Other catalogue entries remain selectable but fail closed until their own verified package is imported.\n        if (editionId != EXPECTED_EDITION) return ScriptureChapterResult.PackageNotInstalled\n        val packageFile = File(File(context.filesDir, "scripture"), PACKAGE_FILE)
+        // Only the approved Maale package is currently supported by the installed-package reader.
+        // Other catalogue entries remain selectable but fail closed until their own verified package is imported.
+        if (editionId != EXPECTED_EDITION) return ScriptureChapterResult.PackageNotInstalled
+        val packageFile = File(File(context.filesDir, "scripture"), PACKAGE_FILE)
         if (!packageFile.isFile || packageFile.length() <= 0L) return ScriptureChapterResult.PackageNotInstalled
 
         val allowDebugPreview = (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0
