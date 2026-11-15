@@ -23,6 +23,8 @@ import org.junit.runner.RunWith
 import org.maale.bible.MainActivity
 import org.maale.bible.ui.AppLanguage
 import org.maale.bible.data.repository.StudyDatabase
+import org.maale.bible.data.scripture.ScriptureEditionCatalog
+import org.maale.bible.data.scripture.ScriptureEditionSelectionStore
 
 @RunWith(AndroidJUnit4::class)
 class CoreStudyNavigationInstrumentedTest {
@@ -164,6 +166,36 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithTag("catalogue_result_GEN").assertExists()
     }
 
+
+
+    @Test fun editionSelectionPersistsAcrossActivityRecreationWithoutMaaleFallback() {
+        try {
+            compose.onNodeWithTag("navigation_books").performClick()
+            waitForTag("books_screen")
+            compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
+            compose.onNodeWithTag("book_item_GEN").performClick()
+            waitForTag("book_learning_screen")
+            compose.onNodeWithTag("book_learning_screen")
+                .performScrollToNode(hasTestTag("learning_open_reader_button"))
+            compose.onNodeWithTag("learning_open_reader_button").performClick()
+            waitForTag("reader_screen")
+
+            compose.onNodeWithTag("reader_edition_selector").performClick()
+            compose.onNodeWithTag("reader_edition_ENG-NIV").performClick()
+            compose.onNodeWithText("English: New International Version").assertExists()
+            compose.waitForIdle()
+
+            compose.activityRule.scenario.recreate()
+            compose.waitForIdle()
+            compose.onNodeWithText("English: New International Version").assertExists()
+            compose.onNodeWithTag("scripture_package_status").assertIsDisplayed()
+        } finally {
+            ScriptureEditionSelectionStore.save(
+                compose.activity.applicationContext,
+                ScriptureEditionCatalog.PRIMARY_MAALE_ID
+            )
+        }
+    }
 
     @Test fun notificationMenuHasAccessibleActionAndHonestEmptyState() {
         compose.onNodeWithTag("notifications_button").assertHasClickAction().performClick()
