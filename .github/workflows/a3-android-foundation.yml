@@ -25,7 +25,6 @@ on:
       - 'tools/content/**'
       - 'tools/i18n/**'
       - 'docs/content/books/**'
-      - 'docs/content/books/GEN.json'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
