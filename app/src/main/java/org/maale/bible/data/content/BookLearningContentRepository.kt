@@ -20,6 +20,16 @@ data class BookInductiveStudy(
     val application: List<String>
 )
 
+data class BookChapterGuide(
+    val chapter: Int,
+    val title: String,
+    val summary: String,
+    val observation: List<String>,
+    val interpretation: List<String>,
+    val application: List<String>,
+    val references: List<String>
+)
+
 data class BookQuizQuestion(
     val id: String,
     val type: String,
@@ -53,6 +63,7 @@ data class BookLearningContent(
     val publicationState: String,
     val introduction: BookLearningIntroduction,
     val inductiveStudies: List<BookInductiveStudy>,
+    val chapterGuides: List<BookChapterGuide>,
     val quizQuestions: List<BookQuizQuestion>,
     val sourceCount: Int
 ) {
@@ -108,6 +119,17 @@ object BookLearningContentRepository {
                 application = item.optJSONArray("application").toStringList()
             )
         }
+        val chapterGuides = localeContent.optJSONArray("chapter_guides").toObjectList { item ->
+            BookChapterGuide(
+                chapter = item.optInt("chapter"),
+                title = item.optString("title"),
+                summary = item.optString("summary"),
+                observation = item.optJSONArray("observation").toStringList(),
+                interpretation = item.optJSONArray("interpretation").toStringList(),
+                application = item.optJSONArray("application").toStringList(),
+                references = item.optJSONArray("references").toStringList()
+            )
+        }
         val questions = localeContent.optJSONArray("quiz").toObjectList { item ->
             val correctAnswer = if (item.has("correct_answer") && !item.isNull("correct_answer")) {
                 item.optBoolean("correct_answer")
@@ -144,6 +166,7 @@ object BookLearningContentRepository {
             publicationState = publicationState,
             introduction = intro,
             inductiveStudies = studies,
+            chapterGuides = chapterGuides,
             quizQuestions = questions,
             sourceCount = root.optJSONArray("sources")?.length() ?: 0
         )
