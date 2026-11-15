@@ -20,11 +20,12 @@ object ScriptureEditionSelectionStore {
 
     fun save(context: Context, editionId: String): Boolean {
         if (ScriptureEditionCatalog.find(editionId) == null) return false
-        context.applicationContext
+        // commit() updates the in-process preference value and confirms durable storage
+        // before callers publish the new edition selection across reader/search/study surfaces.
+        return context.applicationContext
             .getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit()
             .putString(KEY_SELECTED_EDITION, editionId)
-            .apply()
-        return true
+            .commit()
     }
 }
