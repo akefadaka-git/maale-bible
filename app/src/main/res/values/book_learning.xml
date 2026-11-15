@@ -29,7 +29,7 @@
     <string name="learning_study_guide_pending_title">Book-specific inductive study guide</string>
     <string name="learning_study_guide_pending">Chapter guides, discussion questions, reflection exercises and group-study material will be added after the book content and references are verified.</string>
     <string name="learning_quiz_title">Book knowledge assessment</string>
-    <string name="learning_quiz_pending">English and Amharic quizzes will include multiple choice, true or false, completion, matching, chapter comprehension and book-wide review. Each answer will include an explanation and a verified scripture reference.</string>
+ 
     <string name="learning_quiz_unavailable">Quiz not yet available</string>
     <string name="learning_provenance_notice">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
 
