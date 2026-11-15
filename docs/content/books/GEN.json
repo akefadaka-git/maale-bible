@@ -26,13 +26,13 @@
     "source_verification": "source_identity_and_structure_verified; passage_reference_validation_pending",
     "rights_review": "documented_permission_and_CC_BY_SA_4_0_terms_recorded; repository_asset_review_pending",
     "english_editorial_review": "pending",
-    "amharic_language_review": "required; draft chapter guide coverage expanded; independent language review pending",
+    "amharic_language_review": "required; 50 chapter guides and 102 quiz items drafted; independent language review pending",
     "theological_review": "pending",
     "scripture_reference_validation": "pending_against_exact_2008_MDYTWF_text",
     "qa": "pending",
     "chapter_guide_editorial_review": "pending",
     "maale_language_review": "required",
-    "quiz_review": "draft_100_plus_items_pending_reference_validation"
+    "quiz_review": "102 EN and 102 AM draft items; reference and rationale verification pending"
   },
   "sources": [
     {
@@ -4299,7 +4299,10 @@
           "explanation": "ዘፍጥረት 1 እግዚአብሔርን ፈጣሪ እንደሆነ ያቀርባል፤ ዓለምን በሥርዓት ፈጥሮ መልካም ብሎ ይገልጻል።",
           "references": [
             "GEN 1:1-31"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q02-AM",
@@ -4316,7 +4319,10 @@
           "explanation": "ዘፍጥረት 2–3 የመጀመሪያዎቹ ሰዎች በኤደን ገነት እንደነበሩ ይናገራል።",
           "references": [
             "GEN 2:8-15"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q03-AM",
@@ -4327,7 +4333,10 @@
           "explanation": "የአብራም ጥሪ የአባቶችን ታሪክ ይጀምራል፤ እነዚህም ተስፋዎች የዘፍጥረትን ቀጣይ ታሪክ ይቀርጻሉ።",
           "references": [
             "GEN 12:1-3"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q04-AM",
@@ -4344,7 +4353,10 @@
           "explanation": "ኖኅ መርከቡን እንዲሠራና ቤተሰቡንና የሕያዋን ፍጥረታትን እንዲጠብቅ ታዘዘ።",
           "references": [
             "GEN 6:13-22"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q05-AM",
@@ -4361,7 +4373,10 @@
           "explanation": "ቀስተ ደመናው ከኖኅና ከምድር ጋር የተደረገው ቃል ኪዳን ምልክት ነው።",
           "references": [
             "GEN 9:8-17"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q06-AM",
@@ -4379,7 +4394,10 @@
           "references": [
             "GEN 17:15-21",
             "GEN 21:1-7"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q07-AM",
@@ -4396,7 +4414,10 @@
           "explanation": "የዮሴፍ ወንድሞች ሸጡት፤ እርሱም ወደ ግብፅ ተወሰደ፣ ታሪኩም በዚያ ቀጠለ።",
           "references": [
             "GEN 37:3-28"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
         },
         {
           "id": "GEN-Q08-AM",
@@ -4407,7 +4428,1326 @@
           "explanation": "የዮሴፍ ቃል በዘፍጥረት 50:20 በሰው ክፋት መካከል የእግዚአብሔርን ሥራ ያጠቃልላል።",
           "references": [
             "GEN 50:15-21"
-          ]
+          ],
+          "explanation_locale": "am",
+          "learning_objective": "የተጠቀሰውን የመጽሐፍ ቅዱስ ክፍል መረዳትና የትረካውን ዋና እውነታ መለየት።",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q09-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት የሚጀምረው እግዚአብሔር ሰማይንና ምድርን በመፍጠሩ ነው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 1:1"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q10-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የመጀመሪያው የፍጥረት ታሪክ በሰባተኛው ቀን መባረኩና መቀደሱ ይደመደማል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 2:1-3"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q11-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ፀሐይ፣ ጨረቃና ከዋክብት በመጀመሪያው ቀን እንደተፈጠሩ ተገልጸዋል።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 1:14-19"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q12-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ሰው ልጅ በእግዚአብሔር መልክ እንደተፈጠረ ተገልጿል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 1:26-27"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q13-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የመጀመሪያው ሰው ከምድር አፈር እንደተፈጠረ ተነግሯል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 2:7"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q14-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የኤደን ገነት በእግዚአብሔር ተተክላለች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 2:8"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q15-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ሰውየው ከመልካምና ከክፉ ዕውቀት ዛፍ እንዳይበላ ታዞ ነበር።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 2:16-17"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q16-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ሴቲቱ ከሰውየው ጎን እንደተፈጠረች ተገልጿል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 2:21-23"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q17-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "እባቡ እግዚአብሔር የሰጠውን ትእዛዝ ይጠይቃል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 3:1-5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q18-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ፍሬውን ከበሉ በኋላ ሰውየውና ሴቲቱ ከእግዚአብሔር ተሸሸጉ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 3:7-10"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q19-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ሰውየው ሌላን ሳይወቅስ ኃላፊነቱን ተቀበለ።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 3:12"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q20-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ሰዎቹ ከአለመታዘዛቸው በኋላ ከገነት ተወጡ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 3:22-24"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q21-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ቃየን ገበሬ ነበር፤ አቤል ደግሞ የመንጋ ጠባቂ ነበር።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 4:2"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q22-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ቃየን አቤልን ገደለው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 4:8"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q23-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ቃየን ወንድሙን እንደሚጠብቅ መሆኑን መለሰ።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 4:9"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q24-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የአቤል ሞት ከተነገረ በኋላ ሴት ተወለደ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 4:25"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q25-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ሄኖክ ከእግዚአብሔር ጋር ተመላለሰ፤ እግዚአብሔርም ወሰደው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 5:21-24"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q26-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ኖኅ በእግዚአብሔር ፊት ሞገስ አገኘ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 6:8"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q27-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ኖኅ መርከብ እንዲሠራ ታዘዘ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 6:13-22"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q28-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የጥፋት ውኃ ታሪክ ምድር በዓመፅ እንደተሞላች ይናገራል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 6:11-13"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q29-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ኖኅ ቁራን ከላከ በኋላ ርግብን ላከ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 8:6-12"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q30-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ቀስተ ደመናው የቃል ኪዳን ምልክት ሆኖ ተሰጠ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 9:12-17"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q31-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የኖኅ ልጆች ሴም፣ ካምና ያፌት ናቸው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 9:18"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q32-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የባቤል ታሪክ ሰዎቹ ከመበታተናቸው በፊት አንድ ቋንቋ እንደነበራቸው ይናገራል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 11:1-9"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q33-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የአብራም መጀመሪያ መኖሪያ ከከለዳውያን ዑር ጋር ይያያዛል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 11:27-31"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q34-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "አብራም አገሩን ትቶ እግዚአብሔር ወደሚያሳየው ምድር እንዲሄድ ተጠራ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 12:1"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q35-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ለአብራም የተሰጠው ተስፋ ለምድር ቤተሰቦች ሁሉ በረከትን ያካትታል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 12:2-3"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q36-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "አብራም በረሃብ ምክንያት ወደ ግብፅ ተጓዘ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 12:10"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q37-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ንብረታቸውና መንጋቸው ስለበዛ ሎጥና አብራም ተለያዩ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 13:5-12"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q38-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "አብራም በአካባቢው ነገሥታት ጦርነት ከተካሄደ በኋላ ሎጥን አዳነ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 14:1-16"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q39-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "መልከጼዴቅ የሳሌም ንጉሥና የልዑል እግዚአብሔር ካህን ነበር።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 14:18"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q40-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "አብራም ከዋክብት እንደሚቆጠሩ የማይቻል ዘር ተስፋ ተቀበለ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 15:5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q41-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የአብራም እምነት ለጽድቅ ተቆጠረለት።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 15:6"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q42-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "አጋር የሣራ ግብፃዊት አገልጋይ ነበረች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 16:1"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q43-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "እስማኤል የአብራምና የአጋር ልጅ ነው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 16:15"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q44-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የአብራም ስም ወደ አብርሃም ተቀየረ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 17:5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q45-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የሣራይ ስም ወደ ሣራ ተቀየረ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 17:15"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q46-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ግርዛት የቃል ኪዳኑ ምልክት ሆኖ ተቋቋመ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 17:9-14"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q47-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ሣራ ልጅ እንደምትወልድ ተስፋ ስትሰማ ሳቀች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 18:9-15"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q48-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "አብርሃም ስለ ሰዶም ዕጣ ፈንታ ምልጃ አቀረበ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 18:22-33"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q49-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የሎጥ ሚስት ከሰዶም ስትሸሽ ወደ ኋላ ተመለከተች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 19:26"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q50-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ይስሐቅ ሲወለድ አብርሃም መቶ ዓመት ነበር።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 21:1-5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q51-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "አጋርና እስማኤል ይስሐቅ ከመወለዱ በፊት ተሰደዱ።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 21:8-14"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q52-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "አብርሃም ስለ ይስሐቅ ተፈተነ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 22:1-2"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q53-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "በይስሐቅ ፋንታ አውራ በግ ቀረበ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 22:13"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q54-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ሣራ በመክፌላ ዋሻ ተቀበረች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 23:1-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q55-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ርብቃ የይስሐቅ ሚስት ሆነች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 24:57-67"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q56-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ኤሳው ከያዕቆብ በፊት ተወለደ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 25:24-26"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q57-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ኤሳው የበኩርነት መብቱን ለምግብ ሸጠ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 25:29-34"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q58-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "በረሃብ ወቅት ይስሐቅ በምድሩ እንዲቆይ እግዚአብሔር ነገረው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 26:1-6"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q59-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ያዕቆብ እንደ ኤሳው ተመስሎ የይስሐቅን በረከት ተቀበለ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 27:1-29"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q60-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ከበረከቱ በኋላ ኤሳው ያዕቆብን ለመግደል አሰበ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 27:41"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q61-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ያዕቆብ በቤቴል ወደ ሰማይ የሚደርስ መሰላል በሕልም አየ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 28:10-17"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q62-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ላባ ራሔልን ከልያ በፊት ለያዕቆብ ሰጠው።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 29:21-30"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q63-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ራሔል ዮሴፍን ከመውለዷ በፊት ልያ ወንዶች ልጆችን ወለደች።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 29:31-35; 30:22-24"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q64-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ያዕቆብ በጴኑኤል ሌሊቱን ሙሉ ታገለ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 32:22-32"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q65-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ያዕቆብ እስራኤል የሚል ስም ተቀበለ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 32:28"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q66-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ኤሳው እንደገና ሲገናኙ ያዕቆብን አቀፈው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 33:1-11"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q67-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዲና የያዕቆብና የልያ ልጅ ናት።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 30:21; 34:1"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q68-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ብንያም ከዮሴፍ ያነሰ ዕድሜ አለው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 35:16-18"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q69-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዮሴፍ ከያዕቆብ ልዩ ልብስ ተቀበለ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 37:3"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q70-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የዮሴፍ ሕልሞች የወንድሞቹን ጥላቻ አባባሱ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 37:5-11"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q71-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ ተሽጦ ወደ ግብፅ ተወሰደ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 37:25-28"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q72-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የጲጥፋር ሚስት ዮሴፍን በሐሰት ከሰሰችው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 39:7-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q73-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዮሴፍ በእስር ቤት የፈርዖንን ባለሥልጣናት ሕልሞች ተረጎመ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 40:1-23"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q74-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ፈርዖን ስለ ሰባት ወፍራም ላሞችና ሰባት ቀጭን ላሞች ሕልም አየ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 41:1-7"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q75-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ የፈርዖንን ሕልሞች ሰባት ዓመት ብዛትና ከዚያ በኋላ ሰባት ዓመት ረሃብ እንደሚመጣ ተረጎመ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 41:25-32"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q76-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ፈርዖን ዮሴፍን በግብፅ ላይ ሥልጣን ሰጠው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 41:39-44"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q77-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የዮሴፍ ወንድሞች እህል ለመግዛት ወደ ግብፅ ተጓዙ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 42:1-5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q78-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ ወንድሞቹ በመጀመሪያ በመጡበት ጊዜ ማንነቱን ገለጠ።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 42:7-24; 45:1-3"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q79-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ ወንድሞቹ ብንያምን ወደ ግብፅ እንዲያመጡ ጠየቀ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 42:15-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q80-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ይሁዳ በብንያም ፋንታ ራሱን ለመስጠት አቀረበ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 44:18-34"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q81-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዮሴፍ በዘፍጥረት 45 ላይ ማንነቱን ለወንድሞቹ ገለጠ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 45:1-4"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q82-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ ሕይወትን ለማዳን እግዚአብሔር ከእነርሱ በፊት እንደላከው ተናገረ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 45:5-8"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q83-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የያዕቆብ ቤተሰብ በጎሶም ተቀመጠ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 46:28-34; 47:1-6"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q84-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ያዕቆብ ኤፍሬምንና ምናሴን ባረከ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 48:1-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q85-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ያዕቆብ ታላቁ ልጅ ምናሴ ላይ ቀኝ እጁን አኖረ።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 48:13-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q86-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዘፍጥረት 49 የያዕቆብን የመጨረሻ ቃላት ስለ ልጆቹ ይመዘግባል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 49:1-28"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q87-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ያዕቆብ በመክፌላ የቤተሰቡ መቃብር እንዲቀበር ጠየቀ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 49:29-32"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q88-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ዮሴፍ በ110 ዓመቱ በግብፅ ሞተ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 50:22-26"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q89-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት በግብፅ ውስጥ ባለው የዮሴፍ ሬሳ ሳጥን ይደመደማል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 50:26"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q90-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ ወንድሞቹ ክፉ ነገር አስበው እንደነበር ቢሆንም እግዚአብሔር ለበጎ እንዳደረገው ተናገረ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 50:20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q91-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዘፍጥረት በሲና ተራራ ላይ አሥርቱን ትእዛዛት መሰጠት ይዟል።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "EXO 20:1-17"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q92-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "ዘፍጥረት 1–11 ብዙውን ጊዜ የመጀመሪያ ዘመን ታሪክ ተብሎ ይጠራል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 1-11"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q93-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት 12–50 በዋነኝነት የአባቶችን ቤተሰብ ታሪኮች ይከተላል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 12-50"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q94-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የዘር፣ የምድርና የበረከት ተስፋዎች በአባቶች ታሪኮች ውስጥ በተደጋጋሚ ይታያሉ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q95-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት ውስጥ ያሉ ቤተሰቦች ሁሉ ከቅናትና ከግጭት ነፃ እንደሆኑ ተገልጸዋል።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 4; 27; 29-37; 42-50"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q96-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የጥፋት ውኃ ታሪክ ከምድርና ከሕያዋን ጋር በተደረገ ቃል ኪዳን ይደመደማል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 9:8-17"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q97-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የዮሴፍ ታሪክ የሰው ክፋትንና የብዙ ሰዎችን ሕይወት መጠበቅ አንድ ላይ ያሳያል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 45:5-8; 50:20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q98-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የአብርሃም ቃል ኪዳን ተስፋዎች ለይስሐቅም ተደገሙ።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 26:2-5"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q99-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "እግዚአብሔር በቤቴል ለያዕቆብ የጥበቃና የአብሮነት ተስፋ ሰጠው።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 28:13-15"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q100-AM",
+          "type": "true_false",
+          "difficulty": "hard",
+          "prompt": "የዮሴፍ ታሪክ የዘፍጥረትን የመጨረሻ ዋና ክፍል ይይዛል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 37-50"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q101-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት የእስራኤል ቤተሰብ ከኤክስዶስ በፊት ወደ ግብፅ መግባቱን ይናገራል።",
+          "correct_answer": true,
+          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "references": [
+            "GEN 46-50"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q102-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የዘፍጥረት መጽሐፍ እስራኤላውያን በሲና ተራራ ላይ ሕጉን ከተቀበሉ በኋላ ይደመደማል።",
+          "correct_answer": false,
+          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "references": [
+            "GEN 50:26; EXO 19-20"
+          ],
+          "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
+          "explanation_locale": "am",
+          "review_status": "draft_translation_requires_amharic_editor"
         }
       ],
       "chapter_guides": [
@@ -5615,7 +6955,7 @@
       "chapter_guides_status": "draft_translation_requires_qualified_language_and_editorial_review",
       "content_status": {
         "chapter_guides": "50_of_50_draft_translated; review_pending",
-        "quiz": "8_of_102_translated; 94_missing",
+        "quiz": "102_of_102_draft_translated; independent_amharic_language_and_explanation_review_pending",
         "inductive_studies": "4_of_4_draft_translated; review_pending",
         "dictionary": "missing",
         "concordance": "missing",
