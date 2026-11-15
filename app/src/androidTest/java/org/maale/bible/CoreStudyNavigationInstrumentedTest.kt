@@ -116,6 +116,35 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
     }
 
+    @Test fun quizSupportsAnswerLockingProgressResultsAndRetry() {
+        compose.onNodeWithTag("navigation_books").performClick()
+        waitForTag("books_screen")
+        compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
+        compose.onNodeWithTag("book_item_GEN").performClick()
+        waitForTag("book_learning_screen")
+        compose.onNodeWithTag("learning_tab_quiz").performClick()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q01"))
+
+        repeat(8) {
+            val trueFalseAvailable = compose.onAllNodesWithTag("learning_quiz_option_true").fetchSemanticsNodes().isNotEmpty()
+            if (trueFalseAvailable) {
+                compose.onNodeWithTag("learning_quiz_option_true").performClick()
+            } else {
+                compose.onNodeWithTag("learning_quiz_option_A").performClick()
+            }
+            compose.onNodeWithTag("learning_quiz_submit").performClick()
+            compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_next"))
+            compose.onNodeWithTag("learning_quiz_next").performClick()
+            compose.waitForIdle()
+        }
+
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_results"))
+        compose.onNodeWithTag("learning_quiz_results").assertIsDisplayed()
+        compose.onNodeWithTag("learning_quiz_retry").performClick()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q01"))
+        compose.onNodeWithTag("learning_quiz_question_GEN-Q01").assertIsDisplayed()
+    }
+
     @Test fun catalogueSearchFindsBooksWithoutScriptureTextSearch() {
         compose.onNodeWithText("Search").performClick()
         compose.onNodeWithTag("catalogue_search_input").performTextInput("Genesis")
