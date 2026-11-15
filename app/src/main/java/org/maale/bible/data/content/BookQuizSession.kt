@@ -12,8 +12,9 @@ internal data class BookQuizSessionState(
     val submittedAnswers: Set<String> = emptySet()
 ) {
     fun select(questionId: String, answer: String): BookQuizSessionState {
-        if (questionId in submittedAnswers || answer.isBlank()) return this
-        return copy(selectedAnswers = selectedAnswers + (questionId to answer))
+        if (questionId in submittedAnswers) return this
+        return if (answer.isBlank()) copy(selectedAnswers = selectedAnswers - questionId)
+        else copy(selectedAnswers = selectedAnswers + (questionId to answer))
     }
 
     fun toggleOption(questionId: String, optionId: String): BookQuizSessionState {
