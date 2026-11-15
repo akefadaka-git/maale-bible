@@ -1600,6 +1600,156 @@
           ],
           "learning_objective": "Recall and interpret the Genesis narrative in its immediate literary context.",
           "explanation_locale": "en"
+        },
+        {
+          "id": "GEN-Q103",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "Which statements are included in God's covenant with Noah in Genesis 9:8–17? Select every correct answer.",
+          "options": [
+            "The covenant includes Noah and his descendants.",
+            "The rainbow is given as its sign.",
+            "God promises that a flood will never again destroy all flesh.",
+            "Every male must be circumcised as the covenant sign."
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "Genesis 9:8–17 extends the covenant to Noah, his descendants and living creatures; the rainbow is its sign, and God promises that floodwaters will not again destroy all flesh. Circumcision belongs to the later covenant with Abraham in Genesis 17.",
+          "references": [
+            "GEN 9:8-17",
+            "GEN 17:9-14"
+          ],
+          "learning_objective": "Distinguish the Noahic covenant from the Abrahamic covenant."
+        },
+        {
+          "id": "GEN-Q104",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "Which details describe Abram's meeting with Melchizedek in Genesis 14:18–20? Select every correct answer.",
+          "options": [
+            "Melchizedek is king of Salem.",
+            "Melchizedek is priest of God Most High.",
+            "Abram gives Melchizedek a tenth of everything.",
+            "Pharaoh blesses Abram and receives his tithe."
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "Genesis 14:18–20 identifies Melchizedek as king of Salem and priest of God Most High; he blesses Abram, and Abram gives him a tenth. Pharaoh is not part of this encounter.",
+          "references": [
+            "GEN 14:18-20"
+          ],
+          "learning_objective": "Identify the roles and actions in Abram's encounter with Melchizedek."
+        },
+        {
+          "id": "GEN-Q105",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "Which events occur during the visitors' announcement to Abraham and Sarah in Genesis 18:1–15? Select every correct answer.",
+          "options": [
+            "Visitors come to Abraham near the oaks of Mamre.",
+            "Sarah listens at the tent entrance.",
+            "A son is promised for the appointed time.",
+            "Lot welcomes the visitors in Sodom."
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "Genesis 18 places the visitors with Abraham at Mamre; Sarah listens from the tent entrance, and the announcement concerns the birth of a son. Lot's hospitality in Sodom belongs to the following episode, not this scene.",
+          "references": [
+            "GEN 18:1-15",
+            "GEN 19:1-3"
+          ],
+          "learning_objective": "Distinguish the Mamre announcement from the Sodom episode."
+        },
+        {
+          "id": "GEN-Q106",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "Which items are given to Joseph when Pharaoh elevates him to authority in Egypt? Select every correct answer.",
+          "options": [
+            "Pharaoh's signet ring is placed on Joseph's hand.",
+            "Joseph is dressed in fine linen.",
+            "A gold chain is placed around Joseph's neck.",
+            "Joseph is appointed high priest of Egypt."
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "Genesis 41:41–43 describes Pharaoh's authority being delegated to Joseph, with a signet ring, fine linen and a gold chain. The passage does not appoint Joseph as high priest.",
+          "references": [
+            "GEN 41:39-44"
+          ],
+          "learning_objective": "Recall the symbols accompanying Joseph's appointment."
+        },
+        {
+          "id": "GEN-Q107",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "After the ram is provided in place of Isaac, what name does Abraham give to the place?",
+          "options": [],
+          "accepted_answers": [
+            "the lord will provide"
+          ],
+          "explanation": "Genesis 22:14 records Abraham naming the place “The LORD will provide.” The answer identifies the name associated with God's provision in that episode.",
+          "references": [
+            "GEN 22:13-14"
+          ],
+          "learning_objective": "Recall the name associated with the provision of the ram."
+        },
+        {
+          "id": "GEN-Q108",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "What was the former name of the place Jacob later called Bethel?",
+          "options": [],
+          "accepted_answers": [
+            "luz"
+          ],
+          "explanation": "Genesis 28:19 states that the place was previously called Luz before Jacob named it Bethel.",
+          "references": [
+            "GEN 28:18-19"
+          ],
+          "learning_objective": "Identify the earlier place-name in Jacob's Bethel narrative."
+        },
+        {
+          "id": "GEN-Q109",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "What is the name of the woman Joseph marries in Egypt?",
+          "options": [],
+          "accepted_answers": [
+            "asenath"
+          ],
+          "explanation": "Genesis 41:45 names Asenath, daughter of Potiphera priest of On, as Joseph's wife.",
+          "references": [
+            "GEN 41:45"
+          ],
+          "learning_objective": "Identify Joseph's wife from the account of his elevation in Egypt."
+        },
+        {
+          "id": "GEN-Q110",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "What is the name of Joseph's second son, born after Manasseh?",
+          "options": [],
+          "accepted_answers": [
+            "ephraim"
+          ],
+          "explanation": "Genesis 41:51–52 names the first son Manasseh and the second Ephraim.",
+          "references": [
+            "GEN 41:50-52"
+          ],
+          "learning_objective": "Distinguish the names and birth order of Joseph's sons."
         }
       ],
       "chapter_guides": [
@@ -6320,6 +6470,156 @@
           "learning_objective": "የዘፍጥረትን ትረካና የተጠቀሰውን የጥቅስ ይዘት መለየት።",
           "explanation_locale": "am",
           "review_status": "draft_translation_requires_amharic_editor"
+        },
+        {
+          "id": "GEN-Q103-AM",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት 9፥8–17 ከኖኅ ጋር በተደረገው ቃል ኪዳን ውስጥ የተካተቱት የትኞቹ ናቸው? ትክክለኛ የሆኑትን ሁሉ ይምረጡ።",
+          "options": [
+            "ቃል ኪዳኑ ኖኅንና ዘሮቹን ያካትታል።",
+            "ቀስተ ደመናው የቃል ኪዳኑ ምልክት ሆኖ ተሰጠ።",
+            "ጥፋት ውኃ እንደገና ሕያዋንን ሁሉ እንዳያጠፋ እግዚአብሔር ተስፋ ሰጠ።",
+            "እያንዳንዱ ወንድ በቃል ኪዳኑ ምልክት ሊገረዝ ይገባል።"
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "ዘፍጥረት 9፥8–17 ቃል ኪዳኑን ከኖኅ፣ ከዘሮቹና ከሕያዋን ፍጥረታት ጋር ያያይዛል፤ ቀስተ ደመናውም ምልክቱ ነው። ግርዘት ግን በዘፍጥረት 17 ከአብርሃም ጋር ከተደረገው ቃል ኪዳን ጋር ይያያዛል።",
+          "references": [
+            "GEN 9:8-17",
+            "GEN 17:9-14"
+          ],
+          "learning_objective": "የኖኅን ቃል ኪዳን ከአብርሃም ቃል ኪዳን መለየት።"
+        },
+        {
+          "id": "GEN-Q104-AM",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት 14፥18–20 አብራም ከመልከ ጼዴቅ ጋር ስላደረገው ግንኙነት የተገለጹት የትኞቹ ናቸው? ትክክለኛ የሆኑትን ሁሉ ይምረጡ።",
+          "options": [
+            "መልከ ጼዴቅ የሳሌም ንጉሥ ነበር።",
+            "መልከ ጼዴቅ የልዑል አምላክ ካህን ነበር።",
+            "አብራም ከሁሉም አሥራት ሰጠው።",
+            "ፈርዖን አብራምን ባረከውና አሥራቱን ተቀበለ።"
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "ዘፍጥረት 14፥18–20 መልከ ጼዴቅን የሳሌም ንጉሥና የልዑል አምላክ ካህን ብሎ ይገልጸዋል፤ እርሱም አብራምን ባረከው፣ አብራምም አሥራት ሰጠው። ፈርዖን በዚህ ክስተት ውስጥ አይገኝም።",
+          "references": [
+            "GEN 14:18-20"
+          ],
+          "learning_objective": "በአብራምና በመልከ ጼዴቅ ግንኙነት ያሉትን ሚናዎችና ድርጊቶች መለየት።"
+        },
+        {
+          "id": "GEN-Q105-AM",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት 18፥1–15 አብርሃምና ሣራ ጎብኚዎችን በተቀበሉበት ወቅት የተፈጸሙት የትኞቹ ናቸው? ትክክለኛ የሆኑትን ሁሉ ይምረጡ።",
+          "options": [
+            "ጎብኚዎች በመምሬ የአድባር ዛፎች አጠገብ ወደ አብርሃም መጡ።",
+            "ሣራ በድንኳኑ መግቢያ አጠገብ እያዳመጠች ነበር።",
+            "በተወሰነው ጊዜ ልጅ እንደሚወለድ ተስፋ ተነገረ።",
+            "ሎጥ ጎብኚዎቹን በሰዶም ተቀበላቸው።"
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "ዘፍጥረት 18 ጎብኚዎቹን ከአብርሃም ጋር በመምሬ ያቀርባል፤ ሣራ ከድንኳኑ መግቢያ አጠገብ ታዳምጣለች፣ የሚነገረውም ልጅ ስለሚወለድ ነው። የሎጥ እንግዳ ተቀባይነት በሚቀጥለው የሰዶም ታሪክ ውስጥ ነው።",
+          "references": [
+            "GEN 18:1-15",
+            "GEN 19:1-3"
+          ],
+          "learning_objective": "በመምሬ የተነገረውን ተስፋ ከሰዶም ክስተት መለየት።"
+        },
+        {
+          "id": "GEN-Q106-AM",
+          "type": "multiple_select",
+          "difficulty": "medium",
+          "prompt": "ፈርዖን ዮሴፍን በግብፅ ላይ ሥልጣን በሾመው ጊዜ የተሰጡት የትኞቹ ናቸው? ትክክለኛ የሆኑትን ሁሉ ይምረጡ።",
+          "options": [
+            "የፈርዖን የማኅተም ቀለበት በዮሴፍ እጅ ተደረገ።",
+            "ዮሴፍ በጥሩ የተልባ ልብስ ተለበሰ።",
+            "በአንገቱ ላይ የወርቅ ሰንሰለት ተደረገ።",
+            "ዮሴፍ የግብፅ ሊቀ ካህናት ሆኖ ተሾመ።"
+          ],
+          "correct_option_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "ዘፍጥረት 41፥41–43 ፈርዖን ለዮሴፍ ሥልጣን ሲሰጠው የማኅተም ቀለበት፣ የተልባ ልብስና የወርቅ ሰንሰለት እንደተሰጡት ይገልጻል። ጥቅሱ ዮሴፍን የግብፅ ሊቀ ካህናት አድርጎ አይሾመውም።",
+          "references": [
+            "GEN 41:39-44"
+          ],
+          "learning_objective": "ዮሴፍ ሥልጣን በተቀበለበት ጊዜ የተሰጡትን ምልክቶች ማስታወስ።"
+        },
+        {
+          "id": "GEN-Q107-AM",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "በይስሐቅ ፈንታ አውራ በግ ከተሰጠ በኋላ አብርሃም ያንን ቦታ በምን ስም ጠራው?",
+          "options": [],
+          "accepted_answers": [
+            "እግዚአብሔር ያዘጋጃል"
+          ],
+          "explanation": "ዘፍጥረት 22፥14 አብርሃም ቦታውን “እግዚአብሔር ያዘጋጃል” ብሎ እንደጠራው ይመዘግባል።",
+          "references": [
+            "GEN 22:13-14"
+          ],
+          "learning_objective": "አውራ በጉ በተዘጋጀበት ታሪክ የተሰጠውን የቦታ ስም ማስታወስ።"
+        },
+        {
+          "id": "GEN-Q108-AM",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "ያዕቆብ ቤቴል ብሎ ከመጥራቱ በፊት የቦታው ስም ምን ነበር?",
+          "options": [],
+          "accepted_answers": [
+            "ሉዝ"
+          ],
+          "explanation": "ዘፍጥረት 28፥19 ያዕቆብ ቤቴል ብሎ ከመጥራቱ በፊት ቦታው ሉዝ ይባል እንደነበር ይገልጻል።",
+          "references": [
+            "GEN 28:18-19"
+          ],
+          "learning_objective": "በያዕቆብ የቤቴል ታሪክ ውስጥ የቦታውን የቀድሞ ስም መለየት።"
+        },
+        {
+          "id": "GEN-Q109-AM",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "ዮሴፍ በግብፅ ያገባት ሴት ስም ማን ነው?",
+          "options": [],
+          "accepted_answers": [
+            "አሴናት"
+          ],
+          "explanation": "ዘፍጥረት 41፥45 የኦን ካህን የጶጢፌራ ልጅ አሴናት የዮሴፍ ሚስት እንደሆነች ይጠራታል።",
+          "references": [
+            "GEN 41:45"
+          ],
+          "learning_objective": "ዮሴፍ በግብፅ ሥልጣን በተቀበለበት ታሪክ የሚስቱን ስም መለየት።"
+        },
+        {
+          "id": "GEN-Q110-AM",
+          "type": "short_answer",
+          "difficulty": "medium",
+          "prompt": "ከምናሴ በኋላ የተወለደው የዮሴፍ ሁለተኛ ልጅ ስም ማን ነው?",
+          "options": [],
+          "accepted_answers": [
+            "ኤፍሬም"
+          ],
+          "explanation": "ዘፍጥረት 41፥51–52 የመጀመሪያው ልጅ ምናሴ፣ ሁለተኛውም ኤፍሬም እንደሆኑ ይገልጻል።",
+          "references": [
+            "GEN 41:50-52"
+          ],
+          "learning_objective": "የዮሴፍን ልጆች ስምና የተወለዱበትን ቅደም ተከተል መለየት።"
         }
       ],
       "chapter_guides": [
