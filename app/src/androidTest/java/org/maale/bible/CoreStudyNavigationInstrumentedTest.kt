@@ -183,6 +183,7 @@ class CoreStudyNavigationInstrumentedTest {
             waitForTag("reader_screen")
 
             compose.onNodeWithTag("reader_edition_selector").performClick()
+            compose.onNodeWithTag("reader_edition_selector_search").performTextInput("NIV")
             compose.onNodeWithTag("reader_edition_ENG-NIV").assertIsDisplayed().assertHasClickAction().performClick()
             compose.waitForIdle()
             val selectedAfterTap = ScriptureEditionSelectionStore.load(compose.activity.applicationContext)
