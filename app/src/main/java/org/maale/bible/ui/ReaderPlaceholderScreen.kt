@@ -51,7 +51,21 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             Text(stringResource(bookNameResource(bookId)), style = MaterialTheme.typography.headlineSmall)
             TextButton(onClick = onBack) { Text(stringResource(R.string.reader_back_to_books)) }
         }
-        Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)\n        Box {\n            OutlinedButton(onClick = { editionMenuExpanded = true }, modifier = Modifier.fillMaxWidth().testTag("reader_edition_selector")) {\n                Text("${selectedEdition.languageName}: ${selectedEdition.title}")\n            }\n            DropdownMenu(expanded = editionMenuExpanded, onDismissRequest = { editionMenuExpanded = false }) {\n                ScriptureEditionCatalog.editions.forEach { edition ->\n                    DropdownMenuItem(\n                        text = { Column { Text(edition.title); Text("${edition.languageName} · ${edition.status.name}", style = MaterialTheme.typography.labelSmall) } },\n                        modifier = Modifier.testTag("reader_edition_${edition.id}"),\n                        onClick = { selectedEditionId = edition.id; editionMenuExpanded = false }\n                    )\n                }\n            }\n        }
+        Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)
+        Box {
+            OutlinedButton(onClick = { editionMenuExpanded = true }, modifier = Modifier.fillMaxWidth().testTag("reader_edition_selector")) {
+                Text("${selectedEdition.languageName}: ${selectedEdition.title}")
+            }
+            DropdownMenu(expanded = editionMenuExpanded, onDismissRequest = { editionMenuExpanded = false }) {
+                ScriptureEditionCatalog.editions.forEach { edition ->
+                    DropdownMenuItem(
+                        text = { Column { Text(edition.title); Text("${edition.languageName} · ${edition.status.name}", style = MaterialTheme.typography.labelSmall) } },
+                        modifier = Modifier.testTag("reader_edition_${edition.id}"),
+                        onClick = { selectedEditionId = edition.id; editionMenuExpanded = false }
+                    )
+                }
+            }
+        }
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.reader_position_coordinates, navigation.chapter, navigation.verse), modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
