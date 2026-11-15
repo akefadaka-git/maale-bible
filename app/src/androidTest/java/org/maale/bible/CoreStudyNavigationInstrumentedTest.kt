@@ -9,6 +9,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
@@ -119,6 +120,12 @@ class CoreStudyNavigationInstrumentedTest {
         assertEquals("Genesis content must follow the English test locale", "en", debugContent?.locale)
         assertEquals("Genesis quiz must expose its first question", "GEN-Q01", debugContent?.quizQuestions?.firstOrNull()?.id)
         assertEquals("Genesis chapter guides must expose chapter one", 1, debugContent?.chapterGuides?.firstOrNull()?.chapter)
+        assertEquals("Genesis commentary units must load for the selected locale", 6, debugContent?.commentaryUnits?.size)
+        assertEquals("Genesis introduction must expose composition context", true, debugContent?.introduction?.dateAndComposition?.isNotBlank())
+        assertEquals("Genesis introduction must expose genre", true, debugContent?.introduction?.genre?.isNotBlank())
+        assertEquals("Genesis introduction must expose canonical connections", true, debugContent?.introduction?.canonicalConnections?.isNotEmpty())
+        assertEquals("Genesis chapter guide must expose literary context", true, debugContent?.chapterGuides?.firstOrNull()?.literaryContext?.isNotBlank())
+        assertEquals("Genesis inductive studies must expose prayer prompts", true, debugContent?.inductiveStudies?.all { it.prayerPrompt.isNotBlank() })
         compose.onNodeWithTag("navigation_books").performClick()
         waitForTag("books_screen")
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
@@ -126,6 +133,13 @@ class CoreStudyNavigationInstrumentedTest {
         waitForTag("book_learning_screen")
         compose.onNodeWithText("INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.").assertExists()
         compose.onNodeWithText("Genesis — beginnings, humanity and the family of Israel").assertExists()
+        compose.onNodeWithText("Date and composition").assertExists()
+        assertEquals("Commentary notes must be rendered in the overview", true, compose.onAllNodesWithText("Commentary and theological notes").fetchSemanticsNodes().isNotEmpty())
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_tab_quiz"))
+        compose.onNodeWithTag("learning_tab_inductive").performClick()
+        compose.waitForIdle()
+        assertEquals("Chapter context label must render", true, compose.onAllNodesWithText("Literary context").fetchSemanticsNodes().isNotEmpty())
+        assertEquals("Prayer prompt label must render", true, compose.onAllNodesWithText("Prayer prompt").fetchSemanticsNodes().isNotEmpty())
         compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_tab_quiz"))
         compose.onNodeWithTag("learning_tab_quiz").performClick()
         compose.waitForIdle()
