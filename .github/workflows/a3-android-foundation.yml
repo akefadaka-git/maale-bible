@@ -5,6 +5,10 @@ on:
     paths:
       - 'app/**'
       - 'tools/i18n/**'
+      - 'tools/content/**'
+      - 'docs/content/books/GEN.json'
+      - 'tools/content/**'
+      - 'docs/content/books/GEN.json'
       - 'gradle/**'
       - 'gradlew'
       - 'gradlew.bat'
