@@ -22,6 +22,8 @@ import org.maale.bible.data.content.BookLearningContentRepository
 import org.maale.bible.data.content.BookQuizQuestion
 import org.maale.bible.data.content.BookQuizSessionState
 import org.maale.bible.data.content.isCorrect
+import org.maale.bible.data.scripture.ScriptureEditionCatalog
+import org.maale.bible.data.scripture.ScriptureEditionSelectionStore
 
 private enum class BookLearningTab(val label: Int) {
     OVERVIEW(R.string.learning_tab_overview),
@@ -37,6 +39,8 @@ fun BookLearningScreen(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
+    var selectedEditionId by rememberSaveable { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
+    val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId) ?: ScriptureEditionCatalog.editions.first()
     val book = remember(bookId) { CanonicalBookCatalog.find(bookId) }
     val content = remember(bookId, context) { BookLearningContentRepository.load(context, bookId) }
     var selectedTab by rememberSaveable(bookId) { mutableStateOf(BookLearningTab.OVERVIEW) }
@@ -53,6 +57,19 @@ fun BookLearningScreen(
             Text(testament, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.secondary)
         }
         Text(title, style = MaterialTheme.typography.headlineLarge)
+        ScriptureEditionSelector(
+            selectedEditionId = selectedEditionId,
+            onEditionSelected = { editionId ->
+                if (ScriptureEditionSelectionStore.save(context, editionId)) selectedEditionId = editionId
+            },
+            selectorTag = "learning_edition_selector"
+        )
+        Text(
+            "Selected edition: ${selectedEdition.title}. Learning guides and quizzes are shared study materials, not edition-specific scripture text.",
+            modifier = Modifier.testTag("learning_edition_context"),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
         Text(
             stringResource(R.string.learning_book_metadata, book?.usfmId ?: bookId, book?.order ?: 0),
             style = MaterialTheme.typography.labelMedium,
