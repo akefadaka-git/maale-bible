@@ -18,7 +18,8 @@ data class BookInductiveStudy(
     val title: String,
     val observation: List<String>,
     val interpretation: List<String>,
-    val application: List<String>
+    val application: List<String>,
+    val prayerPrompt: String
 )
 
 data class BookChapterGuide(
@@ -28,7 +29,11 @@ data class BookChapterGuide(
     val observation: List<String>,
     val interpretation: List<String>,
     val application: List<String>,
-    val references: List<String>
+    val references: List<String>,
+    val literaryContext: String,
+    val crossReferences: List<String>,
+    val discussionPrompts: List<String>,
+    val review: String
 )
 
 data class BookQuizQuestion(
@@ -136,7 +141,8 @@ object BookLearningContentRepository {
                 title = item.optString("title"),
                 observation = item.optJSONArray("observation").toStringList(),
                 interpretation = item.optJSONArray("interpretation").toStringList(),
-                application = item.optJSONArray("application").toStringList()
+                application = item.optJSONArray("application").toStringList(),
+                prayerPrompt = item.optString("prayer_prompt")
             )
         }
         val chapterGuides = localeContent.optJSONArray("chapter_guides").toObjectList { item ->
@@ -147,7 +153,11 @@ object BookLearningContentRepository {
                 observation = item.optJSONArray("observation").toStringList(),
                 interpretation = item.optJSONArray("interpretation").toStringList(),
                 application = item.optJSONArray("application").toStringList(),
-                references = item.optJSONArray("references").toStringList()
+                references = item.optJSONArray("references").toStringList(),
+                literaryContext = item.optString("literary_context"),
+                crossReferences = item.optJSONArray("cross_references").toStringList(),
+                discussionPrompts = item.optJSONArray("discussion_prompts").toStringList(),
+                review = item.optString("review")
             )
         }
         val questions = localeContent.optJSONArray("quiz").toObjectList { item ->
