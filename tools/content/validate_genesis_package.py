@@ -39,9 +39,11 @@ def validate() -> list[str]:
 
     for locale_name, locale in (("EN", en), ("AM", am)):
         intro = locale.get("introduction", {})
-        for field in ("title", "summary", "authorship", "setting", "audience_and_purpose", "date_and_composition", "genre", "theological_contribution", "canonical_connections"):
+        for field in ("title", "summary", "authorship", "setting", "audience_and_purpose", "date_and_composition", "genre", "theological_contribution"):
             if not isinstance(intro.get(field), str) or not intro[field].strip():
                 fail(errors, f"{locale_name} introduction missing {field}.")
+        if not intro.get("canonical_connections"):
+            fail(errors, f"{locale_name} introduction missing canonical_connections.")
         for key, expected in (("chapter_guides", 50), ("inductive_studies", 4), ("quiz", 102)):
             rows = locale.get(key, [])
             if len(rows) != expected:
