@@ -72,6 +72,18 @@ data class BookLearningIntroduction(
     val interpretiveCare: List<String>
 )
 
+internal data class BookLearningLocaleResolution(
+    val contentLocale: String,
+    val requiresFallbackNotice: Boolean
+)
+
+internal fun resolveBookLearningLocale(deviceLanguage: String, hasAmharic: Boolean = true): BookLearningLocaleResolution =
+    when {
+        deviceLanguage == "en" -> BookLearningLocaleResolution("en", false)
+        deviceLanguage == "am" && hasAmharic -> BookLearningLocaleResolution("am", false)
+        else -> BookLearningLocaleResolution("en", true)
+    }
+
 data class BookLearningContent(
     val bookId: String,
     val locale: String,
@@ -131,8 +143,13 @@ object BookLearningContentRepository {
         // Release builds fail closed. Debug builds may preview explicitly marked drafts for review.
         if (!canDisplayBookLearningContent(publicationState, allowDraftPreview)) return null
 
-        val locale = if (context.resources.configuration.locales[0].language == "am") "am" else "en"
-        val localeContent = root.optJSONObject("locales")?.optJSONObject(locale) ?: return null
+        val availableLocales = root.optJSONObject("locales") ?: return null
+        val localeResolution = resolveBookLearningLocale(
+            context.resources.configuration.locales[0].language,
+            hasAmharic = availableLocales.has("am")
+        )
+        val locale = localeResolution.contentLocale
+        val localeContent = availableLocales.optJSONObject(locale) ?: return null
         val introductionJson = localeContent.optJSONObject("introduction") ?: return null
         val structure = introductionJson.optJSONArray("structure").toObjectList { item ->
             BookLearningStructureSection(
@@ -210,7 +227,7 @@ object BookLearningContentRepository {
         return BookLearningContent(
             bookId = bookId,
             locale = locale,
-            localeStatus = localeContent.optString("locale_status", "draft"),
+            localeStatus = if (localeResolution.requiresFallbackNotice) "english_fallback_review_required" else localeContent.optString("locale_status", "draft"),
             publicationState = publicationState,
             introduction = intro,
             inductiveStudies = studies,
