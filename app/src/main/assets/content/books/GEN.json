@@ -4712,5 +4712,32 @@
         }
       ]
     }
+  },
+  "language_coverage": {
+    "en": {
+      "introduction": "draft_present",
+      "chapter_guides": "50_of_50",
+      "inductive_studies": "4_of_4",
+      "quiz": "102_of_102",
+      "key_verses": "18_of_18",
+      "memory_verses": "7_of_7",
+      "concordance": "14_of_14",
+      "dictionary": "5_of_5",
+      "timeline": "5_of_5"
+    },
+    "am": {
+      "introduction": "draft_present",
+      "chapter_guides": "50_of_50_draft_translation",
+      "inductive_studies": "4_of_4_draft_translation",
+      "quiz": "102_of_102_draft_translation",
+      "key_verses": "18_of_18_draft_translation",
+      "memory_verses": "7_of_7_draft_translation",
+      "concordance": "14_of_14_draft_translation",
+      "dictionary": "5_of_5_draft_translation",
+      "timeline": "5_of_5_draft_translation"
+    },
+    "mdy": {
+      "status": "not_translated; qualified_maale_language_editor_required; no_fabricated_fallback"
+    }
   }
 }
