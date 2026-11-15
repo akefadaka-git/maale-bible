@@ -26,7 +26,7 @@
     "source_verification": "source_identity_and_structure_verified; passage_reference_validation_pending",
     "rights_review": "documented_permission_and_CC_BY_SA_4_0_terms_recorded; repository_asset_review_pending",
     "english_editorial_review": "pending",
-    "amharic_language_review": "required; 50 chapter guides and 102 quiz items drafted; independent language review pending",
+    "amharic_language_review": "required; all Genesis introductions, chapter guides, inductive studies, quiz items and supporting reference modules have draft Amharic text; independent language review pending",
     "theological_review": "pending",
     "scripture_reference_validation": "pending_against_exact_2008_MDYTWF_text",
     "qa": "pending",
@@ -6957,11 +6957,349 @@
         "chapter_guides": "50_of_50_draft_translated; review_pending",
         "quiz": "102_of_102_draft_translated; independent_amharic_language_and_explanation_review_pending",
         "inductive_studies": "4_of_4_draft_translated; review_pending",
-        "dictionary": "missing",
-        "concordance": "missing",
-        "timeline": "missing",
-        "commentary": "not_authored"
-      }
+        "dictionary": "5_of_5_draft_translated; terminology_review_pending",
+        "concordance": "14_of_14_draft_translated; name_and_reference_review_pending",
+        "timeline": "5_of_5_draft_translated; historical_review_pending",
+        "commentary": "not_authored",
+        "key_verses": "18_of_18_draft_translated; reference_and_language_review_pending",
+        "memory_verses": "7_of_7_draft_translated; language_review_pending"
+      },
+      "key_verses": [
+        {
+          "reference": "GEN 1:1",
+          "theme": "እግዚአብሔር ፈጣሪ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 1:27",
+          "theme": "የሰው ልጅ ክብር",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 2:2-3",
+          "theme": "ሰባተኛው ቀን",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 3:15",
+          "theme": "ግጭትና ተስፋ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 4:9",
+          "theme": "ለሌሎች ኃላፊነት",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 6:8",
+          "theme": "ሞገስ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 9:13",
+          "theme": "የቃል ኪዳን ምልክት",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 12:2-3",
+          "theme": "ተስፋና በረከት",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 15:6",
+          "theme": "እምነትና ጽድቅ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 17:7",
+          "theme": "የቃል ኪዳን ቀጣይነት",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 18:14",
+          "theme": "የእግዚአብሔር ችሎታ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 22:14",
+          "theme": "እግዚአብሔር ያዘጋጃል",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 26:24",
+          "theme": "ለይስሐቅ የተሰጠ ተስፋ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 28:15",
+          "theme": "አብሮነትና ተስፋ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 32:28",
+          "theme": "እስራኤል",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 33:4",
+          "theme": "እርቅ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 45:5",
+          "theme": "መጠበቅ",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        },
+        {
+          "reference": "GEN 50:20",
+          "theme": "የእግዚአብሔር አመራርና ኃላፊነት",
+          "study_note": "ይህን ጥቅስ ከሙሉ ምዕራፉና ከታሪካዊ አውዱ ጋር በማንበብ ይማሩት።"
+        }
+      ],
+      "memory_verses": [
+        {
+          "reference": "GEN 1:1",
+          "reason": "እግዚአብሔር ፈጣሪ መሆኑን የሚገልጸው የመጽሐፉ መክፈቻ እምነት።"
+        },
+        {
+          "reference": "GEN 1:27",
+          "reason": "ሰው ልጅ በእግዚአብሔር መልክ መፈጠሩ።"
+        },
+        {
+          "reference": "GEN 12:2-3",
+          "reason": "የአብራም ጥሪና ለሕዝቦች የሚደርሰው በረከት።"
+        },
+        {
+          "reference": "GEN 15:6",
+          "reason": "የአብራም እምነት።"
+        },
+        {
+          "reference": "GEN 22:14",
+          "reason": "የእግዚአብሔር ዝግጅት።"
+        },
+        {
+          "reference": "GEN 28:15",
+          "reason": "እግዚአብሔር ከያዕቆብ ጋር እንደሚሆን የሰጠው ተስፋ።"
+        },
+        {
+          "reference": "GEN 50:20",
+          "reason": "የሰውን ክፋት ሳያጸድቅ የእግዚአብሔርን አመራር ማየት።"
+        }
+      ],
+      "concordance": [
+        {
+          "term": "አብርሃም (አብራም)",
+          "category": "person",
+          "references": [
+            "GEN 11:26-32",
+            "GEN 12:1-9",
+            "GEN 15:1-21",
+            "GEN 17:1-27",
+            "GEN 22:1-19",
+            "GEN 25:7-11"
+          ]
+        },
+        {
+          "term": "ሣራ (ሣራይ)",
+          "category": "person",
+          "references": [
+            "GEN 11:29-31",
+            "GEN 16:1-6",
+            "GEN 17:15-21",
+            "GEN 18:9-15",
+            "GEN 21:1-7",
+            "GEN 23:1-20"
+          ]
+        },
+        {
+          "term": "አጋር",
+          "category": "person",
+          "references": [
+            "GEN 16:1-16",
+            "GEN 21:8-21"
+          ]
+        },
+        {
+          "term": "ይስሐቅ",
+          "category": "person",
+          "references": [
+            "GEN 17:15-21",
+            "GEN 21:1-7",
+            "GEN 22:1-19",
+            "GEN 24:1-67",
+            "GEN 26:1-35"
+          ]
+        },
+        {
+          "term": "ያዕቆብ / እስራኤል",
+          "category": "person",
+          "references": [
+            "GEN 25:19-34",
+            "GEN 27:1-45",
+            "GEN 28:10-22",
+            "GEN 32:22-32",
+            "GEN 35:9-15",
+            "GEN 46:1-7"
+          ]
+        },
+        {
+          "term": "ዮሴፍ",
+          "category": "person",
+          "references": [
+            "GEN 37:1-36",
+            "GEN 39:1-23",
+            "GEN 41:1-57",
+            "GEN 45:1-15",
+            "GEN 50:15-26"
+          ]
+        },
+        {
+          "term": "ኖኅ",
+          "category": "person",
+          "references": [
+            "GEN 5:28-32",
+            "GEN 6:8-22",
+            "GEN 7:1-24",
+            "GEN 8:1-22",
+            "GEN 9:1-29"
+          ]
+        },
+        {
+          "term": "ኤደን",
+          "category": "place",
+          "references": [
+            "GEN 2:8-15",
+            "GEN 3:8-24",
+            "GEN 4:16"
+          ]
+        },
+        {
+          "term": "ባቤል",
+          "category": "place/topic",
+          "references": [
+            "GEN 10:10",
+            "GEN 11:1-9"
+          ]
+        },
+        {
+          "term": "ቃል ኪዳን",
+          "category": "theme",
+          "references": [
+            "GEN 6:18",
+            "GEN 9:8-17",
+            "GEN 15:1-21",
+            "GEN 17:1-27"
+          ]
+        },
+        {
+          "term": "በረከት",
+          "category": "theme",
+          "references": [
+            "GEN 1:22-28",
+            "GEN 12:1-3",
+            "GEN 27:1-40",
+            "GEN 48:1-20",
+            "GEN 49:1-28"
+          ]
+        },
+        {
+          "term": "ረሃብ",
+          "category": "theme",
+          "references": [
+            "GEN 12:10-20",
+            "GEN 26:1-6",
+            "GEN 41:25-57",
+            "GEN 42:1-5",
+            "GEN 47:13-26"
+          ]
+        },
+        {
+          "term": "እርቅ",
+          "category": "theme",
+          "references": [
+            "GEN 33:1-11",
+            "GEN 45:1-15",
+            "GEN 50:15-21"
+          ]
+        },
+        {
+          "term": "የእግዚአብሔር አመራር",
+          "category": "theme",
+          "references": [
+            "GEN 45:5-8",
+            "GEN 50:15-21"
+          ]
+        }
+      ],
+      "dictionary": [
+        {
+          "term": "ቃል ኪዳን",
+          "definition": "በትረካው ውስጥ በእግዚአብሔር የሚመሠረት አስገዳጅ ግንኙነት ወይም ቃል ኪዳን። ዘፍጥረት ከኖኅና ከአብርሃም ጋር የተደረጉ የቃል ኪዳን ታሪኮችን ይዟል።",
+          "references": [
+            "GEN 9:8-17",
+            "GEN 15:1-21",
+            "GEN 17:1-27"
+          ]
+        },
+        {
+          "term": "Birthright",
+          "definition": "የበኩር ልጅ የውርስ ደረጃና ከእርሱ ጋር የተያያዙ መብቶች፤ ኤሳው የበኩርነት መብቱን ለያዕቆብ ሸጠ።",
+          "references": [
+            "GEN 25:29-34"
+          ]
+        },
+        {
+          "term": "Patriarch",
+          "definition": "በኋላ የተሰጠ መግለጫ ሲሆን በዘፍጥረት ያሉትን የእስራኤል አባቶች ለመጥራት ይጠቀማል።",
+          "references": [
+            "GEN 12-50"
+          ]
+        },
+        {
+          "term": "Primeval history",
+          "definition": "የዘፍጥረት 1–11ን ለመግለጽ በምሁራን የሚጠቀም ስያሜ ነው፤ ፍጥረትን፣ ሰውን፣ ዓመፅን፣ ጥፋት ውኃንና ሕዝቦችን የሚመለከቱ የመጀመሪያ ትረካዎችን ያመለክታል።",
+          "references": [
+            "GEN 1-11"
+          ]
+        },
+        {
+          "term": "USFM",
+          "definition": "ለመጽሐፍ ቅዱስ ጽሑፍ ፋይሎች የሚጠቀም የተዋቀረ የምልክት ቅርጸት ነው፤ የትርጉም ስም ወይም የመጽሐፍ ቅዱስ እትም አይደለም።",
+          "references": []
+        }
+      ],
+      "timeline": [
+        {
+          "sequence": 1,
+          "event": "የፍጥረትና የገነት ትረካዎች",
+          "reference": "GEN 1:1-3:24",
+          "date_status": "ጽሑፉ ትክክለኛ ፍጹም ቀን አይጠቅስም።"
+        },
+        {
+          "sequence": 2,
+          "event": "ቃየን፣ የዘር ሐረጎች፣ ጥፋት ውኃና ባቤል",
+          "reference": "GEN 4:1-11:32",
+          "date_status": "ጽሑፉ ትክክለኛ ፍጹም ቀን አይጠቅስም።"
+        },
+        {
+          "sequence": 3,
+          "event": "አብርሃምና ሣራ",
+          "reference": "GEN 12:1-25:18",
+          "date_status": "የአባቶች ዘመን ስሌት ይከራከራል፤ የሐሰት ትክክለኛነትን ያስወግዱ።"
+        },
+        {
+          "sequence": 4,
+          "event": "ይስሐቅ፣ ያዕቆብና ኤሳው",
+          "reference": "GEN 25:19-36:43",
+          "date_status": "የትረካ ቅደም ተከተል ነው፤ በተለየ የቀን ስሌት አልተረጋገጠም።"
+        },
+        {
+          "sequence": 5,
+          "event": "ዮሴፍና ቤተሰቡ በግብፅ",
+          "reference": "GEN 37:1-50:26",
+          "date_status": "የትረካ ቅደም ተከተል ነው፤ የታሪክ ዘመን ግምቶች ይለያያሉ።"
+        }
+      ]
     }
   },
   "source_provenance": {
