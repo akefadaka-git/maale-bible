@@ -7,6 +7,45 @@ import java.io.File
 
 data class ScriptureVerse(val label: String, val text: String)
 data class ScriptureHeading(val marker: String, val text: String)
+data class ScriptureVerseComparison(val label: String, val firstText: String, val secondText: String)
+data class ScriptureSearchHit(
+    val editionId: String,
+    val bookId: String,
+    val chapterNumber: Int,
+    val verseLabel: String,
+    val text: String
+)
+
+/** Search only the packages explicitly supplied by the caller; no implicit cross-edition fallback. */
+internal fun searchScriptureChapters(
+    chapters: Collection<ScriptureChapter>,
+    query: String
+): List<ScriptureSearchHit> {
+    val needle = query.trim()
+    if (needle.isEmpty()) return emptyList()
+    return chapters.flatMap { chapter ->
+        chapter.verses.filter { it.text.contains(needle, ignoreCase = true) }.map { verse ->
+            ScriptureSearchHit(chapter.editionId, chapter.bookId, chapter.chapterNumber, verse.label, verse.text)
+        }
+    }
+}
+
+/** Align translations by verse label, refusing comparisons across different references or editions. */
+internal fun compareScriptureChapters(
+    first: ScriptureChapter,
+    second: ScriptureChapter
+): List<ScriptureVerseComparison> {
+    if (first.editionId == second.editionId ||
+        first.bookId != second.bookId ||
+        first.chapterNumber != second.chapterNumber
+    ) return emptyList()
+    val secondByLabel = second.verses.associateBy { it.label }
+    return first.verses.mapNotNull { verse ->
+        secondByLabel[verse.label]?.let { other ->
+            ScriptureVerseComparison(verse.label, verse.text, other.text)
+        }
+    }
+}
 data class ScriptureChapter(
     val editionId: String,
     val bookId: String,
