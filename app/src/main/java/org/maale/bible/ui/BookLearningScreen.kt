@@ -391,10 +391,7 @@ internal fun QuizQuestionCard(
                     ) {
                         Checkbox(
                             checked = optionId in selectedIds,
-                            onCheckedChange = { checked ->
-                                val next = if (checked) selectedIds + optionId else selectedIds - optionId
-                                onSelect(next.sorted().joinToString(","))
-                            },
+                            onCheckedChange = null,
                             enabled = !submitted
                         )
                         Text(option, style = MaterialTheme.typography.bodyMedium)
