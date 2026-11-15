@@ -48,4 +48,13 @@
     <string name="learning_answer_references">References: %1$s</string>
     <string name="learning_explanation_fallback">Explanation language: English (Amharic review pending).</string>
     <string name="learning_unknown_book">Unknown book</string>
+    <string name="learning_quiz_progress">Question %1$d of %2$d</string>
+    <string name="learning_quiz_complete">Quiz complete</string>
+    <string name="learning_quiz_final_score">Final score: %1$d of %2$d correct</string>
+    <string name="learning_next_question">Next question</string>
+    <string name="learning_see_results">See results</string>
+    <string name="learning_retry_quiz">Try again</string>
+    <string name="learning_chapter_guides_title">Chapter-by-chapter study guides</string>
+    <string name="learning_chapter_guides_pending">Chapter guides are being prepared one book at a time and will appear here after source and reference review.</string>
+    <string name="learning_chapter_number">Chapter %1$d</string>
 </resources>
