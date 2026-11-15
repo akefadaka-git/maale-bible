@@ -363,10 +363,42 @@ private fun QuizQuestionCard(
                 Text(question.difficulty, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
             }
             Text(question.prompt, style = MaterialTheme.typography.titleMedium)
-            if (question.type == "true_false") {
+            if (question.type == "short_answer") {
+                OutlinedTextField(
+                    value = selectedAnswer.orEmpty(),
+                    onValueChange = onSelect,
+                    enabled = !submitted,
+                    modifier = Modifier.fillMaxWidth().testTag("learning_quiz_short_answer"),
+                    label = { Text(stringResource(R.string.learning_quiz_short_answer_hint)) },
+                    singleLine = true
+                )
+            } else if (question.type == "true_false") {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     FilterChip(selected = selectedAnswer == "true", onClick = { onSelect("true") }, enabled = !submitted, modifier = Modifier.testTag("learning_quiz_option_true"), label = { Text(stringResource(R.string.learning_true)) })
                     FilterChip(selected = selectedAnswer == "false", onClick = { onSelect("false") }, enabled = !submitted, modifier = Modifier.testTag("learning_quiz_option_false"), label = { Text(stringResource(R.string.learning_false)) })
+                }
+            } else if (question.type == "multiple_select") {
+                val selectedIds = selectedAnswer.orEmpty().split(",").filter { it.isNotBlank() }.toSet()
+                Text(stringResource(R.string.learning_quiz_select_all_hint), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
+                question.options.forEachIndexed { index, option ->
+                    val optionId = ('A'.code + index).toChar().toString()
+                    Row(
+                        Modifier.fillMaxWidth().clickable(enabled = !submitted) {
+                            val next = if (optionId in selectedIds) selectedIds - optionId else selectedIds + optionId
+                            onSelect(next.sorted().joinToString(","))
+                        }.padding(vertical = 2.dp).testTag("learning_quiz_option_$optionId"),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Checkbox(
+                            checked = optionId in selectedIds,
+                            onCheckedChange = { checked ->
+                                val next = if (checked) selectedIds + optionId else selectedIds - optionId
+                                onSelect(next.sorted().joinToString(","))
+                            },
+                            enabled = !submitted
+                        )
+                        Text(option, style = MaterialTheme.typography.bodyMedium)
+                    }
                 }
             } else {
                 question.options.forEachIndexed { index, option ->
