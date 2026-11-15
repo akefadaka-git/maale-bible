@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-from validate_genesis_source_references import parse_usfm, validate_one
+from validate_genesis_source_references import collect_references, parse_usfm, validate_one
 
 class GenesisReferenceValidatorTests(unittest.TestCase):
     def setUp(self):
@@ -16,6 +16,11 @@ class GenesisReferenceValidatorTests(unittest.TestCase):
 
     def test_chapter_range(self):
         self.assertEqual([], validate_one("GEN 1-3", self.books))
+
+    def test_bare_genesis_structure_range_is_scoped_to_genesis(self):
+        refs = set()
+        collect_references({"range": "1–3"}, refs)
+        self.assertEqual({"GEN 1-3"}, refs)
 
     def test_cross_chapter_verse_range(self):
         self.assertEqual([], validate_one("GEN 1:2-2:4", self.books))
