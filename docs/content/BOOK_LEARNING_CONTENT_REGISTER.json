@@ -84,7 +84,7 @@
         },
         "quiz_bank": {
           "en": {
-            "status": "102_unique_items_draft_unreviewed",
+            "status": "110_unique_items_draft_unreviewed",
             "source_ids": [
               "sots-genesis",
               "usccb-genesis",
@@ -92,12 +92,12 @@
               "cambridge-pentateuch",
               "bibleproject-genesis"
             ],
-            "question_count": 102,
-            "review_status": "exact_edition_reference_validation_and_editorial_theological_review_pending",
-            "quality_note": "New items are predominantly true/false; diversify question formats and deepen explanations before approval."
+            "question_count": 110,
+            "review_status": "pinned_2008_source_reference_validation_and_independent_editorial_theological_review_pending",
+            "quality_note": "Six multiple-choice, 96 true/false, four multiple-select and four short-answer items. True/false rationales now include passage-specific draft explanations; independent review remains required."
           },
           "am": {
-            "status": "102_unique_items_draft_translation",
+            "status": "110_unique_items_draft_translation",
             "source_ids": [
               "sots-genesis",
               "usccb-genesis",
@@ -105,9 +105,9 @@
               "cambridge-pentateuch",
               "bibleproject-genesis"
             ],
-            "question_count": 102,
-            "review_status": "amharic_language_review_exact_edition_reference_validation_and_theological_review_pending",
-            "quality_note": "The current Android quiz renderer supports multiple-choice and true/false only; question-format expansion and deeper explanations remain pending."
+            "question_count": 110,
+            "review_status": "qualified_amharic_language_review_pinned_2008_source_reference_validation_and_theological_review_pending",
+            "quality_note": "Amharic draft translations of all 110 items, including four multiple-select and four short-answer items; qualified language and theological review remain pending."
           }
         },
         "memory_verses": {
@@ -4384,7 +4384,7 @@
     "release_approved_books": 0,
     "scripture_text_included": false,
     "draft_preview_policy": "DEBUG_BUILDS_ONLY",
-    "note": "Genesis remains the sole active book. All 50 English chapter guides now include structured observation, interpretation and application prompts. Quiz bank has 102 unique draft items. Exact source verse validation, content review and language review remain outstanding.",
+    "note": "Genesis has 110 English and 110 Amharic draft quiz items across four formats. Exact 2008 source-reference validator and reviewer outreach workflow are implemented; language, editorial, theological and final technical approvals remain pending.",
     "books_with_english_draft_introduction_inductive_study_and_quiz": 66,
     "books_with_amharic_translation_review_required": 45,
     "chapter_guides_completed_en_books": [
@@ -4393,7 +4393,7 @@
     "chapter_guides_en_completed_count": 1,
     "chapter_guides_en_chapters": 50,
     "chapter_guides_am_completed_count": 1,
-    "genesis_quiz_question_count": 102,
+    "genesis_quiz_question_count": 110,
     "genesis_quiz_minimum": 100,
     "genesis_key_verses": 18,
     "genesis_memory_verses": 7,
@@ -4404,7 +4404,7 @@
     "genesis_content_status": "draft_bilingual_coverage_review_required",
     "genesis_chapter_study_prompts_en": 350,
     "chapter_guides_am_chapters": 50,
-    "genesis_am_quiz_question_count": 102,
+    "genesis_am_quiz_question_count": 110,
     "genesis_chapter_guides_am": 50,
     "genesis_chapter_study_prompts_am": 350,
     "genesis_commentary_units_am": 6,
@@ -4412,6 +4412,17 @@
     "genesis_memory_verses_am": 7,
     "genesis_concordance_entries_am": 14,
     "genesis_dictionary_entries_am": 5,
-    "genesis_timeline_events_am": 5
+    "genesis_timeline_events_am": 5,
+    "genesis_quiz_multiple_choice_count": 6,
+    "genesis_quiz_true_false_count": 96,
+    "genesis_quiz_multiple_select_count": 4,
+    "genesis_quiz_short_answer_count": 4,
+    "genesis_quiz_rationale_generic_count": 0,
+    "genesis_source_reference_validator": "implemented_ci_pending_pass",
+    "genesis_maale_translation_status": "not_translated_qualified_review_requested",
+    "genesis_amharic_review_status": "draft_complete_independent_review_pending",
+    "genesis_english_editorial_review_status": "pending",
+    "genesis_theological_review_status": "pending",
+    "genesis_rights_attribution_review_status": "implemented_final_audit_pending"
   }
 }
