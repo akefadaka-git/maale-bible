@@ -32,7 +32,7 @@
     <string name="learning_quiz_title" translatable="false">Book knowledge assessment</string>
  
     <string name="learning_quiz_unavailable" translatable="false">Quiz not yet available</string>
-    <string name="learning_provenance_notice" translatable="false">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
+    <string name="learning_provenance_notice" translatable="false">Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia. Source Scripture: CC BY-SA 4.0. These are original draft learning materials, not a Maale translation. No endorsement by the rights holders is implied; adapted Scripture text must identify changes and remain CC BY-SA 4.0.</string>
     <string name="learning_setting_title" translatable="false">Historical and cultural setting</string>
     <string name="learning_audience_title" translatable="false">Original audience and purpose</string>
     <string name="learning_key_people_title" translatable="false">Key people</string>
