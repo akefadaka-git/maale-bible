@@ -145,7 +145,6 @@ object ScriptureEditionSourceRegistry {
                 else -> pending
             }
         }
-    )
 
     fun find(editionId: String): ScriptureEditionSourceRecord? = records.firstOrNull { it.editionId == editionId }
 
