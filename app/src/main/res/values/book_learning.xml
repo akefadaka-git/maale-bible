@@ -31,7 +31,7 @@
     <string name="learning_quiz_title">Book knowledge assessment</string>
  
     <string name="learning_quiz_unavailable">Quiz not yet available</string>
-    <string name="learning_provenance_notice">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
+    <string name="learning_provenance_notice">Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia. Source Scripture: CC BY-SA 4.0. Genesis study guides are original draft material and contain no direct Scripture quotations. No endorsement by the rights holders is implied. Any adapted Scripture text must identify changes and remain CC BY-SA 4.0.</string>
 
     <string name="learning_setting_title">Historical and cultural setting</string>
     <string name="learning_audience_title">Original audience and purpose</string>
