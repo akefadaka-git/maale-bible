@@ -17,6 +17,7 @@ on:
       - feat/a3-offline-study-foundation-2026-11-12
       - feat/a3-final-hardening-2026-11-13
       - integration/unified-ui-a3-2026-11-13
+      - integration/maale-learning-centre-2026-11-14
     paths:
       - 'app/**'
       - 'gradle/**'
