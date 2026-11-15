@@ -2,6 +2,7 @@ package org.maale.bible.data.content
 
 import android.content.Context
 import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -82,7 +83,22 @@ internal fun canDisplayBookLearningContent(publicationState: String, allowDraftP
         (allowDraftPreview && publicationState == "draft_not_for_release")
 
 object BookLearningContentRepository {
-    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = (context.applicationContext.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0): BookLearningContent? {
+    /**
+     * Resolve the installed target application's manifest flags from PackageManager.
+     * A configuration-wrapped LocalContext may expose wrapper metadata that is not
+     * reliable for the debug-preview gate; package metadata is authoritative.
+     */
+    private fun isDebuggableApplication(context: Context): Boolean {
+        val flags = try {
+            @Suppress("DEPRECATION")
+            context.packageManager.getApplicationInfo(context.packageName, 0).flags
+        } catch (_: PackageManager.NameNotFoundException) {
+            0
+        }
+        return flags and ApplicationInfo.FLAG_DEBUGGABLE != 0
+    }
+
+    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = isDebuggableApplication(context)): BookLearningContent? {
         val assetPath = "content/books/$bookId.json"
         val root = try {
             context.assets.open(assetPath).bufferedReader(Charsets.UTF_8).use { JSONObject(it.readText()) }
