@@ -35,14 +35,11 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Genesis is the first canonical Old Testament book. Keep this smoke
-        // path on the initially composed item instead of invoking LazyList
-        // scroll-to-node semantics, which hung on API 26 and poisoned Espresso
-        // idling for the following tests.
-        composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
-        }
+        // Genesis is below the catalogue header inside the LazyColumn. Scroll
+        // the tagged card into view explicitly; waiting for its semantics node
+        // without scrolling deadlocks when the lazy item has not been composed.
         composeRule.onNodeWithTag("book_card_GEN")
+            .performScrollTo()
             .assertIsDisplayed()
             .performClick()
     }
