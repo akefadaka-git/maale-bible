@@ -68,4 +68,6 @@
     <string name="learning_prayer_prompt_title">የጸሎት ሐሳብ</string>
     <string name="learning_commentary_title">ማብራሪያና ሥነ-መለኮታዊ ማስታወሻዎች</string>
     <string name="learning_quiz_pending">አሁን ያለው ፈተና ባለብዙ ምርጫና እውነት/ሐሰትን ብቻ ይደግፋል። ክፍተት መሙላት፣ ማዛመድ፣ አጭር መልስና የምዕራፍ ግንዛቤ ፈተናዎች ገና አልተተገበሩም። እያንዳንዱ ጥያቄ የተረጋገጠ የመጽሐፍ ቅዱስ ማጣቀሻና የተገመገመ ማብራሪያ ሊኖረው ይገባል።</string>
+    <string name="learning_quiz_short_answer_hint">መልስዎን ይጻፉ</string>
+    <string name="learning_quiz_select_all_hint">ትክክለኛ የሆኑትን ሁሉ ይምረጡ</string>
 </resources>
