@@ -180,27 +180,27 @@ The following 68 core keys previously lacked Amharic and Maale entries. They are
 
 | Resource key | English (en) | Amharic (am) | Maale wording (mdy) |
 |---|---|---|---|
-| `search_loading_editions` | Loading installed Bible editions… | English fallback (Amharic not supplied) |  |
-| `search_no_edition` | No offline scripture edition is installed on this device. | English fallback (Amharic not supplied) |  |
+| `search_loading_editions` | Loading installed Bible editions… | English fallback (Amharic not supplied) | ጫኣኒንቴ ጌኤዦ ማፃኣፖ ቡሎ ቡላኔ ... |
+| `search_no_edition` | No offline scripture edition is installed on this device. | English fallback (Amharic not supplied) | ሃኖ ሞባይሎዪዳ ዒንቴርኔቴ ባኣንቴ ቡላ ማፃኣፔ ጫኣኒንቲባኣሴ። |
 | `search_list_failed` | Installed Bible editions could not be listed. | English fallback (Amharic not supplied) |  |
-| `search_verifying_edition` | Verifying %1$s… | English fallback (Amharic not supplied) |  |
+| `search_verifying_edition` | Verifying %1$s… | English fallback (Amharic not supplied) | %1$s ጎኑማሢ ዱማሲ ዛጊሢዳኬ ... |
 | `search_selected_not_installed` | Selected edition is not installed. | English fallback (Amharic not supplied) |  |
 | `search_indexed_passages` | %1$s · %2$d indexed passages | English fallback (Amharic not supplied) |  |
-| `search_integrity_failed` | The selected scripture package failed integrity verification. | English fallback (Amharic not supplied) |  |
-| `search_result_count` | %1$d scripture results | English fallback (Amharic not supplied) |  |
+| `search_integrity_failed` | The selected scripture package failed integrity verification. | English fallback (Amharic not supplied) | ጫኣኒንቴ ማፃኣፔላ ፒዙሞ ዱማሲ ዛጋኣና ፒዚሞ ዱማሳ ፓታኖ ዓላፒባኣሴ። |
+| `search_result_count` | %1$d scripture results | English fallback (Amharic not supplied) | %1$d ኮዪንቴ ቃኣላ ጴዺፆኮ ዺቡማ |
 | `search_searching` | Searching installed scripture… | English fallback (Amharic not supplied) |  |
 | `search_accessibility` | Search installed Bible text, book names or canonical codes | English fallback (Amharic not supplied) |  |
 | `search_capability_description` | Find words and phrases across installed Bible editions. | English fallback (Amharic not supplied) |  |
 | `search_book_lookup` | Book-name and USFM-code lookup | English fallback (Amharic not supplied) |  |
 | `search_offline_full_text` | Offline full-text search in installed scripture | English fallback (Amharic not supplied) |  |
 | `search_edition_filters` | Edition filters and language-aware search | English fallback (Amharic not supplied) |  |
-| `reader_quiet_space` | A quiet space for the Word | English fallback (Amharic not supplied) |  |
-| `reader_no_sample_notice` | No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated. | English fallback (Amharic not supplied) |  |
+| `reader_quiet_space` | A quiet space for the Word | English fallback (Amharic not supplied) | ቃኣሎ ናባኒና ፃናኣኒ ዚቲ ጌዔ ቤሲ |
+| `reader_no_sample_notice` | No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated. | English fallback (Amharic not supplied) | ፔቴታዖ ዻዊሢም ማዖም ሃሳ ጊኢጊንቴ ማፃኣፔ ጴዺባኣሴ። ጊኢጊንቴ ማፃኣፖ ፃቃሚንታንዳጉዲ ፒቃዴ ዒጊንቴሢ ዛጋዖ ዬፓ ዓይፆና ፓዪዶና ማዻኔ። |
 | `reader_navigation_waiting` | Chapter and verse navigation is waiting for verified book structure. | English fallback (Amharic not supplied) |  |
 | `reader_navigation_locked` | Navigation locked — source not integrated | English fallback (Amharic not supplied) |  |
 | `library_description` | Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status. | English fallback (Amharic not supplied) |  |
-| `library_incomplete_notice` | This edition is not a complete Bible release yet. | English fallback (Amharic not supplied) |  |
-| `library_install_blocked` | Not enabled for in-app installation until editorial or rights review is complete. | English fallback (Amharic not supplied) |  |
+| `library_incomplete_notice` | This edition is not a complete Bible release yet. | English fallback (Amharic not supplied) | ሃና ሂቲሜቴላ ሃጋ ጊኢጊንቲሢዳ ዓኣሢሮ ቢያ ማፃኣፖ ኩሙሢ ቱዋሴ። |
+| `library_install_blocked` | Not enabled for in-app installation until editorial or rights review is complete. | English fallback (Amharic not supplied) | ዛጋ ዓሳ ዛጊ ጋቢሳንዳ ሄላንዳና ሃይካ ጫኣናኒ ፒቃዴ ባኣሴ። |
 | `library_open_official_source` | Open official source | English fallback (Amharic not supplied) |  |
 | `listen_title` | A listening space. | English fallback (Amharic not supplied) |  |
 | `listen_description` | A calm home for spoken Scripture, with listening and offline access designed around verified audio. | English fallback (Amharic not supplied) |  |
@@ -210,7 +210,7 @@ The following 68 core keys previously lacked Amharic and Maale entries. They are
 | `listen_no_assets` | No audio assets in this build | English fallback (Amharic not supplied) |  |
 | `listen_keep_audio` | Keep approved audio close. | English fallback (Amharic not supplied) |  |
 | `listen_download_policy` | Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented. | English fallback (Amharic not supplied) |  |
-| `study_save_error` | Your study notes could not be saved. Please try again. | English fallback (Amharic not supplied) |  |
+| `study_save_error` | Your study notes could not be saved. Please try again. | English fallback (Amharic not supplied) | ፂናቶ ፃናዒ ማሂ ጵቂሣኒ ኔ ፃኣፒ ዓርቄሢ ጊኢጊንቴ ቤዛ ጌሢፃ ጎይፃ ዔቄኔ። ዬያሮ ላሚ ጊንሣ ሞኮሬ። |
 | `study_saving` | Saving… | English fallback (Amharic not supplied) |  |
 | `study_save_reflection` | Save reflection | English fallback (Amharic not supplied) |  |
 | `study_update_reflection` | Update reflection | English fallback (Amharic not supplied) |  |
