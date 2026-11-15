@@ -20,6 +20,18 @@ class BookQuizSessionTest {
         references = listOf("GEN 1:1")
     )
 
+    private fun multiQuestion() = BookQuizQuestion(
+        id = "multi", type = "multiple_select", difficulty = "medium", prompt = "Select all",
+        options = listOf("A", "B", "C", "D"), correctOptionIds = listOf("A", "C"),
+        explanation = "Explanation", explanationLocale = "en", references = listOf("GEN 9:8-17")
+    )
+
+    private fun shortQuestion() = BookQuizQuestion(
+        id = "short", type = "short_answer", difficulty = "medium", prompt = "Name the son",
+        options = emptyList(), acceptedAnswers = listOf("Ephraim"),
+        explanation = "Explanation", explanationLocale = "en", references = listOf("GEN 41:50-52")
+    )
+
     @Test fun selectionCanBeChangedUntilSubmission() {
         val selected = BookQuizSessionState().select("q1", "A").select("q1", "B")
         assertEquals("B", selected.selectedAnswer("q1"))
@@ -45,9 +57,7 @@ class BookQuizSessionTest {
     }
 
     @Test fun finalAdvanceMovesToResultsState() {
-        val state = BookQuizSessionState()
-            .select("q1", "A").submit("q1")
-            .advance("q1", 1)
+        val state = BookQuizSessionState().select("q1", "A").submit("q1").advance("q1", 1)
         assertTrue(state.isComplete(1))
         assertEquals(1, state.currentIndex)
         assertEquals(state, state.advance("q1", 1))
@@ -63,11 +73,26 @@ class BookQuizSessionTest {
         assertEquals(1, state.correctCount(questions))
     }
 
+    @Test fun multiSelectTogglesAndStoresStableSortedOptionIds() {
+        val selected = BookQuizSessionState().toggleOption("multi", "C").toggleOption("multi", "A")
+        assertEquals("A,C", selected.selectedAnswer("multi"))
+        assertTrue(selected.submit("multi").isSubmitted("multi"))
+        assertTrue(multiQuestion().isCorrect(selected.selectedAnswer("multi")))
+        assertFalse(multiQuestion().isCorrect("A"))
+        val toggledOff = selected.toggleOption("multi", "C")
+        assertEquals("A", toggledOff.selectedAnswer("multi"))
+    }
+
+    @Test fun shortAnswerIsTrimmedAndCaseInsensitive() {
+        assertTrue(shortQuestion().isCorrect("  ephraim  "))
+        assertFalse(shortQuestion().isCorrect("Manasseh"))
+        val state = BookQuizSessionState().select("short", "Ephraim").submit("short")
+        assertTrue(state.isSubmitted("short"))
+        assertEquals(1, state.correctCount(listOf(shortQuestion())))
+    }
+
     @Test fun retryClearsAnswersScoreAndProgress() {
-        val state = BookQuizSessionState()
-            .select("q1", "A").submit("q1")
-            .advance("q1", 2)
-            .select("q2", "B")
+        val state = BookQuizSessionState().select("q1", "A").submit("q1").advance("q1", 2).select("q2", "B")
         val retry = state.restart()
         assertEquals(0, retry.currentIndex)
         assertTrue(retry.selectedAnswers.isEmpty())
