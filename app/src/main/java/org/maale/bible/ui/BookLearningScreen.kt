@@ -42,7 +42,12 @@ fun BookLearningScreen(
     var selectedEditionId by rememberSaveable { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
     val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId) ?: ScriptureEditionCatalog.editions.first()
     val book = remember(bookId) { CanonicalBookCatalog.find(bookId) }
-    val content = remember(bookId, context) { BookLearningContentRepository.load(context, bookId) }
+    // Use the module build variant as the explicit preview capability. The LocalContext is
+    // wrapped with the selected locale and may not expose ApplicationInfo flags consistently.
+    // Draft learning content remains unavailable in release builds.
+    val content = remember(bookId, context) {
+        BookLearningContentRepository.load(context, bookId, allowDraftPreview = org.maale.bible.BuildConfig.DEBUG)
+    }
     var selectedTab by rememberSaveable(bookId) { mutableStateOf(BookLearningTab.OVERVIEW) }
     val title = book?.let { stringResource(bookNameResource(it.usfmId)) } ?: bookId
     val testament = if ((book?.order ?: 0) <= 39) stringResource(R.string.explorer_old_testament) else stringResource(R.string.explorer_new_testament)
