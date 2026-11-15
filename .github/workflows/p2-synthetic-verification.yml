@@ -127,7 +127,8 @@ jobs:
           script: sh verification/android/run-emulator-tests.sh
         env:
           ANDROID_EXPECTED_API: ${{ matrix.api }}
-          ANDROID_TEST_CLASS: ${{ (github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name == 'fix/a2-remediation-complete')) && 'org.maale.bible.P2V6NavigationSmokeTest' || '' }}
+          # Run the full instrumentation suite so persistence/migration tests execute alongside navigation tests.
+          ANDROID_TEST_CLASS: ''
       - name: Upload emulator logs and instrumentation reports
         if: always()
         uses: actions/upload-artifact@v4
