@@ -82,7 +82,7 @@ internal fun canDisplayBookLearningContent(publicationState: String, allowDraftP
         (allowDraftPreview && publicationState == "draft_not_for_release")
 
 object BookLearningContentRepository {
-    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0): BookLearningContent? {
+    fun load(context: Context, bookId: String, allowDraftPreview: Boolean = (context.applicationContext.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0): BookLearningContent? {
         val assetPath = "content/books/$bookId.json"
         val root = try {
             context.assets.open(assetPath).bufferedReader(Charsets.UTF_8).use { JSONObject(it.readText()) }
