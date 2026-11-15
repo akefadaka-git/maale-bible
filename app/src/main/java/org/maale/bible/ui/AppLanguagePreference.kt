@@ -21,7 +21,7 @@ enum class AppLanguage(val tag: String) {
             context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
                 .edit()
                 .putString(KEY_LANGUAGE, language.tag)
-                .apply()
+                .commit()
         }
     }
 }
