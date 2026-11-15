@@ -66,4 +66,5 @@
     <string name="learning_discussion_prompts_title">Discussion questions</string>
     <string name="learning_chapter_review_title">Chapter review</string>
     <string name="learning_prayer_prompt_title">Prayer prompt</string>
+    <string name="learning_commentary_title">Commentary and theological notes</string>
 </resources>
