@@ -15,6 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.maale.bible.R
 import org.maale.bible.data.catalog.CanonicalBookCatalog
+import org.maale.bible.data.content.BookChapterGuide
 import org.maale.bible.data.content.BookInductiveStudy
 import org.maale.bible.data.content.BookLearningContent
 import org.maale.bible.data.content.BookLearningContentRepository
@@ -213,6 +214,33 @@ private fun InductiveContent(content: BookLearningContent?) {
         DraftWarning(content)
         Text(stringResource(R.string.learning_inductive_intro), style = MaterialTheme.typography.bodyMedium)
         content.inductiveStudies.forEach { study -> InductiveStudyCard(study) }
+        if (content.chapterGuides.isNotEmpty()) {
+            Text(stringResource(R.string.learning_chapter_guides_title), style = MaterialTheme.typography.headlineSmall)
+            content.chapterGuides.forEach { guide -> ChapterGuideCard(guide) }
+        } else {
+            LearningSectionCard(stringResource(R.string.learning_chapter_guides_title), stringResource(R.string.learning_chapter_guides_pending))
+        }
+    }
+}
+
+@Composable
+private fun ChapterGuideCard(guide: BookChapterGuide) {
+    Card(
+        modifier = Modifier.fillMaxWidth().testTag("learning_chapter_guide_${guide.chapter}"),
+        shape = MaterialTheme.shapes.large,
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+    ) {
+        Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(stringResource(R.string.learning_chapter_number, guide.chapter), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.secondary)
+            Text(guide.title, style = MaterialTheme.typography.titleMedium)
+            Text(guide.summary, style = MaterialTheme.typography.bodyMedium)
+            LearningListCard(stringResource(R.string.learning_observation_title), guide.observation)
+            LearningListCard(stringResource(R.string.learning_interpretation_title), guide.interpretation)
+            LearningListCard(stringResource(R.string.learning_application_title), guide.application)
+            if (guide.references.isNotEmpty()) {
+                Text(stringResource(R.string.learning_answer_references, guide.references.joinToString()), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.secondary)
+            }
+        }
     }
 }
 
