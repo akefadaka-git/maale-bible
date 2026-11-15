@@ -46,13 +46,10 @@
         },
         "chapter_guides": {
           "en": {
-            "status": "draft_source_based_review_required",
-            "source_ids": [
-              "usccb-genesis",
-              "bibleorg-genesis-outline"
-            ],
-            "chapter_count": 50,
-            "review_status": "50_draft_guides_present; passage_level_reference_and_editorial_review_pending"
+            "status": "50_chapter_guides_with_structured_study_prompts_draft",
+            "count": 50,
+            "study_prompt_count": 350,
+            "review_status": "exact_edition_source_check_and_editorial_theological_review_pending"
           },
           "am": {
             "status": "not_translated",
@@ -87,7 +84,7 @@
         },
         "quiz_bank": {
           "en": {
-            "status": "draft_100_plus_items_pending_reference_validation",
+            "status": "102_unique_items_draft_unreviewed",
             "source_ids": [
               "sots-genesis",
               "usccb-genesis",
@@ -96,7 +93,8 @@
               "bibleproject-genesis"
             ],
             "question_count": 102,
-            "review_status": "edition_specific_reference_validation_and_editorial_theological_review_pending"
+            "review_status": "exact_edition_reference_validation_and_editorial_theological_review_pending",
+            "quality_note": "New items are predominantly true/false; diversify question formats and deepen explanations before approval."
           },
           "am": {
             "status": "draft_unreviewed",
@@ -4384,7 +4382,7 @@
     "release_approved_books": 0,
     "scripture_text_included": false,
     "draft_preview_policy": "DEBUG_BUILDS_ONLY",
-    "note": "Genesis is the sole active book for sequential authoring. Its draft English quiz bank now has 102 unique items; source-reference validation, editorial/theological review and target-language translation remain incomplete.",
+    "note": "Genesis remains the sole active book. All 50 English chapter guides now include structured observation, interpretation and application prompts. Quiz bank has 102 unique draft items. Exact source verse validation, content review and language review remain outstanding.",
     "books_with_english_draft_introduction_inductive_study_and_quiz": 66,
     "books_with_amharic_translation_review_required": 45,
     "chapter_guides_completed_en_books": [
@@ -4401,6 +4399,7 @@
     "genesis_dictionary_entries": 5,
     "genesis_commentary_units": 6,
     "genesis_chapter_guides_en": 50,
-    "genesis_content_status": "draft_review_required"
+    "genesis_content_status": "draft_review_required",
+    "genesis_chapter_study_prompts_en": 350
   }
 }
