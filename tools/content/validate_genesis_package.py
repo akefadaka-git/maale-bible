@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DOC = ROOT / "docs/content/books/GEN.json"
 ASSET = ROOT / "app/src/main/assets/content/books/GEN.json"
-REF = re.compile(r"\\b(GEN|EXO)\\s+(\\d+)(?::(\\d+))?")
+REF = re.compile(r"\b(GEN|EXO)\s+(\d+)(?::(\d+))?")
 
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
@@ -98,6 +98,6 @@ def validate() -> list[str]:
 if __name__ == "__main__":
     problems = validate()
     if problems:
-        print("\\n".join(problems), file=sys.stderr)
+        print("\n".join(problems), file=sys.stderr)
         raise SystemExit(1)
     print("PASS: Genesis EN/AM coverage, quiz-answer parity, references, draft gate and Android asset mirror.")
