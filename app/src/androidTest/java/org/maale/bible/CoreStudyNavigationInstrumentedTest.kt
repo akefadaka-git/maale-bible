@@ -45,8 +45,11 @@ class CoreStudyNavigationInstrumentedTest {
     @Before fun selectEnglishForEnglishAssertions() {
         ScriptureEditionSelectionStore.save(compose.activity, ScriptureEditionCatalog.PRIMARY_MAALE_ID)
         AppLanguage.save(compose.activity, AppLanguage.ENGLISH)
+        assertEquals("English test locale must be persisted before activity recreation", AppLanguage.ENGLISH, AppLanguage.load(compose.activity))
         compose.activityRule.scenario.recreate()
         compose.waitForIdle()
+        assertEquals("Recreated activity must retain English test locale", AppLanguage.ENGLISH, AppLanguage.load(compose.activity))
+        assertEquals("Recreated activity resources must use English", "en", compose.activity.resources.configuration.locales[0].language)
         val repository = StudyDatabase(compose.activity.applicationContext)
         repository.getBookmarks().forEach { repository.removeBookmark(it.id) }
         repository.close()
@@ -114,6 +117,9 @@ class CoreStudyNavigationInstrumentedTest {
         val debugContent = BookLearningContentRepository.load(compose.activity, "GEN")
         Log.i("LEARNING_CONTENT_DIAGNOSTIC", "locale=${compose.activity.resources.configuration.locales.toLanguageTags()}; appLanguage=${AppLanguage.load(compose.activity)}; debuggable=${compose.activity.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE != 0}; contentLoaded=${debugContent != null}; publicationState=${debugContent?.publicationState}; quizCount=${debugContent?.quizQuestions?.size}; chapterGuideCount=${debugContent?.chapterGuides?.size}")
         assertNotNull("Genesis learning package must load in the debug test build", debugContent)
+        assertEquals("Genesis content must follow the English test locale", "en", debugContent?.locale)
+        assertEquals("Genesis quiz must expose its first question", "GEN-Q01", debugContent?.quizQuestions?.firstOrNull()?.id)
+        assertEquals("Genesis chapter guides must expose chapter one", 1, debugContent?.chapterGuides?.firstOrNull()?.chapter)
         compose.onNodeWithTag("navigation_books").performClick()
         waitForTag("books_screen")
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
