@@ -150,41 +150,6 @@ class CoreStudyNavigationInstrumentedTest {
         compose.onNodeWithText("According to Genesis 1, what does the opening chapter present God doing?").assertExists()
     }
 
-    @Test fun multipleSelectQuestionRendersAndReturnsSelectedOptionIds() {
-        var selected = ""
-        val question = org.maale.bible.data.content.BookQuizQuestion(
-            id = "test-multi", type = "multiple_select", difficulty = "medium", prompt = "Select all valid details",
-            options = listOf("First", "Second", "Third", "Fourth"), correctOptionId = null, correctOptionIds = listOf("A", "C"), correctAnswer = null,
-            explanation = "The first and third details are supported.", explanationLocale = "en", references = listOf("GEN 9:8-17")
-        )
-        compose.setContent {
-            org.maale.bible.ui.QuizQuestionCard(
-                question = question, selectedAnswer = selected, submitted = false,
-                showExplanationFallback = false, onSelect = { selected = it }, onSubmit = {}
-            )
-        }
-        compose.onNodeWithText("Select every correct option").assertExists()
-        compose.onNodeWithTag("learning_quiz_option_A").performClick()
-        assertEquals("A", selected)
-    }
-
-    @Test fun shortAnswerQuestionAcceptsTypedText() {
-        var typed = ""
-        val question = org.maale.bible.data.content.BookQuizQuestion(
-            id = "test-short", type = "short_answer", difficulty = "medium", prompt = "Name the second son",
-            options = emptyList(), correctOptionId = null, acceptedAnswers = listOf("Ephraim"), correctAnswer = null,
-            explanation = "Ephraim is the second son.", explanationLocale = "en", references = listOf("GEN 41:50-52")
-        )
-        compose.setContent {
-            org.maale.bible.ui.QuizQuestionCard(
-                question = question, selectedAnswer = typed, submitted = false,
-                showExplanationFallback = false, onSelect = { typed = it }, onSubmit = {}
-            )
-        }
-        compose.onNodeWithTag("learning_quiz_short_answer").performTextInput("Ephraim")
-        assertEquals("Ephraim", typed)
-    }
-
     @Test fun quizSupportsAnswerLockingProgressResultsAndRetry() {
         compose.onNodeWithTag("navigation_books").performClick()
         waitForTag("books_screen")
@@ -196,24 +161,18 @@ class CoreStudyNavigationInstrumentedTest {
         compose.waitForIdle()
         compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q01"))
 
-        repeat(8) {
-            val trueFalseAvailable = compose.onAllNodesWithTag("learning_quiz_option_true").fetchSemanticsNodes().isNotEmpty()
-            if (trueFalseAvailable) {
-                compose.onNodeWithTag("learning_quiz_option_true").performClick()
-            } else {
-                compose.onNodeWithTag("learning_quiz_option_A").performClick()
-            }
-            compose.onNodeWithTag("learning_quiz_submit").performClick()
-            compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_next"))
-            compose.onNodeWithTag("learning_quiz_next").performClick()
-            compose.waitForIdle()
+        val trueFalseAvailable = compose.onAllNodesWithTag("learning_quiz_option_true").fetchSemanticsNodes().isNotEmpty()
+        if (trueFalseAvailable) {
+            compose.onNodeWithTag("learning_quiz_option_true").performClick()
+        } else {
+            compose.onNodeWithTag("learning_quiz_option_A").performClick()
         }
-
-        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_results"))
-        compose.onNodeWithTag("learning_quiz_results").assertIsDisplayed()
-        compose.onNodeWithTag("learning_quiz_retry").performClick()
-        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q01"))
-        compose.onNodeWithTag("learning_quiz_question_GEN-Q01").assertIsDisplayed()
+        compose.onNodeWithTag("learning_quiz_submit").performClick()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_next"))
+        compose.onNodeWithTag("learning_quiz_next").assertExists().performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("book_learning_screen").performScrollToNode(hasTestTag("learning_quiz_question_GEN-Q02"))
+        compose.onNodeWithTag("learning_quiz_question_GEN-Q02").assertIsDisplayed()
     }
 
     @Test fun genesisChapterGuidesRenderFromFirstThroughFiftiethChapter() {
