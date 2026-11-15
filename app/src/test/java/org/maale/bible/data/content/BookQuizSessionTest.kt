@@ -22,13 +22,13 @@ class BookQuizSessionTest {
 
     private fun multiQuestion() = BookQuizQuestion(
         id = "multi", type = "multiple_select", difficulty = "medium", prompt = "Select all",
-        options = listOf("A", "B", "C", "D"), correctOptionIds = listOf("A", "C"),
+        options = listOf("A", "B", "C", "D"), correctOptionId = null, correctOptionIds = listOf("A", "C"), correctAnswer = null,
         explanation = "Explanation", explanationLocale = "en", references = listOf("GEN 9:8-17")
     )
 
     private fun shortQuestion() = BookQuizQuestion(
         id = "short", type = "short_answer", difficulty = "medium", prompt = "Name the son",
-        options = emptyList(), acceptedAnswers = listOf("Ephraim"),
+        options = emptyList(), correctOptionId = null, acceptedAnswers = listOf("Ephraim"), correctAnswer = null,
         explanation = "Explanation", explanationLocale = "en", references = listOf("GEN 41:50-52")
     )
 
