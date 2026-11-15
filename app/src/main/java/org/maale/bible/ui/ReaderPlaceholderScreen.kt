@@ -35,7 +35,6 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             ?.let { ReaderNavigation(it.bookId, it.chapter, it.verse) } ?: ReaderNavigation(bookId))
     }
     var selectedEditionId by rememberSaveable(bookId) { mutableStateOf(ScriptureEditionSelectionStore.load(context)) }
-    var editionMenuExpanded by remember { mutableStateOf(false) }
     val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId)
         ?: ScriptureEditionCatalog.editions.first()
     val scriptureResult = remember(context, bookId, navigation.chapter, selectedEditionId) {
@@ -58,20 +57,13 @@ fun ReaderPlaceholderScreen(bookId: String, repository: StudyRepository, onBack:
             TextButton(onClick = onBack) { Text(stringResource(R.string.reader_back_to_books)) }
         }
         Text(stringResource(R.string.reader_position), style = MaterialTheme.typography.titleMedium)
-        Box {
-            OutlinedButton(onClick = { editionMenuExpanded = true }, modifier = Modifier.fillMaxWidth().testTag("reader_edition_selector")) {
-                Text("${selectedEdition.languageName}: ${selectedEdition.title}")
-            }
-            DropdownMenu(expanded = editionMenuExpanded, onDismissRequest = { editionMenuExpanded = false }) {
-                ScriptureEditionCatalog.editions.forEach { edition ->
-                    DropdownMenuItem(
-                        text = { Column { Text(edition.title); Text("${edition.languageName} · ${edition.status.name}", style = MaterialTheme.typography.labelSmall) } },
-                        modifier = Modifier.testTag("reader_edition_${edition.id}"),
-                        onClick = { if (ScriptureEditionSelectionStore.save(context, edition.id)) selectedEditionId = edition.id; editionMenuExpanded = false }
-                    )
-                }
-            }
-        }
+        ScriptureEditionSelector(
+            selectedEditionId = selectedEditionId,
+            onEditionSelected = { editionId ->
+                if (ScriptureEditionSelectionStore.save(context, editionId)) selectedEditionId = editionId
+            },
+            selectorTag = "reader_edition_selector"
+        )
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.reader_position_coordinates, navigation.chapter, navigation.verse), modifier = Modifier.testTag("reader_current_position"), style = MaterialTheme.typography.titleLarge)
