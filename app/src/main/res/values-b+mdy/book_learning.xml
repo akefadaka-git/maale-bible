@@ -8,7 +8,7 @@
     <string name="learning_book_metadata" translatable="false">%1$s · Canonical position %2$d</string>
     <string name="learning_centre_title" translatable="false">Bible book learning centre</string>
     <string name="learning_centre_description" translatable="false">A dedicated place for the book introduction, historical context, outline, themes, guided study and knowledge checks.</string>
-    <string name="learning_bilingual_status" translatable="false">English and Amharic content tracks · source and editorial review pending</string>
+    <string name="learning_bilingual_status" translatable="false">English and Amharic draft content tracks · Maale translation, source and editorial review pending</string>
     <string name="learning_introduction_title" translatable="false">Book introduction · English and Amharic</string>
     <string name="learning_introduction_pending" translatable="false">A book-specific introduction will be published here in both languages after source verification and editorial review. No generic text is presented as a researched introduction.</string>
     <string name="learning_background_title" translatable="false">Author, date and historical setting</string>
@@ -30,7 +30,7 @@
     <string name="learning_study_guide_pending_title" translatable="false">Book-specific inductive study guide</string>
     <string name="learning_study_guide_pending" translatable="false">Chapter guides, discussion questions, reflection exercises and group-study material will be added after the book content and references are verified.</string>
     <string name="learning_quiz_title" translatable="false">Book knowledge assessment</string>
-    <string name="learning_quiz_pending" translatable="false">English and Amharic quizzes will include multiple choice, true or false, completion, matching, chapter comprehension and book-wide review. Each answer will include an explanation and a verified scripture reference.</string>
+ 
     <string name="learning_quiz_unavailable" translatable="false">Quiz not yet available</string>
     <string name="learning_provenance_notice" translatable="false">Content gate: scripture, introductions, study guides and quiz banks are separate content types. Each requires its own source, licence or permission, attribution, language review and edition compatibility record. Unverified content is not shown as approved.</string>
     <string name="learning_setting_title" translatable="false">Historical and cultural setting</string>
@@ -38,7 +38,7 @@
     <string name="learning_key_people_title" translatable="false">Key people</string>
     <string name="learning_interpretive_care_title" translatable="false">Interpretive cautions</string>
     <string name="learning_source_count" translatable="false">%1$d research sources recorded · see the content package for references</string>
-    <string name="learning_draft_warning" translatable="false">INTERNAL DRAFT — not approved for release. English editorial review and Amharic language review are still required.</string>
+    <string name="learning_draft_warning" translatable="false">INTERNAL DRAFT — not approved for release. Maale translation and language review, English editorial review, and source/theological verification are still required.</string>
     <string name="learning_quiz_score" translatable="false">Checked answers: %1$d · correct: %2$d</string>
     <string name="learning_true" translatable="false">True</string>
     <string name="learning_false" translatable="false">False</string>
@@ -46,7 +46,7 @@
     <string name="learning_answer_correct" translatable="false">Correct</string>
     <string name="learning_answer_incorrect" translatable="false">Not quite — review the explanation</string>
     <string name="learning_answer_references" translatable="false">References: %1$s</string>
-    <string name="learning_explanation_fallback" translatable="false">Explanation language: English (Amharic review pending).</string>
+    <string name="learning_explanation_fallback" translatable="false">Explanation language: English (Maale translation and review pending).</string>
     <string name="learning_unknown_book" translatable="false">Unknown book</string>
     <string name="learning_quiz_progress">Question %1$d of %2$d</string>
     <string name="learning_quiz_complete">Quiz complete</string>
