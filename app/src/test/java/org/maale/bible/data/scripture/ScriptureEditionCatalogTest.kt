@@ -7,10 +7,11 @@ import org.junit.Test
 
 class ScriptureEditionCatalogTest {
     @Test
-    fun catalogueContainsMaalePrimaryFourAmharicAndAtLeastFortyTwoFullEnglishEditions() {
+    fun catalogueContainsMaalePrimaryFourAmharicAndAtLeastFortyTwoFullBibleCandidates() {
         assertNotNull(ScriptureEditionCatalog.find(ScriptureEditionCatalog.PRIMARY_MAALE_ID))
         assertEquals(4, ScriptureEditionCatalog.amharicEditions.size)
         assertTrue(ScriptureEditionCatalog.englishEditions.count { it.fullBible } >= 42)
+        assertTrue(ScriptureEditionCatalog.englishEditions.all { it.status == ScriptureEditionStatus.CATALOG_ONLY_RIGHTS_UNVERIFIED })
     }
 
     @Test
