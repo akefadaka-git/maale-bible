@@ -385,7 +385,7 @@
           "difficulty": "easy",
           "prompt": "Genesis opens with God creating the heavens and the earth.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 1:1, the narrative records this detail: Genesis opens with God creating the heavens and the earth. It belongs to creation and human disobedience.",
           "references": [
             "GEN 1:1"
           ],
@@ -398,7 +398,7 @@
           "difficulty": "medium",
           "prompt": "The first creation account ends with the seventh day being blessed and made holy.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 2:1-3) includes the stated event: The first creation account ends with the seventh day being blessed and made holy. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 2:1-3"
           ],
@@ -411,7 +411,7 @@
           "difficulty": "medium",
           "prompt": "The sun, moon and stars are described as appearing on the first day.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Genesis 1:14–19 places the lights in the sky on the fourth day, not the first; the statement moves them to the wrong day.",
           "references": [
             "GEN 1:14-19"
           ],
@@ -424,7 +424,7 @@
           "difficulty": "hard",
           "prompt": "Humanity is described as created in God's image.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 1:26-27: Humanity is described as created in God's image. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 1:26-27"
           ],
@@ -437,7 +437,7 @@
           "difficulty": "easy",
           "prompt": "The first human is formed from the dust of the ground.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 2:7—The first human is formed from the dust of the ground. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 2:7"
           ],
@@ -450,7 +450,7 @@
           "difficulty": "medium",
           "prompt": "The garden of Eden is planted by the LORD God.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 2:8 places this action or relationship within creation and human disobedience: The garden of Eden is planted by the LORD God.",
           "references": [
             "GEN 2:8"
           ],
@@ -463,7 +463,7 @@
           "difficulty": "medium",
           "prompt": "The man is told not to eat from the tree of the knowledge of good and evil.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 2:16-17, the narrative records this detail: The man is told not to eat from the tree of the knowledge of good and evil. It belongs to creation and human disobedience.",
           "references": [
             "GEN 2:16-17"
           ],
@@ -476,7 +476,7 @@
           "difficulty": "hard",
           "prompt": "The woman is described as formed from the man's side.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 2:21-23) includes the stated event: The woman is described as formed from the man's side. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 2:21-23"
           ],
@@ -489,7 +489,7 @@
           "difficulty": "easy",
           "prompt": "The serpent questions the command given by God.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 3:1-5: The serpent questions the command given by God. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 3:1-5"
           ],
@@ -502,7 +502,7 @@
           "difficulty": "medium",
           "prompt": "After eating, the man and woman hide from God.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 3:7-10—After eating, the man and woman hide from God. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 3:7-10"
           ],
@@ -515,7 +515,7 @@
           "difficulty": "medium",
           "prompt": "The man accepts responsibility without blaming anyone else.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "In Genesis 3:12 the man points to the woman and says she gave him the fruit. His reply shifts blame rather than accepting responsibility without blaming anyone.",
           "references": [
             "GEN 3:12"
           ],
@@ -528,7 +528,7 @@
           "difficulty": "hard",
           "prompt": "The humans are sent out of the garden after disobedience.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 3:22-24 places this action or relationship within creation and human disobedience: The humans are sent out of the garden after disobedience.",
           "references": [
             "GEN 3:22-24"
           ],
@@ -541,7 +541,7 @@
           "difficulty": "easy",
           "prompt": "Cain is a farmer and Abel keeps flocks.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 4:2, the narrative records this detail: Cain is a farmer and Abel keeps flocks. It belongs to creation and human disobedience.",
           "references": [
             "GEN 4:2"
           ],
@@ -554,7 +554,7 @@
           "difficulty": "medium",
           "prompt": "Cain kills Abel.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 4:8) includes the stated event: Cain kills Abel. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 4:8"
           ],
@@ -567,7 +567,7 @@
           "difficulty": "medium",
           "prompt": "Cain answers that he is his brother's keeper.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Cain responds with the question, “Am I my brother’s keeper?” in Genesis 4:9; he does not answer that he is his keeper.",
           "references": [
             "GEN 4:9"
           ],
@@ -580,7 +580,7 @@
           "difficulty": "hard",
           "prompt": "Seth is born after the account of Abel's death.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 4:25: Seth is born after the account of Abel's death. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 4:25"
           ],
@@ -593,7 +593,7 @@
           "difficulty": "easy",
           "prompt": "Enoch walks with God and is taken by God.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 5:21-24—Enoch walks with God and is taken by God. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 5:21-24"
           ],
@@ -606,7 +606,7 @@
           "difficulty": "medium",
           "prompt": "Noah finds favor in the eyes of the LORD.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 6:8 places this action or relationship within creation and human disobedience: Noah finds favor in the eyes of the LORD.",
           "references": [
             "GEN 6:8"
           ],
@@ -619,7 +619,7 @@
           "difficulty": "medium",
           "prompt": "Noah is instructed to build an ark.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 6:13-22, the narrative records this detail: Noah is instructed to build an ark. It belongs to creation and human disobedience.",
           "references": [
             "GEN 6:13-22"
           ],
@@ -632,7 +632,7 @@
           "difficulty": "hard",
           "prompt": "The flood narrative says the earth was filled with violence.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 6:11-13) includes the stated event: The flood narrative says the earth was filled with violence. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 6:11-13"
           ],
@@ -645,7 +645,7 @@
           "difficulty": "easy",
           "prompt": "Noah sends out a raven and then a dove.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 8:6-12: Noah sends out a raven and then a dove. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 8:6-12"
           ],
@@ -658,7 +658,7 @@
           "difficulty": "medium",
           "prompt": "The rainbow is given as a covenant sign.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 9:12-17—The rainbow is given as a covenant sign. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 9:12-17"
           ],
@@ -671,7 +671,7 @@
           "difficulty": "medium",
           "prompt": "Noah's sons are Shem, Ham and Japheth.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 9:18 places this action or relationship within creation and human disobedience: Noah's sons are Shem, Ham and Japheth.",
           "references": [
             "GEN 9:18"
           ],
@@ -684,7 +684,7 @@
           "difficulty": "hard",
           "prompt": "The Babel story describes one language before the scattering.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 11:1-9, the narrative records this detail: The Babel story describes one language before the scattering. It belongs to creation and human disobedience.",
           "references": [
             "GEN 11:1-9"
           ],
@@ -697,7 +697,7 @@
           "difficulty": "easy",
           "prompt": "Abram's original home is associated with Ur of the Chaldeans.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 11:27-31) includes the stated event: Abram's original home is associated with Ur of the Chaldeans. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 11:27-31"
           ],
@@ -710,7 +710,7 @@
           "difficulty": "medium",
           "prompt": "Abram is called to leave his country and go to a land God will show him.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 12:1: Abram is called to leave his country and go to a land God will show him. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 12:1"
           ],
@@ -723,7 +723,7 @@
           "difficulty": "medium",
           "prompt": "The promise to Abram includes blessing for the families of the earth.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 12:2-3—The promise to Abram includes blessing for the families of the earth. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 12:2-3"
           ],
@@ -736,7 +736,7 @@
           "difficulty": "hard",
           "prompt": "Abram travels to Egypt during a famine.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 12:10 places this action or relationship within creation and human disobedience: Abram travels to Egypt during a famine.",
           "references": [
             "GEN 12:10"
           ],
@@ -749,7 +749,7 @@
           "difficulty": "easy",
           "prompt": "Lot and Abram separate because their possessions and herds are too extensive to remain together.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 13:5-12, the narrative records this detail: Lot and Abram separate because their possessions and herds are too extensive to remain together. It belongs to creation and human disobedience.",
           "references": [
             "GEN 13:5-12"
           ],
@@ -762,7 +762,7 @@
           "difficulty": "medium",
           "prompt": "Abram rescues Lot after a battle involving local kings.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 14:1-16) includes the stated event: Abram rescues Lot after a battle involving local kings. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 14:1-16"
           ],
@@ -775,7 +775,7 @@
           "difficulty": "medium",
           "prompt": "Melchizedek is king of Salem and priest of God Most High.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 14:18: Melchizedek is king of Salem and priest of God Most High. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 14:18"
           ],
@@ -788,7 +788,7 @@
           "difficulty": "hard",
           "prompt": "Abram is promised descendants as numerous as the stars.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 15:5—Abram is promised descendants as numerous as the stars. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 15:5"
           ],
@@ -801,7 +801,7 @@
           "difficulty": "easy",
           "prompt": "Abram's faith is counted to him as righteousness.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 15:6 places this action or relationship within creation and human disobedience: Abram's faith is counted to him as righteousness.",
           "references": [
             "GEN 15:6"
           ],
@@ -814,7 +814,7 @@
           "difficulty": "medium",
           "prompt": "Hagar is Sarah's Egyptian servant.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 16:1, the narrative records this detail: Hagar is Sarah's Egyptian servant. It belongs to creation and human disobedience.",
           "references": [
             "GEN 16:1"
           ],
@@ -827,7 +827,7 @@
           "difficulty": "medium",
           "prompt": "Ishmael is the son of Abram and Hagar.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 16:15) includes the stated event: Ishmael is the son of Abram and Hagar. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 16:15"
           ],
@@ -840,7 +840,7 @@
           "difficulty": "hard",
           "prompt": "Abram's name is changed to Abraham.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 17:5: Abram's name is changed to Abraham. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 17:5"
           ],
@@ -853,7 +853,7 @@
           "difficulty": "easy",
           "prompt": "Sarai's name is changed to Sarah.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 17:15—Sarai's name is changed to Sarah. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 17:15"
           ],
@@ -866,7 +866,7 @@
           "difficulty": "medium",
           "prompt": "Circumcision is established as a sign of the covenant.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 17:9-14 places this action or relationship within creation and human disobedience: Circumcision is established as a sign of the covenant.",
           "references": [
             "GEN 17:9-14"
           ],
@@ -879,7 +879,7 @@
           "difficulty": "medium",
           "prompt": "Sarah laughs when she hears the promise that she will have a son.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 18:9-15, the narrative records this detail: Sarah laughs when she hears the promise that she will have a son. It belongs to creation and human disobedience.",
           "references": [
             "GEN 18:9-15"
           ],
@@ -892,7 +892,7 @@
           "difficulty": "hard",
           "prompt": "Abraham intercedes concerning the fate of Sodom.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 18:22-33) includes the stated event: Abraham intercedes concerning the fate of Sodom. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 18:22-33"
           ],
@@ -905,7 +905,7 @@
           "difficulty": "easy",
           "prompt": "Lot's wife looks back while fleeing Sodom.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 19:26: Lot's wife looks back while fleeing Sodom. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 19:26"
           ],
@@ -918,7 +918,7 @@
           "difficulty": "medium",
           "prompt": "Isaac is born when Abraham is one hundred years old.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 21:1-5—Isaac is born when Abraham is one hundred years old. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 21:1-5"
           ],
@@ -931,7 +931,7 @@
           "difficulty": "medium",
           "prompt": "Hagar and Ishmael are sent away before Isaac is born.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Isaac has already been born and weaned before Sarah asks Abraham to send Hagar and Ishmael away (Genesis 21:8–14).",
           "references": [
             "GEN 21:8-14"
           ],
@@ -944,7 +944,7 @@
           "difficulty": "hard",
           "prompt": "Abraham is tested concerning Isaac.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 22:1-2 places this action or relationship within creation and human disobedience: Abraham is tested concerning Isaac.",
           "references": [
             "GEN 22:1-2"
           ],
@@ -957,7 +957,7 @@
           "difficulty": "easy",
           "prompt": "A ram is offered instead of Isaac.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 22:13, the narrative records this detail: A ram is offered instead of Isaac. It belongs to creation and human disobedience.",
           "references": [
             "GEN 22:13"
           ],
@@ -970,7 +970,7 @@
           "difficulty": "medium",
           "prompt": "Sarah is buried in the cave of Machpelah.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 23:1-20) includes the stated event: Sarah is buried in the cave of Machpelah. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 23:1-20"
           ],
@@ -983,7 +983,7 @@
           "difficulty": "medium",
           "prompt": "Rebekah becomes Isaac's wife.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 24:57-67: Rebekah becomes Isaac's wife. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 24:57-67"
           ],
@@ -996,7 +996,7 @@
           "difficulty": "hard",
           "prompt": "Esau is born before Jacob.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 25:24-26—Esau is born before Jacob. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 25:24-26"
           ],
@@ -1009,7 +1009,7 @@
           "difficulty": "easy",
           "prompt": "Esau sells his birthright for food.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 25:29-34 places this action or relationship within creation and human disobedience: Esau sells his birthright for food.",
           "references": [
             "GEN 25:29-34"
           ],
@@ -1022,7 +1022,7 @@
           "difficulty": "medium",
           "prompt": "Isaac is told by God to remain in the land during famine.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 26:1-6, the narrative records this detail: Isaac is told by God to remain in the land during famine. It belongs to creation and human disobedience.",
           "references": [
             "GEN 26:1-6"
           ],
@@ -1035,7 +1035,7 @@
           "difficulty": "medium",
           "prompt": "Jacob receives Isaac's blessing while disguised as Esau.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 27:1-29) includes the stated event: Jacob receives Isaac's blessing while disguised as Esau. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 27:1-29"
           ],
@@ -1048,7 +1048,7 @@
           "difficulty": "hard",
           "prompt": "Esau plans to kill Jacob after the blessing.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 27:41: Esau plans to kill Jacob after the blessing. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 27:41"
           ],
@@ -1061,7 +1061,7 @@
           "difficulty": "easy",
           "prompt": "Jacob dreams of a stairway reaching to heaven at Bethel.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 28:10-17—Jacob dreams of a stairway reaching to heaven at Bethel. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 28:10-17"
           ],
@@ -1074,7 +1074,7 @@
           "difficulty": "medium",
           "prompt": "Laban gives Rachel to Jacob before Leah.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Laban gives Leah to Jacob first; Rachel is given later after Jacob agrees to serve another seven years (Genesis 29:21–30).",
           "references": [
             "GEN 29:21-30"
           ],
@@ -1087,7 +1087,7 @@
           "difficulty": "medium",
           "prompt": "Leah bears sons before Rachel bears Joseph.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 29:31-35; 30:22-24 places this action or relationship within creation and human disobedience: Leah bears sons before Rachel bears Joseph.",
           "references": [
             "GEN 29:31-35; 30:22-24"
           ],
@@ -1100,7 +1100,7 @@
           "difficulty": "hard",
           "prompt": "Jacob wrestles through the night at Peniel.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 32:22-32, the narrative records this detail: Jacob wrestles through the night at Peniel. It belongs to creation and human disobedience.",
           "references": [
             "GEN 32:22-32"
           ],
@@ -1113,7 +1113,7 @@
           "difficulty": "easy",
           "prompt": "Jacob receives the name Israel.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 32:28) includes the stated event: Jacob receives the name Israel. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 32:28"
           ],
@@ -1126,7 +1126,7 @@
           "difficulty": "medium",
           "prompt": "Esau embraces Jacob when they meet again.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 33:1-11: Esau embraces Jacob when they meet again. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 33:1-11"
           ],
@@ -1139,7 +1139,7 @@
           "difficulty": "medium",
           "prompt": "Dinah is the daughter of Jacob and Leah.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 30:21; 34:1—Dinah is the daughter of Jacob and Leah. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 30:21; 34:1"
           ],
@@ -1152,7 +1152,7 @@
           "difficulty": "hard",
           "prompt": "Benjamin is younger than Joseph.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 35:16-18 places this action or relationship within creation and human disobedience: Benjamin is younger than Joseph.",
           "references": [
             "GEN 35:16-18"
           ],
@@ -1165,7 +1165,7 @@
           "difficulty": "easy",
           "prompt": "Joseph receives a distinctive robe from Jacob.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 37:3, the narrative records this detail: Joseph receives a distinctive robe from Jacob. It belongs to creation and human disobedience.",
           "references": [
             "GEN 37:3"
           ],
@@ -1178,7 +1178,7 @@
           "difficulty": "medium",
           "prompt": "Joseph's dreams contribute to his brothers' hatred of him.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 37:5-11) includes the stated event: Joseph's dreams contribute to his brothers' hatred of him. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 37:5-11"
           ],
@@ -1191,7 +1191,7 @@
           "difficulty": "medium",
           "prompt": "Joseph is sold and taken to Egypt.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 37:25-28: Joseph is sold and taken to Egypt. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 37:25-28"
           ],
@@ -1204,7 +1204,7 @@
           "difficulty": "hard",
           "prompt": "Potiphar's wife falsely accuses Joseph.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 39:7-20—Potiphar's wife falsely accuses Joseph. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 39:7-20"
           ],
@@ -1217,7 +1217,7 @@
           "difficulty": "easy",
           "prompt": "Joseph interprets the dreams of Pharaoh's officials in prison.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 40:1-23 places this action or relationship within creation and human disobedience: Joseph interprets the dreams of Pharaoh's officials in prison.",
           "references": [
             "GEN 40:1-23"
           ],
@@ -1230,7 +1230,7 @@
           "difficulty": "medium",
           "prompt": "Pharaoh dreams of seven healthy cows and seven thin cows.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 41:1-7, the narrative records this detail: Pharaoh dreams of seven healthy cows and seven thin cows. It belongs to creation and human disobedience.",
           "references": [
             "GEN 41:1-7"
           ],
@@ -1243,7 +1243,7 @@
           "difficulty": "medium",
           "prompt": "Joseph interprets Pharaoh's dreams as seven years of plenty followed by seven years of famine.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 41:25-32) includes the stated event: Joseph interprets Pharaoh's dreams as seven years of plenty followed by seven years of famine. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 41:25-32"
           ],
@@ -1256,7 +1256,7 @@
           "difficulty": "hard",
           "prompt": "Pharaoh appoints Joseph to a position of authority over Egypt.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 41:39-44: Pharaoh appoints Joseph to a position of authority over Egypt. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 41:39-44"
           ],
@@ -1269,7 +1269,7 @@
           "difficulty": "easy",
           "prompt": "Joseph's brothers travel to Egypt to buy grain.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 42:1-5—Joseph's brothers travel to Egypt to buy grain. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 42:1-5"
           ],
@@ -1282,7 +1282,7 @@
           "difficulty": "medium",
           "prompt": "Joseph reveals his identity to his brothers on their first arrival.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "On the first arrival Joseph recognizes his brothers but does not reveal himself. He discloses his identity later, in Genesis 45.",
           "references": [
             "GEN 42:7-24; 45:1-3"
           ],
@@ -1295,7 +1295,7 @@
           "difficulty": "medium",
           "prompt": "Joseph requires the brothers to bring Benjamin to Egypt.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 42:15-20 places this action or relationship within creation and human disobedience: Joseph requires the brothers to bring Benjamin to Egypt.",
           "references": [
             "GEN 42:15-20"
           ],
@@ -1308,7 +1308,7 @@
           "difficulty": "hard",
           "prompt": "Judah offers himself in place of Benjamin.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 44:18-34, the narrative records this detail: Judah offers himself in place of Benjamin. It belongs to creation and human disobedience.",
           "references": [
             "GEN 44:18-34"
           ],
@@ -1321,7 +1321,7 @@
           "difficulty": "easy",
           "prompt": "Joseph reveals his identity to his brothers in Genesis 45.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 45:1-4) includes the stated event: Joseph reveals his identity to his brothers in Genesis 45. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 45:1-4"
           ],
@@ -1334,7 +1334,7 @@
           "difficulty": "medium",
           "prompt": "Joseph says God sent him ahead to preserve life.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 45:5-8: Joseph says God sent him ahead to preserve life. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 45:5-8"
           ],
@@ -1347,7 +1347,7 @@
           "difficulty": "medium",
           "prompt": "Jacob's family settles in Goshen.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 46:28-34; 47:1-6—Jacob's family settles in Goshen. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 46:28-34; 47:1-6"
           ],
@@ -1360,7 +1360,7 @@
           "difficulty": "hard",
           "prompt": "Jacob blesses Ephraim and Manasseh.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 48:1-20 places this action or relationship within creation and human disobedience: Jacob blesses Ephraim and Manasseh.",
           "references": [
             "GEN 48:1-20"
           ],
@@ -1373,7 +1373,7 @@
           "difficulty": "easy",
           "prompt": "Jacob places his right hand on Manasseh, the older son.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Jacob crosses his hands and places his right hand on Ephraim, the younger son, while his left hand rests on Manasseh (Genesis 48:13–20).",
           "references": [
             "GEN 48:13-20"
           ],
@@ -1386,7 +1386,7 @@
           "difficulty": "medium",
           "prompt": "Genesis 49 records Jacob's final words concerning his sons.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 49:1-28, the narrative records this detail: Genesis 49 records Jacob's final words concerning his sons. It belongs to creation and human disobedience.",
           "references": [
             "GEN 49:1-28"
           ],
@@ -1399,7 +1399,7 @@
           "difficulty": "medium",
           "prompt": "Jacob asks to be buried in the family burial place at Machpelah.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 49:29-32) includes the stated event: Jacob asks to be buried in the family burial place at Machpelah. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 49:29-32"
           ],
@@ -1412,7 +1412,7 @@
           "difficulty": "hard",
           "prompt": "Joseph dies in Egypt at the age of 110.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 50:22-26: Joseph dies in Egypt at the age of 110. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 50:22-26"
           ],
@@ -1425,7 +1425,7 @@
           "difficulty": "easy",
           "prompt": "Genesis ends with Joseph's coffin in Egypt.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 50:26—Genesis ends with Joseph's coffin in Egypt. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 50:26"
           ],
@@ -1438,7 +1438,7 @@
           "difficulty": "medium",
           "prompt": "Joseph says his brothers intended harm but God intended it for good.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 50:20 places this action or relationship within creation and human disobedience: Joseph says his brothers intended harm but God intended it for good.",
           "references": [
             "GEN 50:20"
           ],
@@ -1451,7 +1451,7 @@
           "difficulty": "medium",
           "prompt": "Genesis includes the giving of the Ten Commandments at Mount Sinai.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "The giving of the Ten Commandments is narrated in Exodus 20, not in Genesis; the cited passage belongs to Exodus.",
           "references": [
             "EXO 20:1-17"
           ],
@@ -1464,7 +1464,7 @@
           "difficulty": "hard",
           "prompt": "Genesis 1–11 is commonly described as primeval history.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 1-11, the narrative records this detail: Genesis 1–11 is commonly described as primeval history. It belongs to creation and human disobedience.",
           "references": [
             "GEN 1-11"
           ],
@@ -1477,7 +1477,7 @@
           "difficulty": "easy",
           "prompt": "Genesis 12–50 mainly follows the ancestral family narratives.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 12-50) includes the stated event: Genesis 12–50 mainly follows the ancestral family narratives. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 12-50"
           ],
@@ -1490,7 +1490,7 @@
           "difficulty": "medium",
           "prompt": "The promises of descendants, land and blessing recur throughout the ancestral narratives.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15: The promises of descendants, land and blessing recur throughout the ancestral narratives. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15"
           ],
@@ -1503,7 +1503,7 @@
           "difficulty": "medium",
           "prompt": "Every family in Genesis is portrayed as free from jealousy and conflict.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Genesis portrays repeated family rivalry and conflict, including Cain and Abel, Jacob and Esau, and Joseph and his brothers.",
           "references": [
             "GEN 4; 27; 29-37; 42-50"
           ],
@@ -1516,7 +1516,7 @@
           "difficulty": "hard",
           "prompt": "The flood narrative ends with a covenant involving the earth and living creatures.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 9:8-17—The flood narrative ends with a covenant involving the earth and living creatures. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 9:8-17"
           ],
@@ -1529,7 +1529,7 @@
           "difficulty": "easy",
           "prompt": "The Joseph story connects human wrongdoing with the preservation of many lives.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "GEN 45:5-8; 50:20 places this action or relationship within creation and human disobedience: The Joseph story connects human wrongdoing with the preservation of many lives.",
           "references": [
             "GEN 45:5-8; 50:20"
           ],
@@ -1542,7 +1542,7 @@
           "difficulty": "medium",
           "prompt": "Abraham's covenant promises are repeated to Isaac.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "In GEN 26:2-5, the narrative records this detail: Abraham's covenant promises are repeated to Isaac. It belongs to creation and human disobedience.",
           "references": [
             "GEN 26:2-5"
           ],
@@ -1555,7 +1555,7 @@
           "difficulty": "medium",
           "prompt": "God's promise to Jacob at Bethel includes presence and protection.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The cited scene (GEN 28:13-15) includes the stated event: God's promise to Jacob at Bethel includes presence and protection. The surrounding account develops creation and human disobedience.",
           "references": [
             "GEN 28:13-15"
           ],
@@ -1568,7 +1568,7 @@
           "difficulty": "hard",
           "prompt": "The story of Joseph occupies the final major section of Genesis.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "This is part of the sequence described in GEN 37-50: The story of Joseph occupies the final major section of Genesis. The passage contributes to the larger creation and human disobedience narrative.",
           "references": [
             "GEN 37-50"
           ],
@@ -1581,7 +1581,7 @@
           "difficulty": "easy",
           "prompt": "Genesis describes Israel's family entering Egypt before the Exodus.",
           "correct_answer": true,
-          "explanation": "The statement is supported by the cited passage.",
+          "explanation": "The statement reflects a specific detail in GEN 46-50—Genesis describes Israel's family entering Egypt before the Exodus. Read in context, it belongs to creation and human disobedience.",
           "references": [
             "GEN 46-50"
           ],
@@ -1594,7 +1594,7 @@
           "difficulty": "medium",
           "prompt": "The book of Genesis ends with the Israelites already having received the law at Sinai.",
           "correct_answer": false,
-          "explanation": "The statement is not supported by the cited passage; the reference gives the accurate narrative context.",
+          "explanation": "Genesis closes with Joseph's death and coffin in Egypt. The Sinai law is narrated later in Exodus 19–20.",
           "references": [
             "GEN 50:26; EXO 19-20"
           ],
@@ -5161,7 +5161,7 @@
           "difficulty": "easy",
           "prompt": "ዘፍጥረት የሚጀምረው እግዚአብሔር ሰማይንና ምድርን በመፍጠሩ ነው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 1:1 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ዘፍጥረት የሚጀምረው እግዚአብሔር ሰማይንና ምድርን በመፍጠሩ ነው። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 1:1"
           ],
@@ -5175,7 +5175,7 @@
           "difficulty": "medium",
           "prompt": "የመጀመሪያው የፍጥረት ታሪክ በሰባተኛው ቀን መባረኩና መቀደሱ ይደመደማል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 2:1-3) ይህን ክስተት ያካትታል፦ የመጀመሪያው የፍጥረት ታሪክ በሰባተኛው ቀን መባረኩና መቀደሱ ይደመደማል። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 2:1-3"
           ],
@@ -5189,7 +5189,7 @@
           "difficulty": "medium",
           "prompt": "ፀሐይ፣ ጨረቃና ከዋክብት በመጀመሪያው ቀን እንደተፈጠሩ ተገልጸዋል።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ዘፍጥረት 1፥14–19 የሰማይ መብራቶች በአራተኛው ቀን እንደተደረጉ ይገልጻል፤ በመጀመሪያው ቀን አይደለም።",
           "references": [
             "GEN 1:14-19"
           ],
@@ -5203,7 +5203,7 @@
           "difficulty": "hard",
           "prompt": "ሰው ልጅ በእግዚአብሔር መልክ እንደተፈጠረ ተገልጿል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 1:26-27 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ሰው ልጅ በእግዚአብሔር መልክ እንደተፈጠረ ተገልጿል። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 1:26-27"
           ],
@@ -5217,7 +5217,7 @@
           "difficulty": "easy",
           "prompt": "የመጀመሪያው ሰው ከምድር አፈር እንደተፈጠረ ተነግሯል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 2:7 ያለውን ዝርዝር ያንጸባርቃል፦ የመጀመሪያው ሰው ከምድር አፈር እንደተፈጠረ ተነግሯል። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 2:7"
           ],
@@ -5231,7 +5231,7 @@
           "difficulty": "medium",
           "prompt": "የኤደን ገነት በእግዚአብሔር ተተክላለች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 2:8 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ የኤደን ገነት በእግዚአብሔር ተተክላለች።",
           "references": [
             "GEN 2:8"
           ],
@@ -5245,7 +5245,7 @@
           "difficulty": "medium",
           "prompt": "ሰውየው ከመልካምና ከክፉ ዕውቀት ዛፍ እንዳይበላ ታዞ ነበር።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 2:16-17 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ሰውየው ከመልካምና ከክፉ ዕውቀት ዛፍ እንዳይበላ ታዞ ነበር። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 2:16-17"
           ],
@@ -5259,7 +5259,7 @@
           "difficulty": "hard",
           "prompt": "ሴቲቱ ከሰውየው ጎን እንደተፈጠረች ተገልጿል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 2:21-23) ይህን ክስተት ያካትታል፦ ሴቲቱ ከሰውየው ጎን እንደተፈጠረች ተገልጿል። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 2:21-23"
           ],
@@ -5273,7 +5273,7 @@
           "difficulty": "easy",
           "prompt": "እባቡ እግዚአብሔር የሰጠውን ትእዛዝ ይጠይቃል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 3:1-5 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ እባቡ እግዚአብሔር የሰጠውን ትእዛዝ ይጠይቃል። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 3:1-5"
           ],
@@ -5287,7 +5287,7 @@
           "difficulty": "medium",
           "prompt": "ፍሬውን ከበሉ በኋላ ሰውየውና ሴቲቱ ከእግዚአብሔር ተሸሸጉ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 3:7-10 ያለውን ዝርዝር ያንጸባርቃል፦ ፍሬውን ከበሉ በኋላ ሰውየውና ሴቲቱ ከእግዚአብሔር ተሸሸጉ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 3:7-10"
           ],
@@ -5301,7 +5301,7 @@
           "difficulty": "medium",
           "prompt": "ሰውየው ሌላን ሳይወቅስ ኃላፊነቱን ተቀበለ።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "በዘፍጥረት 3፥12 ሰውየው ፍሬውን ሴቲቱ እንደሰጠችው በመናገር ኃላፊነቱን ወደ እርሷ ያዞራል፤ ይህ ያለ ሌላን መውቀስ ኃላፊነት መቀበል አይደለም።",
           "references": [
             "GEN 3:12"
           ],
@@ -5315,7 +5315,7 @@
           "difficulty": "hard",
           "prompt": "ሰዎቹ ከአለመታዘዛቸው በኋላ ከገነት ተወጡ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 3:22-24 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ሰዎቹ ከአለመታዘዛቸው በኋላ ከገነት ተወጡ።",
           "references": [
             "GEN 3:22-24"
           ],
@@ -5329,7 +5329,7 @@
           "difficulty": "easy",
           "prompt": "ቃየን ገበሬ ነበር፤ አቤል ደግሞ የመንጋ ጠባቂ ነበር።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 4:2 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ቃየን ገበሬ ነበር፤ አቤል ደግሞ የመንጋ ጠባቂ ነበር። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 4:2"
           ],
@@ -5343,7 +5343,7 @@
           "difficulty": "medium",
           "prompt": "ቃየን አቤልን ገደለው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 4:8) ይህን ክስተት ያካትታል፦ ቃየን አቤልን ገደለው። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 4:8"
           ],
@@ -5357,7 +5357,7 @@
           "difficulty": "medium",
           "prompt": "ቃየን ወንድሙን እንደሚጠብቅ መሆኑን መለሰ።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "በዘፍጥረት 4፥9 ቃየን “እኔ የወንድሜ ጠባቂ ነኝን?” ብሎ ይጠይቃል፤ ጠባቂው እንደሆነ አይመልስም።",
           "references": [
             "GEN 4:9"
           ],
@@ -5371,7 +5371,7 @@
           "difficulty": "hard",
           "prompt": "የአቤል ሞት ከተነገረ በኋላ ሴት ተወለደ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 4:25 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ የአቤል ሞት ከተነገረ በኋላ ሴት ተወለደ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 4:25"
           ],
@@ -5385,7 +5385,7 @@
           "difficulty": "easy",
           "prompt": "ሄኖክ ከእግዚአብሔር ጋር ተመላለሰ፤ እግዚአብሔርም ወሰደው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 5:21-24 ያለውን ዝርዝር ያንጸባርቃል፦ ሄኖክ ከእግዚአብሔር ጋር ተመላለሰ፤ እግዚአብሔርም ወሰደው። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 5:21-24"
           ],
@@ -5399,7 +5399,7 @@
           "difficulty": "medium",
           "prompt": "ኖኅ በእግዚአብሔር ፊት ሞገስ አገኘ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 6:8 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ኖኅ በእግዚአብሔር ፊት ሞገስ አገኘ።",
           "references": [
             "GEN 6:8"
           ],
@@ -5413,7 +5413,7 @@
           "difficulty": "medium",
           "prompt": "ኖኅ መርከብ እንዲሠራ ታዘዘ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 6:13-22 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ኖኅ መርከብ እንዲሠራ ታዘዘ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 6:13-22"
           ],
@@ -5427,7 +5427,7 @@
           "difficulty": "hard",
           "prompt": "የጥፋት ውኃ ታሪክ ምድር በዓመፅ እንደተሞላች ይናገራል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 6:11-13) ይህን ክስተት ያካትታል፦ የጥፋት ውኃ ታሪክ ምድር በዓመፅ እንደተሞላች ይናገራል። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 6:11-13"
           ],
@@ -5441,7 +5441,7 @@
           "difficulty": "easy",
           "prompt": "ኖኅ ቁራን ከላከ በኋላ ርግብን ላከ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 8:6-12 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ኖኅ ቁራን ከላከ በኋላ ርግብን ላከ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 8:6-12"
           ],
@@ -5455,7 +5455,7 @@
           "difficulty": "medium",
           "prompt": "ቀስተ ደመናው የቃል ኪዳን ምልክት ሆኖ ተሰጠ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 9:12-17 ያለውን ዝርዝር ያንጸባርቃል፦ ቀስተ ደመናው የቃል ኪዳን ምልክት ሆኖ ተሰጠ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 9:12-17"
           ],
@@ -5469,7 +5469,7 @@
           "difficulty": "medium",
           "prompt": "የኖኅ ልጆች ሴም፣ ካምና ያፌት ናቸው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 9:18 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ የኖኅ ልጆች ሴም፣ ካምና ያፌት ናቸው።",
           "references": [
             "GEN 9:18"
           ],
@@ -5483,7 +5483,7 @@
           "difficulty": "hard",
           "prompt": "የባቤል ታሪክ ሰዎቹ ከመበታተናቸው በፊት አንድ ቋንቋ እንደነበራቸው ይናገራል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 11:1-9 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ የባቤል ታሪክ ሰዎቹ ከመበታተናቸው በፊት አንድ ቋንቋ እንደነበራቸው ይናገራል። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 11:1-9"
           ],
@@ -5497,7 +5497,7 @@
           "difficulty": "easy",
           "prompt": "የአብራም መጀመሪያ መኖሪያ ከከለዳውያን ዑር ጋር ይያያዛል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 11:27-31) ይህን ክስተት ያካትታል፦ የአብራም መጀመሪያ መኖሪያ ከከለዳውያን ዑር ጋር ይያያዛል። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 11:27-31"
           ],
@@ -5511,7 +5511,7 @@
           "difficulty": "medium",
           "prompt": "አብራም አገሩን ትቶ እግዚአብሔር ወደሚያሳየው ምድር እንዲሄድ ተጠራ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 12:1 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ አብራም አገሩን ትቶ እግዚአብሔር ወደሚያሳየው ምድር እንዲሄድ ተጠራ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 12:1"
           ],
@@ -5525,7 +5525,7 @@
           "difficulty": "medium",
           "prompt": "ለአብራም የተሰጠው ተስፋ ለምድር ቤተሰቦች ሁሉ በረከትን ያካትታል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 12:2-3 ያለውን ዝርዝር ያንጸባርቃል፦ ለአብራም የተሰጠው ተስፋ ለምድር ቤተሰቦች ሁሉ በረከትን ያካትታል። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 12:2-3"
           ],
@@ -5539,7 +5539,7 @@
           "difficulty": "hard",
           "prompt": "አብራም በረሃብ ምክንያት ወደ ግብፅ ተጓዘ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 12:10 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ አብራም በረሃብ ምክንያት ወደ ግብፅ ተጓዘ።",
           "references": [
             "GEN 12:10"
           ],
@@ -5553,7 +5553,7 @@
           "difficulty": "easy",
           "prompt": "ንብረታቸውና መንጋቸው ስለበዛ ሎጥና አብራም ተለያዩ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 13:5-12 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ንብረታቸውና መንጋቸው ስለበዛ ሎጥና አብራም ተለያዩ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 13:5-12"
           ],
@@ -5567,7 +5567,7 @@
           "difficulty": "medium",
           "prompt": "አብራም በአካባቢው ነገሥታት ጦርነት ከተካሄደ በኋላ ሎጥን አዳነ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 14:1-16) ይህን ክስተት ያካትታል፦ አብራም በአካባቢው ነገሥታት ጦርነት ከተካሄደ በኋላ ሎጥን አዳነ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 14:1-16"
           ],
@@ -5581,7 +5581,7 @@
           "difficulty": "medium",
           "prompt": "መልከጼዴቅ የሳሌም ንጉሥና የልዑል እግዚአብሔር ካህን ነበር።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 14:18 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ መልከጼዴቅ የሳሌም ንጉሥና የልዑል እግዚአብሔር ካህን ነበር። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 14:18"
           ],
@@ -5595,7 +5595,7 @@
           "difficulty": "hard",
           "prompt": "አብራም ከዋክብት እንደሚቆጠሩ የማይቻል ዘር ተስፋ ተቀበለ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 15:5 ያለውን ዝርዝር ያንጸባርቃል፦ አብራም ከዋክብት እንደሚቆጠሩ የማይቻል ዘር ተስፋ ተቀበለ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 15:5"
           ],
@@ -5609,7 +5609,7 @@
           "difficulty": "easy",
           "prompt": "የአብራም እምነት ለጽድቅ ተቆጠረለት።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 15:6 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ የአብራም እምነት ለጽድቅ ተቆጠረለት።",
           "references": [
             "GEN 15:6"
           ],
@@ -5623,7 +5623,7 @@
           "difficulty": "medium",
           "prompt": "አጋር የሣራ ግብፃዊት አገልጋይ ነበረች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 16:1 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ አጋር የሣራ ግብፃዊት አገልጋይ ነበረች። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 16:1"
           ],
@@ -5637,7 +5637,7 @@
           "difficulty": "medium",
           "prompt": "እስማኤል የአብራምና የአጋር ልጅ ነው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 16:15) ይህን ክስተት ያካትታል፦ እስማኤል የአብራምና የአጋር ልጅ ነው። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 16:15"
           ],
@@ -5651,7 +5651,7 @@
           "difficulty": "hard",
           "prompt": "የአብራም ስም ወደ አብርሃም ተቀየረ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 17:5 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ የአብራም ስም ወደ አብርሃም ተቀየረ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 17:5"
           ],
@@ -5665,7 +5665,7 @@
           "difficulty": "easy",
           "prompt": "የሣራይ ስም ወደ ሣራ ተቀየረ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 17:15 ያለውን ዝርዝር ያንጸባርቃል፦ የሣራይ ስም ወደ ሣራ ተቀየረ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 17:15"
           ],
@@ -5679,7 +5679,7 @@
           "difficulty": "medium",
           "prompt": "ግርዛት የቃል ኪዳኑ ምልክት ሆኖ ተቋቋመ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 17:9-14 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ግርዛት የቃል ኪዳኑ ምልክት ሆኖ ተቋቋመ።",
           "references": [
             "GEN 17:9-14"
           ],
@@ -5693,7 +5693,7 @@
           "difficulty": "medium",
           "prompt": "ሣራ ልጅ እንደምትወልድ ተስፋ ስትሰማ ሳቀች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 18:9-15 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ሣራ ልጅ እንደምትወልድ ተስፋ ስትሰማ ሳቀች። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 18:9-15"
           ],
@@ -5707,7 +5707,7 @@
           "difficulty": "hard",
           "prompt": "አብርሃም ስለ ሰዶም ዕጣ ፈንታ ምልጃ አቀረበ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 18:22-33) ይህን ክስተት ያካትታል፦ አብርሃም ስለ ሰዶም ዕጣ ፈንታ ምልጃ አቀረበ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 18:22-33"
           ],
@@ -5721,7 +5721,7 @@
           "difficulty": "easy",
           "prompt": "የሎጥ ሚስት ከሰዶም ስትሸሽ ወደ ኋላ ተመለከተች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 19:26 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ የሎጥ ሚስት ከሰዶም ስትሸሽ ወደ ኋላ ተመለከተች። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 19:26"
           ],
@@ -5735,7 +5735,7 @@
           "difficulty": "medium",
           "prompt": "ይስሐቅ ሲወለድ አብርሃም መቶ ዓመት ነበር።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 21:1-5 ያለውን ዝርዝር ያንጸባርቃል፦ ይስሐቅ ሲወለድ አብርሃም መቶ ዓመት ነበር። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 21:1-5"
           ],
@@ -5749,7 +5749,7 @@
           "difficulty": "medium",
           "prompt": "አጋርና እስማኤል ይስሐቅ ከመወለዱ በፊት ተሰደዱ።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ይስሐቅ ከተወለደና ከጡት ከተጣለ በኋላ ሣራ አብርሃምን አጋርንና እስማኤልን እንዲልክ ጠየቀችው (ዘፍጥረት 21፥8–14)።",
           "references": [
             "GEN 21:8-14"
           ],
@@ -5763,7 +5763,7 @@
           "difficulty": "hard",
           "prompt": "አብርሃም ስለ ይስሐቅ ተፈተነ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 22:1-2 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ አብርሃም ስለ ይስሐቅ ተፈተነ።",
           "references": [
             "GEN 22:1-2"
           ],
@@ -5777,7 +5777,7 @@
           "difficulty": "easy",
           "prompt": "በይስሐቅ ፋንታ አውራ በግ ቀረበ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 22:13 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ በይስሐቅ ፋንታ አውራ በግ ቀረበ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 22:13"
           ],
@@ -5791,7 +5791,7 @@
           "difficulty": "medium",
           "prompt": "ሣራ በመክፌላ ዋሻ ተቀበረች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 23:1-20) ይህን ክስተት ያካትታል፦ ሣራ በመክፌላ ዋሻ ተቀበረች። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 23:1-20"
           ],
@@ -5805,7 +5805,7 @@
           "difficulty": "medium",
           "prompt": "ርብቃ የይስሐቅ ሚስት ሆነች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 24:57-67 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ርብቃ የይስሐቅ ሚስት ሆነች። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 24:57-67"
           ],
@@ -5819,7 +5819,7 @@
           "difficulty": "hard",
           "prompt": "ኤሳው ከያዕቆብ በፊት ተወለደ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 25:24-26 ያለውን ዝርዝር ያንጸባርቃል፦ ኤሳው ከያዕቆብ በፊት ተወለደ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 25:24-26"
           ],
@@ -5833,7 +5833,7 @@
           "difficulty": "easy",
           "prompt": "ኤሳው የበኩርነት መብቱን ለምግብ ሸጠ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 25:29-34 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ኤሳው የበኩርነት መብቱን ለምግብ ሸጠ።",
           "references": [
             "GEN 25:29-34"
           ],
@@ -5847,7 +5847,7 @@
           "difficulty": "medium",
           "prompt": "በረሃብ ወቅት ይስሐቅ በምድሩ እንዲቆይ እግዚአብሔር ነገረው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 26:1-6 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ በረሃብ ወቅት ይስሐቅ በምድሩ እንዲቆይ እግዚአብሔር ነገረው። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 26:1-6"
           ],
@@ -5861,7 +5861,7 @@
           "difficulty": "medium",
           "prompt": "ያዕቆብ እንደ ኤሳው ተመስሎ የይስሐቅን በረከት ተቀበለ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 27:1-29) ይህን ክስተት ያካትታል፦ ያዕቆብ እንደ ኤሳው ተመስሎ የይስሐቅን በረከት ተቀበለ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 27:1-29"
           ],
@@ -5875,7 +5875,7 @@
           "difficulty": "hard",
           "prompt": "ከበረከቱ በኋላ ኤሳው ያዕቆብን ለመግደል አሰበ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 27:41 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ከበረከቱ በኋላ ኤሳው ያዕቆብን ለመግደል አሰበ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 27:41"
           ],
@@ -5889,7 +5889,7 @@
           "difficulty": "easy",
           "prompt": "ያዕቆብ በቤቴል ወደ ሰማይ የሚደርስ መሰላል በሕልም አየ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 28:10-17 ያለውን ዝርዝር ያንጸባርቃል፦ ያዕቆብ በቤቴል ወደ ሰማይ የሚደርስ መሰላል በሕልም አየ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 28:10-17"
           ],
@@ -5903,7 +5903,7 @@
           "difficulty": "medium",
           "prompt": "ላባ ራሔልን ከልያ በፊት ለያዕቆብ ሰጠው።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ላባ መጀመሪያ ልያን ለያዕቆብ ሰጠው፤ ራሔልን የሰጠው ያዕቆብ ሌላ ሰባት ዓመት ለማገልገል ከተስማማ በኋላ ነው (ዘፍጥረት 29፥21–30)።",
           "references": [
             "GEN 29:21-30"
           ],
@@ -5917,7 +5917,7 @@
           "difficulty": "medium",
           "prompt": "ራሔል ዮሴፍን ከመውለዷ በፊት ልያ ወንዶች ልጆችን ወለደች።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 29:31-35; 30:22-24 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ራሔል ዮሴፍን ከመውለዷ በፊት ልያ ወንዶች ልጆችን ወለደች።",
           "references": [
             "GEN 29:31-35; 30:22-24"
           ],
@@ -5931,7 +5931,7 @@
           "difficulty": "hard",
           "prompt": "ያዕቆብ በጴኑኤል ሌሊቱን ሙሉ ታገለ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 32:22-32 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ያዕቆብ በጴኑኤል ሌሊቱን ሙሉ ታገለ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 32:22-32"
           ],
@@ -5945,7 +5945,7 @@
           "difficulty": "easy",
           "prompt": "ያዕቆብ እስራኤል የሚል ስም ተቀበለ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 32:28) ይህን ክስተት ያካትታል፦ ያዕቆብ እስራኤል የሚል ስም ተቀበለ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 32:28"
           ],
@@ -5959,7 +5959,7 @@
           "difficulty": "medium",
           "prompt": "ኤሳው እንደገና ሲገናኙ ያዕቆብን አቀፈው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 33:1-11 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ኤሳው እንደገና ሲገናኙ ያዕቆብን አቀፈው። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 33:1-11"
           ],
@@ -5973,7 +5973,7 @@
           "difficulty": "medium",
           "prompt": "ዲና የያዕቆብና የልያ ልጅ ናት።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 30:21; 34:1 ያለውን ዝርዝር ያንጸባርቃል፦ ዲና የያዕቆብና የልያ ልጅ ናት። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 30:21; 34:1"
           ],
@@ -5987,7 +5987,7 @@
           "difficulty": "hard",
           "prompt": "ብንያም ከዮሴፍ ያነሰ ዕድሜ አለው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 35:16-18 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ብንያም ከዮሴፍ ያነሰ ዕድሜ አለው።",
           "references": [
             "GEN 35:16-18"
           ],
@@ -6001,7 +6001,7 @@
           "difficulty": "easy",
           "prompt": "ዮሴፍ ከያዕቆብ ልዩ ልብስ ተቀበለ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 37:3 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ዮሴፍ ከያዕቆብ ልዩ ልብስ ተቀበለ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 37:3"
           ],
@@ -6015,7 +6015,7 @@
           "difficulty": "medium",
           "prompt": "የዮሴፍ ሕልሞች የወንድሞቹን ጥላቻ አባባሱ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 37:5-11) ይህን ክስተት ያካትታል፦ የዮሴፍ ሕልሞች የወንድሞቹን ጥላቻ አባባሱ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 37:5-11"
           ],
@@ -6029,7 +6029,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ ተሽጦ ወደ ግብፅ ተወሰደ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 37:25-28 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ዮሴፍ ተሽጦ ወደ ግብፅ ተወሰደ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 37:25-28"
           ],
@@ -6043,7 +6043,7 @@
           "difficulty": "hard",
           "prompt": "የጲጥፋር ሚስት ዮሴፍን በሐሰት ከሰሰችው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 39:7-20 ያለውን ዝርዝር ያንጸባርቃል፦ የጲጥፋር ሚስት ዮሴፍን በሐሰት ከሰሰችው። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 39:7-20"
           ],
@@ -6057,7 +6057,7 @@
           "difficulty": "easy",
           "prompt": "ዮሴፍ በእስር ቤት የፈርዖንን ባለሥልጣናት ሕልሞች ተረጎመ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 40:1-23 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ዮሴፍ በእስር ቤት የፈርዖንን ባለሥልጣናት ሕልሞች ተረጎመ።",
           "references": [
             "GEN 40:1-23"
           ],
@@ -6071,7 +6071,7 @@
           "difficulty": "medium",
           "prompt": "ፈርዖን ስለ ሰባት ወፍራም ላሞችና ሰባት ቀጭን ላሞች ሕልም አየ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 41:1-7 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ፈርዖን ስለ ሰባት ወፍራም ላሞችና ሰባት ቀጭን ላሞች ሕልም አየ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 41:1-7"
           ],
@@ -6085,7 +6085,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ የፈርዖንን ሕልሞች ሰባት ዓመት ብዛትና ከዚያ በኋላ ሰባት ዓመት ረሃብ እንደሚመጣ ተረጎመ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 41:25-32) ይህን ክስተት ያካትታል፦ ዮሴፍ የፈርዖንን ሕልሞች ሰባት ዓመት ብዛትና ከዚያ በኋላ ሰባት ዓመት ረሃብ እንደሚመጣ ተረጎመ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 41:25-32"
           ],
@@ -6099,7 +6099,7 @@
           "difficulty": "hard",
           "prompt": "ፈርዖን ዮሴፍን በግብፅ ላይ ሥልጣን ሰጠው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 41:39-44 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ፈርዖን ዮሴፍን በግብፅ ላይ ሥልጣን ሰጠው። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 41:39-44"
           ],
@@ -6113,7 +6113,7 @@
           "difficulty": "easy",
           "prompt": "የዮሴፍ ወንድሞች እህል ለመግዛት ወደ ግብፅ ተጓዙ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 42:1-5 ያለውን ዝርዝር ያንጸባርቃል፦ የዮሴፍ ወንድሞች እህል ለመግዛት ወደ ግብፅ ተጓዙ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 42:1-5"
           ],
@@ -6127,7 +6127,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ ወንድሞቹ በመጀመሪያ በመጡበት ጊዜ ማንነቱን ገለጠ።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ዮሴፍ ወንድሞቹን በመጀመሪያ በመጡ ጊዜ አወቃቸው ነገር ግን ማንነቱን አልገለጠም፤ በኋላ በዘፍጥረት 45 ራሱን ገለጠ።",
           "references": [
             "GEN 42:7-24; 45:1-3"
           ],
@@ -6141,7 +6141,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ ወንድሞቹ ብንያምን ወደ ግብፅ እንዲያመጡ ጠየቀ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 42:15-20 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ዮሴፍ ወንድሞቹ ብንያምን ወደ ግብፅ እንዲያመጡ ጠየቀ።",
           "references": [
             "GEN 42:15-20"
           ],
@@ -6155,7 +6155,7 @@
           "difficulty": "hard",
           "prompt": "ይሁዳ በብንያም ፋንታ ራሱን ለመስጠት አቀረበ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 44:18-34 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ይሁዳ በብንያም ፋንታ ራሱን ለመስጠት አቀረበ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 44:18-34"
           ],
@@ -6169,7 +6169,7 @@
           "difficulty": "easy",
           "prompt": "ዮሴፍ በዘፍጥረት 45 ላይ ማንነቱን ለወንድሞቹ ገለጠ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 45:1-4) ይህን ክስተት ያካትታል፦ ዮሴፍ በዘፍጥረት 45 ላይ ማንነቱን ለወንድሞቹ ገለጠ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 45:1-4"
           ],
@@ -6183,7 +6183,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ ሕይወትን ለማዳን እግዚአብሔር ከእነርሱ በፊት እንደላከው ተናገረ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 45:5-8 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ዮሴፍ ሕይወትን ለማዳን እግዚአብሔር ከእነርሱ በፊት እንደላከው ተናገረ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 45:5-8"
           ],
@@ -6197,7 +6197,7 @@
           "difficulty": "medium",
           "prompt": "የያዕቆብ ቤተሰብ በጎሶም ተቀመጠ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 46:28-34; 47:1-6 ያለውን ዝርዝር ያንጸባርቃል፦ የያዕቆብ ቤተሰብ በጎሶም ተቀመጠ። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 46:28-34; 47:1-6"
           ],
@@ -6211,7 +6211,7 @@
           "difficulty": "hard",
           "prompt": "ያዕቆብ ኤፍሬምንና ምናሴን ባረከ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 48:1-20 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ያዕቆብ ኤፍሬምንና ምናሴን ባረከ።",
           "references": [
             "GEN 48:1-20"
           ],
@@ -6225,7 +6225,7 @@
           "difficulty": "easy",
           "prompt": "ያዕቆብ ታላቁ ልጅ ምናሴ ላይ ቀኝ እጁን አኖረ።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ያዕቆብ እጆቹን አቋርጦ ቀኝ እጁን በታናሹ በኤፍሬም ላይ፣ ግራ እጁንም በምናሴ ላይ አኖረ (ዘፍጥረት 48፥13–20)።",
           "references": [
             "GEN 48:13-20"
           ],
@@ -6239,7 +6239,7 @@
           "difficulty": "medium",
           "prompt": "ዘፍጥረት 49 የያዕቆብን የመጨረሻ ቃላት ስለ ልጆቹ ይመዘግባል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 49:1-28 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ዘፍጥረት 49 የያዕቆብን የመጨረሻ ቃላት ስለ ልጆቹ ይመዘግባል። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 49:1-28"
           ],
@@ -6253,7 +6253,7 @@
           "difficulty": "medium",
           "prompt": "ያዕቆብ በመክፌላ የቤተሰቡ መቃብር እንዲቀበር ጠየቀ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 49:29-32) ይህን ክስተት ያካትታል፦ ያዕቆብ በመክፌላ የቤተሰቡ መቃብር እንዲቀበር ጠየቀ። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 49:29-32"
           ],
@@ -6267,7 +6267,7 @@
           "difficulty": "hard",
           "prompt": "ዮሴፍ በ110 ዓመቱ በግብፅ ሞተ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 50:22-26 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ ዮሴፍ በ110 ዓመቱ በግብፅ ሞተ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 50:22-26"
           ],
@@ -6281,7 +6281,7 @@
           "difficulty": "easy",
           "prompt": "ዘፍጥረት በግብፅ ውስጥ ባለው የዮሴፍ ሬሳ ሳጥን ይደመደማል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 50:26 ያለውን ዝርዝር ያንጸባርቃል፦ ዘፍጥረት በግብፅ ውስጥ ባለው የዮሴፍ ሬሳ ሳጥን ይደመደማል። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 50:26"
           ],
@@ -6295,7 +6295,7 @@
           "difficulty": "medium",
           "prompt": "ዮሴፍ ወንድሞቹ ክፉ ነገር አስበው እንደነበር ቢሆንም እግዚአብሔር ለበጎ እንዳደረገው ተናገረ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 50:20 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ ዮሴፍ ወንድሞቹ ክፉ ነገር አስበው እንደነበር ቢሆንም እግዚአብሔር ለበጎ እንዳደረገው ተናገረ።",
           "references": [
             "GEN 50:20"
           ],
@@ -6309,7 +6309,7 @@
           "difficulty": "medium",
           "prompt": "ዘፍጥረት በሲና ተራራ ላይ አሥርቱን ትእዛዛት መሰጠት ይዟል።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "አሥሩ ትእዛዛት መሰጠታቸው በዘፀአት 20 ተመዝግቧል፤ በዘፍጥረት አይደለም።",
           "references": [
             "EXO 20:1-17"
           ],
@@ -6323,7 +6323,7 @@
           "difficulty": "hard",
           "prompt": "ዘፍጥረት 1–11 ብዙውን ጊዜ የመጀመሪያ ዘመን ታሪክ ተብሎ ይጠራል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 1-11 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ ዘፍጥረት 1–11 ብዙውን ጊዜ የመጀመሪያ ዘመን ታሪክ ተብሎ ይጠራል። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 1-11"
           ],
@@ -6337,7 +6337,7 @@
           "difficulty": "easy",
           "prompt": "ዘፍጥረት 12–50 በዋነኝነት የአባቶችን ቤተሰብ ታሪኮች ይከተላል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 12-50) ይህን ክስተት ያካትታል፦ ዘፍጥረት 12–50 በዋነኝነት የአባቶችን ቤተሰብ ታሪኮች ይከተላል። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 12-50"
           ],
@@ -6351,7 +6351,7 @@
           "difficulty": "medium",
           "prompt": "የዘር፣ የምድርና የበረከት ተስፋዎች በአባቶች ታሪኮች ውስጥ በተደጋጋሚ ይታያሉ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ የዘር፣ የምድርና የበረከት ተስፋዎች በአባቶች ታሪኮች ውስጥ በተደጋጋሚ ይታያሉ። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 12:1-3; 15:1-21; 17:1-8; 26:2-5; 28:13-15"
           ],
@@ -6365,7 +6365,7 @@
           "difficulty": "medium",
           "prompt": "በዘፍጥረት ውስጥ ያሉ ቤተሰቦች ሁሉ ከቅናትና ከግጭት ነፃ እንደሆኑ ተገልጸዋል።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ዘፍጥረት በቤተሰቦች መካከል ቅናትና ግጭት እንዳለ በተደጋጋሚ ያሳያል፤ ለምሳሌ ቃየንና አቤል፣ ያዕቆብና ኤሳው፣ ዮሴፍና ወንድሞቹ።",
           "references": [
             "GEN 4; 27; 29-37; 42-50"
           ],
@@ -6379,7 +6379,7 @@
           "difficulty": "hard",
           "prompt": "የጥፋት ውኃ ታሪክ ከምድርና ከሕያዋን ጋር በተደረገ ቃል ኪዳን ይደመደማል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 9:8-17 ያለውን ዝርዝር ያንጸባርቃል፦ የጥፋት ውኃ ታሪክ ከምድርና ከሕያዋን ጋር በተደረገ ቃል ኪዳን ይደመደማል። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 9:8-17"
           ],
@@ -6393,7 +6393,7 @@
           "difficulty": "easy",
           "prompt": "የዮሴፍ ታሪክ የሰው ክፋትንና የብዙ ሰዎችን ሕይወት መጠበቅ አንድ ላይ ያሳያል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "GEN 45:5-8; 50:20 ይህን ድርጊት ወይም ግንኙነት በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ያቀርባል፦ የዮሴፍ ታሪክ የሰው ክፋትንና የብዙ ሰዎችን ሕይወት መጠበቅ አንድ ላይ ያሳያል።",
           "references": [
             "GEN 45:5-8; 50:20"
           ],
@@ -6407,7 +6407,7 @@
           "difficulty": "medium",
           "prompt": "የአብርሃም ቃል ኪዳን ተስፋዎች ለይስሐቅም ተደገሙ።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "በGEN 26:2-5 የተጠቀሰው ታሪክ ይህን ዝርዝር ይመዘግባል፦ የአብርሃም ቃል ኪዳን ተስፋዎች ለይስሐቅም ተደገሙ። ይህ በየፍጥረትና የሰው ውድቀት ትረካ ውስጥ ይገኛል።",
           "references": [
             "GEN 26:2-5"
           ],
@@ -6421,7 +6421,7 @@
           "difficulty": "medium",
           "prompt": "እግዚአብሔር በቤቴል ለያዕቆብ የጥበቃና የአብሮነት ተስፋ ሰጠው።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "የተጠቀሰው ክፍል (GEN 28:13-15) ይህን ክስተት ያካትታል፦ እግዚአብሔር በቤቴል ለያዕቆብ የጥበቃና የአብሮነት ተስፋ ሰጠው። አውዱም የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 28:13-15"
           ],
@@ -6435,7 +6435,7 @@
           "difficulty": "hard",
           "prompt": "የዮሴፍ ታሪክ የዘፍጥረትን የመጨረሻ ዋና ክፍል ይይዛል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "ይህ በGEN 37-50 የተገለጸው የታሪክ ቅደም ተከተል ክፍል ነው፦ የዮሴፍ ታሪክ የዘፍጥረትን የመጨረሻ ዋና ክፍል ይይዛል። ክፍሉ የፍጥረትና የሰው ውድቀት ትረካ ታሪክን ያበለጽጋል።",
           "references": [
             "GEN 37-50"
           ],
@@ -6449,7 +6449,7 @@
           "difficulty": "easy",
           "prompt": "ዘፍጥረት የእስራኤል ቤተሰብ ከኤክስዶስ በፊት ወደ ግብፅ መግባቱን ይናገራል።",
           "correct_answer": true,
-          "explanation": "ይህ አባባል በተጠቀሰው የመጽሐፍ ቅዱስ ክፍል ይደገፋል። የተጠቀሰውን ጥቅስ በሙሉ በማንበብ የትረካውን አውድ ያረጋግጡ።",
+          "explanation": "አባባሉ በGEN 46-50 ያለውን ዝርዝር ያንጸባርቃል፦ ዘፍጥረት የእስራኤል ቤተሰብ ከኤክስዶስ በፊት ወደ ግብፅ መግባቱን ይናገራል። በአውዱ ውስጥ የፍጥረትና የሰው ውድቀት ትረካ ነው።",
           "references": [
             "GEN 46-50"
           ],
@@ -6463,7 +6463,7 @@
           "difficulty": "medium",
           "prompt": "የዘፍጥረት መጽሐፍ እስራኤላውያን በሲና ተራራ ላይ ሕጉን ከተቀበሉ በኋላ ይደመደማል።",
           "correct_answer": false,
-          "explanation": "ይህ አባባል በተጠቀሰው ክፍል አይደገፍም። በጥቅሱ ውስጥ የተገለጸውን ትክክለኛ የትረካ ሁኔታ በማንበብ ልዩነቱን ይለዩ።",
+          "explanation": "ዘፍጥረት የሚያበቃው ዮሴፍ በግብፅ በመሞቱና በሬሳ ሳጥኑ ነው፤ በሲና የተሰጠው ሕግ ግን በኋላ በዘፀአት 19–20 ይመዘገባል።",
           "references": [
             "GEN 50:26; EXO 19-20"
           ],
