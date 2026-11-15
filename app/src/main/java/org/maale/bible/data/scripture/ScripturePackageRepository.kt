@@ -38,11 +38,11 @@ object ScripturePackageRepository {
     private const val EXPECTED_SOURCE_SHA256 = "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11"
     private const val EXPECTED_ATTRIBUTION = "Maale Bible (ጌኤዦ ማፃኣፖ) © 2008 The Word for the World International and the Bible Society of Ethiopia."
 
-    fun loadChapter(context: Context, bookId: String, chapterNumber: Int): ScriptureChapterResult {
-        if (!bookId.matches(Regex("[A-Z0-9]{3}")) || chapterNumber < 1) {
+    fun loadChapter(context: Context, bookId: String, chapterNumber: Int, editionId: String = ScriptureEditionCatalog.PRIMARY_MAALE_ID): ScriptureChapterResult {
+        if (!bookId.matches(Regex("[A-Z0-9]{3}")) || chapterNumber < 1 || ScriptureEditionCatalog.find(editionId) == null) {
             return ScriptureChapterResult.InvalidPackage
         }
-        val packageFile = File(File(context.filesDir, "scripture"), PACKAGE_FILE)
+        // Only the approved Maale package is currently supported by the installed-package reader.\n        // Other catalogue entries remain selectable but fail closed until their own verified package is imported.\n        if (editionId != EXPECTED_EDITION) return ScriptureChapterResult.PackageNotInstalled\n        val packageFile = File(File(context.filesDir, "scripture"), PACKAGE_FILE)
         if (!packageFile.isFile || packageFile.length() <= 0L) return ScriptureChapterResult.PackageNotInstalled
 
         val allowDebugPreview = (context.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0
