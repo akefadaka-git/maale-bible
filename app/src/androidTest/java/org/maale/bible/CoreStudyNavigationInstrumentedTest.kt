@@ -17,6 +17,8 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
+import org.maale.bible.data.content.BookLearningContentRepository
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -109,6 +111,9 @@ class CoreStudyNavigationInstrumentedTest {
     }
 
     @Test fun bookLearningCentrePreviewsDraftIntroductionAndQuizInDebugBuild() {
+        val debugContent = BookLearningContentRepository.load(compose.activity, "GEN")
+        Log.i("LEARNING_CONTENT_DIAGNOSTIC", "locale=${compose.activity.resources.configuration.locales.toLanguageTags()}; appLanguage=${AppLanguage.load(compose.activity)}; debuggable=${compose.activity.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE != 0}; contentLoaded=${debugContent != null}; publicationState=${debugContent?.publicationState}; quizCount=${debugContent?.quizQuestions?.size}; chapterGuideCount=${debugContent?.chapterGuides?.size}")
+        assertNotNull("Genesis learning package must load in the debug test build", debugContent)
         compose.onNodeWithTag("navigation_books").performClick()
         waitForTag("books_screen")
         compose.onNodeWithTag("books_list").performScrollToNode(hasTestTag("book_item_GEN"))
@@ -198,6 +203,7 @@ class CoreStudyNavigationInstrumentedTest {
             compose.waitForIdle()
             assertEquals("ENG-NIV", ScriptureEditionSelectionStore.load(compose.activity.applicationContext))
             compose.onNodeWithTag("reader_edition_selector").assert(hasText("English: New International Version"))
+            compose.onNodeWithTag("reader_screen").performScrollToNode(hasTestTag("scripture_package_status"))
             compose.onNodeWithTag("scripture_package_status").assertIsDisplayed()
         } finally {
             ScriptureEditionSelectionStore.save(
