@@ -202,6 +202,10 @@ private fun OverviewContent(content: BookLearningContent?, bookId: String, onOpe
         LearningSectionCard(stringResource(R.string.learning_background_title), intro.authorship)
         LearningSectionCard(stringResource(R.string.learning_setting_title), intro.setting)
         LearningSectionCard(stringResource(R.string.learning_audience_title), intro.audienceAndPurpose)
+        if (intro.dateAndComposition.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_date_composition_title), intro.dateAndComposition)
+        if (intro.genre.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_genre_title), intro.genre)
+        if (intro.theologicalContribution.isNotBlank()) LearningSectionCard(stringResource(R.string.learning_theological_contribution_title), intro.theologicalContribution)
+        if (intro.canonicalConnections.isNotEmpty()) LearningListCard(stringResource(R.string.learning_canonical_connections_title), intro.canonicalConnections)
         LearningListCard(
             stringResource(R.string.learning_structure_title),
             intro.structure.map { "${it.range}: ${it.heading} — ${it.summary}" }
