@@ -46,6 +46,8 @@ jobs:
         run: python3 tools/i18n/check_android_resource_parity.py
       - name: Validate Genesis EN/AM content coverage and asset parity
         run: python3 tools/content/validate_genesis_package.py
+      - name: Test source-reference parser
+        run: python3 -m unittest discover -s tools/content -p 'test_genesis_source_references.py'
       - name: Download and verify pinned 2008 Maale source for reference audit
         run: |
           mkdir -p build/source
