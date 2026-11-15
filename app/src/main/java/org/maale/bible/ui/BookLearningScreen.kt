@@ -214,6 +214,9 @@ private fun OverviewContent(content: BookLearningContent?, bookId: String, onOpe
         LearningListCard(stringResource(R.string.learning_key_people_title), intro.keyPeople)
         LearningListCard(stringResource(R.string.learning_related_title), intro.keyPassages)
         LearningListCard(stringResource(R.string.learning_interpretive_care_title), intro.interpretiveCare)
+        content.commentaryUnits.forEach { unit ->
+            LearningSectionCard(stringResource(R.string.learning_commentary_title), "${unit.title} · ${unit.range}\n${unit.note}")
+        }
         Text(
             stringResource(R.string.learning_source_count, content.sourceCount),
             style = MaterialTheme.typography.labelSmall,
