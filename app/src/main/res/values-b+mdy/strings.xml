@@ -114,27 +114,27 @@
     <string name="study_empty_notes">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
     <string name="account_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
     <string name="account_submit">ዴንዴ</string>
-    <string name="search_loading_editions" translatable="false">Loading installed Bible editions…</string>
-    <string name="search_no_edition" translatable="false">No offline scripture edition is installed on this device.</string>
+    <string name="search_loading_editions">ጫኣኒንቴ ጌኤዦ ማፃኣፖ ቡሎ ቡላኔ ...</string>
+    <string name="search_no_edition">ሃኖ ሞባይሎዪዳ ዒንቴርኔቴ ባኣንቴ ቡላ ማፃኣፔ ጫኣኒንቲባኣሴ።</string>
     <string name="search_list_failed" translatable="false">Installed Bible editions could not be listed.</string>
-    <string name="search_verifying_edition" translatable="false">Verifying %1$s…</string>
+    <string name="search_verifying_edition">%1$s ጎኑማሢ ዱማሲ ዛጊሢዳኬ ...</string>
     <string name="search_selected_not_installed" translatable="false">Selected edition is not installed.</string>
     <string name="search_indexed_passages" translatable="false">%1$s · %2$d indexed passages</string>
-    <string name="search_integrity_failed" translatable="false">The selected scripture package failed integrity verification.</string>
-    <string name="search_result_count" translatable="false">%1$d scripture results</string>
+    <string name="search_integrity_failed">ጫኣኒንቴ ማፃኣፔላ ፒዙሞ ዱማሲ ዛጋኣና ፒዚሞ ዱማሳ ፓታኖ ዓላፒባኣሴ።</string>
+    <string name="search_result_count">%1$d ኮዪንቴ ቃኣላ ጴዺፆኮ ዺቡማ</string>
     <string name="search_searching" translatable="false">Searching installed scripture…</string>
     <string name="search_accessibility" translatable="false">Search installed Bible text, book names or canonical codes</string>
     <string name="search_capability_description" translatable="false">Find words and phrases across installed Bible editions.</string>
     <string name="search_book_lookup" translatable="false">Book-name and USFM-code lookup</string>
     <string name="search_offline_full_text" translatable="false">Offline full-text search in installed scripture</string>
     <string name="search_edition_filters" translatable="false">Edition filters and language-aware search</string>
-    <string name="reader_quiet_space" translatable="false">A quiet space for the Word</string>
-    <string name="reader_no_sample_notice" translatable="false">No sample or reconstructed verses are displayed. Chapter and verse controls will activate when the authorized source corpus is integrated and validated.</string>
+    <string name="reader_quiet_space">ቃኣሎ ናባኒና ፃናኣኒ ዚቲ ጌዔ ቤሲ</string>
+    <string name="reader_no_sample_notice">ፔቴታዖ ዻዊሢም ማዖም ሃሳ ጊኢጊንቴ ማፃኣፔ ጴዺባኣሴ። ጊኢጊንቴ ማፃኣፖ ፃቃሚንታንዳጉዲ ፒቃዴ ዒጊንቴሢ ዛጋዖ ዬፓ ዓይፆና ፓዪዶና ማዻኔ።</string>
     <string name="reader_navigation_waiting" translatable="false">Chapter and verse navigation is waiting for verified book structure.</string>
     <string name="reader_navigation_locked" translatable="false">Navigation locked — source not integrated</string>
     <string name="library_description" translatable="false">Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status.</string>
-    <string name="library_incomplete_notice" translatable="false">This edition is not a complete Bible release yet.</string>
-    <string name="library_install_blocked" translatable="false">Not enabled for in-app installation until editorial or rights review is complete.</string>
+    <string name="library_incomplete_notice">ሃና ሂቲሜቴላ ሃጋ ጊኢጊንቲሢዳ ዓኣሢሮ ቢያ ማፃኣፖ ኩሙሢ ቱዋሴ።</string>
+    <string name="library_install_blocked">ዛጋ ዓሳ ዛጊ ጋቢሳንዳ ሄላንዳና ሃይካ ጫኣናኒ ፒቃዴ ባኣሴ።</string>
     <string name="library_open_official_source" translatable="false">Open official source</string>
     <string name="listen_title" translatable="false">A listening space.</string>
     <string name="listen_description" translatable="false">A calm home for spoken Scripture, with listening and offline access designed around verified audio.</string>
@@ -144,7 +144,7 @@
     <string name="listen_no_assets" translatable="false">No audio assets in this build</string>
     <string name="listen_keep_audio" translatable="false">Keep approved audio close.</string>
     <string name="listen_download_policy" translatable="false">Download queue, storage usage, integrity checks and remove-download controls will activate after the audio catalogue and offline asset policy are implemented.</string>
-    <string name="study_save_error" translatable="false">Your study notes could not be saved. Please try again.</string>
+    <string name="study_save_error">ፂናቶ ፃናዒ ማሂ ጵቂሣኒ ኔ ፃኣፒ ዓርቄሢ ጊኢጊንቴ ቤዛ ጌሢፃ ጎይፃ ዔቄኔ። ዬያሮ ላሚ ጊንሣ ሞኮሬ።</string>
     <string name="study_saving" translatable="false">Saving…</string>
     <string name="study_save_reflection" translatable="false">Save reflection</string>
     <string name="study_update_reflection" translatable="false">Update reflection</string>
