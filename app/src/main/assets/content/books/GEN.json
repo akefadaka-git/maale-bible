@@ -6484,7 +6484,8 @@
             "GEN 9:8-17",
             "GEN 17:9-14"
           ],
-          "learning_objective": "የኖኅን ቃል ኪዳን ከአብርሃም ቃል ኪዳን መለየት።"
+          "learning_objective": "የኖኅን ቃል ኪዳን ከአብርሃም ቃል ኪዳን መለየት።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q104-AM",
@@ -6506,7 +6507,8 @@
           "references": [
             "GEN 14:18-20"
           ],
-          "learning_objective": "በአብራምና በመልከ ጼዴቅ ግንኙነት ያሉትን ሚናዎችና ድርጊቶች መለየት።"
+          "learning_objective": "በአብራምና በመልከ ጼዴቅ ግንኙነት ያሉትን ሚናዎችና ድርጊቶች መለየት።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q105-AM",
@@ -6529,7 +6531,8 @@
             "GEN 18:1-15",
             "GEN 19:1-3"
           ],
-          "learning_objective": "በመምሬ የተነገረውን ተስፋ ከሰዶም ክስተት መለየት።"
+          "learning_objective": "በመምሬ የተነገረውን ተስፋ ከሰዶም ክስተት መለየት።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q106-AM",
@@ -6551,7 +6554,8 @@
           "references": [
             "GEN 41:39-44"
           ],
-          "learning_objective": "ዮሴፍ ሥልጣን በተቀበለበት ጊዜ የተሰጡትን ምልክቶች ማስታወስ።"
+          "learning_objective": "ዮሴፍ ሥልጣን በተቀበለበት ጊዜ የተሰጡትን ምልክቶች ማስታወስ።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q107-AM",
@@ -6566,7 +6570,8 @@
           "references": [
             "GEN 22:13-14"
           ],
-          "learning_objective": "አውራ በጉ በተዘጋጀበት ታሪክ የተሰጠውን የቦታ ስም ማስታወስ።"
+          "learning_objective": "አውራ በጉ በተዘጋጀበት ታሪክ የተሰጠውን የቦታ ስም ማስታወስ።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q108-AM",
@@ -6581,7 +6586,8 @@
           "references": [
             "GEN 28:18-19"
           ],
-          "learning_objective": "በያዕቆብ የቤቴል ታሪክ ውስጥ የቦታውን የቀድሞ ስም መለየት።"
+          "learning_objective": "በያዕቆብ የቤቴል ታሪክ ውስጥ የቦታውን የቀድሞ ስም መለየት።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q109-AM",
@@ -6596,7 +6602,8 @@
           "references": [
             "GEN 41:45"
           ],
-          "learning_objective": "ዮሴፍ በግብፅ ሥልጣን በተቀበለበት ታሪክ የሚስቱን ስም መለየት።"
+          "learning_objective": "ዮሴፍ በግብፅ ሥልጣን በተቀበለበት ታሪክ የሚስቱን ስም መለየት።",
+          "explanation_locale": "am"
         },
         {
           "id": "GEN-Q110-AM",
@@ -6611,7 +6618,8 @@
           "references": [
             "GEN 41:50-52"
           ],
-          "learning_objective": "የዮሴፍን ልጆች ስምና የተወለዱበትን ቅደም ተከተል መለየት።"
+          "learning_objective": "የዮሴፍን ልጆች ስምና የተወለዱበትን ቅደም ተከተል መለየት።",
+          "explanation_locale": "am"
         }
       ],
       "chapter_guides": [
