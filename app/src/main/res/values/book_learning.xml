@@ -67,4 +67,5 @@
     <string name="learning_chapter_review_title">Chapter review</string>
     <string name="learning_prayer_prompt_title">Prayer prompt</string>
     <string name="learning_commentary_title">Commentary and theological notes</string>
+    <string name="learning_quiz_pending">The current quiz supports multiple choice and true/false only. Fill-in, matching, short-answer and chapter comprehension formats are not yet implemented. Every question requires a verified scripture reference and a reviewed explanation.</string>
 </resources>
