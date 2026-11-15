@@ -1,7 +1,5 @@
 package org.maale.bible.ui
 
-import android.content.pm.ApplicationInfo
-import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -45,20 +43,7 @@ fun BookLearningScreen(
     val selectedEdition = ScriptureEditionCatalog.find(selectedEditionId) ?: ScriptureEditionCatalog.editions.first()
     val book = remember(bookId) { CanonicalBookCatalog.find(bookId) }
     val content = remember(bookId, context) {
-        BookLearningContentRepository.load(context, bookId).also { loaded ->
-            val packageFlags = try {
-                @Suppress("DEPRECATION")
-                context.packageManager.getApplicationInfo(context.packageName, 0).flags
-            } catch (_: Exception) { 0 }
-            Log.i(
-                "BOOK_LEARNING_CONTENT_DIAGNOSTIC",
-                "book=$bookId; context=${context.javaClass.name}; appContext=${context.applicationContext.javaClass.name}; " +
-                    "package=${context.packageName}; contextFlags=${context.applicationInfo.flags}; " +
-                    "appFlags=${context.applicationContext.applicationInfo.flags}; packageFlags=$packageFlags; " +
-                    "debugFlag=${ApplicationInfo.FLAG_DEBUGGABLE}; locale=${context.resources.configuration.locales.toLanguageTags()}; " +
-                    "loaded=${loaded != null}; publication=${loaded?.publicationState}; quiz=${loaded?.quizQuestions?.size}; guides=${loaded?.chapterGuides?.size}"
-            )
-        }
+        BookLearningContentRepository.load(context, bookId)
     }
     var selectedTab by rememberSaveable(bookId) { mutableStateOf(BookLearningTab.OVERVIEW) }
     val title = book?.let { stringResource(bookNameResource(it.usfmId)) } ?: bookId
@@ -109,7 +94,7 @@ fun BookLearningScreen(
             BookLearningTab.entries.forEach { tab ->
                 Tab(
                     selected = selectedTab == tab,
-                    onClick = { Log.i("BOOK_LEARNING_TAB_DIAGNOSTIC", "click=${tab.name}; before=${selectedTab.name}"); selectedTab = tab },
+                    onClick = { selectedTab = tab },
                     modifier = Modifier.testTag("learning_tab_${tab.name.lowercase()}"),
                     text = { Text(stringResource(tab.label)) }
                 )
