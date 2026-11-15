@@ -61,4 +61,9 @@
     <string name="learning_genre_title">Literary genres</string>
     <string name="learning_theological_contribution_title">Theological contribution</string>
     <string name="learning_canonical_connections_title">Canonical connections</string>
+    <string name="learning_literary_context_title">Literary context</string>
+    <string name="learning_cross_references_title">Cross-references</string>
+    <string name="learning_discussion_prompts_title">Discussion questions</string>
+    <string name="learning_chapter_review_title">Chapter review</string>
+    <string name="learning_prayer_prompt_title">Prayer prompt</string>
 </resources>
