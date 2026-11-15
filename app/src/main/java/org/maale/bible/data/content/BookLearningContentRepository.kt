@@ -36,7 +36,14 @@ data class BookChapterGuide(
     val review: String
 )
 
-data class BookLearningCommentaryUnit(\n    val range: String,\n    val title: String,\n    val note: String\n)\n\ndata class BookQuizQuestion(\n    val id: String,
+data class BookLearningCommentaryUnit(
+    val range: String,
+    val title: String,
+    val note: String
+)
+
+data class BookQuizQuestion(
+    val id: String,
     val type: String,
     val difficulty: String,
     val prompt: String,
@@ -160,7 +167,14 @@ object BookLearningContentRepository {
                 review = item.optString("review")
             )
         }
-        val commentaryUnits = localeContent.optJSONObject("commentary")?.optJSONArray("units").toObjectList { item ->\n            BookLearningCommentaryUnit(\n                range = item.optString("range"),\n                title = item.optString("title"),\n                note = item.optString("note")\n            )\n        }\n        val questions = localeContent.optJSONArray("quiz").toObjectList { item ->
+        val commentaryUnits = localeContent.optJSONObject("commentary")?.optJSONArray("units").toObjectList { item ->
+            BookLearningCommentaryUnit(
+                range = item.optString("range"),
+                title = item.optString("title"),
+                note = item.optString("note")
+            )
+        }
+        val questions = localeContent.optJSONArray("quiz").toObjectList { item ->
             val correctAnswer = if (item.has("correct_answer") && !item.isNull("correct_answer")) {
                 item.optBoolean("correct_answer")
             } else null
@@ -201,7 +215,9 @@ object BookLearningContentRepository {
             introduction = intro,
             inductiveStudies = studies,
             chapterGuides = chapterGuides,
-            quizQuestions = questions,\n            commentaryUnits = commentaryUnits,\n            sourceCount = root.optJSONArray("sources")?.length() ?: 0
+            quizQuestions = questions,
+            commentaryUnits = commentaryUnits,
+            sourceCount = root.optJSONArray("sources")?.length() ?: 0
         )
     }
 
