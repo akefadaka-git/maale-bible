@@ -82,7 +82,7 @@ object ScripturePackageRepository {
                     metadata["license"] != source.license ||
                     metadata["attribution"] != source.attribution ||
                     metadata["content_is_immutable"] != "true" ||
-                    metadata["signer_fingerprint"] != source.signerFingerprint
+                    (if (editionId == ScriptureEditionCatalog.PRIMARY_MAALE_ID) metadata["signer_trust"] != "UNDEFINED_IN_ISOLATED_KEYRING" else metadata["signer_fingerprint"] != source.signerFingerprint)
                 ) return@use ScriptureChapterResult.InvalidPackage
 
                 val userVersion = db.rawQuery("PRAGMA user_version", null).use {
