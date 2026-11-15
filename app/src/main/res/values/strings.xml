@@ -212,7 +212,7 @@ pause. Read. Reflect.</string>
     <string name="account_otp_policy">Verification codes expire after a short time and can be requested again. Use your username or mobile number to sign in securely.</string>
     <string name="reader_scripture_chapter_title">Chapter %1$d</string>
     <string name="reader_scripture_not_installed_title">Selected Bible edition is not installed</string>
-    <string name="reader_scripture_not_installed_body">The selected Bible edition's verified text package is not installed. Choose an edition with an installed, verified package to read its chapters. Catalogue entries do not include or imply access to scripture text.</string>
+    <string name="reader_scripture_not_installed_body">The selected Bible edition\'s verified text package is not installed. Choose an edition with an installed, verified package to read its chapters. Catalogue entries do not include or imply access to scripture text.</string>
     <string name="reader_scripture_preview_title">Candidate scripture package — debug preview only</string>
     <string name="reader_scripture_preview_body">This edition package is not marked release-eligible. It can be inspected only in a debug build after private installation.</string>
     <string name="reader_scripture_chapter_missing_title">Chapter not available</string>
