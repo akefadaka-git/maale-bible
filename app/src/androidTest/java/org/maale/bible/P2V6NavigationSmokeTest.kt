@@ -3,7 +3,6 @@ package org.maale.bible
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -11,7 +10,6 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
@@ -37,10 +35,12 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // LazyColumn only exposes composed children. Scroll the parent list to
-        // the target tag instead of calling performScrollTo on an absent child.
-        composeRule.onNodeWithTag("books_list")
-            .performScrollToNode(hasTestTag("book_card_GEN"))
+        // The GEN search filter makes this result the visible first item.
+        // Avoid performScrollToNode: its nested Espresso-idle wait can deadlock
+        // this navigation test on the emulator before the click is dispatched.
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
+        }
         composeRule.onNodeWithTag("book_card_GEN")
             .assertIsDisplayed()
             .performClick()
