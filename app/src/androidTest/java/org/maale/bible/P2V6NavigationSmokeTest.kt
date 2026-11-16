@@ -9,8 +9,11 @@ import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performImeAction
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
@@ -35,9 +38,15 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // The GEN search filter makes this result the visible first item.
-        // Avoid performScrollToNode: its nested Espresso-idle wait can deadlock
-        // this navigation test on the emulator before the click is dispatched.
+        // The Genesis result can be below the LazyColumn viewport after the
+        // header, category controls and search field. Commit the query, then
+        // use bounded real swipes rather than performScrollToNode, whose
+        // nested Espresso-idle wait deadlocks this test on emulator images.
+        composeRule.onNodeWithTag("books_search").performImeAction()
+        val bookList = composeRule.onNodeWithTag("books_list")
+        repeat(2) {
+            bookList.performTouchInput { swipeUp() }
+        }
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
