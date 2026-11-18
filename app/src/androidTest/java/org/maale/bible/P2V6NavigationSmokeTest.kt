@@ -10,6 +10,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTextClearance
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
 import android.util.Log
@@ -40,9 +41,15 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
 
+        // rememberSaveable retains the query across Activity recreation and
+        // test cases. Replace it deterministically before checking Genesis.
+        val search = composeRule.onNodeWithTag("books_search")
+        search.performTextClearance()
+        search.performTextInput("GEN")
+
         // BooksScreen resets its LazyColumn to the first result whenever
-        // query or catalogue filters change. Wait for the filtered Genesis
-        // card directly; never invoke the field's unsupported default IME action.
+        // query or catalogue filters change. Never invoke the unsupported
+        // default IME action on books_search.
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
@@ -55,7 +62,6 @@ class P2V6NavigationSmokeTest {
         awaitText("Explore the Bible")
         composeRule.onNodeWithText("Explore the Bible").performClick()
         awaitText("EXPLORE BY CATEGORY")
-        composeRule.onNodeWithTag("books_search").performTextInput("GEN")
         revealGenesisCard()
         awaitText("Bible book learning centre")
     }
