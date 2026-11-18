@@ -50,11 +50,11 @@ class P2V6NavigationSmokeTest {
         // BooksScreen resets its LazyColumn to the first result whenever
         // query or catalogue filters change. Never invoke the unsupported
         // default IME action on books_search.
-        mark("Genesis semantics matches: " + composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().size)
+        composeRule.onNodeWithTag("books_search").assertTextEquals("GEN")
         composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
+            composeRule.onAllNodesWithContentDescription("Open Genesis").fetchSemanticsNodes().isNotEmpty()
         }
-        composeRule.onNodeWithTag("book_card_GEN")
+        composeRule.onNodeWithContentDescription("Open Genesis")
             .assertIsDisplayed()
             .performClick()
     }
