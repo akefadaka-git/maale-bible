@@ -77,14 +77,14 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
                 title = stringResource(R.string.explorer_old_testament),
                 count = "39",
                 selected = selectedTestament == "ot",
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).testTag("testament_old"),
                 onClick = { selectedTestament = "ot"; selectedCategory = "all" }
             )
             TestamentCard(
                 title = stringResource(R.string.explorer_new_testament),
                 count = "27",
                 selected = selectedTestament == "nt",
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).testTag("testament_new"),
                 onClick = { selectedTestament = "nt"; selectedCategory = "all" }
             )
         }
@@ -112,7 +112,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             trailingIcon = { if (query.isNotEmpty()) Text("×", Modifier.clickable { query = "" }.padding(horizontal = 14.dp), style = MaterialTheme.typography.titleLarge) }
         )
         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            FilterChip(selected = selectedCategory == "all", onClick = { selectedCategory = "all" }, label = { Text(stringResource(R.string.explorer_all_categories)) })
+            FilterChip(selected = selectedCategory == "all", onClick = { selectedCategory = "all" }, label = { Text(stringResource(R.string.explorer_all_categories)) }, modifier = Modifier.testTag("books_category_all"))
             visibleCategories.forEach { category ->
                 FilterChip(
                     selected = selectedCategory == category.id,
