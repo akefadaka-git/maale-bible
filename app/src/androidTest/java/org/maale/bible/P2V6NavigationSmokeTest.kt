@@ -9,7 +9,6 @@ import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
-import androidx.compose.ui.test.performImeAction
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.performTouchInput
@@ -38,11 +37,11 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // The Genesis result can be below the LazyColumn viewport after the
-        // header, category controls and search field. Commit the query, then
-        // use bounded real swipes rather than performScrollToNode, whose
+        // Search filters as text is entered. Do not invoke an IME action:
+        // books_search uses the default IME action, so performImeAction()
+        // is unsupported and fails Compose semantics on every emulator API.
+        // Use bounded real swipes rather than performScrollToNode, whose
         // nested Espresso-idle wait deadlocks this test on emulator images.
-        composeRule.onNodeWithTag("books_search").performImeAction()
         val bookList = composeRule.onNodeWithTag("books_list")
         repeat(2) {
             bookList.performTouchInput { swipeUp() }
