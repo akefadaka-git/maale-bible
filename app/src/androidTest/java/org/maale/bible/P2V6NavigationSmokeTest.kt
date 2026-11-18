@@ -50,6 +50,8 @@ class P2V6NavigationSmokeTest {
         // BooksScreen resets its LazyColumn to the first result whenever
         // query or catalogue filters change. Never invoke the unsupported
         // default IME action on books_search.
+        composeRule.onNodeWithTag("books_list").printToLog("P2V6BooksList")
+        mark("Genesis semantics matches: " + composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().size)
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
