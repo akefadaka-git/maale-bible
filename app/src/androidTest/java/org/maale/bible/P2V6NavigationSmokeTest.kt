@@ -9,8 +9,6 @@ import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
-import androidx.compose.ui.test.performTouchInput
-import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
@@ -42,10 +40,9 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
 
-        // Search filters as text is entered. The Genesis result can sit just
-        // below the LazyColumn viewport after the category heading. Use one
-        // bounded swipe; do not invoke the field's unsupported default IME action.
-        composeRule.onNodeWithTag("books_list").performTouchInput { swipeUp() }
+        // BooksScreen resets its LazyColumn to the first result whenever
+        // query or catalogue filters change. Wait for the filtered Genesis
+        // card directly; never invoke the field's unsupported default IME action.
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
