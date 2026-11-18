@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-est-bilingual-v1",
+  "book": {
+    "usfm_id": "EST",
+    "english_name": "Esther",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-esther",
+      "title": "Esther",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/esther/",
+      "use": "Literary structure, Purim and Hebrew/Greek textual forms"
+    },
+    {
+      "id": "usccb-esther",
+      "title": "Esther",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/esther/0",
+      "use": "Literary form, textual versions, themes and outline"
+    },
+    {
+      "id": "esv-esther",
+      "title": "Introduction to Esther",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-esther/",
+      "use": "Persian setting, providence and book purpose"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Esther — courage, providence and Purim",
+        "summary": "Esther is a court narrative set in the Persian empire. Esther and Mordecai respond to Haman’s plan to destroy the Jewish people; Esther risks her position and life to intervene, the threatened decree is countered, and the festival of Purim commemorates deliverance. In the Hebrew form, God is not named directly, while fasting and providential reversals shape the story.",
+        "authorship": "The book is anonymous. Its literary form, date and relationship to Persian history are debated. The Hebrew form and Greek form contain differences; Greek additions expand prayers and explicitly religious language. This package follows the Protestant 66-book Hebrew-text chapter numbering (Esther 1–10) and does not include the Greek additions.",
+        "setting": "The story is set in Susa, a Persian royal center, during the reign associated with Ahasuerus/Xerxes. It depicts Jewish life in diaspora under imperial power. The narrative’s setting and literary artistry should be distinguished from independently verified historical reconstruction.",
+        "audience_and_purpose": "The book explains the origin and observance of Purim and explores minority vulnerability, courage, identity, power, prejudice and deliverance. It invites reflection on hidden providence and human responsibility without reducing the narrative to a simple political manual.",
+        "structure": [
+          {
+            "range": "1:1–2:23",
+            "heading": "Vashti, Esther and the court",
+            "summary": "Vashti is removed, Esther becomes queen and Mordecai exposes a plot against the king."
+          },
+          {
+            "range": "3:1–4:17",
+            "heading": "Haman’s decree and the crisis",
+            "summary": "Haman secures a decree against the Jews; Mordecai calls Esther to act."
+          },
+          {
+            "range": "5:1–7:10",
+            "heading": "Esther’s banquets and Haman’s fall",
+            "summary": "Esther approaches the king, Haman’s pride reverses and his plot is exposed."
+          },
+          {
+            "range": "8:1–9:19",
+            "heading": "A counter-decree and deliverance",
+            "summary": "Mordecai receives authority, a new decree is issued and the Jewish community survives the threat."
+          },
+          {
+            "range": "9:20–10:3",
+            "heading": "Purim and Mordecai’s honor",
+            "summary": "The community establishes Purim and Mordecai’s position is summarized."
+          }
+        ],
+        "themes": [
+          "Courage and responsibility in the face of danger",
+          "Providence that is hidden rather than explicitly named",
+          "Minority identity and survival under empire",
+          "The danger of prejudice, scapegoating and genocidal power",
+          "Irony, reversal, banquets and royal decrees",
+          "Memory and communal celebration through Purim"
+        ],
+        "key_people": [
+          "Esther",
+          "Mordecai",
+          "Ahasuerus/Xerxes",
+          "Haman",
+          "Vashti",
+          "Hathach"
+        ],
+        "key_passages": [
+          "EST 1:1-22",
+          "EST 2:5-23",
+          "EST 3:1-15",
+          "EST 4:1-17",
+          "EST 5:1-8",
+          "EST 6:1-14",
+          "EST 7:1-10",
+          "EST 8:1-17",
+          "EST 9:20-32"
+        ],
+        "interpretive_care": [
+          "The Hebrew form of Esther does not explicitly name God; do not claim that the name appears in the Hebrew text. The Greek additions differ and contain explicit prayers and religious material.",
+          "Esther is a crafted literary narrative, not a straightforward court chronicle. Historical identifications and dates should be presented cautiously.",
+          "The threat of genocide and the violence in the reversal chapters require ethical care; do not celebrate violence or treat the narrative as authorization for retaliation today.",
+          "The book’s account of women in a royal court includes coercive structures; do not romanticize the harem or erase Esther’s constrained agency.",
+          "This package follows the Protestant 66-book Hebrew text; Catholic and Orthodox traditions include additional Greek material and may use different chapter numbering."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EST-S01",
+          "range": "EST 4:1-17",
+          "title": "For such a time as this",
+          "observation": [
+            "Identify Mordecai’s message, Esther’s hesitation and her decision to fast and act."
+          ],
+          "interpretation": [
+            "How does the passage hold together providence, risk and human responsibility?"
+          ],
+          "application": [
+            "Where might your position give you a responsibility to speak for vulnerable people?"
+          ]
+        },
+        {
+          "id": "EST-S02",
+          "range": "EST 6:1-14",
+          "title": "The reversal begins",
+          "observation": [
+            "Observe the sleepless king, the reading of records and Haman’s unexpected task."
+          ],
+          "interpretation": [
+            "How does irony expose the limits of pride and assumed control?"
+          ],
+          "application": [
+            "How can you remain humble when your plans seem secure or your status rises?"
+          ]
+        },
+        {
+          "id": "EST-S03",
+          "range": "EST 7:1-10",
+          "title": "Esther names the threat",
+          "observation": [
+            "List what Esther reveals and how the king responds."
+          ],
+          "interpretation": [
+            "Why does Esther identify herself with the threatened people before naming Haman?"
+          ],
+          "application": [
+            "What does responsible advocacy require when confronting abuse of power?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EST-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who urges Esther to consider her position in relation to the crisis facing the Jews?",
+          "options": [
+            "Mordecai",
+            "Haman",
+            "Vashti",
+            "Hathach"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Mordecai challenges Esther to act for her people.",
+          "references": [
+            "EST 4:12-17"
+          ]
+        },
+        {
+          "id": "EST-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "In the Hebrew form of Esther, God is explicitly named throughout the narrative.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "The Hebrew text does not directly name God; fasting and providential reversals are prominent.",
+          "references": [
+            "EST 4:1-17; 9:20-32"
+          ]
+        },
+        {
+          "id": "EST-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which festival does Esther help establish?",
+          "options": [
+            "Purim",
+            "Passover",
+            "Pentecost",
+            "Tabernacles"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The book links the deliverance with the annual festival of Purim.",
+          "references": [
+            "EST 9:20-32"
+          ]
+        },
+        {
+          "id": "EST-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "What does Haman plan against the Jewish people?",
+          "options": [
+            "Their destruction by royal decree",
+            "Their return to Jerusalem",
+            "Their appointment as governors",
+            "Their temple dedication"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Haman persuades the king to issue a decree against the Jews.",
+          "references": [
+            "EST 3:1-15"
+          ]
+        },
+        {
+          "id": "EST-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "The Hebrew Esther text and the Greek Esther form are identical in content.",
+          "options": [],
+          "correct_answer": false,
+          "explanation": "The Greek form contains additional material and differences from the Hebrew form.",
+          "references": [
+            "EST 1:1-10:3"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "አስቴር — ድፍረት፣ መለኮታዊ አስተዳደርና ፑሪም",
+        "summary": "አስቴር በፋርስ ግዛት ውስጥ የተቀመጠ የቤተ መንግሥት ትረካ ነው። አስቴርና መርዶክዮስ ሐማ የአይሁድን ሕዝብ ለማጥፋት ያቀደውን ይጋፈጣሉ፤ አስቴር ለሕዝቧ ለመርዳት ሥልጣኗንና ሕይወቷን አደጋ ላይ ታደርጋለች፤ አደገኛው አዋጅ በሌላ አዋጅ ይመለሳል፤ የፑሪም በዓልም መዳኑን ያስታውሳል። በዕብራይስጡ ጽሑፍ እግዚአብሔር በቀጥታ አይጠቀስም፤ ጾምና የክስተቶች መገለባበጥ ግን ትረካውን ይቀርጻሉ።",
+        "authorship": "መጽሐፉ ስሙ ያልታወቀ ጸሐፊ አለው። የሥነ ጽሑፍ ቅርጹ፣ የተጻፈበት ዘመንና ከፋርስ ታሪክ ጋር ያለው ግንኙነት ይወያያሉ። የዕብራይስጥና የግሪክ ቅጾች ልዩነቶች አሏቸው፤ የግሪክ ተጨማሪዎች ጸሎቶችንና ግልጽ ሃይማኖታዊ ቋንቋን ያክላሉ። ይህ ፓኬጅ በፕሮቴስታንት 66 መጻሕፍት የሚጠቀመውን የዕብራይስጥ ጽሑፍና የ1–10 ምዕራፍ ቁጥር ይከተላል፤ የግሪክ ተጨማሪዎችን አያካትትም።",
+        "setting": "ታሪኩ በፋርስ ንጉሣዊ ማዕከል በሆነችው በሱሳ ከአሐሽዌሮስ/ከዜርክሲስ ጋር በሚያያዝ የንግሥና ዘመን ይካሄዳል። በግዛታዊ ሥልጣን ሥር ያለውን የአይሁድ ዳያስፖራ ሕይወት ያሳያል። የትረካውን ቦታና ሥነ ጽሑፋዊ ጥበብ ከተረጋገጠ ታሪካዊ መልሶ ግንባታ መለየት ያስፈልጋል።",
+        "audience_and_purpose": "መጽሐፉ የፑሪምን መነሻና አከባበር ያብራራል፤ የአናሳ ቡድን ተጋላጭነትን፣ ድፍረትን፣ ማንነትን፣ ሥልጣንን፣ ጥላቻንና መዳንን ይመረምራል። የተሰወረ መለኮታዊ አስተዳደርንና የሰው ኃላፊነትን እንድናስብ ይጋብዛል፤ ቀላል የፖለቲካ መመሪያ አይደለም።",
+        "structure": [
+          {
+            "range": "1:1–2:23",
+            "heading": "ወስጢና አስቴር በቤተ መንግሥት",
+            "summary": "ወስጢ ትወገዳለች፤ አስቴር ንግሥት ትሆናለች፤ መርዶክዮስም በንጉሡ ላይ የተደረገ ሴራ ያጋልጣል።"
+          },
+          {
+            "range": "3:1–4:17",
+            "heading": "የሐማ አዋጅና ችግሩ",
+            "summary": "ሐማ በአይሁድ ላይ አዋጅ ያስወጣል፤ መርዶክዮስም አስቴርን እንድትሠራ ያበረታታል።"
+          },
+          {
+            "range": "5:1–7:10",
+            "heading": "የአስቴር ግብዣዎችና የሐማ ውድቀት",
+            "summary": "አስቴር ወደ ንጉሡ ትቀርባለች፤ የሐማ ትዕቢት ይገለበጣል፤ ሴራውም ይጋለጣል።"
+          },
+          {
+            "range": "8:1–9:19",
+            "heading": "ተቃራኒ አዋጅና መዳን",
+            "summary": "መርዶክዮስ ሥልጣን ይቀበላል፤ አዲስ አዋጅ ይወጣል፤ የአይሁድ ማኅበረሰብ ከአደጋው ይድናል።"
+          },
+          {
+            "range": "9:20–10:3",
+            "heading": "ፑሪምና የመርዶክዮስ ክብር",
+            "summary": "ማኅበረሰቡ ፑሪምን ያቋቁማል፤ የመርዶክዮስ ሥልጣንም ይጠቃለላል።"
+          }
+        ],
+        "themes": [
+          "በአደጋ ፊት ድፍረትና ኃላፊነት",
+          "በቀጥታ ያልተጠቀሰ መለኮታዊ አስተዳደር",
+          "በግዛት ሥር የአናሳ ማንነትና መትረፍ",
+          "የጥላቻ፣ የተጠያቂ ማድረግና የዘር ማጥፋት አደጋ",
+          "ምጸት፣ መገለባበጥ፣ ግብዣና ንጉሣዊ አዋጆች",
+          "በፑሪም የሚገለጽ ትውስታና የጋራ በዓል"
+        ],
+        "key_people": [
+          "አስቴር",
+          "መርዶክዮስ",
+          "አሐሽዌሮስ/ዜርክሲስ",
+          "ሐማ",
+          "ወስጢ",
+          "ሐታክ"
+        ],
+        "key_passages": [
+          "EST 1:1-22",
+          "EST 2:5-23",
+          "EST 3:1-15",
+          "EST 4:1-17",
+          "EST 5:1-8",
+          "EST 6:1-14",
+          "EST 7:1-10",
+          "EST 8:1-17",
+          "EST 9:20-32"
+        ],
+        "interpretive_care": [
+          "በዕብራይስጡ የአስቴር ጽሑፍ እግዚአብሔር በስሙ አይጠቀስም፤ የግሪክ ተጨማሪዎች ግን የተለያዩ ጸሎቶችንና ሃይማኖታዊ ክፍሎችን ይይዛሉ።",
+          "አስቴር በጥበብ የተሠራ ሥነ ጽሑፋዊ ትረካ ነው፤ ቀጥተኛ የቤተ መንግሥት መዝገብ አይደለም። ታሪካዊ ማንነቶችንና ቀኖችን በጥንቃቄ አቅርቡ።",
+          "የዘር ማጥፋት ስጋትና በመገለባበጡ ክፍሎች ያለው ጥቃት ሥነ ምግባራዊ ጥንቃቄ ይፈልጋሉ፤ ዛሬ ጥቃትን ወይም በቀልን የሚፈቅድ አድርጋችሁ አታቅርቡ።",
+          "በንጉሣዊ ቤት ያሉ ሴቶች ሁኔታ የግዴታ ሥርዓቶችን ይይዛል፤ የሴቶችን ተጋላጭነት አታሳምሩ፣ የአስቴርንም የተገደበ የውሳኔ ነጻነት አታጥፉ።",
+          "ይህ ፓኬጅ የፕሮቴስታንት 66 መጻሕፍትን የዕብራይስጥ ጽሑፍ ይከተላል፤ የካቶሊክና የኦርቶዶክስ ትውፊቶች ተጨማሪ የግሪክ ክፍሎችንና የተለየ የምዕራፍ ቁጥር ሊጠቀሙ ይችላሉ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "EST-S01",
+          "range": "EST 4:1-17",
+          "title": "ለእንዲህ ያለ ጊዜ",
+          "observation": [
+            "የመርዶክዮስን መልእክት፣ የአስቴርን ማመንታትና የጾምና የመሥራት ውሳኔዋን ለዩ።"
+          ],
+          "interpretation": [
+            "ምንባቡ መለኮታዊ አስተዳደርን፣ አደጋንና የሰው ኃላፊነትን እንዴት አብሮ ያቀርባል?"
+          ],
+          "application": [
+            "ያላችሁ ቦታ ለተጋላጭ ሰዎች እንድትናገሩ ኃላፊነት የሚሰጣችሁ የት ነው?"
+          ]
+        },
+        {
+          "id": "EST-S02",
+          "range": "EST 6:1-14",
+          "title": "መገለባበጡ ተጀመረ",
+          "observation": [
+            "እንቅልፍ ያጣውን ንጉሥ፣ የመዝገቦችን ንባብና ሐማ ያልጠበቀውን ተግባር ተመልከቱ።"
+          ],
+          "interpretation": [
+            "ምጸት የትዕቢትንና የተቆጣጠርኩ የሚል ግምትን ወሰን እንዴት ያጋልጣል?"
+          ],
+          "application": [
+            "ዕቅዶቻችሁ የተሳኩ ሲመስሉ ወይም ደረጃችሁ ሲጨምር ትሑት መሆን እንዴት ትችላላችሁ?"
+          ]
+        },
+        {
+          "id": "EST-S03",
+          "range": "EST 7:1-10",
+          "title": "አስቴር አደጋውን ገለጠች",
+          "observation": [
+            "አስቴር የገለጠችውንና ንጉሡ የሰጠውን ምላሽ ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "አስቴር ሐማን ከመጥቀሷ በፊት ራሷን ከተጋለጠው ሕዝብ ጋር ለምን አገናኘች?"
+          ],
+          "application": [
+            "የሥልጣን በደልን ሲጋፈጡ ኃላፊነት ያለው ጥብቅና ምን ይፈልጋል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "EST-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "አስቴር ከአይሁድ ሕዝብ ችግር አንጻር ያላትን ቦታ እንድታስብ ያበረታታት ማን ነው?",
+          "options": [
+            "መርዶክዮስ",
+            "ሐማ",
+            "ወስጢ",
+            "ሐታክ"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "EST 4:12-17"
+          ],
+          "explanation": "መርዶክዮስ አስቴርን ለሕዝቧ እንድትሠራ ያበረታታታል።"
+        },
+        {
+          "id": "EST-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "በዕብራይስጡ የአስቴር ጽሑፍ እግዚአብሔር በትረካው ሁሉ በግልጽ ይጠቀሳል።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "EST 4:1-17; 9:20-32"
+          ]
+        },
+        {
+          "id": "EST-Q03",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "አስቴር እንዲቋቋም የረዳችው የትኛው በዓል ነው?",
+          "options": [
+            "ፑሪም",
+            "ፋሲካ",
+            "ጰንጠቆስጤ",
+            "ዳስ በዓል"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "EST 9:20-32"
+          ],
+          "explanation": "መጽሐፉ መዳኑን ከዓመታዊው የፑሪም በዓል ጋር ያገናኛል።"
+        },
+        {
+          "id": "EST-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ሐማ በአይሁድ ሕዝብ ላይ ምን ለማድረግ አቀደ?",
+          "options": [
+            "በንጉሣዊ አዋጅ ማጥፋታቸውን",
+            "ወደ ኢየሩሳሌም መመለሳቸውን",
+            "ገዢ እንዲሆኑ መሾማቸውን",
+            "ቤተ መቅደሳቸውን ማምረቃቸውን"
+          ],
+          "correct_option_id": "A",
+          "references": [
+            "EST 3:1-15"
+          ],
+          "explanation": "ሐማ በአይሁድ ላይ አዋጅ እንዲወጣ ንጉሡን ያሳምናል።"
+        },
+        {
+          "id": "EST-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "የዕብራይስጡና የግሪኩ የአስቴር ቅጾች በይዘት ፍጹም አንድ ናቸው።",
+          "options": [],
+          "correct_answer": false,
+          "references": [
+            "EST 1:1-10:3"
+          ]
+        }
+      ]
+    }
+  }
+}

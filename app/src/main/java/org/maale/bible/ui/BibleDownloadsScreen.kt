@@ -18,6 +18,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import org.maale.bible.R
 import androidx.compose.ui.unit.dp
 import org.maale.bible.data.catalog.BibleEditionCatalog
 import org.maale.bible.data.catalog.BibleEditionSource
@@ -33,11 +35,11 @@ fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 18.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("BIBLE LIBRARY", style = MaterialTheme.typography.labelSmall,
+        Text(stringResource(R.string.library_title), style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.secondary)
-        Text("Choose your editions.", style = MaterialTheme.typography.headlineMedium)
+        Text(stringResource(R.string.library_choose_editions), style = MaterialTheme.typography.headlineMedium)
         Text(
-            "Browse free-license Bible editions by language. Each translation has its own licence, source and completeness status.",
+            stringResource(R.string.library_description),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -47,7 +49,7 @@ fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
         ) {
             eligible.forEach { (language, editions) ->
                 item(key = "eligible-$language") {
-                    Text("$language · OPEN-LICENSE SOURCES", style = MaterialTheme.typography.titleSmall)
+                    Text("$language · " + stringResource(R.string.library_open_license_sources).uppercase(), style = MaterialTheme.typography.titleSmall)
                 }
                 items(editions, key = { it.id }) { edition ->
                     EditionCard(edition) {
@@ -57,7 +59,7 @@ fun BibleDownloadsScreen(modifier: Modifier = Modifier) {
             }
             pending.forEach { (language, editions) ->
                 item(key = "pending-$language") {
-                    Text("$language · REVIEW BEFORE INSTALLATION", style = MaterialTheme.typography.titleSmall)
+                    Text("$language · " + stringResource(R.string.library_review_before_install).uppercase(), style = MaterialTheme.typography.titleSmall)
                 }
                 items(editions, key = { it.id }) { edition ->
                     EditionCard(edition, reviewOnly = true) {
@@ -84,9 +86,9 @@ private fun EditionCard(
                 Text(edition.title, style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.weight(1f))
                 Text(
-                    if (reviewOnly) "REVIEW REQUIRED" else when (edition.readiness) {
-                        EditionReadiness.PARTIAL_TEXT -> "PARTIAL"
-                        else -> "OPEN SOURCE"
+                    if (reviewOnly) stringResource(R.string.library_review_required).uppercase() else when (edition.readiness) {
+                        EditionReadiness.PARTIAL_TEXT -> stringResource(R.string.library_partial).uppercase()
+                        else -> stringResource(R.string.library_open_source).uppercase()
                     },
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary
@@ -101,15 +103,15 @@ private fun EditionCard(
             Text(edition.attribution, style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (edition.readiness == EditionReadiness.PARTIAL_TEXT) {
-                Text("This edition is not a complete Bible release yet.",
+                Text(stringResource(R.string.library_incomplete_notice),
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
             }
             if (reviewOnly) {
-                Text("Not enabled for in-app installation until editorial or rights review is complete.",
+                Text(stringResource(R.string.library_install_blocked),
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
             }
             Button(onClick = onOpenSource) {
-                Text(if (reviewOnly) "View source and licence" else if (edition.downloadUrl != null) "Download source package" else "Open official source")
+                Text(if (reviewOnly) stringResource(R.string.library_view_source_license) else if (edition.downloadUrl != null) stringResource(R.string.library_download_package) else stringResource(R.string.library_open_official_source))
             }
         }
     }

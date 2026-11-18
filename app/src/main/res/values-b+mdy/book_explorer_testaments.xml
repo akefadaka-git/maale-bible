@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Maale: explicit English fallback pending reviewed translation. -->
+    <string name="explorer_old_testament" translatable="false">Old Testament</string>
+    <string name="explorer_new_testament" translatable="false">New Testament</string>
+    <string name="explorer_old_testament_desc" translatable="false">The first 39 books · Law, history, poetry and prophets</string>
+    <string name="explorer_new_testament_desc" translatable="false">The final 27 books · Gospels, Acts, letters and Revelation</string>
+</resources>

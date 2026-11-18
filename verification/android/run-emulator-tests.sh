@@ -63,7 +63,14 @@ if ! wait_for_ready; then
 fi
 
 run_instrumentation() {
-  if ./gradlew --no-daemon --max-workers=2 --console=plain --stacktrace :app:connectedDebugAndroidTest >"${log_file}" 2>&1; then
+  set -- --no-daemon --max-workers=2 --console=plain --stacktrace
+  if [ -n "${ANDROID_TEST_CLASS:-}" ]; then
+    set -- "$@" "-Pandroid.testInstrumentationRunnerArguments.class=${ANDROID_TEST_CLASS}"
+    echo "Running targeted instrumentation class/method: ${ANDROID_TEST_CLASS}"
+  else
+    echo "Running the complete connected Android instrumentation suite."
+  fi
+  if ./gradlew "$@" :app:connectedDebugAndroidTest >"${log_file}" 2>&1; then
     cat "${log_file}"
     return 0
   else

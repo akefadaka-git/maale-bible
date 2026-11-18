@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Amharic: explicit English fallback pending reviewed translation. -->
+    <string name="learning_tab_overview">መግቢያ</string>
+    <string name="learning_tab_inductive">ኢንዳክቲቭ ጥናት</string>
+    <string name="learning_tab_quiz">ፈተና</string>
+    <string name="learning_back_to_books">ወደ መጻሕፍት</string>
+    <string name="learning_book_metadata">%1$s · በቀኖናዊ ዝርዝር ቦታ %2$d</string>
+    <string name="learning_centre_title">የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል</string>
+    <string name="learning_centre_description">የመጽሐፉን መግቢያ፣ ታሪካዊ አውድ፣ የይዘት አወቃቀር፣ ዋና ሐሳቦች፣ የተመራ ጥናትና የእውቀት ምዘና የሚያገኙበት ቦታ።</string>
+    <string name="learning_bilingual_status">የእንግሊዝኛና የአማርኛ ይዘት · የምንጭና የአርትዖት ግምገማ በመጠባበቅ ላይ</string>
+    <string name="learning_introduction_title">የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ</string>
+    <string name="learning_introduction_pending">ለዚህ መጽሐፍ የተዘጋጀ መግቢያ በሁለቱም ቋንቋዎች የምንጭ ማረጋገጫና የአርትዖት ግምገማ ከተጠናቀቀ በኋላ እዚህ ይቀርባል። አጠቃላይ ጽሑፍ እንደ ተመራመረ መግቢያ አይቀርብም።</string>
+    <string name="learning_background_title">ደራሲ፣ ዘመንና ታሪካዊ አውድ</string>
+    <string name="learning_background_fields">ደራሲው ወይም የደራሲነት አቋም፣ የተጻፈበት ጊዜ፣ ታሪካዊ አውድ፣ የመጀመሪያ ተቀባዮችና ያሉ የእርግጠኝነት ገደቦች ከምንጮች ጋር ይመዘገባሉ።</string>
+    <string name="learning_structure_title">የመጽሐፉ አወቃቀርና የምዕራፎች አጠቃላይ ይዘት</string>
+    <string name="learning_structure_fields">የምዕራፍ በምዕራፍ አጠቃላይ ይዘት፣ የጽሑፉ አወቃቀርና ዋና ዋና ክፍሎች ከተገመገሙ የጥናት ምንጮች ይጨመራሉ።</string>
+    <string name="learning_themes_title">ዋና ዋና ጭብጦችና ትምህርቶች</string>
+    <string name="learning_themes_fields">የመጽሐፉ ልዩ ጭብጦች፣ ሥነ-መለኮታዊ ርዕሶች፣ ዋና ሰዎችና ክስተቶች ከተረጋገጡ የመጽሐፍ ቅዱስ ክፍሎች ጋር ይገናኛሉ።</string>
+    <string name="learning_related_title">ቁልፍ ክፍሎችና ተዛማጅ ማጣቀሻዎች</string>
+    <string name="learning_related_fields">ማጣቀሻዎች መደበኛ የመጽሐፍ፣ የምዕራፍና የቁጥር መለያዎችን ይጠቀማሉ፤ የሚሠሩትም የተጫነና የተረጋገጠ የመጽሐፍ ቅዱስ እትም ላይ ብቻ ነው።</string>
+    <string name="learning_open_reader">ይህን መጽሐፍ በንባብ ማያ ክፈት</string>
+    <string name="learning_inductive_intro">እያንዳንዱን ክፍል በምልከታ፣ በትርጓሜና በተግባር ያጥኑ። ከታች ያሉት ጥያቄዎች አጠቃላይ የጥናት ዘዴ ናቸው፤ ለዚህ መጽሐፍ የተዘጋጁ መመሪያዎች ገና በአርትዖት ሂደት ላይ ናቸው።</string>
+    <string name="learning_observation_title">1 · ምልከታ — ጽሑፉ ምን ይላል?</string>
+    <string name="learning_observation_prompts">ማን ተሳታፊ ነው? ምን ተፈጠረ? የትና መቼ? የትኞቹ ቃላት፣ ሐሳቦች ወይም ድርጊቶች ተደጋገሙ? ጽሑፉ በግልጽ ምን ይናገራል?</string>
+    <string name="learning_interpretation_title">2 · ትርጓሜ — ጽሑፉ ምን ማለት ነው?</string>
+    <string name="learning_interpretation_prompts">የጽሑፉ ሥነ-ጽሑፋዊና ታሪካዊ አውድ ምንድን ነው? ለመጀመሪያ ተቀባዮቹ ምን መልእክት ነበረው? አወቃቀሩና አጎራባች ክፍሎች ትርጉሙን እንዴት ያብራራሉ?</string>
+    <string name="learning_application_title">3 · ተግባር — እንዴት ልመልስ?</string>
+    <string name="learning_application_prompts">ምን እውነት ማመን አለብኝ? የትኛው አመለካከት ወይም ድርጊት መለወጥ አለበት? ምን ልለማመድ፣ ልተው፣ ላስተካክል ወይም ልጸልይ? በሁኔታዬ ውስጥ በታማኝነት እንዴት ልተገብረው?</string>
+    <string name="learning_study_guide_pending_title">ለዚህ መጽሐፍ የተዘጋጀ ኢንዳክቲቭ የጥናት መመሪያ</string>
+    <string name="learning_study_guide_pending">የምዕራፍ መመሪያዎች፣ የውይይት ጥያቄዎች፣ የማሰላሰል ልምምዶችና የቡድን ጥናት ቁሳቁሶች የመጽሐፉ ይዘትና ማጣቀሻዎች ከተረጋገጡ በኋላ ይጨመራሉ።</string>
+    <string name="learning_quiz_title">የመጽሐፉ እውቀት ምዘና</string>
+    <string name="learning_quiz_pending">በእንግሊዝኛና በአማርኛ የሚቀርቡ ፈተናዎች ባለብዙ ምርጫ፣ እውነት/ሐሰት፣ ክፍተት መሙላት፣ ማዛመድ፣ የምዕራፍ ግንዛቤና የመጽሐፍ አጠቃላይ ግምገማን ያካትታሉ። እያንዳንዱ መልስ ማብራሪያና የተረጋገጠ የቅዱስ መጽሐፍ ማጣቀሻ ይኖረዋል።</string>
+    <string name="learning_quiz_unavailable">ፈተናው ገና አልተዘጋጀም</string>
+    <string name="learning_provenance_notice">የይዘት መስፈርት፦ ቅዱስ ጽሑፍ፣ መግቢያዎች፣ የጥናት መመሪያዎችና የፈተና ጥያቄዎች የተለያዩ የይዘት ዓይነቶች ናቸው። እያንዳንዱ የራሱ ምንጭ፣ ፈቃድ ወይም ፈቃድ ማስረጃ፣ የምንጭ መጥቀስ፣ የቋንቋ ግምገማና ከእትሙ ጋር ተስማሚነት ይፈልጋል። ያልተረጋገጠ ይዘት እንደ ጸደቀ አይታይም።</string>
+    <string name="learning_setting_title">ታሪካዊና ባህላዊ አውድ</string>
+    <string name="learning_audience_title">የመጀመሪያ ተቀባዮችና ዓላማ</string>
+    <string name="learning_key_people_title">ዋና ዋና ሰዎች</string>
+    <string name="learning_interpretive_care_title">በትርጓሜ ጊዜ ሊጠነቀቁ የሚገቡ ነጥቦች</string>
+    <string name="learning_source_count">%1$d የጥናት ምንጮች ተመዝግበዋል · ማጣቀሻዎቹን በይዘት ጥቅሉ ይመልከቱ</string>
+    <string name="learning_draft_warning">የውስጥ ረቂቅ ነው — ለህትመት አልጸደቀም። የእንግሊዝኛ አርትዖትና የአማርኛ ቋንቋ ግምገማ ገና ያስፈልጋሉ።</string>
+    <string name="learning_quiz_score">የተመረመሩ መልሶች፦ %1$d · ትክክል፦ %2$d</string>
+    <string name="learning_true">እውነት</string>
+    <string name="learning_false">ሐሰት</string>
+    <string name="learning_check_answer">መልሱን አረጋግጥ</string>
+    <string name="learning_answer_correct">ትክክል</string>
+    <string name="learning_answer_incorrect">ትክክል አይደለም — ማብራሪያውን ይመልከቱ</string>
+    <string name="learning_answer_references">ማጣቀሻዎች፦ %1$s</string>
+</resources>

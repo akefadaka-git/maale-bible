@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explorer_old_testament">Old Testament</string>
+    <string name="explorer_new_testament">New Testament</string>
+    <string name="explorer_old_testament_desc">The first 39 books · Law, history, poetry and prophets</string>
+    <string name="explorer_new_testament_desc">The final 27 books · Gospels, Acts, letters and Revelation</string>
+</resources>

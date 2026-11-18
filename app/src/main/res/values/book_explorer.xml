@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explorer_eyebrow">EXPLORE BY CATEGORY</string>
+    <string name="explorer_catalogue_count">66 books · 10 collections</string>
+    <string name="explorer_catalogue_note">Browse the biblical library by section, title or canonical code.</string>
+    <string name="explorer_search_label">Find a book</string>
+    <string name="explorer_search_hint">Search Genesis, John, ROM…</string>
+    <string name="explorer_all_categories">All</string>
+    <string name="explorer_results_count">%1$d books found</string>
+    <string name="explorer_content_status">CATALOGUE · TEXT PENDING</string>
+    <string name="explorer_no_results">No books match this search. Try another title or code.</string>
+    <string name="explorer_footer_notice">Book names and canonical order are catalogue metadata. Verified Maale scripture text and localized book names will appear when the authorized edition content is integrated.</string>
+    <string name="explorer_book_code">%1$s · Book %2$d</string>
+    <string name="explorer_book_content_pending">Scripture text not installed in this build</string>
+    <string name="explorer_category_law">Law / Torah</string>
+    <string name="explorer_category_law_desc">The five books of Moses</string>
+    <string name="explorer_category_history">Historical books</string>
+    <string name="explorer_category_history_desc">Israel’s story and its people</string>
+    <string name="explorer_category_wisdom">Poetry &amp; wisdom</string>
+    <string name="explorer_category_wisdom_desc">Worship, wisdom and reflection</string>
+    <string name="explorer_category_major_prophets">Major prophets</string>
+    <string name="explorer_category_major_prophets_desc">Longer prophetic books</string>
+    <string name="explorer_category_minor_prophets">The Twelve</string>
+    <string name="explorer_category_minor_prophets_desc">The twelve shorter prophetic books</string>
+    <string name="explorer_category_gospels">The Gospels</string>
+    <string name="explorer_category_gospels_desc">The life and teaching of Jesus</string>
+    <string name="explorer_category_acts">Early Church</string>
+    <string name="explorer_category_acts_desc">The story of the first Christian communities</string>
+    <string name="explorer_category_paul">Paul’s letters</string>
+    <string name="explorer_category_paul_desc">Letters associated with Paul</string>
+    <string name="explorer_category_general">General letters</string>
+    <string name="explorer_category_general_desc">Letters to the wider Church</string>
+    <string name="explorer_category_revelation">Apocalyptic prophecy</string>
+    <string name="explorer_category_revelation_desc">The Revelation of John</string>
+    <string name="explorer_open_atlas">Explore the Bible Atlas</string>
+</resources>
