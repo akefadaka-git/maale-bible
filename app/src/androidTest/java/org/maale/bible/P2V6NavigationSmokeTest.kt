@@ -37,10 +37,14 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Search filters as text is entered. The Genesis result is the first
-        // matching Old Testament book, but the category heading can place its
-        // card just below the LazyColumn viewport. Use one bounded swipe to
-        // reveal it; do not send the field's unsupported default IME action.
+        // Make the catalogue state deterministic across tests and Activity
+        // recreation: select Old Testament and clear any saved category filter.
+        composeRule.onNodeWithTag("testament_old").performClick()
+        composeRule.onNodeWithTag("books_category_all").performClick()
+
+        // Search filters as text is entered. The Genesis result can sit just
+        // below the LazyColumn viewport after the category heading. Use one
+        // bounded swipe; do not invoke the field's unsupported default IME action.
         composeRule.onNodeWithTag("books_list").performTouchInput { swipeUp() }
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
