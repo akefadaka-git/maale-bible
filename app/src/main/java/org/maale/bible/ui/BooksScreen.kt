@@ -6,6 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -58,6 +59,12 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
     }
     val groupedBooks = matchingBooks.groupBy { book -> bookCategories.first { book.order in it.range } }
     val testamentCount = if (selectedTestament == "ot") 39 else 27
+    val booksListState = rememberLazyListState()
+
+    // Keep filtered results discoverable when query/testament/category state changes.
+    LaunchedEffect(query, selectedTestament, selectedCategory) {
+        booksListState.scrollToItem(0)
+    }
 
     Column(
         modifier = modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(horizontal = 16.dp, vertical = 12.dp),
@@ -126,7 +133,7 @@ fun BooksScreen(onSelectBook: (String) -> Unit, onOpenAtlas: () -> Unit = {}, mo
             Text(stringResource(R.string.explorer_results_count, matchingBooks.size), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.secondary)
             Text(stringResource(R.string.explorer_content_status), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        LazyColumn(Modifier.fillMaxWidth().weight(1f).testTag("books_list"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        LazyColumn(state = booksListState, modifier = Modifier.fillMaxWidth().weight(1f).testTag("books_list"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             if (matchingBooks.isEmpty()) item {
                 Text(stringResource(R.string.explorer_no_results), Modifier.fillMaxWidth().padding(24.dp), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
