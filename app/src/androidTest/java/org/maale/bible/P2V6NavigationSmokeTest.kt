@@ -167,7 +167,6 @@ class P2V6NavigationSmokeTest {
         // seven-item bottom-navigation target.
         composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ").performClick()
         awaitText("EXPLORE BY CATEGORY")
-        composeRule.onNodeWithTag("books_search").performTextInput("GEN")
         revealGenesisCard()
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
