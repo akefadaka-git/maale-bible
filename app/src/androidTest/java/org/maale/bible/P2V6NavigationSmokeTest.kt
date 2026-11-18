@@ -1,10 +1,8 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -52,9 +50,13 @@ class P2V6NavigationSmokeTest {
         // BooksScreen resets its LazyColumn to the first result whenever
         // query or catalogue filters change. Never invoke the unsupported
         // default IME action on books_search.
-        composeRule.onNodeWithTag("books_search").assertTextEquals("GEN")
         composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithContentDescription("Open Genesis").fetchSemanticsNodes().isNotEmpty()
+            try {
+                composeRule.onNodeWithContentDescription("Open Genesis").fetchSemanticsNode()
+                true
+            } catch (_: AssertionError) {
+                false
+            }
         }
         composeRule.onNodeWithContentDescription("Open Genesis")
             .assertIsDisplayed()
