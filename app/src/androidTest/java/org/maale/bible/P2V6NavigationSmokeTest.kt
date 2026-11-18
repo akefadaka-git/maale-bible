@@ -11,8 +11,6 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
-import androidx.compose.ui.test.performTouchInput
-import androidx.compose.ui.test.swipeUp
 import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
@@ -37,15 +35,10 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Search filters as text is entered. Do not invoke an IME action:
-        // books_search uses the default IME action, so performImeAction()
-        // is unsupported and fails Compose semantics on every emulator API.
-        // Use bounded real swipes rather than performScrollToNode, whose
-        // nested Espresso-idle wait deadlocks this test on emulator images.
-        val bookList = composeRule.onNodeWithTag("books_list")
-        repeat(2) {
-            bookList.performTouchInput { swipeUp() }
-        }
+        // Search filters as text is entered. The Genesis result is the first
+        // matching Old Testament book, so it is already at the top of the
+        // filtered list. Wait for its semantics node and click it directly;
+        // do not send an unsupported default IME action or swipe it off-screen.
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
