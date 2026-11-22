@@ -156,3 +156,19 @@ A further UI semantics correction was committed:
 - Earlier runs for `c92848a2b92b189ba94c3c792c7e950cea07a3a6`: PR run `44996894032` and push run `44996889626`, both pending/queued when inspected.
 
 No pass is claimed for either correction until the current-head emulator tests complete. The six-API matrix remains UNRESOLVED.
+
+
+### Earlier six-API push run disposition — 2026-11-22
+
+Run `44996471891` is the push-triggered matrix for code commit `255a83d0b2fbd7cfb4103b408dea68c22631eac5` (before the second test-helper and UI-semantics corrections). Subsequent job inspection showed:
+
+- API 26: FAIL — 36 instrumentation tests, 3 failed.
+- API 28: FAIL — 36 instrumentation tests, 3 failed.
+- API 30: in progress at last inspection.
+- API 33, 35 and 36: queued at last inspection.
+- Build installable debug APK: PASS.
+- Host contracts: PASS.
+
+API 26 and API 28 logs both identify `ComposeTimeoutException` in `P2V6NavigationSmokeTest.revealGenesisCard()`. The same three navigation tests fail. Emulator QEMU warnings are present, but the test assertions themselves fail to locate the Genesis card; therefore these are application/UI-test failures, not infrastructure-only failures.
+
+The newer current-head push run `44997070823` for commit `6b9f890a1cb1618827f5fbc6057c0d543dd9a97e` was pending and had not started jobs at last inspection. It is the run that must validate the updated semantics modifier order. Earlier PR/push runs for the intermediate commits were cancelled by GitHub workflow concurrency after subsequent commits; no manual cancellation or rerun was issued.
