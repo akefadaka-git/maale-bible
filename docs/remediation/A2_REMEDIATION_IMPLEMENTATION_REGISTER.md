@@ -124,3 +124,18 @@ Added `docs/product/A3_PREPARATION_ONLY_SPEC_2026-11-22.md` at commit `65de8b789
 ### Current disposition
 
 A2-01 remains PARTIAL pending the API 30 result and six-API matrix evidence. A2-02 through A2-05 remain PARTIAL. A2-06 remains UNRESOLVED until the full matrix is executed and failures are dispositioned. No A2 closure or A3 implementation start is claimed.
+
+
+### Navigation-test follow-up — 2026-11-22
+
+The first selector correction at `255a83d0b2fbd7cfb4103b408dea68c22631eac5` did not resolve the navigation tests. The resulting exact-head PR run `44996476615` failed API 30: 36 instrumentation tests ran, 3 failed, and the failures still timed out in `revealGenesisCard()` while looking for `book_card_GEN`. The exact-head push run `44996471891` also recorded the same three navigation timeouts on API 26. QEMU network-pipe warnings were present, but the explicit test result identifies a Compose UI/test-selector failure; this is not classified as infrastructure-only.
+
+A second correction was committed:
+
+- Commit: `c92848a2b92b189ba94c3c792c7e950cea07a3a6`.
+- Changed file: `app/src/androidTest/java/org/maale/bible/P2V6NavigationSmokeTest.kt`.
+- The helper no longer edits the search field. It resets the Old Testament/all-category filters, then calls `performScrollTo()` on the canonical `book_card_GEN` node before asserting and clicking it.
+- New PR run: [44996894032](https://github.com/akefadaka-git/maale-bible/actions/runs/44996894032), pending at the time of this update.
+- New push run: [44996889626](https://github.com/akefadaka-git/maale-bible/actions/runs/44996889626), pending at the time of this update.
+
+The second correction is not accepted until those new exact-head runs finish and the affected tests pass. Full six-API acceptance remains open.
