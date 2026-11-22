@@ -3,7 +3,6 @@ package org.maale.bible
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -51,14 +50,9 @@ class P2V6NavigationSmokeTest {
         // query or catalogue filters change. Never invoke the unsupported
         // default IME action on books_search.
         composeRule.waitUntil(10_000L) {
-            try {
-                composeRule.onNodeWithContentDescription("Open Genesis").fetchSemanticsNode()
-                true
-            } catch (_: AssertionError) {
-                false
-            }
+            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
-        composeRule.onNodeWithContentDescription("Open Genesis")
+        composeRule.onNodeWithTag("book_card_GEN")
             .assertIsDisplayed()
             .performClick()
     }
