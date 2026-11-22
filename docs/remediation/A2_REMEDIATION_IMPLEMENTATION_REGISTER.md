@@ -139,3 +139,20 @@ A second correction was committed:
 - New push run: [44996889626](https://github.com/akefadaka-git/maale-bible/actions/runs/44996889626), pending at the time of this update.
 
 The second correction is not accepted until those new exact-head runs finish and the affected tests pass. Full six-API acceptance remains open.
+
+
+### Navigation semantics follow-up — 2026-11-22
+
+The second test-only correction at `c92848a2b92b189ba94c3c792c7e950cea07a3a6` changed the helper to scroll directly to `book_card_GEN`, but that exact commit has not yet completed CI. The previous run logs established that the tag was not discoverable in the merged semantics tree. Inspection found the tag modifier placed before the card's `semantics(mergeDescendants = true)` modifier.
+
+A further UI semantics correction was committed:
+
+- Commit: `6b9f890a1cb1618827f5fbc6057c0d543dd9a97e`.
+- File: `app/src/main/java/org/maale/bible/ui/BooksScreen.kt`.
+- Change: move `testTag("book_card_" + book.usfmId)` after the merged semantics modifier so the tag is attached to the merged book-card node.
+- Current controlled branch head at this update: `6b9f890a1cb1618827f5fbc6057c0d543dd9a97e`.
+- Current-head push workflow: [44997070823](https://github.com/akefadaka-git/maale-bible/actions/runs/44997070823), pending when inspected.
+- Current-head PR workflow: not yet returned at the time of this update.
+- Earlier runs for `c92848a2b92b189ba94c3c792c7e950cea07a3a6`: PR run `44996894032` and push run `44996889626`, both pending/queued when inspected.
+
+No pass is claimed for either correction until the current-head emulator tests complete. The six-API matrix remains UNRESOLVED.
