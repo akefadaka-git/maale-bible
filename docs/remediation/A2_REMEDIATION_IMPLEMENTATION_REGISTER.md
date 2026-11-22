@@ -78,3 +78,49 @@ The Account screen has an identifier/password login form and a registration form
 ### A2-05 migration coverage
 The v4 database open path explicitly migrates schema 1→2→3→4, 2→3→4 and 3→4; the instrumentation fixtures exercise v1→v4, v2→v4 and v3→v4 preservation. Journal CRUD tests cover create/update/delete without a passage reference. These tests have not yet been evidenced on the latest full Android matrix. Corrupt-database recovery and interrupted migration/rollback behavior still require explicit tests.
 
+
+
+## Owner-authorized execution update — 2026-11-22
+
+**Current execution authority:** controlled A2 remediation on the existing `fix/a2-remediation-complete` working line, with A3 specification preparation only. A2 remains PARTIAL/OPEN. A3 implementation has not been started under this execution. Preserve `main`; no merge, signing, deployment, publication or paid-provider activation.
+
+### Controlled integration and exact commits
+
+- Existing A2 working branch: `fix/a2-remediation-complete`.
+- PR: #47, remains open/draft; base `feat/a4-search-multi-edition-catalogue` at `b2ffb3b66079555ba88e7fcc30007ecc43074b7f`.
+- Navigation-test correction commit: `255a83d0b2fbd7cfb4103b408dea68c22631eac5`.
+- A3 preparation-only specification commit: `65de8b789d519ba053a2a4b2ef7740775b487c0b`.
+- The A3 preparation commit changes documentation only; it does not alter Android source or workflow files.
+- No changes were made to `main`.
+
+### A2-01 / A2-06 latest navigation-test correction
+
+The exact-head API 30 job in run `44269861070` failed three navigation tests. The detailed failure trace showed that `P2V6NavigationSmokeTest.revealGenesisCard()` timed out while waiting for the book-card content description `Open Genesis`, despite the card exposing a stable test tag `book_card_GEN`. The test was changed to wait for and click that stable tag instead of matching the content description. This is a test-selector correction, not proof that the app navigation itself now passes.
+
+- Changed file: `app/src/androidTest/java/org/maale/bible/P2V6NavigationSmokeTest.kt`.
+- New exact code commit: `255a83d0b2fbd7cfb4103b408dea68c22631eac5`.
+- Workflow run: [44996476615](https://github.com/akefadaka-git/maale-bible/actions/runs/44996476615).
+- Host contracts: PASS.
+- Debug APK build, checksum and artifact upload: PASS.
+- API 30 instrumentation job: in progress at the time this addendum was written; no pass/fail disposition is claimed.
+- Full six-API matrix: NOT VERIFIED by this run.
+
+### Localization inventory reconciliation
+
+The current branch resource files were enumerated directly. Across `strings.xml`, `book_explorer.xml`, `book_explorer_testaments.xml` and `book_learning.xml`, each locale has 263 unique keys:
+
+| Locale | Translatable values | Explicit English fallbacks | Total |
+|---|---:|---:|---:|
+| English base | 263 | 0 | 263 |
+| Amharic | 162 | 101 | 263 |
+| Maale | 123 | 140 | 263 |
+
+The older aggregate statement of 113 Maale values / 150 fallbacks elsewhere in this register is superseded by this direct current-branch enumeration. The Maale total includes the app title plus 122 Owner-supplied UI entries among the 262 non-title keys. Fallback strings marked `translatable=false` are not translations and are not counted as linguistically complete. Exact-head rendering, persistence, accessibility and independent language review remain acceptance requirements.
+
+### A3 specification preparation
+
+Added `docs/product/A3_PREPARATION_ONLY_SPEC_2026-11-22.md` at commit `65de8b789d519ba053a2a4b2ef7740775b487c0b`. It defines A3 workstreams, entry conditions, acceptance deliverables and explicit non-authorizations. It is a documentation artifact only. It does not close A2 or start A3 implementation.
+
+### Current disposition
+
+A2-01 remains PARTIAL pending the API 30 result and six-API matrix evidence. A2-02 through A2-05 remain PARTIAL. A2-06 remains UNRESOLVED until the full matrix is executed and failures are dispositioned. No A2 closure or A3 implementation start is claimed.
