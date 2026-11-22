@@ -35,24 +35,13 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Make the catalogue state deterministic across tests and Activity
-        // recreation: select Old Testament and clear any saved category filter.
+        // Reset the catalogue to the Old Testament and all categories. Genesis
+        // is the first canonical entry; use the LazyColumn node's own scroll
+        // action rather than mutating the search field or relying on IME state.
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
-
-        // rememberSaveable retains the query across Activity recreation and
-        // test cases. Replace it deterministically before checking Genesis.
-        val search = composeRule.onNodeWithTag("books_search")
-        search.performTextClearance()
-        search.performTextInput("GEN")
-
-        // BooksScreen resets its LazyColumn to the first result whenever
-        // query or catalogue filters change. Never invoke the unsupported
-        // default IME action on books_search.
-        composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
-        }
         composeRule.onNodeWithTag("book_card_GEN")
+            .performScrollTo()
             .assertIsDisplayed()
             .performClick()
     }
