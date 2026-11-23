@@ -53,9 +53,11 @@ class P2V6NavigationSmokeTest {
         composeRule.waitUntil(10_000L) {
             composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
+        // The card is already the indexed LazyColumn target. Avoid a second
+        // node-level scroll: Compose can invalidate the lazy semantics node
+        // between lookup and performScrollTo on the small emulator viewport.
         composeRule.onNodeWithTag("book_card_GEN")
-            .performScrollTo()
-            .assertIsDisplayed()
+            .assertHasClickAction()
             .performClick()
     }
 
