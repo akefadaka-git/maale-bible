@@ -36,13 +36,22 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Reset the catalogue to the Old Testament and all categories.
-        // Genesis is the first book, but LazyColumn does not compose its card
-        // until the list is scrolled to that item. Scroll the container first,
-        // then query the now-composed card and click it.
+        // Select the complete Old Testament catalogue before scrolling. The
+        // list's LaunchedEffect resets its position when these filters change,
+        // so wait for that state transition before issuing the indexed scroll.
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
+        composeRule.waitForIdle()
+
+        // LazyColumn item 0 is the Law category heading; item 1 is Genesis.
+        // Do not resolve the Genesis selector until the lazy item is composed
+        // and reported as displayed by the semantics tree.
         composeRule.onNodeWithTag("books_list").performScrollToIndex(1)
+        composeRule.waitUntil(10_000L) {
+            runCatching {
+                composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed()
+            }.isSuccess
+        }
         composeRule.onNodeWithTag("book_card_GEN")
             .assertIsDisplayed()
             .performClick()
