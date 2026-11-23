@@ -9,6 +9,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performScrollToIndex
 import androidx.compose.ui.test.performTextClearance
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
@@ -35,13 +36,14 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Reset the catalogue to the Old Testament and all categories. Genesis
-        // is the first canonical entry; use the LazyColumn node's own scroll
-        // action rather than mutating the search field or relying on IME state.
+        // Reset the catalogue to the Old Testament and all categories.
+        // Genesis is the first book, but LazyColumn does not compose its card
+        // until the list is scrolled to that item. Scroll the container first,
+        // then query the now-composed card and click it.
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
+        composeRule.onNodeWithTag("books_list").performScrollToIndex(1)
         composeRule.onNodeWithTag("book_card_GEN")
-            .performScrollTo()
             .assertIsDisplayed()
             .performClick()
     }
