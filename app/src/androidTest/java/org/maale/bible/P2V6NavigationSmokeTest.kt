@@ -9,7 +9,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.performScrollToIndex
+import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextClearance
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
@@ -43,20 +44,14 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("books_category_all").performClick()
         composeRule.waitForIdle()
 
-        // LazyColumn item 0 is the Law category heading; item 1 is Genesis.
-        // Do not resolve the Genesis selector until the lazy item is composed
-        // and reported as displayed by the semantics tree.
-        composeRule.onNodeWithTag("books_list").performScrollToIndex(1)
-        // Composition and viewport visibility are separate for LazyColumn
-        // items. First wait until the indexed item exists in the semantics
-        // tree, then use its own scroll-to action to bring it fully into view.
-        composeRule.waitUntil(10_000L) {
-            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
-        }
-        // The card is already the indexed LazyColumn target. Avoid a second
-        // node-level scroll: Compose can invalidate the lazy semantics node
-        // between lookup and performScrollTo on the small emulator viewport.
+        // Scroll the LazyColumn to the actual Genesis semantics target rather
+        // than assuming a fixed item index across category/header composition.
+        // Scrolling from the parent list also avoids stale lazy-item semantics
+        // handles observed when scrolling the child card directly.
+        composeRule.onNodeWithTag("books_list")
+            .performScrollToNode(hasTestTag("book_card_GEN"))
         composeRule.onNodeWithTag("book_card_GEN")
+            .assertIsDisplayed()
             .assertHasClickAction()
             .performClick()
     }
