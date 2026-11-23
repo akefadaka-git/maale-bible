@@ -47,12 +47,14 @@ class P2V6NavigationSmokeTest {
         // Do not resolve the Genesis selector until the lazy item is composed
         // and reported as displayed by the semantics tree.
         composeRule.onNodeWithTag("books_list").performScrollToIndex(1)
+        // Composition and viewport visibility are separate for LazyColumn
+        // items. First wait until the indexed item exists in the semantics
+        // tree, then use its own scroll-to action to bring it fully into view.
         composeRule.waitUntil(10_000L) {
-            runCatching {
-                composeRule.onNodeWithTag("book_card_GEN").assertIsDisplayed()
-            }.isSuccess
+            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
         }
         composeRule.onNodeWithTag("book_card_GEN")
+            .performScrollTo()
             .assertIsDisplayed()
             .performClick()
     }
