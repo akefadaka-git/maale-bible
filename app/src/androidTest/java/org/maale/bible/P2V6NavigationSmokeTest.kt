@@ -119,9 +119,9 @@ class P2V6NavigationSmokeTest {
         openGenesisLearningCentre()
         mark("nav-04-assert-learning-centre-tabs")
         awaitText("Introduction")
-        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
-        composeRule.onNodeWithText("Inductive study").assertIsDisplayed()
-        composeRule.onNodeWithText("Quiz").assertIsDisplayed()
+        composeRule.onNodeWithText("Introduction").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("Inductive study").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("Quiz").performScrollTo().assertIsDisplayed()
     }
 
     @Test(timeout = 60_000)
@@ -177,7 +177,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል")
             .performScrollTo()
             .assertIsDisplayed()
-        composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
+        composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").performScrollTo().assertIsDisplayed()
         composeRule.onNodeWithText("ፈተና").performScrollTo().performClick()
         composeRule.onNodeWithText("ፈተናው ገና አልተዘጋጀም").assertIsDisplayed()
         assertTrue(composeRule.onAllNodesWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").fetchSemanticsNodes().isEmpty())
