@@ -9,8 +9,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.hasTestTag
-import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.performScrollToIndex
 import androidx.compose.ui.test.performTextClearance
 import androidx.compose.ui.test.performTextInput
 import android.content.Context
@@ -37,21 +36,22 @@ class P2V6NavigationSmokeTest {
     }
 
     private fun revealGenesisCard() {
-        // Select the complete Old Testament catalogue before scrolling. The
-        // list's LaunchedEffect resets its position when these filters change,
-        // so wait for that state transition before issuing the indexed scroll.
+        // The Old Testament list is deterministic: item 0 is the Law heading
+        // and item 1 is Genesis. Scroll by index first, then wait for the lazy
+        // item to enter the semantics tree before resolving its click action.
+        mark("genesis-01-select-old-testament")
         composeRule.onNodeWithTag("testament_old").performClick()
         composeRule.onNodeWithTag("books_category_all").performClick()
         composeRule.waitForIdle()
 
-        // Scroll the LazyColumn to the actual Genesis semantics target rather
-        // than assuming a fixed item index across category/header composition.
-        // Scrolling from the parent list also avoids stale lazy-item semantics
-        // handles observed when scrolling the child card directly.
-        composeRule.onNodeWithTag("books_list")
-            .performScrollToNode(hasTestTag("book_card_GEN"))
+        mark("genesis-02-scroll-to-genesis-index-1")
+        composeRule.onNodeWithTag("books_list").performScrollToIndex(1)
+        mark("genesis-03-await-genesis-semantics")
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithTag("book_card_GEN").fetchSemanticsNodes().isNotEmpty()
+        }
+        mark("genesis-04-click-genesis")
         composeRule.onNodeWithTag("book_card_GEN")
-            .assertIsDisplayed()
             .assertHasClickAction()
             .performClick()
     }
@@ -157,15 +157,19 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Search with purpose.").assertIsDisplayed()
     }
 
-    @Test
+    @Test(timeout = 60_000)
     fun bookLearningCentreKeepsDraftLearningContentUnavailableInBothLocales() {
+        mark("draft-01-select-amharic")
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_amharic").performClick()
         // Use the primary Home action instead of relying on a narrow
         // seven-item bottom-navigation target.
+        mark("draft-02-open-books")
         composeRule.onNodeWithText("መጽሐፍ ቅዱሱን ያስሱ").performClick()
         awaitText("EXPLORE BY CATEGORY")
+        mark("draft-03-reveal-genesis")
         revealGenesisCard()
+        mark("draft-04-assert-amharic-draft")
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
         composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
         composeRule.onNodeWithText("ፈተና").performClick()
@@ -173,8 +177,10 @@ class P2V6NavigationSmokeTest {
         assertTrue(composeRule.onAllNodesWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").fetchSemanticsNodes().isEmpty())
         assertTrue(composeRule.onAllNodesWithText("መልሱን አረጋግጥ").fetchSemanticsNodes().isEmpty())
 
+        mark("draft-05-switch-english")
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_english").performClick()
+        mark("draft-06-assert-english-draft")
         composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
         composeRule.onNodeWithText("Quiz").performClick()
         composeRule.onNodeWithText("Quiz not yet available").assertIsDisplayed()
