@@ -42,8 +42,22 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Validate runner-provisioned Android SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
+          if [[ -z "$SDK_ROOT" || ! -d "$SDK_ROOT/platform-tools" || ! -x "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" ]]; then
+            echo "::error::GitHub-hosted runner does not expose the expected Android SDK layout."
+            echo "ANDROID_HOME=${ANDROID_HOME:-<unset>}"
+            echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT:-<unset>}"
+            exit 1
+          fi
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "$SDK_ROOT/platform-tools" >> "$GITHUB_PATH"
+          echo "$SDK_ROOT/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --version
 
       - name: Set up Gradle and dependency cache
         uses: gradle/actions/setup-gradle@v4
