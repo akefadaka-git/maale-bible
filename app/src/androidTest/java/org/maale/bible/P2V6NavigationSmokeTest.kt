@@ -2,6 +2,8 @@ package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertHasClickAction
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -64,7 +66,8 @@ class P2V6NavigationSmokeTest {
         awaitText("Genesis")
         // The learning-centre banner is below the book title/metadata in a
         // vertically scrollable screen; scroll it into the viewport explicitly.
-        composeRule.onNodeWithText("Bible book learning centre").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Bible book learning centre"))
+        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
     }
 
     @get:Rule
@@ -119,9 +122,12 @@ class P2V6NavigationSmokeTest {
         openGenesisLearningCentre()
         mark("nav-04-assert-learning-centre-tabs")
         awaitText("Introduction")
-        composeRule.onNodeWithText("Introduction").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("Inductive study").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("Quiz").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Introduction"))
+        composeRule.onNodeWithText("Introduction").assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Inductive study"))
+        composeRule.onNodeWithText("Inductive study").assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Quiz"))
+        composeRule.onNodeWithText("Quiz").assertIsDisplayed()
     }
 
     @Test(timeout = 60_000)
@@ -174,11 +180,12 @@ class P2V6NavigationSmokeTest {
         revealGenesisCard()
         awaitText("Genesis")
         mark("draft-04-scroll-to-amharic-learning-centre")
-        composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል")
-            .performScrollTo()
-            .assertIsDisplayed()
-        composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("ፈተና").performScrollTo().performClick()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል"))
+        composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ"))
+        composeRule.onNodeWithText("የመጽሐፉ መግቢያ · እንግሊዝኛና አማርኛ").assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("ፈተና"))
+        composeRule.onNodeWithText("ፈተና").performClick()
         composeRule.onNodeWithText("ፈተናው ገና አልተዘጋጀም").assertIsDisplayed()
         assertTrue(composeRule.onAllNodesWithText("በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?").fetchSemanticsNodes().isEmpty())
         assertTrue(composeRule.onAllNodesWithText("መልሱን አረጋግጥ").fetchSemanticsNodes().isEmpty())
@@ -187,8 +194,10 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithTag("language_selector").performClick()
         composeRule.onNodeWithTag("language_english").performClick()
         mark("draft-06-assert-english-draft")
-        composeRule.onNodeWithText("Bible book learning centre").performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText("Quiz").performScrollTo().performClick()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Bible book learning centre"))
+        composeRule.onNodeWithText("Bible book learning centre").assertIsDisplayed()
+        composeRule.onNodeWithTag("book_learning_screen").performScrollToNode(hasText("Quiz"))
+        composeRule.onNodeWithText("Quiz").performClick()
         composeRule.onNodeWithText("Quiz not yet available").assertIsDisplayed()
         assertTrue(composeRule.onAllNodesWithText("According to Genesis 1, what does the opening chapter present God doing?").fetchSemanticsNodes().isEmpty())
         assertTrue(composeRule.onAllNodesWithText("Check answer").fetchSemanticsNodes().isEmpty())
