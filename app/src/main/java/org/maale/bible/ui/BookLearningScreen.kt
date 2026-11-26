@@ -41,7 +41,7 @@ fun BookLearningScreen(
     val testament = if ((book?.order ?: 0) <= 39) stringResource(R.string.explorer_old_testament) else stringResource(R.string.explorer_new_testament)
 
     Column(
-        modifier = modifier.fillMaxSize().verticalScroll(rememberScrollState()).testTag("book_learning_screen").padding(16.dp),
+        modifier = modifier.testTag("book_learning_screen").fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
