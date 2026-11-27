@@ -2,10 +2,10 @@ name: P2 synthetic verification
 # Stable Android CI: prefetch verified AOSP system images and use a lean emulator profile.
 on:
   pull_request:
-    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','tools/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
   push:
     branches: [feat/a4-offline-study-suite, fix/a2-remediation-complete]
-    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','tools/**','.github/workflows/p2-synthetic-verification.yml']
   workflow_dispatch:
     inputs:
       full_android_matrix:
@@ -27,6 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python verification/canon/canonical_registry_verify.py
+      - run: python -m unittest tools.tests.test_usfm_content_pipeline tools.tests.test_android_content_package
       - run: python verification/canon/maale_source_canon_reconcile.py
       - run: python verification/android/test_run_emulator_tests.py
       - run: python verification/android/test_gradle_retry.py
@@ -52,8 +53,47 @@ jobs:
       - name: Run backend authentication and migration tests
         working-directory: backend
         run: python -m pytest -q
+  verified-content-package:
+    name: Build authorized Maale offline package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download and verify authorized 2008 Maale source
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="${RUNNER_TEMP}/mdyeth_usfm.zip"
+          expected_sha="4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11"
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 20 --max-time 300 \
+            "https://ebible.org/Scriptures/mdyeth_usfm.zip" -o "${archive}"
+          test "$(stat -c '%s' "${archive}")" = "1809863"
+          printf '%s  %s\n' "${expected_sha}" "${archive}" | sha256sum --check -
+      - name: Build and validate private SQLite package
+        run: |
+          set -euo pipefail
+          python tools/usfm_content_pipeline.py \
+            --archive "${RUNNER_TEMP}/mdyeth_usfm.zip" \
+            --manifest content/manifests/maale-2008-source-manifest.json \
+            --registry content/canon/66-v1/registry.json \
+            --output "${RUNNER_TEMP}/maale-2008-content.sqlite" \
+            --report "${RUNNER_TEMP}/maale-2008-content-report.json"
+          python tools/build_android_content_asset.py \
+            --database "${RUNNER_TEMP}/maale-2008-content.sqlite" \
+            --report "${RUNNER_TEMP}/maale-2008-content-report.json" \
+            --source-manifest content/manifests/maale-2008-source-manifest.json \
+            --output-dir app/src/main/assets/content/packages/mdyeth
+      - uses: actions/upload-artifact@v4
+        with:
+          name: maale-2008-offline-package
+          path: app/src/main/assets/content/packages/mdyeth/*
+          if-no-files-found: error
+          retention-days: 14
   android-fts5:
-    needs: [host-contracts, debug-apk]
+    needs: [host-contracts, debug-apk, verified-content-package]
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     strategy:
@@ -64,6 +104,10 @@ jobs:
         api: ${{ github.event_name == 'pull_request' && fromJSON('[30]') || ((inputs.full_android_matrix || (github.event_name == 'push' && github.ref_name == 'fix/a2-remediation-complete')) && fromJSON('[26,28,30,33,35,36]')) || fromJSON('[30]') }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: maale-2008-offline-package
+          path: app/src/main/assets/content/packages/mdyeth
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -160,6 +204,7 @@ jobs:
 
   debug-apk:
     name: Build installable debug APK
+    needs: [verified-content-package]
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -169,6 +214,10 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - uses: actions/download-artifact@v4
+        with:
+          name: maale-2008-offline-package
+          path: app/src/main/assets/content/packages/mdyeth
       - name: Assemble phone-installable APK
         run: sh verification/android/gradle-retry.sh --no-daemon --max-workers=2 --console=plain :app:testDebugUnitTest :app:assembleDebug
       - name: Generate APK checksum

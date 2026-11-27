@@ -18,6 +18,8 @@ from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 PARSER_VERSION = "0.1.0"
 SCHEMA_VERSION = "1"
+FTS_TOKENIZER = "unicode61 remove_diacritics 0"
+TOKENIZER_QUALIFICATION = "ENGINEERING_BASELINE_NOT_LINGUISTICALLY_QUALIFIED"
 
 MARKER_RE = re.compile(r"\\([+]?[A-Za-z0-9-]+)(\*)?")
 ID_RE = re.compile(r"^\\id\s+([A-Z0-9]{3})(?:\s|$)")
@@ -251,8 +253,8 @@ def _create_database(output: Path, edition_id: str, source_sha: str,
             "parser_version": PARSER_VERSION,
             "edition_id": edition_id,
             "source_archive_sha256": source_sha,
-            "fts_tokenizer": "unicode61 remove_diacritics 0",
-            "tokenizer_qualification": "ENGINEERING_BASELINE_NOT_LINGUISTICALLY_QUALIFIED",
+            "fts_tokenizer": FTS_TOKENIZER,
+            "tokenizer_qualification": TOKENIZER_QUALIFICATION,
         }
         db.executemany("INSERT INTO metadata(key,value) VALUES (?,?)", sorted(metadata.items()))
         db.executemany(
@@ -287,6 +289,7 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     source = manifest["source"]
+    canonical_edition_id = source.get("canonical_edition_id", source["edition_id"])
     expected_archive_sha = source["archive_sha256"]
     archive_bytes = archive_path.read_bytes()
     actual_archive_sha = sha256_bytes(archive_bytes)
@@ -323,7 +326,7 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
             observed_books.add(item["book_id"])
             for record in parsed:
                 rows.append((
-                    source["edition_id"], record.book_id, record.chapter,
+                    canonical_edition_id, record.book_id, record.chapter,
                     record.verse_ref, item["path"], item["sha256"],
                     PARSER_VERSION, record.display_text, record.search_text,
                 ))
@@ -347,11 +350,11 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
         raise ValueError("represented verse-span count does not match validated source baseline")
     if verse_range_count != structural.get("verse_range_marker_instances"):
         raise ValueError("verse-range count does not match validated source baseline")
-    db_report = _create_database(output_path, source["edition_id"],
+    db_report = _create_database(output_path, canonical_edition_id,
                                  expected_archive_sha, books, rows)
     return {
         "status": "PASS",
-        "source_id": source["edition_id"],
+        "source_id": canonical_edition_id,
         "archive_bytes": len(archive_bytes),
         "archive_sha256": actual_archive_sha,
         "zip_member_count": len(members),
@@ -363,7 +366,11 @@ def build_from_archive(archive_path: Path, manifest_path: Path,
         "verse_range_count": verse_range_count,
         "database": db_report,
         "scripture_text_emitted": False,
-        "tokenizer_qualification": "NOT_LINGUISTICALLY_QUALIFIED",
+        "schema_version": SCHEMA_VERSION,
+        "parser_version": PARSER_VERSION,
+        "fts_tokenizer": FTS_TOKENIZER,
+        "tokenizer_qualification": TOKENIZER_QUALIFICATION,
+        "linguistic_qualification": "NOT_LINGUISTICALLY_QUALIFIED",
     }
 
 

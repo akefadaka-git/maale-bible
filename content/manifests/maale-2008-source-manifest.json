@@ -4,6 +4,7 @@
   "status": "SOURCE_METADATA_RECONCILED",
   "source": {
     "edition_id": "MDYTWF / mdyeth",
+    "canonical_edition_id": "mdyeth",
     "title": "2008 Maale Full Bible",
     "language_code": "mdy",
     "script": "Ethiopic",
