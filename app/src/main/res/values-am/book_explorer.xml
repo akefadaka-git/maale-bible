@@ -12,6 +12,7 @@
     <string name="explorer_no_results" translatable="false">No books match this search. Try another title or code.</string>
     <string name="explorer_footer_notice" translatable="false">Book names and canonical order are catalogue metadata. Verified Maale scripture text and localized book names will appear when the authorized edition content is integrated.</string>
     <string name="explorer_book_code" translatable="false">%1$s · Book %2$d</string>
+    <string name="explorer_open_book" translatable="false">Open</string>
     <string name="explorer_book_content_pending" translatable="false">Scripture text not installed in this build</string>
     <string name="explorer_category_law" translatable="false">Law / Torah</string>
     <string name="explorer_category_law_desc" translatable="false">The five books of Moses</string>

@@ -189,11 +189,7 @@ private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> 
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
         Row(
-            Modifier.fillMaxWidth()
-                .clickable(onClick = onClick)
-                .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName }
-                .testTag("book_card_" + book.usfmId)
-                .padding(horizontal = 14.dp, vertical = 12.dp),
+            Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
@@ -205,7 +201,10 @@ private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> 
                 Text(stringResource(R.string.explorer_book_code, book.usfmId, book.order), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Text(stringResource(R.string.explorer_book_content_pending), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.secondary)
             }
-            Text("›", style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.primary)
+            TextButton(
+                onClick = onClick,
+                modifier = Modifier.testTag("book_card_" + book.usfmId)
+            ) { Text(stringResource(R.string.explorer_open_book)) }
         }
     }
 }
