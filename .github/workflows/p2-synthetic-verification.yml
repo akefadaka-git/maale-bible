@@ -39,7 +39,24 @@ jobs:
   backend-auth:
     name: Backend auth API tests
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: maale_bible_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d maale_bible_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@localhost:5432/maale_bible_test
+      POSTGRES_TEST_URL: postgresql+psycopg://postgres:postgres@localhost:5432/maale_bible_test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -50,7 +67,10 @@ jobs:
       - name: Install backend and test dependencies
         working-directory: backend
         run: python -m pip install -e ".[test]"
-      - name: Run backend authentication and migration tests
+      - name: Apply production PostgreSQL migration chain
+        working-directory: backend
+        run: alembic -c alembic.ini upgrade head
+      - name: Run backend authentication and PostgreSQL concurrency tests
         working-directory: backend
         run: python -m pytest -q
   verified-content-package:
