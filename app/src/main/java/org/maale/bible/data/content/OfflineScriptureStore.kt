@@ -3,6 +3,7 @@ package org.maale.bible.data.content
 import android.content.Context
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import org.maale.bible.data.catalog.BibleEditionCatalog
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -76,6 +77,35 @@ class OfflineScriptureStore private constructor(
         return results
     }
 
+    fun chapter(bookId: String, chapter: Int, limit: Int = 300): List<ScriptureSearchResult> {
+        require(bookId.matches(Regex("[A-Z0-9]{3}")))
+        require(chapter > 0 && limit in 1..500)
+        val results = mutableListOf<ScriptureSearchResult>()
+        connection.prepare(
+            """
+            SELECT book_id, chapter, verse_ref, display_text
+            FROM verses WHERE book_id = ? AND chapter = ? ORDER BY id LIMIT ?
+            """.trimIndent()
+        ).use { statement ->
+            statement.bindText(1, bookId)
+            statement.bindLong(2, chapter.toLong())
+            statement.bindLong(3, limit.toLong())
+            while (statement.step()) results += ScriptureSearchResult(
+                statement.getText(0), statement.getLong(1).toInt(), statement.getText(2), statement.getText(3)
+            )
+        }
+        return results
+    }
+
+    fun chapterCount(bookId: String): Int {
+        require(bookId.matches(Regex("[A-Z0-9]{3}")))
+        return connection.prepare("SELECT COALESCE(MAX(chapter), 0) FROM verses WHERE book_id = ?").use { statement ->
+            statement.bindText(1, bookId)
+            require(statement.step())
+            statement.getLong(0).toInt()
+        }
+    }
+
     fun passage(bookId: String, chapter: Int, verseRef: String): ScriptureSearchResult? {
         require(bookId.matches(Regex("[A-Z0-9]{3}")))
         require(chapter > 0 && verseRef.isNotBlank())
@@ -121,9 +151,40 @@ class OfflineScriptureStore private constructor(
                 runCatching {
                     val manifest = File(directory, "current/$DESCRIPTOR_NAME")
                     require(manifest.isFile)
-                    readDescriptor(manifest).also(::validateDescriptor)
+                    readDescriptor(manifest).also { validateDescriptor(it); validateTrustedSource(it) }
                 }.getOrNull()
             }.sortedBy { it.editionId }
+        }
+
+        fun hasBundledEdition(context: Context, editionId: String): Boolean = runCatching {
+            val assetRoot = "content/packages/$editionId/"
+            context.assets.open(assetRoot + DESCRIPTOR_NAME).use { }
+            context.assets.open(assetRoot + DATABASE_NAME).use { }
+        }.isSuccess
+
+        fun installBundledEdition(context: Context, editionId: String): OfflineContentDescriptor {
+            val source = BibleEditionCatalog.editions.singleOrNull { it.id == editionId }
+                ?: error("Edition is not in the approved source catalogue")
+            val expectedArchiveHash = requireNotNull(source.sourceArchiveSha256) {
+                "Edition has no pinned source archive hash"
+            }
+            val assetRoot = "content/packages/$editionId/"
+            val descriptor = context.assets.open(assetRoot + DESCRIPTOR_NAME).use(::readDescriptor)
+            require(descriptor.editionId == editionId) { "Bundled package edition identity mismatch" }
+            require(descriptor.sourceArchiveSha256 == expectedArchiveHash) {
+                "Bundled package source archive hash is not approved"
+            }
+            return install(context, context.assets.open(assetRoot + DATABASE_NAME), descriptor)
+        }
+
+        private fun validateTrustedSource(descriptor: OfflineContentDescriptor) {
+            val approvedHash = BibleEditionCatalog.editions.singleOrNull { it.id == descriptor.editionId }
+                ?.sourceArchiveSha256
+            if (approvedHash != null) {
+                require(descriptor.sourceArchiveSha256 == approvedHash) {
+                    "Installed edition does not match its pinned authorized source"
+                }
+            }
         }
 
         fun openInstalled(context: Context, editionId: String? = null): OfflineScriptureStore? {
@@ -140,6 +201,7 @@ class OfflineScriptureStore private constructor(
             }
             val descriptor = readDescriptor(descriptorFile)
             validateDescriptor(descriptor)
+            validateTrustedSource(descriptor)
             require(database.length() == descriptor.databaseBytes) {
                 "Installed content package size mismatch"
             }
@@ -166,6 +228,7 @@ class OfflineScriptureStore private constructor(
             descriptor: OfflineContentDescriptor,
         ): OfflineContentDescriptor {
             validateDescriptor(descriptor)
+            validateTrustedSource(descriptor)
             val root = editionRoot(context, descriptor.editionId)
             check(root.mkdirs() || root.isDirectory) { "Cannot create private edition directory" }
             val stage = File(root, "staging-" + System.nanoTime().toString())
@@ -317,8 +380,11 @@ class OfflineScriptureStore private constructor(
             }
         }
 
-        private fun readDescriptor(file: File): OfflineContentDescriptor {
-            val values = Properties().apply { FileInputStream(file).use(::load) }
+        private fun readDescriptor(file: File): OfflineContentDescriptor =
+            FileInputStream(file).use(::readDescriptor)
+
+        private fun readDescriptor(source: InputStream): OfflineContentDescriptor {
+            val values = Properties().apply { source.use(::load) }
             fun required(key: String) = requireNotNull(values.getProperty(key)) {
                 "Offline content descriptor is incomplete"
             }

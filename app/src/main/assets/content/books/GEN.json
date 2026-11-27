@@ -1,0 +1,613 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-GEN-v1",
+  "book": {
+    "usfm_id": "GEN",
+    "english_name": "Genesis",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "sots-genesis",
+      "title": "Genesis",
+      "publisher": "Society for Old Testament Study",
+      "url": "https://www.sots.ac.uk/wiki/genesis/",
+      "use": "Book title, structure, traditional attribution and scholarly discussion of authorship"
+    },
+    {
+      "id": "usccb-genesis",
+      "title": "The Book of Genesis",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/genesis/0?bk=Genesis&ch=",
+      "use": "Two-part structure, themes of descendants and land, compositional discussion"
+    },
+    {
+      "id": "yale-genesis",
+      "title": "Genesis Introduction – Study Guide",
+      "publisher": "Yale Bible Study",
+      "url": "https://yalebiblestudy.org/courses/genesis/lessons/genesis-introduction-study-guide/",
+      "use": "Broad structure: primeval history, ancestors and Joseph narrative"
+    },
+    {
+      "id": "cambridge-pentateuch",
+      "title": "The Literature of the Pentateuch",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/cambridge-companion-to-the-hebrew-bibleold-testament/7A41BA8CB07E73814D94E30B3437613B/listing",
+      "use": "Pentateuch context and literary overview"
+    },
+    {
+      "id": "bibleproject-genesis",
+      "title": "Book of Genesis Guide",
+      "publisher": "BibleProject",
+      "url": "https://bibleproject.com/guides/book-of-genesis/",
+      "use": "Literary overview and thematic synthesis"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Genesis — beginnings, humanity and the family of Israel",
+        "summary": "Genesis opens the Bible with accounts of creation and the early human story, then follows the ancestors of Israel through the families of Abraham and Sarah, Isaac and Rebekah, Jacob and his children, especially Joseph. Its narrative moves from the whole world to one family through whom the book presents promises of descendants, land and blessing.",
+        "authorship": "Genesis does not identify its human author. Jewish and Christian traditions associate the Torah with Moses. Modern scholarship discusses the Pentateuch as a work with a complex history of composition and editing; the date and stages of Genesis' formation remain debated. The app must present these positions as attributed views, not as a settled single answer.",
+        "setting": "The book moves from primeval narratives about humanity to ancestral narratives set in the wider ancient Near Eastern world, including locations associated with Mesopotamia, Canaan and Egypt. The narrative setting should not be confused with independent archaeological verification of every episode.",
+        "audience_and_purpose": "As the opening book of the Torah/Pentateuch, Genesis gives Israel a theological account of creation, human vocation and failure, the origins of peoples, and the ancestral promises associated with Abraham and his descendants.",
+        "structure": [
+          {
+            "range": "1–11",
+            "heading": "Primeval history",
+            "summary": "Creation, humanity, the garden, human violence, the flood and the nations."
+          },
+          {
+            "range": "12–25",
+            "heading": "Abraham and Sarah",
+            "summary": "The call and journey of Abraham, the promise, covenant, family conflict and the birth of Isaac."
+          },
+          {
+            "range": "26–36",
+            "heading": "Isaac, Jacob and Esau",
+            "summary": "The next generation, Jacob's family story, conflict, journeys and reconciliation."
+          },
+          {
+            "range": "37–50",
+            "heading": "Joseph and his brothers",
+            "summary": "Joseph is taken to Egypt; famine brings the family to Egypt, and the book ends with Israel's family settled there."
+          }
+        ],
+        "themes": [
+          "God as Creator and giver of life",
+          "Human dignity, vocation and responsibility",
+          "Human disobedience, violence and fractured relationships",
+          "Judgment, mercy and preservation",
+          "Promise, covenant, descendants and land",
+          "Family conflict, reconciliation and providence",
+          "Blessing extending beyond one family toward the nations"
+        ],
+        "key_people": [
+          "Adam and Eve",
+          "Noah",
+          "Abraham and Sarah",
+          "Hagar and Ishmael",
+          "Isaac and Rebekah",
+          "Jacob and Esau",
+          "Leah and Rachel",
+          "Joseph and his brothers"
+        ],
+        "key_passages": [
+          "GEN 1:1-2:3",
+          "GEN 2:4-3:24",
+          "GEN 6:9-9:17",
+          "GEN 12:1-9",
+          "GEN 15:1-21",
+          "GEN 17:1-27",
+          "GEN 22:1-19",
+          "GEN 28:10-22",
+          "GEN 37:1-36",
+          "GEN 45:1-15",
+          "GEN 50:15-21"
+        ],
+        "interpretive_care": [
+          "Do not claim that Genesis names Moses as its author; describe the traditional attribution and the range of scholarly discussion.",
+          "Do not impose a single modern chronology on primeval narratives or patriarchal stories without explaining the method and uncertainty.",
+          "Distinguish the book's literary and theological claims from claims that require independent historical or archaeological evidence."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "GEN-STUDY-01",
+          "range": "GEN 1:1-2:3",
+          "title": "Creation and the goodness of the created order",
+          "observation": [
+            "Notice the repeated speech-and-fulfilment pattern.",
+            "List the distinctions and relationships established in the sequence.",
+            "Identify the repeated evaluation of what God has made."
+          ],
+          "interpretation": [
+            "How does the literary sequence communicate order and purpose?",
+            "What does the passage say about the Creator and the created world?",
+            "How does the seventh-day conclusion shape the whole unit?"
+          ],
+          "application": [
+            "What responsibilities follow from receiving life and the world as gifts?",
+            "Where should your choices better reflect care, dignity and responsible stewardship?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-02",
+          "range": "GEN 3:1-24",
+          "title": "Human mistrust, disobedience and consequence",
+          "observation": [
+            "Trace the conversation and the choices made by each character.",
+            "Identify the consequences described in the passage.",
+            "Notice both judgment and the care shown by God."
+          ],
+          "interpretation": [
+            "How does the narrative portray mistrust and the distortion of responsibility?",
+            "How do the consequences affect relationships and the human vocation?",
+            "What details prevent the passage from being reduced to a simplistic moral lesson?"
+          ],
+          "application": [
+            "Where do you see mistrust or blame damaging relationships?",
+            "What honest response, repair or renewed responsibility is called for?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-03",
+          "range": "GEN 12:1-9; 15:1-21",
+          "title": "Abram, promise and covenant",
+          "observation": [
+            "List the commands, promises and responses in each passage.",
+            "Note the repeated ideas of land, descendants and blessing.",
+            "Observe Abram's questions, actions and trust."
+          ],
+          "interpretation": [
+            "How does the promise move the story from the nations to one family?",
+            "What does the covenant scene communicate about God's commitment?",
+            "How should the promise be read in the context of the whole book?"
+          ],
+          "application": [
+            "How can trust be practised when fulfilment is not immediate?",
+            "How might receiving blessing shape responsibility toward others?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-04",
+          "range": "GEN 37:1-36; 45:1-15; 50:15-21",
+          "title": "Joseph, family conflict and providence",
+          "observation": [
+            "Identify the causes and consequences of family conflict.",
+            "Compare Joseph's actions and words across the three passages.",
+            "Notice how the story changes when Joseph reveals his identity."
+          ],
+          "interpretation": [
+            "How does the narrative hold human wrongdoing and divine purpose together?",
+            "What does reconciliation require, and what does the text not minimize?",
+            "How does the ending connect with the earlier promises of Genesis?"
+          ],
+          "application": [
+            "What steps toward truth, accountability and reconciliation may be needed?",
+            "How can hope be maintained without excusing wrongdoing?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "GEN-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "According to Genesis 1, what does the opening chapter present God doing?",
+          "options": [
+            "Creating and ordering the heavens and the earth",
+            "Building the temple in Jerusalem",
+            "Calling Moses from the bush",
+            "Establishing the monarchy"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Genesis 1 presents God as Creator who brings the world into ordered existence and calls it good.",
+          "references": [
+            "GEN 1:1-31"
+          ]
+        },
+        {
+          "id": "GEN-Q02",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which garden is central to the narrative in Genesis 2–3?",
+          "options": [
+            "Gethsemane",
+            "Eden",
+            "Carmel",
+            "Sharon"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Genesis 2–3 locates the first human couple in the garden of Eden.",
+          "references": [
+            "GEN 2:8-15"
+          ]
+        },
+        {
+          "id": "GEN-Q03",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Genesis 12 records the call of Abram and promises connected with land, descendants and blessing.",
+          "correct_answer": true,
+          "explanation": "The call of Abram begins the ancestral narratives and introduces promises that shape the rest of Genesis.",
+          "references": [
+            "GEN 12:1-3"
+          ]
+        },
+        {
+          "id": "GEN-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who builds the ark in the flood narrative?",
+          "options": [
+            "Abraham",
+            "Jacob",
+            "Noah",
+            "Joseph"
+          ],
+          "correct_option_id": "C",
+          "explanation": "Noah is instructed to build the ark and preserve his household and representatives of living creatures.",
+          "references": [
+            "GEN 6:13-22"
+          ]
+        },
+        {
+          "id": "GEN-Q05",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "Which sign is associated with God's covenant with Noah after the flood?",
+          "options": [
+            "A rainbow",
+            "A stone altar in Jerusalem",
+            "A bronze serpent",
+            "A pillar of fire"
+          ],
+          "correct_option_id": "A",
+          "explanation": "The rainbow is given as the sign of the covenant with Noah and the earth.",
+          "references": [
+            "GEN 9:8-17"
+          ]
+        },
+        {
+          "id": "GEN-Q06",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is the son of Abraham and Sarah whose birth is announced in Genesis 17–18 and narrated in Genesis 21?",
+          "options": [
+            "Ishmael",
+            "Isaac",
+            "Jacob",
+            "Esau"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Isaac is the son whose birth is tied to the promise made to Abraham and Sarah.",
+          "references": [
+            "GEN 17:15-21",
+            "GEN 21:1-7"
+          ]
+        },
+        {
+          "id": "GEN-Q07",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which son of Jacob receives a special robe and later goes to Egypt?",
+          "options": [
+            "Judah",
+            "Benjamin",
+            "Joseph",
+            "Reuben"
+          ],
+          "correct_option_id": "C",
+          "explanation": "Joseph's brothers sell him, and he is taken to Egypt, where his story continues.",
+          "references": [
+            "GEN 37:3-28"
+          ]
+        },
+        {
+          "id": "GEN-Q08",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "At the end of Genesis, Joseph says that God used for good what his brothers intended for harm.",
+          "correct_answer": true,
+          "explanation": "Joseph's words in Genesis 50:20 summarize the theme of providence amid human wrongdoing.",
+          "references": [
+            "GEN 50:15-21"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዘፍጥረት — መጀመሪያ፣ የሰው ልጅና የእስራኤል ቤተሰብ",
+        "summary": "ዘፍጥረት መጽሐፍ ቅዱስን በፍጥረትና በሰው ልጅ መጀመሪያ ታሪኮች ይከፍታል። ከዚያም የእስራኤልን አባቶች ታሪክ በአብርሃምና በሣራ፣ በይስሐቅና በርብቃ፣ በያዕቆብና በልጆቹ ቤተሰቦች በኩል ያቀርባል፤ በተለይም የዮሴፍን ታሪክ ያጎላል። ትረካው ከዓለም አቀፍ የሰው ታሪክ ወደ አንድ ቤተሰብ ይጠባል፤ በዚያም በኩል የዘር፣ የምድርና የበረከት ተስፋዎችን ያቀርባል።",
+        "authorship": "ዘፍጥረት የሰው ደራሲውን በስም አይጠቅስም። በአይሁድና በክርስቲያን ባህል ኦሪት ከሙሴ ጋር ትያያዛለች። ዘመናዊ የመጽሐፍ ቅዱስ ጥናት ግን ኦሪት የተወሳሰበ የጽሑፍ ማዋቀርና አርትዖት ታሪክ እንዳላት ይወያያል። የዘፍጥረት አፈጣጠር ዘመንና ደረጃዎች በምሁራን መካከል የሚከራከሩ ናቸው።",
+        "setting": "መጽሐፉ ከሰው ልጅ መጀመሪያ ታሪኮች ወደ በጥንታዊው የቅርብ ምሥራቅ ዓለም የተቀመጡ የአባቶች ታሪኮች ይሄዳል። በትረካው ውስጥ ከሜሶፖታሚያ፣ ከከነዓንና ከግብፅ ጋር የተያያዙ ቦታዎች ይጠቀሳሉ። የትረካውን ቦታ መጥቀስ ግን እያንዳንዱ ክስተት በአርኪዮሎጂ ተረጋግጧል ማለት አይደለም።",
+        "audience_and_purpose": "ዘፍጥረት የኦሪት/የፔንታቱክ መጀመሪያ መጽሐፍ እንደመሆኑ ለእስራኤል ስለ ፍጥረት፣ ስለ ሰው ልጅ ጥሪና ውድቀት፣ ስለ ሕዝቦች መነሻና ስለ አብርሃምና ስለ ዘሮቹ የተሰጡ ተስፋዎች ሥነ-መለኮታዊ ትረካ ይሰጣል።",
+        "structure": [
+          {
+            "range": "1–11",
+            "heading": "የመጀመሪያ ዘመን ታሪክ",
+            "summary": "ፍጥረት፣ ሰው ልጅ፣ ገነት፣ የሰው ጥቃት፣ ጥፋት ውኃና ሕዝቦች።"
+          },
+          {
+            "range": "12–25",
+            "heading": "አብርሃምና ሣራ",
+            "summary": "የአብርሃም ጥሪና ጉዞ፣ ተስፋ፣ ቃል ኪዳን፣ የቤተሰብ ግጭትና የይስሐቅ መወለድ።"
+          },
+          {
+            "range": "26–36",
+            "heading": "ይስሐቅ፣ ያዕቆብና ኤሳው",
+            "summary": "ቀጣዩ ትውልድ፣ የያዕቆብ ቤተሰብ፣ ግጭት፣ ጉዞና እርቅ።"
+          },
+          {
+            "range": "37–50",
+            "heading": "ዮሴፍና ወንድሞቹ",
+            "summary": "ዮሴፍ ወደ ግብፅ መወሰዱ፣ ረሃብ ቤተሰቡን ወደ ግብፅ ማምጣቱና ቤተሰቡ በዚያ መኖሩ።"
+          }
+        ],
+        "themes": [
+          "እግዚአብሔር ፈጣሪና የሕይወት ሰጪ መሆኑ",
+          "የሰው ልጅ ክብር፣ ጥሪና ኃላፊነት",
+          "አለመታዘዝ፣ ጥቃትና የተበላሹ ግንኙነቶች",
+          "ፍርድ፣ ምሕረትና ጥበቃ",
+          "ተስፋ፣ ቃል ኪዳን፣ ዘርና ምድር",
+          "የቤተሰብ ግጭት፣ እርቅና የእግዚአብሔር አመራር",
+          "በአንድ ቤተሰብ በኩል ለሕዝቦች የሚደርስ በረከት"
+        ],
+        "key_people": [
+          "አዳምና ሔዋን",
+          "ኖኅ",
+          "አብርሃምና ሣራ",
+          "አጋርና እስማኤል",
+          "ይስሐቅና ርብቃ",
+          "ያዕቆብና ኤሳው",
+          "ልያና ራሔል",
+          "ዮሴፍና ወንድሞቹ"
+        ],
+        "key_passages": [
+          "GEN 1:1-2:3",
+          "GEN 2:4-3:24",
+          "GEN 6:9-9:17",
+          "GEN 12:1-9",
+          "GEN 15:1-21",
+          "GEN 17:1-27",
+          "GEN 22:1-19",
+          "GEN 28:10-22",
+          "GEN 37:1-36",
+          "GEN 45:1-15",
+          "GEN 50:15-21"
+        ],
+        "interpretive_care": [
+          "ዘፍጥረት ሙሴን በስም ደራሲ አድርጎ አይጠቅስም፤ ባህላዊ አመለካከትንና የምሁራን ውይይትን ለይቶ ማቅረብ አለበት።",
+          "ስለ መጀመሪያ ታሪኮችና ስለ አባቶች ታሪክ አንድ የዘመን ስሌት ያለ ማብራሪያና ያለ እርግጠኝነት መግደድ የለበትም።",
+          "የመጽሐፉን ሥነ-ጽሑፋዊና ሥነ-መለኮታዊ መልእክት ከተለየ ታሪካዊ ወይም አርኪዮሎጂያዊ ማስረጃ ከሚፈልጉ ጥያቄዎች መለየት አለበት።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "GEN-STUDY-01-AM",
+          "range": "GEN 1:1-2:3",
+          "title": "ፍጥረትና የተፈጠረው ዓለም መልካምነት",
+          "observation": [
+            "የተደጋገመውን የቃልና የፍጻሜ አቀራረብ ይመልከቱ።",
+            "በተከታታይ የተፈጠሩትን ልዩነቶችና ግንኙነቶች ይዘርዝሩ።",
+            "እግዚአብሔር የፈጠረውን መልካም ብሎ የሚገልጽበትን ተደጋጋሚ ሐሳብ ይለዩ።"
+          ],
+          "interpretation": [
+            "የጽሑፉ ቅደም ተከተል ሥርዓትንና ዓላማን እንዴት ያሳያል?",
+            "ክፍሉ ስለ ፈጣሪና ስለ ተፈጠረው ዓለም ምን ይናገራል?",
+            "የሰባተኛው ቀን መደምደሚያ ለክፍሉ ምን ትርጉም ይሰጣል?"
+          ],
+          "application": [
+            "ሕይወትንና ዓለምን እንደ ስጦታ መቀበል ምን ኃላፊነት ያመጣል?",
+            "ምርጫዎችዎ ክብርን፣ እንክብካቤንና ታማኝ አስተዳደርን እንዴት ሊያሳዩ ይችላሉ?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-02-AM",
+          "range": "GEN 3:1-24",
+          "title": "የሰው አለመታመን፣ አለመታዘዝና ውጤቱ",
+          "observation": [
+            "የውይይቱንና የእያንዳንዱን ተዋናይ ምርጫ ይከታተሉ።",
+            "በክፍሉ የተገለጹትን ውጤቶች ይዘርዝሩ።",
+            "ፍርድንና እግዚአብሔር ያሳየውን እንክብካቤ ሁለቱንም ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ትረካው አለመታመንንና ኃላፊነትን ማዛባትን እንዴት ያቀርባል?",
+            "ውጤቶቹ ግንኙነቶችንና የሰውን ጥሪ እንዴት ይነካሉ?",
+            "ክፍሉን ወደ ቀላል የሥነ-ምግባር ትምህርት ብቻ እንዳንቀንሰው የሚከላከሉ ዝርዝሮች የትኞቹ ናቸው?"
+          ],
+          "application": [
+            "አለመታመን ወይም ተጠያቂነትን ማስወገድ ግንኙነቶችን የሚጎዳበት ቦታ የት ነው?",
+            "እውነትን መናገር፣ ማስተካከልና ኃላፊነትን መቀበል እንዴት ያስፈልጋል?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-03-AM",
+          "range": "GEN 12:1-9; 15:1-21",
+          "title": "አብራም፣ ተስፋና ቃል ኪዳን",
+          "observation": [
+            "በእያንዳንዱ ክፍል ያሉትን ትእዛዞች፣ ተስፋዎችና ምላሾች ይዘርዝሩ።",
+            "የምድር፣ የዘርና የበረከት ሐሳቦችን ይከታተሉ።",
+            "የአብራምን ጥያቄዎች፣ ድርጊቶችና እምነት ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ተስፋው ትረካውን ከሕዝቦች ወደ አንድ ቤተሰብ እንዴት ያመጣል?",
+            "የቃል ኪዳኑ ትዕይንት ስለ እግዚአብሔር ቁርጠኝነት ምን ያሳያል?",
+            "ተስፋው በመጽሐፉ አጠቃላይ አውድ እንዴት መነበብ አለበት?"
+          ],
+          "application": [
+            "ፍጻሜው ወዲያውኑ ባይታይ እምነትን እንዴት መለማመድ ይቻላል?",
+            "በረከትን መቀበል ለሌሎች ምን ኃላፊነት ያመጣል?"
+          ]
+        },
+        {
+          "id": "GEN-STUDY-04-AM",
+          "range": "GEN 37:1-36; 45:1-15; 50:15-21",
+          "title": "ዮሴፍ፣ የቤተሰብ ግጭትና የእግዚአብሔር አመራር",
+          "observation": [
+            "የቤተሰቡን ግጭት መንስኤዎችና ውጤቶች ይለዩ።",
+            "በሦስቱ ክፍሎች የዮሴፍን ድርጊቶችና ቃሎች ያወዳድሩ።",
+            "ዮሴፍ ራሱን ሲገልጥ ታሪኩ እንዴት እንደሚለወጥ ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ትረካው የሰውን ክፋትና የእግዚአብሔርን ዓላማ አብሮ እንዴት ያቀርባል?",
+            "እርቅ ምን ይፈልጋል? ጽሑፉ የተፈጸመውን ክፋት እንዴት አያሳንስም?",
+            "መጨረሻው ከዘፍጥረት ቀደምት ተስፋዎች ጋር እንዴት ይገናኛል?"
+          ],
+          "application": [
+            "እውነትን፣ ተጠያቂነትንና እርቅን ለማምጣት ምን እርምጃዎች ያስፈልጋሉ?",
+            "ክፋትን ሳናጸድቅ ተስፋን እንዴት መጠበቅ እንችላለን?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "GEN-Q01-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 1 መሠረት የመጀመሪያው ምዕራፍ እግዚአብሔር ምን እንዳደረገ ያቀርባል?",
+          "options": [
+            "ሰማይንና ምድርን መፍጠርና ሥርዓት ማስያዝ",
+            "በኢየሩሳሌም ቤተ መቅደስ መሥራት",
+            "ሙሴን ከቁጥቋጦው መጥራት",
+            "ንጉሣዊ አገዛዝ ማቋቋም"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ዘፍጥረት 1 እግዚአብሔርን ፈጣሪ እንደሆነ ያቀርባል፤ ዓለምን በሥርዓት ፈጥሮ መልካም ብሎ ይገልጻል።",
+          "references": [
+            "GEN 1:1-31"
+          ]
+        },
+        {
+          "id": "GEN-Q02-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 2–3 ታሪክ ውስጥ ዋና የሆነው ገነት የትኛው ነው?",
+          "options": [
+            "ጌቴሴማኒ",
+            "ኤደን",
+            "ቀርሜሎስ",
+            "ሳሮን"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ዘፍጥረት 2–3 የመጀመሪያዎቹ ሰዎች በኤደን ገነት እንደነበሩ ይናገራል።",
+          "references": [
+            "GEN 2:8-15"
+          ]
+        },
+        {
+          "id": "GEN-Q03-AM",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘፍጥረት 12 አብራም መጠራቱንና ከምድር፣ ከዘርና ከበረከት ጋር የተያያዙ ተስፋዎችን ይመዘግባል።",
+          "correct_answer": true,
+          "explanation": "የአብራም ጥሪ የአባቶችን ታሪክ ይጀምራል፤ እነዚህም ተስፋዎች የዘፍጥረትን ቀጣይ ታሪክ ይቀርጻሉ።",
+          "references": [
+            "GEN 12:1-3"
+          ]
+        },
+        {
+          "id": "GEN-Q04-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በጥፋት ውኃ ታሪክ ውስጥ መርከቡን የሠራው ማን ነው?",
+          "options": [
+            "አብርሃም",
+            "ያዕቆብ",
+            "ኖኅ",
+            "ዮሴፍ"
+          ],
+          "correct_option_id": "C",
+          "explanation": "ኖኅ መርከቡን እንዲሠራና ቤተሰቡንና የሕያዋን ፍጥረታትን እንዲጠብቅ ታዘዘ።",
+          "references": [
+            "GEN 6:13-22"
+          ]
+        },
+        {
+          "id": "GEN-Q05-AM",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "ከጥፋት ውኃ በኋላ ከኖኅ ጋር በተደረገው ቃል ኪዳን ምልክት የሆነው ምንድን ነው?",
+          "options": [
+            "ቀስተ ደመና",
+            "በኢየሩሳሌም የድንጋይ መሠዊያ",
+            "የናስ እባብ",
+            "የእሳት ዓምድ"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ቀስተ ደመናው ከኖኅና ከምድር ጋር የተደረገው ቃል ኪዳን ምልክት ነው።",
+          "references": [
+            "GEN 9:8-17"
+          ]
+        },
+        {
+          "id": "GEN-Q06-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "በዘፍጥረት 17–18 መወለዱ የተነገረና በ21 የተዘገበው የአብርሃምና የሣራ ልጅ ማን ነው?",
+          "options": [
+            "እስማኤል",
+            "ይስሐቅ",
+            "ያዕቆብ",
+            "ኤሳው"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ይስሐቅ ለአብርሃምና ለሣራ ከተሰጠው ተስፋ ጋር የተያያዘው ልጅ ነው።",
+          "references": [
+            "GEN 17:15-21",
+            "GEN 21:1-7"
+          ]
+        },
+        {
+          "id": "GEN-Q07-AM",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ከያዕቆብ ልጆች መካከል ልዩ ልብስ የተሰጠውና በኋላ ወደ ግብፅ የሄደው ማን ነው?",
+          "options": [
+            "ይሁዳ",
+            "ብንያም",
+            "ዮሴፍ",
+            "ሮቤል"
+          ],
+          "correct_option_id": "C",
+          "explanation": "የዮሴፍ ወንድሞች ሸጡት፤ እርሱም ወደ ግብፅ ተወሰደ፣ ታሪኩም በዚያ ቀጠለ።",
+          "references": [
+            "GEN 37:3-28"
+          ]
+        },
+        {
+          "id": "GEN-Q08-AM",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "በዘፍጥረት መጨረሻ ዮሴፍ ወንድሞቹ ለክፉ ያሰቡትን እግዚአብሔር ለበጎ እንዳደረገው ይናገራል።",
+          "correct_answer": true,
+          "explanation": "የዮሴፍ ቃል በዘፍጥረት 50:20 በሰው ክፋት መካከል የእግዚአብሔርን ሥራ ያጠቃልላል።",
+          "references": [
+            "GEN 50:15-21"
+          ]
+        }
+      ]
+    }
+  }
+}

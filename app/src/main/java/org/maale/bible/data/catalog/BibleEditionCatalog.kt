@@ -20,6 +20,7 @@ data class BibleEditionSource(
     val readiness: EditionReadiness,
     val fullBible: Boolean,
     val attribution: String,
+    val sourceArchiveSha256: String? = null,
 )
 
 /**
@@ -40,6 +41,7 @@ object BibleEditionCatalog {
             readiness = EditionReadiness.READY_FOR_PACKAGE_INTEGRATION,
             fullBible = true,
             attribution = "Copyright © 2008 The Word for the World International and Bible Society of Ethiopia.",
+            sourceArchiveSha256 = "4d08dbde11d34c33c630986a59282bcf85bfdd21799c20f97f3b93ef39a32d11",
         ),
         BibleEditionSource(
             id = "eng-kjv2006",

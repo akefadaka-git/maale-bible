@@ -2,6 +2,7 @@
 # Invoked as one command by reactivecircus/android-emulator-runner.
 # Keep this logic in a file: the action splits its script input by newline.
 set -eu
+script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
 expected_api="${ANDROID_EXPECTED_API:?ANDROID_EXPECTED_API must be set}"
 log_prefix="app/build/ci-emulator-api-${expected_api}"
@@ -63,7 +64,14 @@ if ! wait_for_ready; then
 fi
 
 run_instrumentation() {
-  if ./gradlew --no-daemon --max-workers=2 --console=plain --stacktrace :app:connectedDebugAndroidTest >"${log_file}" 2>&1; then
+  set -- --no-daemon --max-workers=2 --console=plain --stacktrace
+  if [ -n "${ANDROID_TEST_CLASS:-}" ]; then
+    set -- "$@" "-Pandroid.testInstrumentationRunnerArguments.class=${ANDROID_TEST_CLASS}"
+    echo "Running targeted instrumentation class/method: ${ANDROID_TEST_CLASS}"
+  else
+    echo "Running the complete connected Android instrumentation suite."
+  fi
+  if "$script_dir/gradle-retry.sh" "$@" :app:connectedDebugAndroidTest >"${log_file}" 2>&1; then
     cat "${log_file}"
     return 0
   else

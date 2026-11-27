@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "content_id": "book-learning-DEU-v1",
+  "book": {
+    "usfm_id": "DEU",
+    "english_name": "Deuteronomy",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "reviewed_for_draft",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "usccb-deuteronomy",
+      "title": "The Book of Deuteronomy",
+      "publisher": "United States Conference of Catholic Bishops",
+      "url": "https://bible.usccb.org/bible/deuteronomy/0",
+      "use": "Three speeches, covenant and composition"
+    },
+    {
+      "id": "abs-deuteronomy",
+      "title": "Bible Study Guide: Deuteronomy",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/bible-study-guide-deuteronomy/",
+      "use": "Book structure and historical setting"
+    },
+    {
+      "id": "biblesociety-deuteronomy",
+      "title": "Deuteronomy Introduction",
+      "publisher": "Bible Society",
+      "url": "https://www.biblesociety.org.uk/explore-the-bible/read/eng/ESV/Deut/intro",
+      "use": "Overview and literary summary"
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Deuteronomy — remember, love and choose life",
+        "summary": "Deuteronomy presents Moses’ final addresses to Israel on the plains of Moab before the people enter the land. It recalls the wilderness journey, restates covenant teaching, calls Israel to wholehearted love of God and faithful communal life, and prepares the people for leadership after Moses.",
+        "authorship": "The book presents its speeches as Moses’ words and is traditionally associated with him. Its final form also contains narrative framing and references to later events. Scholars discuss its composition and relationship to the law book associated with King Josiah; the stages and dates should be presented as debated.",
+        "setting": "The narrative setting is east of the Jordan, in Moab, looking toward Canaan. The book addresses Israel as a people about to settle in the land and also speaks to later readers reflecting on covenant faithfulness and national failure.",
+        "audience_and_purpose": "Deuteronomy calls Israel to remember God’s acts, love God wholeheartedly, teach the commandments across generations, practise justice and remain faithful to the covenant in the land.",
+        "structure": [
+          {
+            "range": "1:1–4:43",
+            "heading": "First address: remember the journey",
+            "summary": "Moses reviews the wilderness story and urges Israel to learn from it."
+          },
+          {
+            "range": "4:44–11:32",
+            "heading": "Second address: covenant and love",
+            "summary": "The Decalogue, the call to love God and the teaching of covenant loyalty."
+          },
+          {
+            "range": "12–26",
+            "heading": "Covenant life in the land",
+            "summary": "Worship, justice, leadership, festivals and social responsibilities."
+          },
+          {
+            "range": "27–30",
+            "heading": "Blessing, warning and choice",
+            "summary": "Covenant renewal, consequences and the call to choose life."
+          },
+          {
+            "range": "31–34",
+            "heading": "Final words and Moses’ death",
+            "summary": "Joshua is commissioned; Moses’ song, blessing and death conclude the Torah."
+          }
+        ],
+        "themes": [
+          "Remembering and teaching across generations",
+          "Love of God expressed through obedience",
+          "Covenant faithfulness and communal identity",
+          "Justice for the vulnerable and fair leadership",
+          "Blessing, warning and moral choice",
+          "Transition, succession and hope"
+        ],
+        "key_people": [
+          "Moses",
+          "Joshua",
+          "The generation preparing to enter the land",
+          "The Levites and elders"
+        ],
+        "key_passages": [
+          "DEU 4:1-14",
+          "DEU 5:1-22",
+          "DEU 6:4-9",
+          "DEU 10:12-22",
+          "DEU 15:1-11",
+          "DEU 18:15-22",
+          "DEU 24:10-22",
+          "DEU 30:11-20",
+          "DEU 34:1-12"
+        ],
+        "interpretive_care": [
+          "The title ‘second law’ does not mean the book is simply a duplicate; explain its covenant-renewal setting.",
+          "Distinguish the book’s narrative presentation of Moses’ speeches from scholarly discussion of its composition and later editing.",
+          "Read laws in their ancient context while attending to the book’s recurring concern for justice, memory and covenant."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "DEU-S01",
+          "range": "DEU 6:4-9",
+          "title": "Love God and teach the next generation",
+          "observation": [
+            "Identify the commands to hear, love, remember and teach.",
+            "Notice the places and times where the words are to be kept in view."
+          ],
+          "interpretation": [
+            "How are love and obedience connected in this passage?",
+            "Why does teaching children belong to covenant faithfulness?"
+          ],
+          "application": [
+            "What daily practice could help your household remember these teachings?",
+            "How can teaching be relational rather than only informational?"
+          ]
+        },
+        {
+          "id": "DEU-S02",
+          "range": "DEU 15:1-11",
+          "title": "Debt release and care for the poor",
+          "observation": [
+            "List the release instruction and the commands about generosity.",
+            "Notice the repeated concern that no poor person should be abandoned."
+          ],
+          "interpretation": [
+            "How does the law challenge the hardening of the heart?",
+            "What balance does the passage create between economic practice and compassion?"
+          ],
+          "application": [
+            "What fair practice could reduce harmful debt in your community?",
+            "How can generosity respect dignity rather than create dependence?"
+          ]
+        },
+        {
+          "id": "DEU-S03",
+          "range": "DEU 30:11-20",
+          "title": "Choose life",
+          "observation": [
+            "Identify the alternatives placed before the people.",
+            "Notice how the passage connects life with love, listening and holding fast."
+          ],
+          "interpretation": [
+            "Why is the command described as near and accessible?",
+            "How does covenant choice affect the whole community and future generations?"
+          ],
+          "application": [
+            "What choice before you today leads toward life and faithfulness?",
+            "What support helps a community choose life together?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "DEU-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Which passage is known as the Shema?",
+          "options": [
+            "Deuteronomy 6:4-9",
+            "Deuteronomy 15:1-11",
+            "Deuteronomy 30:11-20",
+            "Deuteronomy 34:1-12"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Deuteronomy 6:4-9 begins with the call to hear, and commands wholehearted love of God.",
+          "references": [
+            "DEU 6:4-9"
+          ]
+        },
+        {
+          "id": "DEU-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Deuteronomy repeatedly calls Israel to remember what God has done.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Remembering the exodus and wilderness journey is a major part of Moses’ teaching.",
+          "references": [
+            "DEU 5:15; 8:2; 24:18"
+          ]
+        },
+        {
+          "id": "DEU-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Who is commissioned to succeed Moses?",
+          "options": [
+            "Aaron",
+            "Joshua",
+            "Caleb",
+            "Eleazar"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Joshua is commissioned to lead the people after Moses.",
+          "references": [
+            "DEU 31:1-8"
+          ]
+        },
+        {
+          "id": "DEU-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "What choice is placed before Israel in Deuteronomy 30?",
+          "options": [
+            "Choose life",
+            "Build a temple",
+            "Return to Egypt",
+            "Appoint a king"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Moses calls the people to choose life by loving and obeying God.",
+          "references": [
+            "DEU 30:15-20"
+          ]
+        },
+        {
+          "id": "DEU-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "Deuteronomy ends with an account of Moses’ death.",
+          "options": [],
+          "correct_answer": true,
+          "explanation": "Chapter 34 concludes the Torah’s final book with Moses’ death and a reflection on his unique role.",
+          "references": [
+            "DEU 34:1-12"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft_translation",
+      "introduction": {
+        "title": "ዘዳግም — አስታውስ፣ ውደድና ሕይወትን ምረጥ",
+        "summary": "ዘዳግም ሕዝቡ ወደ ምድሪቱ ከመግባቱ በፊት በሞዓብ ሜዳ ላይ ሙሴ የተናገራቸውን የመጨረሻ ንግግሮች ያቀርባል። የምድረ በዳውን ጉዞ ያስታውሳል፣ የቃል ኪዳንን ትምህርት ያድሳል፣ እስራኤልን እግዚአብሔርን በሙሉ ልብ እንድትወድና በታማኝነት እንድትኖር ይጠራል፤ ከሙሴ በኋላ ለሚመጣው አመራርም ያዘጋጃል።",
+        "authorship": "መጽሐፉ ንግግሮቹን የሙሴ ቃል አድርጎ ያቀርባል፤ በባህልም ከሙሴ ጋር ይያያዛል። የመጨረሻው ቅርጹ ግን የትረካ መግቢያዎችንና ከኋለኛ ክስተቶች ጋር የተያያዙ ማጣቀሻዎችን ይዟል። ምሁራን አፈጣጠሩንና ከንጉሥ ኢዮስያስ ጋር ከተያያዘው የሕግ መጽሐፍ ጋር ያለውን ግንኙነት ይወያያሉ።",
+        "setting": "የትረካው አውድ ከዮርዳኖስ ምሥራቅ በሞዓብ ሲሆን ወደ ከነዓን ይመለከታል። መጽሐፉ ወደ ምድሪቱ ሊገባ ያለውን ሕዝብ ይናገራል፤ በኋላ ለሚኖሩ አንባቢዎችም ስለ ቃል ኪዳን ታማኝነትና ስለ ሕዝብ ውድቀት ማሰብ ያቀርባል።",
+        "audience_and_purpose": "ዘዳግም እስራኤል የእግዚአብሔርን ሥራ እንድታስታውስ፣ በሙሉ ልብ እንድትወደው፣ ትእዛዛቱን ከትውልድ ወደ ትውልድ እንድታስተምር፣ ፍትሕን እንድትፈጽምና በምድሪቱ ውስጥ ለቃል ኪዳኑ ታማኝ እንድትሆን ይጠራል።",
+        "structure": [
+          {
+            "range": "1:1–4:43",
+            "heading": "የመጀመሪያ ንግግር፦ ጉዞውን ማስታወስ",
+            "summary": "ሙሴ የምድረ በዳውን ታሪክ ይገመግማል፤ እስራኤልም ከእሱ እንድትማር ያበረታታል።"
+          },
+          {
+            "range": "4:44–11:32",
+            "heading": "ሁለተኛ ንግግር፦ ቃል ኪዳንና ፍቅር",
+            "summary": "አሥርቱ ትእዛዛት፣ እግዚአብሔርን የመውደድ ጥሪና የቃል ኪዳን ታማኝነት።"
+          },
+          {
+            "range": "12–26",
+            "heading": "በምድሪቱ ውስጥ የቃል ኪዳን ኑሮ",
+            "summary": "አምልኮ፣ ፍትሕ፣ አመራር፣ በዓላትና ማኅበራዊ ኃላፊነቶች።"
+          },
+          {
+            "range": "27–30",
+            "heading": "በረከት፣ ማስጠንቀቂያና ምርጫ",
+            "summary": "የቃል ኪዳን እድሳት፣ ውጤቶችና ሕይወትን የመምረጥ ጥሪ።"
+          },
+          {
+            "range": "31–34",
+            "heading": "የመጨረሻ ቃላትና የሙሴ ሞት",
+            "summary": "ኢያሱ ይሾማል፤ የሙሴ መዝሙር፣ በረከትና ሞት ኦሪትን ይደምድማሉ።"
+          }
+        ],
+        "themes": [
+          "ከትውልድ ወደ ትውልድ ማስታወስና ማስተማር",
+          "በመታዘዝ የሚገለጥ የእግዚአብሔር ፍቅር",
+          "የቃል ኪዳን ታማኝነትና የማኅበረሰብ ማንነት",
+          "ለተጋላጭ ሰዎች ፍትሕና ትክክለኛ አመራር",
+          "በረከት፣ ማስጠንቀቂያና ሥነ ምግባራዊ ምርጫ",
+          "ሽግግር፣ ተተኪነትና ተስፋ"
+        ],
+        "key_people": [
+          "ሙሴ",
+          "ኢያሱ",
+          "ወደ ምድሪቱ ለመግባት የተዘጋጀው ትውልድ",
+          "ሌዋውያንና ሽማግሌዎች"
+        ],
+        "key_passages": [
+          "ዘዳ 4:1-14",
+          "ዘዳ 5:1-22",
+          "ዘዳ 6:4-9",
+          "ዘዳ 10:12-22",
+          "ዘዳ 15:1-11",
+          "ዘዳ 18:15-22",
+          "ዘዳ 24:10-22",
+          "ዘዳ 30:11-20",
+          "ዘዳ 34:1-12"
+        ],
+        "interpretive_care": [
+          "‘ሁለተኛ ሕግ’ ማለት መጽሐፉ ቀላል ድግግሞሽ ነው ማለት አይደለም፤ የቃል ኪዳን እድሳት አውዱን ያብራሩ።",
+          "የሙሴ ንግግሮች በትረካው የቀረቡበትን መንገድ ከምሁራዊ የጽሑፍ አፈጣጠርና ከኋለኛ አርትዖት ውይይት ለዩ።",
+          "ሕጎችን በጥንታዊ አውዳቸው አንብቡ፤ የመጽሐፉን የፍትሕ፣ የማስታወስና የቃል ኪዳን ጉዳይም አትዘንጉ።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "DEU-S01",
+          "range": "DEU 6:4-9",
+          "title": "እግዚአብሔርን መውደድና ቀጣዩን ትውልድ ማስተማር",
+          "observation": [
+            "የመስማት፣ የመውደድ፣ የማስታወስና የማስተማር ትእዛዛትን ይለዩ።",
+            "ቃሉ የሚታይባቸውን ቦታዎችና ጊዜያት ይመልከቱ።"
+          ],
+          "interpretation": [
+            "በዚህ ክፍል ፍቅርና መታዘዝ እንዴት ተያይዘዋል?",
+            "ልጆችን ማስተማር የቃል ኪዳን ታማኝነት ክፍል የሆነው ለምንድን ነው?"
+          ],
+          "application": [
+            "ቤተሰብዎ እነዚህን ትምህርቶች እንዲያስታውስ የሚረዳ ዕለታዊ ልምድ ምንድን ነው?",
+            "ማስተማር መረጃ መስጠት ብቻ ሳይሆን ግንኙነታዊ እንዴት ሊሆን ይችላል?"
+          ]
+        },
+        {
+          "id": "DEU-S02",
+          "range": "DEU 15:1-11",
+          "title": "ዕዳን መልቀቅና ለድሆች መጨነቅ",
+          "observation": [
+            "የዕዳ መልቀቂያ መመሪያንና ስለ ልግስና የተሰጡትን ትእዛዛት ይዘርዝሩ።",
+            "ድሃ ሰው እንዳይተው የሚያሳየውን ተደጋጋሚ አጽንኦት ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ሕጉ የልብ ጥንካሬን እንዴት ይፈትናል?",
+            "ክፍሉ በኢኮኖሚያዊ ተግባርና በርኅራኄ መካከል ምን ሚዛን ይፈጥራል?"
+          ],
+          "application": [
+            "በማኅበረሰብዎ ጎጂ ዕዳን የሚቀንስ ፍትሐዊ ተግባር ምንድን ነው?",
+            "ልግስና ጥገኝነት ሳይፈጥር ክብርን እንዴት ሊጠብቅ ይችላል?"
+          ]
+        },
+        {
+          "id": "DEU-S03",
+          "range": "DEU 30:11-20",
+          "title": "ሕይወትን ምረጥ",
+          "observation": [
+            "በሕዝቡ ፊት የቀረቡትን አማራጮች ይለዩ።",
+            "ክፍሉ ሕይወትን ከፍቅር፣ ከመስማትና ከመጽናት ጋር እንዴት እንደሚያገናኝ ይመልከቱ።"
+          ],
+          "interpretation": [
+            "ትእዛዙ ቀርቦ ሊፈጸም የሚችል ነው ተብሎ ለምን ተገለጸ?",
+            "የቃል ኪዳን ምርጫ ማኅበረሰቡንና ወደፊት የሚመጡትን ትውልዶች እንዴት ይነካል?"
+          ],
+          "application": [
+            "ዛሬ በፊትዎ ያለው ወደ ሕይወትና ታማኝነት የሚመራ ምርጫ ምንድን ነው?",
+            "ማኅበረሰብ በአንድነት ሕይወትን እንዲመርጥ ምን ድጋፍ ያስፈልጋል?"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "DEU-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ሸማ ተብሎ የሚጠራው የትኛው ክፍል ነው?",
+          "options": [
+            "ዘዳግም 6:4-9",
+            "ዘዳግም 15:1-11",
+            "ዘዳግም 30:11-20",
+            "ዘዳግም 34:1-12"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ዘዳግም 6:4-9 በመስማት ጥሪ ይጀምራል፤ እግዚአብሔርንም በሙሉ ልብ እንድንወድ ያዛል።",
+          "references": [
+            "DEU 6:4-9"
+          ]
+        },
+        {
+          "id": "DEU-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "ዘዳግም እግዚአብሔር ያደረገውን እንዲያስታውስ እስራኤልን በተደጋጋሚ ይጠራል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "DEU 5:15; 8:2; 24:18"
+          ]
+        },
+        {
+          "id": "DEU-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ሙሴን እንዲተካ የተሾመው ማን ነው?",
+          "options": [
+            "አሮን",
+            "ኢያሱ",
+            "ካሌብ",
+            "አልዓዛር"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ከሙሴ በኋላ ሕዝቡን እንዲመራ ኢያሱ ተሾመ።",
+          "references": [
+            "DEU 31:1-8"
+          ]
+        },
+        {
+          "id": "DEU-Q04",
+          "type": "multiple_choice",
+          "difficulty": "medium",
+          "prompt": "በዘዳግም 30 በእስራኤል ፊት የቀረበው ምርጫ ምንድን ነው?",
+          "options": [
+            "ሕይወትን ምረጥ",
+            "ቤተ መቅደስ ሥራ",
+            "ወደ ግብፅ ተመለስ",
+            "ንጉሥ ሹም"
+          ],
+          "correct_option_id": "A",
+          "explanation": "ሙሴ ሕዝቡ እግዚአብሔርን በመውደድና በመታዘዝ ሕይወትን እንዲመርጥ ይጠራል።",
+          "references": [
+            "DEU 30:15-20"
+          ]
+        },
+        {
+          "id": "DEU-Q05",
+          "type": "true_false",
+          "difficulty": "medium",
+          "prompt": "ዘዳግም በሙሴ ሞት ታሪክ ይደመደማል።",
+          "options": [],
+          "correct_answer": "",
+          "explanation": true,
+          "references": [
+            "DEU 34:1-12"
+          ]
+        }
+      ]
+    }
+  }
+}

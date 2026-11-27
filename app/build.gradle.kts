@@ -3,13 +3,53 @@ plugins {
  id("org.jetbrains.kotlin.android")
  id("org.jetbrains.kotlin.plugin.compose")
 }
+
+val configuredApiBaseUrl = providers.gradleProperty("maaleBibleApiBaseUrl")
+    .orElse(providers.environmentVariable("MAALE_BIBLE_API_BASE_URL"))
+    .orElse("")
+    .get()
+val escapedApiBaseUrl = configuredApiBaseUrl
+    .replace("\\", "\\\\")
+    .replace("\"", "\\\"")
+    .replace("\n", "")
+    .replace("\r", "")
+
 android {
  namespace="org.maale.bible"; compileSdk=36
- defaultConfig { applicationId="org.maale.bible"; minSdk=26; targetSdk=36; versionCode=1; versionName="0.1.0"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner" }
- buildFeatures { compose=true }
+ defaultConfig {
+  applicationId="org.maale.bible"; minSdk=26; targetSdk=36; versionCode=1; versionName="0.1.0"
+  testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"
+  buildConfigField("String", "MAALE_BIBLE_API_BASE_URL", "\"$escapedApiBaseUrl\"")
+ }
+ buildFeatures { compose=true; buildConfig=true }
  compileOptions { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }
 }
 kotlin { jvmToolchain(17) }
+
+// Draft learning packages may be used in development builds only. A release build
+// fails closed until every bundled package carries explicit release approval.
+val verifyLearningContentForRelease by tasks.registering {
+    val contentDirectory = layout.projectDirectory.dir("src/main/assets/content/books").asFile
+    doLast {
+        val packages = contentDirectory.listFiles { file -> file.isFile && file.extension == "json" }
+            ?.sortedBy { it.name }
+            .orEmpty()
+        check(packages.isNotEmpty()) {
+            "Release blocked: no learning-content packages were found to validate."
+        }
+        val unapproved = packages.filter { file ->
+            val manifest = groovy.json.JsonSlurper().parse(file) as? Map<*, *>
+            manifest?.get("publication_state") != "approved_for_release"
+        }
+        check(unapproved.isEmpty()) {
+            "Release blocked: learning packages lack explicit approval: ${unapproved.joinToString { it.name }}"
+        }
+    }
+}
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    dependsOn(verifyLearningContentForRelease)
+}
+
 dependencies {
  implementation(platform("androidx.compose:compose-bom:2025.12.00"))
  implementation("androidx.activity:activity-compose:1.13.0")

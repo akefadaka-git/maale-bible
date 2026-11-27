@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "content_id": "book-learning-ecc-bilingual-v1",
+  "book": {
+    "usfm_id": "ECC",
+    "english_name": "Ecclesiastes",
+    "testament": "OT",
+    "canon_profile": "protestant_66_book"
+  },
+  "publication_state": "draft_not_for_release",
+  "content_rights": {
+    "status": "original_compilation",
+    "direct_quotations": false,
+    "scripture_text_included": false,
+    "source_attribution_required": true
+  },
+  "review_gates": {
+    "source_verification": "pending",
+    "rights_review": "pending",
+    "english_editorial_review": "pending",
+    "amharic_language_review": "required",
+    "theological_review": "pending",
+    "scripture_reference_validation": "pending",
+    "qa": "pending"
+  },
+  "sources": [
+    {
+      "id": "abs-ecclesiastes",
+      "title": "Ecclesiastes",
+      "publisher": "American Bible Society",
+      "url": "https://www.americanbible.org/engage/bible-resources/articles/ecclesiastes/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "esv-ecclesiastes",
+      "title": "Introduction to Ecclesiastes",
+      "publisher": "ESV Global Study Bible",
+      "url": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-ecclesiastes/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    },
+    {
+      "id": "bibleproject-ecclesiastes",
+      "title": "Ecclesiastes",
+      "publisher": "BibleProject",
+      "url": "https://bibleproject.com/guides/book-of-ecclesiastes/",
+      "use": "Source used for original summary and study prompts; no protected commentary text reproduced."
+    }
+  ],
+  "locales": {
+    "en": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "Ecclesiastes — book introduction",
+        "summary": "Ecclesiastes reflects on work, pleasure, wisdom, injustice, time and death. Hevel evokes breath or vapor and life’s transience. The book calls readers to receive daily gifts gratefully and revere God.",
+        "authorship": "The speaker is Qoheleth, or Teacher; the precise historical identity and date are debated.",
+        "setting": "The reflections examine work, wealth, injustice, relationships, aging and mortality.",
+        "audience_and_purpose": "Ecclesiastes reflects on work, pleasure, wisdom, injustice, time and death. Hevel evokes breath or vapor and life’s transience. The book calls readers to receive daily gifts gratefully and revere God.",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "Introduction and orientation",
+            "summary": "The book establishes its central questions and literary voice."
+          },
+          {
+            "range": "Main section",
+            "heading": "Exploration and instruction",
+            "summary": "Dialogues, prayers or sayings develop the central themes."
+          },
+          {
+            "range": "Closing",
+            "heading": "Conclusion and response",
+            "summary": "The closing material gathers the book’s challenge and invites faithful response."
+          }
+        ],
+        "themes": [
+          "Life’s transience",
+          "Limits of achievement",
+          "Reverence and accountability"
+        ],
+        "key_people": [
+          "Qoheleth / the Teacher",
+          "The learner",
+          "The Creator"
+        ],
+        "key_passages": [
+          "ECC 1:1-18",
+          "ECC 2:1-26",
+          "ECC 3:1-15",
+          "ECC 7:1-14",
+          "ECC 11:7-10",
+          "ECC 12:1-14"
+        ],
+        "interpretive_care": [
+          "Hevel has a range of meanings; do not reduce it to one gloss.",
+          "The conclusion calls for reverence and accountability, not nihilism."
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "ECC-S01",
+          "range": "ECC 1:1–18",
+          "title": "The search for meaning",
+          "observation": [
+            "Observe repeated words and the Teacher’s conclusion."
+          ],
+          "interpretation": [
+            "What limits are placed on human achievement?"
+          ],
+          "application": [
+            "Reflect on a pursuit that cannot provide ultimate meaning."
+          ]
+        },
+        {
+          "id": "ECC-S02",
+          "range": "ECC 3:1–15",
+          "title": "Seasons and time",
+          "observation": [
+            "List the paired seasons."
+          ],
+          "interpretation": [
+            "How are human action and divine sovereignty held together?"
+          ],
+          "application": [
+            "Name a season requiring patience."
+          ]
+        },
+        {
+          "id": "ECC-S03",
+          "range": "ECC 12:1–14",
+          "title": "Remember the Creator",
+          "observation": [
+            "Observe the call to remember and the conclusion."
+          ],
+          "interpretation": [
+            "How does the ending frame the book’s questions?"
+          ],
+          "application": [
+            "Name a daily way to remember God."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "ECC-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "What Hebrew term is often translated vanity or meaningless?",
+          "options": [
+            "Shalom",
+            "Hevel",
+            "Torah",
+            "Hesed"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Hevel evokes breath, vapor and transience.",
+          "references": [
+            "ECC 1:2"
+          ]
+        },
+        {
+          "id": "ECC-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "Ecclesiastes tells readers to ignore God.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Its conclusion calls readers to revere God.",
+          "references": [
+            "ECC 12:13-14"
+          ]
+        },
+        {
+          "id": "ECC-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "According to Ecclesiastes 3, there is a time for what?",
+          "options": [
+            "Work only",
+            "Every matter under heaven",
+            "Celebration only",
+            "Nothing"
+          ],
+          "correct_option_id": "B",
+          "explanation": "The poem names times for many human experiences.",
+          "references": [
+            "ECC 3:1-8"
+          ]
+        },
+        {
+          "id": "ECC-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "Whom should the young remember?",
+          "options": [
+            "The Creator",
+            "A king",
+            "A teacher",
+            "A warrior"
+          ],
+          "correct_option_id": "A",
+          "explanation": "Ecclesiastes 12:1 calls readers to remember their Creator.",
+          "references": [
+            "ECC 12:1"
+          ]
+        },
+        {
+          "id": "ECC-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "The Teacher’s identity and the book’s date are universally agreed.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correct_option_id": "B",
+          "explanation": "Authorship and dating remain debated.",
+          "references": [
+            "ECC 1:1"
+          ]
+        }
+      ]
+    },
+    "am": {
+      "locale_status": "draft",
+      "introduction": {
+        "title": "መክብብ — መግቢያ",
+        "summary": "መክብብ ስለ ሥራ፣ ደስታ፣ ጥበብ፣ ኢፍትሐዊነት፣ ጊዜና ሞት ያስተምራል። 'ሄቬል' ትንፋሽንና ጊዜያዊነትን ያስታውሳል። የዕለት ስጦታዎችን በምስጋና እንድንቀበልና ፈጣሪን እንድንፈራ ይጠራል።",
+        "authorship": "ተናጋሪው ቆሄሌት ወይም መምህር ተብሎ ይጠራል። ትክክለኛ ታሪካዊ ማንነቱና የተጻፈበት ዘመን ውይይት ያለባቸው ናቸው።",
+        "setting": "ሐሳቦቹ ስለ ሥራ፣ ሀብት፣ ኢፍትሐዊነት፣ ግንኙነት፣ እርጅናና ሞት ይመረምራሉ።",
+        "audience_and_purpose": "መክብብ ስለ ሥራ፣ ደስታ፣ ጥበብ፣ ኢፍትሐዊነት፣ ጊዜና ሞት ያስተምራል። 'ሄቬል' ትንፋሽንና ጊዜያዊነትን ያስታውሳል። የዕለት ስጦታዎችን በምስጋና እንድንቀበልና ፈጣሪን እንድንፈራ ይጠራል።",
+        "structure": [
+          {
+            "range": "Opening",
+            "heading": "የትርጉም ፍለጋ",
+            "summary": "ሥራ፣ ደስታና ጥበብ ይመረመራሉ።"
+          },
+          {
+            "range": "Main section",
+            "heading": "ጊዜና የሕይወት ወሰን",
+            "summary": "የሰው ውስንነትና የዓለም ኢፍትሐዊነት ይታያሉ።"
+          },
+          {
+            "range": "Closing",
+            "heading": "ጥበብና መደምደሚያ",
+            "summary": "ፈጣሪን ማስታወስና መፍራት የመጨረሻው ጥሪ ነው።"
+          }
+        ],
+        "themes": [
+          "የሕይወት ጊዜያዊነት",
+          "የስኬትና የጥበብ ወሰን",
+          "እግዚአብሔርን መፍራትና ኃላፊነት"
+        ],
+        "key_people": [
+          "ቆሄሌት / መምህሩ",
+          "ተማሪው",
+          "ፈጣሪ"
+        ],
+        "key_passages": [
+          "ECC 1:1-18",
+          "ECC 2:1-26",
+          "ECC 3:1-15",
+          "ECC 7:1-14",
+          "ECC 11:7-10",
+          "ECC 12:1-14"
+        ],
+        "interpretive_care": [
+          "ሄቬል ትንፋሽን፣ ጭጋግንና ጊዜያዊነትን ሊያመለክት ይችላል።",
+          "መደምደሚያው እግዚአብሔርን መፍራትንና ኃላፊነትን ያጠናክራል።"
+        ]
+      },
+      "inductive_studies": [
+        {
+          "id": "ECC-S01",
+          "range": "ECC 1:1–18",
+          "title": "The search for meaning",
+          "observation": [
+            "የተደጋገሙ ቃላትንና የመምህሩን ድምዳሜ ተመልከቱ።"
+          ],
+          "interpretation": [
+            "በሰው ስኬት ላይ ምን ወሰን ተቀምጧል?"
+          ],
+          "application": [
+            "የመጨረሻ ትርጉም ሊሰጥ የማይችል አንድ ፍለጋ አስቡ።"
+          ]
+        },
+        {
+          "id": "ECC-S02",
+          "range": "ECC 3:1–15",
+          "title": "Seasons and time",
+          "observation": [
+            "የተጣመሩ ወቅቶችን ዘርዝሩ።"
+          ],
+          "interpretation": [
+            "የሰው ተግባርና የእግዚአብሔር ሥልጣን እንዴት ይቀራረባሉ?"
+          ],
+          "application": [
+            "መታገስ የሚያስፈልግበትን ወቅት ጥቀሱ።"
+          ]
+        },
+        {
+          "id": "ECC-S03",
+          "range": "ECC 12:1–14",
+          "title": "Remember the Creator",
+          "observation": [
+            "ፈጣሪን የማስታወስ ጥሪና መደምደሚያውን ተመልከቱ።"
+          ],
+          "interpretation": [
+            "መደምደሚያው የመጽሐፉን ጥያቄዎች እንዴት ይመልሳል?"
+          ],
+          "application": [
+            "በዕለት ሕይወት ፈጣሪን ለማስታወስ አንድ መንገድ ጥቀሱ።"
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "ECC-Q01",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "'ከንቱነት' ተብሎ የሚተረጎመው ቃል ምንድን ነው?",
+          "options": [
+            "ሻሎም",
+            "ሄቬል",
+            "ቶራ",
+            "ሄሴድ"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ሄቬል ትንፋሽንና ጊዜያዊነትን ያስታውሳል።",
+          "references": [
+            "ECC 1:2"
+          ]
+        },
+        {
+          "id": "ECC-Q02",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "መክብብ እግዚአብሔርን ተዉ ይላል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "መደምደሚያው እግዚአብሔርን መፍራትን ይጠራል።",
+          "references": [
+            "ECC 12:13-14"
+          ]
+        },
+        {
+          "id": "ECC-Q03",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "መክብብ 3 ለምን ጊዜ እንዳለ ይናገራል?",
+          "options": [
+            "ለሥራ ብቻ",
+            "በሰማይ በታች ላለ ሁሉ",
+            "ለደስታ ብቻ",
+            "ለምንም"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ግጥሙ ለብዙ የሕይወት ሁኔታዎች ጊዜ እንዳለ ይገልጻል።",
+          "references": [
+            "ECC 3:1-8"
+          ]
+        },
+        {
+          "id": "ECC-Q04",
+          "type": "multiple_choice",
+          "difficulty": "easy",
+          "prompt": "ወጣቶች ማንን ማስታወስ አለባቸው?",
+          "options": [
+            "ፈጣሪን",
+            "ንጉሥን",
+            "መምህርን",
+            "ተዋጊን"
+          ],
+          "correct_option_id": "A",
+          "explanation": "መክብብ 12:1 ፈጣሪን እንድናስብ ይጠራል።",
+          "references": [
+            "ECC 12:1"
+          ]
+        },
+        {
+          "id": "ECC-Q05",
+          "type": "true_false",
+          "difficulty": "easy",
+          "prompt": "የመክብብ ደራሲና የተጻፈበት ዘመን ላይ ሁሉም ተስማምተዋል።",
+          "options": [
+            "እውነት",
+            "ሐሰት"
+          ],
+          "correct_option_id": "B",
+          "explanation": "ደራሲነትና ዘመን ውይይት ያለባቸው ናቸው።",
+          "references": [
+            "ECC 1:1"
+          ]
+        }
+      ]
+    }
+  }
+}
