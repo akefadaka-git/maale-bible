@@ -1,7 +1,6 @@
 package org.maale.bible.ui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -183,7 +181,8 @@ private fun CategoryHeading(category: BookCategory, count: Int) {
 @Composable
 private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> Unit) {
     Card(
-        modifier = Modifier.fillMaxWidth().clickable(role = Role.Button, onClick = onClick)
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth()
             .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName }
             .testTag("book_card_" + book.usfmId),
         shape = RoundedCornerShape(18.dp),

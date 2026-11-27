@@ -62,6 +62,9 @@ class P2V6NavigationSmokeTest {
         awaitText("EXPLORE BY CATEGORY")
         revealGenesisCard()
         awaitText("Genesis")
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithTag("book_learning_screen").fetchSemanticsNodes().isNotEmpty()
+        }
         awaitText("Bible book learning centre")
         // The learning-centre banner is below the book title/metadata in a
         // vertically scrollable screen; scroll it into the viewport explicitly.
@@ -178,6 +181,9 @@ class P2V6NavigationSmokeTest {
         mark("draft-03-reveal-genesis")
         revealGenesisCard()
         awaitText("Genesis")
+        composeRule.waitUntil(10_000L) {
+            composeRule.onAllNodesWithTag("book_learning_screen").fetchSemanticsNodes().isNotEmpty()
+        }
         awaitText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል")
         mark("draft-04-scroll-to-amharic-learning-centre")
         composeRule.onNodeWithText("የመጽሐፍ ቅዱስ መጽሐፍ የመማሪያ ማዕከል").performScrollTo()
