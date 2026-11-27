@@ -128,7 +128,7 @@ fun MaaleBibleApp() {
             }
         ) { padding ->
             if (accountOpen) {
-                AccountScreen(onContinueAsGuest = { accountOpen = false }, modifier = Modifier.padding(padding))
+                AccountScreen(onContinueAsGuest = { accountOpen = false }, onAuthenticated = { accountOpen = false }, modifier = Modifier.padding(padding))
             } else if (readingBookId != null) {
                 ReaderPlaceholderScreen(
                     readingBookId!!,

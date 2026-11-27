@@ -112,6 +112,12 @@
     <string name="study_delete">ባይዜ</string>
     <string name="study_refresh">ማሂ ዓካሴ</string>
     <string name="study_empty_notes">ኔ ፃኣፒ ዓርቄ ባኣዚ ቢያ ሃይካ ጴዻኔ።</string>
+    <string name="account_request_failed" translatable="false">The request could not be completed. Check the details and connection, then try again.</string>
+    <string name="account_otp_sent" translatable="false">Verification code sent. It expires in five minutes.</string>
+    <string name="account_signed_in" translatable="false">Signed in. Cloud note synchronization is not enabled.</string>
+    <string name="account_session_check_pending" translatable="false">A saved session is present. Connect to the account service to verify it.</string>
+    <string name="account_sign_out" translatable="false">Sign out</string>
+    <string name="account_working" translatable="false">Please wait…</string>
     <string name="account_guest">ሾኦቺ ማዒ ፃቃሚንቴ</string>
     <string name="account_submit">ዴንዴ</string>
     <string name="search_loading_editions">ጫኣኒንቴ ጌኤዦ ማፃኣፖ ቡሎ ቡላኔ ...</string>

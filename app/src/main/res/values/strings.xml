@@ -114,6 +114,12 @@
     <string name="study_delete">Delete</string>
     <string name="study_refresh">Refresh</string>
     <string name="study_empty_notes">Your notes will appear here.</string>
+    <string name="account_request_failed">The request could not be completed. Check the details and connection, then try again.</string>
+    <string name="account_otp_sent">Verification code sent. It expires in five minutes.</string>
+    <string name="account_signed_in">Signed in. Cloud note synchronization is not enabled.</string>
+    <string name="account_session_check_pending">A saved session is present. Connect to the account service to verify it.</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_working">Please wait…</string>
     <string name="account_guest">Continue as guest</string>
     <string name="account_submit">Continue</string>
     <string name="search_loading_editions">Loading installed Bible editions…</string>

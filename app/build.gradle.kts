@@ -3,10 +3,25 @@ plugins {
  id("org.jetbrains.kotlin.android")
  id("org.jetbrains.kotlin.plugin.compose")
 }
+
+val configuredApiBaseUrl = providers.gradleProperty("maaleBibleApiBaseUrl")
+    .orElse(providers.environmentVariable("MAALE_BIBLE_API_BASE_URL"))
+    .orElse("")
+    .get()
+val escapedApiBaseUrl = configuredApiBaseUrl
+    .replace("\\", "\\\\")
+    .replace("\"", "\\\"")
+    .replace("\n", "")
+    .replace("\r", "")
+
 android {
  namespace="org.maale.bible"; compileSdk=36
- defaultConfig { applicationId="org.maale.bible"; minSdk=26; targetSdk=36; versionCode=1; versionName="0.1.0"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner" }
- buildFeatures { compose=true }
+ defaultConfig {
+  applicationId="org.maale.bible"; minSdk=26; targetSdk=36; versionCode=1; versionName="0.1.0"
+  testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"
+  buildConfigField("String", "MAALE_BIBLE_API_BASE_URL", "\"$escapedApiBaseUrl\"")
+ }
+ buildFeatures { compose=true; buildConfig=true }
  compileOptions { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }
 }
 kotlin { jvmToolchain(17) }

@@ -1,6 +1,7 @@
 package org.maale.bible
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -16,10 +17,12 @@ import android.content.Context
 import android.util.Log
 import androidx.test.core.app.ApplicationProvider
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.maale.bible.data.auth.AuthApiClient
 
 class P2V6NavigationSmokeTest {
     private fun mark(step: String) = Log.i("P2V6NavigationSmokeTest", step)
@@ -108,6 +111,9 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Account").performClick()
         composeRule.onNodeWithText("Your account").assertIsDisplayed()
         composeRule.onNodeWithText("Account service not connected").assertIsDisplayed()
+        assertFalse(AuthApiClient.isConfigured)
+        composeRule.onNodeWithTag("account_login_submit").assertIsNotEnabled()
+        composeRule.onNodeWithTag("account_register_request_otp").assertIsNotEnabled()
         composeRule.onNodeWithText("Continue reading as guest").performScrollTo().performClick()
         composeRule.waitForIdle()
         composeRule.onNodeWithText("Explore the Bible").performScrollTo().assertIsDisplayed()
