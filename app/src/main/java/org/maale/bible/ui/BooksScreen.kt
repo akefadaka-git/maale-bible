@@ -2,6 +2,7 @@ package org.maale.bible.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -182,15 +183,20 @@ private fun CategoryHeading(category: BookCategory, count: Int) {
 @Composable
 private fun BookExplorerCard(book: Book, category: BookCategory, onClick: () -> Unit) {
     Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth()
-            .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName }
-            .testTag("book_card_" + book.usfmId),
+        modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
-        Row(Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        Row(
+            Modifier.fillMaxWidth()
+                .clickable(onClick = onClick)
+                .semantics(mergeDescendants = true) { contentDescription = "Open " + book.englishName }
+                .testTag("book_card_" + book.usfmId)
+                .padding(horizontal = 14.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             Surface(shape = CircleShape, color = MaterialTheme.colorScheme.tertiaryContainer) {
                 Box(Modifier.size(38.dp), contentAlignment = Alignment.Center) { Text(category.symbol, style = MaterialTheme.typography.titleMedium) }
             }
