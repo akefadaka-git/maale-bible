@@ -73,6 +73,18 @@
     <string name="reader_collection">ጌኤዦ ማፃኣፖዪዳ ዓኣ ቡኪንቴ ማፃኣፔ</string>
     <string name="reader_canonical_book_id">ማፃኣፖ ዱማሳ ባኮ</string>
     <string name="reader_focus">ዒኖና ማሊፆና ጌሢሢ</string>
+    <string name="reader_loading_content" translatable="false">Loading verified offline text…</string>
+    <string name="reader_book_not_in_edition" translatable="false">This book is not included in the installed edition.</string>
+    <string name="reader_chapter_empty" translatable="false">No verses are available in this chapter.</string>
+    <string name="reader_chapter_label" translatable="false">Chapter %1$d of %2$d</string>
+    <string name="reader_previous_chapter" translatable="false">Previous</string>
+    <string name="reader_next_chapter" translatable="false">Next</string>
+    <string name="library_install_success" translatable="false">Verified Maale Full Bible installed for offline reading.</string>
+    <string name="library_install_failure" translatable="false">Installation failed. The existing installed edition was preserved.</string>
+    <string name="library_install_offline" translatable="false">Install offline edition</string>
+    <string name="library_installing" translatable="false">Installing…</string>
+    <string name="library_installed" translatable="false">Installed · open source details</string>
+    <string name="library_package_not_in_build" translatable="false">A verified offline package is not included in this build.</string>
     <string name="reader_content_unavailable">ማኣሌ ሙኡቺና ጊኢጊንቴ ማፃኣፔ ሃኖ ማዢንቶዩዳ ባኣሴ</string>
     <string name="reader_content_not_loaded">ጫኒንቴ ባኣዚ ባኣሢሮ ጴዹዋሴ።</string>
     <string name="reader_chapter_navigation">ዓይሢ ኮዖያ</string>

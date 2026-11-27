@@ -58,6 +58,8 @@ fun MaaleBibleApp() {
         var destination by remember { mutableStateOf(AppDestination.HOME) }
         var selectedBookId by remember { mutableStateOf<String?>(null) }
         var readingBookId by remember { mutableStateOf<String?>(null) }
+        var readingChapter by remember { mutableIntStateOf(1) }
+        var readingVerseRef by remember { mutableStateOf<String?>(null) }
         var languageMenuExpanded by remember { mutableStateOf(false) }
         var accountOpen by remember { mutableStateOf(false) }
 
@@ -119,7 +121,7 @@ fun MaaleBibleApp() {
                     AppDestination.entries.forEach { item ->
                         NavigationBarItem(
                             selected = destination == item && selectedBookId == null,
-                            onClick = { selectedBookId = null; readingBookId = null; destination = item },
+                            onClick = { selectedBookId = null; readingBookId = null; readingChapter = 1; readingVerseRef = null; destination = item },
                             icon = {},
                             label = { Text(stringResource(item.label)) }
                         )
@@ -132,14 +134,16 @@ fun MaaleBibleApp() {
             } else if (readingBookId != null) {
                 ReaderPlaceholderScreen(
                     readingBookId!!,
-                    { readingBookId = null },
-                    Modifier.padding(padding)
+                    onBack = { readingBookId = null; readingVerseRef = null },
+                    modifier = Modifier.padding(padding),
+                    initialChapter = readingChapter,
+                    initialVerseRef = readingVerseRef
                 )
             } else if (selectedBookId != null) {
                 BookLearningScreen(
                     bookId = selectedBookId!!,
                     onBack = { selectedBookId = null },
-                    onOpenReader = { readingBookId = it },
+                    onOpenReader = { readingChapter = 1; readingVerseRef = null; readingBookId = it },
                     modifier = Modifier.padding(padding)
                 )
             } else when (destination) {
@@ -153,8 +157,14 @@ fun MaaleBibleApp() {
                     modifier = Modifier.padding(padding)
                 )
                 AppDestination.SEARCH -> SearchPlaceholderScreen(
-                    { selectedBookId = it },
-                    Modifier.padding(padding)
+                    onSelectBook = { selectedBookId = it },
+                    onSelectPassage = { bookId, chapter, verseRef ->
+                        selectedBookId = null
+                        readingBookId = bookId
+                        readingChapter = chapter
+                        readingVerseRef = verseRef
+                    },
+                    modifier = Modifier.padding(padding)
                 )
                 AppDestination.BIBLES -> BibleDownloadsScreen(Modifier.padding(padding))
                 AppDestination.ATLAS -> BibleAtlasScreen(Modifier.padding(padding))

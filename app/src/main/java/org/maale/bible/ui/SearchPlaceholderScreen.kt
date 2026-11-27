@@ -41,6 +41,7 @@ import org.maale.bible.data.content.ScriptureSearchResult
 @Composable
 fun SearchPlaceholderScreen(
     onSelectBook: (String) -> Unit,
+    onSelectPassage: (String, Int, String) -> Unit = { bookId, _, _ -> onSelectBook(bookId) },
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current.applicationContext
@@ -228,7 +229,11 @@ fun SearchPlaceholderScreen(
                     }
                     items(searchResults, key = { "verse-" + it.bookId + ":" + it.chapter + ":" + it.verseRef }) { result ->
                         val bookName = CanonicalBookCatalog.find(result.bookId)?.englishName ?: result.bookId
-                        Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+                        Card(
+                            onClick = { onSelectPassage(result.bookId, result.chapter, result.verseRef) },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+                        ) {
                             Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                 Text(bookName + " " + result.chapter + ":" + result.verseRef,
                                     style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary,
