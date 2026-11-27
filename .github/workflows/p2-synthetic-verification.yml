@@ -2,10 +2,10 @@ name: P2 synthetic verification
 # Stable Android CI: prefetch verified AOSP system images and use a lean emulator profile.
 on:
   pull_request:
-    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','gradle/wrapper/gradle-wrapper.properties','.github/workflows/p2-synthetic-verification.yml']
   push:
     branches: [feat/a4-offline-study-suite, fix/a2-remediation-complete]
-    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','.github/workflows/p2-synthetic-verification.yml']
+    paths: ['app/**','verification/p2/**','verification/android/**','verification/canon/**','content/canon/**','content/manifests/**','backend/**','.github/workflows/p2-synthetic-verification.yml']
   workflow_dispatch:
     inputs:
       full_android_matrix:
@@ -35,6 +35,23 @@ jobs:
         with:
           name: p2-host-evidence
           path: verification/p2/host-verification-results.json
+  backend-auth:
+    name: Backend auth API tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: backend/pyproject.toml
+      - name: Install backend and test dependencies
+        working-directory: backend
+        run: python -m pip install -e ".[test]"
+      - name: Run backend authentication and migration tests
+        working-directory: backend
+        run: python -m pytest -q
   android-fts5:
     needs: [host-contracts, debug-apk]
     runs-on: ubuntu-24.04
