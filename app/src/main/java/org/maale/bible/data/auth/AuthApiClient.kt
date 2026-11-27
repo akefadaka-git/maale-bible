@@ -83,13 +83,11 @@ object AuthApiClient {
             request(
                 path = "/auth/logout",
                 method = "POST",
-                body = JSONObject(),
                 bearerToken = accessToken
             )
         }
     }
 
-    private fun AuthTokensResponseNotUsed() = Unit
 
     private fun JSONObject.toTokens() = AuthTokens(
         accessToken = getString("access_token"),

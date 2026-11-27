@@ -146,8 +146,11 @@ fun AccountScreen(
                 }
             }
         }
-        if (sessionTokens != null && accountId != null) {
-            Text(stringResource(R.string.account_signed_in), style = MaterialTheme.typography.titleMedium)
+        if (sessionTokens != null) {
+            Text(
+                stringResource(if (accountId != null) R.string.account_signed_in else R.string.account_session_check_pending),
+                style = MaterialTheme.typography.titleMedium
+            )
             Button(
                 onClick = {
                     val saved = sessionTokens

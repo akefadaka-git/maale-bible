@@ -113,6 +113,7 @@ class P2V6NavigationSmokeTest {
         composeRule.onNodeWithText("Account service not connected").assertIsDisplayed()
         assertFalse(AuthApiClient.isConfigured)
         composeRule.onNodeWithTag("account_login_submit").assertIsNotEnabled()
+        composeRule.onNodeWithText("Register").performClick()
         composeRule.onNodeWithTag("account_register_request_otp").assertIsNotEnabled()
         composeRule.onNodeWithText("Continue reading as guest").performScrollTo().performClick()
         composeRule.waitForIdle()

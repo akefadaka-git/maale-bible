@@ -33,12 +33,17 @@ object AuthTokenStore {
         cipher.init(Cipher.ENCRYPT_MODE, key())
         cipher.updateAAD(aad)
         val ciphertext = cipher.doFinal(plaintext)
-        context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
-            .edit()
-            .putString(IV, Base64.encodeToString(cipher.iv, Base64.NO_WRAP))
-            .putString(CIPHERTEXT, Base64.encodeToString(ciphertext, Base64.NO_WRAP))
-            .commit()
-        plaintext.fill(0)
+        try {
+            check(
+                context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+                    .edit()
+                    .putString(IV, Base64.encodeToString(cipher.iv, Base64.NO_WRAP))
+                    .putString(CIPHERTEXT, Base64.encodeToString(ciphertext, Base64.NO_WRAP))
+                    .commit()
+            ) { "Unable to persist encrypted account session." }
+        } finally {
+            plaintext.fill(0)
+        }
     }
 
     fun load(context: Context): AuthTokens? {
@@ -76,8 +81,10 @@ object AuthTokenStore {
     }
 
     fun clear(context: Context) {
-        context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
-            .edit().clear().commit()
+        check(
+            context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+                .edit().clear().commit()
+        ) { "Unable to clear stored account session." }
     }
 
     private fun key(): SecretKey = synchronized(lock) {
